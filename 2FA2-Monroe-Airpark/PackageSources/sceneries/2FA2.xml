@@ -1,0 +1,9 @@
+<?xml version="1.0"?>
+<FSData version="9.0">
+	<Airport displayName="Monroe Airpark" groupID="4294967295" groupGenerated="FALSE" name="Monroe Airpark" ident="2FA2" lat="29.01886928826571" lon="-82.11370021104813" alt="22.86000061035156" magvar="0.000000" airportTestRadius="2000.00000000000000" applyFlatten="FALSE" isOnTIN="FALSE">
+		<Aprons/>
+		<PaintedElements/>
+		<ApronEdgeLights/>
+	</Airport>
+</FSData>
+

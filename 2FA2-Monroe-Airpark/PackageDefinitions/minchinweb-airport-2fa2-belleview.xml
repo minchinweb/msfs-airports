@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="utf-8"?>
+<AssetPackage Version="0.1.0">
+	<ItemSettings>
+		<ContentType>SCENERY</ContentType>
+		<Title>2FA2 Monroe Airpark FL</Title>
+		<Manufacturer/>
+		<Creator>MinchinWeb</Creator>
+	</ItemSettings>
+	<Flags>
+		<VisibleInStore>false</VisibleInStore>
+		<CanBeReferenced>false</CanBeReferenced>
+	</Flags>
+	<AssetGroups>
+		<AssetGroup Name="2fa2-scenery">
+			<Type>BGL</Type>
+			<Flags>
+				<FSXCompatibility>false</FSXCompatibility>
+			</Flags>
+			<AssetDir>PackageSources\airport-2fa2-belleview\sceneries\</AssetDir>
+			<OutputDir>scenery\minchinweb\</OutputDir>
+		</AssetGroup>
+		<AssetGroup Name="ContentInfo">
+			<Type>ContentInfo</Type>
+			<Flags>
+				<FSXCompatibility>false</FSXCompatibility>
+			</Flags>
+			<AssetDir>PackageDefinitions\minchinweb-airport-2fa2-belleview\ContentInfo</AssetDir>
+			<OutputDir>ContentInfo\minchinweb-airport-2fa2-belleview</OutputDir>
+		</AssetGroup>
+	</AssetGroups>
+</AssetPackage>
+
