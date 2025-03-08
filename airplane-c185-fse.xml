@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Project Version="2" Name="airplane-C185-FSE" FolderName="Packages" MetadataFolderName="PackagesMetadata">
+	<OutputDirectory>.</OutputDirectory>
+	<TemporaryOutputDirectory>_PackageInt</TemporaryOutputDirectory>
+	<Packages>
+		<Package>PackageDefinitions\minchinweb-aircraft-c185-fse.xml</Package>
+	</Packages>
+	<PublishingGroups/>
+</Project>
+

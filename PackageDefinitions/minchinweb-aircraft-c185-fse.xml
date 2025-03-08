@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="utf-8"?>
+<AssetPackage Version="0.1.0">
+	<ItemSettings>
+		<ContentType>AIRCRAFT</ContentType>
+		<Title>Cessna 185 FSEconomy</Title>
+		<Manufacturer>Cessna</Manufacturer>
+		<Creator>MinchinWeb</Creator>
+	</ItemSettings>
+	<Flags>
+		<VisibleInStore>false</VisibleInStore>
+		<CanBeReferenced>false</CanBeReferenced>
+	</Flags>
+	<AssetGroups>
+		<AssetGroup Name="ContentInfo">
+			<Type Version="0">ContentInfo</Type>
+			<Flags>
+				<FSXCompatibility>false</FSXCompatibility>
+			</Flags>
+			<AssetDir>PackageDefinitions\minchinweb-aircraft-c185-fse\ContentInfo</AssetDir>
+			<OutputDir>ContentInfo\minchinweb-aircraft-c185-fse</OutputDir>
+		</AssetGroup>
+		<AssetGroup Name="minchinweb-c185">
+			<Type Version="0">ModularSimObject</Type>
+			<Flags>
+				<FSXCompatibility>false</FSXCompatibility>
+			</Flags>
+			<AssetDir>PackageSources\SimObjects\Airplanes\minchinweb-aircraft-c185-fse\</AssetDir>
+			<OutputDir>simobjects\airplanes\microsoft_c185f_skywagon\</OutputDir>
+		</AssetGroup>
+	</AssetGroups>
+</AssetPackage>
