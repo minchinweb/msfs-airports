@@ -1,0 +1,11 @@
+<?xml version="1.0"?>
+<FSData version="9.0">
+	<Airport displayName="Cooking Lake Seaplane Base" groupID="1" groupGenerated="FALSE" country="Canada" state="Alberta" city="Edmonton" name="Cooking Lake Seaplane Base" ident="CEE7" lat="53.42283333333334" lon="113.10450000000000" alt="2311.00000000000000" magvar="0.000000" trafficScalar="1.000000" airportTestRadius="2000.00000000000000" applyFlatten="FALSE" isOnTIN="FALSE" tinColorCorrection="TRUE">
+		<AirportArchetype/>
+		<Aprons/>
+		<PaintedElements/>
+		<ApronEdgeLights/>
+		<Com frequency="123.350000" type="TOWER" name="Traffic, at Cooking Lake"/>
+	</Airport>
+</FSData>
+

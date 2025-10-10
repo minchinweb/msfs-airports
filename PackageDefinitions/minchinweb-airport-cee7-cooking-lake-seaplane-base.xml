@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="utf-8"?>
+<AssetPackage Version="0.1.1">
+	<ItemSettings>
+		<ContentType>SCENERY</ContentType>
+		<Title>CEE7 Cooking Lake Seaplane Base</Title>
+		<Manufacturer/>
+		<Creator>MinchinWeb</Creator>
+	</ItemSettings>
+	<Flags>
+		<VisibleInStore>false</VisibleInStore>
+		<CanBeReferenced>false</CanBeReferenced>
+	</Flags>
+	<AssetGroups>
+		<AssetGroup Name="ContentInfo">
+			<Type Version="0">ContentInfo</Type>
+			<Flags>
+				<FSXCompatibility>false</FSXCompatibility>
+			</Flags>
+			<AssetDir>PackageDefinitions\minchinweb-airport-cee7-cooking-lake-seaplane-base\ContentInfo\</AssetDir>
+			<OutputDir>ContentInfo\minchinweb-airport-cee7-cooking-lake-seaplane-base\</OutputDir>
+		</AssetGroup>
+		<AssetGroup Name="scenery">
+			<Type Version="0">BGL</Type>
+			<Flags>
+				<FSXCompatibility>false</FSXCompatibility>
+			</Flags>
+			<AssetDir>PackageSources\airport-cee7-cooking-lake-seaplane\</AssetDir>
+			<OutputDir>scenery\minchinweb\CEE7\</OutputDir>
+		</AssetGroup>
+	</AssetGroups>
+</AssetPackage>
