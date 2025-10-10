@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="utf-8"?>
+<AssetPackage Version="0.1.0">
+	<ItemSettings>
+		<ContentType>SCENERY</ContentType>
+		<Title>CEV7 Tofield Airport</Title>
+		<Manufacturer/>
+		<Creator>MinchinWeb</Creator>
+	</ItemSettings>
+	<Flags>
+		<VisibleInStore>false</VisibleInStore>
+		<CanBeReferenced>false</CanBeReferenced>
+	</Flags>
+	<AssetGroups>
+		<AssetGroup Name="ContentInfo">
+			<Type>ContentInfo</Type>
+			<Flags>
+				<FSXCompatibility>false</FSXCompatibility>
+			</Flags>
+			<AssetDir>PackageDefinitions\minchinweb-airport-cev7-tofield\ContentInfo</AssetDir>
+			<OutputDir>ContentInfo\minchinweb-airport-cev7-tofield</OutputDir>
+		</AssetGroup>
+		<AssetGroup Name="scenery">
+			<Type>BGL</Type>
+			<Flags>
+				<FSXCompatibility>false</FSXCompatibility>
+			</Flags>
+			<AssetDir>PackageSources\BGLs\minchinweb\airport-cev7-tofield\</AssetDir>
+			<OutputDir>scenery\minchinweb\CEV7\</OutputDir>
+		</AssetGroup>
+	</AssetGroups>
+</AssetPackage>

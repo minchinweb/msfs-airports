@@ -1,0 +1,9 @@
+<?xml version="1.0"?>
+<FSData version="9.0">
+	<Airport displayName="Tofield" groupID="1" groupGenerated="FALSE" name="Tofield" ident="CEV7" lat="53.37111096829176" lon="-112.69666671752930" alt="704.39202880859375" magvar="0.000000" airportTestRadius="2000.00000000000000" applyFlatten="FALSE" isOnTIN="FALSE">
+		<Aprons/>
+		<PaintedElements/>
+		<ApronEdgeLights/>
+	</Airport>
+</FSData>
+
