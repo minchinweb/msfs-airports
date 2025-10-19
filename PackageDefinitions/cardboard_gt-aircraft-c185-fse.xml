@@ -4,7 +4,7 @@
 		<ContentType>AIRCRAFT</ContentType>
 		<Title>Cessna 185 FSEconomy</Title>
 		<Manufacturer>Cessna</Manufacturer>
-		<Creator>MinchinWeb</Creator>
+		<Creator>cardboard_gt</Creator>
 	</ItemSettings>
 	<Flags>
 		<VisibleInStore>false</VisibleInStore>
@@ -22,17 +22,16 @@
 			<Flags>
 				<FSXCompatibility>false</FSXCompatibility>
 			</Flags>
-			<AssetDir>PackageDefinitions\minchinweb-aircraft-c185-fse\ContentInfo\</AssetDir>
-			<OutputDir>ContentInfo\minchinweb-aircraft-c185-fse\</OutputDir>
+			<AssetDir>PackageDefinitions\cardboard_gt-aircraft-c185-fse\ContentInfo\</AssetDir>
+			<OutputDir>ContentInfo\cardboard_gt-aircraft-c185-fse\</OutputDir>
 		</AssetGroup>
-		<AssetGroup Name="minchinweb-c185">
+		<AssetGroup Name="cardboard_gt-c185">
 			<Type Version="0">ModularSimObject</Type>
 			<Flags>
 				<FSXCompatibility>false</FSXCompatibility>
 			</Flags>
-			<AssetDir>PackageSources\SimObjects\Airplanes\minchinweb-aircraft-c185-fse\</AssetDir>
+			<AssetDir>PackageSources\SimObjects\Airplanes\cardboard_gt-aircraft-c185-fse\</AssetDir>
 			<OutputDir>SimObjects\Airplanes\microsoft_c185f_skywagon\</OutputDir>
 		</AssetGroup>
 	</AssetGroups>
 </AssetPackage>
-
