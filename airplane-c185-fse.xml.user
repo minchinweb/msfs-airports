@@ -2,9 +2,7 @@
 	<CheckedOutPackages>
 		<Package Name="minchinweb-aircraft-c185-fse"/>
 	</CheckedOutPackages>
-	<SelectedPackages>
-		<Package Name="minchinweb-aircraft-c185-fse"/>
-	</SelectedPackages>
+	<SelectedPackages/>
 	<Filter/>
 	<ShowOnlyEdited>false</ShowOnlyEdited>
 </UserSettings>

@@ -5,17 +5,17 @@
 		<Title>Cessna 185 FSEconomy</Title>
 		<Manufacturer>Cessna</Manufacturer>
 		<Creator>MinchinWeb</Creator>
-        <Description>The Cessna 185 Skywagon, now with (oversized!) FSEconomy-sized tanks!</Description>
 	</ItemSettings>
 	<Flags>
 		<VisibleInStore>false</VisibleInStore>
 		<CanBeReferenced>false</CanBeReferenced>
 	</Flags>
-    <Dependencies>
-        <Dependency Version="0.1.0">
-            <Name>fs24-microsoft-aircraft-c185f-skywagon</Name>
-        </Dependency>
-    </Dependencies>
+	<Dependencies>
+		<Dependency Version="0.1.0">
+			<Name>fs24-microsoft-aircraft-c185f-skywagon</Name>
+		</Dependency>
+	</Dependencies>
+	<PackageOrderHint>CUSTOM_SIMOBJECTS</PackageOrderHint>
 	<AssetGroups>
 		<AssetGroup Name="ContentInfo">
 			<Type Version="0">ContentInfo</Type>
@@ -35,3 +35,4 @@
 		</AssetGroup>
 	</AssetGroups>
 </AssetPackage>
+
