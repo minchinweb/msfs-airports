@@ -5,4 +5,5 @@
 - does not load into game (I gave up after 10 minutes of waiting)</ReleaseNote>
 	<ReleaseNote Version="0.1.5" Date="2025-10-19">- include full FUEL_SYSTEM
 - first working release!</ReleaseNote>
+    <ReleaseNote Version="0.1.6" Date="2025-10-19">- move to `cardboard-gt` namespace</ReleaseNote>
 </ReleaseNotes>

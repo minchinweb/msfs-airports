@@ -3,7 +3,7 @@
 	<OutputDirectory>.</OutputDirectory>
 	<TemporaryOutputDirectory>_PackageInt</TemporaryOutputDirectory>
 	<Packages>
-		<Package>PackageDefinitions\cardboard_gt-aircraft-c185-fse.xml</Package>
+		<Package>PackageDefinitions\cardboard-gt-aircraft-c185-fse.xml</Package>
 	</Packages>
 	<PublishingGroups/>
 </Project>

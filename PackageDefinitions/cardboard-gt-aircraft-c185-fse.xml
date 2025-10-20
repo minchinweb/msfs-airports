@@ -1,10 +1,10 @@
 <?xml version="1.0" encoding="utf-8"?>
-<AssetPackage Version="0.1.5">
+<AssetPackage Version="0.1.6">
 	<ItemSettings>
 		<ContentType>AIRCRAFT</ContentType>
 		<Title>Cessna 185 FSEconomy</Title>
 		<Manufacturer>Cessna</Manufacturer>
-		<Creator>cardboard_gt</Creator>
+		<Creator>Cardboard GT</Creator>
 	</ItemSettings>
 	<Flags>
 		<VisibleInStore>false</VisibleInStore>
@@ -22,15 +22,15 @@
 			<Flags>
 				<FSXCompatibility>false</FSXCompatibility>
 			</Flags>
-			<AssetDir>PackageDefinitions\cardboard_gt-aircraft-c185-fse\ContentInfo\</AssetDir>
-			<OutputDir>ContentInfo\cardboard_gt-aircraft-c185-fse\</OutputDir>
+			<AssetDir>PackageDefinitions\cardboard-gt-aircraft-c185-fse\ContentInfo\</AssetDir>
+			<OutputDir>ContentInfo\cardboard-gt-aircraft-c185-fse\</OutputDir>
 		</AssetGroup>
-		<AssetGroup Name="cardboard_gt-c185">
+		<AssetGroup Name="cardboard-gt-c185">
 			<Type Version="0">ModularSimObject</Type>
 			<Flags>
 				<FSXCompatibility>false</FSXCompatibility>
 			</Flags>
-			<AssetDir>PackageSources\SimObjects\Airplanes\cardboard_gt-aircraft-c185-fse\</AssetDir>
+			<AssetDir>PackageSources\SimObjects\Airplanes\cardboard-gt-aircraft-c185-fse\</AssetDir>
 			<OutputDir>SimObjects\Airplanes\microsoft_c185f_skywagon\</OutputDir>
 		</AssetGroup>
 	</AssetGroups>

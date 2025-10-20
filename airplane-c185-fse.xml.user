@@ -1,8 +1,10 @@
 <UserSettings>
 	<CheckedOutPackages>
-		<Package Name="cardboard_gt-aircraft-c185-fse"/>
+		<Package Name="cardboard-gt-aircraft-c185-fse"/>
 	</CheckedOutPackages>
-	<SelectedPackages/>
+	<SelectedPackages>
+		<Package Name="cardboard-gt-aircraft-c185-fse"/>
+	</SelectedPackages>
 	<Filter/>
 	<ShowOnlyEdited>false</ShowOnlyEdited>
 </UserSettings>
