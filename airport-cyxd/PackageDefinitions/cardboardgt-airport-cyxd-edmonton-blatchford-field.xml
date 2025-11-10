@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="utf-8"?>
-<AssetPackage Version="0.1.0">
+<AssetPackage Version="0.1.1">
 	<ItemSettings>
-		<ContentType>MISC</ContentType>
+		<ContentType>SCENERY</ContentType>
 		<Title>CYXD Edmonton/Blatchford Field</Title>
 		<Manufacturer/>
 		<Creator>Cardboard_GT</Creator>
@@ -17,17 +17,16 @@
 			<Flags>
 				<FSXCompatibility>false</FSXCompatibility>
 			</Flags>
-			<AssetDir>PackageDefinitions\cardboardgt-cyxd-edmonton-blatchford-field\ContentInfo</AssetDir>
-			<OutputDir>ContentInfo\cardboardgt-cyxd-edmonton-blatchford-field</OutputDir>
+			<AssetDir>PackageDefinitions\cardboardgt-airport-cyxd-edmonton-blatchford-field\ContentInfo</AssetDir>
+			<OutputDir>ContentInfo\cardboardgt-airport-cyxd-edmonton-blatchford-field</OutputDir>
 		</AssetGroup>
-		<AssetGroup Name="cyxd-terrain-asset-group">
+		<AssetGroup Name="cyxd-scenery">
 			<Type Version="0">BGL</Type>
 			<Flags>
 				<FSXCompatibility>false</FSXCompatibility>
 			</Flags>
-			<AssetDir>PackageSources\Scenery\cyxd-edmonton-blatchford-field\cyxd-terrain-asset-group\</AssetDir>
-			<OutputDir>Scenery\cyxd-edmonton-blatchford-field\cyxd-edmonton-blatchford-field-asset-group\</OutputDir>
+			<AssetDir>PackageSources\Scenery\airport-cyxd\</AssetDir>
+			<OutputDir>Scenery\cardboardgt\cyxd\</OutputDir>
 		</AssetGroup>
 	</AssetGroups>
 </AssetPackage>
-

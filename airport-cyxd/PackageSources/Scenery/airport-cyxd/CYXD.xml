@@ -3,8 +3,7 @@
 	<SceneryObject groupIndex="1" lat="53.56715478715844" lon="-113.51394313826188" alt="0.00000000000000" pitch="0.000000" bank="0.000000" heading="-179.999995" imageComplexity="VERY_SPARSE" altitudeIsAgl="TRUE" snapToGround="TRUE" snapToNormal="FALSE">
 		<Windsock poleHeight="4.572000" sockLength="2.743200" lighted="FALSE" containerTitle="Windsock"/>
 	</SceneryObject>
-	<Group displayName="New Group 4" groupID="4" groupGenerated="FALSE"/>
-	<Airport displayName="Airport (CYXD)" parentGroupID="4" groupID="1" groupGenerated="FALSE" country="Canada" state="Alberta" city="Edmonton" name="Blatchford Field" ident="CYXD" lat="53.57248965775836" lon="-113.52043460802926" alt="667.33348038753888" magvar="-16.216999" trafficScalar="1.000000" airportTestRadius="1020.65014286374242" applyFlatten="FALSE" isOnTIN="FALSE" tinColorCorrection="TRUE" starAirport="TRUE">
+	<Airport displayName="Airport (CYXD)" groupID="1" groupGenerated="FALSE" country="Canada" state="Alberta" city="Edmonton" name="Blatchford Field" ident="CYXD" lat="53.57248965775836" lon="-113.52043460802926" alt="667.33348038753888" magvar="-16.216999" trafficScalar="1.000000" airportTestRadius="1020.65014286374242" applyFlatten="FALSE" isOnTIN="FALSE" tinColorCorrection="TRUE" starAirport="TRUE">
 		<AirportArchetype/>
 		<TaxiwayPoint parentGroupID="1" groupIndex="46" index="0" type="NORMAL" orientation="FORWARD" lat="53.56499183389646" lon="-113.51346340466203"/>
 		<TaxiwayPoint parentGroupID="1" groupIndex="51" index="1" type="HOLD_SHORT" orientation="FORWARD" lat="53.56517006809965" lon="-113.51216184363507"/>
@@ -12,7 +11,7 @@
 		<TaxiwayPoint parentGroupID="1" groupIndex="54" index="3" type="HOLD_SHORT" orientation="FORWARD" lat="53.56619587366576" lon="-113.51001805976013"/>
 		<TaxiwayPoint parentGroupID="1" groupIndex="55" index="4" type="NORMAL" orientation="FORWARD" lat="53.56678004342144" lon="-113.50908826161468"/>
 		<TaxiwayPoint parentGroupID="1" groupIndex="56" index="5" type="NORMAL" orientation="FORWARD" lat="53.56766941721990" lon="-113.50895941349079"/>
-		<TaxiwayPoint displayName="a6" parentGroupID="1" groupIndex="57" index="6" type="NORMAL" orientation="FORWARD" lat="53.56830363389820" lon="-113.51031685597520"/>
+		<TaxiwayPoint parentGroupID="1" groupIndex="57" index="6" type="NORMAL" orientation="FORWARD" lat="53.56830363389820" lon="-113.51031685597520"/>
 		<TaxiwayPoint parentGroupID="1" groupIndex="58" index="7" type="NORMAL" orientation="FORWARD" lat="53.57657549102390" lon="-113.51041470311316"/>
 		<TaxiwayPoint parentGroupID="1" groupIndex="60" index="8" type="HOLD_SHORT" orientation="FORWARD" lat="53.57714863505336" lon="-113.51049886097226"/>
 		<TaxiwayPoint parentGroupID="1" groupIndex="61" index="9" type="HOLD_SHORT" orientation="FORWARD" lat="53.57813314781309" lon="-113.51074842988019"/>
@@ -29,7 +28,7 @@
 		<TaxiwayPoint parentGroupID="1" groupIndex="74" index="20" type="HOLD_SHORT" orientation="FORWARD" lat="53.57378351845014" lon="-113.52473568048053"/>
 		<TaxiwayPoint parentGroupID="1" groupIndex="75" index="21" type="HOLD_SHORT" orientation="FORWARD" lat="53.57300602636325" lon="-113.52391869576741"/>
 		<TaxiwayPoint parentGroupID="1" groupIndex="76" index="22" type="NORMAL" orientation="FORWARD" lat="53.57166627643483" lon="-113.52187018568361"/>
-		<TaxiwayPoint displayName="a2" parentGroupID="1" groupIndex="77" index="23" type="NORMAL" orientation="FORWARD" lat="53.57087566347705" lon="-113.52178601269850"/>
+		<TaxiwayPoint parentGroupID="1" groupIndex="77" index="23" type="NORMAL" orientation="FORWARD" lat="53.57087566347705" lon="-113.52178601269850"/>
 		<TaxiwayPoint parentGroupID="1" groupIndex="78" index="24" type="NORMAL" orientation="FORWARD" lat="53.56683954956271" lon="-113.51596197949638"/>
 		<TaxiwayPoint parentGroupID="1" groupIndex="79" index="25" type="NORMAL" orientation="FORWARD" lat="53.56498092484541" lon="-113.51573624780663"/>
 		<TaxiwayPoint parentGroupID="1" groupIndex="32" index="26" type="NORMAL" orientation="FORWARD" lat="53.56496154268029" lon="-113.51423501806603"/>
@@ -43,19 +42,19 @@
 		<TaxiwayPoint parentGroupID="1" groupIndex="44" index="35" type="NORMAL" orientation="FORWARD" lat="53.57409715462864" lon="-113.52603849891086"/>
 		<TaxiwayPoint parentGroupID="1" groupIndex="47" index="36" type="NORMAL" orientation="FORWARD" lat="53.56508095114029" lon="-113.51281262414855"/>
 		<TaxiwayPoint parentGroupID="1" groupIndex="33" index="37" type="NORMAL" orientation="FORWARD" lat="53.57214621087596" lon="-113.52863040369147"/>
-		<TaxiwayPoint displayName="r04 r12" parentGroupID="1" groupIndex="43" index="38" type="NORMAL" orientation="FORWARD" lat="53.57395129704818" lon="-113.52269315572478"/>
+		<TaxiwayPoint parentGroupID="1" groupIndex="43" index="38" type="NORMAL" orientation="FORWARD" lat="53.57395129704818" lon="-113.52269315572478"/>
 		<TaxiwayPoint parentGroupID="1" groupIndex="45" index="39" type="NORMAL" orientation="FORWARD" lat="53.57726138075352" lon="-113.52769203252880"/>
-		<TaxiwayPoint displayName="r22 2" parentGroupID="1" groupIndex="48" index="40" type="NORMAL" orientation="FORWARD" lat="53.57602352626314" lon="-113.51589704525276"/>
-		<TaxiwayPoint displayName="r16  r22" parentGroupID="1" groupIndex="49" index="41" type="NORMAL" orientation="FORWARD" lat="53.57695279273104" lon="-113.51280901021752"/>
+		<TaxiwayPoint parentGroupID="1" groupIndex="48" index="40" type="NORMAL" orientation="FORWARD" lat="53.57602352626314" lon="-113.51589704525276"/>
+		<TaxiwayPoint parentGroupID="1" groupIndex="49" index="41" type="NORMAL" orientation="FORWARD" lat="53.57695279273104" lon="-113.51280901021752"/>
 		<TaxiwayPoint parentGroupID="1" groupIndex="50" index="42" type="NORMAL" orientation="FORWARD" lat="53.57754957173634" lon="-113.51084222775620"/>
 		<TaxiwayPoint parentGroupID="1" groupIndex="52" index="43" type="NORMAL" orientation="FORWARD" lat="53.56594815216404" lon="-113.51049160039639"/>
-		<TaxiwayPoint displayName="r30 r34" parentGroupID="1" groupIndex="42" index="44" type="NORMAL" orientation="FORWARD" lat="53.56739653244516" lon="-113.51280864284082"/>
-		<TaxiwayPoint displayName="A1" parentGroupID="1" groupIndex="30" index="45" type="NORMAL" orientation="FORWARD" lat="53.56827725199711" lon="-113.51802366799383"/>
+		<TaxiwayPoint parentGroupID="1" groupIndex="42" index="44" type="NORMAL" orientation="FORWARD" lat="53.56739653244516" lon="-113.51280864284082"/>
+		<TaxiwayPoint parentGroupID="1" groupIndex="30" index="45" type="NORMAL" orientation="FORWARD" lat="53.56827725199711" lon="-113.51802366799383"/>
 		<TaxiwayPoint parentGroupID="1" groupIndex="28" index="47" type="NORMAL" orientation="FORWARD" lat="53.57344551497291" lon="-113.52435945650836"/>
 		<TaxiwayPoint parentGroupID="1" groupIndex="29" index="48" type="NORMAL" orientation="FORWARD" lat="53.57087211994006" lon="-113.51803229800130"/>
-		<TaxiwayPoint displayName="a4" parentGroupID="1" groupIndex="70" index="49" type="NORMAL" orientation="FORWARD" lat="53.57761812504641" lon="-113.52833621662731"/>
-		<TaxiwayPoint displayName="16 end" parentGroupID="1" groupIndex="65" index="50" type="NORMAL" orientation="FORWARD" lat="53.57974702186771" lon="-113.51282099583935"/>
-		<TaxiwayPoint displayName="r22 end" parentGroupID="1" groupIndex="59" index="51" type="NORMAL" orientation="FORWARD" lat="53.57764089143323" lon="-113.51062364542622"/>
+		<TaxiwayPoint parentGroupID="1" groupIndex="70" index="49" type="NORMAL" orientation="FORWARD" lat="53.57761812504641" lon="-113.52833621662731"/>
+		<TaxiwayPoint parentGroupID="1" groupIndex="65" index="50" type="NORMAL" orientation="FORWARD" lat="53.57974702186771" lon="-113.51282099583935"/>
+		<TaxiwayPoint parentGroupID="1" groupIndex="59" index="51" type="NORMAL" orientation="FORWARD" lat="53.57764089143323" lon="-113.51062364542622"/>
 		<TaxiwayPoint parentGroupID="1" groupIndex="26" index="52" type="NORMAL" orientation="FORWARD" lat="53.56795886018266" lon="-113.51362613824526"/>
 		<TaxiwayPoint parentGroupID="1" groupIndex="27" index="53" type="NORMAL" orientation="FORWARD" lat="53.56828200423795" lon="-113.51283823324566"/>
 		<TaxiwayPoint parentGroupID="1" groupIndex="25" index="54" type="HOLD_SHORT" orientation="FORWARD" lat="53.57653453163853" lon="-113.51626180064339"/>
@@ -88,7 +87,7 @@
 		<TaxiwayPoint parentGroupID="1" groupIndex="17" index="108" type="NORMAL" orientation="FORWARD" lat="53.57323394352921" lon="-113.50977925235456"/>
 		<TaxiwayPoint parentGroupID="1" groupIndex="19" index="109" type="NORMAL" orientation="FORWARD" lat="53.57371360082196" lon="-113.50976323361695"/>
 		<TaxiwayPoint parentGroupID="1" groupIndex="20" index="110" type="NORMAL" orientation="FORWARD" lat="53.57430569446622" lon="-113.50975730892978"/>
-		<TaxiwayPoint displayName="a7" parentGroupID="1" groupIndex="21" index="111" type="NORMAL" orientation="FORWARD" lat="53.57470941252801" lon="-113.51039785823545"/>
+		<TaxiwayPoint parentGroupID="1" groupIndex="21" index="111" type="NORMAL" orientation="FORWARD" lat="53.57470941252801" lon="-113.51039785823545"/>
 		<TaxiwayParking parentGroupID="1" groupIndex="86" index="33" type="GATE_HEAVY" lat="53.56720529753238" lon="-113.51647354750052" heading="-39.781612" radius="22.000000" name="GATE" number="1" suffix="NONE" numberMarking="TRUE" has3DMesh="TRUE" drawDirt="TRUE" passengerAccessType="JETWAY" numberBiasX="0.000000" numberBiasZ="0.000000" numberHeading="0.000000"/>
 		<TaxiwayParking parentGroupID="1" groupIndex="87" index="46" type="GATE_HEAVY" lat="53.56782273380764" lon="-113.51739744304822" heading="140.642441" radius="22.000000" name="GATE" number="2" suffix="NONE" numberMarking="TRUE" has3DMesh="TRUE" drawDirt="TRUE" passengerAccessType="JETWAY" numberBiasX="0.000000" numberBiasZ="0.000000" numberHeading="0.000000"/>
 		<TaxiwayParking parentGroupID="1" groupIndex="88" index="55" type="GATE_HEAVY" lat="53.56867133247397" lon="-113.51864441375734" heading="-43.156998" radius="22.000000" name="GATE" number="3" suffix="NONE" numberMarking="TRUE" has3DMesh="TRUE" drawDirt="TRUE" numberBiasX="0.000000" numberBiasZ="0.000000" numberHeading="0.000000"/>
@@ -269,60 +268,9 @@
 			<RunwayStart end="PRIMARY" lat="53.57278422123004" lon="-113.51280929783482" alt="665.08140629761817" heading="-178.78300476074219"/>
 			<RunwayStart end="SECONDARY" lat="53.57152472583442" lon="-113.51285425170417" alt="665.08089690421673" heading="1.21697998046875"/>
 		</Runway>
-		<Jetway gateName="GATE" parkingNumber="1" suffix="NONE"/>
-		<VDGS gateName="GATE" parkingNumber="1" suffix="NONE">
-			<SceneryObject lat="53.56720529753238" lon="-113.51647354750052" alt="0.00000000000000" pitch="0.000000" bank="0.000000" heading="-90.000000" imageComplexity="VERY_SPARSE" altitudeIsAgl="TRUE" snapToGround="TRUE" snapToNormal="FALSE">
-				<SimObject containerTitle="VDGS_01" scale="1.000000"/>
-			</SceneryObject>
-		</VDGS>
-		<Jetway gateName="GATE" parkingNumber="2" suffix="NONE"/>
-		<VDGS gateName="GATE" parkingNumber="2" suffix="NONE"/>
-		<Jetway gateName="GATE" parkingNumber="3" suffix="NONE"/>
-		<VDGS gateName="GATE" parkingNumber="3" suffix="NONE">
-			<SceneryObject lat="53.56867133247397" lon="-113.51864441375734" alt="0.00000000000000" pitch="0.000000" bank="0.000000" heading="180.000000" imageComplexity="VERY_SPARSE" altitudeIsAgl="TRUE" snapToGround="TRUE" snapToNormal="FALSE">
-				<SimObject containerTitle="VDGS_01" scale="1.000000"/>
-			</SceneryObject>
-		</VDGS>
-		<Jetway gateName="GATE" parkingNumber="4" suffix="NONE"/>
-		<VDGS gateName="GATE" parkingNumber="4" suffix="NONE">
-			<SceneryObject lat="53.56923206172325" lon="-113.51943126604179" alt="0.00000000000000" pitch="0.000000" bank="0.000000" heading="139.246094" instanceId="{FC02D8F9-7661-4505-B2DF-7879040CA3E6}" imageComplexity="VERY_SPARSE" altitudeIsAgl="TRUE" snapToGround="TRUE" snapToNormal="FALSE">
-				<SimObject containerTitle="VDGS_01" scale="1.000000"/>
-			</SceneryObject>
-		</VDGS>
-		<Jetway gateName="GATE" parkingNumber="5" suffix="NONE"/>
-		<VDGS gateName="GATE" parkingNumber="5" suffix="NONE">
-			<SceneryObject lat="53.57009665974602" lon="-113.52067489933999" alt="0.00000000000000" pitch="0.000000" bank="0.000000" heading="180.000000" instanceId="{0EA2E10D-4D03-44D1-BF63-E24680BDEB90}" imageComplexity="VERY_SPARSE" altitudeIsAgl="TRUE" snapToGround="TRUE" snapToNormal="FALSE">
-				<SimObject containerTitle="VDGS_01" scale="1.000000"/>
-			</SceneryObject>
-		</VDGS>
-		<Jetway gateName="GATE" parkingNumber="6" suffix="NONE"/>
-		<VDGS gateName="GATE" parkingNumber="6" suffix="NONE">
-			<SceneryObject lat="53.57057382996373" lon="-113.52135918676581" alt="0.00000000000000" pitch="0.000000" bank="0.000000" heading="180.000000" instanceId="{BF84F212-FF51-4E8B-B30F-1995D284C90E}" imageComplexity="VERY_SPARSE" altitudeIsAgl="TRUE" snapToGround="TRUE" snapToNormal="FALSE">
-				<SimObject containerTitle="VDGS_01" scale="1.000000"/>
-			</SceneryObject>
-		</VDGS>
-		<Jetway gateName="GATE" parkingNumber="7" suffix="NONE"/>
-		<VDGS gateName="GATE" parkingNumber="7" suffix="NONE">
-			<SceneryObject lat="53.57197114837878" lon="-113.52423450186996" alt="0.00000000000000" pitch="0.000000" bank="0.000000" heading="180.000000" imageComplexity="VERY_SPARSE" altitudeIsAgl="TRUE" snapToGround="TRUE" snapToNormal="FALSE">
-				<SimObject containerTitle="VDGS_01" scale="1.000000"/>
-			</SceneryObject>
-		</VDGS>
-		<Jetway gateName="GATE" parkingNumber="8" suffix="NONE"/>
-		<VDGS gateName="GATE" parkingNumber="8" suffix="NONE">
-			<SceneryObject lat="53.57167111245155" lon="-113.52505119844825" alt="0.00000000000000" pitch="0.000000" bank="0.000000" heading="180.000000" imageComplexity="VERY_SPARSE" altitudeIsAgl="TRUE" snapToGround="TRUE" snapToNormal="FALSE">
-				<SimObject containerTitle="VDGS_01" scale="1.000000"/>
-			</SceneryObject>
-		</VDGS>
-		<Jetway gateName="GATE" parkingNumber="9" suffix="NONE"/>
-		<VDGS gateName="GATE" parkingNumber="9" suffix="NONE">
-			<SceneryObject lat="53.57139634076817" lon="-113.52591600927434" alt="0.00000000000000" pitch="0.000000" bank="0.000000" heading="180.000000" imageComplexity="VERY_SPARSE" altitudeIsAgl="TRUE" snapToGround="TRUE" snapToNormal="FALSE">
-				<SimObject containerTitle="VDGS_01" scale="1.000000"/>
-			</SceneryObject>
-		</VDGS>
 		<Aprons/>
 		<PaintedElements/>
 		<ApronEdgeLights/>
-		<Com frequency="114.900000" type="ATIS" name="ATIS"/>
 		<Com frequency="121.300000" type="CLEARANCE" name="CLNC / DEL"/>
 		<Com frequency="121.900000" type="GROUND" name="GND"/>
 		<Com frequency="119.100000" type="CTAF" name="CTAF"/>
@@ -333,4 +281,3 @@
 		<Com frequency="119.500000" type="DEPARTURE" name="DEPARTURE"/>
 	</Airport>
 </FSData>
-
