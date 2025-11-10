@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="utf-8"?>
-<AssetPackage Version="0.1.1">
+<AssetPackage ReleaseNotes="PackageDefinitions\cardboardgt-airport-cyxd-edmonton-blatchford-field\ReleaseNotes.xml" Version="0.1.2">
 	<ItemSettings>
 		<ContentType>SCENERY</ContentType>
 		<Title>CYXD Edmonton/Blatchford Field</Title>
@@ -17,8 +17,8 @@
 			<Flags>
 				<FSXCompatibility>false</FSXCompatibility>
 			</Flags>
-			<AssetDir>PackageDefinitions\cardboardgt-airport-cyxd-edmonton-blatchford-field\ContentInfo</AssetDir>
-			<OutputDir>ContentInfo\cardboardgt-airport-cyxd-edmonton-blatchford-field</OutputDir>
+			<AssetDir>PackageDefinitions\cardboardgt-airport-cyxd-edmonton-blatchford-field\ContentInfo\</AssetDir>
+			<OutputDir>ContentInfo\cardboardgt-airport-cyxd-edmonton-blatchford-field\</OutputDir>
 		</AssetGroup>
 		<AssetGroup Name="cyxd-scenery">
 			<Type Version="0">BGL</Type>
@@ -30,3 +30,4 @@
 		</AssetGroup>
 	</AssetGroups>
 </AssetPackage>
+

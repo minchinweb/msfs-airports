@@ -1,9 +1,10 @@
 <UserSettings>
 	<CheckedOutPackages>
-		<Package Name="cardboard-gt-airport-cyxd-edmonton-blatchford-field"/>
 		<Package Name="cardboardgt-airport-cyxd-edmonton-blatchford-field"/>
 	</CheckedOutPackages>
-	<SelectedPackages/>
+	<SelectedPackages>
+		<Package Name="cardboardgt-airport-cyxd-edmonton-blatchford-field"/>
+	</SelectedPackages>
 	<Filter/>
 	<ShowOnlyEdited>false</ShowOnlyEdited>
 </UserSettings>
