@@ -2,15 +2,19 @@
 	<ReleaseNote Version="0.1.2" Date="2025-11-9">This is the initial implementation/recreation!
 
 Includes the three historical runways (including 04/22), with ILS frequency on Rwy 34.
-Includes an approximation of the tasiways and a guess at possible parking locations.
+Includes an approximation of the taxiways and a guess at possible parking locations.
 Radio frequencies are implemented (although have been hard to confrim).
 Excludes vehicle traffic, streetlights, and generated buildings from airport footprint.
 Includes NDB (IXD) on airport grounds; have not yet confirmed working.
 
-Does not include approaches.
-Does not include any ground services.
 Does not (yet) include additional navaids (XD, ZXD).
 
 Likely makes a mess of air traffic control in the region, but it works!</ReleaseNote>
-</ReleaseNotes>
+	<ReleaseNote Version="0.2.0" Date="2025-11-11">- label taxiways
+- add taxiway signs
+- add NDB (XD and ZXD) for approaches to Rwy 16 and Rwy 34
+- tweak runway profiles
 
+Does not include approaches.
+Does not include any ground services.</ReleaseNote>
+</ReleaseNotes>
