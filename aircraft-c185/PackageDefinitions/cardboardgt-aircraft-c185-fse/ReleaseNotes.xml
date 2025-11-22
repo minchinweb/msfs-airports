@@ -6,4 +6,8 @@
 	<ReleaseNote Version="0.1.5" Date="2025-10-19">- include full FUEL_SYSTEM
 - first working release!</ReleaseNote>
     <ReleaseNote Version="0.1.6" Date="2025-10-19">- move to `cardboard-gt` namespace</ReleaseNote>
+    <ReleaseNote Version="0.2.0" Date="2025-11-22">- move to `cardboardgt` namespace
+- add third row seating to match FSE (6 seats)
+- add variant to match FSEconomy's 'Cessna 182 Skylane'
+    </ReleaseNote>
 </ReleaseNotes>
