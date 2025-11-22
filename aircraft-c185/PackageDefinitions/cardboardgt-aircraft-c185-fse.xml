@@ -22,15 +22,15 @@
 			<Flags>
 				<FSXCompatibility>false</FSXCompatibility>
 			</Flags>
-			<AssetDir>PackageDefinitions\cardboard-gt-aircraft-c185-fse\ContentInfo\</AssetDir>
-			<OutputDir>ContentInfo\cardboard-gt-aircraft-c185-fse\</OutputDir>
+			<AssetDir>PackageDefinitions\cardboardgt-aircraft-c185-fse\ContentInfo\</AssetDir>
+			<OutputDir>ContentInfo\cardboardgt-aircraft-c185-fse\</OutputDir>
 		</AssetGroup>
-		<AssetGroup Name="cardboard-gt-c185">
+		<AssetGroup Name="cardboardgt-c185">
 			<Type Version="0">ModularSimObject</Type>
 			<Flags>
 				<FSXCompatibility>false</FSXCompatibility>
 			</Flags>
-			<AssetDir>PackageSources\SimObjects\Airplanes\cardboard-gt-aircraft-c185-fse\</AssetDir>
+			<AssetDir>PackageSources\SimObjects\Airplanes\cardboardgt-aircraft-c185-fse\</AssetDir>
 			<OutputDir>SimObjects\Airplanes\microsoft_c185f_skywagon\</OutputDir>
 		</AssetGroup>
 	</AssetGroups>
