@@ -2,9 +2,7 @@
 	<CheckedOutPackages>
 		<Package Name="cardboardgt-airport-cyxd-edmonton-blatchford-field"/>
 	</CheckedOutPackages>
-	<SelectedPackages>
-		<Package Name="cardboardgt-airport-cyxd-edmonton-blatchford-field"/>
-	</SelectedPackages>
+	<SelectedPackages/>
 	<Filter/>
 	<ShowOnlyEdited>false</ShowOnlyEdited>
 </UserSettings>
