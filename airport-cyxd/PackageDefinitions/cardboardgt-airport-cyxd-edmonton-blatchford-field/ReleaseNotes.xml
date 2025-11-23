@@ -17,4 +17,7 @@ Likely makes a mess of air traffic control in the region, but it works!</Release
 
 Does not include approaches.
 Does not include any ground services.</ReleaseNote>
+    <ReleaseNote Version="0.2.1" Date="2025-11-22">- apply "grass" to hide some construction
+- relabel radio frequencies
+- add approaches for Rwy 16 and Rwy 34 (but they don't seem to show in sim...)</ReleaseNote>
 </ReleaseNotes>
