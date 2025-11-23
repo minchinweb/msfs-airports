@@ -1,0 +1,92 @@
+<?xml version="1.0"?>
+<FSData version="9.0">
+	<!--SceneryObject name: Dock_Turn-->
+	<SceneryObject parentGroupID="2" lat="53.42515530141338" lon="-113.10643614587791" alt="0.00000000000000" pitch="0.001544" bank="-0.001544" heading="153.245703" imageComplexity="VERY_SPARSE" altitudeIsAgl="TRUE" snapToGround="TRUE" snapToNormal="FALSE">
+		<LibraryObject name="{456EAAC1-419C-4326-A2AA-553EC6023A4D}" scale="1.000000"/>
+	</SceneryObject>
+	<!--SceneryObject name: Dock__High-->
+	<SceneryObject displayName="Dock__High (copy 4)" parentGroupID="2" groupIndex="4" lat="53.42487417517823" lon="-113.10524598949247" alt="0.00000000000000" pitch="0.001332" bank="-0.001332" heading="111.265776" imageComplexity="VERY_SPARSE" altitudeIsAgl="TRUE" snapToGround="TRUE" snapToNormal="FALSE">
+		<LibraryObject name="{93DAD4E2-2877-445C-BE58-7812B07B086F}" scale="1.000000"/>
+	</SceneryObject>
+	<!--SceneryObject name: Dock__High-->
+	<SceneryObject displayName="Dock__High (copy 3)" parentGroupID="2" groupIndex="3" lat="53.42495099880750" lon="-113.10557811920025" alt="0.00000000000000" pitch="0.001332" bank="-0.001332" heading="111.265776" imageComplexity="VERY_SPARSE" altitudeIsAgl="TRUE" snapToGround="TRUE" snapToNormal="FALSE">
+		<LibraryObject name="{93DAD4E2-2877-445C-BE58-7812B07B086F}" scale="1.000000"/>
+	</SceneryObject>
+	<!--SceneryObject name: Dock__High-->
+	<SceneryObject displayName="Dock__High (copy 2)" parentGroupID="2" groupIndex="5" lat="53.42502664227604" lon="-113.10590878114263" alt="0.00000000000000" pitch="0.001332" bank="-0.001332" heading="111.265776" imageComplexity="VERY_SPARSE" altitudeIsAgl="TRUE" snapToGround="TRUE" snapToNormal="FALSE">
+		<LibraryObject name="{93DAD4E2-2877-445C-BE58-7812B07B086F}" scale="1.000000"/>
+	</SceneryObject>
+	<!--SceneryObject name: Dock__High-->
+	<SceneryObject displayName="Dock__High (copy 1)" parentGroupID="2" groupIndex="2" lat="53.42510343138248" lon="-113.10623997823915" alt="0.00000000000000" pitch="0.001332" bank="-0.001332" heading="111.265776" imageComplexity="VERY_SPARSE" altitudeIsAgl="TRUE" snapToGround="TRUE" snapToNormal="FALSE">
+		<LibraryObject name="{93DAD4E2-2877-445C-BE58-7812B07B086F}" scale="1.000000"/>
+	</SceneryObject>
+	<!--SceneryObject name: Dock__High-->
+	<SceneryObject displayName="Dock__High (copy)" parentGroupID="2" groupIndex="1" lat="53.42527113101697" lon="-113.10654829353567" alt="0.00000000000000" pitch="0.000826" bank="-0.000826" heading="153.415693" imageComplexity="VERY_SPARSE" altitudeIsAgl="TRUE" snapToGround="TRUE" snapToNormal="FALSE">
+		<LibraryObject name="{93DAD4E2-2877-445C-BE58-7812B07B086F}" scale="1.000000"/>
+	</SceneryObject>
+	<!--SceneryObject name: Dock__High-->
+	<SceneryObject parentGroupID="2" groupIndex="6" lat="53.42546160930268" lon="-113.10670839662768" alt="0.00000000000000" pitch="2.277486" bank="4.554500" heading="153.506275" imageComplexity="VERY_SPARSE" altitudeIsAgl="TRUE" snapToGround="TRUE" snapToNormal="FALSE">
+		<LibraryObject name="{93DAD4E2-2877-445C-BE58-7812B07B086F}" scale="1.000000"/>
+	</SceneryObject>
+	<Group displayName="Docks" groupID="2" groupGenerated="FALSE"/>
+	<Airport displayName="Airport (CEE7)" groupIndex="1" groupID="1" groupGenerated="FALSE" region="North America" country="Canada" state="Alberta" city="Edmonton" name="Cooking Lake Seaplane Base" ident="CEE7" lat="53.42283333333334" lon="-113.10450000000000" alt="737.31119999999999" magvar="345.176392" trafficScalar="1.000000" airportTestRadius="5000.00000000000000" applyFlatten="FALSE" isOnTIN="FALSE" tinColorCorrection="TRUE">
+		<AirportArchetype/>
+		<Group displayName="Taxi Pts" parentGroupID="1" groupIndex="2" groupID="3" groupGenerated="FALSE"/>
+		<Group displayName="Taxi Paths" parentGroupID="1" groupIndex="1" groupID="4" groupGenerated="FALSE"/>
+		<Group displayName="Parking" parentGroupID="1" groupID="5" groupGenerated="FALSE"/>
+		<TaxiwayPoint displayName="10 end" parentGroupID="3" groupIndex="3" index="0" type="NORMAL" orientation="FORWARD" lat="53.42226762809923" lon="-113.10996756232765"/>
+		<TaxiwayPoint displayName="cross" parentGroupID="3" groupIndex="2" index="1" type="NORMAL" orientation="FORWARD" lat="53.42032221488349" lon="-113.10309833254949"/>
+		<TaxiwayPoint displayName="west end" parentGroupID="3" index="2" type="NORMAL" orientation="FORWARD" lat="53.42032561795622" lon="-113.11791423332532"/>
+		<TaxiwayPoint displayName="28 end" parentGroupID="3" groupIndex="6" index="3" type="NORMAL" orientation="FORWARD" lat="53.40645483376727" lon="-113.05592033259202"/>
+		<TaxiwayPoint displayName="esat end" parentGroupID="4" groupIndex="9" index="4" type="NORMAL" orientation="FORWARD" lat="53.42025513591042" lon="-113.04266627339351"/>
+		<TaxiwayPoint displayName="Parking 4" parentGroupID="3" groupIndex="12" index="9" type="NORMAL" orientation="FORWARD" lat="53.42533285801455" lon="-113.10485312023914"/>
+		<TaxiwayPoint displayName="Parking 2" parentGroupID="3" groupIndex="11" index="10" type="NORMAL" orientation="FORWARD" lat="53.42541237793162" lon="-113.10536192043351"/>
+		<TaxiwayPoint displayName="Parking 1" parentGroupID="3" groupIndex="9" index="11" type="NORMAL" orientation="FORWARD" lat="53.42457639429801" lon="-113.10588022112702"/>
+		<TaxiwayPoint displayName="10 end" parentGroupID="3" groupIndex="4" index="12" type="NORMAL" orientation="FORWARD" lat="53.42150200700195" lon="-113.10721757895698"/>
+		<TaxiwayPoint displayName="Even Parking" parentGroupID="3" groupIndex="8" index="13" type="NORMAL" orientation="FORWARD" lat="53.42520029067760" lon="-113.10423014541819"/>
+		<TaxiwayPoint displayName="Odd Parking" parentGroupID="3" groupIndex="7" index="14" type="NORMAL" orientation="FORWARD" lat="53.42443021259582" lon="-113.10501890469024"/>
+		<TaxiwayPoint displayName="Parking 3" parentGroupID="3" groupIndex="10" index="15" type="NORMAL" orientation="FORWARD" lat="53.42449224967690" lon="-113.10541139866451"/>
+		<TaxiwayPoint displayName="west end" parentGroupID="3" groupIndex="1" index="16" type="NORMAL" orientation="FORWARD" lat="53.42030679780304" lon="-113.10705058217140"/>
+		<TaxiwayPoint displayName="10 end" parentGroupID="3" groupIndex="5" index="17" type="HOLD_SHORT" orientation="FORWARD" lat="53.42296611000079" lon="-113.10611824170553"/>
+		<TaxiwayParking parentGroupID="5" groupIndex="3" index="5" type="DOCK_GA" lat="53.42481467815516" lon="-113.10573885380994" heading="19.512465" radius="15.000000" name="DOCK" number="1" suffix="NONE" numberMarking="FALSE" has3DMesh="TRUE" drawDirt="FALSE" numberBiasX="0.000000" numberBiasZ="0.000000" numberHeading="0.000000"/>
+		<TaxiwayParking parentGroupID="5" index="6" type="DOCK_GA" lat="53.42501398036771" lon="-113.10508209603377" heading="-156.785400" radius="15.000000" name="DOCK" number="4" suffix="NONE" numberMarking="FALSE" has3DMesh="TRUE" drawDirt="TRUE" numberBiasX="0.000000" numberBiasZ="0.000000" numberHeading="0.000000"/>
+		<TaxiwayParking parentGroupID="5" groupIndex="2" index="7" type="DOCK_GA" lat="53.42471373972606" lon="-113.10529504247344" heading="17.421024" radius="15.000000" name="DOCK" number="3" suffix="NONE" numberMarking="FALSE" has3DMesh="TRUE" drawDirt="FALSE" numberBiasX="0.000000" numberBiasZ="0.000000" numberHeading="0.000000"/>
+		<TaxiwayParking parentGroupID="5" groupIndex="1" index="8" type="DOCK_GA" lat="53.42512691161851" lon="-113.10552845021466" heading="-160.789597" radius="15.000000" name="DOCK" number="2" suffix="NONE" numberMarking="FALSE" has3DMesh="TRUE" drawDirt="TRUE" numberBiasX="0.000000" numberBiasZ="0.000000" numberHeading="0.000000"/>
+		<TaxiName index="0" name=""/>
+		<TaxiwayPath parentGroupID="4" groupIndex="14" type="PARKING" surface="{85D02B2B-08A1-452E-AB07-6D5AE7F52884}" centerLine="FALSE" start="11" end="5" width="30.000000" weightLimit="0" name="0" drawSurface="FALSE" drawDetail="TRUE" groundMerging="TRUE" excludeVegetationAround="TRUE" excludeVegetationInside="TRUE"/>
+		<TaxiwayPath parentGroupID="4" groupIndex="10" type="PARKING" surface="{85D02B2B-08A1-452E-AB07-6D5AE7F52884}" centerLine="FALSE" start="9" end="6" width="30.000000" weightLimit="0" name="0" drawSurface="FALSE" drawDetail="TRUE" groundMerging="TRUE" excludeVegetationAround="TRUE" excludeVegetationInside="TRUE"/>
+		<TaxiwayPath parentGroupID="4" groupIndex="16" type="PARKING" surface="{85D02B2B-08A1-452E-AB07-6D5AE7F52884}" centerLine="FALSE" start="15" end="7" width="30.000000" weightLimit="0" name="0" drawSurface="FALSE" drawDetail="TRUE" groundMerging="TRUE" excludeVegetationAround="TRUE" excludeVegetationInside="TRUE"/>
+		<TaxiwayPath parentGroupID="4" groupIndex="11" type="PARKING" surface="{85D02B2B-08A1-452E-AB07-6D5AE7F52884}" centerLine="FALSE" start="10" end="8" width="30.000000" weightLimit="0" name="0" drawSurface="FALSE" drawDetail="TRUE" groundMerging="TRUE" excludeVegetationAround="TRUE" excludeVegetationInside="TRUE"/>
+		<TaxiwayPath parentGroupID="4" groupIndex="17" type="TAXI" surface="{85D02B2B-08A1-452E-AB07-6D5AE7F52884}" centerLine="FALSE" start="10" end="9" width="30.000000" weightLimit="0" name="0" drawSurface="FALSE" drawDetail="TRUE" groundMerging="TRUE" excludeVegetationAround="TRUE" excludeVegetationInside="TRUE"/>
+		<TaxiwayPath parentGroupID="4" groupIndex="18" type="TAXI" surface="{85D02B2B-08A1-452E-AB07-6D5AE7F52884}" centerLine="FALSE" start="9" end="13" width="30.000000" weightLimit="0" name="0" drawSurface="FALSE" drawDetail="TRUE" groundMerging="TRUE" excludeVegetationAround="TRUE" excludeVegetationInside="TRUE"/>
+		<TaxiwayPath parentGroupID="4" groupIndex="12" type="TAXI" surface="{85D02B2B-08A1-452E-AB07-6D5AE7F52884}" centerLine="FALSE" start="14" end="13" width="30.000000" weightLimit="0" name="0" drawSurface="FALSE" drawDetail="TRUE" groundMerging="TRUE" excludeVegetationAround="TRUE" excludeVegetationInside="TRUE"/>
+		<TaxiwayPath parentGroupID="4" groupIndex="15" type="TAXI" surface="{85D02B2B-08A1-452E-AB07-6D5AE7F52884}" centerLine="FALSE" start="15" end="14" width="30.000000" weightLimit="0" name="0" drawSurface="FALSE" drawDetail="TRUE" groundMerging="TRUE" excludeVegetationAround="TRUE" excludeVegetationInside="TRUE"/>
+		<TaxiwayPath parentGroupID="4" groupIndex="13" type="TAXI" surface="{85D02B2B-08A1-452E-AB07-6D5AE7F52884}" centerLine="FALSE" start="11" end="15" width="30.000000" weightLimit="0" name="0" drawSurface="FALSE" drawDetail="TRUE" groundMerging="TRUE" excludeVegetationAround="TRUE" excludeVegetationInside="TRUE"/>
+		<TaxiwayPath parentGroupID="4" groupIndex="8" type="RUNWAY" surface="{00000000-0000-0000-0000-000000000000}" centerLine="FALSE" start="2" end="16" width="30.000000" weightLimit="0" number="07" designator="WATER" drawSurface="TRUE" drawDetail="TRUE" groundMerging="TRUE" excludeVegetationAround="TRUE" excludeVegetationInside="TRUE"/>
+		<TaxiwayPath parentGroupID="4" groupIndex="5" type="RUNWAY" surface="{00000000-0000-0000-0000-000000000000}" centerLine="FALSE" start="12" end="1" width="30.000000" weightLimit="0" number="10" designator="WATER" drawSurface="TRUE" drawDetail="TRUE" groundMerging="TRUE" excludeVegetationAround="TRUE" excludeVegetationInside="TRUE"/>
+		<TaxiwayPath parentGroupID="4" groupIndex="7" type="RUNWAY" surface="{00000000-0000-0000-0000-000000000000}" centerLine="FALSE" start="16" end="1" width="30.000000" weightLimit="0" number="10" designator="WATER" drawSurface="TRUE" drawDetail="TRUE" groundMerging="TRUE" excludeVegetationAround="TRUE" excludeVegetationInside="TRUE"/>
+		<TaxiwayPath parentGroupID="4" groupIndex="6" type="RUNWAY" surface="{00000000-0000-0000-0000-000000000000}" centerLine="FALSE" start="0" end="12" width="30.000000" weightLimit="0" number="10" designator="WATER" drawSurface="TRUE" drawDetail="TRUE" groundMerging="TRUE" excludeVegetationAround="TRUE" excludeVegetationInside="TRUE"/>
+		<TaxiwayPath parentGroupID="4" groupIndex="1" type="RUNWAY" surface="{00000000-0000-0000-0000-000000000000}" centerLine="FALSE" start="17" end="14" width="30.000000" weightLimit="0" number="10" designator="WATER" drawSurface="FALSE" drawDetail="TRUE" groundMerging="TRUE" excludeVegetationAround="TRUE" excludeVegetationInside="TRUE"/>
+		<TaxiwayPath parentGroupID="4" groupIndex="3" type="RUNWAY" surface="{00000000-0000-0000-0000-000000000000}" centerLine="FALSE" start="12" end="16" width="30.000000" weightLimit="0" number="10" designator="WATER" drawSurface="FALSE" drawDetail="TRUE" groundMerging="TRUE" excludeVegetationAround="TRUE" excludeVegetationInside="TRUE"/>
+		<TaxiwayPath parentGroupID="4" groupIndex="2" type="RUNWAY" surface="{00000000-0000-0000-0000-000000000000}" centerLine="FALSE" start="12" end="17" width="30.000000" weightLimit="0" number="10" designator="WATER" drawSurface="FALSE" drawDetail="TRUE" groundMerging="TRUE" excludeVegetationAround="TRUE" excludeVegetationInside="TRUE"/>
+		<TaxiwayPath parentGroupID="4" type="RUNWAY" surface="{00000000-0000-0000-0000-000000000000}" centerLine="FALSE" start="4" end="1" width="30.000000" weightLimit="0" number="25" designator="WATER" drawSurface="FALSE" drawDetail="TRUE" groundMerging="TRUE" excludeVegetationAround="TRUE" excludeVegetationInside="TRUE"/>
+		<TaxiwayPath parentGroupID="4" groupIndex="4" type="RUNWAY" surface="{00000000-0000-0000-0000-000000000000}" centerLine="FALSE" start="3" end="1" width="30.000000" weightLimit="0" number="28" designator="WATER" drawSurface="FALSE" drawDetail="TRUE" groundMerging="TRUE" excludeVegetationAround="TRUE" excludeVegetationInside="TRUE"/>
+		<Runway parentGroupID="1" groupIndex="4" lat="53.42024941486157" lon="-113.08023129987195" alt="734.38552123401314" heading="90.00000000000000" length="5000.00000000000000" width="200.00000000000000" patternAltitude="304.79998779296875" surface="{00000000-0000-0000-0000-000000000000}" transparent="TRUE" number="07" designator="WATER" primaryLanding="TRUE" primaryTakeoff="TRUE" primaryPattern="LEFT" secondaryLanding="TRUE" secondaryTakeoff="FALSE" secondaryPattern="LEFT" primaryMarkingBias="0.00000000000000" secondaryMarkingBias="0.00000000000000" groundMerging="TRUE" excludeVegetationAround="TRUE">
+			<Markings edges="FALSE" threshold="FALSE" alternateThreshold="FALSE" fixedDistance="FALSE" alternateFixedDistance="FALSE" touchdown="FALSE" alternateTouchdown="FALSE" dashes="FALSE" ident="FALSE" leadingZeroIdent="FALSE" precision="FALSE" alternatePrecision="FALSE" edgePavement="FALSE" singleEnd="FALSE" primaryClosed="FALSE" secondaryClosed="FALSE" primaryStol="FALSE" secondaryStol="FALSE" noThresholdEndArrows="FALSE"/>
+			<Lights center="NONE" edge="NONE"/>
+			<RunwayStart end="PRIMARY" lat="53.42037137615431" lon="-113.10658970329403" alt="734.49025136139244" heading="90.00000000000000"/>
+			<RunwayStart end="SECONDARY" lat="53.42027793050004" lon="-113.05128296998343" alt="734.54523118212819" heading="-90.00000000000000"/>
+		</Runway>
+		<Runway parentGroupID="1" groupIndex="3" lat="53.41436768132772" lon="-113.08294172374288" alt="735.26409120857716" heading="116.00000000000000" length="4000.00000000000000" width="200.00000000000000" patternAltitude="304.79998779296875" surface="{00000000-0000-0000-0000-000000000000}" transparent="FALSE" number="10" designator="WATER" primaryLanding="FALSE" primaryTakeoff="TRUE" primaryPattern="LEFT" secondaryLanding="TRUE" secondaryTakeoff="FALSE" secondaryPattern="LEFT" primaryMarkingBias="0.00000000000000" secondaryMarkingBias="0.00000000000000" groundMerging="TRUE" excludeVegetationAround="TRUE">
+			<Markings edges="FALSE" threshold="FALSE" alternateThreshold="FALSE" fixedDistance="FALSE" alternateFixedDistance="FALSE" touchdown="FALSE" alternateTouchdown="FALSE" dashes="FALSE" ident="FALSE" leadingZeroIdent="FALSE" precision="FALSE" alternatePrecision="FALSE" edgePavement="FALSE" singleEnd="FALSE" primaryClosed="FALSE" secondaryClosed="FALSE" primaryStol="FALSE" secondaryStol="FALSE" noThresholdEndArrows="FALSE"/>
+			<Lights center="NONE" edge="NONE"/>
+			<RunwayStart end="PRIMARY" lat="53.42148369263519" lon="-113.10735970924686" alt="735.46552926581353" heading="116.00000000000000"/>
+			<RunwayStart end="SECONDARY" lat="53.40743938297881" lon="-113.05900396159656" alt="735.50134064722806" heading="-64.00000000000000"/>
+		</Runway>
+		<Aprons/>
+		<PaintedElements/>
+		<ApronEdgeLights/>
+		<Com frequency="123.350000" type="TOWER" name="Traffic, at Cooking Lake"/>
+	</Airport>
+</FSData>
+
