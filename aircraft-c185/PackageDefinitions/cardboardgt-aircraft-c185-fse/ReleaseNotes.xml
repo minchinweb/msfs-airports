@@ -10,4 +10,6 @@
 - add third row seating to match FSE (6 seats)
 - add variant to match FSEconomy's 'Cessna 182 Skylane'
     </ReleaseNote>
+    <ReleaseNote Version="0.3.0" Date="2025-12-22">- add thumbnails, including EFB plane outline
+    </ReleaseNote>
 </ReleaseNotes>

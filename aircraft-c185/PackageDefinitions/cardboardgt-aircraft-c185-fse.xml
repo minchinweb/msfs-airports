@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="utf-8"?>
-<AssetPackage Version="0.2.0">
+<AssetPackage Version="0.3.0">
 	<ItemSettings>
 		<ContentType>AIRCRAFT</ContentType>
 		<Title>Cessna 185 FSEconomy</Title>
@@ -32,6 +32,20 @@
 			</Flags>
 			<AssetDir>PackageSources\SimObjects\Airplanes\cardboardgt-aircraft-c185-fse\</AssetDir>
 			<OutputDir>SimObjects\Airplanes\microsoft_c185f_skywagon\</OutputDir>
+			<Config>
+				<Extras>
+					<File>presets\cardboardgt\c185_fse\thumbnail\thumbnail.png</File>
+					<File>presets\cardboardgt\c185_fse\thumbnail\thumbnail_button.png</File>
+					<File>presets\cardboardgt\c185_fse\thumbnail\thumbnail_shape.png</File>
+					<File>presets\cardboardgt\c185_fse\thumbnail\thumbnail_side.png</File>
+					<File>presets\cardboardgt\c185_fse\thumbnail\thumbnail_variation.png</File>
+					<File>presets\cardboardgt\c185_fse_c182\thumbnail\thumbnail.png</File>
+					<File>presets\cardboardgt\c185_fse_c182\thumbnail\thumbnail_button.png</File>
+					<File>presets\cardboardgt\c185_fse_c182\thumbnail\thumbnail_shape.png</File>
+					<File>presets\cardboardgt\c185_fse_c182\thumbnail\thumbnail_side.png</File>
+					<File>presets\cardboardgt\c185_fse_c182\thumbnail\thumbnail_variation.png</File>
+				</Extras>
+			</Config>
 		</AssetGroup>
 	</AssetGroups>
 </AssetPackage>
