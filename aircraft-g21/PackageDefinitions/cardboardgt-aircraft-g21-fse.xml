@@ -1,0 +1,37 @@
+<?xml version="1.0" encoding="utf-8"?>
+<AssetPackage Version="0.3.0">
+	<ItemSettings>
+		<ContentType>AIRCRAFT</ContentType>
+		<Title>Grumman G-21 Goose FSEconomy</Title>
+		<Manufacturer>Grumman</Manufacturer>
+		<Creator>Cardboard GT</Creator>
+	</ItemSettings>
+	<Flags>
+		<VisibleInStore>false</VisibleInStore>
+		<CanBeReferenced>false</CanBeReferenced>
+	</Flags>
+	<Dependencies>
+		<Dependency Version="0.1.0">
+			<Name>fs24-microsoft-aircraft-g-21</Name>
+		</Dependency>
+	</Dependencies>
+	<PackageOrderHint>CUSTOM_SIMOBJECTS</PackageOrderHint>
+	<AssetGroups>
+		<AssetGroup Name="ContentInfo">
+			<Type Version="0">ContentInfo</Type>
+			<Flags>
+				<FSXCompatibility>false</FSXCompatibility>
+			</Flags>
+			<AssetDir>PackageDefinitions\cardboardgt-aircraft-g21-fse\ContentInfo\</AssetDir>
+			<OutputDir>ContentInfo\cardboardgt-aircraft-g21-fse\</OutputDir>
+		</AssetGroup>
+		<AssetGroup Name="cardboardgt-g21">
+			<Type Version="0">ModularSimObject</Type>
+			<Flags>
+				<FSXCompatibility>false</FSXCompatibility>
+			</Flags>
+			<AssetDir>PackageSources\SimObjects\Airplanes\cardboardgt-aircraft-g21-fse\</AssetDir>
+			<OutputDir>SimObjects\Airplanes\microsoft_goose\</OutputDir>
+		</AssetGroup>
+	</AssetGroups>
+</AssetPackage>
