@@ -32,6 +32,15 @@
 			</Flags>
 			<AssetDir>PackageSources\SimObjects\Airplanes\cardboardgt-aircraft-g21-fse\</AssetDir>
 			<OutputDir>SimObjects\Airplanes\microsoft_goose\</OutputDir>
+			<Config>
+				<Extras>
+					<File>presets\cardboardgt\g21_fse\thumbnail\thumbnail.png</File>
+					<File>presets\cardboardgt\g21_fse\thumbnail\thumbnail_button.png</File>
+					<File>presets\cardboardgt\g21_fse\thumbnail\thumbnail_shape.png</File>
+					<File>presets\cardboardgt\g21_fse\thumbnail\thumbnail_side.png</File>
+					<File>presets\cardboardgt\g21_fse\thumbnail\thumbnail_variation.png</File>
+				</Extras>
+			</Config>
 		</AssetGroup>
 	</AssetGroups>
 </AssetPackage>
