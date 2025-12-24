@@ -1,6 +1,7 @@
 <ReleaseNotes>
-    <ReleaseNote Version="0.3.0" Date="2025-12-22">- based on my Cessna 185 work
+    <ReleaseNote Version="0.4.0" Date="2025-12-24">- based on my Cessna 185 work
 - add variant to match FSEconomy's 'Grumman G-21 Goose'
+- add variant to match FSEconomy's 'Grumman Turbo Goose'
 - includes thumbnails, including EFB plane outline
 - NOTE: due to the increased fuel tank size, confirm weight balance
     </ReleaseNote>

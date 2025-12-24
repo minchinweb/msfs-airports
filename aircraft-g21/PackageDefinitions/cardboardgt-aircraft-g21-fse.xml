@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="utf-8"?>
-<AssetPackage Version="0.3.0">
+<AssetPackage ReleaseNotes="PackageDefinitions\cardboardgt-aircraft-g21-fse\ReleaseNotes.xml" Version="0.4.0">
 	<ItemSettings>
 		<ContentType>AIRCRAFT</ContentType>
 		<Title>Grumman G-21 Goose FSEconomy</Title>
@@ -39,6 +39,11 @@
 					<File>presets\cardboardgt\g21_fse\thumbnail\thumbnail_shape.png</File>
 					<File>presets\cardboardgt\g21_fse\thumbnail\thumbnail_side.png</File>
 					<File>presets\cardboardgt\g21_fse\thumbnail\thumbnail_variation.png</File>
+					<File>presets\cardboardgt\g21_fse_turbo\thumbnail\thumbnail.png</File>
+					<File>presets\cardboardgt\g21_fse_turbo\thumbnail\thumbnail_button.png</File>
+					<File>presets\cardboardgt\g21_fse_turbo\thumbnail\thumbnail_shape.png</File>
+					<File>presets\cardboardgt\g21_fse_turbo\thumbnail\thumbnail_side.png</File>
+					<File>presets\cardboardgt\g21_fse_turbo\thumbnail\thumbnail_variation.png</File>
 				</Extras>
 			</Config>
 		</AssetGroup>
