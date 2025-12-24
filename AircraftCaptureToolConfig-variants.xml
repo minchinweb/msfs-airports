@@ -1,0 +1,11 @@
+<ThumbnailFile Version="2.0">
+	<ThumbnailGroup SubFolder="">
+		<Thumbnail Width="720" Height="344" Camera="Thumbnail" CaptureAlpha="0" File="thumbnail" MakeUniqueFilename="0" ShowsShootingScene="1" ShowsShootingSceneLights="0" ShowsWorld="0" ShowsSunLight="1" DrawOutline="0" OutlineWidth="1" OptimiseCamera="1" OptimisationType="InterestingPoints"/>
+		<Thumbnail Width="830" Height="260" Camera="ThumbnailButton" CaptureAlpha="1" File="thumbnail_button" MakeUniqueFilename="0" ShowsShootingScene="0" ShowsShootingSceneLights="0" ShowsWorld="0" ShowsSunLight="1" DrawOutline="0" OutlineWidth="1" OptimiseCamera="1" OptimisationType="InterestingPoints"/>
+		<Thumbnail Width="930" Height="236" Camera="Custom" CaptureAlpha="1" File="thumbnail_side" MakeUniqueFilename="0" ShowsShootingScene="0" ShowsShootingSceneLights="0" ShowsWorld="0" ShowsSunLight="0" DrawOutline="0" OutlineWidth="1" OptimiseCamera="1" OptimisationType="InterestingPoints">
+			<CustomCamera OffsetX="-15.00" OffsetY="-1.96" OffsetZ="-0.93" Yaw="1.570796371" Roll="0.000000000" Pitch="0.000000000" Fov="0.207003415" FovMultiplier="1.000007033" AlignWithGround="1"/>
+		</Thumbnail>
+		<Thumbnail Width="660" Height="300" Camera="Thumbnail" CaptureAlpha="0" File="thumbnail_variation" MakeUniqueFilename="0" ShowsShootingScene="1" ShowsShootingSceneLights="0" ShowsWorld="0" ShowsSunLight="1" DrawOutline="0" OutlineWidth="1" OptimiseCamera="1" OptimisationType="InterestingPoints"/>
+		<Thumbnail Width="1920" Height="1080" Camera="TopLeft" CaptureAlpha="1" File="thumbnail_shape" MakeUniqueFilename="0" ShowsShootingScene="0" ShowsShootingSceneLights="0" ShowsWorld="0" ShowsSunLight="0" DrawOutline="1" OutlineWidth="1" OptimiseCamera="1" OptimisationType="AircraftNodes"/>
+	</ThumbnailGroup>
+</ThumbnailFile>
