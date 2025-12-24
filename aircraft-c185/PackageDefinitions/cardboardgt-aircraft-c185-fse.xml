@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="utf-8"?>
-<AssetPackage Version="0.3.0">
+<AssetPackage ReleaseNotes="PackageDefinitions\cardboardgt-aircraft-c185-fse\ReleaseNotes.xml" Version="0.3.0">
 	<ItemSettings>
 		<ContentType>AIRCRAFT</ContentType>
 		<Title>Cessna 185 FSEconomy</Title>
