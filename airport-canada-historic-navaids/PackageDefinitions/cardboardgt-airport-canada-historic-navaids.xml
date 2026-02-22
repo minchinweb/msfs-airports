@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="utf-8"?>
+<AssetPackage ReleaseNotes="PackageDefinitions\cardboardgt-airport-canada-historic-navaids\ReleaseNotes.xml" Version="0.1.0">
+	<ItemSettings>
+		<ContentType>SCENERY</ContentType>
+		<Title>Canada - Historic NavAids</Title>
+		<Manufacturer/>
+		<Creator>Cardboard_GT</Creator>
+	</ItemSettings>
+	<Flags>
+		<VisibleInStore>false</VisibleInStore>
+		<CanBeReferenced>false</CanBeReferenced>
+	</Flags>
+	<PackageOrderHint>CUSTOM_AIRPORT</PackageOrderHint>
+	<AssetGroups>
+		<AssetGroup Name="ContentInfo">
+			<Type Version="0">ContentInfo</Type>
+			<Flags>
+				<FSXCompatibility>false</FSXCompatibility>
+			</Flags>
+			<AssetDir>PackageDefinitions\cardboardgt-airport-canada-historic-navaids\ContentInfo\</AssetDir>
+			<OutputDir>ContentInfo\cardboardgt-airport-canada-historic-navaids\</OutputDir>
+		</AssetGroup>
+		<AssetGroup Name="canada-historic-navaids">
+			<Type Version="0">BGL</Type>
+			<Flags>
+				<FSXCompatibility>false</FSXCompatibility>
+			</Flags>
+			<AssetDir>PackageSources\Scenery\canada-historic-navaids\</AssetDir>
+			<OutputDir>Scenery\cardboardgt\canada-historic-navaids\</OutputDir>
+		</AssetGroup>
+	</AssetGroups>
+</AssetPackage>

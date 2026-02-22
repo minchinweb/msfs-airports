@@ -1,0 +1,46 @@
+<ReleaseNotes>
+	<ReleaseNote Version="0.1.0" Date="2026-02-21">This is the initial implementation/recreation!
+Does not include any in-game "sheds" or antennas (yet).
+
+For reference, NDB classes:
+
+- "Compass Locator" / COMPASS_POINT -- under 25 W, range under 15NM
+- MH -- under 50 W, range up to 25 NM
+- H -- from 50 W to 1,999 W, range up to 50 NM (varies by facility)
+- HH -- more than 2000 W, range up to 75 NM
+
+It not added, default range is 27 NM.
+
+Many of these are sourced from PilotNav. C.f. https://www.navcanada.ca/en/air-traffic/navaid-modernization-program.aspx
+
+Cross reference DME channels here - https://www.icao.int/sites/default/files/sp-files/APAC/Documents/edocs/CNS/Frequency%20List%20No.%202%20-%2037th%20Edition%20-%20May%202024.pdf
+
+Includes:
+
+- 2K -- Camrose, AB + DME
+- 2S -- High Prairie, AB + DME
+- 3M -- Dryaton Valley Industrial, AB + DME
+- 3Z -- Taber, AB + DME
+- 4O -- Swan Hills, AB
+- 7D -- Hudson Bay, SK
+- 7J -- Forestburg, AB + DME
+- 7V -- Jasper-Hinton, AB
+- 8G -- Stettler, AB + DME
+- 8J -- Provost, AB + DME
+- 8M -- Elk Point, AB (DME only)
+- 8N -- Edson, AB + DME
+- 9X -- Brooks, AB + DME
+- C1 -- Airdrie, AB
+- D6 -- Fairmont Hot Springs, BC
+- K2 -- Olds-Didsbury, AB
+- OJ -- High Level, AB
+- PEC -- Jasper-Hinton, AB (DME only)
+- QL -- Lethbridge, AB
+- XH -- Medicine Hat, AB
+- YBW -- Calgary Springbank, AB (VOR/DME)
+- YC -- Calagary, AB
+- YOP -- Rainbow Lake, AB
+- ZCA -- Blackfoot (Calgary), AB
+- ZU -- Whitecourt, AB
+</ReleaseNote>
+</ReleaseNotes>

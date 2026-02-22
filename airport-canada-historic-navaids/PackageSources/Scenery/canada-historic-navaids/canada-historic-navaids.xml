@@ -1,0 +1,82 @@
+<?xml version="1.0"?>
+<FSData version="9.0">
+	<Ndb lat="53.0322" lon="-112.813" alt="2426F" type="H" frequency="405.0" magvar="0" region="CY" ident="2K" name="CAMROSE" />
+	<Ndb lat="55.3956" lon="-116.484" alt="2005F" type="MH" frequency="406.0" magvar="0" region="CY" ident="2S" name="HIGH PRAIRIE" />
+	<Ndb lat="53.2664" lon="-114.955" alt="2785F" type="MH" frequency="406.0" magvar="0" region="CY" ident="3M" name="DRAYTON VALLEY INDUSTRIAL" />
+	<Ndb lat="49.8258" lon="-112.178" alt="2648F" type="MH" frequency="388.0" magvar="0" region="CY" ident="3Z" name="TABER" />
+	<Ndb lat="54.6750" lon="-115.424" alt="3473F" type="H" frequency="388.0" magvar="0" region="CY" ident="4O" name="SWAN HILLS" />
+	<Ndb lat="52.8478" lon="-102.187" alt="1175F" type="MH" frequency="337.0" magvar="0" region="CY" ident="7D" name="HUDSON BAY" />
+	<Ndb lat="52.5764" lon="-112.086" alt="1175F" type="MH" frequency="261.0" magvar="0" region="CY" ident="7J" name="FORESTBURG" />
+	<Ndb lat="53.3211" lon="-117.755" alt="4026F" type="MH" frequency="233.0" magvar="0" region="CY" ident="7V" name="JASPER-HINTON" />
+	<Ndb lat="52.3083" lon="-112.754" alt="2700F" type="MH" frequency="286.0" magvar="0" region="CY" ident="8G" name="STETTLER" />
+	<Ndb lat="52.3328" lon="-110.273" alt="2216F" type="MH" frequency="208.0" magvar="0" region="CY" ident="8J" name="PROVOST" />
+	<!-- 8K - Valleyview is in-game -->
+	<!-- 8M - Elk Point is in-game, but only as a NDB -->
+	<Ndb lat="53.5808" lon="-116.455" alt="3066F" type="MH" frequency="393.0" magvar="0" region="CY" ident="8N" name="EDSON" />
+	<!-- 9A - Hanna is in-game -->
+	<!-- 9G - Sundre is in-game -->
+	<Ndb lat="50.6322" lon="-111.922" alt="2499F" type="MH" frequency="227.0" magvar="0" region="CY" ident="9X" name="BROOKS" />
+	<!-- 9Y - Pincher Creek is in-game -->
+	<Ndb lat="51.2653" lon="-113.942" alt="3648F" type="HH" range="75N" frequency="399.0" magvar="0" region="CY" ident="C1" name="AIRDRIE" />
+	<!-- D3 - Ponoka Industrial is in-game -->
+	<Ndb lat="50.3269" lon="-115.877" alt="2658F" type="MH" frequency="261.0" magvar="0" region="CY" ident="D6" name="FAIRMONT HOT SPRINGS" />
+	<Ndb lat="51.7103" lon="-114.109" alt="3360F" type="MH" frequency="376.0" magvar="0" region="CY" ident="K2" name="OLDS-DIDSBURY" />
+	<Ndb lat="58.5533" lon="-117.121" alt="1109F" type="H" frequency="239.0" magvar="0" region="CY" ident="OJ" name="HIGH LEVEL" />
+	<Ndb lat="49.6053" lon="-112.894" alt="3048F" type="MH" frequency="239.0" magvar="0" region="CY" ident="QL" name="LETHBRIDGE" />
+	<!-- XD - Edmonton is re-added by my Edmonton City Center/Blatchford Field airport -->
+	<Ndb lat="50.0131" lon="-110.799" alt="2349F" type="MH" frequency="332.0" magvar="0" region="CY" ident="XH" name="MEDICINE HAT" />
+	<Ndb lat="51.0808" lon="-113.909" alt="3550F" type="H" frequency="344.0" magvar="0" region="CY" ident="YC" name="CALGARY" />
+	<!-- YCD - Nanaimo is in-game -->
+	<Ndb lat="58.4567" lon="-119.252" alt="1760F" type="H" frequency="344.0" magvar="0" region="CY" ident="YOP" name="RAINBOW LAKE" />
+	<!-- YQF - Red Deer is in-game -->
+	<!-- ZAB - Leduc is in-game -->
+	<Ndb lat="51.0331" lon="-114.021" alt="3550F" type="MH" frequency="233.0" magvar="0" region="CY" ident="ZCA" name="BLACKFOOT (CALGARY)" />
+	<!-- ZF - Yellowknife is in-game -->
+	<!-- ZSS - Yellowhead (Saskatoon) is in-game -->
+	<Ndb lat="54.0772" lon="-115.498" alt="2560F" type="MH" frequency="233.0" magvar="0" region="CY" ident="ZU" name="WHITECOURT" />
+
+	<Vor lat="53.0328" lon="-112.814" alt="2449F" type="HIGH" frequency="108.20" magvar="0" region="CY" ident="2K" name="CAMROSE" nav="TRUE" dmeOnly="TRUE" dme="TRUE" >
+        <Dme lat="53.0328" lon="-112.814" alt="2449F" /> <!-- Channel 019X -->
+    </Vor>
+	<Vor lat="55.395833" lon="-116.481667" alt="2005F" type="HIGH" frequency="110.20" magvar="0" region="CY" ident="2S" name="HIGH PRAIRIE" nav="TRUE" dmeOnly="TRUE" dme="TRUE" >
+        <Dme lat="55.395833" lon="-116.481667" alt="2005F" /> <!-- Channel 039X -->
+    </Vor>
+	<Vor lat="53.268056" lon="-114.957222" alt="2785F" type="HIGH" frequency="110.60" magvar="0" region="CY" ident="3M" name="DRAYTON VALLEY INDUSTRIAL" nav="TRUE" dmeOnly="TRUE" dme="TRUE" >
+        <Dme lat="53.268056" lon="-114.957222" alt="2785F" /> <!-- Channel 043X -->
+    </Vor>
+	<Vor lat="49.8258" lon="-112.178" alt="2648F" type="HIGH" frequency="111.00" magvar="0" region="CY" ident="3Z" name="TABER" nav="TRUE" dmeOnly="TRUE" dme="TRUE" >
+        <Dme lat="49.8258" lon="-112.178" alt="2648F" /> <!-- Channel 047X -->
+    </Vor>
+	<!-- 6G - Red Deer is in-game, but on 113.8, rather than 111.6 --> <!-- Channel 053X -->
+	<Vor lat="52.5764" lon="-112.086" alt="2352F" type="HIGH" frequency="110.80" magvar="0" region="CY" ident="7J" name="FORESTBURG" nav="TRUE" dmeOnly="TRUE" dme="TRUE" >
+        <Dme lat="52.5764" lon="-112.086" alt="2352F" /> <!-- Channel 045X -->
+    </Vor>
+	<Vor lat="52.308611" lon="-112.753611" alt="2700F" type="HIGH" frequency="108.40" magvar="0" region="CY" ident="8G" name="STETTLER" nav="TRUE" dmeOnly="TRUE" dme="TRUE" >
+        <Dme lat="52.308611" lon="-112.753611" alt="2700F" /> <!-- Channel 021X -->
+    </Vor>
+	<Vor lat="52.3336" lon="-110.273" alt="2216F" type="HIGH" frequency="109.00" magvar="0" region="CY" ident="8J" name="PROVOST" nav="TRUE" dmeOnly="TRUE" dme="TRUE" >
+        <Dme lat="52.3336" lon="-110.273" alt="2216F" /> <!-- Channel 021X -->
+    </Vor>
+	<Vor lat="53.8903" lon="-110.768" alt="1999F" type="HIGH" frequency="111.40" magvar="0" region="CY" ident="8M" name="ELK POINT" nav="TRUE" dmeOnly="TRUE" dme="TRUE" >
+        <Dme lat="53.8903" lon="-110.768" alt="1999F" /> <!-- Channel 051X -->
+    </Vor>
+	<Vor lat="53.580000" lon="-116.452778" alt="3066F" type="HIGH" frequency="109.40" magvar="0" region="CY" ident="8N" name="EDSON" nav="TRUE" dmeOnly="TRUE" dme="TRUE" >
+        <Dme lat="53.580000" lon="-116.452778" alt="3066F" /> <!-- Channel 031X -->
+    </Vor>
+	<Vor lat="50.6322" lon="-111.922" alt="2499F" type="HIGH" frequency="109.80" magvar="0" region="CY" ident="9X" name="BROOKS" nav="TRUE" dmeOnly="TRUE" dme="TRUE" >
+        <Dme lat="50.6322" lon="-111.922" alt="2499F" /> <!-- Channel 035X -->
+    </Vor>
+	<!-- IXD is a DME on an ILS approach, added by my Edmonton City Centre/Blatchford Field airport (CYXD) --> <!-- Channel 032X -->
+	<Vor lat="53.3211" lon="-117.755" alt="4026F" type="HIGH" frequency="109.80" magvar="0" region="CY" ident="PEC" name="JASPER-HINTON" nav="TRUE" dmeOnly="TRUE" dme="TRUE" >
+        <Dme lat="53.3211" lon="-117.755" alt="4026F" /> <!-- Channel 035X -->
+    </Vor>
+	<Vor lat="51.1067" lon="-114.373" alt="3971F" type="HIGH" frequency="108.60" magvar="0" region="CY" ident="YBW" name="CALGARY SPRINGBANK" nav="TRUE" dmeOnly="FALSE" dme="TRUE" >
+        <Dme lat="51.1067" lon="-114.373" alt="3971F" /> <!-- Channel 023X -->
+    </Vor>
+	<!-- YEG - Edmonton (VORTEC) doesn't appear in-game for me, but "YEX" appears to have replaced it... -->
+	<!-- YHY - Hay River (VOR/DME) is in-game -->
+	<!-- YPE - Peace River (VOR/DME) is in-game -->
+	<!-- YQL - Lethbridge (VOR/DME) is in-game -->
+	<!-- YYC - Calgary (VOR/DME or VORTEC) is in-game -->
+	<!-- YZF - Yellowknife (VOR/DME or VORTEC) is in-game -->
+</FSData>
