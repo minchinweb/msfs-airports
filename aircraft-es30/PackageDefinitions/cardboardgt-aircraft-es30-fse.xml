@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="utf-8"?>
-<AssetPackage ReleaseNotes="PackageDefinitions\cardboardgt-aircraft-dh8a-fse\ReleaseNotes.xml" Version="0.1.0">
+<AssetPackage ReleaseNotes="PackageDefinitions\cardboardgt-aircraft-es30-fse\ReleaseNotes.xml" Version="0.2.0">
 	<ItemSettings>
 		<ContentType>AIRCRAFT</ContentType>
 		<Title>Dash 8 100/200 FSEconomy</Title>
@@ -22,23 +22,23 @@
 			<Flags>
 				<FSXCompatibility>false</FSXCompatibility>
 			</Flags>
-			<AssetDir>PackageDefinitions\cardboardgt-aircraft-dh8a-fse\ContentInfo\</AssetDir>
-			<OutputDir>ContentInfo\cardboardgt-aircraft-dh8a-fse\</OutputDir>
+			<AssetDir>PackageDefinitions\cardboardgt-aircraft-es30-fse\ContentInfo\</AssetDir>
+			<OutputDir>ContentInfo\cardboardgt-aircraft-es30-fse\</OutputDir>
 		</AssetGroup>
-		<AssetGroup Name="cardboardgt-dh8a">
+		<AssetGroup Name="cardboardgt-es30">
 			<Type Version="0">ModularSimObject</Type>
 			<Flags>
 				<FSXCompatibility>false</FSXCompatibility>
 			</Flags>
-			<AssetDir>PackageSources\SimObjects\Airplanes\cardboardgt-aircraft-dh8a-fse\</AssetDir>
+			<AssetDir>PackageSources\SimObjects\Airplanes\cardboardgt-aircraft-es30-fse\</AssetDir>
 			<OutputDir>SimObjects\Airplanes\asobo_es30\</OutputDir>
 			<Config>
 				<Extras>
-					<File>presets\cardboardgt\dh8a_fse\thumbnail\thumbnail.png</File>
-					<File>presets\cardboardgt\dh8a_fse\thumbnail\thumbnail_button.png</File>
-					<File>presets\cardboardgt\dh8a_fse\thumbnail\thumbnail_shape.png</File>
-					<File>presets\cardboardgt\dh8a_fse\thumbnail\thumbnail_side.png</File>
-					<File>presets\cardboardgt\dh8a_fse\thumbnail\thumbnail_variation.png</File>
+					<File>presets\cardboardgt\es30_fse_dh8a\thumbnail\thumbnail.png</File>
+					<File>presets\cardboardgt\es30_fse_dh8a\thumbnail\thumbnail_button.png</File>
+					<File>presets\cardboardgt\es30_fse_dh8a\thumbnail\thumbnail_shape.png</File>
+					<File>presets\cardboardgt\es30_fse_dh8a\thumbnail\thumbnail_side.png</File>
+					<File>presets\cardboardgt\es30_fse_dh8a\thumbnail\thumbnail_variation.png</File>
 				</Extras>
 			</Config>
 		</AssetGroup>

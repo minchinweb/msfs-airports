@@ -6,4 +6,7 @@
 - NOTE: due to the increased fuel tank size, confirm weight balance
 - Open Issues: Passenger seats are combined in one spot, need variant specific thumbnail, confirm electric range
     </ReleaseNote>
+    <ReleaseNote Version="0.2.0" Date="2026-03-25">- fix seating map
+- add variant image (based on Steve Fitzgerald's picture of a Dash 8 102, from Wikipedia -- https://en.wikipedia.org/wiki/File:De_Havilland_Canada_DHC-8-102_Dash_8_at_1984_Farnborough_Airshow.jpg?useskin=vector
+    </ReleaseNote>
 </ReleaseNotes>

@@ -1,9 +1,9 @@
 <?xml version="1.0" encoding="utf-8"?>
-<Project Version="2" Name="airplane-DH8A-FSE" FolderName="Packages" MetadataFolderName="PackagesMetadata">
+<Project Version="2" Name="airplane-ES30-FSE-DH8A" FolderName="Packages" MetadataFolderName="PackagesMetadata">
 	<OutputDirectory>.</OutputDirectory>
 	<TemporaryOutputDirectory>_PackageInt</TemporaryOutputDirectory>
 	<Packages>
-		<Package>PackageDefinitions\cardboardgt-aircraft-dh8a-fse.xml</Package>
+		<Package>PackageDefinitions\cardboardgt-aircraft-es30-fse.xml</Package>
 	</Packages>
 	<PublishingGroups/>
 </Project>
