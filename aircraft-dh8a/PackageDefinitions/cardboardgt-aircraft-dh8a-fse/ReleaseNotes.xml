@@ -1,0 +1,9 @@
+<ReleaseNotes>
+    <ReleaseNote Version="0.1.0" Date="2026-03-24">- based on my Cessna 185/Grumman G-21 Goose work
+- add variant to match FSEconomy's 'DeHavilland Dash 8 100/200'
+- bump up battery capacity 10x to allow it to hit FSEconomy's range
+- includes thumbnails, including EFB plane outline
+- NOTE: due to the increased fuel tank size, confirm weight balance
+- Open Issues: Passenger seats are combined in one spot, need variant specific thumbnail, confirm electric range
+    </ReleaseNote>
+</ReleaseNotes>
