@@ -578,6 +578,8 @@
 			<RunwayDeformation alt="666.870728" ratio="1.000000"/>
 			<Markings edges="FALSE" threshold="TRUE" alternateThreshold="FALSE" fixedDistance="FALSE" alternateFixedDistance="FALSE" touchdown="TRUE" alternateTouchdown="FALSE" dashes="TRUE" ident="TRUE" leadingZeroIdent="FALSE" precision="FALSE" alternatePrecision="FALSE" edgePavement="TRUE" singleEnd="FALSE" primaryClosed="FALSE" secondaryClosed="FALSE" primaryStol="FALSE" secondaryStol="FALSE" noThresholdEndArrows="FALSE"/>
 			<Lights center="NONE" edge="MEDIUM"/>
+			<OffsetThreshold end="PRIMARY" length="243.840000" width="61.000000" surface="{00000000-0000-0000-0000-000000000000}"/>
+			<OffsetThreshold end="SECONDARY" length="361.798000" width="61.000000" surface="{00000000-0000-0000-0000-000000000000}"/>
 			<BlastPad end="PRIMARY" surface="{00000000-0000-0000-0000-000000000000}" length="80.000000"/>
 			<Vasi end="PRIMARY" side="LEFT" type="PAPI4" biasX="45.500000" biasZ="447.149994" spacing="9.000000" pitch="3.000000"/>
 			<Vasi end="SECONDARY" side="LEFT" type="PAPI4" biasX="45.500000" biasZ="447.149994" spacing="9.000000" pitch="3.000000"/>
@@ -587,11 +589,13 @@
 		<Runway parentGroupID="1" groupIndex="2" lat="53.57215447360258" lon="-113.51283177510230" alt="665.08115183282644" heading="180.00000000000000" length="1737.40002441406250" width="61.00000000000000" patternAltitude="304.79998779296875" surface="{2E0DE83F-B79A-4435-905C-DCBBEAC55C59}" transparent="FALSE" number="16" designator="NONE" primaryLanding="TRUE" primaryTakeoff="TRUE" primaryPattern="RIGHT" secondaryLanding="TRUE" secondaryTakeoff="TRUE" secondaryPattern="LEFT" primaryMarkingBias="152.44000244140625" secondaryMarkingBias="164.63000488281250" groundMerging="TRUE" excludeVegetationAround="TRUE">
 			<Markings edges="FALSE" threshold="TRUE" alternateThreshold="FALSE" fixedDistance="TRUE" alternateFixedDistance="FALSE" touchdown="TRUE" alternateTouchdown="FALSE" dashes="TRUE" ident="TRUE" leadingZeroIdent="FALSE" precision="TRUE" alternatePrecision="FALSE" edgePavement="FALSE" singleEnd="FALSE" primaryClosed="FALSE" secondaryClosed="FALSE" primaryStol="FALSE" secondaryStol="FALSE" noThresholdEndArrows="FALSE"/>
 			<Lights center="MEDIUM" edge="HIGH"/>
+			<OffsetThreshold end="PRIMARY" length="152.400000" width="61.000000" surface="{00000000-0000-0000-0000-000000000000}"/>
+			<OffsetThreshold end="SECONDARY" length="164.592000" width="61.000000" surface="{00000000-0000-0000-0000-000000000000}"/>
 			<ApproachLights end="SECONDARY" system="MALS" strobes="0" endLights="FALSE" touchdown="TRUE" snapToGround="FALSE" reil="FALSE" offset="30.480000" spacing="30.480000" slope="0.000000"/>
 			<Vasi end="PRIMARY" side="LEFT" type="PAPI4" biasX="45.500000" biasZ="434.350006" spacing="9.000000" pitch="3.000000"/>
-			<Ils lat="53.57215447360258" lon="-113.51283177510230" alt="665.08115183282644" end="SECONDARY" ident="IXD" magvar="343.782990" heading="0.00000000000000" frequency="109.50000000000000" name="Edmonton Muni" backCourse="TRUE">
-				<Dme lat="53.57215447360258" lon="-113.51283177510230" alt="665.08115183282644"/>
-				<GlideSlope lat="53.57215447360258" lon="-113.51283177510230" alt="665.08115183282644" pitch="3.000000"/>
+			<Ils lat="53.58266483827725" lon="-113.51283177510230" alt="668.42640000000006" end="SECONDARY" ident="IXD" magvar="343.782990" heading="0.00000000000000" frequency="109.50000000000000" name="Edmonton Muni" backCourse="FALSE">
+				<Dme lat="53.58266483827725" lon="-113.51283177510230" alt="668.42640000000006"/>
+				<GlideSlope lat="53.56852" lon="-113.51283177510230" alt="664.76880000000006" pitch="3.000000"/>
 			</Ils>
 			<RunwayStart end="PRIMARY" lat="53.57795178464409" lon="-113.51284019431836" alt="668.42640000000006" heading="181.21699523925781"/>
 			<RunwayStart end="SECONDARY" lat="53.56638612703228" lon="-113.51281118882294" alt="664.76880000000006" heading="1.21697998046875"/>
@@ -686,6 +690,7 @@
 		<ApronEdgeLights/>
 		<Com frequency="121.300000" type="CLEARANCE" name="BLATCHFORD CLNC / DEL"/>
 		<Com frequency="121.900000" type="GROUND" name="BLATCHFORD"/>
+		<Com frequency="125.400000" type="ATIS" name="BLATCHFORD ATIS"/>
 		<Com frequency="119.100000" type="CTAF" name="BLATCHFORD"/>
 		<Com frequency="128.625000" type="AWOS" name="BLATCHFORD"/>
 		<Com frequency="119.100000" type="TOWER" name="BLATCHFORD TOWER"/>
@@ -693,27 +698,37 @@
 		<Com frequency="122.450000" type="TOWER" name="AIR AMBULANCE"/>
 		<Com frequency="119.500000" type="DEPARTURE" name="BLATCHFORD"/>
 		<Waypoint lat="53.3976882125845" lon="-113.512831775102" waypointType="UNNAMED" magvar="343.782990" waypointIdent="HH16N" waypointRegion="CY"/>
-		<Approach type="ILS" runway="34" designator="NONE" suffix="Y" gpsOverlay="FALSE" fixType="NDB" fixRegion="CY" fixIdent="ZXD" altitude="4200.0F" heading="0.2" missedAltitude="4200.0F">
+		<Approach type="ILS" runway="34" designator="NONE" suffix="Y" gpsOverlay="FALSE" fixType="NDB" fixRegion="CY" fixIdent="ZXD" altitude="3700.0F" heading="343.8" missedAltitude="4200.0F">
 			<ApproachLegs>
 				<Leg type="IF" fixType="TERMINAL_WAYPOINT" fixRegion="CY" fixIdent="HH16N" altitudeDescriptor="+" altitude1="4200.0F"/>
-				<Leg type="TF" fixType="NDB" fixRegion="CY" fixIdent="ZXD" magneticCourse="0" altitudeDescriptor="+" altitude1="3700.0F"/>
-				<Leg type="CF" fixType="RUNWAY" fixRegion="CY" fixIdent="RW34" flyOver="FALSE" turnDirection="R" recommendedType="LOCALIZER" recommendedRegion="CY" recommendedIdent="IXD" theta="0" rho="0.0N" magneticCourse="343" distance="0.0N" altitudeDescriptor="A" altitude1="2400.0F"/>
+				<Leg type="TF" fixType="NDB" fixRegion="CY" fixIdent="ZXD" turnDirection="R" trueCourse="0" magneticCourse="343.8" distance="6.6N" altitudeDescriptor="+" altitude1="3700.0F"/>
+				<Leg type="CF" fixType="RUNWAY" fixRegion="CY" fixIdent="RW34" flyOver="FALSE" recommendedType="LOCALIZER" recommendedRegion="CY" recommendedIdent="IXD" theta="163.8" rho="1.1N" trueCourse="0" magneticCourse="343.8" distance="3.9N" altitudeDescriptor="A" altitude1="2400.0F"/>
 			</ApproachLegs>
 			<MissedApproachLegs>
-				<Leg type="CA" magneticCourse="343" altitudeDescriptor="+" altitude1="4200.0F"/>
+				<Leg type="CA" turnDirection="R" trueCourse="0" magneticCourse="343.8" altitudeDescriptor="+" altitude1="4200.0F"/>
 				<Leg type="DF" fixType="NDB" fixRegion="CY" fixIdent="ZXD" flyOver="FALSE" turnDirection="R" altitudeDescriptor="+" altitude1="5200.0F"/>
-				<Leg type="HM" fixType="NDB" fixRegion="CY" fixIdent="ZXD" turnDirection="R" recommendedType="LOCALIZER" recommendedRegion="CY" recommendedIdent="IXD" magneticCourse="343" time="1" altitudeDescriptor="+" altitude1="5200.0F"/>
+				<Leg type="HM" fixType="NDB" fixRegion="CY" fixIdent="ZXD" turnDirection="R" recommendedType="NDB" recommendedRegion="CY" recommendedIdent="ZXD" trueCourse="0" magneticCourse="343.8" distance="0.0N" time="1" altitudeDescriptor="+" altitude1="5200.0F"/>
 			</MissedApproachLegs>
 		</Approach>
-		<Approach type="NDB" runway="16" designator="NONE" suffix="Y" gpsOverlay="FALSE" fixType="NDB" fixRegion="CY" fixIdent="XD" altitude="2100.0F" heading="180" missedAltitude="3100.0F">
+		<Approach type="NDB" runway="16" designator="NONE" suffix="Y" gpsOverlay="FALSE" fixType="NDB" fixRegion="CY" fixIdent="XD" altitude="3000.0F" heading="163.8" missedAltitude="3100.0F">
 			<ApproachLegs>
-				<Leg type="IF" fixType="NDB" fixRegion="CY" fixIdent="XD" recommendedType="NDB" recommendedRegion="CY" recommendedIdent="XD" altitudeDescriptor="+" altitude1="4300.0F"/>
-				<Leg type="PI" fixType="NDB" fixRegion="CY" fixIdent="XD" turnDirection="L" recommendedType="LOCALIZER" recommendedRegion="CY" recommendedIdent="IXD" theta="0" rho="0.0N" magneticCourse="25" distance="0.0N" altitudeDescriptor="+" altitude1="2100.0F"/>
-				<Leg type="CF" fixType="LOCALIZER" fixRegion="CY" fixIdent="IXD" flyOver="FALSE" theta="0" rho="0.0N" magneticCourse="0" distance="0.0N" altitudeDescriptor="A" altitude1="2400.0F"/>
+				<Leg type="IF" fixType="NDB" fixRegion="CY" fixIdent="XD" altitudeDescriptor="+" altitude1="4300.0F"/>
+				<Leg type="CF" fixType="RUNWAY" fixRegion="CY" fixIdent="RW16" flyOver="FALSE" recommendedType="NDB" recommendedRegion="CY" recommendedIdent="XD" theta="343.8" rho="3.8N" trueCourse="180" magneticCourse="163.8" distance="3.8N" altitudeDescriptor="A" altitude1="2400.0F"/>
 			</ApproachLegs>
 			<MissedApproachLegs>
-				<Leg type="DF" fixType="NDB" fixRegion="CY" fixIdent="ZXD" flyOver="FALSE"/>
-				<Leg type="HM" fixType="NDB" fixRegion="CY" fixIdent="ZXD" turnDirection="R" recommendedType="LOCALIZER" recommendedRegion="CY" recommendedIdent="IXD" magneticCourse="343" time="1" altitudeDescriptor="+" altitude1="5200.0F"/>
+				<Leg type="CA" turnDirection="L" trueCourse="180" magneticCourse="163.8" altitudeDescriptor="+" altitude1="3100.0F"/>
+				<Leg type="DF" fixType="NDB" fixRegion="CY" fixIdent="ZXD" flyOver="FALSE" altitudeDescriptor="+" altitude1="5200.0F"/>
+				<Leg type="HM" fixType="NDB" fixRegion="CY" fixIdent="ZXD" turnDirection="R" recommendedType="NDB" recommendedRegion="CY" recommendedIdent="ZXD" trueCourse="0" magneticCourse="343.8" distance="0.0N" time="1" altitudeDescriptor="+" altitude1="5200.0F"/>
+			</MissedApproachLegs>
+		</Approach>
+		<Approach type="LOCALIZER_BACKCOURSE" runway="16" designator="NONE" suffix="Z" gpsOverlay="FALSE" fixType="NDB" fixRegion="CY" fixIdent="XD" altitude="3000.0F" heading="163.8" missedAltitude="3100.0F">
+			<ApproachLegs>
+				<Leg type="IF" fixType="NDB" fixRegion="CY" fixIdent="XD" altitudeDescriptor="+" altitude1="4300.0F"/>
+				<Leg type="CF" fixType="RUNWAY" fixRegion="CY" fixIdent="RW16" flyOver="FALSE" recommendedType="LOCALIZER" recommendedRegion="CY" recommendedIdent="IXD" theta="343.8" rho="1.1N" trueCourse="180" magneticCourse="163.8" distance="3.8N" altitudeDescriptor="A" altitude1="2400.0F"/>
+			</ApproachLegs>
+			<MissedApproachLegs>
+				<Leg type="CA" turnDirection="L" trueCourse="180" magneticCourse="163.8" altitudeDescriptor="+" altitude1="3100.0F"/>
+				<Leg type="DF" fixType="NDB" fixRegion="CY" fixIdent="ZXD" flyOver="FALSE" altitudeDescriptor="+" altitude1="5200.0F"/>
 			</MissedApproachLegs>
 		</Approach>
 	</Airport>
