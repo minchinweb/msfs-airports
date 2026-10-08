@@ -1,0 +1,133 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Vectors>
+  <Vectors>
+    <Vector SectOffset="364">
+      <QMID u="283" v="207" l="11" />
+      <Attributes>
+        <Attribute guid="{ce85242f-4110-4706-8344-1f3a8ee422be}" friendlyName="Version" name="version" type="string" value="0.3.0" />
+        <Attribute guid="{f3c2635d-9f2f-458f-8663-90b3837bed09}" friendlyName="ExcludeOSMBuildings" name="OBuilding" type="byte" value="1" />
+        <Attribute guid="{f78a3074-8ad5-4b8b-92c4-c1c948bb7aa5}" friendlyName="ExcludeMSBuildings" name="MSBuilding" type="byte" value="1" />
+        <Attribute guid="{5c1a2387-1f07-47df-a569-962cf6258e55}" friendlyName="ExcludeDetectedBuildings" name="DBuilding" type="byte" value="1" />
+        <Attribute guid="{18b58cbf-ae02-4a19-8aa9-3809e8e73400}" friendlyName="ExcludeTIN" name="ExcludeTIN" type="byte" value="1" />
+      </Attributes>
+      <Shapes>
+        <Shape DrawType="Polygon">
+          <Points>
+            <Point Longitude="-113.5137677192688" Latitude="53.56876194477081" Altitude="673.407M" />
+            <Point Longitude="-113.51385354995728" Latitude="53.576197028160095" Altitude="673.407M" />
+            <Point Longitude="-113.52077007293701" Latitude="53.573681116104126" Altitude="673.407M" />
+            <Point Longitude="-113.5137677192688" Latitude="53.56876194477081" Altitude="673.407M" />
+          </Points>
+        </Shape>
+      </Shapes>
+    </Vector>
+    <Vector SectOffset="420">
+      <QMID u="283" v="207" l="11" />
+      <Attributes>
+        <Attribute guid="{ce85242f-4110-4706-8344-1f3a8ee422be}" friendlyName="Version" name="version" type="string" value="0.3.0" />
+        <Attribute guid="{f3c2635d-9f2f-458f-8663-90b3837bed09}" friendlyName="ExcludeOSMBuildings" name="OBuilding" type="byte" value="1" />
+        <Attribute guid="{f78a3074-8ad5-4b8b-92c4-c1c948bb7aa5}" friendlyName="ExcludeMSBuildings" name="MSBuilding" type="byte" value="1" />
+        <Attribute guid="{5c1a2387-1f07-47df-a569-962cf6258e55}" friendlyName="ExcludeDetectedBuildings" name="DBuilding" type="byte" value="1" />
+        <Attribute guid="{18b58cbf-ae02-4a19-8aa9-3809e8e73400}" friendlyName="ExcludeTIN" name="ExcludeTIN" type="byte" value="1" />
+      </Attributes>
+      <Shapes>
+        <Shape DrawType="Polygon">
+          <Points />
+        </Shape>
+      </Shapes>
+    </Vector>
+    <Vector SectOffset="532">
+      <QMID u="283" v="207" l="11" />
+      <Attributes>
+        <Attribute guid="{41eff715-c392-4b31-a457-50a504353a90}" friendlyName="VegetationDensity" name="VegDensity" type="uint" value="0" />
+        <Attribute guid="{ce85242f-4110-4706-8344-1f3a8ee422be}" friendlyName="Version" name="version" type="string" value="0.3.0" />
+        <Attribute guid="{6a043f59-e6f2-4117-a2e4-d510e7317c29}" friendlyName="VegetationScale" name="vegetation" type="uint" value="0" />
+        <Attribute guid="{f3c2635d-9f2f-458f-8663-90b3837bed09}" friendlyName="ExcludeOSMBuildings" name="OBuilding" type="byte" value="1" />
+        <Attribute guid="{f78a3074-8ad5-4b8b-92c4-c1c948bb7aa5}" friendlyName="ExcludeMSBuildings" name="MSBuilding" type="byte" value="1" />
+        <Attribute guid="{5c1a2387-1f07-47df-a569-962cf6258e55}" friendlyName="ExcludeDetectedBuildings" name="DBuilding" type="byte" value="1" />
+        <Attribute guid="{18b58cbf-ae02-4a19-8aa9-3809e8e73400}" friendlyName="ExcludeTIN" name="ExcludeTIN" type="byte" value="1" />
+      </Attributes>
+      <Shapes>
+        <Shape DrawType="Polygon">
+          <Points>
+            <Point Longitude="-113.52182149887085" Latitude="53.56901407241821" Altitude="671.626M" />
+            <Point Longitude="-113.5183310508728" Latitude="53.56667518615723" Altitude="671.626M" />
+            <Point Longitude="-113.51546287536621" Latitude="53.56814503669739" Altitude="671.626M" />
+            <Point Longitude="-113.5190749168396" Latitude="53.57058584690094" Altitude="671.626M" />
+            <Point Longitude="-113.52182149887085" Latitude="53.56901407241821" Altitude="671.626M" />
+          </Points>
+        </Shape>
+      </Shapes>
+    </Vector>
+    <Vector SectOffset="600">
+      <QMID u="283" v="207" l="11" />
+      <Attributes>
+        <Attribute guid="{ce85242f-4110-4706-8344-1f3a8ee422be}" friendlyName="Version" name="version" type="string" value="0.3.0" />
+        <Attribute guid="{065e9d4d-6984-4d2a-91fd-3c33c4f53b22}" friendlyName="FlattenMode" name="flatten" type="byte" value="1" />
+        <Attribute guid="{4cacc252-e6dc-419a-b20c-16ec601df70e}" />
+        <Attribute guid="{0a685eb0-0e01-44fe-b9ef-bfffbc968ade}" friendlyName="LandClassRemap" name="LCRemap" type="byte" value="2" />
+        <Attribute guid="{4d2a51d4-91ac-412f-833e-212cc10e5fbc}" />
+        <Attribute guid="{86a147e9-acf2-4780-9d3c-416373ecb451}" friendlyName="AirportSize" name="AirprtSize" type="byte" value="4" />
+      </Attributes>
+      <Shapes>
+        <Shape DrawType="Polygon">
+          <Points>
+            <Point Longitude="-113.53027582168579" Latitude="53.57232391834259" Altitude="667.973M" />
+            <Point Longitude="-113.52936744689941" Latitude="53.5711544752121" Altitude="667.973M" />
+            <Point Longitude="-113.52931022644043" Latitude="53.569985032081604" Altitude="667.973M" />
+            <Point Longitude="-113.5128664970398" Latitude="53.56301128864288" Altitude="667.973M" />
+            <Point Longitude="-113.51167917251587" Latitude="53.56304883956909" Altitude="667.973M" />
+            <Point Longitude="-113.50351810455322" Latitude="53.5665625333786" Altitude="667.973M" />
+            <Point Longitude="-113.5038685798645" Latitude="53.57364356517792" Altitude="667.973M" />
+            <Point Longitude="-113.50549221038818" Latitude="53.574920296669006" Altitude="667.973M" />
+            <Point Longitude="-113.50539922714233" Latitude="53.58034372329712" Altitude="667.973M" />
+            <Point Longitude="-113.50649356842041" Latitude="53.58108401298523" Altitude="667.973M" />
+            <Point Longitude="-113.52515459060669" Latitude="53.580434918403625" Altitude="667.973M" />
+            <Point Longitude="-113.52596282958984" Latitude="53.578938245773315" Altitude="667.973M" />
+            <Point Longitude="-113.529531955719" Latitude="53.578428626060486" Altitude="667.973M" />
+            <Point Longitude="-113.53026151657104" Latitude="53.57783854007721" Altitude="667.973M" />
+            <Point Longitude="-113.53027582168579" Latitude="53.57232391834259" Altitude="667.973M" />
+          </Points>
+        </Shape>
+      </Shapes>
+    </Vector>
+    <Vector SectOffset="702">
+      <QMID u="283" v="207" l="11" />
+      <Attributes>
+        <Attribute guid="{684afc09-9b38-4431-8d76-e825f54a4dff}" friendlyName="IsWater" name="IsWater" type="byte" value="1" />
+        <Attribute guid="{ce85242f-4110-4706-8344-1f3a8ee422be}" friendlyName="Version" name="version" type="string" value="0.3.0" />
+        <Attribute guid="{972b7bac-f620-4d6e-9724-e70bf8a450dd}" friendlyName="IsWaterExclusion" name="WaterExcl" type="byte" value="1" />
+      </Attributes>
+      <Shapes>
+        <Shape DrawType="Polygon">
+          <Points>
+            <Point Longitude="-113.52167844772339" Latitude="53.57107937335968" Altitude="680.607M" />
+            <Point Longitude="-113.51841688156128" Latitude="53.5719108581543" Altitude="680.607M" />
+            <Point Longitude="-113.52112054824829" Latitude="53.57384741306305" Altitude="680.607M" />
+            <Point Longitude="-113.5242748260498" Latitude="53.57282817363739" Altitude="680.607M" />
+            <Point Longitude="-113.52167844772339" Latitude="53.57107937335968" Altitude="680.607M" />
+          </Points>
+        </Shape>
+      </Shapes>
+    </Vector>
+    <Vector SectOffset="754">
+      <QMID u="283" v="207" l="11" />
+      <Attributes>
+        <Attribute guid="{684afc09-9b38-4431-8d76-e825f54a4dff}" friendlyName="IsWater" name="IsWater" type="byte" value="1" />
+        <Attribute guid="{ce85242f-4110-4706-8344-1f3a8ee422be}" friendlyName="Version" name="version" type="string" value="0.3.0" />
+        <Attribute guid="{972b7bac-f620-4d6e-9724-e70bf8a450dd}" friendlyName="IsWaterExclusion" name="WaterExcl" type="byte" value="1" />
+        <Attribute guid="{3f8514f8-faa8-4b94-ab7f-dc2078a4b888}" friendlyName="WaterType" name="WaterType" type="uint" value="3" />
+      </Attributes>
+      <Shapes>
+        <Shape DrawType="Polygon">
+          <Points>
+            <Point Longitude="-113.52074146270752" Latitude="53.573981523513794" Altitude="678.475M" />
+            <Point Longitude="-113.51416826248169" Latitude="53.569716811180115" Altitude="678.475M" />
+            <Point Longitude="-113.5135817527771" Latitude="53.57615411281586" Altitude="678.475M" />
+            <Point Longitude="-113.52074146270752" Latitude="53.573981523513794" Altitude="678.475M" />
+          </Points>
+        </Shape>
+      </Shapes>
+    </Vector>
+  </Vectors>
+</Vectors>
