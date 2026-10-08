@@ -10,6 +10,7 @@
 		<VisibleInStore>false</VisibleInStore>
 		<CanBeReferenced>false</CanBeReferenced>
 	</Flags>
+    <PackageOrderHint>CUSTOM_AIRPORT</PackageOrderHint>
 	<AssetGroups>
 		<AssetGroup Name="ContentInfo">
 			<Type>ContentInfo</Type>
