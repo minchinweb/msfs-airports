@@ -255,7 +255,7 @@
 		<TaxiwayPoint parentGroupID="2" groupIndex="57" index="6" type="NORMAL" orientation="FORWARD" lat="53.56830363389820" lon="-113.51031685597520"/>
 		<TaxiwayPoint parentGroupID="2" groupIndex="58" index="7" type="NORMAL" orientation="FORWARD" lat="53.57657549102390" lon="-113.51041470311316"/>
 		<TaxiwayPoint parentGroupID="2" groupIndex="60" index="8" type="HOLD_SHORT" orientation="FORWARD" lat="53.57714863505336" lon="-113.51049886097226"/>
-		<TaxiwayPoint parentGroupID="2" groupIndex="61" index="9" type="HOLD_SHORT" orientation="REVERSE" lat="53.57813314781309" lon="-113.51074842988019"/>
+		<TaxiwayPoint parentGroupID="2" groupIndex="61" index="9" type="HOLD_SHORT" orientation="REVERSE" lat="53.57860200356005" lon="-113.51128576117335"/>
 		<TaxiwayPoint parentGroupID="2" groupIndex="62" index="10" type="NORMAL" orientation="FORWARD" lat="53.57898697063506" lon="-113.51077964785476"/>
 		<TaxiwayPoint parentGroupID="2" groupIndex="63" index="11" type="NORMAL" orientation="FORWARD" lat="53.57976935908511" lon="-113.51155175280998"/>
 		<TaxiwayPoint parentGroupID="2" groupIndex="64" index="12" type="HOLD_SHORT" orientation="FORWARD" lat="53.57973177964786" lon="-113.51217518470332"/>
@@ -267,7 +267,7 @@
 		<TaxiwayPoint parentGroupID="2" groupIndex="75" index="18" type="NORMAL" orientation="FORWARD" lat="53.57700420774150" lon="-113.52955664642134"/>
 		<TaxiwayPoint parentGroupID="2" groupIndex="76" index="19" type="NORMAL" orientation="FORWARD" lat="53.57434781246445" lon="-113.52565601091329"/>
 		<TaxiwayPoint parentGroupID="2" groupIndex="77" index="20" type="HOLD_SHORT" orientation="FORWARD" lat="53.57378351845014" lon="-113.52473568048053"/>
-		<TaxiwayPoint parentGroupID="2" groupIndex="78" index="21" type="HOLD_SHORT" orientation="REVERSE" lat="53.57300602636325" lon="-113.52391869576741"/>
+		<TaxiwayPoint parentGroupID="2" groupIndex="78" index="21" type="HOLD_SHORT" orientation="REVERSE" lat="53.57278466846543" lon="-113.52361580710679"/>
 		<TaxiwayPoint parentGroupID="2" groupIndex="79" index="22" type="NORMAL" orientation="FORWARD" lat="53.57166627643483" lon="-113.52187018568361"/>
 		<TaxiwayPoint parentGroupID="2" groupIndex="80" index="23" type="NORMAL" orientation="FORWARD" lat="53.57087566347705" lon="-113.52178601269850"/>
 		<TaxiwayPoint parentGroupID="2" groupIndex="81" index="24" type="NORMAL" orientation="FORWARD" lat="53.56683954956271" lon="-113.51596197949638"/>
@@ -282,23 +282,23 @@
 		<TaxiwayPoint parentGroupID="2" groupIndex="37" index="34" type="HOLD_SHORT" orientation="REVERSE" lat="53.57245492921746" lon="-113.52898347174491"/>
 		<TaxiwayPoint parentGroupID="2" groupIndex="44" index="35" type="NORMAL" orientation="FORWARD" lat="53.57411281818624" lon="-113.52607195077266"/>
 		<TaxiwayPoint parentGroupID="2" groupIndex="47" index="36" type="NORMAL" orientation="FORWARD" lat="53.56508095114029" lon="-113.51281262414855"/>
-		<TaxiwayPoint parentGroupID="2" groupIndex="34" index="37" type="NORMAL" orientation="FORWARD" lat="53.57214621087596" lon="-113.52863040369147"/>
-		<TaxiwayPoint parentGroupID="2" groupIndex="43" index="38" type="NORMAL" orientation="FORWARD" lat="53.57395129704818" lon="-113.52269315572478"/>
+		<TaxiwayPoint parentGroupID="2" groupIndex="34" index="37" type="NORMAL" orientation="FORWARD" lat="53.57167388542079" lon="-113.52817622965631"/>
+		<TaxiwayPoint parentGroupID="2" groupIndex="43" index="38" type="NORMAL" orientation="FORWARD" lat="53.57381622688813" lon="-113.52248886968670"/>
 		<TaxiwayPoint parentGroupID="2" groupIndex="45" index="39" type="NORMAL" orientation="FORWARD" lat="53.57726138075352" lon="-113.52769203252880"/>
-		<TaxiwayPoint parentGroupID="2" groupIndex="48" index="40" type="NORMAL" orientation="FORWARD" lat="53.57602352626314" lon="-113.51589704525276"/>
-		<TaxiwayPoint parentGroupID="2" groupIndex="49" index="41" type="NORMAL" orientation="FORWARD" lat="53.57695279273104" lon="-113.51280901021752"/>
-		<TaxiwayPoint parentGroupID="2" groupIndex="50" index="42" type="NORMAL" orientation="FORWARD" lat="53.57754957173634" lon="-113.51084222775620"/>
+		<TaxiwayPoint parentGroupID="2" groupIndex="48" index="40" type="NORMAL" orientation="FORWARD" lat="53.57622299538182" lon="-113.51608977868969"/>
+		<TaxiwayPoint parentGroupID="2" groupIndex="49" index="41" type="NORMAL" orientation="FORWARD" lat="53.57743027546221" lon="-113.51283100000001"/>
+		<TaxiwayPoint parentGroupID="2" groupIndex="50" index="42" type="NORMAL" orientation="FORWARD" lat="53.57801578064691" lon="-113.51128975208186"/>
 		<TaxiwayPoint parentGroupID="2" groupIndex="52" index="43" type="NORMAL" orientation="FORWARD" lat="53.56594815216404" lon="-113.51049160039639"/>
 		<TaxiwayPoint parentGroupID="2" groupIndex="42" index="44" type="NORMAL" orientation="FORWARD" lat="53.56739653244516" lon="-113.51280864284082"/>
 		<TaxiwayPoint parentGroupID="2" groupIndex="31" index="45" type="NORMAL" orientation="FORWARD" lat="53.56827725199711" lon="-113.51802366799383"/>
-		<TaxiwayPoint parentGroupID="2" groupIndex="29" index="47" type="NORMAL" orientation="FORWARD" lat="53.57344551497291" lon="-113.52435945650836"/>
+		<TaxiwayPoint parentGroupID="2" groupIndex="29" index="47" type="NORMAL" orientation="FORWARD" lat="53.57319852383380" lon="-113.52412208015846"/>
 		<TaxiwayPoint parentGroupID="2" groupIndex="30" index="48" type="NORMAL" orientation="FORWARD" lat="53.57087211994006" lon="-113.51803229800130"/>
 		<TaxiwayPoint parentGroupID="2" groupIndex="73" index="49" type="NORMAL" orientation="FORWARD" lat="53.57761812504641" lon="-113.52833621662731"/>
 		<TaxiwayPoint parentGroupID="2" groupIndex="65" index="50" type="NORMAL" orientation="FORWARD" lat="53.57974702186771" lon="-113.51282099583935"/>
-		<TaxiwayPoint parentGroupID="2" groupIndex="59" index="51" type="NORMAL" orientation="FORWARD" lat="53.57764089143323" lon="-113.51062364542622"/>
+		<TaxiwayPoint parentGroupID="2" groupIndex="59" index="51" type="NORMAL" orientation="FORWARD" lat="53.57811852975625" lon="-113.51108606866283"/>
 		<TaxiwayPoint parentGroupID="2" groupIndex="27" index="52" type="NORMAL" orientation="FORWARD" lat="53.56795886018266" lon="-113.51362613824526"/>
 		<TaxiwayPoint parentGroupID="2" groupIndex="28" index="53" type="NORMAL" orientation="FORWARD" lat="53.56839447133912" lon="-113.51282294745535"/>
-		<TaxiwayPoint parentGroupID="2" groupIndex="26" index="54" type="HOLD_SHORT" orientation="REVERSE" lat="53.57653453163853" lon="-113.51626180064339"/>
+		<TaxiwayPoint parentGroupID="2" groupIndex="26" index="54" type="HOLD_SHORT" orientation="REVERSE" lat="53.57671217683659" lon="-113.51653131970498"/>
 		<TaxiwayPoint parentGroupID="2" groupIndex="32" index="82" type="NORMAL" orientation="FORWARD" lat="53.56975397669413" lon="-113.52018684988954"/>
 		<TaxiwayPoint parentGroupID="2" groupIndex="16" index="83" type="NORMAL" orientation="FORWARD" lat="53.57176797781491" lon="-113.52635702422558"/>
 		<TaxiwayPoint parentGroupID="2" groupIndex="23" index="84" type="NORMAL" orientation="FORWARD" lat="53.57206581489756" lon="-113.52549069510815"/>
@@ -515,29 +515,29 @@
 		<TaxiwaySign parentGroupID="5" groupIndex="45" lat="53.56873700101055" lon="-113.51670900108688" heading="136.323853" label="d[&lt;A]l[T]d[A&gt;]" justification="LEFT" size="SIZE3"/>
 		<TaxiwaySign displayName="Taxiway sign m[`34][^30]l[A]d[^B] (copy 1)" parentGroupID="5" groupIndex="2" lat="53.56588759758529" lon="-113.51129274337789" heading="228.795776" label="d[&lt;B]l 12 d[A&gt;]" justification="LEFT" size="SIZE4"/>
 		<TaxiwaySign displayName="Taxiway sign m[`34][^30]l[A]d[^B] (copy)" parentGroupID="5" groupIndex="3" lat="53.56531758412521" lon="-113.51341898378556" heading="272.664185" label="d[&lt;B]l 16 d[A&gt;]" justification="LEFT" size="SIZE4"/>
-		<TaxiwaySign parentGroupID="5" groupIndex="17" lat="53.57718402701845" lon="-113.51354005341285" heading="271.241455" label="d[&lt;B]l 16 m 22&gt; " justification="LEFT" size="SIZE3"/>
+		<TaxiwaySign parentGroupID="5" groupIndex="17" lat="53.57750601139814" lon="-113.51392037876361" heading="266.021455" label="d[&lt;B]l 16 m 22&gt; " justification="LEFT" size="SIZE3"/>
 		<TaxiwaySign parentGroupID="5" groupIndex="5" lat="53.57345969687728" lon="-113.51353265717611" heading="279.019775" label="d[&lt;E]l 30 " justification="LEFT" size="SIZE3"/>
 		<TaxiwaySign parentGroupID="5" groupIndex="10" lat="53.57278783638083" lon="-113.51082008923095" heading="75.849609" label="d[&lt;E]l[B]" justification="LEFT" size="SIZE3"/>
 		<TaxiwaySign parentGroupID="5" groupIndex="46" lat="53.56847581709545" lon="-113.51639581162536" heading="53.761597" label="d[&lt;T]l[A]" justification="LEFT" size="SIZE3"/>
 		<TaxiwaySign parentGroupID="5" groupIndex="38" lat="53.57432434060318" lon="-113.52500083617038" heading="69.202881" label="d[&lt;W]l[A]" justification="LEFT" size="SIZE3"/>
-		<TaxiwaySign parentGroupID="5" groupIndex="23" lat="53.57644504129143" lon="-113.51659528165698" heading="252.262573" label="d[C]m 22&gt; " justification="LEFT" size="SIZE3"/>
+		<TaxiwaySign parentGroupID="5" groupIndex="23" lat="53.57660504249240" lon="-113.51684970558905" heading="247.042573" label="d[C]m 22&gt; " justification="LEFT" size="SIZE3"/>
 		<TaxiwaySign parentGroupID="5" groupIndex="53" lat="53.56765647463618" lon="-113.51492201753283" heading="314.807739" label="d[^A&gt;]l[Y]" justification="LEFT" size="SIZE3"/>
 		<TaxiwaySign parentGroupID="5" groupIndex="6" lat="53.56497937869169" lon="-113.51190885748230" heading="319.751587" label="d[^A]l[B]r 34&gt;" justification="LEFT" size="SIZE3"/>
 		<TaxiwaySign parentGroupID="5" lat="53.57797371895001" lon="-113.51811733684089" heading="190.629272" label="d[`C']" justification="LEFT" size="SIZE3"/>
 		<TaxiwaySign parentGroupID="5" groupIndex="21" lat="53.57861297871609" lon="-113.51713454390169" heading="343.234863" label="d[`C]l[C]" justification="LEFT" size="SIZE3"/>
 		<TaxiwaySign parentGroupID="5" groupIndex="40" lat="53.57066378961527" lon="-113.51946295201428" heading="225.714111" label="d[`X]l[A]" justification="LEFT" size="SIZE3"/>
 		<TaxiwaySign parentGroupID="5" groupIndex="48" lat="53.56776146912264" lon="-113.51531636420047" heading="233.761597" label="d[`Y]l[A]d[A']" justification="LEFT" size="SIZE3"/>
-		<TaxiwaySign parentGroupID="5" groupIndex="34" lat="53.57302647164279" lon="-113.52449443786145" heading="180.000000" label="l 04 d[&lt;A&gt;]" justification="LEFT" size="SIZE3"/>
-		<TaxiwaySign parentGroupID="5" groupIndex="25" lat="53.57541350975057" lon="-113.51652258325701" heading="180.000000" label="l 04 d[`C]" justification="LEFT" size="SIZE3"/>
-		<TaxiwaySign parentGroupID="5" groupIndex="36" lat="53.57342676200807" lon="-113.52277759083961" heading="141.580811" label="l 04 r12-30" justification="LEFT" size="SIZE4"/>
+		<TaxiwaySign parentGroupID="5" groupIndex="34" lat="53.57277392650815" lon="-113.52419229413731" heading="174.780000" label="l 04 d[&lt;A&gt;]" justification="LEFT" size="SIZE3"/>
+		<TaxiwaySign parentGroupID="5" groupIndex="25" lat="53.57558171629674" lon="-113.51661925312744" heading="174.780000" label="l 04 d[`C]" justification="LEFT" size="SIZE3"/>
+		<TaxiwaySign parentGroupID="5" groupIndex="36" lat="53.57326530337901" lon="-113.52254390155183" heading="136.360811" label="l 04 r12-30" justification="LEFT" size="SIZE4"/>
 		<TaxiwaySign parentGroupID="5" groupIndex="54" lat="53.56733547070899" lon="-113.51344520144401" heading="224.851685" label="l 12 m 16'" justification="LEFT" size="SIZE3"/>
-		<TaxiwaySign parentGroupID="5" groupIndex="27" lat="53.57412222504211" lon="-113.52378883544513" heading="231.828003" label="l 12 r22-04" justification="LEFT" size="SIZE4"/>
+		<TaxiwaySign parentGroupID="5" groupIndex="27" lat="53.57390325318259" lon="-113.52365751396961" heading="226.608003" label="l 12 r22-04" justification="LEFT" size="SIZE4"/>
 		<TaxiwaySign parentGroupID="5" groupIndex="52" lat="53.56869652294321" lon="-113.51344089512536" heading="266.412964" label="l 16 m `12-30\ d[Y']" justification="LEFT" size="SIZE4"/>
-		<TaxiwaySign parentGroupID="5" groupIndex="37" lat="53.57445098169930" lon="-113.52245614154097" heading="334.643555" label="l 22 r30-12" justification="LEFT" size="SIZE4"/>
+		<TaxiwaySign parentGroupID="5" groupIndex="37" lat="53.57430264049430" lon="-113.52238072061103" heading="329.423555" label="l 22 r30-12" justification="LEFT" size="SIZE4"/>
 		<TaxiwaySign parentGroupID="5" groupIndex="7" lat="53.57277469774530" lon="-113.51224080130952" heading="84.605713" label="l 30 d[E&gt;]" justification="LEFT" size="SIZE3"/>
-		<TaxiwaySign parentGroupID="5" groupIndex="39" lat="53.57385425750829" lon="-113.52161084071169" heading="83.463135" label="l 30 r04-22" justification="LEFT" size="SIZE4"/>
-		<TaxiwaySign parentGroupID="5" groupIndex="20" lat="53.57628876631038" lon="-113.51356211732661" heading="180.000000" label="l l04 d[^B]m 16&gt; " justification="LEFT" size="SIZE3"/>
-		<TaxiwaySign parentGroupID="5" groupIndex="24" lat="53.57657627384692" lon="-113.51572948573545" heading="325.233765" label="l22d[C']" justification="LEFT" size="SIZE3"/>
+		<TaxiwaySign parentGroupID="5" groupIndex="39" lat="53.57375405550469" lon="-113.52144749292827" heading="78.243135" label="l 30 r04-22" justification="LEFT" size="SIZE4"/>
+		<TaxiwaySign parentGroupID="5" groupIndex="20" lat="53.57661327167829" lon="-113.51380517559328" heading="174.780000" label="l l04 d[^B]m 16&gt; " justification="LEFT" size="SIZE3"/>
+		<TaxiwaySign parentGroupID="5" groupIndex="24" lat="53.57678250237052" lon="-113.51600760838123" heading="320.013765" label="l22d[C']" justification="LEFT" size="SIZE3"/>
 		<TaxiwaySign parentGroupID="5" groupIndex="44" lat="53.56906466368292" lon="-113.51728262255499" heading="226.318359" label="l[A]d[T']" justification="LEFT" size="SIZE3"/>
 		<TaxiwaySign parentGroupID="5" groupIndex="31" lat="53.57472067047472" lon="-113.52572548463091" heading="207.279053" label="l[A]d[W']" justification="LEFT" size="SIZE3"/>
 		<TaxiwaySign parentGroupID="5" groupIndex="43" lat="53.57007008797459" lon="-113.51861592899036" heading="51.448975" label="l[A]d[X']" justification="LEFT" size="SIZE3"/>
@@ -545,33 +545,33 @@
 		<TaxiwaySign parentGroupID="5" groupIndex="9" lat="53.56604958143033" lon="-113.50975375236861" heading="304.019165" label="l[B]r 30&gt;" justification="LEFT" size="SIZE3"/>
 		<TaxiwaySign parentGroupID="5" groupIndex="22" lat="53.57786107949013" lon="-113.51752141498748" heading="71.455078" label="l[C]d[C']" justification="LEFT" size="SIZE3"/>
 		<TaxiwaySign parentGroupID="5" groupIndex="12" lat="53.57284071306972" lon="-113.51082449627170" heading="180.000000" label="l[E]d[&lt;B&gt;]" justification="LEFT" size="SIZE3"/>
-		<TaxiwaySign parentGroupID="5" groupIndex="32" lat="53.57238483953922" lon="-113.52934289556025" heading="281.381836" label="l[W]r 22 " justification="LEFT" size="SIZE3"/>
+		<TaxiwaySign parentGroupID="5" groupIndex="32" lat="53.57187303454936" lon="-113.52892233028716" heading="276.161836" label="l[W]r 22 " justification="LEFT" size="SIZE3"/>
 		<TaxiwaySign parentGroupID="5" groupIndex="42" lat="53.57058696501301" lon="-113.51919382927686" heading="315.609741" label="l[X]d[&lt;A&gt;]" justification="LEFT" size="SIZE3"/>
 		<TaxiwaySign parentGroupID="5" groupIndex="29" lat="53.57772477857808" lon="-113.52722457035374" heading="298.833618" label="m 12 d[^A]" justification="LEFT" size="SIZE3"/>
 		<TaxiwaySign parentGroupID="5" groupIndex="30" lat="53.57716723767079" lon="-113.52869167108202" heading="180.000000" label="m 12 l[A]" justification="LEFT" size="SIZE3"/>
 		<TaxiwaySign parentGroupID="5" groupIndex="1" lat="53.57948132317475" lon="-113.51357362228303" heading="180.000000" label="m 16 l[C]d[^B]" justification="LEFT" size="SIZE3"/>
-		<TaxiwaySign parentGroupID="5" groupIndex="14" lat="53.57708756413064" lon="-113.51090802039054" heading="63.413086" label="m 22 l[B]" justification="LEFT" size="SIZE3"/>
-		<TaxiwaySign parentGroupID="5" groupIndex="15" lat="53.57812994814526" lon="-113.51106717505598" heading="292.933960" label="m 22 l[B]" justification="LEFT" size="SIZE3"/>
+		<TaxiwaySign parentGroupID="5" groupIndex="14" lat="53.57755213490884" lon="-113.51128448112281" heading="58.193086" label="m 22 l[B]" justification="LEFT" size="SIZE3"/>
+		<TaxiwaySign parentGroupID="5" groupIndex="15" lat="53.57858159807378" lon="-113.51160269415122" heading="287.713960" label="m 22 l[B]" justification="LEFT" size="SIZE3"/>
 		<TaxiwaySign parentGroupID="5" groupIndex="13" lat="53.57332740411773" lon="-113.51207692152178" heading="358.851929" label="m 34-16 l[E]" justification="LEFT" size="SIZE3"/>
 		<TaxiwaySign parentGroupID="5" groupIndex="51" lat="53.56809265494197" lon="-113.51467593113094" heading="230.059204" label="m/34l 12 d[Y']" justification="LEFT" size="SIZE3"/>
 		<TaxiwaySign parentGroupID="5" groupIndex="16" lat="53.57948151953896" lon="-113.51211236102098" heading="1.708374" label="m&lt;16 l[B]d[^C]" justification="LEFT" size="SIZE3"/>
-		<TaxiwaySign parentGroupID="5" groupIndex="19" lat="53.57756698708019" lon="-113.51214050933143" heading="356.731567" label="m&lt;16l 22 " justification="LEFT" size="SIZE3"/>
-		<TaxiwaySign parentGroupID="5" groupIndex="18" lat="53.57669209260398" lon="-113.51218227994231" heading="80.782471" label="m&lt;22 l 34 d[B&gt;]" justification="LEFT" size="SIZE3"/>
+		<TaxiwaySign parentGroupID="5" groupIndex="19" lat="53.57796298866268" lon="-113.51258531774708" heading="351.511567" label="m&lt;16l 22 " justification="LEFT" size="SIZE3"/>
+		<TaxiwaySign parentGroupID="5" groupIndex="18" lat="53.57708946612476" lon="-113.51249286014325" heading="75.562471" label="m&lt;22 l 34 d[B&gt;]" justification="LEFT" size="SIZE3"/>
 		<TaxiwaySign parentGroupID="5" groupIndex="50" lat="53.56792743223683" lon="-113.51457667711040" heading="136.268921" label="m&lt;30 `34 l[Y]" justification="LEFT" size="SIZE3"/>
 		<TaxiwaySign parentGroupID="5" groupIndex="8" lat="53.56549115553109" lon="-113.51076470192540" heading="146.090698" label="m&lt;30 d[B]" justification="LEFT" size="SIZE4"/>
 		<TaxiwaySign parentGroupID="5" groupIndex="4" lat="53.56470113021105" lon="-113.51364011754389" heading="191.870728" label="m[`34][^30]l[A]d[^B]" justification="LEFT" size="SIZE4"/>
 		<TaxiwaySign displayName="Taxiway sign l 12 m 16' (copy)" parentGroupID="5" groupIndex="55" lat="53.56722061947287" lon="-113.51337975091802" heading="89.280396" label="m`30 l 34" justification="LEFT" size="SIZE4"/>
 		<TaxiwaySign parentGroupID="5" groupIndex="49" lat="53.56859078533251" lon="-113.51340100601375" heading="148.205566" label="r &lt;34 " justification="LEFT" size="SIZE4"/>
-		<TaxiwaySign parentGroupID="5" groupIndex="35" lat="53.57311915695839" lon="-113.52355528258795" heading="83.715820" label="r04-22l[A]" justification="LEFT" size="SIZE3"/>
+		<TaxiwaySign parentGroupID="5" groupIndex="35" lat="53.57291696199459" lon="-113.52327123545186" heading="78.495820" label="r04-22l[A]" justification="LEFT" size="SIZE3"/>
 		<TaxiwaySign parentGroupID="5" groupIndex="41" lat="53.57041075533855" lon="-113.51830274599892" heading="138.449707" label="r12-30l[X]" justification="LEFT" size="SIZE3"/>
-		<TaxiwaySign parentGroupID="5" groupIndex="33" lat="53.57368845674078" lon="-113.52516870532875" heading="228.988037" label="r22-04l[A]" justification="LEFT" size="SIZE3"/>
-		<Runway parentGroupID="1" groupIndex="1" lat="53.57486801645715" lon="-113.51967815854454" alt="645.96957238018513" heading="63.00000000000000" length="1372.00000000000000" width="61.00000000000000" patternAltitude="304.79998779296875" surface="{2E0DE83F-B79A-4435-905C-DCBBEAC55C59}" transparent="FALSE" number="04" designator="NONE" primaryLanding="TRUE" primaryTakeoff="TRUE" primaryPattern="RIGHT" secondaryLanding="TRUE" secondaryTakeoff="TRUE" secondaryPattern="LEFT" primaryMarkingBias="75.00000000000000" secondaryMarkingBias="235.00000000000000" groundMerging="TRUE" excludeVegetationAround="TRUE">
+		<TaxiwaySign parentGroupID="5" groupIndex="33" lat="53.57339674122482" lon="-113.52496519733280" heading="223.768037" label="r22-04l[A]" justification="LEFT" size="SIZE3"/>
+		<Runway parentGroupID="1" groupIndex="1" lat="53.57486801645715" lon="-113.51967815854454" alt="645.96957238018513" heading="57.78000000000000" length="1372.00000000000000" width="61.00000000000000" patternAltitude="304.79998779296875" surface="{2E0DE83F-B79A-4435-905C-DCBBEAC55C59}" transparent="FALSE" number="04" designator="NONE" primaryLanding="TRUE" primaryTakeoff="TRUE" primaryPattern="RIGHT" secondaryLanding="TRUE" secondaryTakeoff="TRUE" secondaryPattern="LEFT" primaryMarkingBias="75.00000000000000" secondaryMarkingBias="235.00000000000000" groundMerging="TRUE" excludeVegetationAround="TRUE">
 			<RunwayDeformation alt="663.799988" ratio="0.000000"/>
 			<RunwayDeformation alt="667.265991" ratio="1.000000"/>
 			<Markings edges="FALSE" threshold="FALSE" alternateThreshold="FALSE" fixedDistance="FALSE" alternateFixedDistance="FALSE" touchdown="FALSE" alternateTouchdown="FALSE" dashes="TRUE" ident="TRUE" leadingZeroIdent="TRUE" precision="FALSE" alternatePrecision="FALSE" edgePavement="FALSE" singleEnd="FALSE" primaryClosed="FALSE" secondaryClosed="FALSE" primaryStol="FALSE" secondaryStol="FALSE" noThresholdEndArrows="FALSE"/>
 			<Lights center="NONE" edge="LOW"/>
-			<RunwayStart end="PRIMARY" lat="53.57267172460556" lon="-113.52695034867807" alt="645.97903902735561" heading="61.21699905395508"/>
-			<RunwayStart end="SECONDARY" lat="53.57650984692466" lon="-113.51440624748021" alt="645.98348580114543" heading="241.21699523925781"/>
+			<RunwayStart end="PRIMARY" lat="53.57228645426189" lon="-113.52657690125893" alt="645.97903902735561" heading="57.78000000000000"/>
+			<RunwayStart end="SECONDARY" lat="53.57709994221410" lon="-113.51371375389721" alt="645.98348580114543" heading="237.78000000000000"/>
 		</Runway>
 		<Runway parentGroupID="1" lat="53.57150973291642" lon="-113.51899126976073" alt="666.79978131363282" heading="138.00000000000000" length="1788.59997558593750" width="61.00000000000000" patternAltitude="304.79998779296875" surface="{2E0DE83F-B79A-4435-905C-DCBBEAC55C59}" transparent="FALSE" number="12" designator="NONE" primaryLanding="TRUE" primaryTakeoff="TRUE" primaryPattern="RIGHT" secondaryLanding="TRUE" secondaryTakeoff="TRUE" secondaryPattern="LEFT" primaryMarkingBias="243.89999389648438" secondaryMarkingBias="360.67001342773438" groundMerging="TRUE" excludeVegetationAround="TRUE">
 			<RunwayDeformation alt="666.854065" ratio="0.000000"/>
