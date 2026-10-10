@@ -913,6 +913,14 @@
 	<SceneryObject lat="53.57055" lon="-113.58378" alt="0.00000000000000" pitch="0.000000" bank="0.000000" heading="0" imageComplexity="VERY_SPARSE" altitudeIsAgl="TRUE" snapToGround="TRUE" snapToNormal="FALSE">
 		<LibraryObject name="{E62DF5FC-3849-513A-A70D-6D6587B3D026}" scale="1.000000"/>
 	</SceneryObject>
+	<!-- Wind tee (RCAF Manual of Aerodromes, Edmonton p.90) -->
+	<SceneryObject lat="53.573710" lon="-113.528688" alt="0.00000000000000" pitch="0.000000" bank="0.000000" heading="0" imageComplexity="VERY_SPARSE" altitudeIsAgl="TRUE" snapToGround="TRUE" snapToNormal="FALSE">
+		<LibraryObject name="{DB6335DD-1A23-5589-9523-1288A3137757}" scale="1.000000"/>
+	</SceneryObject>
+	<!-- Aerodrome beacon (RCAF Manual of Aerodromes, Edmonton p.90) -->
+	<SceneryObject lat="53.572005" lon="-113.529643" alt="0.00000000000000" pitch="0.000000" bank="0.000000" heading="0" imageComplexity="VERY_SPARSE" altitudeIsAgl="TRUE" snapToGround="TRUE" snapToNormal="FALSE">
+		<Beacon type="CIVILIAN" baseType="AIRPORT"/>
+	</SceneryObject>
 	<Polygon version="0.4.0" displayName="No generated buildings: Hangar 14 (BCATP 1942): OSM way 230718920 footprint 91 x 100" parentGroupID="6" altitude="667.68023681640625">
 		<Attribute name="UniqueGUID" guid="{359C73E8-06BE-4FB2-ABCB-EC942F7761D0}" type="GUID" value="{C73F1544-1BA5-586C-9A73-128FA74274DA}"/>
 		<Attribute name="ExcludeDetectedBuildings" guid="{5C1A2387-1F07-47DF-A569-962CF6258E55}" type="UINT8" value="1"/>

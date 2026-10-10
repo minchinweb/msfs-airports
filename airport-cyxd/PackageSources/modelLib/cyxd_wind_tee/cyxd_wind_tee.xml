@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ModelInfo guid="{DB6335DD-1A23-5589-9523-1288A3137757}" version="1.1">
+	<LODS>
+		<LOD minSize="0" ModelFile="cyxd_wind_tee.gltf"/>
+	</LODS>
+</ModelInfo>

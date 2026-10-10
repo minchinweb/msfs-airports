@@ -270,6 +270,15 @@ def transmitter_site():
     return m
 
 
+def wind_tee():
+    """Wind tee on a post; the crossbar (head) is at +Z, so heading = the direction the tee points (into wind)."""
+    m = Mesh()
+    m.box(-0.12, 0.12, 0, 2.0, -0.12, 0.12, METAL)
+    m.box(-0.35, 0.35, 2.0, 2.3, -3.0, 2.4, WHITE)
+    m.box(-2.2, 2.2, 2.0, 2.3, 2.4, 3.0, WHITE)
+    return m
+
+
 # placement tweaks -------------------------------------------------------------------------
 # Headings snapped parallel to the nearest runway/taxiway (the 1944-photo headings were ~6-10 deg off).
 HEADINGS = [("hangar 11", 0.0), ("usaaf hangar t1", 0.0), ("usaaf hangar t2", 0.0),
@@ -357,13 +366,19 @@ def main():
     name = "cyxd_transmitter_site"
     out.append(site + (transmitter_site().save(MODELLIB / name, name),))
     excl.append((site[0], footprint(site[1], site[2], site[3], -85.0, 80.0, -45.0, 30.0)))
+    # RCAF/DoT aerodrome sketch (c.1942): wind tee and beacon west of the 04 threshold, clear of all taxiways/aprons
+    name = "cyxd_wind_tee"
+    out.append(("Wind tee (RCAF Manual of Aerodromes, Edmonton p.90)", "53.573710", "-113.528688", "0",
+                wind_tee().save(MODELLIB / name, name)))
+    out.append(("Aerodrome beacon (RCAF Manual of Aerodromes, Edmonton p.90)", "53.572005", "-113.529643", "0", None))
     nl_src = None
     lines = [f"	{BEGIN}"]
     for title, lat, lon, hdg, guid in out:
         lines.append(f"	<!-- {title} -->")
         lines.append(f'	<SceneryObject lat="{lat}" lon="{lon}" alt="0.00000000000000" pitch="0.000000" bank="0.000000" '
                      f'heading="{hdg}" imageComplexity="VERY_SPARSE" altitudeIsAgl="TRUE" snapToGround="TRUE" snapToNormal="FALSE">')
-        lines.append(f'		<LibraryObject name="{guid}" scale="1.000000"/>')
+        lines.append(f'		<LibraryObject name="{guid}" scale="1.000000"/>' if guid else
+                     '		<Beacon type="CIVILIAN" baseType="AIRPORT"/>')
         lines.append("	</SceneryObject>")
     with open(CYXD, encoding="utf-8", newline="") as f:
         xml = f.read()

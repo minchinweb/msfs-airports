@@ -124,3 +124,14 @@ All approaches show in the sim after a full sim restart: ILS 34 Y, NDB 34 Z, NDB
 Added to `tools/gen_buildings.py` (model `cyxd_transmitter_site`): 1950s radio transmitter site from the radiocom.ca "Edmonton Radio" article (photo 4: 118 Ave & 156 St, now the Northwest Transit Garage). Placed at 53.57055, -113.58378 (OSM node for 15204 118 Ave NW), ~4 km west of CYXD, heading 0. White/red-roof building + shed + 10 red/white striped masts (35-55 m). Layout and mast count are approximated from one photo; exclusion polygon 165 x 75 m covers the site. Unverified in sim.
 
 Reference photo: `docs/cyxd/edmonton-transmitter-site-radiocom.jpg` (Watts_Edmonton_04.jpg from https://radiocom.ca/z_station_Edmonton.htm, article covers Edmonton Radio 1955-58; photo is uncaptioned apart from the overlay text "Edmonton transmitter site, 118 Ave and 156 st.").
+
+## Wind tee and beacon (RCAF sketch)
+Source: RCAF & D of T Aerodrome, Edmonton, Alberta, p.90 of the RCAF Manual of Aerodromes and Seaplane Bases Vol. 2 (c.1942) - https://rcaf.info/wp-content/uploads/2022/05/Edmonton-Alberta-RCAF-Manual-of-aerodromes-and-seaplane-bases-Vol-2-RCAF-DofT-Aerodrome_Page_1.jpg - saved as `docs/cyxd/rcaf-manual-of-aerodromes-edmonton-p90.jpg`. Also gives 53 34 N 113 31 W, var 25 E, elev 2185 ft, runways 3-21 4500x200, 11-29 and 15-33 5700x200 (all hard surfaced), radio range 266 kc/s "XD", aerodrome 3.35 mi from R.R. at 61 deg magnetic.
+- The sketch shows a wind tee and a beacon west of the runway 3 (04) end, plus two small buildings beside the beacon (not added; also three larger buildings south of 11 end ~ the BCATP row).
+- Placed by scaling the sketch (runway 3-21 = 1372 m): beacon 53.572005, -113.529643 (~66 m from rwy 04, clear of taxiways/aprons/signs); wind tee 53.573710, -113.528688 (~25 m clear of GA parking 76, ~14 m from an apron, 179 m from rwy 04). Wind tee model `cyxd_wind_tee` (heading 0, crossbar toward +Z); beacon is the sim's own `Beacon CIVILIAN/AIRPORT` object. Scaled-from-sketch accuracy only (+/- ~20 m). Both are emitted by `tools/gen_buildings.py`.
+- Windsock already in the file is a separate object at the east side (53.56715, -113.51394), no conflict.
+
+## Sources used for reference material (all in docs/cyxd/)
+- `edmonton-transmitter-site-radiocom.jpg`: radiocom.ca Edmonton Radio article, photo 4.
+- `rcaf-manual-of-aerodromes-edmonton-p90.jpg`: RCAF Manual of Aerodromes p.90 (URL above).
+- Earlier sources (pilotnav, OurAirports, airports-worldwide, AOPA, VTA chart, articles/) are noted in the sections above.
