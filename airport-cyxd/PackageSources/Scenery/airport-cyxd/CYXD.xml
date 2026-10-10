@@ -573,7 +573,7 @@
 			<RunwayStart end="PRIMARY" lat="53.57228645426189" lon="-113.52657690125893" alt="645.97903902735561" heading="57.78000000000000"/>
 			<RunwayStart end="SECONDARY" lat="53.57709994221410" lon="-113.51371375389721" alt="645.98348580114543" heading="237.78000000000000"/>
 		</Runway>
-		<Runway parentGroupID="1" lat="53.57150973291642" lon="-113.51899126976073" alt="666.79978131363282" heading="138.00000000000000" length="1788.59997558593750" width="61.00000000000000" patternAltitude="304.79998779296875" surface="{2E0DE83F-B79A-4435-905C-DCBBEAC55C59}" transparent="FALSE" number="12" designator="NONE" primaryLanding="TRUE" primaryTakeoff="TRUE" primaryPattern="RIGHT" secondaryLanding="TRUE" secondaryTakeoff="TRUE" secondaryPattern="LEFT" primaryMarkingBias="243.89999389648438" secondaryMarkingBias="360.67001342773438" groundMerging="TRUE" excludeVegetationAround="TRUE">
+		<Runway parentGroupID="1" lat="53.57150973291642" lon="-113.51899126976073" alt="666.79978131363282" heading="138.00000000000000" length="1788.59997558593750" width="61.00000000000000" patternAltitude="304.79998779296875" surface="{2E0DE83F-B79A-4435-905C-DCBBEAC55C59}" transparent="FALSE" number="12" designator="NONE" primaryLanding="TRUE" primaryTakeoff="TRUE" primaryPattern="LEFT" secondaryLanding="TRUE" secondaryTakeoff="TRUE" secondaryPattern="RIGHT" primaryMarkingBias="243.89999389648438" secondaryMarkingBias="360.67001342773438" groundMerging="TRUE" excludeVegetationAround="TRUE">
 			<RunwayDeformation alt="666.854065" ratio="0.000000"/>
 			<RunwayDeformation alt="666.870728" ratio="1.000000"/>
 			<Markings edges="FALSE" threshold="TRUE" alternateThreshold="FALSE" fixedDistance="FALSE" alternateFixedDistance="FALSE" touchdown="TRUE" alternateTouchdown="FALSE" dashes="TRUE" ident="TRUE" leadingZeroIdent="FALSE" precision="FALSE" alternatePrecision="FALSE" edgePavement="TRUE" singleEnd="FALSE" primaryClosed="FALSE" secondaryClosed="FALSE" primaryStol="FALSE" secondaryStol="FALSE" noThresholdEndArrows="FALSE"/>
@@ -586,7 +586,7 @@
 			<RunwayStart end="PRIMARY" lat="53.57542447124939" lon="-113.52492840088757" alt="670.56000000000006" heading="144.36093139648438"/>
 			<RunwayStart end="SECONDARY" lat="53.56837096891663" lon="-113.51425663508893" alt="665.07360000000006" heading="316.08007812500000"/>
 		</Runway>
-		<Runway parentGroupID="1" groupIndex="2" lat="53.57215447360258" lon="-113.51283177510230" alt="665.08115183282644" heading="180.00000000000000" length="1737.40002441406250" width="61.00000000000000" patternAltitude="304.79998779296875" surface="{2E0DE83F-B79A-4435-905C-DCBBEAC55C59}" transparent="FALSE" number="16" designator="NONE" primaryLanding="TRUE" primaryTakeoff="TRUE" primaryPattern="RIGHT" secondaryLanding="TRUE" secondaryTakeoff="TRUE" secondaryPattern="LEFT" primaryMarkingBias="152.44000244140625" secondaryMarkingBias="164.63000488281250" groundMerging="TRUE" excludeVegetationAround="TRUE">
+		<Runway parentGroupID="1" groupIndex="2" lat="53.57215447360258" lon="-113.51283177510230" alt="665.08115183282644" heading="180.00000000000000" length="1737.40002441406250" width="61.00000000000000" patternAltitude="304.79998779296875" surface="{2E0DE83F-B79A-4435-905C-DCBBEAC55C59}" transparent="FALSE" number="16" designator="NONE" primaryLanding="TRUE" primaryTakeoff="TRUE" primaryPattern="LEFT" secondaryLanding="TRUE" secondaryTakeoff="TRUE" secondaryPattern="RIGHT" primaryMarkingBias="152.44000244140625" secondaryMarkingBias="164.63000488281250" groundMerging="TRUE" excludeVegetationAround="TRUE">
 			<Markings edges="FALSE" threshold="TRUE" alternateThreshold="FALSE" fixedDistance="TRUE" alternateFixedDistance="FALSE" touchdown="TRUE" alternateTouchdown="FALSE" dashes="TRUE" ident="TRUE" leadingZeroIdent="FALSE" precision="TRUE" alternatePrecision="FALSE" edgePavement="FALSE" singleEnd="FALSE" primaryClosed="FALSE" secondaryClosed="FALSE" primaryStol="FALSE" secondaryStol="FALSE" noThresholdEndArrows="FALSE"/>
 			<Lights center="MEDIUM" edge="HIGH"/>
 			<OffsetThreshold end="PRIMARY" length="152.400000" width="61.000000" surface="{00000000-0000-0000-0000-000000000000}"/>
@@ -594,8 +594,8 @@
 			<ApproachLights end="SECONDARY" system="MALS" strobes="0" endLights="FALSE" touchdown="TRUE" snapToGround="FALSE" reil="FALSE" offset="30.480000" spacing="30.480000" slope="0.000000"/>
 			<Vasi end="PRIMARY" side="LEFT" type="PAPI4" biasX="45.500000" biasZ="434.350006" spacing="9.000000" pitch="3.000000"/>
 			<Ils lat="53.58266483827725" lon="-113.51283177510230" alt="668.42640000000006" end="SECONDARY" ident="IXD" magvar="343.782990" heading="0.00000000000000" frequency="109.50000000000000" name="Edmonton Muni" backCourse="FALSE">
-				<Dme lat="53.58266483827725" lon="-113.51283177510230" alt="668.42640000000006"/>
-				<GlideSlope lat="53.56852" lon="-113.51283177510230" alt="664.76880000000006" pitch="3.000000"/>
+				<Dme lat="53.568901" lon="-113.511002" alt="671.00000000000000"/>
+				<GlideSlope lat="53.568901" lon="-113.511002" alt="664.76880000000006" pitch="3.000000"/>
 			</Ils>
 			<RunwayStart end="PRIMARY" lat="53.57795178464409" lon="-113.51284019431836" alt="668.42640000000006" heading="181.21699523925781"/>
 			<RunwayStart end="SECONDARY" lat="53.56638612703228" lon="-113.51281118882294" alt="664.76880000000006" heading="1.21697998046875"/>
@@ -691,6 +691,7 @@
 		<Com frequency="121.300000" type="CLEARANCE" name="BLATCHFORD CLNC / DEL"/>
 		<Com frequency="121.900000" type="GROUND" name="BLATCHFORD"/>
 		<Com frequency="125.400000" type="ATIS" name="BLATCHFORD ATIS"/>
+		<Com frequency="114.900000" type="ATIS" name="BLATCHFORD ATIS 2"/>
 		<Com frequency="119.100000" type="CTAF" name="BLATCHFORD"/>
 		<Com frequency="128.625000" type="AWOS" name="BLATCHFORD"/>
 		<Com frequency="119.100000" type="TOWER" name="BLATCHFORD TOWER"/>
@@ -698,6 +699,10 @@
 		<Com frequency="122.450000" type="TOWER" name="AIR AMBULANCE"/>
 		<Com frequency="119.500000" type="DEPARTURE" name="BLATCHFORD"/>
 		<Waypoint lat="53.3976882125845" lon="-113.512831775102" waypointType="UNNAMED" magvar="343.782990" waypointIdent="HH16N" waypointRegion="CY"/>
+		<Waypoint lat="53.68258769868339" lon="-113.68800177859305" waypointType="UNNAMED" magvar="343.782990" waypointIdent="CY12I" waypointRegion="CY"/>
+		<Waypoint lat="53.63315474473705" lon="-113.61263353800298" waypointType="UNNAMED" magvar="343.782990" waypointIdent="CY12F" waypointRegion="CY"/>
+		<Waypoint lat="53.46021886647151" lon="-113.35082222432193" waypointType="UNNAMED" magvar="343.782990" waypointIdent="CY30I" waypointRegion="CY"/>
+		<Waypoint lat="53.50980455736843" lon="-113.42559792246401" waypointType="UNNAMED" magvar="343.782990" waypointIdent="CY30F" waypointRegion="CY"/>
 		<Approach type="ILS" runway="34" designator="NONE" suffix="Y" gpsOverlay="FALSE" fixType="NDB" fixRegion="CY" fixIdent="ZXD" altitude="3700.0F" heading="343.8" missedAltitude="4200.0F">
 			<ApproachLegs>
 				<Leg type="IF" fixType="TERMINAL_WAYPOINT" fixRegion="CY" fixIdent="HH16N" altitudeDescriptor="+" altitude1="4200.0F"/>
@@ -738,6 +743,30 @@
 			</ApproachLegs>
 			<MissedApproachLegs>
 				<Leg type="CA" turnDirection="R" magneticCourse="343.8" altitudeDescriptor="+" altitude1="4200.0F"/>
+				<Leg type="DF" fixType="NDB" fixRegion="CY" fixIdent="ZXD" flyOver="FALSE" turnDirection="R" altitudeDescriptor="+" altitude1="5200.0F"/>
+				<Leg type="HM" fixType="NDB" fixRegion="CY" fixIdent="ZXD" turnDirection="R" recommendedType="NDB" recommendedRegion="CY" recommendedIdent="ZXD" magneticCourse="343.8" time="1" altitudeDescriptor="+" altitude1="5200.0F"/>
+			</MissedApproachLegs>
+		</Approach>
+		<Approach type="RNAV" runway="12" designator="NONE" suffix="Y" gpsOverlay="FALSE" lnav="TRUE" lpv="TRUE" fixType="TERMINAL_WAYPOINT" fixRegion="CY" fixIdent="CY12I" altitude="3700.0F" heading="121.8" missedAltitude="4500.0F">
+			<ApproachLegs>
+				<Leg type="IF" fixType="TERMINAL_WAYPOINT" fixRegion="CY" fixIdent="CY12I" altitudeDescriptor="+" altitude1="5200.0F" isIAF="TRUE" isIF="TRUE"/>
+				<Leg type="TF" fixType="TERMINAL_WAYPOINT" fixRegion="CY" fixIdent="CY12F" magneticCourse="121.8" distance="4.0N" altitudeDescriptor="+" altitude1="3700.0F" isFAF="TRUE"/>
+				<Leg type="TF" fixType="RUNWAY" fixRegion="CY" fixIdent="RW12" flyOver="FALSE" magneticCourse="121.8" distance="4.5N" altitudeDescriptor="A" altitude1="2400.0F" isMAP="TRUE"/>
+			</ApproachLegs>
+			<MissedApproachLegs>
+				<Leg type="CA" turnDirection="R" magneticCourse="121.8" altitudeDescriptor="+" altitude1="4500.0F"/>
+				<Leg type="DF" fixType="NDB" fixRegion="CY" fixIdent="ZXD" flyOver="FALSE" turnDirection="R" altitudeDescriptor="+" altitude1="5200.0F"/>
+				<Leg type="HM" fixType="NDB" fixRegion="CY" fixIdent="ZXD" turnDirection="R" recommendedType="NDB" recommendedRegion="CY" recommendedIdent="ZXD" magneticCourse="343.8" time="1" altitudeDescriptor="+" altitude1="5200.0F"/>
+			</MissedApproachLegs>
+		</Approach>
+		<Approach type="RNAV" runway="30" designator="NONE" suffix="Y" gpsOverlay="FALSE" lnav="TRUE" fixType="TERMINAL_WAYPOINT" fixRegion="CY" fixIdent="CY30I" altitude="3700.0F" heading="301.8" missedAltitude="4500.0F">
+			<ApproachLegs>
+				<Leg type="IF" fixType="TERMINAL_WAYPOINT" fixRegion="CY" fixIdent="CY30I" altitudeDescriptor="+" altitude1="5200.0F" isIAF="TRUE" isIF="TRUE"/>
+				<Leg type="TF" fixType="TERMINAL_WAYPOINT" fixRegion="CY" fixIdent="CY30F" magneticCourse="301.8" distance="4.0N" altitudeDescriptor="+" altitude1="3700.0F" isFAF="TRUE"/>
+				<Leg type="TF" fixType="RUNWAY" fixRegion="CY" fixIdent="RW30" flyOver="FALSE" magneticCourse="301.8" distance="4.5N" altitudeDescriptor="A" altitude1="2400.0F" isMAP="TRUE"/>
+			</ApproachLegs>
+			<MissedApproachLegs>
+				<Leg type="CA" turnDirection="R" magneticCourse="301.8" altitudeDescriptor="+" altitude1="4500.0F"/>
 				<Leg type="DF" fixType="NDB" fixRegion="CY" fixIdent="ZXD" flyOver="FALSE" turnDirection="R" altitudeDescriptor="+" altitude1="5200.0F"/>
 				<Leg type="HM" fixType="NDB" fixRegion="CY" fixIdent="ZXD" turnDirection="R" recommendedType="NDB" recommendedRegion="CY" recommendedIdent="ZXD" magneticCourse="343.8" time="1" altitudeDescriptor="+" altitude1="5200.0F"/>
 			</MissedApproachLegs>
