@@ -3,4 +3,15 @@
 	<LODS>
 		<LOD minSize="0" ModelFile="cyxd_wind_tee.gltf"/>
 	</LODS>
+	<Behaviors>
+		<Include ModelBehaviorFile="Asobo\Generic.xml"/>
+		<Component ID="WIND_TEE_SWING">
+			<UseTemplate Name="ASOBO_GT_Anim_Code">
+				<ANIM_NAME>wind_tee_swing</ANIM_NAME>
+				<ANIM_CODE>(A:AMBIENT WIND DIRECTION,degrees) dnor</ANIM_CODE>
+				<ANIM_LENGTH>360</ANIM_LENGTH>
+				<ANIM_WRAP>1</ANIM_WRAP>
+			</UseTemplate>
+		</Component>
+	</Behaviors>
 </ModelInfo>

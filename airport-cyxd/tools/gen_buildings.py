@@ -271,12 +271,95 @@ def transmitter_site():
 
 
 def wind_tee():
-    """Wind tee on a post; the crossbar (head) is at +Z, so heading = the direction the tee points (into wind)."""
-    m = Mesh()
-    m.box(-0.12, 0.12, 0, 2.0, -0.12, 0.12, METAL)
-    m.box(-0.35, 0.35, 2.0, 2.3, -3.0, 2.4, WHITE)
-    m.box(-2.2, 2.2, 2.0, 2.3, 2.4, 3.0, WHITE)
-    return m
+    """Wind tee. Returns (post, head): the head (crossbar at +Z) is a separate node that swings about the post (Y axis)."""
+    post, head = Mesh(), Mesh()
+    post.box(-0.12, 0.12, 0, 2.0, -0.12, 0.12, METAL)
+    head.box(-0.35, 0.35, 2.0, 2.3, -3.0, 2.4, WHITE)
+    head.box(-2.2, 2.2, 2.0, 2.3, 2.4, 3.0, WHITE)
+    return post, head
+
+
+ModelInfoTemplate = """<?xml version="1.0" encoding="utf-8"?>
+<ModelInfo guid="@GUID@" version="1.1">
+	<LODS>
+		<LOD minSize="0" ModelFile="@NAME@.gltf"/>
+	</LODS>
+	<Behaviors>
+		<Include ModelBehaviorFile="Asobo\Generic.xml"/>
+		<Component ID="WIND_TEE_SWING">
+			<UseTemplate Name="ASOBO_GT_Anim_Code">
+				<ANIM_NAME>wind_tee_swing</ANIM_NAME>
+				<ANIM_CODE>(A:AMBIENT WIND DIRECTION,degrees) dnor</ANIM_CODE>
+				<ANIM_LENGTH>360</ANIM_LENGTH>
+				<ANIM_WRAP>1</ANIM_WRAP>
+			</UseTemplate>
+		</Component>
+	</Behaviors>
+</ModelInfo>
+"""
+
+
+def save_wind_tee(folder, name):
+    """glTF with a static post node and a head node animated by `wind_tee_swing` (0..360 deg about Y, 9 keys).
+
+    The ModelInfo behaviour drives the animation with the world wind direction minus the object heading, so the head
+    points into the wind wherever it is placed.  Animation value 0..360 maps onto the full clip (ANIM_LENGTH 360).
+    """
+    post, head = wind_tee()
+    folder.mkdir(parents=True, exist_ok=True)
+    blob, views, accs, prims = b"", [], [], []
+    for mesh in (post, head):
+        n = len(mesh.pos)
+        parts = [b"".join(struct.pack("<3f", *v) for v in mesh.pos), b"".join(struct.pack("<3f", *v) for v in mesh.nrm),
+                 b"".join(struct.pack("<2f", *v) for v in mesh.uv), b"".join(struct.pack("<H", i) for i in mesh.idx)]
+        if len(parts[3]) % 4:
+            parts[3] += bytes(2)
+        first = len(accs)
+        mn = [min(v[i] for v in mesh.pos) for i in range(3)]
+        mx = [max(v[i] for v in mesh.pos) for i in range(3)]
+        for k, (data, ctype, typ, cnt) in enumerate(zip(parts, (5126, 5126, 5126, 5123), ("VEC3", "VEC3", "VEC2", "SCALAR"),
+                                                       (n, n, n, len(mesh.idx)))):
+            views.append({"buffer": 0, "byteOffset": len(blob), "byteLength": len(data)})
+            blob += data
+            acc = {"bufferView": len(views) - 1, "componentType": ctype, "count": cnt, "type": typ}
+            if k == 0:
+                acc["min"], acc["max"] = mn, mx
+            accs.append(acc)
+        prims.append({"attributes": {"POSITION": first, "NORMAL": first + 1, "TEXCOORD_0": first + 2}, "indices": first + 3,
+                      "mode": 4, "material": 0})
+    # animation: quaternion about +Y every 45 deg (<180 so slerp takes the short way), 1 s per key
+    steps = 8
+    times = b"".join(struct.pack("<f", float(i)) for i in range(steps + 1))
+    quats = b"".join(struct.pack("<4f", 0.0, math.sin(math.radians(45 * i) / 2), 0.0, math.cos(math.radians(45 * i) / 2))
+                     for i in range(steps + 1))
+    views.append({"buffer": 0, "byteOffset": len(blob), "byteLength": len(times)}); blob += times
+    accs.append({"bufferView": len(views) - 1, "componentType": 5126, "count": steps + 1, "type": "SCALAR",
+                 "min": [0.0], "max": [float(steps)]})
+    views.append({"buffer": 0, "byteOffset": len(blob), "byteLength": len(quats)}); blob += quats
+    accs.append({"bufferView": len(views) - 1, "componentType": 5126, "count": steps + 1, "type": "VEC4"})
+    g = {
+        "asset": {"version": "2.0", "generator": "airport-cyxd/tools/gen_buildings.py",
+                  "extensions": {"ASOBO_normal_map_convention": {"tangent_space_convention": "DirectX"}}},
+        "extensionsUsed": ["ASOBO_normal_map_convention"],
+        "scene": 0, "scenes": [{"nodes": [0, 1]}],
+        "nodes": [{"mesh": 0, "name": name + "_post"}, {"mesh": 1, "name": name + "_head"}],
+        "meshes": [{"name": name + "_post", "primitives": [prims[0]]}, {"name": name + "_head", "primitives": [prims[1]]}],
+        "materials": [{"name": "cyxd_palette", "pbrMetallicRoughness": {
+            "baseColorTexture": {"index": 0}, "metallicFactor": 0.0, "roughnessFactor": 0.9}}],
+        "textures": [{"sampler": 0, "source": 0}], "samplers": [{"magFilter": 9728, "minFilter": 9728}],
+        "images": [{"uri": "cyxd_palette.png"}],
+        "animations": [{"name": "wind_tee_swing",
+                        "samplers": [{"input": len(accs) - 2, "output": len(accs) - 1, "interpolation": "LINEAR"}],
+                        "channels": [{"sampler": 0, "target": {"node": 1, "path": "rotation"}}]}],
+        "accessors": accs, "bufferViews": views, "buffers": [{"uri": f"{name}.bin", "byteLength": len(blob)}],
+    }
+    (folder / f"{name}.bin").write_bytes(blob)
+    (folder / f"{name}.gltf").write_text(json.dumps(g, indent=1))
+    guid = "{" + str(uuid.uuid5(NS, name)).upper() + "}"
+    # heading of the placed object is 0, so the world wind direction is already the tee's rotation about the post
+    xml = ModelInfoTemplate.replace("@GUID@", guid).replace("@NAME@", name)
+    (folder / f"{name}.xml").write_text(xml)
+    return guid
 
 
 # placement tweaks -------------------------------------------------------------------------
@@ -369,7 +452,7 @@ def main():
     # RCAF/DoT aerodrome sketch (c.1942): wind tee and beacon west of the 04 threshold, clear of all taxiways/aprons
     name = "cyxd_wind_tee"
     out.append(("Wind tee (RCAF Manual of Aerodromes, Edmonton p.90)", "53.573710", "-113.528688", "0",
-                wind_tee().save(MODELLIB / name, name)))
+                save_wind_tee(MODELLIB / name, name)))
     out.append(("Aerodrome beacon (RCAF Manual of Aerodromes, Edmonton p.90)", "53.572005", "-113.529643", "0", None))
     nl_src = None
     lines = [f"	{BEGIN}"]

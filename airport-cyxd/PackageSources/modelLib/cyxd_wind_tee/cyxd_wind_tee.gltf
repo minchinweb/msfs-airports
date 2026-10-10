@@ -15,19 +15,24 @@
  "scenes": [
   {
    "nodes": [
-    0
+    0,
+    1
    ]
   }
  ],
  "nodes": [
   {
    "mesh": 0,
-   "name": "cyxd_wind_tee"
+   "name": "cyxd_wind_tee_post"
+  },
+  {
+   "mesh": 1,
+   "name": "cyxd_wind_tee_head"
   }
  ],
  "meshes": [
   {
-   "name": "cyxd_wind_tee",
+   "name": "cyxd_wind_tee_post",
    "primitives": [
     {
      "attributes": {
@@ -36,6 +41,21 @@
       "TEXCOORD_0": 2
      },
      "indices": 3,
+     "mode": 4,
+     "material": 0
+    }
+   ]
+  },
+  {
+   "name": "cyxd_wind_tee_head",
+   "primitives": [
+    {
+     "attributes": {
+      "POSITION": 4,
+      "NORMAL": 5,
+      "TEXCOORD_0": 6
+     },
+     "indices": 7,
      "mode": 4,
      "material": 0
     }
@@ -71,15 +91,70 @@
    "uri": "cyxd_palette.png"
   }
  ],
+ "animations": [
+  {
+   "name": "wind_tee_swing",
+   "samplers": [
+    {
+     "input": 8,
+     "output": 9,
+     "interpolation": "LINEAR"
+    }
+   ],
+   "channels": [
+    {
+     "sampler": 0,
+     "target": {
+      "node": 1,
+      "path": "rotation"
+     }
+    }
+   ]
+  }
+ ],
  "accessors": [
   {
    "bufferView": 0,
    "componentType": 5126,
-   "count": 60,
+   "count": 20,
+   "type": "VEC3",
+   "min": [
+    -0.12,
+    0,
+    -0.12
+   ],
+   "max": [
+    0.12,
+    2.0,
+    0.12
+   ]
+  },
+  {
+   "bufferView": 1,
+   "componentType": 5126,
+   "count": 20,
+   "type": "VEC3"
+  },
+  {
+   "bufferView": 2,
+   "componentType": 5126,
+   "count": 20,
+   "type": "VEC2"
+  },
+  {
+   "bufferView": 3,
+   "componentType": 5123,
+   "count": 30,
+   "type": "SCALAR"
+  },
+  {
+   "bufferView": 4,
+   "componentType": 5126,
+   "count": 40,
    "type": "VEC3",
    "min": [
     -2.2,
-    0,
+    2.0,
     -3.0
    ],
    "max": [
@@ -89,50 +164,98 @@
    ]
   },
   {
-   "bufferView": 1,
+   "bufferView": 5,
    "componentType": 5126,
-   "count": 60,
+   "count": 40,
    "type": "VEC3"
   },
   {
-   "bufferView": 2,
+   "bufferView": 6,
    "componentType": 5126,
-   "count": 60,
+   "count": 40,
    "type": "VEC2"
   },
   {
-   "bufferView": 3,
+   "bufferView": 7,
    "componentType": 5123,
-   "count": 90,
+   "count": 60,
    "type": "SCALAR"
+  },
+  {
+   "bufferView": 8,
+   "componentType": 5126,
+   "count": 9,
+   "type": "SCALAR",
+   "min": [
+    0.0
+   ],
+   "max": [
+    8.0
+   ]
+  },
+  {
+   "bufferView": 9,
+   "componentType": 5126,
+   "count": 9,
+   "type": "VEC4"
   }
  ],
  "bufferViews": [
   {
    "buffer": 0,
    "byteOffset": 0,
-   "byteLength": 720
+   "byteLength": 240
   },
   {
    "buffer": 0,
-   "byteOffset": 720,
-   "byteLength": 720
+   "byteOffset": 240,
+   "byteLength": 240
   },
   {
    "buffer": 0,
-   "byteOffset": 1440,
+   "byteOffset": 480,
+   "byteLength": 160
+  },
+  {
+   "buffer": 0,
+   "byteOffset": 640,
+   "byteLength": 60
+  },
+  {
+   "buffer": 0,
+   "byteOffset": 700,
    "byteLength": 480
   },
   {
    "buffer": 0,
-   "byteOffset": 1920,
-   "byteLength": 180
+   "byteOffset": 1180,
+   "byteLength": 480
+  },
+  {
+   "buffer": 0,
+   "byteOffset": 1660,
+   "byteLength": 320
+  },
+  {
+   "buffer": 0,
+   "byteOffset": 1980,
+   "byteLength": 120
+  },
+  {
+   "buffer": 0,
+   "byteOffset": 2100,
+   "byteLength": 36
+  },
+  {
+   "buffer": 0,
+   "byteOffset": 2136,
+   "byteLength": 144
   }
  ],
  "buffers": [
   {
    "uri": "cyxd_wind_tee.bin",
-   "byteLength": 2100
+   "byteLength": 2280
   }
  ]
 }
