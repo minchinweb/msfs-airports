@@ -701,188 +701,48 @@
 		<Approach type="ILS" runway="34" designator="NONE" suffix="Y" gpsOverlay="FALSE" fixType="NDB" fixRegion="CY" fixIdent="ZXD" altitude="3700.0F" heading="343.8" missedAltitude="4200.0F">
 			<ApproachLegs>
 				<Leg type="IF" fixType="TERMINAL_WAYPOINT" fixRegion="CY" fixIdent="HH16N" altitudeDescriptor="+" altitude1="4200.0F"/>
-				<Leg type="TF" fixType="NDB" fixRegion="CY" fixIdent="ZXD" turnDirection="R" trueCourse="0" magneticCourse="343.8" distance="6.6N" altitudeDescriptor="+" altitude1="3700.0F"/>
-				<Leg type="CF" fixType="RUNWAY" fixRegion="CY" fixIdent="RW34" flyOver="FALSE" recommendedType="LOCALIZER" recommendedRegion="CY" recommendedIdent="IXD" theta="163.8" rho="1.1N" trueCourse="0" magneticCourse="343.8" distance="3.9N" altitudeDescriptor="A" altitude1="2400.0F"/>
+				<Leg type="TF" fixType="NDB" fixRegion="CY" fixIdent="ZXD" turnDirection="R" magneticCourse="343.8" distance="6.6N" altitudeDescriptor="+" altitude1="3700.0F"/>
+				<Leg type="CF" fixType="RUNWAY" fixRegion="CY" fixIdent="RW34" flyOver="FALSE" recommendedType="LOCALIZER" recommendedRegion="CY" recommendedIdent="IXD" theta="163.8" rho="1.1N" magneticCourse="343.8" distance="3.9N" altitudeDescriptor="A" altitude1="2400.0F"/>
 			</ApproachLegs>
 			<MissedApproachLegs>
-				<Leg type="CA" turnDirection="R" trueCourse="0" magneticCourse="343.8" altitudeDescriptor="+" altitude1="4200.0F"/>
+				<Leg type="CA" turnDirection="R" magneticCourse="343.8" altitudeDescriptor="+" altitude1="4200.0F"/>
 				<Leg type="DF" fixType="NDB" fixRegion="CY" fixIdent="ZXD" flyOver="FALSE" turnDirection="R" altitudeDescriptor="+" altitude1="5200.0F"/>
-				<Leg type="HM" fixType="NDB" fixRegion="CY" fixIdent="ZXD" turnDirection="R" recommendedType="NDB" recommendedRegion="CY" recommendedIdent="ZXD" trueCourse="0" magneticCourse="343.8" distance="0.0N" time="1" altitudeDescriptor="+" altitude1="5200.0F"/>
+				<Leg type="HM" fixType="NDB" fixRegion="CY" fixIdent="ZXD" turnDirection="R" recommendedType="NDB" recommendedRegion="CY" recommendedIdent="ZXD" magneticCourse="343.8" time="1" altitudeDescriptor="+" altitude1="5200.0F"/>
 			</MissedApproachLegs>
 		</Approach>
 		<Approach type="NDB" runway="16" designator="NONE" suffix="Y" gpsOverlay="FALSE" fixType="NDB" fixRegion="CY" fixIdent="XD" altitude="3000.0F" heading="163.8" missedAltitude="3100.0F">
 			<ApproachLegs>
 				<Leg type="IF" fixType="NDB" fixRegion="CY" fixIdent="XD" altitudeDescriptor="+" altitude1="4300.0F"/>
-				<Leg type="CF" fixType="RUNWAY" fixRegion="CY" fixIdent="RW16" flyOver="FALSE" recommendedType="NDB" recommendedRegion="CY" recommendedIdent="XD" theta="343.8" rho="3.8N" trueCourse="180" magneticCourse="163.8" distance="3.8N" altitudeDescriptor="A" altitude1="2400.0F"/>
+				<Leg type="CF" fixType="RUNWAY" fixRegion="CY" fixIdent="RW16" flyOver="FALSE" recommendedType="NDB" recommendedRegion="CY" recommendedIdent="XD" theta="343.8" rho="3.8N" magneticCourse="163.8" distance="3.8N" altitudeDescriptor="A" altitude1="2400.0F"/>
 			</ApproachLegs>
 			<MissedApproachLegs>
-				<Leg type="CA" turnDirection="L" trueCourse="180" magneticCourse="163.8" altitudeDescriptor="+" altitude1="3100.0F"/>
+				<Leg type="CA" turnDirection="L" magneticCourse="163.8" altitudeDescriptor="+" altitude1="3100.0F"/>
 				<Leg type="DF" fixType="NDB" fixRegion="CY" fixIdent="ZXD" flyOver="FALSE" altitudeDescriptor="+" altitude1="5200.0F"/>
-				<Leg type="HM" fixType="NDB" fixRegion="CY" fixIdent="ZXD" turnDirection="R" recommendedType="NDB" recommendedRegion="CY" recommendedIdent="ZXD" trueCourse="0" magneticCourse="343.8" distance="0.0N" time="1" altitudeDescriptor="+" altitude1="5200.0F"/>
+				<Leg type="HM" fixType="NDB" fixRegion="CY" fixIdent="ZXD" turnDirection="R" recommendedType="NDB" recommendedRegion="CY" recommendedIdent="ZXD" magneticCourse="343.8" time="1" altitudeDescriptor="+" altitude1="5200.0F"/>
 			</MissedApproachLegs>
 		</Approach>
 		<Approach type="LOCALIZER_BACKCOURSE" runway="16" designator="NONE" suffix="Z" gpsOverlay="FALSE" fixType="NDB" fixRegion="CY" fixIdent="XD" altitude="3000.0F" heading="163.8" missedAltitude="3100.0F">
 			<ApproachLegs>
 				<Leg type="IF" fixType="NDB" fixRegion="CY" fixIdent="XD" altitudeDescriptor="+" altitude1="4300.0F"/>
-				<Leg type="CF" fixType="RUNWAY" fixRegion="CY" fixIdent="RW16" flyOver="FALSE" recommendedType="LOCALIZER" recommendedRegion="CY" recommendedIdent="IXD" theta="343.8" rho="1.1N" trueCourse="180" magneticCourse="163.8" distance="3.8N" altitudeDescriptor="A" altitude1="2400.0F"/>
+				<Leg type="CF" fixType="RUNWAY" fixRegion="CY" fixIdent="RW16" flyOver="FALSE" recommendedType="LOCALIZER" recommendedRegion="CY" recommendedIdent="IXD" theta="343.8" rho="1.1N" magneticCourse="163.8" distance="3.8N" altitudeDescriptor="A" altitude1="2400.0F"/>
 			</ApproachLegs>
 			<MissedApproachLegs>
-				<Leg type="CA" turnDirection="L" trueCourse="180" magneticCourse="163.8" altitudeDescriptor="+" altitude1="3100.0F"/>
+				<Leg type="CA" turnDirection="L" magneticCourse="163.8" altitudeDescriptor="+" altitude1="3100.0F"/>
 				<Leg type="DF" fixType="NDB" fixRegion="CY" fixIdent="ZXD" flyOver="FALSE" altitudeDescriptor="+" altitude1="5200.0F"/>
+			</MissedApproachLegs>
+		</Approach>
+		<Approach type="NDB" runway="34" designator="NONE" suffix="Z" gpsOverlay="FALSE" fixType="NDB" fixRegion="CY" fixIdent="ZXD" altitude="3700.0F" heading="343.8" missedAltitude="4200.0F">
+			<ApproachLegs>
+				<Leg type="IF" fixType="NDB" fixRegion="CY" fixIdent="ZXD" altitudeDescriptor="+" altitude1="3700.0F"/>
+				<Leg type="CF" fixType="RUNWAY" fixRegion="CY" fixIdent="RW34" flyOver="FALSE" recommendedType="NDB" recommendedRegion="CY" recommendedIdent="ZXD" theta="163.8" rho="4.4N" magneticCourse="343.8" distance="4.4N" altitudeDescriptor="A" altitude1="2400.0F"/>
+			</ApproachLegs>
+			<MissedApproachLegs>
+				<Leg type="CA" turnDirection="R" magneticCourse="343.8" altitudeDescriptor="+" altitude1="4200.0F"/>
+				<Leg type="DF" fixType="NDB" fixRegion="CY" fixIdent="ZXD" flyOver="FALSE" turnDirection="R" altitudeDescriptor="+" altitude1="5200.0F"/>
+				<Leg type="HM" fixType="NDB" fixRegion="CY" fixIdent="ZXD" turnDirection="R" recommendedType="NDB" recommendedRegion="CY" recommendedIdent="ZXD" magneticCourse="343.8" time="1" altitudeDescriptor="+" altitude1="5200.0F"/>
 			</MissedApproachLegs>
 		</Approach>
 	</Airport>
 	<Ndb lat="53.6436004638671900" lon="-113.5130004882812500" alt="2200F" type="MH" frequency="266.0" magvar="343.782990" region="CY" ident="XD" name="EDMONTON"/>
 	<Ndb lat="53.4994010925293000" lon="-113.5130004882812500" alt="2200F" type="H" frequency="201.0" magvar="343.782990" region="CY" ident="ZXD" name="BLATCHFORD"/>
-		<!-- Historic buildings: placed from the 1944 National Archives photo + City of Edmonton Archive photos; +-30 m (hotels +-100 m). See docs/cyxd/STATUS.md -->
-	<!-- Hangar 14 (BCATP 1942): OSM way 230718920 footprint 91 x 100 m incl. lean-tos, axis-aligned -->
-	<SceneryObject lat="53.56571" lon="-113.51713" alt="0.00000000000000" pitch="0.000000" bank="0.000000" heading="0.0" imageComplexity="VERY_SPARSE" altitudeIsAgl="TRUE" snapToGround="TRUE" snapToNormal="FALSE">
-		<GenericBuilding scale="1.000000" windowTexture="0" bottomTexture="0" topTexture="0" roofTexture="0">
-			<RectangularBuilding roofType="RIDGE" sizeX="91" sizeZ="100" sizeBottomY="12" textureIndexBottomX="0" textureIndexBottomZ="0" sizeWindowY="0" sizeTopY="0" sizeRoofY="4" textureIndexRoofX="0" textureIndexRoofZ="0" textureIndexRoofY="0"/>
-		</GenericBuilding>
-	</SceneryObject>
-	<!-- Hangar 11 (USAAF T3, 1942) -->
-	<SceneryObject lat="53.56909" lon="-113.50859" alt="0.00000000000000" pitch="0.000000" bank="0.000000" heading="-6.3" imageComplexity="VERY_SPARSE" altitudeIsAgl="TRUE" snapToGround="TRUE" snapToNormal="FALSE">
-		<GenericBuilding scale="1.000000" windowTexture="0" bottomTexture="0" topTexture="0" roofTexture="0">
-			<RectangularBuilding roofType="RIDGE" sizeX="70" sizeZ="60" sizeBottomY="14" textureIndexBottomX="0" textureIndexBottomZ="0" sizeWindowY="0" sizeTopY="0" sizeRoofY="5" textureIndexRoofX="0" textureIndexRoofZ="0" textureIndexRoofY="0"/>
-		</GenericBuilding>
-	</SceneryObject>
-	<!-- USAAF hangar T1 (east apron) -->
-	<SceneryObject lat="53.57110" lon="-113.50886" alt="0.00000000000000" pitch="0.000000" bank="0.000000" heading="-6.3" imageComplexity="VERY_SPARSE" altitudeIsAgl="TRUE" snapToGround="TRUE" snapToNormal="FALSE">
-		<GenericBuilding scale="1.000000" windowTexture="0" bottomTexture="0" topTexture="0" roofTexture="0">
-			<RectangularBuilding roofType="RIDGE" sizeX="55" sizeZ="60" sizeBottomY="14" textureIndexBottomX="0" textureIndexBottomZ="0" sizeWindowY="0" sizeTopY="0" sizeRoofY="5" textureIndexRoofX="0" textureIndexRoofZ="0" textureIndexRoofY="0"/>
-		</GenericBuilding>
-	</SceneryObject>
-	<!-- USAAF hangar T2 (east apron, narrow) -->
-	<SceneryObject lat="53.57010" lon="-113.50894" alt="0.00000000000000" pitch="0.000000" bank="0.000000" heading="-6.3" imageComplexity="VERY_SPARSE" altitudeIsAgl="TRUE" snapToGround="TRUE" snapToNormal="FALSE">
-		<GenericBuilding scale="1.000000" windowTexture="0" bottomTexture="0" topTexture="0" roofTexture="0">
-			<RectangularBuilding roofType="RIDGE" sizeX="33" sizeZ="66" sizeBottomY="12" textureIndexBottomX="0" textureIndexBottomZ="0" sizeWindowY="0" sizeTopY="0" sizeRoofY="3" textureIndexRoofX="0" textureIndexRoofZ="0" textureIndexRoofY="0"/>
-		</GenericBuilding>
-	</SceneryObject>
-	<!-- USAAF hangar T4 (east apron, rotated ~45 deg) -->
-	<SceneryObject lat="53.56772" lon="-113.50820" alt="0.00000000000000" pitch="0.000000" bank="0.000000" heading="47.0" imageComplexity="VERY_SPARSE" altitudeIsAgl="TRUE" snapToGround="TRUE" snapToNormal="FALSE">
-		<GenericBuilding scale="1.000000" windowTexture="0" bottomTexture="0" topTexture="0" roofTexture="0">
-			<RectangularBuilding roofType="RIDGE" sizeX="55" sizeZ="60" sizeBottomY="14" textureIndexBottomX="0" textureIndexBottomZ="0" sizeWindowY="0" sizeTopY="0" sizeRoofY="5" textureIndexRoofX="0" textureIndexRoofZ="0" textureIndexRoofY="0"/>
-		</GenericBuilding>
-	</SceneryObject>
-	<!-- BCATP hangar row A along Kingsway (long axis NW-SE) -->
-	<SceneryObject lat="53.56921" lon="-113.52013" alt="0.00000000000000" pitch="0.000000" bank="0.000000" heading="146.7" imageComplexity="VERY_SPARSE" altitudeIsAgl="TRUE" snapToGround="TRUE" snapToNormal="FALSE">
-		<GenericBuilding scale="1.000000" windowTexture="0" bottomTexture="0" topTexture="0" roofTexture="0">
-			<RectangularBuilding roofType="RIDGE" sizeX="75" sizeZ="100" sizeBottomY="12" textureIndexBottomX="0" textureIndexBottomZ="0" sizeWindowY="0" sizeTopY="0" sizeRoofY="4" textureIndexRoofX="0" textureIndexRoofZ="0" textureIndexRoofY="0"/>
-		</GenericBuilding>
-	</SceneryObject>
-	<!-- BCATP hangar row B along Kingsway (long axis NW-SE) -->
-	<SceneryObject lat="53.56819" lon="-113.51903" alt="0.00000000000000" pitch="0.000000" bank="0.000000" heading="146.7" imageComplexity="VERY_SPARSE" altitudeIsAgl="TRUE" snapToGround="TRUE" snapToNormal="FALSE">
-		<GenericBuilding scale="1.000000" windowTexture="0" bottomTexture="0" topTexture="0" roofTexture="0">
-			<RectangularBuilding roofType="RIDGE" sizeX="75" sizeZ="100" sizeBottomY="12" textureIndexBottomX="0" textureIndexBottomZ="0" sizeWindowY="0" sizeTopY="0" sizeRoofY="4" textureIndexRoofX="0" textureIndexRoofZ="0" textureIndexRoofY="0"/>
-		</GenericBuilding>
-	</SceneryObject>
-	<!-- BCATP hangar row C along Kingsway (long axis NW-SE) -->
-	<SceneryObject lat="53.56733" lon="-113.51777" alt="0.00000000000000" pitch="0.000000" bank="0.000000" heading="146.7" imageComplexity="VERY_SPARSE" altitudeIsAgl="TRUE" snapToGround="TRUE" snapToNormal="FALSE">
-		<GenericBuilding scale="1.000000" windowTexture="0" bottomTexture="0" topTexture="0" roofTexture="0">
-			<RectangularBuilding roofType="RIDGE" sizeX="75" sizeZ="100" sizeBottomY="12" textureIndexBottomX="0" textureIndexBottomZ="0" sizeWindowY="0" sizeTopY="0" sizeRoofY="4" textureIndexRoofX="0" textureIndexRoofZ="0" textureIndexRoofY="0"/>
-		</GenericBuilding>
-	</SceneryObject>
-	<!-- 1938 arched hangar, west side (replica at Fort Edmonton Park); doors face NE -->
-	<SceneryObject lat="53.56955" lon="-113.52551" alt="0.00000000000000" pitch="0.000000" bank="0.000000" heading="59.0" imageComplexity="VERY_SPARSE" altitudeIsAgl="TRUE" snapToGround="TRUE" snapToNormal="FALSE">
-		<GenericBuilding scale="1.000000" windowTexture="0" bottomTexture="0" topTexture="0" roofTexture="0">
-			<RectangularBuilding roofType="RIDGE" sizeX="48" sizeZ="44" sizeBottomY="12" textureIndexBottomX="0" textureIndexBottomZ="0" sizeWindowY="0" sizeTopY="0" sizeRoofY="4" textureIndexRoofX="0" textureIndexRoofZ="0" textureIndexRoofY="0"/>
-		</GenericBuilding>
-	</SceneryObject>
-	<!-- 1938 hangar tower -->
-	<SceneryObject lat="53.56983" lon="-113.52520" alt="0.00000000000000" pitch="0.000000" bank="0.000000" heading="59.0" imageComplexity="VERY_SPARSE" altitudeIsAgl="TRUE" snapToGround="TRUE" snapToNormal="FALSE">
-		<GenericBuilding scale="1.000000" windowTexture="0" bottomTexture="0" topTexture="0" roofTexture="0">
-			<RectangularBuilding roofType="FLAT" sizeX="8" sizeZ="8" sizeBottomY="25" textureIndexBottomX="0" textureIndexBottomZ="0" sizeWindowY="0" sizeTopY="0" sizeRoofY="0" textureIndexRoofX="0" textureIndexRoofZ="0" textureIndexRoofY="0"/>
-		</GenericBuilding>
-	</SceneryObject>
-	<!-- 1937 office wing / terminal -->
-	<SceneryObject lat="53.56987" lon="-113.52454" alt="0.00000000000000" pitch="0.000000" bank="0.000000" heading="-6.3" imageComplexity="VERY_SPARSE" altitudeIsAgl="TRUE" snapToGround="TRUE" snapToNormal="FALSE">
-		<GenericBuilding scale="1.000000" windowTexture="0" bottomTexture="0" topTexture="0" roofTexture="0">
-			<RectangularBuilding roofType="RIDGE" sizeX="40" sizeZ="40" sizeBottomY="8" textureIndexBottomX="0" textureIndexBottomZ="0" sizeWindowY="0" sizeTopY="0" sizeRoofY="3" textureIndexRoofX="0" textureIndexRoofZ="0" textureIndexRoofY="0"/>
-		</GenericBuilding>
-	</SceneryObject>
-	<!-- Administration Building (1940s-50s style), faces the circular drive -->
-	<SceneryObject lat="53.57041" lon="-113.52269" alt="0.00000000000000" pitch="0.000000" bank="0.000000" heading="-6.3" imageComplexity="VERY_SPARSE" altitudeIsAgl="TRUE" snapToGround="TRUE" snapToNormal="FALSE">
-		<GenericBuilding scale="1.000000" windowTexture="0" bottomTexture="0" topTexture="0" roofTexture="0">
-			<RectangularBuilding roofType="FLAT" sizeX="50" sizeZ="20" sizeBottomY="10" textureIndexBottomX="0" textureIndexBottomZ="0" sizeWindowY="0" sizeTopY="0" sizeRoofY="0" textureIndexRoofX="0" textureIndexRoofZ="0" textureIndexRoofY="0"/>
-		</GenericBuilding>
-	</SceneryObject>
-	<!-- North hangar complex: bay 1 (1944 photo) -->
-	<SceneryObject lat="53.57780" lon="-113.52196" alt="0.00000000000000" pitch="0.000000" bank="0.000000" heading="-6.3" imageComplexity="VERY_SPARSE" altitudeIsAgl="TRUE" snapToGround="TRUE" snapToNormal="FALSE">
-		<GenericBuilding scale="1.000000" windowTexture="0" bottomTexture="0" topTexture="0" roofTexture="0">
-			<RectangularBuilding roofType="RIDGE" sizeX="84" sizeZ="88" sizeBottomY="13" textureIndexBottomX="0" textureIndexBottomZ="0" sizeWindowY="0" sizeTopY="0" sizeRoofY="4" textureIndexRoofX="0" textureIndexRoofZ="0" textureIndexRoofY="0"/>
-		</GenericBuilding>
-	</SceneryObject>
-	<!-- North hangar complex: bay 2 -->
-	<SceneryObject lat="53.57786" lon="-113.52063" alt="0.00000000000000" pitch="0.000000" bank="0.000000" heading="-6.3" imageComplexity="VERY_SPARSE" altitudeIsAgl="TRUE" snapToGround="TRUE" snapToNormal="FALSE">
-		<GenericBuilding scale="1.000000" windowTexture="0" bottomTexture="0" topTexture="0" roofTexture="0">
-			<RectangularBuilding roofType="RIDGE" sizeX="80" sizeZ="88" sizeBottomY="13" textureIndexBottomX="0" textureIndexBottomZ="0" sizeWindowY="0" sizeTopY="0" sizeRoofY="4" textureIndexRoofX="0" textureIndexRoofZ="0" textureIndexRoofY="0"/>
-		</GenericBuilding>
-	</SceneryObject>
-	<!-- North hangar complex: bay 3 (east, separate) -->
-	<SceneryObject lat="53.57763" lon="-113.51814" alt="0.00000000000000" pitch="0.000000" bank="0.000000" heading="-6.3" imageComplexity="VERY_SPARSE" altitudeIsAgl="TRUE" snapToGround="TRUE" snapToNormal="FALSE">
-		<GenericBuilding scale="1.000000" windowTexture="0" bottomTexture="0" topTexture="0" roofTexture="0">
-			<RectangularBuilding roofType="RIDGE" sizeX="70" sizeZ="53" sizeBottomY="12" textureIndexBottomX="0" textureIndexBottomZ="0" sizeWindowY="0" sizeTopY="0" sizeRoofY="4" textureIndexRoofX="0" textureIndexRoofZ="0" textureIndexRoofY="0"/>
-		</GenericBuilding>
-	</SceneryObject>
-	<!-- North complex: shop/office west of bay 1, parking lot to south -->
-	<SceneryObject lat="53.57814" lon="-113.52336" alt="0.00000000000000" pitch="0.000000" bank="0.000000" heading="-6.3" imageComplexity="VERY_SPARSE" altitudeIsAgl="TRUE" snapToGround="TRUE" snapToNormal="FALSE">
-		<GenericBuilding scale="1.000000" windowTexture="0" bottomTexture="0" topTexture="0" roofTexture="0">
-			<RectangularBuilding roofType="FLAT" sizeX="48" sizeZ="29" sizeBottomY="7" textureIndexBottomX="0" textureIndexBottomZ="0" sizeWindowY="0" sizeTopY="0" sizeRoofY="0" textureIndexRoofX="0" textureIndexRoofZ="0" textureIndexRoofY="0"/>
-		</GenericBuilding>
-	</SceneryObject>
-	<!-- North complex: annex north of bay 1 -->
-	<SceneryObject lat="53.57852" lon="-113.52213" alt="0.00000000000000" pitch="0.000000" bank="0.000000" heading="-6.3" imageComplexity="VERY_SPARSE" altitudeIsAgl="TRUE" snapToGround="TRUE" snapToNormal="FALSE">
-		<GenericBuilding scale="1.000000" windowTexture="0" bottomTexture="0" topTexture="0" roofTexture="0">
-			<RectangularBuilding roofType="RIDGE" sizeX="44" sizeZ="44" sizeBottomY="8" textureIndexBottomX="0" textureIndexBottomZ="0" sizeWindowY="0" sizeTopY="0" sizeRoofY="3" textureIndexRoofX="0" textureIndexRoofZ="0" textureIndexRoofY="0"/>
-		</GenericBuilding>
-	</SceneryObject>
-	<!-- North complex: narrow outbuilding -->
-	<SceneryObject lat="53.57896" lon="-113.52000" alt="0.00000000000000" pitch="0.000000" bank="0.000000" heading="-6.3" imageComplexity="VERY_SPARSE" altitudeIsAgl="TRUE" snapToGround="TRUE" snapToNormal="FALSE">
-		<GenericBuilding scale="1.000000" windowTexture="0" bottomTexture="0" topTexture="0" roofTexture="0">
-			<RectangularBuilding roofType="RIDGE" sizeX="18" sizeZ="40" sizeBottomY="6" textureIndexBottomX="0" textureIndexBottomZ="0" sizeWindowY="0" sizeTopY="0" sizeRoofY="2" textureIndexRoofX="0" textureIndexRoofZ="0" textureIndexRoofY="0"/>
-		</GenericBuilding>
-	</SceneryObject>
-	<!-- Edmonton Inn (11834 Kingsway) low block, west (OSM 230718927) -->
-	<SceneryObject lat="53.56904" lon="-113.52434" alt="0.00000000000000" pitch="0.000000" bank="0.000000" heading="133.0" imageComplexity="VERY_SPARSE" altitudeIsAgl="TRUE" snapToGround="TRUE" snapToNormal="FALSE">
-		<GenericBuilding scale="1.000000" windowTexture="0" bottomTexture="0" topTexture="0" roofTexture="0">
-			<RectangularBuilding roofType="FLAT" sizeX="100" sizeZ="56" sizeBottomY="12" textureIndexBottomX="0" textureIndexBottomZ="0" sizeWindowY="0" sizeTopY="0" sizeRoofY="0" textureIndexRoofX="0" textureIndexRoofZ="0" textureIndexRoofY="0"/>
-		</GenericBuilding>
-	</SceneryObject>
-	<!-- Edmonton Inn tower (14 levels per OSM; tower footprint assumed) -->
-	<SceneryObject lat="53.56893" lon="-113.52447" alt="0.00000000000000" pitch="0.000000" bank="0.000000" heading="133.0" imageComplexity="VERY_SPARSE" altitudeIsAgl="TRUE" snapToGround="TRUE" snapToNormal="FALSE">
-		<GenericBuilding scale="1.000000" windowTexture="0" bottomTexture="0" topTexture="0" roofTexture="0">
-			<RectangularBuilding roofType="FLAT" sizeX="50" sizeZ="30" sizeBottomY="42" textureIndexBottomX="0" textureIndexBottomZ="0" sizeWindowY="0" sizeTopY="0" sizeRoofY="0" textureIndexRoofX="0" textureIndexRoofZ="0" textureIndexRoofY="0"/>
-		</GenericBuilding>
-	</SceneryObject>
-	<!-- Edmonton Inn wing N -->
-	<SceneryObject lat="53.56833" lon="-113.52403" alt="0.00000000000000" pitch="0.000000" bank="0.000000" heading="133.0" imageComplexity="VERY_SPARSE" altitudeIsAgl="TRUE" snapToGround="TRUE" snapToNormal="FALSE">
-		<GenericBuilding scale="1.000000" windowTexture="0" bottomTexture="0" topTexture="0" roofTexture="0">
-			<RectangularBuilding roofType="FLAT" sizeX="18" sizeZ="80" sizeBottomY="9" textureIndexBottomX="0" textureIndexBottomZ="0" sizeWindowY="0" sizeTopY="0" sizeRoofY="0" textureIndexRoofX="0" textureIndexRoofZ="0" textureIndexRoofY="0"/>
-		</GenericBuilding>
-	</SceneryObject>
-	<!-- Edmonton Inn wing S -->
-	<SceneryObject lat="53.56873" lon="-113.52317" alt="0.00000000000000" pitch="0.000000" bank="0.000000" heading="133.0" imageComplexity="VERY_SPARSE" altitudeIsAgl="TRUE" snapToGround="TRUE" snapToNormal="FALSE">
-		<GenericBuilding scale="1.000000" windowTexture="0" bottomTexture="0" topTexture="0" roofTexture="0">
-			<RectangularBuilding roofType="FLAT" sizeX="19" sizeZ="60" sizeBottomY="9" textureIndexBottomX="0" textureIndexBottomZ="0" sizeWindowY="0" sizeTopY="0" sizeRoofY="0" textureIndexRoofX="0" textureIndexRoofZ="0" textureIndexRoofY="0"/>
-		</GenericBuilding>
-	</SceneryObject>
-	<!-- Chateau Louis (11727 Kingsway) low wing (OSM 325236282) -->
-	<SceneryObject lat="53.56630" lon="-113.52225" alt="0.00000000000000" pitch="0.000000" bank="0.000000" heading="117.0" imageComplexity="VERY_SPARSE" altitudeIsAgl="TRUE" snapToGround="TRUE" snapToNormal="FALSE">
-		<GenericBuilding scale="1.000000" windowTexture="0" bottomTexture="0" topTexture="0" roofTexture="0">
-			<RectangularBuilding roofType="FLAT" sizeX="22" sizeZ="90" sizeBottomY="22" textureIndexBottomX="0" textureIndexBottomZ="0" sizeWindowY="0" sizeTopY="0" sizeRoofY="0" textureIndexRoofX="0" textureIndexRoofZ="0" textureIndexRoofY="0"/>
-		</GenericBuilding>
-	</SceneryObject>
-	<!-- Chateau Louis tower (west end) -->
-	<SceneryObject lat="53.56647" lon="-113.52303" alt="0.00000000000000" pitch="0.000000" bank="0.000000" heading="117.0" imageComplexity="VERY_SPARSE" altitudeIsAgl="TRUE" snapToGround="TRUE" snapToNormal="FALSE">
-		<GenericBuilding scale="1.000000" windowTexture="0" bottomTexture="0" topTexture="0" roofTexture="0">
-			<RectangularBuilding roofType="FLAT" sizeX="31" sizeZ="19" sizeBottomY="40" textureIndexBottomX="0" textureIndexBottomZ="0" sizeWindowY="0" sizeTopY="0" sizeRoofY="0" textureIndexRoofX="0" textureIndexRoofZ="0" textureIndexRoofY="0"/>
-		</GenericBuilding>
-	</SceneryObject>
-	<!-- Chateau Louis Conference Centre (OSM 325235666) -->
-	<SceneryObject lat="53.56547" lon="-113.52344" alt="0.00000000000000" pitch="0.000000" bank="0.000000" heading="36.0" imageComplexity="VERY_SPARSE" altitudeIsAgl="TRUE" snapToGround="TRUE" snapToNormal="FALSE">
-		<GenericBuilding scale="1.000000" windowTexture="0" bottomTexture="0" topTexture="0" roofTexture="0">
-			<RectangularBuilding roofType="FLAT" sizeX="56" sizeZ="62" sizeBottomY="8" textureIndexBottomX="0" textureIndexBottomZ="0" sizeWindowY="0" sizeTopY="0" sizeRoofY="0" textureIndexRoofX="0" textureIndexRoofZ="0" textureIndexRoofY="0"/>
-		</GenericBuilding>
-	</SceneryObject>
 </FSData>
