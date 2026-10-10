@@ -1,0 +1,138 @@
+{
+ "asset": {
+  "version": "2.0",
+  "generator": "airport-cyxd/tools/gen_buildings.py",
+  "extensions": {
+   "ASOBO_normal_map_convention": {
+    "tangent_space_convention": "DirectX"
+   }
+  }
+ },
+ "extensionsUsed": [
+  "ASOBO_normal_map_convention"
+ ],
+ "scene": 0,
+ "scenes": [
+  {
+   "nodes": [
+    0
+   ]
+  }
+ ],
+ "nodes": [
+  {
+   "mesh": 0,
+   "name": "cyxd_transmitter_site"
+  }
+ ],
+ "meshes": [
+  {
+   "name": "cyxd_transmitter_site",
+   "primitives": [
+    {
+     "attributes": {
+      "POSITION": 0,
+      "NORMAL": 1,
+      "TEXCOORD_0": 2
+     },
+     "indices": 3,
+     "mode": 4,
+     "material": 0
+    }
+   ]
+  }
+ ],
+ "materials": [
+  {
+   "name": "cyxd_palette",
+   "pbrMetallicRoughness": {
+    "baseColorTexture": {
+     "index": 0
+    },
+    "metallicFactor": 0.0,
+    "roughnessFactor": 0.9
+   }
+  }
+ ],
+ "textures": [
+  {
+   "sampler": 0,
+   "source": 0
+  }
+ ],
+ "samplers": [
+  {
+   "magFilter": 9728,
+   "minFilter": 9728
+  }
+ ],
+ "images": [
+  {
+   "uri": "cyxd_palette.png"
+  }
+ ],
+ "accessors": [
+  {
+   "bufferView": 0,
+   "componentType": 5126,
+   "count": 1568,
+   "type": "VEC3",
+   "min": [
+    -58.45,
+    0,
+    -30.45
+   ],
+   "max": [
+    66.45,
+    55.0,
+    10.45
+   ]
+  },
+  {
+   "bufferView": 1,
+   "componentType": 5126,
+   "count": 1568,
+   "type": "VEC3"
+  },
+  {
+   "bufferView": 2,
+   "componentType": 5126,
+   "count": 1568,
+   "type": "VEC2"
+  },
+  {
+   "bufferView": 3,
+   "componentType": 5123,
+   "count": 2346,
+   "type": "SCALAR"
+  }
+ ],
+ "bufferViews": [
+  {
+   "buffer": 0,
+   "byteOffset": 0,
+   "byteLength": 18816
+  },
+  {
+   "buffer": 0,
+   "byteOffset": 18816,
+   "byteLength": 18816
+  },
+  {
+   "buffer": 0,
+   "byteOffset": 37632,
+   "byteLength": 12544
+  },
+  {
+   "buffer": 0,
+   "byteOffset": 50176,
+   "byteLength": 4692
+  }
+ ],
+ "buffers": [
+  {
+   "uri": "cyxd_transmitter_site.bin",
+   "byteLength": 54868
+  }
+ ]
+}

@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ModelInfo guid="{E62DF5FC-3849-513A-A70D-6D6587B3D026}" version="1.1">
+	<LODS>
+		<LOD minSize="0" ModelFile="cyxd_transmitter_site.gltf"/>
+	</LODS>
+</ModelInfo>

@@ -119,3 +119,8 @@ All approaches show in the sim after a full sim restart: ILS 34 Y, NDB 34 Z, NDB
   - north complex shifted off taxiway III: bays 1 and 2 20 m south, shop 25 m south, annex 10 m north (now beyond the taxiway); BCATP row A 3.7 m W / 1.5 m S off taxiway X. All 15 buildings are now clear of every runway and taxiway and of each other.
   - USAAF hangar T4 removed: the sim's own generated building east of the 30/34 junction is used instead.
   - an exclusion polygon ("No generated buildings: ...", footprint + 6 m) is generated for each building so the sim's autogen buildings do not double up. Existing polygon "no apron buildings" kept.
+
+## Edmonton radio transmitter site
+Added to `tools/gen_buildings.py` (model `cyxd_transmitter_site`): 1950s radio transmitter site from the radiocom.ca "Edmonton Radio" article (photo 4: 118 Ave & 156 St, now the Northwest Transit Garage). Placed at 53.57055, -113.58378 (OSM node for 15204 118 Ave NW), ~4 km west of CYXD, heading 0. White/red-roof building + shed + 10 red/white striped masts (35-55 m). Layout and mast count are approximated from one photo; exclusion polygon 165 x 75 m covers the site. Unverified in sim.
+
+Reference photo: `docs/cyxd/edmonton-transmitter-site-radiocom.jpg` (Watts_Edmonton_04.jpg from https://radiocom.ca/z_station_Edmonton.htm, article covers Edmonton Radio 1955-58; photo is uncaptioned apart from the overlay text "Edmonton transmitter site, 118 Ave and 156 st.").

@@ -909,6 +909,10 @@
 	<SceneryObject lat="53.57896" lon="-113.52000" alt="0.00000000000000" pitch="0.000000" bank="0.000000" heading="-1" imageComplexity="VERY_SPARSE" altitudeIsAgl="TRUE" snapToGround="TRUE" snapToNormal="FALSE">
 		<LibraryObject name="{D006A58E-ED08-52E6-B584-1CBA5EEEA648}" scale="1.000000"/>
 	</SceneryObject>
+	<!-- Edmonton radio transmitter site (118 Ave / 156 St, radiocom.ca) -->
+	<SceneryObject lat="53.57055" lon="-113.58378" alt="0.00000000000000" pitch="0.000000" bank="0.000000" heading="0" imageComplexity="VERY_SPARSE" altitudeIsAgl="TRUE" snapToGround="TRUE" snapToNormal="FALSE">
+		<LibraryObject name="{E62DF5FC-3849-513A-A70D-6D6587B3D026}" scale="1.000000"/>
+	</SceneryObject>
 	<Polygon version="0.4.0" displayName="No generated buildings: Hangar 14 (BCATP 1942): OSM way 230718920 footprint 91 x 100" parentGroupID="6" altitude="667.68023681640625">
 		<Attribute name="UniqueGUID" guid="{359C73E8-06BE-4FB2-ABCB-EC942F7761D0}" type="GUID" value="{C73F1544-1BA5-586C-9A73-128FA74274DA}"/>
 		<Attribute name="ExcludeDetectedBuildings" guid="{5C1A2387-1F07-47DF-A569-962CF6258E55}" type="UINT8" value="1"/>
@@ -1088,6 +1092,18 @@
 		<Vertex lat="53.57872857685273" lon="-113.51976648816692"/>
 		<Vertex lat="53.57919613153032" lon="-113.51978020322109"/>
 		<Vertex lat="53.57919142314728" lon="-113.52023351183307"/>
+	</Polygon>
+	<Polygon version="0.4.0" displayName="No generated buildings: Edmonton radio transmitter site (118 Ave / 156 St, radiocom." parentGroupID="6" altitude="667.68023681640625">
+		<Attribute name="UniqueGUID" guid="{359C73E8-06BE-4FB2-ABCB-EC942F7761D0}" type="GUID" value="{8CFEADC0-94F5-52EA-AE01-F8A899979C56}"/>
+		<Attribute name="ExcludeDetectedBuildings" guid="{5C1A2387-1F07-47DF-A569-962CF6258E55}" type="UINT8" value="1"/>
+		<Attribute name="ExcludeOSMBuildings" guid="{F3C2635D-9F2F-458F-8663-90B3837BED09}" type="UINT8" value="1"/>
+		<Attribute name="ExcludeMSBuildings" guid="{F78A3074-8AD5-4B8B-92C4-C1C948BB7AA5}" type="UINT8" value="1"/>
+		<Attribute name="ExcludeTIN" guid="{18B58CBF-AE02-4A19-8AA9-3809E8E73400}" type="UINT8" value="1"/>
+		<Attribute name="ExclusionFlags" guid="{4CACC252-E6DC-419A-B20C-16EC601DF70E}" type="UINT32" value="3"/>
+		<Vertex lat="53.57014532374100" lon="-113.58506457004685"/>
+		<Vertex lat="53.57014532374100" lon="-113.58257099289709"/>
+		<Vertex lat="53.57081978417266" lon="-113.58257099289709"/>
+		<Vertex lat="53.57081978417266" lon="-113.58506457004685"/>
 	</Polygon>
 	<!-- END historic buildings -->
 </FSData>
