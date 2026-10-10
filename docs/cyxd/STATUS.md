@@ -73,3 +73,25 @@ Era: deliberately a-historical, 1940-1985. 15 `GenericBuilding` objects at the e
 ## Runway 04 realigned (2026-10-08)
 
 Measured the 04/22 centreline in the 1944 National Archives photo (ridge fit, calibrated against 16/34 and 12/30; photo rotation ~7 deg): ~56-57 deg true, +-2. Runway 04 heading changed 63.0 -> 57.78 (roscohead's value) and both `RunwayStart` headings set to 57.78 / 237.78 (were 61.2 / 241.2); starts moved to their original distances (539 m SW, 393 m NE) from the unchanged centre along the new axis. The measured line sits ~65-70 m SE of our centre (and roscohead's), within georeference error, so the centre was not moved. `layout-compare.png` is not regenerated. 1975 photos (`1975 ca/`) are ignored and not committed: they show Edmonton International, not City Centre. The old 04 taxi nodes lay exactly on the 63 deg axis, so they were re-projected: runway nodes 37, 47, 40, 42, 51 and hold-shorts 21, 9, 54 keep their along/across position relative to the runway centre in the new frame (moved 26-63 m); node 38 (04 x 12/30) and node 41 (04 x 16/34) were moved to the true new crossings of those centrelines (20 m and 53 m, both stay on their own runway axes); 17 taxiway signs with 04/22 in the label were moved/rotated by the same rotation (-5.22 deg). Parking taxi nodes 83-86 and their parking spots were NOT moved and now sit ~60 m from the 04 centreline (were ~100 m): check in-sim. Other far-end taxiways (A, B, C beyond the hold-shorts) were not reshaped, so their first legs are slightly skewed.
+
+## RNAV approaches, second ATIS, historical runway names (2026-10-09, uncompiled)
+
+Source: https://www.airports-worldwide.com/canada/alberta/edmonton_city_centre_alberta.php (data as of ~2013 closure).
+- Added `RNAV 12 Y` (LPV on the real plate) and `RNAV 30 Y` (LNAV). No plates: fixes are invented unnamed waypoints on the extended centrelines (CY12I/CY12F, CY30I/CY30F; FAF 4.5 nm, IF 8.5 nm from the thresholds), altitudes are placeholders (IF 5200, FAF 3700, runway end 2400 A), missed approach direct to ZXD hold. Final leg is `TF` to the runway (no recommended navaid). MSFS has no LPV/LNAV distinction here.
+- Added second ATIS 114.9 MHz.
+- Added NDB 34 Z earlier (ZXD, circling-only in reality).
+- Historical (~1942, RCAF/DoT, variation 25 deg E) runway designations: 04/22 = 3/21 (4,500 ft), 12/30 = 11/29 (5,700 ft per the page), 16/34 = 15/33 (5,700 ft). MSFS numbers runways from heading and magvar, so these cannot be set in the file; they are for signage/chart notes only.
+- Closures per the page: 16/34 closed 2010-08-03 (page also says October 2010); 12/30 closed 2013-11-30.
+- The page says "no ILS" (late-life state), but PilotNav lists ILS or NDB 34 and the DME IXD is 032X (= 109.5 MHz), so ILS 34 stays.
+
+### Navaid positions checked against OurAirports (2026-10-09)
+- ZXD (201 kHz) and XD (266 kHz) positions/frequencies match OurAirports exactly.
+- IXD DME (109.5 MHz) is listed at 53.568901, -113.511002, 671 m, i.e. near the 34 glideslope, not the localizer. DME and glideslope both moved there (glideslope alt unchanged at 664.77 m); localizer stays at the north end. Uncompiled.
+
+### Traffic patterns and lighting (2026-10-09)
+- AOPA directory: right traffic on runways 30 and 34. Set 12/30 and 16/34 to primary (12, 16) LEFT / secondary (30, 34) RIGHT (were the reverse). 04/22 unchanged (not in the directory). Left traffic on 12/16 is assumed.
+- Lighting checked: 12/30 edge MEDIUM and 16/34 edge HIGH match MIRL/HIRL. 16/34 also has center MEDIUM, which the directory does not list; left as is. 04/22 edge LOW is unsourced.
+- FBO names saved in `fbos.md`.
+
+### In-sim result (2026-10-09)
+All approaches show in the sim after a full sim restart: ILS 34 Y, NDB 34 Z, NDB 16, LOC(BC) 16 Z, RNAV 12 Y, RNAV 30 Y. A package rebuild alone does not reload scenery in a running sim; restart the sim after rebuilding. RNAV approaches carry `lnav`/`lpv` flags and `isIAF/isIF/isFAF/isMAP` leg flags (2024 schema).
