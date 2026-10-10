@@ -610,8 +610,10 @@
 		<Runway parentGroupID="1" groupIndex="1" lat="53.57486801645715" lon="-113.51967815854454" alt="645.96957238018513" heading="57.78000000000000" length="1372.00000000000000" width="61.00000000000000" patternAltitude="304.79998779296875" surface="{2E0DE83F-B79A-4435-905C-DCBBEAC55C59}" transparent="FALSE" number="04" designator="NONE" primaryLanding="TRUE" primaryTakeoff="TRUE" primaryPattern="RIGHT" secondaryLanding="TRUE" secondaryTakeoff="TRUE" secondaryPattern="LEFT" primaryMarkingBias="75.00000000000000" secondaryMarkingBias="235.00000000000000" groundMerging="TRUE" excludeVegetationAround="TRUE">
 			<RunwayDeformation alt="663.799988" ratio="0.000000"/>
 			<RunwayDeformation alt="667.265991" ratio="1.000000"/>
-			<Markings edges="FALSE" threshold="FALSE" alternateThreshold="FALSE" fixedDistance="FALSE" alternateFixedDistance="FALSE" touchdown="FALSE" alternateTouchdown="FALSE" dashes="TRUE" ident="TRUE" leadingZeroIdent="TRUE" precision="FALSE" alternatePrecision="FALSE" edgePavement="FALSE" singleEnd="FALSE" primaryClosed="FALSE" secondaryClosed="FALSE" primaryStol="FALSE" secondaryStol="FALSE" noThresholdEndArrows="FALSE"/>
+			<Markings edges="FALSE" threshold="TRUE" alternateThreshold="FALSE" fixedDistance="FALSE" alternateFixedDistance="FALSE" touchdown="FALSE" alternateTouchdown="FALSE" dashes="TRUE" ident="TRUE" leadingZeroIdent="TRUE" precision="FALSE" alternatePrecision="FALSE" edgePavement="FALSE" singleEnd="FALSE" primaryClosed="FALSE" secondaryClosed="FALSE" primaryStol="FALSE" secondaryStol="FALSE" noThresholdEndArrows="FALSE"/>
 			<Lights center="NONE" edge="LOW"/>
+			<OffsetThreshold end="PRIMARY" length="194.147200" width="61.000000" surface="{00000000-0000-0000-0000-000000000000}"/>
+			<OffsetThreshold end="SECONDARY" length="40.233600" width="61.000000" surface="{00000000-0000-0000-0000-000000000000}"/>
 			<RunwayStart end="PRIMARY" lat="53.57228645426189" lon="-113.52657690125893" alt="645.97903902735561" heading="57.78000000000000"/>
 			<RunwayStart end="SECONDARY" lat="53.57709994221410" lon="-113.51371375389721" alt="645.98348580114543" heading="237.78000000000000"/>
 		</Runway>

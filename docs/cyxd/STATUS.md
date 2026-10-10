@@ -143,6 +143,14 @@ Source: CASB occurrence report 84-H40006 (Wapiti Aviation PA-31-350 C-GXUC, 19 O
 - No departure plate, fixes or altitudes are given, and airways/SIDs are not authorable in this package, so nothing was changed in `CYXD.xml`. An era-correct SID would need an early-1980s plate (CFS/RAC).
 - Report read through Appendix B (pdf p.1-66); Appendices C-E not read.
 
+## 1978 aerodrome sketch (On Track, 1978)
+Source: https://rcaf.info/wp-content/uploads/2023/02/On-Track-1978-Edmonton-Muni-2.jpg, saved as `docs/cyxd/rcaf-on-track-1978-edmonton-muni-2.jpg` (aerial photo plus plan; elev 2200, var 23E, right-hand circuits Rwys 21, 29, 34, all runways 200 ft wide, "XD" NDB 3.8 nm on bearing 167).
+- Runway lengths: 16/34 5700 ft asphalt, 11/29 5868 ft concrete, 03/21 4451 ft concrete. Runway 03 shown closed at the west end beside taxiway W/Z.
+- "All thresholds displaced" table (landing distance in ft): 03 3814, 11 5068, 16 5190, 21 4319, 29 4681, 34 5160. Displacement = length - landing: 03 637 ft (194.1 m), 21 132 ft (40.2 m), 11 800, 29 1187, 16 510, 34 540. The 11/29/16/34 values match the displaced thresholds already in CYXD.xml. The take-off column (21, 29, 34, 03, 11, 16) is paired row by row with the landing column; its numbers are not given separately.
+- Added `OffsetThreshold` to runway 04/22 (04 = 194.1 m, 22 = 40.2 m); it had none. Uncompiled, unverified in sim. Runway 04/22 `Markings threshold` set TRUE so the threshold bars show at the displaced thresholds (other 04/22 markings unchanged). Our pavement is 1372 m (4501 ft) against 4451 ft here; length not changed.
+- Taxiways on the sketch: A (west side and south apron), B (east side), C (north apron), plus W, Z, T, Y, X-style stubs; aprons I-V (I south-west, II east, III north, IV west, V north-centre). Not compared in detail with CYXD.xml taxi names.
+- Symbols: V in a circle at the 16 end = VASIS; VA in a circle at the 11 and 29 ends = abbreviated VASIS (AVASIS), a one-bar type. Reading from period CFS legends, not confirmed against this source. We model all of them as PAPI4 (no VASIS in MSFS); the sketch shows none at 21, 03, 34.
+
 ## Sources used for reference material (all in docs/cyxd/)
 - `edmonton-transmitter-site-radiocom.jpg`: radiocom.ca Edmonton Radio article, photo 4.
 - `rcaf-manual-of-aerodromes-edmonton-p90.jpg`: RCAF Manual of Aerodromes p.90 (URL above).
