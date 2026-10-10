@@ -285,7 +285,7 @@ ModelInfoTemplate = """<?xml version="1.0" encoding="utf-8"?>
 		<LOD minSize="0" ModelFile="@NAME@.gltf"/>
 	</LODS>
 	<Behaviors>
-		<Include ModelBehaviorFile="Asobo\Generic.xml"/>
+		<Include ModelBehaviorFile="Asobo\\Generic.xml"/>
 		<Component ID="WIND_TEE_SWING">
 			<UseTemplate Name="ASOBO_GT_Anim_Code">
 				<ANIM_NAME>wind_tee_swing</ANIM_NAME>
