@@ -35,24 +35,37 @@
 		<Attribute name="ExcludeTIN" guid="{18B58CBF-AE02-4A19-8AA9-3809E8E73400}" type="UINT8" value="1"/>
 		<Attribute name="Layer" guid="{9E2B4C3E-7D84-453F-9DCC-B6498FF46703}" type="UINT32" value="-50"/>
 		<Attribute name="ExclusionFlags" guid="{4CACC252-E6DC-419A-B20C-16EC601DF70E}" type="UINT32" value="3"/>
-		<Vertex lat="53.56483495653101" lon="-113.51233196485315"/>
-		<Vertex lat="53.56497379025445" lon="-113.51203577251064"/>
-		<Vertex lat="53.56497501534260" lon="-113.50735561041924"/>
-		<Vertex lat="53.56479699515643" lon="-113.50734858512683"/>
-		<Vertex lat="53.56539245340489" lon="-113.50597298404094"/>
-		<Vertex lat="53.56581071225271" lon="-113.50650384367965"/>
-		<Vertex lat="53.56605526405689" lon="-113.50648393025371"/>
-		<Vertex lat="53.56605800885712" lon="-113.50722342003642"/>
-		<Vertex lat="53.56615404856277" lon="-113.50776585407839"/>
-		<Vertex lat="53.56645095150923" lon="-113.50819350618089"/>
-		<Vertex lat="53.56700363227724" lon="-113.50880862137745"/>
-		<Vertex lat="53.56668689779589" lon="-113.50889907897698"/>
-		<Vertex lat="53.56598764165962" lon="-113.50996474616112"/>
-		<Vertex lat="53.56572553907549" lon="-113.50956489385872"/>
-		<Vertex lat="53.56532174271544" lon="-113.51029413514178"/>
+		<Vertex lat="53.56506041052602" lon="-113.51202459356897"/>
+		<Vertex lat="53.56504745964783" lon="-113.51200838393721"/>
 		<Vertex lat="53.56559024795576" lon="-113.51075215644678"/>
-		<Vertex lat="53.56508297926463" lon="-113.51192660779854"/>
-		<Vertex lat="53.56498357890401" lon="-113.51235817028332"/>
+		<Vertex lat="53.56539986664495" lon="-113.51042740041474"/>
+		<Vertex lat="53.56532970467615" lon="-113.51032094127974"/>
+		<Vertex lat="53.56532174271544" lon="-113.51029413514178"/>
+		<Vertex lat="53.56532958609696" lon="-113.51026004763982"/>
+		<Vertex lat="53.56569851110712" lon="-113.50957180990360"/>
+		<Vertex lat="53.56571528208254" lon="-113.50956002752287"/>
+		<Vertex lat="53.56573269404976" lon="-113.50956879933273"/>
+		<Vertex lat="53.56599108812163" lon="-113.50995949374891"/>
+		<Vertex lat="53.56644424445488" lon="-113.50926888295756"/>
+		<Vertex lat="53.56667491701455" lon="-113.50890173125875"/>
+		<Vertex lat="53.56667964861320" lon="-113.50891012674002"/>
+		<Vertex lat="53.56668689779589" lon="-113.50889907897698"/>
+		<Vertex lat="53.56676913378701" lon="-113.50887559283704"/>
+		<Vertex lat="53.56676691276617" lon="-113.50883229699717"/>
+		<Vertex lat="53.56699518992298" lon="-113.50879922531973"/>
+		<Vertex lat="53.56645095150923" lon="-113.50819350618089"/>
+		<Vertex lat="53.56615404856277" lon="-113.50776585407839"/>
+		<Vertex lat="53.56605800885712" lon="-113.50722342003642"/>
+		<Vertex lat="53.56605526405689" lon="-113.50648393025371"/>
+		<Vertex lat="53.56581071225271" lon="-113.50650384367965"/>
+		<Vertex lat="53.56539245340489" lon="-113.50597298404094"/>
+		<Vertex lat="53.56479699515643" lon="-113.50734858512683"/>
+		<Vertex lat="53.56497501534260" lon="-113.50735561041924"/>
+		<Vertex lat="53.56497379025445" lon="-113.51203577251064"/>
+		<Vertex lat="53.56483798520708" lon="-113.51232550337795"/>
+		<Vertex lat="53.56499078317383" lon="-113.51232550337795"/>
+		<Vertex lat="53.56502108451327" lon="-113.51210422651462"/>
+		<Vertex lat="53.56504035262005" lon="-113.51211167815984"/>
 	</Polygon>
 	<Polygon version="0.4.0" displayName="Grass over construction 4" parentGroupID="6" groupIndex="3" altitude="667.39146253187209">
 		<Attribute name="UniqueGUID" guid="{359C73E8-06BE-4FB2-ABCB-EC942F7761D0}" type="GUID" value="{5D510955-8171-452D-98D1-575E6C5E3928}"/>
@@ -63,14 +76,15 @@
 		<Attribute name="ExcludeTIN" guid="{18B58CBF-AE02-4A19-8AA9-3809E8E73400}" type="UINT8" value="1"/>
 		<Attribute name="Layer" guid="{9E2B4C3E-7D84-453F-9DCC-B6498FF46703}" type="UINT32" value="-50"/>
 		<Attribute name="ExclusionFlags" guid="{4CACC252-E6DC-419A-B20C-16EC601DF70E}" type="UINT32" value="3"/>
-		<Vertex lat="53.57057529761067" lon="-113.51823286855200"/>
-		<Vertex lat="53.57028217814106" lon="-113.51883532811249"/>
-		<Vertex lat="53.57016666043367" lon="-113.51887356430498"/>
-		<Vertex lat="53.57004759091129" lon="-113.51878510137384"/>
-		<Vertex lat="53.56763933543650" lon="-113.51522758719523"/>
-		<Vertex lat="53.56760740171560" lon="-113.51495117172524"/>
-		<Vertex lat="53.56789283563715" lon="-113.51452702339711"/>
 		<Vertex lat="53.56797498888373" lon="-113.51436107374984"/>
+		<Vertex lat="53.56789283563715" lon="-113.51452702339711"/>
+		<Vertex lat="53.56760740171560" lon="-113.51495117172524"/>
+		<Vertex lat="53.56763933543650" lon="-113.51522758719523"/>
+		<Vertex lat="53.57004759091129" lon="-113.51878510137384"/>
+		<Vertex lat="53.57016666043367" lon="-113.51887356430498"/>
+		<Vertex lat="53.57027021774549" lon="-113.51883928698597"/>
+		<Vertex lat="53.57056809031248" lon="-113.51824768198524"/>
+		<Vertex lat="53.56951128560787" lon="-113.51664858123290"/>
 	</Polygon>
 	<Polygon version="0.4.0" displayName="Grass over construction 7" parentGroupID="6" groupIndex="6" altitude="667.36212158203125">
 		<Attribute name="UniqueGUID" guid="{359C73E8-06BE-4FB2-ABCB-EC942F7761D0}" type="GUID" value="{460974AB-9797-4442-96B2-3B2A30502175}"/>
@@ -81,18 +95,30 @@
 		<Attribute name="ExcludeTIN" guid="{18B58CBF-AE02-4A19-8AA9-3809E8E73400}" type="UINT8" value="1"/>
 		<Attribute name="Layer" guid="{9E2B4C3E-7D84-453F-9DCC-B6498FF46703}" type="UINT32" value="-50"/>
 		<Attribute name="ExclusionFlags" guid="{4CACC252-E6DC-419A-B20C-16EC601DF70E}" type="UINT32" value="3"/>
-		<Vertex lat="53.56816419878802" lon="-113.51038319796072"/>
-		<Vertex lat="53.56853370898865" lon="-113.51061806377021"/>
-		<Vertex lat="53.57284001615254" lon="-113.51070552506474"/>
-		<Vertex lat="53.57292050999857" lon="-113.51090010387483"/>
-		<Vertex lat="53.57294743581660" lon="-113.51224473417540"/>
-		<Vertex lat="53.57280861513495" lon="-113.51236771230563"/>
-		<Vertex lat="53.56756589020493" lon="-113.51236640777647"/>
-		<Vertex lat="53.56623894625507" lon="-113.51029237192753"/>
+		<Vertex lat="53.56727743512179" lon="-113.50927406886164"/>
+		<Vertex lat="53.56711715350562" lon="-113.50929728967787"/>
 		<Vertex lat="53.56677847972396" lon="-113.50945557956273"/>
-		<Vertex lat="53.56717455841736" lon="-113.50927045967993"/>
+		<Vertex lat="53.56630607541458" lon="-113.51019651191025"/>
+		<Vertex lat="53.56624828921330" lon="-113.51030697512935"/>
+		<Vertex lat="53.56708449584087" lon="-113.51161398023903"/>
+		<Vertex lat="53.56755472324809" lon="-113.51232550337795"/>
+		<Vertex lat="53.57286645620762" lon="-113.51231647219585"/>
+		<Vertex lat="53.57294018760604" lon="-113.51225115520266"/>
+		<Vertex lat="53.57293832088843" lon="-113.51211095217998"/>
+		<Vertex lat="53.57294475202989" lon="-113.51211071035753"/>
+		<Vertex lat="53.57293828276735" lon="-113.51210486591678"/>
+		<Vertex lat="53.57293852259757" lon="-113.51179962293040"/>
+		<Vertex lat="53.57292050999857" lon="-113.51090010387483"/>
+		<Vertex lat="53.57284001615254" lon="-113.51070552506474"/>
+		<Vertex lat="53.56853370898865" lon="-113.51061806377021"/>
+		<Vertex lat="53.56846963273852" lon="-113.51057733601674"/>
+		<Vertex lat="53.56830169117203" lon="-113.51057374923973"/>
+		<Vertex lat="53.56830246756992" lon="-113.51047108351661"/>
+		<Vertex lat="53.56822302359381" lon="-113.51042058782332"/>
+		<Vertex lat="53.56818225454030" lon="-113.51047305071003"/>
+		<Vertex lat="53.56791873348449" lon="-113.50989471358376"/>
+		<Vertex lat="53.56774127150979" lon="-113.50952177850249"/>
 		<Vertex lat="53.56750593270739" lon="-113.50928208514982"/>
-		<Vertex lat="53.56775913684810" lon="-113.50953997440897"/>
 	</Polygon>
 	<Polygon version="0.4.0" displayName="Grass over construction 5" parentGroupID="6" groupIndex="4" altitude="667.40149325039238">
 		<Attribute name="UniqueGUID" guid="{359C73E8-06BE-4FB2-ABCB-EC942F7761D0}" type="GUID" value="{B8EBEE1F-2748-41FB-A6EB-60A26224112D}"/>
@@ -103,13 +129,16 @@
 		<Attribute name="ExcludeTIN" guid="{18B58CBF-AE02-4A19-8AA9-3809E8E73400}" type="UINT8" value="1"/>
 		<Attribute name="Layer" guid="{9E2B4C3E-7D84-453F-9DCC-B6498FF46703}" type="UINT32" value="-50"/>
 		<Attribute name="ExclusionFlags" guid="{4CACC252-E6DC-419A-B20C-16EC601DF70E}" type="UINT32" value="3"/>
-		<Vertex lat="53.57165866079168" lon="-113.51987226615780"/>
-		<Vertex lat="53.57125091188194" lon="-113.52052179970161"/>
-		<Vertex lat="53.57056606092685" lon="-113.51953550027797"/>
-		<Vertex lat="53.57050568552548" lon="-113.51937267418857"/>
+		<Vertex lat="53.57079687406306" lon="-113.51859386540595"/>
 		<Vertex lat="53.57051436452636" lon="-113.51917589276158"/>
-		<Vertex lat="53.57071674393677" lon="-113.51875572834805"/>
-		<Vertex lat="53.57079889718334" lon="-113.51858977870079"/>
+		<Vertex lat="53.57050568552548" lon="-113.51937267418857"/>
+		<Vertex lat="53.57055623005789" lon="-113.51950898746129"/>
+		<Vertex lat="53.57122779521838" lon="-113.52045630989738"/>
+		<Vertex lat="53.57121844140769" lon="-113.52047503681139"/>
+		<Vertex lat="53.57124349379681" lon="-113.52051111642369"/>
+		<Vertex lat="53.57125232899644" lon="-113.52050011202628"/>
+		<Vertex lat="53.57125736218837" lon="-113.52051152452908"/>
+		<Vertex lat="53.57165041605336" lon="-113.51988539981426"/>
 	</Polygon>
 	<Polygon version="0.4.0" displayName="Grass over construction 1" parentGroupID="6" altitude="667.36212158203125">
 		<Attribute name="UniqueGUID" guid="{359C73E8-06BE-4FB2-ABCB-EC942F7761D0}" type="GUID" value="{B4A85D99-08DC-492C-82B5-579FA7C637DD}"/>
@@ -120,24 +149,25 @@
 		<Attribute name="ExcludeTIN" guid="{18B58CBF-AE02-4A19-8AA9-3809E8E73400}" type="UINT8" value="1"/>
 		<Attribute name="Layer" guid="{9E2B4C3E-7D84-453F-9DCC-B6498FF46703}" type="UINT32" value="-50"/>
 		<Attribute name="ExclusionFlags" guid="{4CACC252-E6DC-419A-B20C-16EC601DF70E}" type="UINT32" value="3"/>
-		<Vertex lat="53.57041984547164" lon="-113.51332989640463"/>
-		<Vertex lat="53.57028044226691" lon="-113.51403375964786"/>
-		<Vertex lat="53.57027731815025" lon="-113.51462606704781"/>
-		<Vertex lat="53.57018223810213" lon="-113.51496866318799"/>
-		<Vertex lat="53.57007041840836" lon="-113.51559862206621"/>
-		<Vertex lat="53.57118347195580" lon="-113.51729652281931"/>
-		<Vertex lat="53.57136074929246" lon="-113.51697592175965"/>
-		<Vertex lat="53.57161092067462" lon="-113.51684816334341"/>
-		<Vertex lat="53.57179591908066" lon="-113.51691932701503"/>
-		<Vertex lat="53.57290528371480" lon="-113.51874498089111"/>
-		<Vertex lat="53.57264153159762" lon="-113.51891952412301"/>
-		<Vertex lat="53.57253854510528" lon="-113.51914857409045"/>
-		<Vertex lat="53.57245320357630" lon="-113.51905450161296"/>
-		<Vertex lat="53.57238428388064" lon="-113.51918423134279"/>
-		<Vertex lat="53.57231887815261" lon="-113.51898052316554"/>
+		<Vertex lat="53.56839159191444" lon="-113.51354617377099"/>
+		<Vertex lat="53.57208321447882" lon="-113.51917777580114"/>
 		<Vertex lat="53.57224746942877" lon="-113.51891811421231"/>
-		<Vertex lat="53.57208057313889" lon="-113.51918195134972"/>
-		<Vertex lat="53.56826387495986" lon="-113.51335105639163"/>
+		<Vertex lat="53.57231887815261" lon="-113.51898052316554"/>
+		<Vertex lat="53.57238428388064" lon="-113.51918423134279"/>
+		<Vertex lat="53.57245320357630" lon="-113.51905450161296"/>
+		<Vertex lat="53.57253854510528" lon="-113.51914857409045"/>
+		<Vertex lat="53.57264153159762" lon="-113.51891952412301"/>
+		<Vertex lat="53.57290528371480" lon="-113.51874498089111"/>
+		<Vertex lat="53.57179591908066" lon="-113.51691932701503"/>
+		<Vertex lat="53.57161092067462" lon="-113.51684816334341"/>
+		<Vertex lat="53.57136074929246" lon="-113.51697592175965"/>
+		<Vertex lat="53.57118347195580" lon="-113.51729652281931"/>
+		<Vertex lat="53.57007041840836" lon="-113.51559862206621"/>
+		<Vertex lat="53.57018223810213" lon="-113.51496866318799"/>
+		<Vertex lat="53.57027731815025" lon="-113.51462606704781"/>
+		<Vertex lat="53.57028044226691" lon="-113.51403375964786"/>
+		<Vertex lat="53.57041823124479" lon="-113.51333804682665"/>
+		<Vertex lat="53.56849866374889" lon="-113.51334875203371"/>
 	</Polygon>
 	<Polygon version="0.4.0" displayName="Grass over construction 3" parentGroupID="6" groupIndex="2" altitude="667.36403839755803">
 		<Attribute name="UniqueGUID" guid="{359C73E8-06BE-4FB2-ABCB-EC942F7761D0}" type="GUID" value="{95EBF8B3-DAFF-48AB-A19A-0585DADDE9BF}"/>
@@ -148,13 +178,18 @@
 		<Attribute name="ExcludeTIN" guid="{18B58CBF-AE02-4A19-8AA9-3809E8E73400}" type="UINT8" value="1"/>
 		<Attribute name="Layer" guid="{9E2B4C3E-7D84-453F-9DCC-B6498FF46703}" type="UINT32" value="-50"/>
 		<Attribute name="ExclusionFlags" guid="{4CACC252-E6DC-419A-B20C-16EC601DF70E}" type="UINT32" value="3"/>
-		<Vertex lat="53.57656121656392" lon="-113.51066113595263"/>
-		<Vertex lat="53.57724107160992" lon="-113.51076621489153"/>
-		<Vertex lat="53.57677439334891" lon="-113.51236038889854"/>
-		<Vertex lat="53.57324684263784" lon="-113.51235627040320"/>
-		<Vertex lat="53.57323619348696" lon="-113.51087961114042"/>
+		<Vertex lat="53.57551982581717" lon="-113.51066209145945"/>
+		<Vertex lat="53.57342299784208" lon="-113.51067109759246"/>
 		<Vertex lat="53.57327826745009" lon="-113.51072121545471"/>
-		<Vertex lat="53.57344350424844" lon="-113.51066399654593"/>
+		<Vertex lat="53.57323619348696" lon="-113.51087961114042"/>
+		<Vertex lat="53.57324458012582" lon="-113.51119050466207"/>
+		<Vertex lat="53.57323843902565" lon="-113.51119098765639"/>
+		<Vertex lat="53.57323852450555" lon="-113.51120284068512"/>
+		<Vertex lat="53.57324474714233" lon="-113.51120285449278"/>
+		<Vertex lat="53.57324700943012" lon="-113.51232550337795"/>
+		<Vertex lat="53.57678460573101" lon="-113.51232550337795"/>
+		<Vertex lat="53.57718673633891" lon="-113.51095182430157"/>
+		<Vertex lat="53.57655523278198" lon="-113.51067143796001"/>
 	</Polygon>
 	<Polygon version="0.4.0" displayName="Grass over construction 2" parentGroupID="6" groupIndex="1" altitude="667.36212158203125">
 		<Attribute name="UniqueGUID" guid="{359C73E8-06BE-4FB2-ABCB-EC942F7761D0}" type="GUID" value="{7B5B6C99-0410-4EAE-B857-5F32D68690E3}"/>
@@ -165,22 +200,29 @@
 		<Attribute name="ExcludeTIN" guid="{18B58CBF-AE02-4A19-8AA9-3809E8E73400}" type="UINT8" value="1"/>
 		<Attribute name="Layer" guid="{9E2B4C3E-7D84-453F-9DCC-B6498FF46703}" type="UINT32" value="-50"/>
 		<Attribute name="ExclusionFlags" guid="{4CACC252-E6DC-419A-B20C-16EC601DF70E}" type="UINT32" value="3"/>
-		<Vertex lat="53.57492075979404" lon="-113.51015368759892"/>
-		<Vertex lat="53.57474083408128" lon="-113.51001532277593"/>
-		<Vertex lat="53.57595013263034" lon="-113.50991539053571"/>
-		<Vertex lat="53.57597449497341" lon="-113.50954551953080"/>
-		<Vertex lat="53.57605336017736" lon="-113.50953201145668"/>
-		<Vertex lat="53.57606615963879" lon="-113.50822315830342"/>
-		<Vertex lat="53.57738834468786" lon="-113.50828959394258"/>
-		<Vertex lat="53.57736992851829" lon="-113.50935505096366"/>
-		<Vertex lat="53.57774710680082" lon="-113.50937635287423"/>
-		<Vertex lat="53.57776107236359" lon="-113.50986521035902"/>
-		<Vertex lat="53.57870478425141" lon="-113.50988351126583"/>
-		<Vertex lat="53.57901760800015" lon="-113.51001116931589"/>
-		<Vertex lat="53.57912027216576" lon="-113.51060569194563"/>
-		<Vertex lat="53.57806355877239" lon="-113.51047607907901"/>
-		<Vertex lat="53.57764583221095" lon="-113.51034987399616"/>
+		<Vertex lat="53.57660895960392" lon="-113.51020181885964"/>
+		<Vertex lat="53.57661454179425" lon="-113.51016631211209"/>
+		<Vertex lat="53.57670038285199" lon="-113.51020442537349"/>
 		<Vertex lat="53.57736931283825" lon="-113.51022349683848"/>
+		<Vertex lat="53.57764583221095" lon="-113.51034987399616"/>
+		<Vertex lat="53.57806355877239" lon="-113.51047607907901"/>
+		<Vertex lat="53.57905073724952" lon="-113.51059716302957"/>
+		<Vertex lat="53.57906438449329" lon="-113.51055810787641"/>
+		<Vertex lat="53.57912027216576" lon="-113.51060569194563"/>
+		<Vertex lat="53.57901760800015" lon="-113.51001116931589"/>
+		<Vertex lat="53.57870478425141" lon="-113.50988351126583"/>
+		<Vertex lat="53.57776107236359" lon="-113.50986521035902"/>
+		<Vertex lat="53.57774710680082" lon="-113.50937635287423"/>
+		<Vertex lat="53.57736992851829" lon="-113.50935505096366"/>
+		<Vertex lat="53.57738834468786" lon="-113.50828959394258"/>
+		<Vertex lat="53.57606615963879" lon="-113.50822315830342"/>
+		<Vertex lat="53.57605336017736" lon="-113.50953201145668"/>
+		<Vertex lat="53.57597449497341" lon="-113.50954551953080"/>
+		<Vertex lat="53.57595013263034" lon="-113.50991539053571"/>
+		<Vertex lat="53.57474083408128" lon="-113.51001532277593"/>
+		<Vertex lat="53.57490649729352" lon="-113.51014271958145"/>
+		<Vertex lat="53.57657631219219" lon="-113.51015779281006"/>
+		<Vertex lat="53.57657617445838" lon="-113.51020088414185"/>
 	</Polygon>
 	<Polygon version="0.4.0" displayName="Grass over construction 6" parentGroupID="6" groupIndex="5" altitude="667.36212158203125">
 		<Attribute name="UniqueGUID" guid="{359C73E8-06BE-4FB2-ABCB-EC942F7761D0}" type="GUID" value="{E83C94C3-C6E6-4AF0-A77C-EFABAC7C1434}"/>
@@ -191,11 +233,11 @@
 		<Attribute name="ExcludeTIN" guid="{18B58CBF-AE02-4A19-8AA9-3809E8E73400}" type="UINT8" value="1"/>
 		<Attribute name="Layer" guid="{9E2B4C3E-7D84-453F-9DCC-B6498FF46703}" type="UINT32" value="-50"/>
 		<Attribute name="ExclusionFlags" guid="{4CACC252-E6DC-419A-B20C-16EC601DF70E}" type="UINT32" value="3"/>
-		<Vertex lat="53.57859289328395" lon="-113.51101429989194"/>
+		<Vertex lat="53.57841639085137" lon="-113.51147365627092"/>
+		<Vertex lat="53.57831641404192" lon="-113.51143236216168"/>
+		<Vertex lat="53.57798147213143" lon="-113.51232550337795"/>
+		<Vertex lat="53.57827535555776" lon="-113.51232550337795"/>
 		<Vertex lat="53.57822560893455" lon="-113.51197017571947"/>
-		<Vertex lat="53.57827684770074" lon="-113.51233616138123"/>
-		<Vertex lat="53.57742207847495" lon="-113.51234667438855"/>
-		<Vertex lat="53.57784938993414" lon="-113.51092006021663"/>
 	</Polygon>
 	<Polygon version="0.4.0" displayName="CYXD Airport Area" groupIndex="1" altitude="667.80957031250000">
 		<Attribute name="UniqueGUID" guid="{359C73E8-06BE-4FB2-ABCB-EC942F7761D0}" type="GUID" value="{0A606BD6-72C9-4E8B-968C-FFE5CAF3F7FD}"/>
@@ -254,9 +296,9 @@
 		<TaxiwayPoint parentGroupID="2" groupIndex="56" index="5" type="NORMAL" orientation="FORWARD" lat="53.56766941721990" lon="-113.50895941349079"/>
 		<TaxiwayPoint parentGroupID="2" groupIndex="57" index="6" type="NORMAL" orientation="FORWARD" lat="53.56830363389820" lon="-113.51031685597520"/>
 		<TaxiwayPoint parentGroupID="2" groupIndex="58" index="7" type="NORMAL" orientation="FORWARD" lat="53.57657549102390" lon="-113.51041470311316"/>
-		<TaxiwayPoint parentGroupID="2" groupIndex="60" index="8" type="HOLD_SHORT" orientation="FORWARD" lat="53.57714863505336" lon="-113.51049886097226"/>
+		<TaxiwayPoint parentGroupID="2" groupIndex="60" index="8" type="HOLD_SHORT" orientation="FORWARD" lat="53.57763612665488" lon="-113.51088562325452"/>
 		<TaxiwayPoint parentGroupID="2" groupIndex="61" index="9" type="HOLD_SHORT" orientation="REVERSE" lat="53.57860200356005" lon="-113.51128576117335"/>
-		<TaxiwayPoint parentGroupID="2" groupIndex="62" index="10" type="NORMAL" orientation="FORWARD" lat="53.57898697063506" lon="-113.51077964785476"/>
+		<TaxiwayPoint parentGroupID="2" groupIndex="62" index="10" type="NORMAL" orientation="FORWARD" lat="53.57912731354633" lon="-113.51140545740984"/>
 		<TaxiwayPoint parentGroupID="2" groupIndex="63" index="11" type="NORMAL" orientation="FORWARD" lat="53.57976935908511" lon="-113.51155175280998"/>
 		<TaxiwayPoint parentGroupID="2" groupIndex="64" index="12" type="HOLD_SHORT" orientation="FORWARD" lat="53.57973177964786" lon="-113.51217518470332"/>
 		<TaxiwayPoint parentGroupID="2" groupIndex="67" index="13" type="HOLD_SHORT" orientation="REVERSE" lat="53.57976226408756" lon="-113.51346680697539"/>
@@ -266,7 +308,7 @@
 		<TaxiwayPoint parentGroupID="2" groupIndex="74" index="17" type="HOLD_SHORT" orientation="REVERSE" lat="53.57736376614832" lon="-113.52896559597239"/>
 		<TaxiwayPoint parentGroupID="2" groupIndex="75" index="18" type="NORMAL" orientation="FORWARD" lat="53.57700420774150" lon="-113.52955664642134"/>
 		<TaxiwayPoint parentGroupID="2" groupIndex="76" index="19" type="NORMAL" orientation="FORWARD" lat="53.57434781246445" lon="-113.52565601091329"/>
-		<TaxiwayPoint parentGroupID="2" groupIndex="77" index="20" type="HOLD_SHORT" orientation="FORWARD" lat="53.57378351845014" lon="-113.52473568048053"/>
+		<TaxiwayPoint parentGroupID="2" groupIndex="77" index="20" type="HOLD_SHORT" orientation="FORWARD" lat="53.57351421140572" lon="-113.52454889214346"/>
 		<TaxiwayPoint parentGroupID="2" groupIndex="78" index="21" type="HOLD_SHORT" orientation="REVERSE" lat="53.57278466846543" lon="-113.52361580710679"/>
 		<TaxiwayPoint parentGroupID="2" groupIndex="79" index="22" type="NORMAL" orientation="FORWARD" lat="53.57166627643483" lon="-113.52187018568361"/>
 		<TaxiwayPoint parentGroupID="2" groupIndex="80" index="23" type="NORMAL" orientation="FORWARD" lat="53.57087566347705" lon="-113.52178601269850"/>
@@ -279,7 +321,7 @@
 		<TaxiwayPoint parentGroupID="2" groupIndex="86" index="30" type="NORMAL" orientation="FORWARD" lat="53.57020811478660" lon="-113.51935335560408"/>
 		<TaxiwayPoint parentGroupID="2" groupIndex="87" index="31" type="HOLD_SHORT" orientation="FORWARD" lat="53.57060603963266" lon="-113.51857868656965"/>
 		<TaxiwayPoint parentGroupID="2" groupIndex="88" index="32" type="NORMAL" orientation="FORWARD" lat="53.57112950708250" lon="-113.52065308889237"/>
-		<TaxiwayPoint parentGroupID="2" groupIndex="37" index="34" type="HOLD_SHORT" orientation="REVERSE" lat="53.57245492921746" lon="-113.52898347174491"/>
+		<TaxiwayPoint parentGroupID="2" groupIndex="37" index="34" type="HOLD_SHORT" orientation="REVERSE" lat="53.57196116475249" lon="-113.52857593317201"/>
 		<TaxiwayPoint parentGroupID="2" groupIndex="44" index="35" type="NORMAL" orientation="FORWARD" lat="53.57411281818624" lon="-113.52607195077266"/>
 		<TaxiwayPoint parentGroupID="2" groupIndex="47" index="36" type="NORMAL" orientation="FORWARD" lat="53.56508095114029" lon="-113.51281262414855"/>
 		<TaxiwayPoint parentGroupID="2" groupIndex="34" index="37" type="NORMAL" orientation="FORWARD" lat="53.57167388542079" lon="-113.52817622965631"/>
@@ -298,7 +340,7 @@
 		<TaxiwayPoint parentGroupID="2" groupIndex="59" index="51" type="NORMAL" orientation="FORWARD" lat="53.57811852975625" lon="-113.51108606866283"/>
 		<TaxiwayPoint parentGroupID="2" groupIndex="27" index="52" type="NORMAL" orientation="FORWARD" lat="53.56795886018266" lon="-113.51362613824526"/>
 		<TaxiwayPoint parentGroupID="2" groupIndex="28" index="53" type="NORMAL" orientation="FORWARD" lat="53.56839447133912" lon="-113.51282294745535"/>
-		<TaxiwayPoint parentGroupID="2" groupIndex="26" index="54" type="HOLD_SHORT" orientation="REVERSE" lat="53.57671217683659" lon="-113.51653131970498"/>
+		<TaxiwayPoint parentGroupID="2" groupIndex="26" index="54" type="HOLD_SHORT" orientation="REVERSE" lat="53.57672891227767" lon="-113.51641665833755"/>
 		<TaxiwayPoint parentGroupID="2" groupIndex="32" index="82" type="NORMAL" orientation="FORWARD" lat="53.56975397669413" lon="-113.52018684988954"/>
 		<TaxiwayPoint parentGroupID="2" groupIndex="16" index="83" type="NORMAL" orientation="FORWARD" lat="53.57176797781491" lon="-113.52635702422558"/>
 		<TaxiwayPoint parentGroupID="2" groupIndex="23" index="84" type="NORMAL" orientation="FORWARD" lat="53.57206581489756" lon="-113.52549069510815"/>
@@ -330,7 +372,7 @@
 		<TaxiwayPoint parentGroupID="2" groupIndex="18" index="110" type="NORMAL" orientation="FORWARD" lat="53.57430569446622" lon="-113.50975730892978"/>
 		<TaxiwayPoint parentGroupID="2" groupIndex="22" index="111" type="NORMAL" orientation="FORWARD" lat="53.57470941252801" lon="-113.51039785823545"/>
 		<TaxiwayPoint parentGroupID="2" groupIndex="66" index="112" type="NORMAL" orientation="REVERSE" lat="53.57947244290497" lon="-113.51419838676416"/>
-		<TaxiwayPoint parentGroupID="2" groupIndex="70" index="113" type="NORMAL" orientation="FORWARD" lat="53.57684747698083" lon="-113.51646376168806"/>
+		<TaxiwayPoint parentGroupID="2" groupIndex="70" index="113" type="NORMAL" orientation="FORWARD" lat="53.57688000064356" lon="-113.51651427854402"/>
 		<TaxiwayPoint parentGroupID="2" groupIndex="20" index="114" type="NORMAL" orientation="FORWARD" lat="53.57309186957775" lon="-113.51120251526666"/>
 		<TaxiwayPoint parentGroupID="2" groupIndex="19" index="115" type="HOLD_SHORT" orientation="FORWARD" lat="53.57309116033192" lon="-113.51210520514290"/>
 		<TaxiwayPoint parentGroupID="2" groupIndex="68" index="116" type="NORMAL" orientation="REVERSE" lat="53.57977244982214" lon="-113.51360734353545"/>
@@ -520,7 +562,7 @@
 		<TaxiwaySign parentGroupID="5" groupIndex="10" lat="53.57278783638083" lon="-113.51082008923095" heading="75.849609" label="d[&lt;E]l[B]" justification="LEFT" size="SIZE3"/>
 		<TaxiwaySign parentGroupID="5" groupIndex="46" lat="53.56847581709545" lon="-113.51639581162536" heading="53.761597" label="d[&lt;T]l[A]" justification="LEFT" size="SIZE3"/>
 		<TaxiwaySign parentGroupID="5" groupIndex="38" lat="53.57432434060318" lon="-113.52500083617038" heading="69.202881" label="d[&lt;W]l[A]" justification="LEFT" size="SIZE3"/>
-		<TaxiwaySign parentGroupID="5" groupIndex="23" lat="53.57660504249240" lon="-113.51684970558905" heading="247.042573" label="d[C]m 22&gt; " justification="LEFT" size="SIZE3"/>
+		<TaxiwaySign parentGroupID="5" groupIndex="23" lat="53.57662177793349" lon="-113.51673504422162" heading="247.042573" label="d[C]m 22&gt; " justification="LEFT" size="SIZE3"/>
 		<TaxiwaySign parentGroupID="5" groupIndex="53" lat="53.56765647463618" lon="-113.51492201753283" heading="314.807739" label="d[^A&gt;]l[Y]" justification="LEFT" size="SIZE3"/>
 		<TaxiwaySign parentGroupID="5" groupIndex="6" lat="53.56497937869169" lon="-113.51190885748230" heading="319.751587" label="d[^A]l[B]r 34&gt;" justification="LEFT" size="SIZE3"/>
 		<TaxiwaySign parentGroupID="5" lat="53.57797371895001" lon="-113.51811733684089" heading="190.629272" label="d[`C']" justification="LEFT" size="SIZE3"/>
@@ -537,7 +579,7 @@
 		<TaxiwaySign parentGroupID="5" groupIndex="7" lat="53.57277469774530" lon="-113.51224080130952" heading="84.605713" label="l 30 d[E&gt;]" justification="LEFT" size="SIZE3"/>
 		<TaxiwaySign parentGroupID="5" groupIndex="39" lat="53.57375405550469" lon="-113.52144749292827" heading="78.243135" label="l 30 r04-22" justification="LEFT" size="SIZE4"/>
 		<TaxiwaySign parentGroupID="5" groupIndex="20" lat="53.57661327167829" lon="-113.51380517559328" heading="174.780000" label="l l04 d[^B]m 16&gt; " justification="LEFT" size="SIZE3"/>
-		<TaxiwaySign parentGroupID="5" groupIndex="24" lat="53.57678250237052" lon="-113.51600760838123" heading="320.013765" label="l22d[C']" justification="LEFT" size="SIZE3"/>
+		<TaxiwaySign parentGroupID="5" groupIndex="24" lat="53.57679923781161" lon="-113.51589294701380" heading="320.013765" label="l22d[C']" justification="LEFT" size="SIZE3"/>
 		<TaxiwaySign parentGroupID="5" groupIndex="44" lat="53.56906466368292" lon="-113.51728262255499" heading="226.318359" label="l[A]d[T']" justification="LEFT" size="SIZE3"/>
 		<TaxiwaySign parentGroupID="5" groupIndex="31" lat="53.57472067047472" lon="-113.52572548463091" heading="207.279053" label="l[A]d[W']" justification="LEFT" size="SIZE3"/>
 		<TaxiwaySign parentGroupID="5" groupIndex="43" lat="53.57007008797459" lon="-113.51861592899036" heading="51.448975" label="l[A]d[X']" justification="LEFT" size="SIZE3"/>
@@ -555,8 +597,8 @@
 		<TaxiwaySign parentGroupID="5" groupIndex="13" lat="53.57332740411773" lon="-113.51207692152178" heading="358.851929" label="m 34-16 l[E]" justification="LEFT" size="SIZE3"/>
 		<TaxiwaySign parentGroupID="5" groupIndex="51" lat="53.56809265494197" lon="-113.51467593113094" heading="230.059204" label="m/34l 12 d[Y']" justification="LEFT" size="SIZE3"/>
 		<TaxiwaySign parentGroupID="5" groupIndex="16" lat="53.57948151953896" lon="-113.51211236102098" heading="1.708374" label="m&lt;16 l[B]d[^C]" justification="LEFT" size="SIZE3"/>
-		<TaxiwaySign parentGroupID="5" groupIndex="19" lat="53.57796298866268" lon="-113.51258531774708" heading="351.511567" label="m&lt;16l 22 " justification="LEFT" size="SIZE3"/>
-		<TaxiwaySign parentGroupID="5" groupIndex="18" lat="53.57708946612476" lon="-113.51249286014325" heading="75.562471" label="m&lt;22 l 34 d[B&gt;]" justification="LEFT" size="SIZE3"/>
+		<TaxiwaySign parentGroupID="5" groupIndex="19" lat="53.57820143884892" lon="-113.51214145383103" heading="351.511567" label="m&lt;16l 22 " justification="LEFT" size="SIZE3"/>
+		<TaxiwaySign parentGroupID="5" groupIndex="18" lat="53.57669064748201" lon="-113.51218679159740" heading="75.562471" label="m&lt;22 l 34 d[B&gt;]" justification="LEFT" size="SIZE3"/>
 		<TaxiwaySign parentGroupID="5" groupIndex="50" lat="53.56792743223683" lon="-113.51457667711040" heading="136.268921" label="m&lt;30 `34 l[Y]" justification="LEFT" size="SIZE3"/>
 		<TaxiwaySign parentGroupID="5" groupIndex="8" lat="53.56549115553109" lon="-113.51076470192540" heading="146.090698" label="m&lt;30 d[B]" justification="LEFT" size="SIZE4"/>
 		<TaxiwaySign parentGroupID="5" groupIndex="4" lat="53.56470113021105" lon="-113.51364011754389" heading="191.870728" label="m[`34][^30]l[A]d[^B]" justification="LEFT" size="SIZE4"/>
@@ -774,4 +816,246 @@
 	</Airport>
 	<Ndb lat="53.6436004638671900" lon="-113.5130004882812500" alt="2200F" type="MH" frequency="266.0" magvar="343.782990" region="CY" ident="XD" name="EDMONTON"/>
 	<Ndb lat="53.4994010925293000" lon="-113.5130004882812500" alt="2200F" type="H" frequency="201.0" magvar="343.782990" region="CY" ident="ZXD" name="BLATCHFORD"/>
+	<!-- BEGIN historic buildings (generated by airport-cyxd/tools/gen_buildings.py) -->
+	<!-- Hangar 14 (BCATP 1942): OSM way 230718920 footprint 91 x 100 m incl. lean-tos, axis-aligned -->
+	<SceneryObject lat="53.56571" lon="-113.51713" alt="0.00000000000000" pitch="0.000000" bank="0.000000" heading="0.0" imageComplexity="VERY_SPARSE" altitudeIsAgl="TRUE" snapToGround="TRUE" snapToNormal="FALSE">
+		<LibraryObject name="{950CAEDF-8863-54CA-9600-7FF84CCB0F0B}" scale="1.000000"/>
+	</SceneryObject>
+	<!-- Hangar 11 (USAAF T3, 1942) -->
+	<SceneryObject lat="53.56909" lon="-113.50859" alt="0.00000000000000" pitch="0.000000" bank="0.000000" heading="0" imageComplexity="VERY_SPARSE" altitudeIsAgl="TRUE" snapToGround="TRUE" snapToNormal="FALSE">
+		<LibraryObject name="{E317C4C5-3BEC-5618-B387-F4F360D904E8}" scale="1.000000"/>
+	</SceneryObject>
+	<!-- USAAF hangar T1 (east apron) -->
+	<SceneryObject lat="53.57110" lon="-113.50886" alt="0.00000000000000" pitch="0.000000" bank="0.000000" heading="0" imageComplexity="VERY_SPARSE" altitudeIsAgl="TRUE" snapToGround="TRUE" snapToNormal="FALSE">
+		<LibraryObject name="{99593324-D250-5CAD-8AF4-67A3BF1E0E2D}" scale="1.000000"/>
+	</SceneryObject>
+	<!-- USAAF hangar T2 (east apron, narrow) -->
+	<SceneryObject lat="53.57010" lon="-113.50894" alt="0.00000000000000" pitch="0.000000" bank="0.000000" heading="0" imageComplexity="VERY_SPARSE" altitudeIsAgl="TRUE" snapToGround="TRUE" snapToNormal="FALSE">
+		<LibraryObject name="{B6FA7187-4240-5264-9945-2018A69E9774}" scale="1.000000"/>
+	</SceneryObject>
+	<!-- BCATP hangar row A along Kingsway (long axis NW-SE) -->
+	<SceneryObject lat="53.56920" lon="-113.52019" alt="0.00000000000000" pitch="0.000000" bank="0.000000" heading="138" imageComplexity="VERY_SPARSE" altitudeIsAgl="TRUE" snapToGround="TRUE" snapToNormal="FALSE">
+		<LibraryObject name="{BB08DA08-3307-5E2C-91B9-B8B5CA17B3EF}" scale="1.000000"/>
+	</SceneryObject>
+	<!-- BCATP hangar row B along Kingsway (long axis NW-SE) -->
+	<SceneryObject lat="53.56819" lon="-113.51903" alt="0.00000000000000" pitch="0.000000" bank="0.000000" heading="138" imageComplexity="VERY_SPARSE" altitudeIsAgl="TRUE" snapToGround="TRUE" snapToNormal="FALSE">
+		<LibraryObject name="{BB08DA08-3307-5E2C-91B9-B8B5CA17B3EF}" scale="1.000000"/>
+	</SceneryObject>
+	<!-- BCATP hangar row C along Kingsway (long axis NW-SE) -->
+	<SceneryObject lat="53.56733" lon="-113.51777" alt="0.00000000000000" pitch="0.000000" bank="0.000000" heading="138" imageComplexity="VERY_SPARSE" altitudeIsAgl="TRUE" snapToGround="TRUE" snapToNormal="FALSE">
+		<LibraryObject name="{BB08DA08-3307-5E2C-91B9-B8B5CA17B3EF}" scale="1.000000"/>
+	</SceneryObject>
+	<!-- 1938 arched hangar, west side (replica at Fort Edmonton Park); doors face NE -->
+	<SceneryObject lat="53.56955" lon="-113.52551" alt="0.00000000000000" pitch="0.000000" bank="0.000000" heading="57.78" imageComplexity="VERY_SPARSE" altitudeIsAgl="TRUE" snapToGround="TRUE" snapToNormal="FALSE">
+		<LibraryObject name="{0DDC62DE-900D-5F4C-B5BA-EFE16E11800D}" scale="1.000000"/>
+	</SceneryObject>
+	<!-- Administration Building (1940s-50s style), faces the circular drive -->
+	<SceneryObject lat="53.57041" lon="-113.52269" alt="0.00000000000000" pitch="0.000000" bank="0.000000" heading="-3.6" imageComplexity="VERY_SPARSE" altitudeIsAgl="TRUE" snapToGround="TRUE" snapToNormal="FALSE">
+		<LibraryObject name="{85FF42F2-F138-5792-A4A8-5E8A165033FE}" scale="1.000000"/>
+	</SceneryObject>
+	<!-- North hangar complex: bay 1 (1944 photo) -->
+	<SceneryObject lat="53.57762" lon="-113.52196" alt="0.00000000000000" pitch="0.000000" bank="0.000000" heading="-1" imageComplexity="VERY_SPARSE" altitudeIsAgl="TRUE" snapToGround="TRUE" snapToNormal="FALSE">
+		<LibraryObject name="{D125B159-10CF-522F-8DD4-166A6B7A4F19}" scale="1.000000"/>
+	</SceneryObject>
+	<!-- North hangar complex: bay 2 -->
+	<SceneryObject lat="53.57768" lon="-113.52063" alt="0.00000000000000" pitch="0.000000" bank="0.000000" heading="-1" imageComplexity="VERY_SPARSE" altitudeIsAgl="TRUE" snapToGround="TRUE" snapToNormal="FALSE">
+		<LibraryObject name="{F2ED7D31-E1F0-5514-A2FE-04A50D47B450}" scale="1.000000"/>
+	</SceneryObject>
+	<!-- North hangar complex: bay 3 (east, separate) -->
+	<SceneryObject lat="53.57763" lon="-113.51814" alt="0.00000000000000" pitch="0.000000" bank="0.000000" heading="-1" imageComplexity="VERY_SPARSE" altitudeIsAgl="TRUE" snapToGround="TRUE" snapToNormal="FALSE">
+		<LibraryObject name="{DFC60679-5B87-52D5-8350-89EBB1AA6C34}" scale="1.000000"/>
+	</SceneryObject>
+	<!-- North complex: shop/office west of bay 1, parking lot to south -->
+	<SceneryObject lat="53.57792" lon="-113.52336" alt="0.00000000000000" pitch="0.000000" bank="0.000000" heading="-1" imageComplexity="VERY_SPARSE" altitudeIsAgl="TRUE" snapToGround="TRUE" snapToNormal="FALSE">
+		<LibraryObject name="{820AAEC6-455B-54BB-93DF-FBB60A2DFCC6}" scale="1.000000"/>
+	</SceneryObject>
+	<!-- North complex: annex north of bay 1 -->
+	<SceneryObject lat="53.57861" lon="-113.52213" alt="0.00000000000000" pitch="0.000000" bank="0.000000" heading="-1" imageComplexity="VERY_SPARSE" altitudeIsAgl="TRUE" snapToGround="TRUE" snapToNormal="FALSE">
+		<LibraryObject name="{EBF48F64-5DE9-5A25-BF27-5583D25D99FD}" scale="1.000000"/>
+	</SceneryObject>
+	<!-- North complex: narrow outbuilding -->
+	<SceneryObject lat="53.57896" lon="-113.52000" alt="0.00000000000000" pitch="0.000000" bank="0.000000" heading="-1" imageComplexity="VERY_SPARSE" altitudeIsAgl="TRUE" snapToGround="TRUE" snapToNormal="FALSE">
+		<LibraryObject name="{D006A58E-ED08-52E6-B584-1CBA5EEEA648}" scale="1.000000"/>
+	</SceneryObject>
+	<Polygon version="0.4.0" displayName="No generated buildings: Hangar 14 (BCATP 1942): OSM way 230718920 footprint 91 x 100" parentGroupID="6" altitude="667.68023681640625">
+		<Attribute name="UniqueGUID" guid="{359C73E8-06BE-4FB2-ABCB-EC942F7761D0}" type="GUID" value="{C73F1544-1BA5-586C-9A73-128FA74274DA}"/>
+		<Attribute name="ExcludeDetectedBuildings" guid="{5C1A2387-1F07-47DF-A569-962CF6258E55}" type="UINT8" value="1"/>
+		<Attribute name="ExcludeOSMBuildings" guid="{F3C2635D-9F2F-458F-8663-90B3837BED09}" type="UINT8" value="1"/>
+		<Attribute name="ExcludeMSBuildings" guid="{F78A3074-8AD5-4B8B-92C4-C1C948BB7AA5}" type="UINT8" value="1"/>
+		<Attribute name="ExcludeTIN" guid="{18B58CBF-AE02-4A19-8AA9-3809E8E73400}" type="UINT8" value="1"/>
+		<Attribute name="ExclusionFlags" guid="{4CACC252-E6DC-419A-B20C-16EC601DF70E}" type="UINT32" value="3"/>
+		<Vertex lat="53.56520640287770" lon="-113.51790829832250"/>
+		<Vertex lat="53.56520640287770" lon="-113.51635170167749"/>
+		<Vertex lat="53.56621359712231" lon="-113.51635170167749"/>
+		<Vertex lat="53.56621359712231" lon="-113.51790829832250"/>
+	</Polygon>
+	<Polygon version="0.4.0" displayName="No generated buildings: Hangar 11 (USAAF T3, 1942)" parentGroupID="6" altitude="667.68023681640625">
+		<Attribute name="UniqueGUID" guid="{359C73E8-06BE-4FB2-ABCB-EC942F7761D0}" type="GUID" value="{E7C1D3B2-AB4C-5BBF-9A26-7B3FC57042E6}"/>
+		<Attribute name="ExcludeDetectedBuildings" guid="{5C1A2387-1F07-47DF-A569-962CF6258E55}" type="UINT8" value="1"/>
+		<Attribute name="ExcludeOSMBuildings" guid="{F3C2635D-9F2F-458F-8663-90B3837BED09}" type="UINT8" value="1"/>
+		<Attribute name="ExcludeMSBuildings" guid="{F78A3074-8AD5-4B8B-92C4-C1C948BB7AA5}" type="UINT8" value="1"/>
+		<Attribute name="ExcludeTIN" guid="{18B58CBF-AE02-4A19-8AA9-3809E8E73400}" type="UINT8" value="1"/>
+		<Attribute name="ExclusionFlags" guid="{4CACC252-E6DC-419A-B20C-16EC601DF70E}" type="UINT32" value="3"/>
+		<Vertex lat="53.56876625899281" lon="-113.50920961614024"/>
+		<Vertex lat="53.56876625899281" lon="-113.50797038385976"/>
+		<Vertex lat="53.56941374100720" lon="-113.50797038385976"/>
+		<Vertex lat="53.56941374100720" lon="-113.50920961614024"/>
+	</Polygon>
+	<Polygon version="0.4.0" displayName="No generated buildings: USAAF hangar T1 (east apron)" parentGroupID="6" altitude="667.68023681640625">
+		<Attribute name="UniqueGUID" guid="{359C73E8-06BE-4FB2-ABCB-EC942F7761D0}" type="GUID" value="{984BEC51-70BC-5B36-80C7-62513BA657E4}"/>
+		<Attribute name="ExcludeDetectedBuildings" guid="{5C1A2387-1F07-47DF-A569-962CF6258E55}" type="UINT8" value="1"/>
+		<Attribute name="ExcludeOSMBuildings" guid="{F3C2635D-9F2F-458F-8663-90B3837BED09}" type="UINT8" value="1"/>
+		<Attribute name="ExcludeMSBuildings" guid="{F78A3074-8AD5-4B8B-92C4-C1C948BB7AA5}" type="UINT8" value="1"/>
+		<Attribute name="ExcludeTIN" guid="{18B58CBF-AE02-4A19-8AA9-3809E8E73400}" type="UINT8" value="1"/>
+		<Attribute name="ExclusionFlags" guid="{4CACC252-E6DC-419A-B20C-16EC601DF70E}" type="UINT32" value="3"/>
+		<Vertex lat="53.57077625899281" lon="-113.50936627172435"/>
+		<Vertex lat="53.57077625899281" lon="-113.50835372827565"/>
+		<Vertex lat="53.57142374100719" lon="-113.50835372827565"/>
+		<Vertex lat="53.57142374100719" lon="-113.50936627172435"/>
+	</Polygon>
+	<Polygon version="0.4.0" displayName="No generated buildings: USAAF hangar T2 (east apron, narrow)" parentGroupID="6" altitude="667.68023681640625">
+		<Attribute name="UniqueGUID" guid="{359C73E8-06BE-4FB2-ABCB-EC942F7761D0}" type="GUID" value="{13F3557E-43F7-5B27-875C-0D655494B1F9}"/>
+		<Attribute name="ExcludeDetectedBuildings" guid="{5C1A2387-1F07-47DF-A569-962CF6258E55}" type="UINT8" value="1"/>
+		<Attribute name="ExcludeOSMBuildings" guid="{F3C2635D-9F2F-458F-8663-90B3837BED09}" type="UINT8" value="1"/>
+		<Attribute name="ExcludeMSBuildings" guid="{F78A3074-8AD5-4B8B-92C4-C1C948BB7AA5}" type="UINT8" value="1"/>
+		<Attribute name="ExcludeTIN" guid="{18B58CBF-AE02-4A19-8AA9-3809E8E73400}" type="UINT8" value="1"/>
+		<Attribute name="ExclusionFlags" guid="{4CACC252-E6DC-419A-B20C-16EC601DF70E}" type="UINT32" value="3"/>
+		<Vertex lat="53.56974928057554" lon="-113.50928003324769"/>
+		<Vertex lat="53.56974928057554" lon="-113.50859996675230"/>
+		<Vertex lat="53.57045071942446" lon="-113.50859996675230"/>
+		<Vertex lat="53.57045071942446" lon="-113.50928003324769"/>
+	</Polygon>
+	<Polygon version="0.4.0" displayName="No generated buildings: BCATP hangar row A along Kingsway (long axis NW-SE)" parentGroupID="6" altitude="667.68023681640625">
+		<Attribute name="UniqueGUID" guid="{359C73E8-06BE-4FB2-ABCB-EC942F7761D0}" type="GUID" value="{DA48EA9E-7DDA-5D7B-BAF0-C98A2AEB2F1E}"/>
+		<Attribute name="ExcludeDetectedBuildings" guid="{5C1A2387-1F07-47DF-A569-962CF6258E55}" type="UINT8" value="1"/>
+		<Attribute name="ExcludeOSMBuildings" guid="{F3C2635D-9F2F-458F-8663-90B3837BED09}" type="UINT8" value="1"/>
+		<Attribute name="ExcludeMSBuildings" guid="{F78A3074-8AD5-4B8B-92C4-C1C948BB7AA5}" type="UINT8" value="1"/>
+		<Attribute name="ExcludeTIN" guid="{18B58CBF-AE02-4A19-8AA9-3809E8E73400}" type="UINT8" value="1"/>
+		<Attribute name="ExclusionFlags" guid="{4CACC252-E6DC-419A-B20C-16EC601DF70E}" type="UINT32" value="3"/>
+		<Vertex lat="53.56983600082377" lon="-113.52026774692531"/>
+		<Vertex lat="53.56931249036736" lon="-113.52124483019290"/>
+		<Vertex lat="53.56856399917623" lon="-113.52011225307469"/>
+		<Vertex lat="53.56908750963265" lon="-113.51913516980710"/>
+	</Polygon>
+	<Polygon version="0.4.0" displayName="No generated buildings: BCATP hangar row B along Kingsway (long axis NW-SE)" parentGroupID="6" altitude="667.68023681640625">
+		<Attribute name="UniqueGUID" guid="{359C73E8-06BE-4FB2-ABCB-EC942F7761D0}" type="GUID" value="{CFD4D29E-46B7-5DC7-95DF-229A8C9DB438}"/>
+		<Attribute name="ExcludeDetectedBuildings" guid="{5C1A2387-1F07-47DF-A569-962CF6258E55}" type="UINT8" value="1"/>
+		<Attribute name="ExcludeOSMBuildings" guid="{F3C2635D-9F2F-458F-8663-90B3837BED09}" type="UINT8" value="1"/>
+		<Attribute name="ExcludeMSBuildings" guid="{F78A3074-8AD5-4B8B-92C4-C1C948BB7AA5}" type="UINT8" value="1"/>
+		<Attribute name="ExcludeTIN" guid="{18B58CBF-AE02-4A19-8AA9-3809E8E73400}" type="UINT8" value="1"/>
+		<Attribute name="ExclusionFlags" guid="{4CACC252-E6DC-419A-B20C-16EC601DF70E}" type="UINT32" value="3"/>
+		<Vertex lat="53.56882600082377" lon="-113.51910774692531"/>
+		<Vertex lat="53.56830249036736" lon="-113.52008483019290"/>
+		<Vertex lat="53.56755399917623" lon="-113.51895225307469"/>
+		<Vertex lat="53.56807750963264" lon="-113.51797516980710"/>
+	</Polygon>
+	<Polygon version="0.4.0" displayName="No generated buildings: BCATP hangar row C along Kingsway (long axis NW-SE)" parentGroupID="6" altitude="667.68023681640625">
+		<Attribute name="UniqueGUID" guid="{359C73E8-06BE-4FB2-ABCB-EC942F7761D0}" type="GUID" value="{7B52BEEF-B53E-53CD-840D-404E1C794959}"/>
+		<Attribute name="ExcludeDetectedBuildings" guid="{5C1A2387-1F07-47DF-A569-962CF6258E55}" type="UINT8" value="1"/>
+		<Attribute name="ExcludeOSMBuildings" guid="{F3C2635D-9F2F-458F-8663-90B3837BED09}" type="UINT8" value="1"/>
+		<Attribute name="ExcludeMSBuildings" guid="{F78A3074-8AD5-4B8B-92C4-C1C948BB7AA5}" type="UINT8" value="1"/>
+		<Attribute name="ExcludeTIN" guid="{18B58CBF-AE02-4A19-8AA9-3809E8E73400}" type="UINT8" value="1"/>
+		<Attribute name="ExclusionFlags" guid="{4CACC252-E6DC-419A-B20C-16EC601DF70E}" type="UINT32" value="3"/>
+		<Vertex lat="53.56796600082377" lon="-113.51784774692531"/>
+		<Vertex lat="53.56744249036736" lon="-113.51882483019290"/>
+		<Vertex lat="53.56669399917623" lon="-113.51769225307469"/>
+		<Vertex lat="53.56721750963264" lon="-113.51671516980710"/>
+	</Polygon>
+	<Polygon version="0.4.0" displayName="No generated buildings: 1938 arched hangar, west side (replica at Fort Edmonton Park" parentGroupID="6" altitude="667.68023681640625">
+		<Attribute name="UniqueGUID" guid="{359C73E8-06BE-4FB2-ABCB-EC942F7761D0}" type="GUID" value="{1A7D2098-F1CD-5F62-8F3E-399742F5EE14}"/>
+		<Attribute name="ExcludeDetectedBuildings" guid="{5C1A2387-1F07-47DF-A569-962CF6258E55}" type="UINT8" value="1"/>
+		<Attribute name="ExcludeOSMBuildings" guid="{F3C2635D-9F2F-458F-8663-90B3837BED09}" type="UINT8" value="1"/>
+		<Attribute name="ExcludeMSBuildings" guid="{F78A3074-8AD5-4B8B-92C4-C1C948BB7AA5}" type="UINT8" value="1"/>
+		<Attribute name="ExcludeTIN" guid="{18B58CBF-AE02-4A19-8AA9-3809E8E73400}" type="UINT8" value="1"/>
+		<Attribute name="ExclusionFlags" guid="{4CACC252-E6DC-419A-B20C-16EC601DF70E}" type="UINT32" value="3"/>
+		<Vertex lat="53.56966985460385" lon="-113.52613711396540"/>
+		<Vertex lat="53.56889840567836" lon="-113.52532007297489"/>
+		<Vertex lat="53.56916882725579" lon="-113.52459897881198"/>
+		<Vertex lat="53.56994027618128" lon="-113.52541601980251"/>
+	</Polygon>
+	<Polygon version="0.4.0" displayName="No generated buildings: Administration Building (1940s-50s style), faces the circula" parentGroupID="6" altitude="667.68023681640625">
+		<Attribute name="UniqueGUID" guid="{359C73E8-06BE-4FB2-ABCB-EC942F7761D0}" type="GUID" value="{195ED077-894F-541E-B106-4375599444BF}"/>
+		<Attribute name="ExcludeDetectedBuildings" guid="{5C1A2387-1F07-47DF-A569-962CF6258E55}" type="UINT8" value="1"/>
+		<Attribute name="ExcludeOSMBuildings" guid="{F3C2635D-9F2F-458F-8663-90B3837BED09}" type="UINT8" value="1"/>
+		<Attribute name="ExcludeMSBuildings" guid="{F78A3074-8AD5-4B8B-92C4-C1C948BB7AA5}" type="UINT8" value="1"/>
+		<Attribute name="ExcludeTIN" guid="{18B58CBF-AE02-4A19-8AA9-3809E8E73400}" type="UINT8" value="1"/>
+		<Attribute name="ExclusionFlags" guid="{4CACC252-E6DC-419A-B20C-16EC601DF70E}" type="UINT32" value="3"/>
+		<Vertex lat="53.57024889448058" lon="-113.52314238295706"/>
+		<Vertex lat="53.57028390358319" lon="-113.52220725136930"/>
+		<Vertex lat="53.57057110551943" lon="-113.52223761704293"/>
+		<Vertex lat="53.57053609641682" lon="-113.52317274863070"/>
+	</Polygon>
+	<Polygon version="0.4.0" displayName="No generated buildings: North hangar complex: bay 1 (1944 photo)" parentGroupID="6" altitude="667.68023681640625">
+		<Attribute name="UniqueGUID" guid="{359C73E8-06BE-4FB2-ABCB-EC942F7761D0}" type="GUID" value="{30876A4F-DFCB-5893-9240-F9F2EBBF96F5}"/>
+		<Attribute name="ExcludeDetectedBuildings" guid="{5C1A2387-1F07-47DF-A569-962CF6258E55}" type="UINT8" value="1"/>
+		<Attribute name="ExcludeOSMBuildings" guid="{F3C2635D-9F2F-458F-8663-90B3837BED09}" type="UINT8" value="1"/>
+		<Attribute name="ExcludeMSBuildings" guid="{F78A3074-8AD5-4B8B-92C4-C1C948BB7AA5}" type="UINT8" value="1"/>
+		<Attribute name="ExcludeTIN" guid="{18B58CBF-AE02-4A19-8AA9-3809E8E73400}" type="UINT8" value="1"/>
+		<Attribute name="ExclusionFlags" guid="{4CACC252-E6DC-419A-B20C-16EC601DF70E}" type="UINT32" value="3"/>
+		<Vertex lat="53.57716289478178" lon="-113.52267210622708"/>
+		<Vertex lat="53.57717796160748" lon="-113.52122151866875"/>
+		<Vertex lat="53.57807710521823" lon="-113.52124789377294"/>
+		<Vertex lat="53.57806203839253" lon="-113.52269848133126"/>
+	</Polygon>
+	<Polygon version="0.4.0" displayName="No generated buildings: North hangar complex: bay 2" parentGroupID="6" altitude="667.68023681640625">
+		<Attribute name="UniqueGUID" guid="{359C73E8-06BE-4FB2-ABCB-EC942F7761D0}" type="GUID" value="{C3B78A71-461A-5AE4-9A3B-9B2ADC8D1A30}"/>
+		<Attribute name="ExcludeDetectedBuildings" guid="{5C1A2387-1F07-47DF-A569-962CF6258E55}" type="UINT8" value="1"/>
+		<Attribute name="ExcludeOSMBuildings" guid="{F3C2635D-9F2F-458F-8663-90B3837BED09}" type="UINT8" value="1"/>
+		<Attribute name="ExcludeMSBuildings" guid="{F78A3074-8AD5-4B8B-92C4-C1C948BB7AA5}" type="UINT8" value="1"/>
+		<Attribute name="ExcludeTIN" guid="{18B58CBF-AE02-4A19-8AA9-3809E8E73400}" type="UINT8" value="1"/>
+		<Attribute name="ExclusionFlags" guid="{4CACC252-E6DC-419A-B20C-16EC601DF70E}" type="UINT32" value="3"/>
+		<Vertex lat="53.57722320867398" lon="-113.52131188565293"/>
+		<Vertex lat="53.57723764771527" lon="-113.51992173924287"/>
+		<Vertex lat="53.57813679132602" lon="-113.51994811434706"/>
+		<Vertex lat="53.57812235228473" lon="-113.52133826075712"/>
+	</Polygon>
+	<Polygon version="0.4.0" displayName="No generated buildings: North hangar complex: bay 3 (east, separate)" parentGroupID="6" altitude="667.68023681640625">
+		<Attribute name="UniqueGUID" guid="{359C73E8-06BE-4FB2-ABCB-EC942F7761D0}" type="GUID" value="{F744F4A0-AAD7-5951-9DE0-CC5F0808B239}"/>
+		<Attribute name="ExcludeDetectedBuildings" guid="{5C1A2387-1F07-47DF-A569-962CF6258E55}" type="UINT8" value="1"/>
+		<Attribute name="ExcludeOSMBuildings" guid="{F3C2635D-9F2F-458F-8663-90B3837BED09}" type="UINT8" value="1"/>
+		<Attribute name="ExcludeMSBuildings" guid="{F78A3074-8AD5-4B8B-92C4-C1C948BB7AA5}" type="UINT8" value="1"/>
+		<Attribute name="ExcludeTIN" guid="{18B58CBF-AE02-4A19-8AA9-3809E8E73400}" type="UINT8" value="1"/>
+		<Attribute name="ExclusionFlags" guid="{4CACC252-E6DC-419A-B20C-16EC601DF70E}" type="UINT32" value="3"/>
+		<Vertex lat="53.57733134353636" lon="-113.51875094986084"/>
+		<Vertex lat="53.57734421311665" lon="-113.51751190632143"/>
+		<Vertex lat="53.57792865646363" lon="-113.51752905013916"/>
+		<Vertex lat="53.57791578688335" lon="-113.51876809367857"/>
+	</Polygon>
+	<Polygon version="0.4.0" displayName="No generated buildings: North complex: shop/office west of bay 1, parking lot to sou" parentGroupID="6" altitude="667.68023681640625">
+		<Attribute name="UniqueGUID" guid="{359C73E8-06BE-4FB2-ABCB-EC942F7761D0}" type="GUID" value="{D29CEE9C-0174-5618-AB32-E39E8C4CCA10}"/>
+		<Attribute name="ExcludeDetectedBuildings" guid="{5C1A2387-1F07-47DF-A569-962CF6258E55}" type="UINT8" value="1"/>
+		<Attribute name="ExcludeOSMBuildings" guid="{F3C2635D-9F2F-458F-8663-90B3837BED09}" type="UINT8" value="1"/>
+		<Attribute name="ExcludeMSBuildings" guid="{F78A3074-8AD5-4B8B-92C4-C1C948BB7AA5}" type="UINT8" value="1"/>
+		<Attribute name="ExcludeTIN" guid="{18B58CBF-AE02-4A19-8AA9-3809E8E73400}" type="UINT8" value="1"/>
+		<Attribute name="ExclusionFlags" guid="{4CACC252-E6DC-419A-B20C-16EC601DF70E}" type="UINT32" value="3"/>
+		<Vertex lat="53.57773096717676" lon="-113.52380790171561"/>
+		<Vertex lat="53.57774038394282" lon="-113.52290128449167"/>
+		<Vertex lat="53.57810903282324" lon="-113.52291209828438"/>
+		<Vertex lat="53.57809961605717" lon="-113.52381871550833"/>
+	</Polygon>
+	<Polygon version="0.4.0" displayName="No generated buildings: North complex: annex north of bay 1" parentGroupID="6" altitude="667.68023681640625">
+		<Attribute name="UniqueGUID" guid="{359C73E8-06BE-4FB2-ABCB-EC942F7761D0}" type="GUID" value="{527E81E6-31F6-5192-B3E7-83E0670D23F9}"/>
+		<Attribute name="ExcludeDetectedBuildings" guid="{5C1A2387-1F07-47DF-A569-962CF6258E55}" type="UINT8" value="1"/>
+		<Attribute name="ExcludeOSMBuildings" guid="{F3C2635D-9F2F-458F-8663-90B3837BED09}" type="UINT8" value="1"/>
+		<Attribute name="ExcludeMSBuildings" guid="{F78A3074-8AD5-4B8B-92C4-C1C948BB7AA5}" type="UINT8" value="1"/>
+		<Attribute name="ExcludeTIN" guid="{18B58CBF-AE02-4A19-8AA9-3809E8E73400}" type="UINT8" value="1"/>
+		<Attribute name="ExclusionFlags" guid="{4CACC252-E6DC-419A-B20C-16EC601DF70E}" type="UINT32" value="3"/>
+		<Vertex lat="53.57835384529816" lon="-113.52254570300867"/>
+		<Vertex lat="53.57836263427982" lon="-113.52169952693299"/>
+		<Vertex lat="53.57886615470184" lon="-113.52171429699133"/>
+		<Vertex lat="53.57885736572018" lon="-113.52256047306702"/>
+	</Polygon>
+	<Polygon version="0.4.0" displayName="No generated buildings: North complex: narrow outbuilding" parentGroupID="6" altitude="667.68023681640625">
+		<Attribute name="UniqueGUID" guid="{359C73E8-06BE-4FB2-ABCB-EC942F7761D0}" type="GUID" value="{5754E913-FB23-5B61-881A-D20E948E92D2}"/>
+		<Attribute name="ExcludeDetectedBuildings" guid="{5C1A2387-1F07-47DF-A569-962CF6258E55}" type="UINT8" value="1"/>
+		<Attribute name="ExcludeOSMBuildings" guid="{F3C2635D-9F2F-458F-8663-90B3837BED09}" type="UINT8" value="1"/>
+		<Attribute name="ExcludeMSBuildings" guid="{F78A3074-8AD5-4B8B-92C4-C1C948BB7AA5}" type="UINT8" value="1"/>
+		<Attribute name="ExcludeTIN" guid="{18B58CBF-AE02-4A19-8AA9-3809E8E73400}" type="UINT8" value="1"/>
+		<Attribute name="ExclusionFlags" guid="{4CACC252-E6DC-419A-B20C-16EC601DF70E}" type="UINT32" value="3"/>
+		<Vertex lat="53.57872386846969" lon="-113.52021979677890"/>
+		<Vertex lat="53.57872857685273" lon="-113.51976648816692"/>
+		<Vertex lat="53.57919613153032" lon="-113.51978020322109"/>
+		<Vertex lat="53.57919142314728" lon="-113.52023351183307"/>
+	</Polygon>
+	<!-- END historic buildings -->
 </FSData>

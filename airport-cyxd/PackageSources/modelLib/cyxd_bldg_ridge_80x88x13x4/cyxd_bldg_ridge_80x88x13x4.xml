@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ModelInfo guid="{F2ED7D31-E1F0-5514-A2FE-04A50D47B450}" version="1.1">
+	<LODS>
+		<LOD minSize="0" ModelFile="cyxd_bldg_ridge_80x88x13x4.gltf"/>
+	</LODS>
+</ModelInfo>
