@@ -54,7 +54,7 @@ Credit: his work is a friend's; ask before copying wholesale, and attribute in r
 1. Read this file, then `git log --oneline -8` and `git status`. Confirm the CYXD.xml approach/threshold changes are still in place (`grep -n "Approach type\|OffsetThreshold\|ATIS" airport-cyxd/PackageSources/Scenery/airport-cyxd/CYXD.xml`).
 2. Ask the user for the result of the SDK rebuild and in-sim test (section above) before changing approach data again. Do not re-derive the diagnosis; act on the compiler/sim result.
 3. If the user answers the Runway 04 questions, adjust `<Runway number="04">` heading/centre and its `RunwayStart` elements together, then regenerate the plots with `python docs/cyxd/compare/compare.py` (needs matplotlib) and check the overlay.
-4. Do not try `fspackagetool` from the agent shell again; it does not work headless here.
+4. Build with `build.bat cyxd` from the repo root (from bash: `cmd.exe //c build.bat cyxd`); see `CLAUDE.md`. Read `_build/last-build.txt` for the result instead of asking the user to copy console output. Calling `fspackagetool` directly from the agent shell exited at once ("Attached to EXE"); if `build.bat` reports no build (exit code 2), retry with `-window`, and failing that ask the user to build in DevMode.
 5. Commit with a leading robot emoji and the Co-Authored-By trailer from the session reminder. Leave the untracked `.claude/` folder alone. Bump the package version and add a ReleaseNotes entry (0.2.2) when the user confirms the changes work.
 6. Before importing anything from roscohead's files, confirm with the user which pieces they want.
 
@@ -136,6 +136,12 @@ Source: TSB Aviation Investigation Report A04W0200 (Beech King Air C-FGXH, Edmon
 - Plate data from the figures: course 163 mag inbound (343 mag back course), IF **LEFAT** at 10 DME, min 4300 ft to 7.5 DME, min 3700 to 5.5 DME, min 3400 from 5.5 DME, XD NDB (266) at 4.5 DME, step at 0.6 DME. DME is the IXD DME. Also: localizer intercept 8.8 nm from threshold, field wx/MSA 4100 ft.
 - Our XD NDB is 4.5 nm due north of the IXD DME, matching the plate. The 343.8 mag course is 360 true here, so LEFAT = 10 nm due north of the DME: 53.735568, -113.511002 (named waypoint `LEFAT`); unnamed `CY16A` (7.5 DME) and `CY16B` (5.5 DME) added as step-down points.
 - Approach `LOCALIZER_BACKCOURSE` 16 Z now: IF LEFAT 4300 > CY16A 4300 > CY16B 3700 > XD 3400 (FAF) > RW16 (2400 A, MAP). Altitudes after XD and the missed approach are still placeholders (the 0.6 DME step altitude is not legible). The older NDB 16 Y approach was not changed (no plate for it); LEFAT is a 2004-era fix, so it is not period-correct for 1940-85.
+
+## 1984 Alpha 7 routing (CASB report 84-H40006)
+Source: CASB occurrence report 84-H40006 (Wapiti Aviation PA-31-350 C-GXUC, 19 Oct 1984, 20 mi SE of High Prairie; released under ATIP request AI-2023-00023), saved as `docs/cyxd/casb-84-h40006-wapiti-402-alpha7-1984.pdf`. About the accident, not CYXD; only the departure and route context is useful.
+- Flights left Edmonton Municipal (CYXD) from runway 34 on the "Municipal One" departure, then Alpha 7 (low-level airway, Edmonton NDB to Peace River NDB; MEA 7000, MOCA 5600 near High Prairie). Appendix A sketch: Edmonton, Athabasca, Swan Hills NDB, High Prairie, Peace River, heading roughly NW.
+- No departure plate, fixes or altitudes are given, and airways/SIDs are not authorable in this package, so nothing was changed in `CYXD.xml`. An era-correct SID would need an early-1980s plate (CFS/RAC).
+- Report read through Appendix B (pdf p.1-66); Appendices C-E not read.
 
 ## Sources used for reference material (all in docs/cyxd/)
 - `edmonton-transmitter-site-radiocom.jpg`: radiocom.ca Edmonton Radio article, photo 4.
