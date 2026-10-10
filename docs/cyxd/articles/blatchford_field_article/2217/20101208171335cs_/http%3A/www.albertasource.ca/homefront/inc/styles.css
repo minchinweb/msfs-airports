@@ -1,0 +1,526 @@
+/* CSS Document */
+body {
+	background-color:#413B3B;
+}
+img {
+	border:none;
+	padding:0px;
+	margin:0px;
+}
+blockquote{
+	padding-right: 10px;
+	font-style:italic;
+}
+.Float_right {
+	float: right;
+	margin:5px 5px 5px 7px;
+	padding:0px;
+}
+.Float_left {
+	float: left;
+	margin:0px;
+	padding:10px 7px 5px 5px;
+}
+.ent {
+	width:755px;
+	margin:0px auto;
+	padding:0px;
+	border: solid 3px #FF4300;
+	background:url(../../../../../20101208171335im_/http%253A/www.albertasource.ca/homefront/images/layout/main.jpg);
+	font-size:.8em;
+	font-family: Arial, Helvetica, sans-serif;
+	color:#000000;
+}
+.main {
+	background: url(../../../../../20101208171335im_/http%253A/www.albertasource.ca/homefront/images/layout/main.jpg) #000033 repeat-y;
+	margin:0px;
+	padding:0px;
+}
+
+/* ------------------------------------ Top Navigation ------------------------------------------*/ 
+.top_nav {
+	background-image:url(../../../../../20101208171335im_/http%253A/www.albertasource.ca/homefront/images/layout/full_top_banner.jpg);	
+	height:167px;
+}
+.top_nav ul{
+	list-style-type: none;
+	padding:135px 0px 0px 170px;
+	margin:0px;
+	color: #FFFFFF;
+	font-weight: bold;
+	text-align: left;
+}
+.top_nav li{
+	display:inline;
+	margin:0px;
+	padding:0px 7px 0px 5px;
+	border-right:solid 2px #CCCCCC;
+}
+.top_nav a{
+	color: #FFFFFF;
+	text-decoration: none;
+}
+.top_nav a:hover{
+	color: #CC9966;
+}
+#search{
+	width: 24px;
+	height: 19px;
+	background: #000000;
+	border-right:none;
+}
+
+
+/* ------------------------------------ Side Navigation ---------------------------------------- */
+.sidenav {
+	width:171px;
+	background: url(../../../../../20101208171335im_/http%253A/www.albertasource.ca/homefront/images/layout/top_left_side.jpg) no-repeat top;
+	float:left;
+	margin:0px;
+	padding:0px;
+}
+.nav {
+	width:120px;
+	margin:0px auto;
+	padding:0px;
+}
+.nav img {
+	margin:3px 0px;
+	padding:0px;
+}
+.nav a:hover img{
+	border:solid 3px #FF4300;
+	width:114px;
+}
+.sponsors {
+	margin:0px 6px;
+	padding:0px;
+}
+
+/* ------------------------------------ Bread Crumb Trail -------------------------------------- */
+.bread_crumbs{
+	margin:0px;
+	padding:0px;
+	color: #003366;
+	font-weight: bold;
+	background: #F2E6C0;
+	vertical-align: top;
+	text-align: left;
+}
+.bread_crumbs a{
+	color: #000000;
+	text-decoration: none;
+}
+.bread_crumbs a:hover{
+	color: #CC3300;
+}
+/* -------------------------------------- Content ---------------------------------------------- */
+.content {
+	width:550px;
+	margin:0px 0px 0px 174px;
+	padding:5px 5px;
+/*	float:left;
+*/	background:#F4E6C1;
+	font-size: 14px;
+}
+
+.content h2 {
+	color:#336699;
+	margin: 10px 0px;
+}
+.content ul{
+	margin:0px 7px 0px 35px;
+	padding:0px;
+}
+.content li {
+	margin:0px;
+	padding:2px 5px;
+}
+.essay li{
+	padding:5px;
+}
+.small {
+	color:black;
+	font-size: 0.8em;
+	font-weight:400;
+}
+#small2{
+	font-size:.9em;
+	font-style:italic;
+}
+
+.content dt {
+	font-weight: bold;
+	padding-bottom: .5em;
+}
+
+.content dd {
+	padding-bottom: 1em;
+}
+
+.content a{
+	color:#336699;
+	font-weight: bold;
+	text-decoration: none;
+}
+.content a:visited{
+	color: #003366;
+}
+.content a:hover{
+	color: #000033;
+}
+.content h1, h3, h4, h5 {
+	margin:0px;
+	padding:0px;
+}
+.content p{
+	padding:0px 10px 0px 5px;
+	line-height: 1.35em;
+}
+.content sup a{
+	font-size: .85em;
+}
+
+.resource ul{
+	list-style:outside;
+	list-style-type: georgian;
+}
+.security ol{
+	list-style:outside;
+}
+.security li{
+	list-style:outside;
+	list-style-type:lower-alpha;
+}
+.gallery ul{
+	list-style:outside;
+}
+.gallery li{
+	margin:0px;
+	padding: 5px 0px 10px 0px;
+}
+.special_quote{
+	text-align:right;
+}
+.paging {
+	margin: 10px 15px 5px 0px;
+	padding: 0px 5px;
+	float:right;
+}
+.paging_btm {
+	float:right;
+	margin: 5px 15px 0px 0px;
+	padding: 0px 5px;
+	width: 140px;
+}
+.Search_form{
+	margin:0px;
+	padding: 15px 0px;
+}
+.Con_Hr {
+	width:350px;
+	color:#336699;
+	background-color:#336699;/*diff browser fix to have both color and background when defining hr css equivalent of noshade also requires height and border:0px*/
+	margin:3px 0px 5px 40px;
+	padding:0px;
+	height: 1px;
+	border: 0px;
+	text-align:left;
+}
+.T_n_B {
+	padding:0px;
+	margin:0px 0px 0px 175px;
+	color: #000000;
+	font-weight: bold;
+}
+#disp_img{/*This is for the display image page*/
+	margin: 15px 35px;
+	padding:0px;
+	text-align: center;
+}
+#disp_img h1{
+	margin: 20px 0px 0px 0px;
+	padding:0px;
+	text-align: center;
+}
+#disp_img img{
+	margin:0px auto;
+	padding: 15px;
+	text-align: center;
+}
+.img_table{
+	border:none;
+	margin: 20px 55px;
+	padding: 2px 0px 0px 7px;
+	text-align:left;
+/*	border-spacing:5px; This should not be used for spacing for tablerows/images bc it is css2 compatible only
+presently we do not code for css2 bc some browsers dont read it as yet*/
+}
+.img_table th td{
+	margin:0px 55px;
+	padding:5px;
+}
+.img_table img{/*This gives spaces around each image like the table td spacing*/
+	padding: 2px;
+}
+.T_n_B a{
+	color: #CC3300;
+	text-decoration: none;
+}
+.T_n_B a:hover{
+	color: #000000;
+}
+/* ------------------------------------- Search Link ------------------------------------------- */
+.right_nav{
+	float:right;
+	width:158px;
+}
+.Searchlink {
+	margin:0px;
+	padding:0px;
+	width:158px;
+	background:url(../../../../../20101208171335im_/http%253A/www.albertasource.ca/homefront/images/layout/search_repeat.jpg);
+	background-color:#FF6600;
+	color: #003366;
+	font-weight:bold
+}
+.Searchlink ul {
+	margin:0px;
+	padding:5px 5px 0px 20px;
+}
+.Searchlink li {
+	list-style-type:none;
+	margin:0px;
+	padding:3px 0px;
+}
+.Searchlink a{
+	text-decoration:none;
+}
+.Searchlink a:link{
+	color: #FFFFFF;
+}
+.Searchlink a:visited{
+	color: #FFFFFF;
+}
+.Searchlink a:hover{
+	color: #003366;
+}
+.S_top {
+	margin:0px;
+	padding:0px;
+	width:158px;
+	height:42px;
+	background-image:url(../../../../../20101208171335im_/http%253A/www.albertasource.ca/homefront/images/layout/search_top.jpg);
+}
+.S_bottom {
+	margin:0px;
+	padding:0px;
+	background-image:url(../../../../../20101208171335im_/http%253A/www.albertasource.ca/homefront/images/layout/search_bottom.jpg);
+	width:158px;
+	height:40px;
+}
+/* ------------------------------------- Quick Links ------------------------------------------- */
+.Quicklinks {
+	margin:0px;
+	padding:0px;
+	width:158px;
+	background:url(../../../../../20101208171335im_/http%253A/www.albertasource.ca/homefront/images/layout/quick_repeat.jpg);
+	background-color:#FF6600;
+	color: #003366;
+	font-weight:bold
+}
+.Quicklinks ul {
+	margin:0px;
+	padding:5px 5px 0px 20px;
+}
+.Quicklinks li {
+	list-style-type:none;
+	margin:0px;
+	padding:3px 0px;
+}
+.Quicklinks a{
+	text-decoration:none;
+}
+.Quicklinks a:link{
+	color: #FFFFFF;
+}
+.Quicklinks a:visited{
+	color: #FFFFFF;
+}
+.Quicklinks a:hover{
+	color: #003366;
+}
+.Q_top {
+	margin:0px;
+	padding:0px;
+	width:158px;
+	height:42px;
+	background-image:url(../../../../../20101208171335im_/http%253A/www.albertasource.ca/homefront/images/layout/quick_top.jpg);
+}
+.Q_bottom {
+	margin:0px;
+	padding:0px;
+	background-image:url(../../../../../20101208171335im_/http%253A/www.albertasource.ca/homefront/images/layout/quick_bottom.jpg);
+	width:158px;
+	height:40px;
+}
+/* ------------------------------------- Photo Essay ------------------------------------------- */
+.Photo_Essay {
+	margin:0px;
+	padding:0px;
+	width:158px;
+	background:url(../../../../../20101208171335im_/http%253A/www.albertasource.ca/homefront/images/layout/photo_repeat.jpg);
+	background-color:#FF6600;
+	color: #003366;
+	font-weight:bold
+
+}
+.Photo_Essay ul {
+	margin:0px;
+	padding:5px 5px 0px 20px;
+}
+.Photo_Essay li {
+	list-style-type:none;
+	margin:0px;
+	padding:3px 0px;
+}
+.Photo_Essay a{
+	text-decoration:none;
+}
+.Photo_Essay a:link{
+	color: #FFFFFF;
+}
+.Photo_Essay a:visited{
+	color: #FFFFFF;
+}
+.Photo_Essay a:hover{
+	color: #003366;
+}
+.PE_top {
+	margin:0px;
+	padding:0px;
+	width:158px;
+	height:42px;
+	background-image:url(../../../../../20101208171335im_/http%253A/www.albertasource.ca/homefront/images/layout/photo_top.jpg);
+}
+.PE_bottom {
+	margin:0px;
+	padding:0px;
+	background-image:url(../../../../../20101208171335im_/http%253A/www.albertasource.ca/homefront/images/layout/photo_bottom.jpg);
+	width:158px;
+	height:40px;
+}
+/* ---------------------------------- Feature Articles ----------------------------------------- */
+.Feature_Articles {
+	margin:0px;
+	padding:0px;
+	width:158px;
+	background:url(../../../../../20101208171335im_/http%253A/www.albertasource.ca/homefront/images/layout/feat_repeat.jpg);
+	background-color:#FF6600;
+	color: #003366;
+	font-weight:bold
+
+}
+.Feature_Articles ul {
+	margin:0px;
+	padding:5px 5px 0px 20px;
+}
+.Feature_Articles li {
+	list-style-type:none;
+	margin:0px;
+	padding:3px 0px;
+}
+.Feature_Articles a{
+	text-decoration:none;
+}
+.Feature_Articles a:link{
+	color: #FFFFFF;
+}
+.Feature_Articles a:visited{
+	color: #FFFFFF;
+}
+.Feature_Articles a:hover{
+	color: #003366;
+}
+.FA_top {
+	margin:0px;
+	padding:0px;
+	width:158px;
+	height:59px;
+	background-image:url(../../../../../20101208171335im_/http%253A/www.albertasource.ca/homefront/images/layout/feat_top.jpg);
+}
+.FA_bottom {
+	margin:0px;
+	padding:0px;
+	background-image:url(../../../../../20101208171335im_/http%253A/www.albertasource.ca/homefront/images/layout/feat_bottom.jpg);
+	width:158px;
+	height:40px;
+}
+/* --------------------------------------- Bottom ---------------------------------------------- */
+.bottom {
+	width:753px;
+	height:53px;
+	margin:0px;
+	padding:0px;
+	background:url(../../../../../20101208171335im_/http%253A/www.albertasource.ca/homefront/images/layout/bottom.jpg);
+	color:#FFFFFF;
+	font-weight:bold;
+}
+
+.copyright{
+	padding:23px 0px 0px 0px;
+	margin:0px 0px 0px 170px;
+	color:#FFFFFF;
+	font-weight: bold;
+}
+.copyright a{
+	color: #CCCCCC;
+	text-decoration: none;
+}
+.copyright a:hover{
+	color: #666666;
+}
+/* -------------------------------------- Foot Note -------------------------------------------- */ 
+.FN {
+	font-size:.8em;
+}
+/* --------------------------------------- Popup ----------------------------------------------- */
+/* --------------------------------------- Extra ----------------------------------------------- */
+hr {
+	margin:8px 5px 0px 0px;
+	padding:0px;
+	color: #336699;
+}
+.paragraph_block{/*this can be a blockquote with margin/padding adjustments*/
+	margin:0px 35px 0px 35px; 
+}
+.img_table{
+	border:none;
+	margin:  0px;
+	padding: 2px 0px;
+/*	border-spacing:5px; This should not be used for spacing for tablerows/images bc it is css2 compatible only
+presently we do not code for css2 bc some browsers dont read it as yet*/
+}
+.img_table th td{
+	margin:0px;
+	padding:5px;
+}
+.img_table caption{
+	text-align:left;
+	color:#336699;
+	font-weight:bold;
+	margin:10px 0px 0px 7px;
+	padding:0px;
+}
+.img_table img{/*This gives spaces around each image like the table td spacing*/
+	padding: 2px;
+}
+
+/*
+     FILE ARCHIVED ON 16:03:31 Dec 08, 2010 AND RETRIEVED FROM THE
+     INTERNET ARCHIVE ON 23:00:08 Oct 10, 2026.
+     JAVASCRIPT APPENDED BY WAYBACK MACHINE, COPYRIGHT INTERNET ARCHIVE.
+
+     ALL OTHER CONTENT MAY ALSO BE PROTECTED BY COPYRIGHT (17 U.S.C.
+     SECTION 108(a)(3)).
+*/
