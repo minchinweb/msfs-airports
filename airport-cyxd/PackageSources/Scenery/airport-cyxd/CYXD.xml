@@ -747,6 +747,9 @@
 		<Waypoint lat="53.50980455736843" lon="-113.42559792246401" waypointType="UNNAMED" magvar="343.782990" waypointIdent="CY30F" waypointRegion="CY"/>
 		<!-- 1941-45 Edmonton radio range (XD 266 kc) approach fixes: station position computed from CAA 1941 'station-to-field 61 deg mag, 3.3 mi' (var 25E). Range legs not simulated; fixes are waypoints. -->
 		<Waypoint lat="53.56913115" lon="-113.60066521" waypointType="UNNAMED" magvar="343.782990" waypointIdent="XDRNG" waypointRegion="CY"/>
+		<Waypoint lat="53.735568" lon="-113.511002" waypointType="UNNAMED" magvar="343.782990" waypointIdent="LEFAT" waypointRegion="CY"/>
+		<Waypoint lat="53.693901" lon="-113.511002" waypointType="UNNAMED" magvar="343.782990" waypointIdent="CY16A" waypointRegion="CY"/>
+		<Waypoint lat="53.660568" lon="-113.511002" waypointType="UNNAMED" magvar="343.782990" waypointIdent="CY16B" waypointRegion="CY"/>
 		<Waypoint lat="53.57243598" lon="-113.52042834" waypointType="UNNAMED" magvar="343.782990" waypointIdent="XDFLD" waypointRegion="CY"/>
 		<Waypoint lat="53.57913293" lon="-113.40504083" waypointType="UNNAMED" magvar="343.782990" waypointIdent="XDE07" waypointRegion="CY"/>
 		<Waypoint lat="53.58608162" lon="-113.26525318" waypointType="UNNAMED" magvar="343.782990" waypointIdent="XDE12" waypointRegion="CY"/>
@@ -774,10 +777,14 @@
 				<Leg type="HM" fixType="NDB" fixRegion="CY" fixIdent="ZXD" turnDirection="R" recommendedType="NDB" recommendedRegion="CY" recommendedIdent="ZXD" magneticCourse="343.8" time="1" altitudeDescriptor="+" altitude1="5200.0F"/>
 			</MissedApproachLegs>
 		</Approach>
-		<Approach type="LOCALIZER_BACKCOURSE" runway="16" designator="NONE" suffix="Z" gpsOverlay="FALSE" fixType="NDB" fixRegion="CY" fixIdent="XD" altitude="3000.0F" heading="163.8" missedAltitude="3100.0F">
+		<!-- LOC(BC) DME RWY 16, from TSB report A04W0200 (2004) Appendix A: IF LEFAT at 10 DME (IXD), min 4300 to 7.5 DME, 3700 to 5.5 DME, 3400 to XD NDB (4.5 DME). LEFAT/7.5/5.5 positions are 10/7.5/5.5 nm due north (343.8M = 360T) of the IXD DME. Altitudes after XD are placeholders. -->
+		<Approach type="LOCALIZER_BACKCOURSE" runway="16" designator="NONE" suffix="Z" gpsOverlay="FALSE" fixType="TERMINAL_WAYPOINT" fixRegion="CY" fixIdent="LEFAT" altitude="4300.0F" heading="163.8" missedAltitude="3100.0F">
 			<ApproachLegs>
-				<Leg type="IF" fixType="NDB" fixRegion="CY" fixIdent="XD" altitudeDescriptor="+" altitude1="4300.0F"/>
-				<Leg type="CF" fixType="RUNWAY" fixRegion="CY" fixIdent="RW16" flyOver="FALSE" recommendedType="LOCALIZER" recommendedRegion="CY" recommendedIdent="IXD" theta="343.8" rho="1.1N" magneticCourse="163.8" distance="3.8N" altitudeDescriptor="A" altitude1="2400.0F"/>
+				<Leg type="IF" fixType="TERMINAL_WAYPOINT" fixRegion="CY" fixIdent="LEFAT" altitudeDescriptor="+" altitude1="4300.0F" isIAF="TRUE" isIF="TRUE"/>
+				<Leg type="TF" fixType="TERMINAL_WAYPOINT" fixRegion="CY" fixIdent="CY16A" magneticCourse="163.8" distance="2.5N" altitudeDescriptor="+" altitude1="4300.0F"/>
+				<Leg type="TF" fixType="TERMINAL_WAYPOINT" fixRegion="CY" fixIdent="CY16B" magneticCourse="163.8" distance="2.0N" altitudeDescriptor="+" altitude1="3700.0F"/>
+				<Leg type="TF" fixType="NDB" fixRegion="CY" fixIdent="XD" magneticCourse="163.8" distance="1.0N" altitudeDescriptor="+" altitude1="3400.0F" isFAF="TRUE"/>
+				<Leg type="CF" fixType="RUNWAY" fixRegion="CY" fixIdent="RW16" flyOver="FALSE" recommendedType="LOCALIZER" recommendedRegion="CY" recommendedIdent="IXD" theta="343.8" rho="1.1N" magneticCourse="163.8" distance="3.8N" altitudeDescriptor="A" altitude1="2400.0F" isMAP="TRUE"/>
 			</ApproachLegs>
 			<MissedApproachLegs>
 				<Leg type="CA" turnDirection="L" magneticCourse="163.8" altitudeDescriptor="+" altitude1="3100.0F"/>

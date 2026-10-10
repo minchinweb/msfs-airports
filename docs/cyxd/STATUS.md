@@ -131,7 +131,14 @@ Source: RCAF & D of T Aerodrome, Edmonton, Alberta, p.90 of the RCAF Manual of A
 - Placed by scaling the sketch (runway 3-21 = 1372 m): beacon 53.572005, -113.529643 (~66 m from rwy 04, clear of taxiways/aprons/signs); wind tee 53.573710, -113.528688 (~25 m clear of GA parking 76, ~14 m from an apron, 179 m from rwy 04). Wind tee model `cyxd_wind_tee` (animated: the head node swings about the post via a ModelInfo behaviour, `ASOBO_GT_Anim_Code` with `(A:AMBIENT WIND DIRECTION,degrees) dnor`, ANIM_LENGTH 360, 9 quaternion keys; head points into the wind; object heading must stay 0. UNVERIFIED that the sim runs this behaviour for a scenery LibraryObject - if the tee is static, that is why); beacon is the sim's own `Beacon CIVILIAN/AIRPORT` object. Scaled-from-sketch accuracy only (+/- ~20 m). Both are emitted by `tools/gen_buildings.py`.
 - Windsock already in the file is a separate object at the east side (53.56715, -113.51394), no conflict.
 
+## LOC(BC) DME RWY 16 rebuilt from the TSB report (uncompiled)
+Source: TSB Aviation Investigation Report A04W0200 (Beech King Air C-FGXH, Edmonton, 10 Sep 2004), https://aviation-safety.net/wikibase/349241 (ASN summary, blocks scripts) - PDF saved as `docs/cyxd/tsb-a04w0200-king-air-edmonton-2004.pdf`, Appendix A figures as `docs/cyxd/tsb-a04w0200-loc-bc-dme-16-figure.png`.
+- Plate data from the figures: course 163 mag inbound (343 mag back course), IF **LEFAT** at 10 DME, min 4300 ft to 7.5 DME, min 3700 to 5.5 DME, min 3400 from 5.5 DME, XD NDB (266) at 4.5 DME, step at 0.6 DME. DME is the IXD DME. Also: localizer intercept 8.8 nm from threshold, field wx/MSA 4100 ft.
+- Our XD NDB is 4.5 nm due north of the IXD DME, matching the plate. The 343.8 mag course is 360 true here, so LEFAT = 10 nm due north of the DME: 53.735568, -113.511002 (named waypoint `LEFAT`); unnamed `CY16A` (7.5 DME) and `CY16B` (5.5 DME) added as step-down points.
+- Approach `LOCALIZER_BACKCOURSE` 16 Z now: IF LEFAT 4300 > CY16A 4300 > CY16B 3700 > XD 3400 (FAF) > RW16 (2400 A, MAP). Altitudes after XD and the missed approach are still placeholders (the 0.6 DME step altitude is not legible). The older NDB 16 Y approach was not changed (no plate for it); LEFAT is a 2004-era fix, so it is not period-correct for 1940-85.
+
 ## Sources used for reference material (all in docs/cyxd/)
 - `edmonton-transmitter-site-radiocom.jpg`: radiocom.ca Edmonton Radio article, photo 4.
 - `rcaf-manual-of-aerodromes-edmonton-p90.jpg`: RCAF Manual of Aerodromes p.90 (URL above).
 - Earlier sources (pilotnav, OurAirports, airports-worldwide, AOPA, VTA chart, articles/) are noted in the sections above.
+- `tsb-a04w0200-king-air-edmonton-2004.pdf`, `tsb-a04w0200-loc-bc-dme-16-figure.png`: TSB report A04W0200 (see LOC(BC) DME RWY 16 section).
