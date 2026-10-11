@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ModelInfo guid="{45098D4E-B072-5AC7-A2E4-41C005C2F78F}" version="1.1">
+	<LODS>
+		<LOD minSize="0" ModelFile="cyxd_control_tower.gltf"/>
+	</LODS>
+</ModelInfo>
