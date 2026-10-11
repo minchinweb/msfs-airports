@@ -919,8 +919,12 @@
 		<LibraryObject name="{97E21819-83B8-5126-86C5-81C245263A03}" scale="1.000000"/>
 	</SceneryObject>
 	<!-- Hangar 15 (Centennial Flight Centre) -->
-	<SceneryObject lat="53.56695008" lon="-113.51720268" alt="0.00000000000000" pitch="0.000000" bank="0.000000" heading="48" imageComplexity="VERY_SPARSE" altitudeIsAgl="TRUE" snapToGround="TRUE" snapToNormal="FALSE">
+	<SceneryObject lat="53.56680270" lon="-113.51717285" alt="0.00000000000000" pitch="0.000000" bank="0.000000" heading="138" imageComplexity="VERY_SPARSE" altitudeIsAgl="TRUE" snapToGround="TRUE" snapToNormal="FALSE">
 		<LibraryObject name="{BFB13C8B-212E-59DE-812A-FC9AAC85E316}" scale="1.000000"/>
+	</SceneryObject>
+	<!-- Hangar 15 east wing -->
+	<SceneryObject lat="53.56698272" lon="-113.51681992" alt="0.00000000000000" pitch="0.000000" bank="0.000000" heading="48" imageComplexity="VERY_SPARSE" altitudeIsAgl="TRUE" snapToGround="TRUE" snapToNormal="FALSE">
+		<LibraryObject name="{4815EE49-59F2-5E02-817D-6AE3A5B19043}" scale="1.000000"/>
 	</SceneryObject>
 	<!-- XD NDB station (Street View 2009): fenced lot, mast, shed -->
 	<SceneryObject lat="53.6436004638671900" lon="-113.5130004882812500" alt="0.00000000000000" pitch="0.000000" bank="0.000000" heading="0" imageComplexity="VERY_SPARSE" altitudeIsAgl="TRUE" snapToGround="TRUE" snapToNormal="FALSE">
@@ -1149,10 +1153,22 @@
 		<Attribute name="ExcludeMSBuildings" guid="{F78A3074-8AD5-4B8B-92C4-C1C948BB7AA5}" type="UINT8" value="1"/>
 		<Attribute name="ExcludeTIN" guid="{18B58CBF-AE02-4A19-8AA9-3809E8E73400}" type="UINT8" value="1"/>
 		<Attribute name="ExclusionFlags" guid="{4CACC252-E6DC-419A-B20C-16EC601DF70E}" type="UINT32" value="3"/>
-		<Vertex lat="53.56702688000202" lon="-113.51772560956623"/>
-		<Vertex lat="53.56663258553526" lon="-113.51712898412002"/>
-		<Vertex lat="53.56687327999798" lon="-113.51667975043377"/>
-		<Vertex lat="53.56726757446474" lon="-113.51727637587997"/>
+		<Vertex lat="53.56720074974935" lon="-113.51717524591443"/>
+		<Vertex lat="53.56684572541684" lon="-113.51783786560165"/>
+		<Vertex lat="53.56640465025064" lon="-113.51717045408556"/>
+		<Vertex lat="53.56675967458315" lon="-113.51650783439834"/>
+	</Polygon>
+	<Polygon version="0.4.0" displayName="No generated buildings: Hangar 15 east wing" parentGroupID="6" altitude="667.68023681640625">
+		<Attribute name="UniqueGUID" guid="{359C73E8-06BE-4FB2-ABCB-EC942F7761D0}" type="GUID" value="{6949FEA2-CD93-5706-8942-1AB7D7523FE6}"/>
+		<Attribute name="ExcludeDetectedBuildings" guid="{5C1A2387-1F07-47DF-A569-962CF6258E55}" type="UINT8" value="1"/>
+		<Attribute name="ExcludeOSMBuildings" guid="{F3C2635D-9F2F-458F-8663-90B3837BED09}" type="UINT8" value="1"/>
+		<Attribute name="ExcludeMSBuildings" guid="{F78A3074-8AD5-4B8B-92C4-C1C948BB7AA5}" type="UINT8" value="1"/>
+		<Attribute name="ExcludeTIN" guid="{18B58CBF-AE02-4A19-8AA9-3809E8E73400}" type="UINT8" value="1"/>
+		<Attribute name="ExclusionFlags" guid="{4CACC252-E6DC-419A-B20C-16EC601DF70E}" type="UINT32" value="3"/>
+		<Vertex lat="53.56713188123865" lon="-113.51731507478624"/>
+		<Vertex lat="53.56667409867979" lon="-113.51662238253091"/>
+		<Vertex lat="53.56683355876135" lon="-113.51632476521377"/>
+		<Vertex lat="53.56729134132021" lon="-113.51701745746909"/>
 	</Polygon>
 	<Polygon version="0.4.0" displayName="No generated buildings: Mitchell Garage bus barns (OSM depot way 645478395)" parentGroupID="6" altitude="667.68023681640625">
 		<Attribute name="UniqueGUID" guid="{359C73E8-06BE-4FB2-ABCB-EC942F7761D0}" type="GUID" value="{320179F4-72C7-5A0E-A000-458BA00FE8C4}"/>

@@ -1,0 +1,220 @@
+{
+ "asset": {
+  "version": "2.0",
+  "generator": "airport-cyxd/tools/gen_buildings.py",
+  "extensions": {
+   "ASOBO_normal_map_convention": {
+    "tangent_space_convention": "DirectX"
+   }
+  }
+ },
+ "extensionsUsed": [
+  "ASOBO_normal_map_convention"
+ ],
+ "scene": 0,
+ "scenes": [
+  {
+   "nodes": [
+    0
+   ]
+  }
+ ],
+ "nodes": [
+  {
+   "mesh": 0,
+   "name": "cyxd_hangar15_wing"
+  }
+ ],
+ "meshes": [
+  {
+   "name": "cyxd_hangar15_wing",
+   "primitives": [
+    {
+     "attributes": {
+      "POSITION": 0,
+      "NORMAL": 1,
+      "TEXCOORD_0": 2
+     },
+     "indices": 3,
+     "mode": 4,
+     "material": 0
+    },
+    {
+     "attributes": {
+      "POSITION": 0,
+      "NORMAL": 1,
+      "TEXCOORD_0": 2
+     },
+     "indices": 4,
+     "mode": 4,
+     "material": 1
+    },
+    {
+     "attributes": {
+      "POSITION": 0,
+      "NORMAL": 1,
+      "TEXCOORD_0": 2
+     },
+     "indices": 5,
+     "mode": 4,
+     "material": 2
+    }
+   ]
+  }
+ ],
+ "materials": [
+  {
+   "name": "cyxd_flat",
+   "pbrMetallicRoughness": {
+    "baseColorTexture": {
+     "index": 0
+    },
+    "metallicFactor": 0.0,
+    "roughnessFactor": 0.9
+   }
+  },
+  {
+   "name": "cyxd_siding",
+   "pbrMetallicRoughness": {
+    "baseColorTexture": {
+     "index": 1
+    },
+    "metallicFactor": 0.0,
+    "roughnessFactor": 0.9
+   }
+  },
+  {
+   "name": "cyxd_ribbed_blue",
+   "pbrMetallicRoughness": {
+    "baseColorTexture": {
+     "index": 2
+    },
+    "metallicFactor": 0.0,
+    "roughnessFactor": 0.9
+   }
+  }
+ ],
+ "textures": [
+  {
+   "sampler": 0,
+   "source": 0
+  },
+  {
+   "sampler": 1,
+   "source": 1
+  },
+  {
+   "sampler": 1,
+   "source": 2
+  }
+ ],
+ "samplers": [
+  {
+   "magFilter": 9728,
+   "minFilter": 9728
+  },
+  {
+   "magFilter": 9729,
+   "minFilter": 9987,
+   "wrapS": 10497,
+   "wrapT": 10497
+  }
+ ],
+ "images": [
+  {
+   "uri": "cyxd_palette.png"
+  },
+  {
+   "uri": "cyxd_siding.png"
+  },
+  {
+   "uri": "cyxd_ribbed_blue.png"
+  }
+ ],
+ "accessors": [
+  {
+   "bufferView": 0,
+   "componentType": 5126,
+   "count": 508,
+   "type": "VEC3",
+   "min": [
+    -28.35,
+    0,
+    -7.35
+   ],
+   "max": [
+    28.35,
+    6.1,
+    7.56
+   ]
+  },
+  {
+   "bufferView": 1,
+   "componentType": 5126,
+   "count": 508,
+   "type": "VEC3"
+  },
+  {
+   "bufferView": 2,
+   "componentType": 5126,
+   "count": 508,
+   "type": "VEC2"
+  },
+  {
+   "bufferView": 3,
+   "componentType": 5123,
+   "count": 720,
+   "type": "SCALAR"
+  },
+  {
+   "bufferView": 4,
+   "componentType": 5123,
+   "count": 48,
+   "type": "SCALAR"
+  },
+  {
+   "bufferView": 5,
+   "componentType": 5123,
+   "count": 24,
+   "type": "SCALAR"
+  }
+ ],
+ "bufferViews": [
+  {
+   "buffer": 0,
+   "byteOffset": 0,
+   "byteLength": 6096
+  },
+  {
+   "buffer": 0,
+   "byteOffset": 6096,
+   "byteLength": 6096
+  },
+  {
+   "buffer": 0,
+   "byteOffset": 12192,
+   "byteLength": 4064
+  },
+  {
+   "buffer": 0,
+   "byteOffset": 16256,
+   "byteLength": 1440
+  },
+  {
+   "buffer": 0,
+   "byteOffset": 17696,
+   "byteLength": 96
+  },
+  {
+   "buffer": 0,
+   "byteOffset": 17792,
+   "byteLength": 48
+  }
+ ],
+ "buffers": [
+  {
+   "uri": "cyxd_hangar15_wing.bin",
+   "byteLength": 17840
+  }
+ ]
+}
