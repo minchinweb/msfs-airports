@@ -44,10 +44,61 @@ def write_palette(path):
         '<BitmapConfiguration>\n\t<BitmapSlot>MTL_BITMAP_DECAL0</BitmapSlot>\n</BitmapConfiguration>\n')
 
 
+TEX_T = 1.28  # metres per texture tile (8 clapboards / 8 shingle rows)
+TEX_NAMES = ("siding", "shingle_red", "shingle_grey")
+
+
+def _png(path, w, h, px):
+    def chunk(t, d):
+        c = struct.pack(">I", len(d)) + t + d
+        return c + struct.pack(">I", zlib.crc32(t + d) & 0xFFFFFFFF)
+    raw = b"".join(b"\x00" + b"".join(bytes(px[y][x]) for x in range(w)) for y in range(h))
+    path.write_bytes(b"\x89PNG\r\n\x1a\n" + chunk(b"IHDR", struct.pack(">IIBBBBB", w, h, 8, 2, 0, 0, 0))
+                     + chunk(b"IDAT", zlib.compress(raw, 9)) + chunk(b"IEND", b""))
+    path.with_name(path.name + ".xml").write_text(
+        '<BitmapConfiguration>\n\t<BitmapSlot>MTL_BITMAP_DECAL0</BitmapSlot>\n</BitmapConfiguration>\n')
+
+
+def write_textures(folder):
+    """Procedural tileable 128 x 128 textures: clapboard siding and red/grey asphalt shingles (fixed seed, deterministic)."""
+    import random
+    folder.mkdir(parents=True, exist_ok=True)
+    clamp = lambda v: max(0, min(255, int(v)))
+    rnd = random.Random(1940)
+    # clapboard: 8 boards of 16 px, lit top edge, shadow line at the lap
+    base = (204, 200, 188)
+    px = []
+    for y in range(128):
+        b, r = divmod(y, 16)
+        bt = random.Random(b).uniform(-6, 6)
+        edge = 16 if r == 0 else (-34 if r >= 14 else (-12 if r >= 12 else 0))
+        px.append([tuple(clamp(base[c] + bt + edge + rnd.uniform(-5, 5)) for c in range(3)) for x in range(128)])
+    _png(folder / "cyxd_siding.png", 128, 128, px)
+    # shingles: 16 px rows, 32 px tabs, half-tab stagger, dark joints and shadow under each course
+    for name, base in (("shingle_red", (150, 66, 52)), ("shingle_grey", (98, 98, 102))):
+        px = []
+        for y in range(128):
+            row, r = divmod(y, 16)
+            off = 16 if row % 2 else 0
+            line = []
+            for x in range(128):
+                tab = ((x + off) % 128) // 32
+                tx = (x + off) % 32
+                tb = random.Random(row * 7 + tab).uniform(-12, 12)
+                d = -40 if r >= 14 else (-18 if r >= 12 else 0)
+                if tx in (0, 1):
+                    d -= 30
+                line.append(tuple(clamp(base[c] + tb + d + rnd.uniform(-7, 7)) for c in range(3)))
+            px.append(line)
+        _png(folder / ("cyxd_%s.png" % name), 128, 128, px)
+
+
 # mesh builder ------------------------------------------------------------------------------
 class Mesh:
-    def __init__(self):
+    def __init__(self, textured=False):
         self.pos, self.nrm, self.uv, self.idx = [], [], [], []
+        self.tri_mat = []  # material key per triangle ("flat" = palette swatch, else a TEX_NAMES entry)
+        self.textured = textured
 
     def poly(self, pts, sw, centre):
         """Planar convex polygon, wound/flipped so the normal points away from `centre`."""
@@ -63,12 +114,30 @@ class Mesh:
         n = [x / ln for x in n]
         base = len(self.pos)
         uvp = ((sw + 0.5) / len(PALETTE), 0.5)
+        key = "flat"
+        if self.textured:
+            vertical = abs(n[1]) < 0.5
+            if vertical and sw in (WALL, WHITE, TRIM):
+                key = "siding"
+            elif not vertical and sw == RED:
+                key = "shingle_red"
+            elif not vertical and sw in (ROOF, DARK):
+                key = "shingle_grey"
+        if key != "flat":
+            ua = (n[2], 0.0, -n[0])  # horizontal, in the surface plane
+            ul = math.hypot(ua[0], ua[2])
+            ua = (ua[0] / ul, 0.0, ua[2] / ul) if ul > 1e-6 else (1.0, 0.0, 0.0)
+            va = (n[1] * ua[2] - n[2] * ua[1], n[2] * ua[0] - n[0] * ua[2], n[0] * ua[1] - n[1] * ua[0])
         for p in pts:
             self.pos.append(p)
             self.nrm.append(n)
-            self.uv.append(uvp)
+            if key == "flat":
+                self.uv.append(uvp)
+            else:
+                self.uv.append((sum(p[i] * ua[i] for i in range(3)) / TEX_T, -sum(p[i] * va[i] for i in range(3)) / TEX_T))
         for i in range(1, len(pts) - 1):
             self.idx += [base, base + i, base + i + 1]
+            self.tri_mat.append(key)
 
     def box(self, x0, x1, y0, y1, z0, z1, sw, top=True):
         c = ((x0 + x1) / 2, (y0 + y1) / 2, (z0 + z1) / 2)
@@ -110,6 +179,13 @@ class Mesh:
         centre = tuple(p[0][i] - face[i] for i in range(3))
         self.poly(p, DARK, centre)
 
+    def mirror_x(self):
+        """Flip east-west: the sim places model +X to the west of the object heading, so site models built in
+        (east, north) metres are mirrored once at the end (negate X, flip winding)."""
+        self.pos = [(-x, y, z) for x, y, z in self.pos]
+        self.nrm = [(-x, y, z) for x, y, z in self.nrm]
+        self.idx = [i for t in range(0, len(self.idx), 3) for i in (self.idx[t], self.idx[t + 2], self.idx[t + 1])]
+
     def save(self, folder, name):
         folder.mkdir(parents=True, exist_ok=True)
         n = len(self.pos)
@@ -117,36 +193,45 @@ class Mesh:
         pos = b"".join(struct.pack("<3f", *p) for p in self.pos)
         nrm = b"".join(struct.pack("<3f", *p) for p in self.nrm)
         uv = b"".join(struct.pack("<2f", *p) for p in self.uv)
-        idx = b"".join(struct.pack("<H", i) for i in self.idx)
-        if len(idx) % 4:
-            idx += b"\x00\x00"
-        blob = pos + nrm + uv + idx
-        (folder / f"{name}.bin").write_bytes(blob)
+        keys = [k for k in ("flat",) + TEX_NAMES if k in self.tri_mat] or ["flat"]
+        blob = pos + nrm + uv
+        views = [{"buffer": 0, "byteOffset": 0, "byteLength": len(pos)},
+                 {"buffer": 0, "byteOffset": len(pos), "byteLength": len(nrm)},
+                 {"buffer": 0, "byteOffset": len(pos) + len(nrm), "byteLength": len(uv)}]
         mn = [min(p[i] for p in self.pos) for i in range(3)]
         mx = [max(p[i] for p in self.pos) for i in range(3)]
+        accs = [{"bufferView": 0, "componentType": 5126, "count": n, "type": "VEC3", "min": mn, "max": mx},
+                {"bufferView": 1, "componentType": 5126, "count": n, "type": "VEC3"},
+                {"bufferView": 2, "componentType": 5126, "count": n, "type": "VEC2"}]
+        prims = []
+        for mi, k in enumerate(keys):
+            tris = [self.idx[3 * t:3 * t + 3] for t in range(len(self.tri_mat)) if self.tri_mat[t] == k]
+            ib = b"".join(struct.pack("<H", i) for tri in tris for i in tri)
+            cnt = len(tris) * 3
+            if len(ib) % 4:
+                ib += b"\x00\x00"
+            views.append({"buffer": 0, "byteOffset": len(blob), "byteLength": len(tris) * 6})
+            blob += ib
+            accs.append({"bufferView": len(views) - 1, "componentType": 5123, "count": cnt, "type": "SCALAR"})
+            prims.append({"attributes": {"POSITION": 0, "NORMAL": 1, "TEXCOORD_0": 2}, "indices": len(accs) - 1, "mode": 4, "material": mi})
+        (folder / f"{name}.bin").write_bytes(blob)
+        mats, texs, imgs = [], [], []
+        for k in keys:
+            uri = "cyxd_palette.png" if k == "flat" else "cyxd_%s.png" % k
+            imgs.append({"uri": uri})
+            texs.append({"sampler": 0 if k == "flat" else 1, "source": len(imgs) - 1})
+            mats.append({"name": "cyxd_" + k, "pbrMetallicRoughness": {
+                "baseColorTexture": {"index": len(texs) - 1}, "metallicFactor": 0.0, "roughnessFactor": 0.9}})
         g = {
             "asset": {"version": "2.0", "generator": "airport-cyxd/tools/gen_buildings.py",
                       "extensions": {"ASOBO_normal_map_convention": {"tangent_space_convention": "DirectX"}}},
             "extensionsUsed": ["ASOBO_normal_map_convention"],
             "scene": 0, "scenes": [{"nodes": [0]}],
             "nodes": [{"mesh": 0, "name": name}],
-            "meshes": [{"name": name, "primitives": [{
-                "attributes": {"POSITION": 0, "NORMAL": 1, "TEXCOORD_0": 2}, "indices": 3, "mode": 4, "material": 0}]}],
-            "materials": [{"name": "cyxd_palette", "pbrMetallicRoughness": {
-                "baseColorTexture": {"index": 0}, "metallicFactor": 0.0, "roughnessFactor": 0.9}}],
-            "textures": [{"sampler": 0, "source": 0}],
-            "samplers": [{"magFilter": 9728, "minFilter": 9728}],
-            "images": [{"uri": "cyxd_palette.png"}],
-            "accessors": [
-                {"bufferView": 0, "componentType": 5126, "count": n, "type": "VEC3", "min": mn, "max": mx},
-                {"bufferView": 1, "componentType": 5126, "count": n, "type": "VEC3"},
-                {"bufferView": 2, "componentType": 5126, "count": n, "type": "VEC2"},
-                {"bufferView": 3, "componentType": 5123, "count": len(self.idx), "type": "SCALAR"}],
-            "bufferViews": [
-                {"buffer": 0, "byteOffset": 0, "byteLength": len(pos)},
-                {"buffer": 0, "byteOffset": len(pos), "byteLength": len(nrm)},
-                {"buffer": 0, "byteOffset": len(pos) + len(nrm), "byteLength": len(uv)},
-                {"buffer": 0, "byteOffset": len(pos) + len(nrm) + len(uv), "byteLength": len(self.idx) * 2}],
+            "meshes": [{"name": name, "primitives": prims}],
+            "materials": mats, "textures": texs,
+            "samplers": [{"magFilter": 9728, "minFilter": 9728}, {"magFilter": 9729, "minFilter": 9987, "wrapS": 10497, "wrapT": 10497}],
+            "images": imgs, "accessors": accs, "bufferViews": views,
             "buffers": [{"uri": f"{name}.bin", "byteLength": len(blob)}],
         }
         (folder / f"{name}.gltf").write_text(json.dumps(g, indent=1))
@@ -248,7 +333,7 @@ def transmitter_site():
 
     Local frame: +Z = heading (front), +X = right; building long axis along X.  Layout read off the radiocom.ca photo.
     """
-    m = Mesh()
+    m = Mesh(textured=True)
     bw, bd, bh = 26.0, 11.0, 4.5
     m.box(-bw / 2, bw / 2, 0, bh, -bd / 2, bd / 2, WHITE, top=False)
     m.gable(-bw / 2, bw / 2, bh, 2.2, -bd / 2, bd / 2, along_z=False, sw_roof=RED, sw_wall=WHITE)
@@ -267,6 +352,80 @@ def transmitter_site():
             y, i = y1, i + 1
     # tall centre mast carries a cross-arm
     m.box(-6.0, 6.0, 52.0, 52.5, 7.7, 8.3, METAL)
+    return m
+
+
+def obox(m, p0, p1, y0, y1, hw, sw):
+    """Thin box along the horizontal segment p0->p1 (x, z), half-width hw, from y0 to y1 (for fence rails/posts)."""
+    dx, dz = p1[0] - p0[0], p1[1] - p0[1]
+    ln = math.hypot(dx, dz) or 1.0
+    nx, nz = -dz / ln * hw, dx / ln * hw
+    c = ((p0[0] + p1[0]) / 2, (y0 + y1) / 2, (p0[1] + p1[1]) / 2)
+    q = [(p0[0] + nx, p0[1] + nz), (p1[0] + nx, p1[1] + nz), (p1[0] - nx, p1[1] - nz), (p0[0] - nx, p0[1] - nz)]
+    for i in range(4):
+        a, b = q[i], q[(i + 1) % 4]
+        m.poly([(a[0], y0, a[1]), (b[0], y0, b[1]), (b[0], y1, b[1]), (a[0], y1, a[1])], sw, c)
+    m.poly([(x, y1, z) for x, z in q], sw, c)
+
+
+def chainlink_fence(m, pts, gap=None, h=2.4):
+    """Closed chain-link fence (posts + 3 rails, open mesh) along pts [(x, z)]; gap = (x, z, half-length) leaves a gate opening."""
+    for i in range(len(pts)):
+        a, b = pts[i], pts[(i + 1) % len(pts)]
+        ln = math.hypot(b[0] - a[0], b[1] - a[1])
+        n = max(1, int(round(ln / 3.0)))
+        pt = lambda t: (a[0] + (b[0] - a[0]) * t, a[1] + (b[1] - a[1]) * t)
+        ok = lambda q: not gap or math.hypot(q[0] - gap[0], q[1] - gap[1]) > gap[2]
+        for k in range(n + 1):
+            q = pt(k / n)
+            if ok(q):
+                m.box(q[0] - 0.06, q[0] + 0.06, 0, h, q[1] - 0.06, q[1] + 0.06, METAL)
+        for k in range(n):
+            q0, q1 = pt(k / n), pt((k + 1) / n)
+            if ok(q0) and ok(q1):
+                for y in (0.15, h / 2, h - 0.03):
+                    obox(m, q0, q1, y, y + 0.04, 0.02, METAL)
+
+
+def lattice_mast(m, x, z, mh, w, seg):
+    """Red/white striped lattice mast approximated as a slim striped column."""
+    i, y = 0, 0.0
+    while y < mh:
+        y1 = min(y + seg, mh)
+        m.box(x - w, x + w, y, y1, z - w, z + w, RED if i % 2 == 0 else WHITE, top=(y1 >= mh))
+        y, i = y1, i + 1
+    m.box(x - 1.2, x + 1.2, 0, 0.4, z - 1.2, z + 1.2, METAL)
+
+
+def shed(m, x0, x1, z0, z1, wall_h, ridge_h, roof, along_z, door_face, door_x=None):
+    m.box(x0, x1, 0, wall_h, z0, z1, WHITE, top=False)
+    m.gable(x0, x1, wall_h, ridge_h, z0, z1, along_z=along_z, sw_roof=roof, sw_wall=WHITE)
+    if door_face == "s":
+        m.window((0, 0, -1), (door_x if door_x is not None else x0 + (x1 - x0) / 2 - 0.5, 0.0, z0), (1, 0, 0), 1.0, 2.0)
+    elif door_face == "w":
+        m.window((-1, 0, 0), (x0, 0.0, z0 + (z1 - z0) / 2 + 0.5), (0, 0, -1), 1.0, 2.0)
+
+
+def ndb_zxd():
+    """ZXD (south NDB), Google Street View Apr 2009: fenced lot (OSM way 429420220), two lattice masts, peaked red-shingle shed east of the tower.
+    Local frame relative to the NDB point: +X east, +Z north."""
+    m = Mesh(textured=True)
+    chainlink_fence(m, [(-22, 23), (-22, -16), (30, -16), (38, 24)], gap=(31.5, 23.6, 2.5))
+    lattice_mast(m, 0.0, 0.0, 25.0, 0.5, 4.0)
+    lattice_mast(m, 0.0, -9.0, 25.0, 0.5, 4.0)
+    shed(m, 9.0, 14.4, -3.5, 3.5, 2.7, 2.1, RED, True, "s", door_x=12.9)
+    m.mirror_x()
+    return m
+
+
+def ndb_xd():
+    """XD (north NDB), Google Street View Jun 2009: taller mast, larger grey-shingle building in the SW corner of the lot (OSM way 671418837).
+    Local frame relative to the NDB point: +X east, +Z north."""
+    m = Mesh(textured=True)
+    chainlink_fence(m, [(-35, -28), (-35, 57), (51, 57), (51, -28)], gap=(7.0, -28.0, 3.0))
+    lattice_mast(m, 0.0, 0.0, 55.0, 0.7, 5.0)
+    shed(m, -32.0, -22.5, -26.0, -20.5, 3.3, 2.3, DARK, False, "s")
+    m.mirror_x()
     return m
 
 
@@ -374,6 +533,8 @@ SHIFTS = [("north hangar complex: bay 1", (0, -20)), ("north hangar complex: bay
 SKIP = ("edmonton inn", "chateau louis", "usaaf hangar t4")
 KX, KY = 66170.0, 111200.0
 EXCL_MARGIN = 6.0
+DEPOT = [(53.57242, -113.58734), (53.57065, -113.58740), (53.57054, -113.58747), (53.57062, -113.58890),
+         (53.57062, -113.58973), (53.57078, -113.59018), (53.57243, -113.59019)]
 LANDMARK_BOX = (-27.4, 62.0, -22.0, 22.4)  # local x0, x1, z0, z1 of the landmark model
 
 
@@ -410,12 +571,31 @@ def exclusion_xml(title, corners, nl):
     return nl.join(lines) + nl
 
 
+def grass_xml(title, verts):
+    """Grass ground-cover polygon (same material/layer as the 'Grass over construction' polygons) to hide the aerial photo."""
+    guid = "{" + str(uuid.uuid5(NS, "grass " + title)).upper() + "}"
+    a = '		<Attribute name="%s" guid="{%s}" type="%s" value="%s"/>'
+    lines = ['	<Polygon version="0.4.0" displayName="%s" parentGroupID="6" altitude="667.68023681640625">' % title,
+             a % ("UniqueGUID", "359C73E8-06BE-4FB2-ABCB-EC942F7761D0", "GUID", guid),
+             a % ("ExcludeDetectedBuildings", "5C1A2387-1F07-47DF-A569-962CF6258E55", "UINT8", "1"),
+             a % ("ExcludeOSMBuildings", "F3C2635D-9F2F-458F-8663-90B3837BED09", "UINT8", "1"),
+             a % ("ExcludeMSBuildings", "F78A3074-8AD5-4B8B-92C4-C1C948BB7AA5", "UINT8", "1"),
+             a % ("MaterialGUID", "CD28EFD0-D3F0-43B6-9F88-4E4707344A04", "GUID", "{B8D6CC1D-DEA9-4A20-8BB6-123149776A7C}"),
+             a % ("ExcludeTIN", "18B58CBF-AE02-4A19-8AA9-3809E8E73400", "UINT8", "1"),
+             a % ("Layer", "9E2B4C3E-7D84-453F-9DCC-B6498FF46703", "UINT32", "-50"),
+             a % ("ExclusionFlags", "4CACC252-E6DC-419A-B20C-16EC601DF70E", "UINT32", "3")]
+    lines += ['		<Vertex lat="%.14f" lon="%.14f"/>' % v for v in verts]
+    lines.append("	</Polygon>")
+    return chr(10).join(lines) + chr(10)
+
+
 def main():
     src = SRC.read_text(encoding="utf-8")
     blocks = re.findall(r"(<!--(?:(?!-->).)*-->)?\s*(<SceneryObject lat=\"([^\"]+)\" lon=\"([^\"]+)\"[^>]*?heading=\"([^\"]+)\"[^>]*>\s*"
                         r"<GenericBuilding[^>]*>\s*<RectangularBuilding roofType=\"(\w+)\" sizeX=\"(\d+)\" sizeZ=\"(\d+)\" "
                         r"sizeBottomY=\"(\d+)\"[^>]*?sizeRoofY=\"(\d+)\"[^>]*/>)", src, re.S)
     write_palette(MODELLIB / "texture" / "cyxd_palette.png")
+    write_textures(MODELLIB / "texture")
     out, excl, made = [], [], {}
     for com, _full, lat, lon, hdg, roof, sx, sz, h, rh in blocks:
         title = re.sub(r"\s+", " ", com.strip("<!->  ")) if com else ""
@@ -445,10 +625,25 @@ def main():
             box = (-float(sx) / 2 - m_, float(sx) / 2 + m_, -float(sz) / 2 - m_, float(sz) / 2 + m_)
         out.append((title or name, lat, lon, hdg, guid))
         excl.append((title or name, footprint(lat, lon, hdg, *box)))
-    site = ("Edmonton radio transmitter site (118 Ave / 156 St, radiocom.ca)", "53.57055", "-113.58378", "0")
+    # NE corner of 118 Ave / 156 St, over the ETS Mitchell Garage bus barn (OSM way 325221281, depot way 645478395)
+    site = ("Edmonton radio transmitter site (118 Ave / 156 St NE corner, replaces Mitchell Garage bus barn)", "53.57102", "-113.58875", "0")
     name = "cyxd_transmitter_site"
     out.append(site + (transmitter_site().save(MODELLIB / name, name),))
     excl.append((site[0], footprint(site[1], site[2], site[3], -85.0, 80.0, -45.0, 30.0)))
+    # remove the bus barns: exclude the whole OSM depot polygon (Mitchell Garage, ETS)
+    excl.append(("Mitchell Garage bus barns (OSM depot way 645478395)", DEPOT))
+    # the sim already has a mast at XD: exclude everything on the OSM grass lot (-37..53 E, -30..59 N of the NDB) plus 3 m
+    excl.append(("XD lot: remove existing mast and buildings", footprint("53.6436004638671900", "-113.5130004882812500", "0", -40.0, 56.0, -33.0, 62.0)))
+    ex = footprint("53.6436004638671900", "-113.5130004882812500", "0", -40.0, 56.0, -33.0, 62.0)
+    excl_rect = ('	<ExclusionRectangle latitudeMinimum="%.8f" latitudeMaximum="%.8f" longitudeMinimum="%.8f" longitudeMaximum="%.8f" '
+                 'excludeAllObjects="TRUE" excludeBeaconObjects="FALSE" excludeEffectObjects="FALSE" excludeGenericBuildingObjects="FALSE" '
+                 'excludeLibraryObjects="FALSE" excludeTaxiwaySignObjects="FALSE" excludeTriggerObjects="FALSE" excludeWindsockObjects="FALSE" '
+                 'excludeExtrusionBridgeObjects="FALSE" excludeSimObjects="FALSE" excludeWorldScripts="FALSE" excludeCarParking="FALSE" '
+                 'excludeRectangles="FALSE" excludePolygons="FALSE" />' % (min(c[0] for c in ex), max(c[0] for c in ex), min(c[1] for c in ex), max(c[1] for c in ex)))
+    for ident, lat, lon, fn in (("XD", "53.6436004638671900", "-113.5130004882812500", ndb_xd),
+                                ("ZXD", "53.4994010925293000", "-113.5130004882812500", ndb_zxd)):
+        name = "cyxd_ndb_" + ident.lower()
+        out.append(("%s NDB station (Street View 2009): fenced lot, mast, shed" % ident, lat, lon, "0", fn().save(MODELLIB / name, name)))
     # RCAF/DoT aerodrome sketch (c.1942): wind tee and beacon west of the 04 threshold, clear of all taxiways/aprons
     name = "cyxd_wind_tee"
     out.append(("Wind tee (RCAF Manual of Aerodromes, Edmonton p.90)", "53.573710", "-113.528688", "0",
@@ -466,7 +661,9 @@ def main():
     with open(CYXD, encoding="utf-8", newline="") as f:
         xml = f.read()
     nl = chr(13) + chr(10) if chr(13) + chr(10) in xml else chr(10)
-    block = chr(10).join(lines) + chr(10) + "".join(exclusion_xml(t, c, chr(10)) for t, c in excl) + chr(9) + END + chr(10)
+    lines.insert(1, "	<!-- XD: remove the existing mast placed by the sim -->")
+    lines.insert(2, excl_rect)
+    block = chr(10).join(lines) + chr(10) + "".join(exclusion_xml(t, c, chr(10)) for t, c in excl) + grass_xml("Grass: transmitter site (hides aerial photo)", DEPOT) + chr(9) + END + chr(10)
     block = block.replace(chr(10), nl)
     if BEGIN in xml:
         xml = re.sub(re.escape(chr(9) + BEGIN) + r".*?" + re.escape(END) + r"[" + chr(92) + "r]?" + chr(10), lambda _m: block, xml, flags=re.S)
