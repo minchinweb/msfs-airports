@@ -1,0 +1,12 @@
+# CYXD Hangar 7 - reference photos
+
+Saved 2026-10-10 for a later Hangar 7 model. Both are Twin Otter Archive photos of DHC-6 C-FMPN at YXD (reference only; licence not checked, do not redistribute).
+
+| File | Source | Notes |
+|---|---|---|
+| `twinotter_321_ody_1989.jpg` | https://twinotterarchive.com/321_C-FMPN_Michael_J_Ody_YXD_15081989_1024a.jpg (Michael J. Ody, 15 Aug 1989) | Corner of the hangar at left: teal/blue-green vertical-ribbed cladding, white cornice band at the roof edge, blue "7" roundel (yellow numeral) on a white square panel. Brown multi-storey parking structure behind (landside). |
+| `twinotter_321_blatherwick.jpg` | https://twinotterarchive.com/321_C-FMPN_Blatherwick_YXD_unk_mjo_1024a.jpg (Blatherwick, undated) | Airside face: big "HANGAR 7" lettering in black on a teal upper band (horizontal siding) over a cream ribbed lower wall with a row of glazed panels; a teal vertical pilaster/column; a swing-lamp over the lettering; grass apron in front. |
+| `EDMONTON_MUNI__13858359315_.jpg` | https://flickr.com/photos/woodhead/13858359315/in/album-72157638132998873 (also on Commons as File:EDMONTON_MUNI_(13858359315).jpg, published 14 Apr 2014; jasonwoodhead23 (Flickr "woodhead"), licence per Commons, probably CC BY 2.0 like the rest of the series, not re-checked) | **Airside of Hangar 7**, spring 2014, looking along the apron. Hangar 7 is the big blue ribbed hangar at right: its gable end faces the apron (left of the photo) with a wide white sliding door (ribbed leaves, two-tier, dark door-head) under a low-pitched roof with a pale rake trim; the blue "7" roundel (yellow numeral, white square backing) is on the blue wall just right of the door at upper height. A small personnel door and fenced yard sit at the base. The long side wall runs away to the right, flat-eaved, with a louvre vent high up, roof vents, and a chain-link fence along it. Receding to the left, in a row along the apron edge: a white/pale hangar with blue trim and an upper storey of glazing and a roundel (likely 6, the white face of Hangar 6), then a tan/brown hangar (probably 5, glazed tan face), then cream/yellow ones further back (probably 4 and beyond). |
+
+## Gable direction (from the 2014 airside photo)
+Hangar 7's gable end is the apron-facing face with the white sliding door and the "7" roundel, which fits the earlier note that the gables of Hangars 6 and 7 both go to the left in `../hangar6-7-photos/`. The long ribbed wall (eave side) runs away from the apron. The hangars in the row all show their gable ends to the same apron.

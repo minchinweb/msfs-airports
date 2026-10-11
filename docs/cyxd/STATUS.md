@@ -202,3 +202,32 @@ Source: https://rcaf.info/wp-content/uploads/2023/02/On-Track-1978-Edmonton-Muni
 - (The temporary pavement hiding near Hangar 15 was undone; draw flags are back to TRUE.)
 - East wing reworked from the orange outline: it runs the full length of Hangar 15 and a little more (56.5 x 14.5 x 5.8 m, from x_t -4.5 to 10, z_t 142.5..199), eight slate door leaves on the NE face (toward the runway). It now overlaps apron 1 by about 7 m at its edge and stays 4.5 m clear of the GATE 1 parking circle.
 - East wing: "15" roundel (0.65 m radius) on the parapet band above the doors, mid-length, facing NE (the taxiway).
+
+## Hangar 7 (not built yet)
+Two reference photos saved in `hangar7-photos/` (see its SOURCES.md): teal upper band with "HANGAR 7" lettering, cream ribbed lower wall with glazing, blue "7" roundel on a white panel at the corner.
+
+## Hangar 4 (not built yet)
+Reference photo in `hangar4-photos/` (see its SOURCES.md): yellow ribbed gable end with a wide arched open door, "4" roundel at the upper right, brick annex on one side and an orange-panelled building on the other.
+
+## Hangars 6 and 7 (not built yet)
+Reference photo in `hangar6-7-photos/` (see its SOURCES.md): Hangar 6 in front (pale blue-grey side wall, green end wall, "6" roundel), Hangar 7 behind it in blue with a "7" roundel. More Hangar 7 photos are in `hangar7-photos/`.
+
+## Hangar 5 (not built yet)
+Reference photo in `hangar5-photos/` (see its SOURCES.md): landside two-storey bronze-glass office block in front, ribbed tan hangar behind with a "5" roundel high on its upper band; Transport Canada / Western Aircraft Services.
+
+## Hangar 9 (not built yet)
+Reference photo in `hangar9-photos/` (see its SOURCES.md): large hangar with a full-width glazed sliding-door wall under a canopy roof, pale ribbed upper wall and gently pitched roof; no roundel visible in this view.
+
+## Hangar 8 (not built yet)
+Two reference photos in `hangar8-photos/` (see its SOURCES.md): grey hangar with a full-width glazed door wall under a canopy, a taller end block with the "8" roundel, and a long low glazed-clerestory wing; the NAIT parkade is behind it.
+
+## Hangar 18 / Edmonton Flying Club (not built yet)
+Reference photos in `hangar18-photos/` (see its SOURCES.md). A composite building just north of the control tower, not a box: white two-storey clubhouse with observation room and balcony, green ribbed hangar with two white door leaves, and a striped side wing; "18" roundel.
+
+## Hangar 11 (USAAF T3, 1942; already placed as a plain box)
+Reference photos and article notes in `hangar11-photos/` (see its SOURCES.md). Barrel-vault wartime hangar with white cladding, tan sliding doors, three-storey annex with fire escape and "11" roundel; boarded up from 2013, Municipal Historic Resource in 2022, destroyed by a suspicious fire on 22 April 2024. To replace the OSM-footprint box when we build it.
+
+## First hangar, c.1929-31 (not built yet; the 1938 landmark is a merge)
+Photos and the list of changes are in `first-hangar-photos/SOURCES.md`. Main finding: `cyxd_hangar_1938_landmark` merges the first hangar's tower and wing with the 1938 barrel-vault hangar; they should be two models.
+
+- Hangars 6/7: added an oblique NAIT-parkade photo ("RCMP hangar", looking NW) to `hangar6-7-photos/` with colours of Hangars 7 (steel-blue), 6 (white) and 5 (bronze/charcoal glazed).
