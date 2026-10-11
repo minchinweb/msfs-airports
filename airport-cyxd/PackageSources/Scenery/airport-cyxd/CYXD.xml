@@ -644,18 +644,6 @@
 			<RunwayStart end="PRIMARY" lat="53.57795178464409" lon="-113.51284019431836" alt="668.42640000000006" heading="181.21699523925781"/>
 			<RunwayStart end="SECONDARY" lat="53.56638612703228" lon="-113.51281118882294" alt="664.76880000000006" heading="1.21697998046875"/>
 		</Runway>
-		<Jetway gateName="GATE" parkingNumber="1" suffix="NONE">
-			<!--SceneryObject name: Jetway_Microlink-->
-			<SceneryObject lat="53.56692673496793" lon="-113.51652711979365" alt="0.00000000000000" pitch="0.000000" bank="0.000000" heading="-39.781616" imageComplexity="VERY_SPARSE" altitudeIsAgl="TRUE" snapToGround="TRUE" snapToNormal="FALSE">
-				<LibraryObject name="{DD5801B6-DFAF-4B88-BC77-CFD13C542C9A}" scale="1.000000"/>
-			</SceneryObject>
-		</Jetway>
-		<Jetway gateName="GATE" parkingNumber="2" suffix="NONE">
-			<!--SceneryObject name: Jetway_Link-->
-			<SceneryObject lat="53.56747862188551" lon="-113.51753102310700" alt="0.00000000000000" pitch="0.000000" bank="0.000000" heading="140.642441" imageComplexity="VERY_SPARSE" altitudeIsAgl="TRUE" snapToGround="TRUE" snapToNormal="FALSE">
-				<LibraryObject name="{43D4E862-3C41-4E16-802C-75CF609A74C2}" scale="1.000000"/>
-			</SceneryObject>
-		</Jetway>
 		<Jetway gateName="GATE" parkingNumber="3" suffix="NONE">
 			<!--SceneryObject name: Jetway_Link-->
 			<SceneryObject lat="53.56877625767441" lon="-113.51910175494534" alt="0.00000000000000" pitch="0.000000" bank="0.000000" heading="-43.157013" imageComplexity="VERY_SPARSE" altitudeIsAgl="TRUE" snapToGround="TRUE" snapToNormal="FALSE">
@@ -882,10 +870,6 @@
 	<SceneryObject lat="53.56920" lon="-113.52019" alt="0.00000000000000" pitch="0.000000" bank="0.000000" heading="138" imageComplexity="VERY_SPARSE" altitudeIsAgl="TRUE" snapToGround="TRUE" snapToNormal="FALSE">
 		<LibraryObject name="{BB08DA08-3307-5E2C-91B9-B8B5CA17B3EF}" scale="1.000000"/>
 	</SceneryObject>
-	<!-- BCATP hangar row C along Kingsway (long axis NW-SE) -->
-	<SceneryObject lat="53.56733" lon="-113.51777" alt="0.00000000000000" pitch="0.000000" bank="0.000000" heading="138" imageComplexity="VERY_SPARSE" altitudeIsAgl="TRUE" snapToGround="TRUE" snapToNormal="FALSE">
-		<LibraryObject name="{BB08DA08-3307-5E2C-91B9-B8B5CA17B3EF}" scale="1.000000"/>
-	</SceneryObject>
 	<!-- 1938 arched hangar, west side (replica at Fort Edmonton Park); doors face NE -->
 	<SceneryObject lat="53.56955" lon="-113.52551" alt="0.00000000000000" pitch="0.000000" bank="0.000000" heading="57.78" imageComplexity="VERY_SPARSE" altitudeIsAgl="TRUE" snapToGround="TRUE" snapToNormal="FALSE">
 		<LibraryObject name="{0DDC62DE-900D-5F4C-B5BA-EFE16E11800D}" scale="1.000000"/>
@@ -925,6 +909,18 @@
 	<!-- Control tower (c.1972) with NAV CANADA annex -->
 	<SceneryObject lat="53.56814038" lon="-113.51851571" alt="0.00000000000000" pitch="0.000000" bank="0.000000" heading="138" imageComplexity="VERY_SPARSE" altitudeIsAgl="TRUE" snapToGround="TRUE" snapToNormal="FALSE">
 		<LibraryObject name="{45098D4E-B072-5AC7-A2E4-41C005C2F78F}" scale="1.000000"/>
+	</SceneryObject>
+	<!-- Aerocentre (two-storey blue-grey FBO building) -->
+	<SceneryObject lat="53.56777346" lon="-113.51818420" alt="0.00000000000000" pitch="0.000000" bank="0.000000" heading="48" imageComplexity="VERY_SPARSE" altitudeIsAgl="TRUE" snapToGround="TRUE" snapToNormal="FALSE">
+		<LibraryObject name="{5959ED62-CB25-50D2-B119-45E28A32838F}" scale="1.000000"/>
+	</SceneryObject>
+	<!-- Shell Aerocentre hangar -->
+	<SceneryObject lat="53.56733868" lon="-113.51792286" alt="0.00000000000000" pitch="0.000000" bank="0.000000" heading="48" imageComplexity="VERY_SPARSE" altitudeIsAgl="TRUE" snapToGround="TRUE" snapToNormal="FALSE">
+		<LibraryObject name="{97E21819-83B8-5126-86C5-81C245263A03}" scale="1.000000"/>
+	</SceneryObject>
+	<!-- Hangar 15 (Centennial Flight Centre) -->
+	<SceneryObject lat="53.56695008" lon="-113.51720268" alt="0.00000000000000" pitch="0.000000" bank="0.000000" heading="48" imageComplexity="VERY_SPARSE" altitudeIsAgl="TRUE" snapToGround="TRUE" snapToNormal="FALSE">
+		<LibraryObject name="{BFB13C8B-212E-59DE-812A-FC9AAC85E316}" scale="1.000000"/>
 	</SceneryObject>
 	<!-- XD NDB station (Street View 2009): fenced lot, mast, shed -->
 	<SceneryObject lat="53.6436004638671900" lon="-113.5130004882812500" alt="0.00000000000000" pitch="0.000000" bank="0.000000" heading="0" imageComplexity="VERY_SPARSE" altitudeIsAgl="TRUE" snapToGround="TRUE" snapToNormal="FALSE">
@@ -1001,18 +997,6 @@
 		<Vertex lat="53.56931249036736" lon="-113.52124483019290"/>
 		<Vertex lat="53.56856399917623" lon="-113.52011225307469"/>
 		<Vertex lat="53.56908750963265" lon="-113.51913516980710"/>
-	</Polygon>
-	<Polygon version="0.4.0" displayName="No generated buildings: BCATP hangar row C along Kingsway (long axis NW-SE)" parentGroupID="6" altitude="667.68023681640625">
-		<Attribute name="UniqueGUID" guid="{359C73E8-06BE-4FB2-ABCB-EC942F7761D0}" type="GUID" value="{7B52BEEF-B53E-53CD-840D-404E1C794959}"/>
-		<Attribute name="ExcludeDetectedBuildings" guid="{5C1A2387-1F07-47DF-A569-962CF6258E55}" type="UINT8" value="1"/>
-		<Attribute name="ExcludeOSMBuildings" guid="{F3C2635D-9F2F-458F-8663-90B3837BED09}" type="UINT8" value="1"/>
-		<Attribute name="ExcludeMSBuildings" guid="{F78A3074-8AD5-4B8B-92C4-C1C948BB7AA5}" type="UINT8" value="1"/>
-		<Attribute name="ExcludeTIN" guid="{18B58CBF-AE02-4A19-8AA9-3809E8E73400}" type="UINT8" value="1"/>
-		<Attribute name="ExclusionFlags" guid="{4CACC252-E6DC-419A-B20C-16EC601DF70E}" type="UINT32" value="3"/>
-		<Vertex lat="53.56796600082377" lon="-113.51784774692531"/>
-		<Vertex lat="53.56744249036736" lon="-113.51882483019290"/>
-		<Vertex lat="53.56669399917623" lon="-113.51769225307469"/>
-		<Vertex lat="53.56721750963264" lon="-113.51671516980710"/>
 	</Polygon>
 	<Polygon version="0.4.0" displayName="No generated buildings: 1938 arched hangar, west side (replica at Fort Edmonton Park" parentGroupID="6" altitude="667.68023681640625">
 		<Attribute name="UniqueGUID" guid="{359C73E8-06BE-4FB2-ABCB-EC942F7761D0}" type="GUID" value="{1A7D2098-F1CD-5F62-8F3E-399742F5EE14}"/>
@@ -1133,6 +1117,42 @@
 		<Vertex lat="53.56809956265791" lon="-113.51884033125366"/>
 		<Vertex lat="53.56793248873132" lon="-113.51858752386120"/>
 		<Vertex lat="53.56810097485522" lon="-113.51827306028082"/>
+	</Polygon>
+	<Polygon version="0.4.0" displayName="No generated buildings: Aerocentre (two-storey blue-grey FBO building)" parentGroupID="6" altitude="667.68023681640625">
+		<Attribute name="UniqueGUID" guid="{359C73E8-06BE-4FB2-ABCB-EC942F7761D0}" type="GUID" value="{7306B753-6944-5C94-9E41-DD338C6CB1D6}"/>
+		<Attribute name="ExcludeDetectedBuildings" guid="{5C1A2387-1F07-47DF-A569-962CF6258E55}" type="UINT8" value="1"/>
+		<Attribute name="ExcludeOSMBuildings" guid="{F3C2635D-9F2F-458F-8663-90B3837BED09}" type="UINT8" value="1"/>
+		<Attribute name="ExcludeMSBuildings" guid="{F78A3074-8AD5-4B8B-92C4-C1C948BB7AA5}" type="UINT8" value="1"/>
+		<Attribute name="ExcludeTIN" guid="{18B58CBF-AE02-4A19-8AA9-3809E8E73400}" type="UINT8" value="1"/>
+		<Attribute name="ExclusionFlags" guid="{4CACC252-E6DC-419A-B20C-16EC601DF70E}" type="UINT32" value="3"/>
+		<Vertex lat="53.56786297382170" lon="-113.51860435147833"/>
+		<Vertex lat="53.56751546005439" lon="-113.51807851210202"/>
+		<Vertex lat="53.56768394617829" lon="-113.51776404852166"/>
+		<Vertex lat="53.56803145994560" lon="-113.51828988789796"/>
+	</Polygon>
+	<Polygon version="0.4.0" displayName="No generated buildings: Shell Aerocentre hangar" parentGroupID="6" altitude="667.68023681640625">
+		<Attribute name="UniqueGUID" guid="{359C73E8-06BE-4FB2-ABCB-EC942F7761D0}" type="GUID" value="{B10BCE44-0AC3-5DED-B302-54C60DAA007A}"/>
+		<Attribute name="ExcludeDetectedBuildings" guid="{5C1A2387-1F07-47DF-A569-962CF6258E55}" type="UINT8" value="1"/>
+		<Attribute name="ExcludeOSMBuildings" guid="{F3C2635D-9F2F-458F-8663-90B3837BED09}" type="UINT8" value="1"/>
+		<Attribute name="ExcludeMSBuildings" guid="{F78A3074-8AD5-4B8B-92C4-C1C948BB7AA5}" type="UINT8" value="1"/>
+		<Attribute name="ExcludeTIN" guid="{18B58CBF-AE02-4A19-8AA9-3809E8E73400}" type="UINT8" value="1"/>
+		<Attribute name="ExclusionFlags" guid="{4CACC252-E6DC-419A-B20C-16EC601DF70E}" type="UINT32" value="3"/>
+		<Vertex lat="53.56739106425695" lon="-113.51858170090735"/>
+		<Vertex lat="53.56694330613368" lon="-113.51790417709556"/>
+		<Vertex lat="53.56728629574305" lon="-113.51726401909265"/>
+		<Vertex lat="53.56773405386632" lon="-113.51794154290444"/>
+	</Polygon>
+	<Polygon version="0.4.0" displayName="No generated buildings: Hangar 15 (Centennial Flight Centre)" parentGroupID="6" altitude="667.68023681640625">
+		<Attribute name="UniqueGUID" guid="{359C73E8-06BE-4FB2-ABCB-EC942F7761D0}" type="GUID" value="{70075E4C-A72E-5488-BFB9-ED972CE27B5E}"/>
+		<Attribute name="ExcludeDetectedBuildings" guid="{5C1A2387-1F07-47DF-A569-962CF6258E55}" type="UINT8" value="1"/>
+		<Attribute name="ExcludeOSMBuildings" guid="{F3C2635D-9F2F-458F-8663-90B3837BED09}" type="UINT8" value="1"/>
+		<Attribute name="ExcludeMSBuildings" guid="{F78A3074-8AD5-4B8B-92C4-C1C948BB7AA5}" type="UINT8" value="1"/>
+		<Attribute name="ExcludeTIN" guid="{18B58CBF-AE02-4A19-8AA9-3809E8E73400}" type="UINT8" value="1"/>
+		<Attribute name="ExclusionFlags" guid="{4CACC252-E6DC-419A-B20C-16EC601DF70E}" type="UINT32" value="3"/>
+		<Vertex lat="53.56702688000202" lon="-113.51772560956623"/>
+		<Vertex lat="53.56663258553526" lon="-113.51712898412002"/>
+		<Vertex lat="53.56687327999798" lon="-113.51667975043377"/>
+		<Vertex lat="53.56726757446474" lon="-113.51727637587997"/>
 	</Polygon>
 	<Polygon version="0.4.0" displayName="No generated buildings: Mitchell Garage bus barns (OSM depot way 645478395)" parentGroupID="6" altitude="667.68023681640625">
 		<Attribute name="UniqueGUID" guid="{359C73E8-06BE-4FB2-ABCB-EC942F7761D0}" type="GUID" value="{320179F4-72C7-5A0E-A000-458BA00FE8C4}"/>

@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ModelInfo guid="{5959ED62-CB25-50D2-B119-45E28A32838F}" version="1.1">
+	<LODS>
+		<LOD minSize="0" ModelFile="cyxd_aerocentre.gltf"/>
+	</LODS>
+</ModelInfo>
