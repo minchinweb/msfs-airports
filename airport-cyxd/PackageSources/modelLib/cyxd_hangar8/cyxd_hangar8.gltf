@@ -1,0 +1,334 @@
+{
+ "asset": {
+  "version": "2.0",
+  "generator": "airport-cyxd/tools/gen_buildings.py",
+  "extensions": {
+   "ASOBO_normal_map_convention": {
+    "tangent_space_convention": "DirectX"
+   }
+  }
+ },
+ "extensionsUsed": [
+  "ASOBO_normal_map_convention"
+ ],
+ "scene": 0,
+ "scenes": [
+  {
+   "nodes": [
+    0
+   ]
+  }
+ ],
+ "nodes": [
+  {
+   "mesh": 0,
+   "name": "cyxd_hangar8"
+  }
+ ],
+ "meshes": [
+  {
+   "name": "cyxd_hangar8",
+   "primitives": [
+    {
+     "attributes": {
+      "POSITION": 0,
+      "NORMAL": 1,
+      "TEXCOORD_0": 2
+     },
+     "indices": 3,
+     "mode": 4,
+     "material": 0
+    },
+    {
+     "attributes": {
+      "POSITION": 0,
+      "NORMAL": 1,
+      "TEXCOORD_0": 2
+     },
+     "indices": 4,
+     "mode": 4,
+     "material": 1
+    },
+    {
+     "attributes": {
+      "POSITION": 0,
+      "NORMAL": 1,
+      "TEXCOORD_0": 2
+     },
+     "indices": 5,
+     "mode": 4,
+     "material": 2
+    },
+    {
+     "attributes": {
+      "POSITION": 0,
+      "NORMAL": 1,
+      "TEXCOORD_0": 2
+     },
+     "indices": 6,
+     "mode": 4,
+     "material": 3
+    },
+    {
+     "attributes": {
+      "POSITION": 0,
+      "NORMAL": 1,
+      "TEXCOORD_0": 2
+     },
+     "indices": 7,
+     "mode": 4,
+     "material": 4
+    },
+    {
+     "attributes": {
+      "POSITION": 0,
+      "NORMAL": 1,
+      "TEXCOORD_0": 2
+     },
+     "indices": 8,
+     "mode": 4,
+     "material": 5
+    }
+   ]
+  }
+ ],
+ "materials": [
+  {
+   "name": "cyxd_flat",
+   "pbrMetallicRoughness": {
+    "baseColorTexture": {
+     "index": 0
+    },
+    "metallicFactor": 0.0,
+    "roughnessFactor": 0.9
+   }
+  },
+  {
+   "name": "cyxd_siding",
+   "pbrMetallicRoughness": {
+    "baseColorTexture": {
+     "index": 1
+    },
+    "metallicFactor": 0.0,
+    "roughnessFactor": 0.9
+   }
+  },
+  {
+   "name": "cyxd_shingle_grey",
+   "pbrMetallicRoughness": {
+    "baseColorTexture": {
+     "index": 2
+    },
+    "metallicFactor": 0.0,
+    "roughnessFactor": 0.9
+   }
+  },
+  {
+   "name": "cyxd_ribbed_green",
+   "pbrMetallicRoughness": {
+    "baseColorTexture": {
+     "index": 3
+    },
+    "metallicFactor": 0.0,
+    "roughnessFactor": 0.9
+   }
+  },
+  {
+   "name": "cyxd_ribbed_steel",
+   "pbrMetallicRoughness": {
+    "baseColorTexture": {
+     "index": 4
+    },
+    "metallicFactor": 0.0,
+    "roughnessFactor": 0.9
+   }
+  },
+  {
+   "name": "cyxd_ribbed_white",
+   "pbrMetallicRoughness": {
+    "baseColorTexture": {
+     "index": 5
+    },
+    "metallicFactor": 0.0,
+    "roughnessFactor": 0.9
+   }
+  }
+ ],
+ "textures": [
+  {
+   "sampler": 0,
+   "source": 0
+  },
+  {
+   "sampler": 1,
+   "source": 1
+  },
+  {
+   "sampler": 1,
+   "source": 2
+  },
+  {
+   "sampler": 1,
+   "source": 3
+  },
+  {
+   "sampler": 1,
+   "source": 4
+  },
+  {
+   "sampler": 1,
+   "source": 5
+  }
+ ],
+ "samplers": [
+  {
+   "magFilter": 9728,
+   "minFilter": 9728
+  },
+  {
+   "magFilter": 9729,
+   "minFilter": 9987,
+   "wrapS": 10497,
+   "wrapT": 10497
+  }
+ ],
+ "images": [
+  {
+   "uri": "cyxd_palette.png"
+  },
+  {
+   "uri": "cyxd_siding.png"
+  },
+  {
+   "uri": "cyxd_shingle_grey.png"
+  },
+  {
+   "uri": "cyxd_ribbed_green.png"
+  },
+  {
+   "uri": "cyxd_ribbed_steel.png"
+  },
+  {
+   "uri": "cyxd_ribbed_white.png"
+  }
+ ],
+ "accessors": [
+  {
+   "bufferView": 0,
+   "componentType": 5126,
+   "count": 866,
+   "type": "VEC3",
+   "min": [
+    -33.15,
+    0,
+    -26.75
+   ],
+   "max": [
+    33.3,
+    13.3,
+    26.9
+   ]
+  },
+  {
+   "bufferView": 1,
+   "componentType": 5126,
+   "count": 866,
+   "type": "VEC3"
+  },
+  {
+   "bufferView": 2,
+   "componentType": 5126,
+   "count": 866,
+   "type": "VEC2"
+  },
+  {
+   "bufferView": 3,
+   "componentType": 5123,
+   "count": 882,
+   "type": "SCALAR"
+  },
+  {
+   "bufferView": 4,
+   "componentType": 5123,
+   "count": 48,
+   "type": "SCALAR"
+  },
+  {
+   "bufferView": 5,
+   "componentType": 5123,
+   "count": 6,
+   "type": "SCALAR"
+  },
+  {
+   "bufferView": 6,
+   "componentType": 5123,
+   "count": 168,
+   "type": "SCALAR"
+  },
+  {
+   "bufferView": 7,
+   "componentType": 5123,
+   "count": 54,
+   "type": "SCALAR"
+  },
+  {
+   "bufferView": 8,
+   "componentType": 5123,
+   "count": 168,
+   "type": "SCALAR"
+  }
+ ],
+ "bufferViews": [
+  {
+   "buffer": 0,
+   "byteOffset": 0,
+   "byteLength": 10392
+  },
+  {
+   "buffer": 0,
+   "byteOffset": 10392,
+   "byteLength": 10392
+  },
+  {
+   "buffer": 0,
+   "byteOffset": 20784,
+   "byteLength": 6928
+  },
+  {
+   "buffer": 0,
+   "byteOffset": 27712,
+   "byteLength": 1764
+  },
+  {
+   "buffer": 0,
+   "byteOffset": 29476,
+   "byteLength": 96
+  },
+  {
+   "buffer": 0,
+   "byteOffset": 29572,
+   "byteLength": 12
+  },
+  {
+   "buffer": 0,
+   "byteOffset": 29584,
+   "byteLength": 336
+  },
+  {
+   "buffer": 0,
+   "byteOffset": 29920,
+   "byteLength": 108
+  },
+  {
+   "buffer": 0,
+   "byteOffset": 30028,
+   "byteLength": 336
+  }
+ ],
+ "buffers": [
+  {
+   "uri": "cyxd_hangar8.bin",
+   "byteLength": 30364
+  }
+ ]
+}

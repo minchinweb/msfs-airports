@@ -231,3 +231,13 @@ Reference photos and article notes in `hangar11-photos/` (see its SOURCES.md). B
 Photos and the list of changes are in `first-hangar-photos/SOURCES.md`. Main finding: `cyxd_hangar_1938_landmark` merges the first hangar's tower and wing with the 1938 barrel-vault hangar; they should be two models.
 
 - Hangars 6/7: added an oblique NAIT-parkade photo ("RCMP hangar", looking NW) to `hangar6-7-photos/` with colours of Hangars 7 (steel-blue), 6 (white) and 5 (bronze/charcoal glazed).
+
+## Hangars 39 and 38 (not built yet)
+Eight reference photos and notes in `hangar39-photos/` (see its SOURCES.md): Hangar 39 "old PWA hangar" (pale blue/white, door wall facing south, "39" roundel) and Hangar 38 (mustard yellow, "38" roundel) just west of it.
+
+## Hangars 4-8, 11, 14, 18, 38, 39 built (2026-10-12, built OK, not yet checked in the sim)
+- New module `airport-cyxd/tools/hangars.py` (called from `gen_buildings.py`): ten new models plus an unplaced Hangar 9. Palette grew to 32 swatches; new ribbed/brick textures (`cyxd_ribbed_green/mustard/steel/tan/white/yellow/teal`, `cyxd_brick`). The old generic placements for Hangar 11, Hangar 14 and USAAF T1/T2 are skipped (`SKIP`) because the new models stand on them.
+- Footprints and the reasoning (OSM 2016 outlines checked against the Esri Wayback 2014 imagery, since Google Earth could not be used) are in `docs/cyxd/hangar-footprints.md`; the link index is `docs/cyxd/reference-links.md`; annotated crops are in `docs/cyxd/footprints/`.
+- Build: `build.bat cyxd` (sim closed) gave exit 0, empty `_RPTErrors.xml`, `modelLib.BGL` 265 kB. `fspackagetool.exe` stayed alive afterwards and had to be killed (the result was already written).
+- **Open questions for the user**: (1) where is Hangar 9 (set `HANGAR9_PLACEMENT` in `hangars.py`); (2) is Hangar 38 the SW and 39 the NW of the west group; (3) gable/door directions of 4-8 are assumed, check against the photos in the sim; (4) Hangar 8 vs the "tall end block" side.
+- **Full question list and to-do list: `docs/cyxd/open-questions.md`.** Not done yet: adjust Hangar 15's face to the west line-up photo; Hangar 16 front (five bands, indented bay, box-out next to the Shell hangar); wind sock position (from the PWA 737 video); static PWA 737; Hangar 14 static displays (Bomarc, mounted aircraft); split the 1938 landmark into the first hangar and the 1938 hangar (`first-hangar-photos/SOURCES.md`); General Aviation Centre, Canadian Helicopters hangar and the big NW complex are not built.

@@ -24,11 +24,16 @@ END = "<!-- END historic buildings -->"
 
 # palette swatches (u index) -----------------------------------------------------------------
 WALL, ROOF, METAL, DARK, BRICK, TRIM, RED, WHITE, GREY, SALMON, BLUE, YELLOW, GLASS, DGREY, CREAM, NAVY, PANEL, PBLUE, SLATE, DOORG = range(20)
+GREEN, MUSTARD, STEEL, TAN, BRONZE, RWHITE, TEAL, YELLOWR, BRICKD, MAUVE, PEACH, LROOF = range(20, 32)
 PALETTE = [(178, 172, 160), (70, 66, 64), (122, 130, 130), (38, 40, 46), (150, 88, 72), (204, 200, 190), (196, 52, 40), (236, 234, 230),
            (168, 175, 170), (214, 122, 104), (28, 86, 160), (244, 204, 40), (48, 66, 76), (96, 100, 104),
            (214, 208, 190), (46, 60, 84), (228, 224, 212),
-           (150, 186, 214), (96, 118, 140), (196, 192, 182)]
+           (150, 186, 214), (96, 118, 140), (196, 192, 182),
+           (62, 104, 70), (190, 164, 66), (128, 164, 190), (186, 166, 134), (84, 70, 60), (232, 232, 228), (40, 92, 88),
+           (232, 220, 150), (150, 70, 56), (150, 122, 128), (204, 160, 130), (206, 210, 212)]
 SW = 16
+RIB_TEX = {CREAM: "ribbed", PBLUE: "ribbed_blue", GREEN: "ribbed_green", MUSTARD: "ribbed_mustard", STEEL: "ribbed_steel", TAN: "ribbed_tan",
+           RWHITE: "ribbed_white", YELLOWR: "ribbed_yellow", TEAL: "ribbed_teal", BRICKD: "brick"}
 
 
 def write_palette(path):
@@ -48,7 +53,9 @@ def write_palette(path):
 
 
 TEX_T = 1.28  # metres per texture tile (8 clapboards / 8 shingle rows)
-TEX_NAMES = ("siding", "shingle_red", "shingle_grey", "ribbed", "ribbed_blue")
+TEX_NAMES = ("siding", "shingle_red", "shingle_grey", "ribbed", "ribbed_blue", "ribbed_green", "ribbed_mustard", "ribbed_steel",
+             "ribbed_tan", "ribbed_white", "ribbed_yellow", "ribbed_teal", "brick")
+
 
 
 def _png(path, w, h, px):
@@ -88,6 +95,32 @@ def write_textures(folder):
                 line.append(tuple(clamp(base[c] + d + random.Random(x // 16).uniform(-5, 5) + rnd.uniform(-4, 4)) for c in range(3)))
             px.append(line)
         _png(folder / ("cyxd_%s.png" % name), 128, 128, px)
+    for name, base in (("ribbed_green", (62, 104, 70)), ("ribbed_mustard", (190, 164, 66)), ("ribbed_steel", (128, 164, 190)),
+                       ("ribbed_tan", (186, 166, 134)), ("ribbed_white", (232, 232, 228)), ("ribbed_yellow", (232, 220, 150)),
+                       ("ribbed_teal", (40, 92, 88))):
+        px = []
+        for y in range(128):
+            line = []
+            for x in range(128):
+                rx = x % 16
+                d = 14 if rx < 2 else (-24 if rx >= 13 else (-8 if rx >= 11 else 0))
+                line.append(tuple(clamp(base[c] + d + random.Random(x // 16 + 5).uniform(-5, 5) + rnd.uniform(-4, 4)) for c in range(3)))
+            px.append(line)
+        _png(folder / ("cyxd_%s.png" % name), 128, 128, px)
+    # running-bond brick: 8 px courses, 16 px bricks, light mortar
+    px = []
+    for y in range(128):
+        row, r = divmod(y, 8)
+        off = 8 if row % 2 else 0
+        line = []
+        for x in range(128):
+            bx = (x + off) % 16
+            mortar = r == 0 or bx == 0
+            b = random.Random(row * 31 + ((x + off) // 16)).uniform(-14, 14)
+            base = (178, 176, 168) if mortar else (150 + b, 74 + b * 0.6, 58 + b * 0.5)
+            line.append(tuple(clamp(base[c] + rnd.uniform(-5, 5)) for c in range(3)))
+        px.append(line)
+    _png(folder / "cyxd_brick.png", 128, 128, px)
     # shingles: 16 px rows, 32 px tabs, half-tab stagger, dark joints and shadow under each course
     for name, base in (("shingle_red", (150, 66, 52)), ("shingle_grey", (98, 98, 102))):
         px = []
@@ -131,10 +164,8 @@ class Mesh:
         key = "flat"
         if self.textured:
             vertical = abs(n[1]) < 0.5
-            if vertical and sw == CREAM:
-                key = "ribbed"
-            elif vertical and sw == PBLUE:
-                key = "ribbed_blue"
+            if vertical and sw in RIB_TEX:
+                key = RIB_TEX[sw]
             elif vertical and sw in (WALL, WHITE, TRIM):
                 key = "siding"
             elif not vertical and sw == RED:
@@ -815,7 +846,8 @@ SHIFTS = [("north hangar complex: bay 1", (0, -20)), ("north hangar complex: bay
           ("north complex: shop", (0, -25)), ("north complex: annex", (0, 10)), ("bcatp hangar row a", (-3.7, -1.5))]
 # T4 stays as the sim's own generated building; hotels wait until the tower/wing split is known
 # row C: the Aerocentre and the Shell hangar stand there
-SKIP = ("edmonton inn", "chateau louis", "usaaf hangar t4", "bcatp hangar row b", "bcatp hangar row c")  # row B: the c.1972 control tower stands here
+SKIP = ("edmonton inn", "chateau louis", "usaaf hangar t4", "bcatp hangar row b", "bcatp hangar row c",
+        "hangar 11", "hangar 14", "usaaf hangar t1", "usaaf hangar t2")  # the last four: replaced by hangars.py models  # row B: the c.1972 control tower stands here
 KX, KY = 66170.0, 111200.0
 EXCL_MARGIN = 6.0
 DEPOT = [(53.57242, -113.58734), (53.57065, -113.58740), (53.57054, -113.58747), (53.57062, -113.58890),
@@ -934,6 +966,11 @@ def main():
         la, lo = tower_frame(xt, zt)
         out.append((title, la, lo, hdg, fn().save(MODELLIB / name, name)))
         excl.append((title, footprint(la, lo, hdg, -hw - 6, hw + 6, -hd - 6, hd + 6)))
+    import sys
+    sys.path.insert(0, str(Path(__file__).resolve().parent))
+    sys.modules.setdefault("gen_buildings", sys.modules[__name__])  # hangars.py imports this module
+    import hangars  # noqa: E402  (east line, west line, Hangar 14 and 18 models; see tools/hangars.py)
+    hangars.place(out, excl, MODELLIB, footprint)
     # remove the bus barns: exclude the whole OSM depot polygon (Mitchell Garage, ETS)
     excl.append(("Mitchell Garage bus barns (OSM depot way 645478395)", DEPOT))
     # the sim already has a mast at XD: exclude everything on the OSM grass lot (-37..53 E, -30..59 N of the NDB) plus 3 m

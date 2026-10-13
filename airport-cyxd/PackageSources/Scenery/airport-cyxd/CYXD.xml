@@ -850,22 +850,6 @@
 	<ExclusionRectangle latitudeMinimum="53.64330370" latitudeMaximum="53.64415802" longitudeMinimum="-113.51360499" longitudeMaximum="-113.51215418" excludeAllObjects="TRUE" excludeBeaconObjects="FALSE" excludeEffectObjects="FALSE" excludeGenericBuildingObjects="FALSE" excludeLibraryObjects="FALSE" excludeTaxiwaySignObjects="FALSE" excludeTriggerObjects="FALSE" excludeWindsockObjects="FALSE" excludeExtrusionBridgeObjects="FALSE" excludeSimObjects="FALSE" excludeWorldScripts="FALSE" excludeCarParking="FALSE" excludeRectangles="FALSE" excludePolygons="FALSE" />
 	<!-- control tower: remove sim-placed objects around it -->
 	<ExclusionRectangle latitudeMinimum="53.56788169" latitudeMaximum="53.56831885" longitudeMinimum="-113.51892570" longitudeMaximum="-113.51818769" excludeAllObjects="TRUE" excludeBeaconObjects="FALSE" excludeEffectObjects="FALSE" excludeGenericBuildingObjects="FALSE" excludeLibraryObjects="FALSE" excludeTaxiwaySignObjects="FALSE" excludeTriggerObjects="FALSE" excludeWindsockObjects="FALSE" excludeExtrusionBridgeObjects="FALSE" excludeSimObjects="FALSE" excludeWorldScripts="FALSE" excludeCarParking="FALSE" excludeRectangles="FALSE" excludePolygons="FALSE" />
-	<!-- Hangar 14 (BCATP 1942): OSM way 230718920 footprint 91 x 100 m incl. lean-tos, axis-aligned -->
-	<SceneryObject lat="53.56571" lon="-113.51713" alt="0.00000000000000" pitch="0.000000" bank="0.000000" heading="0.0" imageComplexity="VERY_SPARSE" altitudeIsAgl="TRUE" snapToGround="TRUE" snapToNormal="FALSE">
-		<LibraryObject name="{950CAEDF-8863-54CA-9600-7FF84CCB0F0B}" scale="1.000000"/>
-	</SceneryObject>
-	<!-- Hangar 11 (USAAF T3, 1942) -->
-	<SceneryObject lat="53.56909" lon="-113.50859" alt="0.00000000000000" pitch="0.000000" bank="0.000000" heading="0" imageComplexity="VERY_SPARSE" altitudeIsAgl="TRUE" snapToGround="TRUE" snapToNormal="FALSE">
-		<LibraryObject name="{E317C4C5-3BEC-5618-B387-F4F360D904E8}" scale="1.000000"/>
-	</SceneryObject>
-	<!-- USAAF hangar T1 (east apron) -->
-	<SceneryObject lat="53.57110" lon="-113.50886" alt="0.00000000000000" pitch="0.000000" bank="0.000000" heading="0" imageComplexity="VERY_SPARSE" altitudeIsAgl="TRUE" snapToGround="TRUE" snapToNormal="FALSE">
-		<LibraryObject name="{99593324-D250-5CAD-8AF4-67A3BF1E0E2D}" scale="1.000000"/>
-	</SceneryObject>
-	<!-- USAAF hangar T2 (east apron, narrow) -->
-	<SceneryObject lat="53.57010" lon="-113.50894" alt="0.00000000000000" pitch="0.000000" bank="0.000000" heading="0" imageComplexity="VERY_SPARSE" altitudeIsAgl="TRUE" snapToGround="TRUE" snapToNormal="FALSE">
-		<LibraryObject name="{B6FA7187-4240-5264-9945-2018A69E9774}" scale="1.000000"/>
-	</SceneryObject>
 	<!-- BCATP hangar row A along Kingsway (long axis NW-SE) -->
 	<SceneryObject lat="53.56920" lon="-113.52019" alt="0.00000000000000" pitch="0.000000" bank="0.000000" heading="138" imageComplexity="VERY_SPARSE" altitudeIsAgl="TRUE" snapToGround="TRUE" snapToNormal="FALSE">
 		<LibraryObject name="{BB08DA08-3307-5E2C-91B9-B8B5CA17B3EF}" scale="1.000000"/>
@@ -926,6 +910,46 @@
 	<SceneryObject lat="53.56698272" lon="-113.51681992" alt="0.00000000000000" pitch="0.000000" bank="0.000000" heading="48" imageComplexity="VERY_SPARSE" altitudeIsAgl="TRUE" snapToGround="TRUE" snapToNormal="FALSE">
 		<LibraryObject name="{4815EE49-59F2-5E02-817D-6AE3A5B19043}" scale="1.000000"/>
 	</SceneryObject>
+	<!-- Hangar 4 (yellow, arched door, OSM 325273554) -->
+	<SceneryObject lat="53.57345700" lon="-113.50843000" alt="0.00000000000000" pitch="0.000000" bank="0.000000" heading="0" imageComplexity="VERY_SPARSE" altitudeIsAgl="TRUE" snapToGround="TRUE" snapToNormal="FALSE">
+		<LibraryObject name="{F3C53FAB-B7DA-5284-9370-83D8E023CC64}" scale="1.000000"/>
+	</SceneryObject>
+	<!-- Hangar 5 (tan, bronze office, OSM 325270299) -->
+	<SceneryObject lat="53.57279300" lon="-113.50836400" alt="0.00000000000000" pitch="0.000000" bank="0.000000" heading="270" imageComplexity="VERY_SPARSE" altitudeIsAgl="TRUE" snapToGround="TRUE" snapToNormal="FALSE">
+		<LibraryObject name="{863B6CB7-41B5-5A67-AA64-095EE2758F5A}" scale="1.000000"/>
+	</SceneryObject>
+	<!-- Hangar 6 (white and green, OSM 325267780) -->
+	<SceneryObject lat="53.57213500" lon="-113.50840500" alt="0.00000000000000" pitch="0.000000" bank="0.000000" heading="270" imageComplexity="VERY_SPARSE" altitudeIsAgl="TRUE" snapToGround="TRUE" snapToNormal="FALSE">
+		<LibraryObject name="{C0E03081-3018-5E6D-B68A-98E5D3F952C4}" scale="1.000000"/>
+	</SceneryObject>
+	<!-- Hangar 7 (steel blue, OSM 325271251) -->
+	<SceneryObject lat="53.57161700" lon="-113.50837800" alt="0.00000000000000" pitch="0.000000" bank="0.000000" heading="270" imageComplexity="VERY_SPARSE" altitudeIsAgl="TRUE" snapToGround="TRUE" snapToNormal="FALSE">
+		<LibraryObject name="{C186D5B0-BCEA-5823-B408-6A7C99759D7B}" scale="1.000000"/>
+	</SceneryObject>
+	<!-- Hangar 8 (pale blue-grey with end block, OSM 325268698) -->
+	<SceneryObject lat="53.57035800" lon="-113.50829300" alt="0.00000000000000" pitch="0.000000" bank="0.000000" heading="270" imageComplexity="VERY_SPARSE" altitudeIsAgl="TRUE" snapToGround="TRUE" snapToNormal="FALSE">
+		<LibraryObject name="{94AA8EA4-7331-5428-AF20-77AA6C75D850}" scale="1.000000"/>
+	</SceneryObject>
+	<!-- Hangar 11 (USAAF T3 barrel vault with annexes, OSM 325268748) -->
+	<SceneryObject lat="53.56925100" lon="-113.50822800" alt="0.00000000000000" pitch="0.000000" bank="0.000000" heading="0" imageComplexity="VERY_SPARSE" altitudeIsAgl="TRUE" snapToGround="TRUE" snapToNormal="FALSE">
+		<LibraryObject name="{C4C759FB-D852-5FB2-A244-C38AC5FCAECC}" scale="1.000000"/>
+	</SceneryObject>
+	<!-- Hangar 14 (Alberta Aviation Museum, OSM 230718920) -->
+	<SceneryObject lat="53.56571400" lon="-113.51713000" alt="0.00000000000000" pitch="0.000000" bank="0.000000" heading="90" imageComplexity="VERY_SPARSE" altitudeIsAgl="TRUE" snapToGround="TRUE" snapToNormal="FALSE">
+		<LibraryObject name="{29B358ED-E096-5E29-A73B-86C051B06B22}" scale="1.000000"/>
+	</SceneryObject>
+	<!-- Hangar 18 (Edmonton Flying Club complex, traced from 2014 imagery) -->
+	<SceneryObject lat="53.56874000" lon="-113.51969900" alt="0.00000000000000" pitch="0.000000" bank="0.000000" heading="48" imageComplexity="VERY_SPARSE" altitudeIsAgl="TRUE" snapToGround="TRUE" snapToNormal="FALSE">
+		<LibraryObject name="{0096CDE1-498E-5CD1-A3D2-6CA0D48403B6}" scale="1.000000"/>
+	</SceneryObject>
+	<!-- Hangar 38 (mustard yellow, OSM 230718902) -->
+	<SceneryObject lat="53.57330800" lon="-113.52971400" alt="0.00000000000000" pitch="0.000000" bank="0.000000" heading="138" imageComplexity="VERY_SPARSE" altitudeIsAgl="TRUE" snapToGround="TRUE" snapToNormal="FALSE">
+		<LibraryObject name="{F21D551C-71C3-53D7-8F4C-7A93119A0E59}" scale="1.000000"/>
+	</SceneryObject>
+	<!-- Hangar 39 (old PWA hangar, OSM 230718900) -->
+	<SceneryObject lat="53.57498200" lon="-113.52936300" alt="0.00000000000000" pitch="0.000000" bank="0.000000" heading="138" imageComplexity="VERY_SPARSE" altitudeIsAgl="TRUE" snapToGround="TRUE" snapToNormal="FALSE">
+		<LibraryObject name="{3BE3060C-8E60-5E6B-B37F-53B50F50FD0B}" scale="1.000000"/>
+	</SceneryObject>
 	<!-- XD NDB station (Street View 2009): fenced lot, mast, shed -->
 	<SceneryObject lat="53.6436004638671900" lon="-113.5130004882812500" alt="0.00000000000000" pitch="0.000000" bank="0.000000" heading="0" imageComplexity="VERY_SPARSE" altitudeIsAgl="TRUE" snapToGround="TRUE" snapToNormal="FALSE">
 		<LibraryObject name="{B108732F-0107-557F-8CBA-69C85AEA4A8E}" scale="1.000000"/>
@@ -942,54 +966,6 @@
 	<SceneryObject lat="53.572005" lon="-113.529643" alt="0.00000000000000" pitch="0.000000" bank="0.000000" heading="0" imageComplexity="VERY_SPARSE" altitudeIsAgl="TRUE" snapToGround="TRUE" snapToNormal="FALSE">
 		<Beacon type="CIVILIAN" baseType="AIRPORT"/>
 	</SceneryObject>
-	<Polygon version="0.4.0" displayName="No generated buildings: Hangar 14 (BCATP 1942): OSM way 230718920 footprint 91 x 100" parentGroupID="6" altitude="667.68023681640625">
-		<Attribute name="UniqueGUID" guid="{359C73E8-06BE-4FB2-ABCB-EC942F7761D0}" type="GUID" value="{C73F1544-1BA5-586C-9A73-128FA74274DA}"/>
-		<Attribute name="ExcludeDetectedBuildings" guid="{5C1A2387-1F07-47DF-A569-962CF6258E55}" type="UINT8" value="1"/>
-		<Attribute name="ExcludeOSMBuildings" guid="{F3C2635D-9F2F-458F-8663-90B3837BED09}" type="UINT8" value="1"/>
-		<Attribute name="ExcludeMSBuildings" guid="{F78A3074-8AD5-4B8B-92C4-C1C948BB7AA5}" type="UINT8" value="1"/>
-		<Attribute name="ExcludeTIN" guid="{18B58CBF-AE02-4A19-8AA9-3809E8E73400}" type="UINT8" value="1"/>
-		<Attribute name="ExclusionFlags" guid="{4CACC252-E6DC-419A-B20C-16EC601DF70E}" type="UINT32" value="3"/>
-		<Vertex lat="53.56520640287770" lon="-113.51790829832250"/>
-		<Vertex lat="53.56520640287770" lon="-113.51635170167749"/>
-		<Vertex lat="53.56621359712231" lon="-113.51635170167749"/>
-		<Vertex lat="53.56621359712231" lon="-113.51790829832250"/>
-	</Polygon>
-	<Polygon version="0.4.0" displayName="No generated buildings: Hangar 11 (USAAF T3, 1942)" parentGroupID="6" altitude="667.68023681640625">
-		<Attribute name="UniqueGUID" guid="{359C73E8-06BE-4FB2-ABCB-EC942F7761D0}" type="GUID" value="{E7C1D3B2-AB4C-5BBF-9A26-7B3FC57042E6}"/>
-		<Attribute name="ExcludeDetectedBuildings" guid="{5C1A2387-1F07-47DF-A569-962CF6258E55}" type="UINT8" value="1"/>
-		<Attribute name="ExcludeOSMBuildings" guid="{F3C2635D-9F2F-458F-8663-90B3837BED09}" type="UINT8" value="1"/>
-		<Attribute name="ExcludeMSBuildings" guid="{F78A3074-8AD5-4B8B-92C4-C1C948BB7AA5}" type="UINT8" value="1"/>
-		<Attribute name="ExcludeTIN" guid="{18B58CBF-AE02-4A19-8AA9-3809E8E73400}" type="UINT8" value="1"/>
-		<Attribute name="ExclusionFlags" guid="{4CACC252-E6DC-419A-B20C-16EC601DF70E}" type="UINT32" value="3"/>
-		<Vertex lat="53.56876625899281" lon="-113.50920961614024"/>
-		<Vertex lat="53.56876625899281" lon="-113.50797038385976"/>
-		<Vertex lat="53.56941374100720" lon="-113.50797038385976"/>
-		<Vertex lat="53.56941374100720" lon="-113.50920961614024"/>
-	</Polygon>
-	<Polygon version="0.4.0" displayName="No generated buildings: USAAF hangar T1 (east apron)" parentGroupID="6" altitude="667.68023681640625">
-		<Attribute name="UniqueGUID" guid="{359C73E8-06BE-4FB2-ABCB-EC942F7761D0}" type="GUID" value="{984BEC51-70BC-5B36-80C7-62513BA657E4}"/>
-		<Attribute name="ExcludeDetectedBuildings" guid="{5C1A2387-1F07-47DF-A569-962CF6258E55}" type="UINT8" value="1"/>
-		<Attribute name="ExcludeOSMBuildings" guid="{F3C2635D-9F2F-458F-8663-90B3837BED09}" type="UINT8" value="1"/>
-		<Attribute name="ExcludeMSBuildings" guid="{F78A3074-8AD5-4B8B-92C4-C1C948BB7AA5}" type="UINT8" value="1"/>
-		<Attribute name="ExcludeTIN" guid="{18B58CBF-AE02-4A19-8AA9-3809E8E73400}" type="UINT8" value="1"/>
-		<Attribute name="ExclusionFlags" guid="{4CACC252-E6DC-419A-B20C-16EC601DF70E}" type="UINT32" value="3"/>
-		<Vertex lat="53.57077625899281" lon="-113.50936627172435"/>
-		<Vertex lat="53.57077625899281" lon="-113.50835372827565"/>
-		<Vertex lat="53.57142374100719" lon="-113.50835372827565"/>
-		<Vertex lat="53.57142374100719" lon="-113.50936627172435"/>
-	</Polygon>
-	<Polygon version="0.4.0" displayName="No generated buildings: USAAF hangar T2 (east apron, narrow)" parentGroupID="6" altitude="667.68023681640625">
-		<Attribute name="UniqueGUID" guid="{359C73E8-06BE-4FB2-ABCB-EC942F7761D0}" type="GUID" value="{13F3557E-43F7-5B27-875C-0D655494B1F9}"/>
-		<Attribute name="ExcludeDetectedBuildings" guid="{5C1A2387-1F07-47DF-A569-962CF6258E55}" type="UINT8" value="1"/>
-		<Attribute name="ExcludeOSMBuildings" guid="{F3C2635D-9F2F-458F-8663-90B3837BED09}" type="UINT8" value="1"/>
-		<Attribute name="ExcludeMSBuildings" guid="{F78A3074-8AD5-4B8B-92C4-C1C948BB7AA5}" type="UINT8" value="1"/>
-		<Attribute name="ExcludeTIN" guid="{18B58CBF-AE02-4A19-8AA9-3809E8E73400}" type="UINT8" value="1"/>
-		<Attribute name="ExclusionFlags" guid="{4CACC252-E6DC-419A-B20C-16EC601DF70E}" type="UINT32" value="3"/>
-		<Vertex lat="53.56974928057554" lon="-113.50928003324769"/>
-		<Vertex lat="53.56974928057554" lon="-113.50859996675230"/>
-		<Vertex lat="53.57045071942446" lon="-113.50859996675230"/>
-		<Vertex lat="53.57045071942446" lon="-113.50928003324769"/>
-	</Polygon>
 	<Polygon version="0.4.0" displayName="No generated buildings: BCATP hangar row A along Kingsway (long axis NW-SE)" parentGroupID="6" altitude="667.68023681640625">
 		<Attribute name="UniqueGUID" guid="{359C73E8-06BE-4FB2-ABCB-EC942F7761D0}" type="GUID" value="{DA48EA9E-7DDA-5D7B-BAF0-C98A2AEB2F1E}"/>
 		<Attribute name="ExcludeDetectedBuildings" guid="{5C1A2387-1F07-47DF-A569-962CF6258E55}" type="UINT8" value="1"/>
@@ -1169,6 +1145,126 @@
 		<Vertex lat="53.56667409867979" lon="-113.51662238253091"/>
 		<Vertex lat="53.56683355876135" lon="-113.51632476521377"/>
 		<Vertex lat="53.56729134132021" lon="-113.51701745746909"/>
+	</Polygon>
+	<Polygon version="0.4.0" displayName="No generated buildings: Hangar 4 (yellow, arched door, OSM 325273554)" parentGroupID="6" altitude="667.68023681640625">
+		<Attribute name="UniqueGUID" guid="{359C73E8-06BE-4FB2-ABCB-EC942F7761D0}" type="GUID" value="{58507B51-9BA0-51F3-BDE3-E45E43041EBA}"/>
+		<Attribute name="ExcludeDetectedBuildings" guid="{5C1A2387-1F07-47DF-A569-962CF6258E55}" type="UINT8" value="1"/>
+		<Attribute name="ExcludeOSMBuildings" guid="{F3C2635D-9F2F-458F-8663-90B3837BED09}" type="UINT8" value="1"/>
+		<Attribute name="ExcludeMSBuildings" guid="{F78A3074-8AD5-4B8B-92C4-C1C948BB7AA5}" type="UINT8" value="1"/>
+		<Attribute name="ExcludeTIN" guid="{18B58CBF-AE02-4A19-8AA9-3809E8E73400}" type="UINT8" value="1"/>
+		<Attribute name="ExclusionFlags" guid="{4CACC252-E6DC-419A-B20C-16EC601DF70E}" type="UINT32" value="3"/>
+		<Vertex lat="53.57308334892086" lon="-113.50877381139490"/>
+		<Vertex lat="53.57308334892086" lon="-113.50808618860511"/>
+		<Vertex lat="53.57383065107913" lon="-113.50808618860511"/>
+		<Vertex lat="53.57383065107913" lon="-113.50877381139490"/>
+	</Polygon>
+	<Polygon version="0.4.0" displayName="No generated buildings: Hangar 5 (tan, bronze office, OSM 325270299)" parentGroupID="6" altitude="667.68023681640625">
+		<Attribute name="UniqueGUID" guid="{359C73E8-06BE-4FB2-ABCB-EC942F7761D0}" type="GUID" value="{B3738D66-7B77-5590-B7F2-8A7067670AD5}"/>
+		<Attribute name="ExcludeDetectedBuildings" guid="{5C1A2387-1F07-47DF-A569-962CF6258E55}" type="UINT8" value="1"/>
+		<Attribute name="ExcludeOSMBuildings" guid="{F3C2635D-9F2F-458F-8663-90B3837BED09}" type="UINT8" value="1"/>
+		<Attribute name="ExcludeMSBuildings" guid="{F78A3074-8AD5-4B8B-92C4-C1C948BB7AA5}" type="UINT8" value="1"/>
+		<Attribute name="ExcludeTIN" guid="{18B58CBF-AE02-4A19-8AA9-3809E8E73400}" type="UINT8" value="1"/>
+		<Attribute name="ExclusionFlags" guid="{4CACC252-E6DC-419A-B20C-16EC601DF70E}" type="UINT32" value="3"/>
+		<Vertex lat="53.57250028417266" lon="-113.50794613692005"/>
+		<Vertex lat="53.57308571582733" lon="-113.50794613692005"/>
+		<Vertex lat="53.57308571582733" lon="-113.50878186307995"/>
+		<Vertex lat="53.57250028417266" lon="-113.50878186307995"/>
+	</Polygon>
+	<Polygon version="0.4.0" displayName="No generated buildings: Hangar 6 (white and green, OSM 325267780)" parentGroupID="6" altitude="667.68023681640625">
+		<Attribute name="UniqueGUID" guid="{359C73E8-06BE-4FB2-ABCB-EC942F7761D0}" type="GUID" value="{0AD31160-4B23-57B3-9A9B-2FBE0B8E0B2B}"/>
+		<Attribute name="ExcludeDetectedBuildings" guid="{5C1A2387-1F07-47DF-A569-962CF6258E55}" type="UINT8" value="1"/>
+		<Attribute name="ExcludeOSMBuildings" guid="{F3C2635D-9F2F-458F-8663-90B3837BED09}" type="UINT8" value="1"/>
+		<Attribute name="ExcludeMSBuildings" guid="{F78A3074-8AD5-4B8B-92C4-C1C948BB7AA5}" type="UINT8" value="1"/>
+		<Attribute name="ExcludeTIN" guid="{18B58CBF-AE02-4A19-8AA9-3809E8E73400}" type="UINT8" value="1"/>
+		<Attribute name="ExclusionFlags" guid="{4CACC252-E6DC-419A-B20C-16EC601DF70E}" type="UINT32" value="3"/>
+		<Vertex lat="53.57189264388489" lon="-113.50796522366630"/>
+		<Vertex lat="53.57237735611511" lon="-113.50796522366630"/>
+		<Vertex lat="53.57237735611511" lon="-113.50884477633369"/>
+		<Vertex lat="53.57189264388489" lon="-113.50884477633369"/>
+	</Polygon>
+	<Polygon version="0.4.0" displayName="No generated buildings: Hangar 7 (steel blue, OSM 325271251)" parentGroupID="6" altitude="667.68023681640625">
+		<Attribute name="UniqueGUID" guid="{359C73E8-06BE-4FB2-ABCB-EC942F7761D0}" type="GUID" value="{DEF800C6-465F-5C7B-B561-F9F001FECDBB}"/>
+		<Attribute name="ExcludeDetectedBuildings" guid="{5C1A2387-1F07-47DF-A569-962CF6258E55}" type="UINT8" value="1"/>
+		<Attribute name="ExcludeOSMBuildings" guid="{F3C2635D-9F2F-458F-8663-90B3837BED09}" type="UINT8" value="1"/>
+		<Attribute name="ExcludeMSBuildings" guid="{F78A3074-8AD5-4B8B-92C4-C1C948BB7AA5}" type="UINT8" value="1"/>
+		<Attribute name="ExcludeTIN" guid="{18B58CBF-AE02-4A19-8AA9-3809E8E73400}" type="UINT8" value="1"/>
+		<Attribute name="ExclusionFlags" guid="{4CACC252-E6DC-419A-B20C-16EC601DF70E}" type="UINT32" value="3"/>
+		<Vertex lat="53.57139937410072" lon="-113.50799036209762"/>
+		<Vertex lat="53.57183462589929" lon="-113.50799036209762"/>
+		<Vertex lat="53.57183462589929" lon="-113.50876563790237"/>
+		<Vertex lat="53.57139937410072" lon="-113.50876563790237"/>
+	</Polygon>
+	<Polygon version="0.4.0" displayName="No generated buildings: Hangar 8 (pale blue-grey with end block, OSM 325268698)" parentGroupID="6" altitude="667.68023681640625">
+		<Attribute name="UniqueGUID" guid="{359C73E8-06BE-4FB2-ABCB-EC942F7761D0}" type="GUID" value="{094EC659-954F-5A10-9F76-4A4D9B9AD643}"/>
+		<Attribute name="ExcludeDetectedBuildings" guid="{5C1A2387-1F07-47DF-A569-962CF6258E55}" type="UINT8" value="1"/>
+		<Attribute name="ExcludeOSMBuildings" guid="{F3C2635D-9F2F-458F-8663-90B3837BED09}" type="UINT8" value="1"/>
+		<Attribute name="ExcludeMSBuildings" guid="{F78A3074-8AD5-4B8B-92C4-C1C948BB7AA5}" type="UINT8" value="1"/>
+		<Attribute name="ExcludeTIN" guid="{18B58CBF-AE02-4A19-8AA9-3809E8E73400}" type="UINT8" value="1"/>
+		<Attribute name="ExclusionFlags" guid="{4CACC252-E6DC-419A-B20C-16EC601DF70E}" type="UINT32" value="3"/>
+		<Vertex lat="53.57000593165468" lon="-113.50780259649387"/>
+		<Vertex lat="53.57071006834532" lon="-113.50780259649387"/>
+		<Vertex lat="53.57071006834532" lon="-113.50878340350611"/>
+		<Vertex lat="53.57000593165468" lon="-113.50878340350611"/>
+	</Polygon>
+	<Polygon version="0.4.0" displayName="No generated buildings: Hangar 11 (USAAF T3 barrel vault with annexes, OSM 325268748" parentGroupID="6" altitude="667.68023681640625">
+		<Attribute name="UniqueGUID" guid="{359C73E8-06BE-4FB2-ABCB-EC942F7761D0}" type="GUID" value="{D6AF9889-5BA2-5FEA-84E6-53B95BBE9141}"/>
+		<Attribute name="ExcludeDetectedBuildings" guid="{5C1A2387-1F07-47DF-A569-962CF6258E55}" type="UINT8" value="1"/>
+		<Attribute name="ExcludeOSMBuildings" guid="{F3C2635D-9F2F-458F-8663-90B3837BED09}" type="UINT8" value="1"/>
+		<Attribute name="ExcludeMSBuildings" guid="{F78A3074-8AD5-4B8B-92C4-C1C948BB7AA5}" type="UINT8" value="1"/>
+		<Attribute name="ExcludeTIN" guid="{18B58CBF-AE02-4A19-8AA9-3809E8E73400}" type="UINT8" value="1"/>
+		<Attribute name="ExclusionFlags" guid="{4CACC252-E6DC-419A-B20C-16EC601DF70E}" type="UINT32" value="3"/>
+		<Vertex lat="53.56890927338129" lon="-113.50897078373886"/>
+		<Vertex lat="53.56890927338129" lon="-113.50748521626114"/>
+		<Vertex lat="53.56959272661871" lon="-113.50748521626114"/>
+		<Vertex lat="53.56959272661871" lon="-113.50897078373886"/>
+	</Polygon>
+	<Polygon version="0.4.0" displayName="No generated buildings: Hangar 14 (Alberta Aviation Museum, OSM 230718920)" parentGroupID="6" altitude="667.68023681640625">
+		<Attribute name="UniqueGUID" guid="{359C73E8-06BE-4FB2-ABCB-EC942F7761D0}" type="GUID" value="{8E28EA3B-BB9E-58B2-8E59-8E3D5AE1A09F}"/>
+		<Attribute name="ExcludeDetectedBuildings" guid="{5C1A2387-1F07-47DF-A569-962CF6258E55}" type="UINT8" value="1"/>
+		<Attribute name="ExcludeOSMBuildings" guid="{F3C2635D-9F2F-458F-8663-90B3837BED09}" type="UINT8" value="1"/>
+		<Attribute name="ExcludeMSBuildings" guid="{F78A3074-8AD5-4B8B-92C4-C1C948BB7AA5}" type="UINT8" value="1"/>
+		<Attribute name="ExcludeTIN" guid="{18B58CBF-AE02-4A19-8AA9-3809E8E73400}" type="UINT8" value="1"/>
+		<Attribute name="ExclusionFlags" guid="{4CACC252-E6DC-419A-B20C-16EC601DF70E}" type="UINT32" value="3"/>
+		<Vertex lat="53.56621759712230" lon="-113.51790678706362"/>
+		<Vertex lat="53.56521040287770" lon="-113.51790678706362"/>
+		<Vertex lat="53.56521040287770" lon="-113.51635321293637"/>
+		<Vertex lat="53.56621759712230" lon="-113.51635321293637"/>
+	</Polygon>
+	<Polygon version="0.4.0" displayName="No generated buildings: Hangar 18 (Edmonton Flying Club complex, traced from 2014 im" parentGroupID="6" altitude="667.68023681640625">
+		<Attribute name="UniqueGUID" guid="{359C73E8-06BE-4FB2-ABCB-EC942F7761D0}" type="GUID" value="{5AD498EB-DF2F-5E29-B0C8-96F1D0A5A84A}"/>
+		<Attribute name="ExcludeDetectedBuildings" guid="{5C1A2387-1F07-47DF-A569-962CF6258E55}" type="UINT8" value="1"/>
+		<Attribute name="ExcludeOSMBuildings" guid="{F3C2635D-9F2F-458F-8663-90B3837BED09}" type="UINT8" value="1"/>
+		<Attribute name="ExcludeMSBuildings" guid="{F78A3074-8AD5-4B8B-92C4-C1C948BB7AA5}" type="UINT8" value="1"/>
+		<Attribute name="ExcludeTIN" guid="{18B58CBF-AE02-4A19-8AA9-3809E8E73400}" type="UINT8" value="1"/>
+		<Attribute name="ExclusionFlags" guid="{4CACC252-E6DC-419A-B20C-16EC601DF70E}" type="UINT32" value="3"/>
+		<Vertex lat="53.56881510901117" lon="-113.52037189080444"/>
+		<Vertex lat="53.56833393610259" lon="-113.51964380551416"/>
+		<Vertex lat="53.56866489098883" lon="-113.51902610919556"/>
+		<Vertex lat="53.56914606389741" lon="-113.51975419448584"/>
+	</Polygon>
+	<Polygon version="0.4.0" displayName="No generated buildings: Hangar 38 (mustard yellow, OSM 230718902)" parentGroupID="6" altitude="667.68023681640625">
+		<Attribute name="UniqueGUID" guid="{359C73E8-06BE-4FB2-ABCB-EC942F7761D0}" type="GUID" value="{2E5E96E8-F73E-582B-9E08-266CC3512B8C}"/>
+		<Attribute name="ExcludeDetectedBuildings" guid="{5C1A2387-1F07-47DF-A569-962CF6258E55}" type="UINT8" value="1"/>
+		<Attribute name="ExcludeOSMBuildings" guid="{F3C2635D-9F2F-458F-8663-90B3837BED09}" type="UINT8" value="1"/>
+		<Attribute name="ExcludeMSBuildings" guid="{F78A3074-8AD5-4B8B-92C4-C1C948BB7AA5}" type="UINT8" value="1"/>
+		<Attribute name="ExcludeTIN" guid="{18B58CBF-AE02-4A19-8AA9-3809E8E73400}" type="UINT8" value="1"/>
+		<Attribute name="ExclusionFlags" guid="{4CACC252-E6DC-419A-B20C-16EC601DF70E}" type="UINT32" value="3"/>
+		<Vertex lat="53.57380505377576" lon="-113.52964454121343"/>
+		<Vertex lat="53.57331885096107" lon="-113.53055199325965"/>
+		<Vertex lat="53.57281094622423" lon="-113.52978345878657"/>
+		<Vertex lat="53.57329714903892" lon="-113.52887600674035"/>
+	</Polygon>
+	<Polygon version="0.4.0" displayName="No generated buildings: Hangar 39 (old PWA hangar, OSM 230718900)" parentGroupID="6" altitude="667.68023681640625">
+		<Attribute name="UniqueGUID" guid="{359C73E8-06BE-4FB2-ABCB-EC942F7761D0}" type="GUID" value="{8E2DAFAF-B184-5618-BB7E-C1249535C70F}"/>
+		<Attribute name="ExcludeDetectedBuildings" guid="{5C1A2387-1F07-47DF-A569-962CF6258E55}" type="UINT8" value="1"/>
+		<Attribute name="ExcludeOSMBuildings" guid="{F3C2635D-9F2F-458F-8663-90B3837BED09}" type="UINT8" value="1"/>
+		<Attribute name="ExcludeMSBuildings" guid="{F78A3074-8AD5-4B8B-92C4-C1C948BB7AA5}" type="UINT8" value="1"/>
+		<Attribute name="ExcludeTIN" guid="{18B58CBF-AE02-4A19-8AA9-3809E8E73400}" type="UINT8" value="1"/>
+		<Attribute name="ExclusionFlags" guid="{4CACC252-E6DC-419A-B20C-16EC601DF70E}" type="UINT32" value="3"/>
+		<Vertex lat="53.57549066483971" lon="-113.52944126082096"/>
+		<Vertex lat="53.57508148425308" lon="-113.53020495808759"/>
+		<Vertex lat="53.57447333516029" lon="-113.52928473917905"/>
+		<Vertex lat="53.57488251574691" lon="-113.52852104191241"/>
 	</Polygon>
 	<Polygon version="0.4.0" displayName="No generated buildings: Mitchell Garage bus barns (OSM depot way 645478395)" parentGroupID="6" altitude="667.68023681640625">
 		<Attribute name="UniqueGUID" guid="{359C73E8-06BE-4FB2-ABCB-EC942F7761D0}" type="GUID" value="{320179F4-72C7-5A0E-A000-458BA00FE8C4}"/>
