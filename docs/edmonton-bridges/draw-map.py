@@ -1,13 +1,15 @@
 """Draw a simplified map of the Edmonton bridge lists.
 
 Writes edmonton-bridges-map.png beside this script. Positions match
-docs/edmonton-bridges/bridges.md and freeway-bridges.md. Centres are
-approximate. Yellowhead interchanges that were named and then left off
-the freeway list are estimated from the street grid.
+docs/edmonton-bridges/bridges.md, freeway-bridges.md, and lrt.md.
+Centres are approximate. Yellowhead interchanges that were named and
+then left off the freeway list are estimated from the street grid.
+Light-rail track comes from lrt-tracks.json.
 """
 
 from __future__ import annotations
 
+import json
 import math
 from pathlib import Path
 
@@ -28,14 +30,19 @@ FRAME = (196, 190, 180)
 AIRPORT = (18, 18, 18)
 HALO = (255, 255, 255)
 INSET_FRAME = (168, 52, 40)
+LRT_OPEN = (12, 110, 78)
+LRT_BRIDGE = (6, 78, 56)
+LRT_BUILD = (176, 96, 18)
+LRT_FUTURE = (78, 84, 130)
+LRT_TUNNEL = (176, 182, 174)
 
 # Regional frame. North is up.
 LON0, LON1 = -114.30, -113.02
 LAT0, LAT1 = 53.16, 53.90
 
-# Downtown valley and the Yellowhead interchanges beside City Centre.
+# Downtown, the Davies viaduct, and the Yellowhead interchanges beside City Centre.
 IN_LON0, IN_LON1 = -113.70, -113.30
-IN_LAT0, IN_LAT1 = 53.500, 53.595
+IN_LAT0, IN_LAT1 = 53.478, 53.595
 
 AIRPORTS = [
     ("CYXD", "City Centre", 53.572, -113.520, "s"),
@@ -198,6 +205,85 @@ SKIPPED = [
     ("Q92", "Highway 2 / Township Rd 490", 53.1922, -113.5982, False),
 ]
 
+# code, name, lat, lon, state. state is open, construction, or proposed.
+# Centres match lrt.md. Construction and proposed centres are on the mapped centreline.
+LRT_STRUCTURES = [
+    ("T127", "Davies viaduct", 53.5003, -113.4486, "open"),
+    ("T128", "Whitemud LRT bridge", 53.4852, -113.4422, "open"),
+    ("T129", "Capital Line / Whitemud", 53.4828, -113.5165, "open"),
+    ("T130", "Capital Line / 118 Ave", 53.5704, -113.4586, "open"),
+    ("T131", "87 Avenue guideway", 53.5205, -113.618, "construction"),
+    ("T132", "Henday LRT, Lewis Estates", 53.5224, -113.6584, "construction"),
+    ("T133", "Stony Plain Road bridge", 53.5478, -113.5458, "construction"),
+    ("T134", "Blackmud Creek LRT", 53.4409, -113.5185, "construction"),
+    ("T135", "Henday LRT, Heritage Valley", 53.4354, -113.5237, "construction"),
+    ("T136", "Walker Bridge", 53.586, -113.515, "proposed"),
+]
+
+# name, lat, lon, kind. kind is open, elevated, built, construction, or proposed.
+# Elevated stations are open or under construction and sit on a viaduct.
+LRT_STATIONS = [
+    ("Clareview", 53.60177, -113.41142, "open"),
+    ("Belvedere", 53.58805, -113.43348, "open"),
+    ("Coliseum", 53.57068, -113.45838, "open"),
+    ("Stadium", 53.55995, -113.47071, "open"),
+    ("Churchill", 53.54377, -113.48904, "open"),
+    ("Health Sciences", 53.52006, -113.52589, "open"),
+    ("McKernan", 53.51308, -113.52619, "open"),
+    ("South Campus", 53.50287, -113.52842, "open"),
+    ("Southgate", 53.48576, -113.51678, "open"),
+    ("Century Park", 53.45731, -113.51637, "open"),
+    ("Kingsway", 53.55803, -113.50147, "open"),
+    ("NAIT", 53.56695, -113.50909, "open"),
+    ("Blatchford Gate", 53.57695, -113.51041, "built"),
+    ("102 Street", 53.54317, -113.49524, "open"),
+    ("Quarters", 53.54440, -113.48405, "open"),
+    ("Muttart", 53.53621, -113.48000, "open"),
+    ("Strathearn", 53.53171, -113.46231, "open"),
+    ("Holyrood", 53.52751, -113.45740, "open"),
+    ("Bonnie Doon", 53.51981, -113.45538, "open"),
+    ("Avonmore", 53.51046, -113.45508, "open"),
+    ("Davies", 53.49988, -113.44415, "elevated"),
+    ("Millbourne", 53.47469, -113.43896, "open"),
+    ("Grey Nuns", 53.46243, -113.43451, "open"),
+    ("Mill Woods", 53.45839, -113.43097, "open"),
+    ("Lewis Farms", 53.5228, -113.6679, "construction"),
+    ("Aldergrove", 53.5213, -113.648, "construction"),
+    ("WEM", 53.5206, -113.624, "elevated-build"),
+    ("Misericordia", 53.5197, -113.613, "elevated-build"),
+    ("Meadowlark", 53.5198, -113.5965, "construction"),
+    ("Glenwood", 53.528, -113.591, "construction"),
+    ("Jasper Place", 53.5412, -113.5902, "construction"),
+    ("149 Street", 53.5413, -113.5799, "construction"),
+    ("Grovenor", 53.5432, -113.5641, "construction"),
+    ("Glenora", 53.5468, -113.5495, "construction"),
+    ("124 Street", 53.5463, -113.5311, "construction"),
+    ("Brewery", 53.5462, -113.523, "construction"),
+    ("116 Street", 53.5462, -113.514, "construction"),
+    ("MacEwan Arts", 53.5462, -113.5064, "construction"),
+    ("NorQuest", 53.5430, -113.4991, "construction"),
+    ("Alex Decoteau", 53.5431, -113.497, "construction"),
+    ("Twin Brooks", 53.4468, -113.5167, "construction"),
+    ("Heritage Valley N", 53.42512, -113.54559, "construction"),
+    ("20 Avenue SW", 53.4198, -113.5448, "proposed"),
+    ("Heritage Valley", 53.4102, -113.5455, "proposed"),
+    ("Desrochers", 53.3953, -113.5414, "proposed"),
+    ("Gorman", 53.6218, -113.3704, "proposed"),
+    ("132 Avenue", 53.596, -113.517, "proposed"),
+    ("137 Avenue", 53.602, -113.517, "proposed"),
+    ("145 Avenue", 53.610, -113.517, "proposed"),
+    ("Castle Downs", 53.6160, -113.5269, "proposed"),
+    ("127 Street", 53.6166, -113.5450, "proposed"),
+    ("137 Street", 53.6145, -113.5660, "proposed"),
+    ("Campbell Road", 53.6153, -113.5949, "proposed"),
+]
+
+# Station names worth attempting on the regional map. The rest are dots.
+LRT_OVERVIEW_NAMES = {
+    "Clareview", "Century Park", "Mill Woods", "NAIT", "Davies", "Lewis Farms",
+    "WEM", "Heritage Valley N", "Desrochers", "Gorman", "Campbell Road",
+}
+
 YELLOWHEAD_ROW = {"Y68", "Y69", "Y70", "Y71", "Y72", "Y73", "Y74"}
 
 LEFT_OFF = {code for code, *_rest in SKIPPED}
@@ -260,20 +346,46 @@ FREEWAYS = [
     ("Sherwood Park Fwy", route("S104", "S105", "S106", "S107", "H52")),
     ("Hwy 14", route((53.428, -113.116), "L113", "H54")),
     ("Highway 16A", route("H38", "A111", "A110", "A109", "A108", (53.548, -114.120), "Y58")),
-    ("Highway 21", route("L113", "Y79", (53.600, -113.246))),
-    ("Highway 60", route("R1", "A110", "Y63")),
+    # South stub reaches the Highway 625 junction. North of the Yellowhead it bends east to Highway 15.
+    ("Highway 21", route(
+        (53.31043, -113.24487), (53.33773, -113.24502), "L113", "Y79",
+        (53.67828, -113.24510), (53.69620, -113.21643),
+    )),
+    # Devon bridge is west of the town. Highway 19 meets Highway 60 on the straight leg south of that curve.
+    ("Highway 60", route(
+        (53.33612, -113.73297), (53.36298, -113.73342), (53.36791, -113.73988),
+        "R1", (53.37776, -113.76256), "A110", "Y63",
+    )),
+    ("Highway 19", route((53.33612, -113.73297), "Q97")),
+    # East of the QE2 the same road is Highway 625, through Nisku and Beaumont to Highway 21.
+    ("Highway 625", route("Q97", (53.33773, -113.24502))),
     # Highway 2 from the north becomes Ray Gibbon Drive, then St. Albert Trail, then Groat Road.
     ("Highway 2 / Groat", route(
         "G116", "R8", "G117", "G118", "G119", "Y69", "H42", "Q102", "Q103", (53.822, -113.651),
     )),
     ("Highway 642", route((53.802, -113.700), "Q103", (53.802, -113.620))),
     ("Township Road 490", route((53.192, -113.640), "Q92", (53.192, -113.550))),
-    ("Highway 28A", route((53.770, -113.323), "D115")),
-    ("Highway 28", route((53.834, -113.380), (53.840, -113.328), "D115", (53.872, -113.305))),
-    ("Highway 28", route("H45", "D114", (53.675, -113.508))),
+    ("Highway 28A", route((53.71601, -113.32071), "D115")),
+    ("Highway 28", route(
+        "H45", (53.65193, -113.49173), "D114", (53.66378, -113.50385),
+        (53.71189, -113.50344), (53.72220, -113.49604), (53.82484, -113.49561),
+        (53.83262, -113.48525), (53.83337, -113.34033), (53.84112, -113.32665),
+        "D115", (53.85600, -113.32250),
+    )),
+    # From Highway 15 west of the river to the Highway 2 interchange. Crosses Highway 28A.
+    ("Highway 37", route(
+        (53.71389, -113.25991), (53.71590, -113.26288), (53.71601, -113.32071), "Q102",
+    )),
+    # Leaves the QE2 at the Leduc interchange and runs southeast. The designation continues past the frame.
+    ("Highway 2A", route(
+        "Q95", (53.25163, -113.55716), (53.24240, -113.53884),
+        (53.17068, -113.51238), (53.13369, -113.49456),
+    )),
     # Capilano Drive becomes Wayne Gretzky Drive, then Manning Drive, then Highway 15.
     ("Capilano / Manning", route(
-        "C120", "R16", "C121", "C122", "C123", "Y72", "H47", "R25", "M112", (53.728, -113.120),
+        "C120", "R16", "C121", "C122", "C123", "Y72", "H47",
+        (53.66993, -113.34279), (53.69383, -113.30608), (53.71389, -113.25991),
+        "R25", "M112", (53.69620, -113.21643), (53.728, -113.120),
     )),
 ]
 
@@ -291,11 +403,17 @@ ROAD_LABELS = [
     ("Highway 16", 53.578, -114.120, "n"),
     ("Highway 16A", 53.534, -113.980, "s"),
     ("Highway 60", 53.470, -113.770, "w"),
+    ("Highway 19", 53.343, -113.650, "n"),
+    ("Highway 625", 53.332, -113.390, "s"),
     ("Highway 21", 53.500, -113.230, "e"),
+    ("Highway 21", 53.640, -113.230, "e"),
     ("Highway 2", 53.690, -113.545, "e"),
+    ("Highway 2A", 53.200, -113.525, "e"),
     ("Highway 642", 53.810, -113.690, "n"),
-    ("Highway 28A", 53.800, -113.310, "e"),
+    ("Highway 28A", 53.770, -113.321, "e"),
+    ("Highway 28", 53.760, -113.496, "e"),
     ("Highway 28", 53.838, -113.360, "s"),
+    ("Highway 37", 53.722, -113.420, "n"),
     ("Groat Road", 53.528, -113.545, "w"),
     ("Capilano Drive", 53.552, -113.430, "e"),
 ]
@@ -393,6 +511,160 @@ class Labels:
 def polyline(draw, pts, fill, width):
     if len(pts) >= 2:
         draw.line(pts, fill=fill, width=width, joint="curve")
+
+
+def dashed(draw, pts, fill, width, on=12, off=8):
+    """Draw a dashed polyline. Pattern length is in pixels."""
+    if len(pts) < 2:
+        return
+    drawing = True
+    remain = on
+    for (x0, y0), (x1, y1) in zip(pts, pts[1:]):
+        dx, dy = x1 - x0, y1 - y0
+        dist = math.hypot(dx, dy)
+        if dist == 0:
+            continue
+        pos = 0.0
+        while pos < dist:
+            step = min(remain, dist - pos)
+            t0 = pos / dist
+            t1 = (pos + step) / dist
+            if drawing:
+                draw.line(
+                    [(x0 + dx * t0, y0 + dy * t0), (x0 + dx * t1, y0 + dy * t1)],
+                    fill=fill,
+                    width=width,
+                )
+            pos += step
+            remain -= step
+            if remain <= 0.5:
+                drawing = not drawing
+                remain = on if drawing else off
+
+
+def load_lrt():
+    path = Path(__file__).with_name("lrt-tracks.json")
+    data = json.loads(path.read_text(encoding="utf-8"))
+    return data["routes"]
+
+
+def lrt_stroke(route):
+    """How to draw one chained track. None means leave it off the map."""
+    if route.get("service"):
+        return None
+    pts = route["points"]
+    lats = [p[0] for p in pts]
+    lons = [p[1] for p in pts]
+    # An unnamed proposed way south of Mill Woods. It is not one of the extensions.
+    if route["kind"] == "proposed" and max(lons) > -113.43 and min(lats) < 53.50:
+        return None
+    if route["kind"] == "proposed" and route["length_m"] < 200:
+        return None
+    # The Blatchford extension is mapped as construction. Phase 1 is built.
+    if route["kind"] == "construction" and route["length_m"] < 2000 and max(lons) < -113.50:
+        return "open"
+    if route["kind"] == "tunnel":
+        return "tunnel"
+    if route["kind"] == "bridge":
+        return "bridge"
+    if route["kind"] == "construction":
+        return "construction"
+    if route["kind"] == "proposed":
+        return "proposed"
+    return "open"
+
+
+def on_guideway(lat, lon) -> bool:
+    """87 Avenue elevated guideway, 178 Street to 165 Street."""
+    return -113.640 <= lon <= -113.605 and lat < 53.525
+
+
+def draw_lrt_tracks(draw, project, scale_width):
+    routes = load_lrt()
+    for route in routes:
+        stroke = lrt_stroke(route)
+        if stroke is None:
+            continue
+        pts = [project(lat, lon) for lat, lon in route["points"]]
+        if stroke == "bridge":
+            polyline(draw, pts, LRT_BRIDGE, 5 if scale_width else 4)
+        elif stroke == "open":
+            polyline(draw, pts, LRT_OPEN, 3 if scale_width else 2)
+        elif stroke == "tunnel":
+            dashed(draw, pts, LRT_TUNNEL, 2 if scale_width else 1, 5, 5)
+        elif stroke == "construction":
+            # The guideway reads heavier than the at-grade construction line.
+            width = 5 if scale_width else 4
+            thin = 2 if scale_width else 2
+            run = []
+            heavy = None
+            for (lat, lon), pt in zip(route["points"], pts):
+                flag = on_guideway(lat, lon)
+                if heavy is None:
+                    heavy = flag
+                if flag != heavy and len(run) >= 2:
+                    if heavy:
+                        polyline(draw, run, LRT_BRIDGE, width)
+                    else:
+                        dashed(draw, run, LRT_BUILD, thin, 10, 7)
+                    run = [run[-1]]
+                heavy = flag
+                run.append(pt)
+            if len(run) >= 2:
+                if heavy:
+                    polyline(draw, run, LRT_BRIDGE, width)
+                else:
+                    dashed(draw, run, LRT_BUILD, thin, 10, 7)
+        elif stroke == "proposed":
+            dashed(draw, pts, LRT_FUTURE, 2 if scale_width else 1, 8, 6)
+
+
+def lrt_fill(state):
+    if state in {"open", "elevated", "built"}:
+        return LRT_OPEN
+    if state in {"construction", "elevated-build"}:
+        return LRT_BUILD
+    return LRT_FUTURE
+
+
+def draw_diamond(draw, x, y, fill, r=5):
+    draw.polygon([(x, y - r), (x + r, y), (x, y + r), (x - r, y)], fill=fill, outline=HALO)
+
+
+def draw_lrt_markers(draw, project, labels, label_names, code_face):
+    for code, _name, lat, lon, state in LRT_STRUCTURES:
+        x, y = project(lat, lon)
+        r = 5
+        draw.rectangle([x - r, y - r, x + r, y + r], fill=lrt_fill(state), outline=HALO)
+        labels.reserve(marker_box(x, y, r + 2))
+    for name, lat, lon, kind in LRT_STATIONS:
+        x, y = project(lat, lon)
+        fill = lrt_fill(kind)
+        if kind in {"elevated", "elevated-build"}:
+            draw_diamond(draw, x, y, fill, 6)
+            labels.reserve(marker_box(x, y, 8))
+        else:
+            draw_dot(draw, x, y, fill, 3)
+            labels.reserve(marker_box(x, y, 5))
+    prefer = {
+        "T127": "e", "T128": "e", "T129": "w", "T130": "w", "T131": "s",
+        "T132": "n", "T133": "s", "T134": "w", "T135": "s", "T136": "w",
+    }
+    for code, _name, lat, lon, state in LRT_STRUCTURES:
+        if not label_names and in_inset(lat, lon):
+            continue
+        if label_names and not in_inset(lat, lon):
+            continue
+        x, y = project(lat, lon)
+        labels.place(draw, code, (x, y), code_face, lrt_fill(state), prefer.get(code, "n"))
+    for name, lat, lon, kind in LRT_STATIONS:
+        if label_names:
+            if not in_inset(lat, lon):
+                continue
+        elif name not in LRT_OVERVIEW_NAMES or in_inset(lat, lon):
+            continue
+        x, y = project(lat, lon)
+        labels.place(draw, name, (x, y), code_face, lrt_fill(kind), "s")
 
 
 def in_inset(lat, lon) -> bool:
@@ -505,6 +777,7 @@ def draw_panel(width, height, lon0, lon1, lat0, lat1, label_names: bool):
     for _name, pts in FREEWAYS:
         polyline(draw, [project(lat, lon) for lat, lon in pts], LINE, 3 if label_names else 2)
     polyline(draw, [project(lat, lon) for lat, lon in RIVER_LINE], RIVER_COLOR, 5 if label_names else 4)
+    draw_lrt_tracks(draw, project, label_names)
 
     if not label_names:
         ring = [project(lat, lon) for lat, lon in (
@@ -581,6 +854,7 @@ def draw_panel(width, height, lon0, lon1, lat0, lat1, label_names: bool):
             fill = SKIP if left else INK
             labels.place(draw, text, (x, y), code_face, fill, prefer)
 
+    draw_lrt_markers(draw, project, labels, label_names, code_face)
     return image, draw, project, scale
 
 
@@ -598,6 +872,73 @@ def swatch_row(draw, x, y, face):
     draw.text((x + 534, y - 3), "River", font=face, fill=INK)
     draw.line([(x + 590, y + 5), (x + 618, y + 5)], fill=LINE, width=3)
     draw.text((x + 624, y - 3), "Freeway", font=face, fill=INK)
+    draw.line([(x + 710, y + 5), (x + 738, y + 5)], fill=LRT_OPEN, width=3)
+    draw.text((x + 744, y - 3), "LRT, open", font=face, fill=INK)
+    draw.line([(x + 840, y + 5), (x + 868, y + 5)], fill=LRT_BUILD, width=3)
+    draw.text((x + 874, y - 3), "LRT, building", font=face, fill=INK)
+    draw.line([(x + 990, y + 5), (x + 1018, y + 5)], fill=LRT_FUTURE, width=3)
+    draw.text((x + 1024, y - 3), "LRT, not funded", font=face, fill=INK)
+
+
+# The column heading already names the road, so a long entry can drop that
+# prefix. Later replacements only apply if the line still crosses the column.
+KEY_PREFIXES = (
+    ("North Henday / ", ""),
+    ("Henday / ", ""),
+    ("Henday at ", ""),
+    ("Yellowhead / ", ""),
+    ("Yellowhead at ", ""),
+    ("Highway 16 / ", ""),
+    ("Whitemud / ", ""),
+    ("Highway 2 / ", ""),
+    ("QE2 / ", ""),
+    ("Sherwood Park Fwy", "SPF"),
+    ("Highway 16A / ", "16A / "),
+    ("SPF / ", ""),
+    (" / Henday", ""),
+)
+KEY_WORDS = (
+    ("Fort Saskatchewan", "Fort Sask"),
+    ("Highway ", "Hwy "),
+    ("Avenue", "Ave"),
+    ("Street", "St"),
+    ("Road", "Rd"),
+    ("Drive", "Dr"),
+    (" Footbridge", ""),
+)
+KEY_SPECIAL = {
+    "R18": "Ainsworth Dyer",
+    "C123": "Moellmann Bridge",
+    "G116": "Hawrelak access",
+}
+
+
+def key_mark(draw, face, code, name, estimated, limit):
+    """Entry text that stays inside the key column."""
+
+    def width(text):
+        box = draw.textbbox((0, 0), text, font=face)
+        return box[2] - box[0]
+
+    def mark(text):
+        return f"{code}  {text}" + ("  *" if estimated else "")
+
+    if width(mark(name)) <= limit:
+        return mark(name)
+    text = KEY_SPECIAL.get(code, name)
+    if code not in KEY_SPECIAL:
+        for old, new in KEY_PREFIXES:
+            if text.startswith(old) or (old in text and not old.endswith(" ")):
+                text = text.replace(old, new, 1)
+                if width(mark(text)) <= limit:
+                    return mark(text)
+        for old, new in KEY_WORDS:
+            if old not in text:
+                continue
+            text = text.replace(old, new)
+            if width(mark(text)) <= limit:
+                return mark(text)
+    return mark(text)
 
 
 def draw_key(draw, x, y, width, face, head):
@@ -605,6 +946,7 @@ def draw_key(draw, x, y, width, face, head):
     columns.append(("Airports", None, True))
     gap = 12
     col_w = (width - gap * (len(columns) - 1)) / len(columns)
+    limit = col_w - 16
     bottom = y
     for i, (title, rows, airports) in enumerate(columns):
         cx = x + i * (col_w + gap)
@@ -619,12 +961,33 @@ def draw_key(draw, x, y, width, face, head):
             bottom = max(bottom, yy)
             continue
         for code, name, _lat, _lon, est in rows:
-            mark = f"{code}  {name}" + ("  *" if est else "")
+            mark = key_mark(draw, face, code, name, est, limit)
             fill = SKIP if code in LEFT_OFF else INK
             draw.text((cx, yy), mark, font=face, fill=fill)
             yy += 16
         bottom = max(bottom, yy)
     return bottom
+
+
+def draw_lrt_key(draw, x, y, width, face, head):
+    draw.text((x, y), "Light rail", font=head, fill=INK)
+    yy = y + 24
+    per = 5
+    col_w = width / 2
+    for i in range(2):
+        cx = x + i * col_w
+        cy = yy
+        for code, name, _lat, _lon, state in LRT_STRUCTURES[i * per:(i + 1) * per]:
+            fill = lrt_fill(state)
+            draw.rectangle([cx, cy + 2, cx + 8, cy + 10], fill=fill)
+            draw.text((cx + 14, cy - 2), f"{code}  {name}", font=face, fill=fill)
+            cy += 16
+    draw.text(
+        (x, yy + per * 16 + 6),
+        "Green is open. Orange is under construction. Slate is design only. Diamonds are elevated stations. Small dots are the other above-ground stations.",
+        font=face,
+        fill=MUTED,
+    )
 
 
 def main():
@@ -636,9 +999,10 @@ def main():
     in_w, _ = box_size(IN_LON0, IN_LON1, IN_LAT0, IN_LAT1, in_h, 36)
     gap = 22
     key_h = 310
-    foot_h = 110
+    lrt_h = 150
+    foot_h = 180
     width = margin + ov_w + gap + in_w + margin
-    height = margin + title_h + ov_h + 36 + key_h + foot_h + margin
+    height = margin + title_h + ov_h + 36 + key_h + lrt_h + foot_h + margin
 
     image = Image.new("RGB", (width, height), BG)
     draw = ImageDraw.Draw(image)
@@ -648,10 +1012,10 @@ def main():
     body = font(14)
     small = font(13)
 
-    draw.text((margin, margin), "Edmonton airports, freeways, and bridges", font=title, fill=INK)
+    draw.text((margin, margin), "Edmonton airports, freeways, bridges, and light rail", font=title, fill=INK)
     draw.text(
         (margin, margin + 36),
-        "Simplified sketch of the two scenery lists. North is up. Lines run through the listed centres, not surveyed centrelines.",
+        "Simplified sketch of the three scenery lists. North is up. Lines run through the listed centres, not surveyed centrelines.",
         font=sub,
         fill=MUTED,
     )
@@ -670,10 +1034,11 @@ def main():
     iy = oy
     image.paste(inset, (ix, iy))
     draw.rectangle([ix, iy, ix + in_w, iy + in_h], outline=INSET_FRAME, width=2)
-    draw.text((ix + 12, iy + 8), "City Centre inset", font=head, fill=INK)
+    draw.text((ix + 12, iy + 8), "Downtown to Davies", font=head, fill=INK)
 
     swatch_row(draw, margin, oy + ov_h + 14, body)
     draw_key(draw, margin, oy + ov_h + 40, width - 2 * margin, body, head)
+    draw_lrt_key(draw, margin, oy + ov_h + 40 + key_h, width - 2 * margin, body, head)
 
     foot = (
         "Squares are the six fields. Blue dots are the river list. Brown dots are the freeway list. "
@@ -681,12 +1046,17 @@ def main():
         "the Mill Creek trestle, Henday diamonds that are not brown dots, Whitemud and Terwillegar overpasses, "
         "and the Groat Road and Capilano Drive bridges north of the river. "
         "A star (*) is an estimated centre. Rabbit Hill Road on the Henday is still not plotted. "
-        "Highway 16 west of the Henday, Highway 21, and the other new crosses are on this map and still left off the include list."
+        "Highway 16 west of the Henday, Highway 21, and the other new crosses are on this map and still left off the include list. "
+        "Green lines are open LRT. A thick green line is an open viaduct or LRT bridge, including Davies (T127). "
+        "Orange dashes are track under construction. The thick stretch on 87 Avenue is the West Edmonton Mall guideway (T131). "
+        "Slate dashes are mapped alignments that are not funded: Gorman, Capital Line South to Desrochers, and the Metro Line to Campbell Road. "
+        "Grey dashes are tunnels. Green, orange, and slate squares are the LRT structures. Diamonds are elevated stations. "
+        "Nothing is drawn from Desrochers to the airport, or west of Campbell Road into St. Albert. T133 is the new Stony Plain Road bridge at the G118 crossing."
     )
     # Wrap the footnote into the full width.
     words = foot.split()
     line = ""
-    fy = oy + ov_h + 40 + key_h + 8
+    fy = oy + ov_h + 40 + key_h + lrt_h + 8
     max_w = width - 2 * margin
     for word in words:
         trial = word if not line else line + " " + word
