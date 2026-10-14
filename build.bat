@@ -104,9 +104,6 @@ set "REBUILD_TOOL="
 set "REBUILD_SIM="
 if defined REBUILD set "REBUILD_TOOL=-rebuild"
 if defined REBUILD set "REBUILD_SIM=Force"
-set "LAUNCH="
-if defined WINDOW set LAUNCH=start "MSFS build - %PNAME%" /wait
-
 set "HAVE_TOOL="
 if exist "%TOOL%" set "HAVE_TOOL=1"
 if /i "%MODE%"=="direct" goto try_direct
@@ -124,14 +121,22 @@ call :stamp
 echo.
 echo Running: "%TOOL%" "%PROJ%" -nopause %REBUILD_TOOL%
 echo.
-%LAUNCH% "%TOOL%" "%PROJ%" -nopause %REBUILD_TOOL%
-call :log "             fspackagetool exit code %ERRORLEVEL%"
-rem With the sim closed the tool blocks until the build is done, so only a
-rem short grace period is needed. With the sim open it may hand the job to
-rem the running sim and return at once, so allow longer for work to start.
+rem Start the tool in its own console and return at once. The tool's exit code
+rem is a nonzero value even after a good build, and Windows Terminal then
+rem leaves the tab open. Run it under cmd /c so that console exits 0. The
+rem tool also stays running after the package is written; the script stops
+rem it once the build report is on disk, and the wrapper then exits.
+rem -window leaves the console visible; otherwise it is minimized.
+set "WINFLAG=/MIN"
+if defined WINDOW set "WINFLAG="
+start "MSFS build - %PNAME%" %WINFLAG% cmd.exe /c ""%TOOL%" "%PROJ%" -nopause %REBUILD_TOOL% & exit /b 0"
+rem With the sim closed the report usually appears quickly, so only a short
+rem grace period is needed. With the sim open the tool may hand the job to
+rem the running sim and produce nothing itself, so allow longer for work to start.
 set "IDLE=15"
 if defined SIM_RUNNING set "IDLE=45"
 call :wait_for_build
+call :close_packagetool
 if "%WAIT_RC%"=="0" goto finished
 if "%WAIT_RC%"=="1" goto unconfirmed
 call :log "             fspackagetool produced no build activity."
@@ -231,6 +236,18 @@ powershell -NoProfile -NonInteractive -Command "$s=[long]'%START%'; $done='%PDIR
 set "WAIT_RC=%ERRORLEVEL%"
 exit /b 0
 
+:close_packagetool
+rem fspackagetool does not exit when the build is finished, so its console
+rem stays until someone closes it. Stop the process. Do not touch the sim.
+tasklist /fi "imagename eq fspackagetool.exe" /nh 2>nul | find /i "fspackagetool.exe" >nul
+if errorlevel 1 exit /b 0
+if "%WAIT_RC%"=="0" (
+  powershell -NoProfile -NonInteractive -Command "$s=[long]'%START%'; $layout='%PDIR%\Packages'; $deadline=(Get-Date).AddSeconds(12); while((Get-Date) -lt $deadline){ $hit=Get-ChildItem -LiteralPath $layout -Recurse -Filter layout.json -ErrorAction SilentlyContinue | Where-Object { $_.LastWriteTimeUtc.Ticks -gt $s } | Select-Object -First 1; if($hit){ break }; Start-Sleep -Seconds 1 }"
+)
+call :log "             Closing fspackagetool so its console can exit."
+taskkill /IM fspackagetool.exe /F >nul 2>&1
+exit /b 0
+
 :find_sim_exe
 rem The running sim's own exe if it is open, else the installed Store
 rem package that contains FlightSimulator2024.exe.
@@ -249,11 +266,12 @@ echo   ^<project^>  a project .xml, a project folder, or a short name, e.g.
 echo                cyxd   airport-cyxd\airport-CYXD-edmonton-blatchford-field.xml
 echo                es30   aircraft-es30\airplane-es30-fse.xml
 echo                cev7   airport-CEV7-tofield-ab.xml in the repo root
+echo                bridges scenery-edmonton-bridges\scenery-edmonton-bridges.xml
 echo   -rebuild   redo all conversions (full rebuild)
 echo   -tool      only use the SDK's fspackagetool.exe
 echo   -direct    only call FlightSimulator2024.exe -I ; BuildAssetPackages ...
 echo              (syntax from MSFS 2020, unverified on 2024)
-echo   -window    run the builder in its own console window
+echo   -window    show the builder console. It is closed when the build is written
 echo   -wait N    seconds to wait for the build to finish (default 300)
 echo   -pause     wait for a key press before closing
 echo.

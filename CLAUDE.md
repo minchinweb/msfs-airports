@@ -2,6 +2,10 @@
 
 MSFS 2024 add-on projects: airports and FSE aircraft variants. The sim is the **MS Store** version. Each project folder has its own project XML, e.g. `airport-cyxd/airport-CYXD-edmonton-blatchford-field.xml` or `aircraft-es30/airplane-es30-fse.xml`. Two older projects sit in the repo root (`airport-2FA2-Monroe-Airpark.xml`, `airport-CEV7-tofield-ab.xml`). Each project's handoff notes are in `docs/<project>/STATUS.md` (or `status.md`). Read the relevant one before resuming work.
 
+## Commits
+
+Prefix commit messages with 🤖.
+
 ## Building
 
 Use `build.bat` in the repo root. From the bash tool, run it through cmd. The `//c` stops Git Bash from rewriting `/c` as a path:
@@ -9,6 +13,7 @@ Use `build.bat` in the repo root. From the bash tool, run it through cmd. The `/
     cmd.exe //c build.bat cyxd             # airport-cyxd
     cmd.exe //c build.bat es30 -rebuild    # full rebuild of aircraft-es30
     cmd.exe //c build.bat cev7             # airport-CEV7-tofield-ab.xml in the root
+    cmd.exe //c build.bat bridges          # scenery-edmonton-bridges
 
 - The project can be a short name (`cyxd`, `es30`, `navaids`), a project folder, or a project .xml. Run `build.bat -h` for all options.
 - Exit codes: 0 built with no errors, 1 built with errors, 2 nothing built or not confirmed, 3 setup problem.
@@ -25,3 +30,5 @@ Use `build.bat` in the repo root. From the bash tool, run it through cmd. The `/
 - With the sim closed, `fspackagetool` built CYXD (exit code 0, `_RPTErrors.xml` empty, BGL rewritten) without `-window`. It prints "Attached to EXE" and a odd exit code (-2015035325); ignore it, `build.bat` judges by `_RPTErrors.xml`. On the MS Store sim it may pop up "Something went wrong launching your game. Custom arguments were used." The build still completed; just dismiss it.
 - After a successful build `fspackagetool.exe` can stay alive (the build is already complete: `_RPTErrors.xml` is empty and `Packages/.../layout.json` is fresh) and keep `build.bat` from returning. Check those two files, then kill the process (`Stop-Process -Name fspackagetool`). Seen 2026-10-12.
 - Seen 2026-10-14 (sim closed, fresh worktree): `cmd /c "cd /d <repo> && .\build.bat cyxd -window"` built OK (exit 0) and takes about 30 s. A leftover "Microsoft Flight Simulator 2024" launch dialog from a previous build (processes `gamingservicesui`, `gamelaunchhelper`) makes the next run report "NO BUILD" until it is closed. Run one build at a time, and kill `fspackagetool` when done. `_RPTErrors.xml` showing only `CompileMemory failed` is a real compile failure (it was a bad `<Departure>`).
+- `fspackagetool.exe` stays running after the package is written, and it exits with a nonzero code (`-2015035325`) even when the build is good. Windows Terminal is the default console host and leaves that tab open (seen 2026-10-14; the user had to close it). `build.bat` starts the tool under `cmd /c "... & exit /b 0"`, waits until `_RPTErrors.xml` is rewritten, allows up to 12 s for `layout.json`, then `taskkill /IM fspackagetool.exe /F`. The wrapper exits 0 and the tab closes. Do not leave a build window for the user to close.
+- 2026-10-14: the MS Store sim has a pending update. `fspackagetool` still compiled `scenery-edmonton-bridges` with the sim closed (`_RPTErrors.xml` empty). Do not launch the sim from a build until William has updated it in the Xbox app. The packager may still pop the "Custom arguments were used" / update dialog; dismiss it. The build does not need the sim.

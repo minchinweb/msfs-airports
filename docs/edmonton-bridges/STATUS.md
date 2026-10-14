@@ -1,0 +1,23 @@
+# Edmonton bridges status
+
+Last updated: 2026-10-14. Package: `scenery-edmonton-bridges/` (project `scenery-edmonton-bridges.xml`, definition `PackageDefinitions/cardboardgt-scenery-edmonton-bridges.xml`, version 0.1.0).
+
+## What this is
+
+Scaffolding only. The scenery XML (`PackageSources/Scenery/edmonton-bridges/edmonton-bridges.xml`) is an empty `FSData` document, so the package builds and loads with nothing placed. `PackageOrderHint` is `CUSTOM_WORLD_SCENERY` because these are city objects, not an airport.
+
+## Build
+
+From the repo root: `build.bat bridges` (PowerShell: `cmd /c ".\build.bat bridges"`). Short name `bridges` matches the folder `scenery-edmonton-bridges`. See `CLAUDE.md` for the SDK path override.
+
+Compiled once on 2026-10-14 with the sim closed. `_PackageInt/_RPTErrors.xml` is empty and `Packages/cardboardgt-scenery-edmonton-bridges/Scenery/cardboardgt/edmonton-bridges/edmonton-bridges.bgl` was written (56 bytes, nothing placed). `fspackagetool` did not write `layout.json`; one was added from the built files so the package folder has an index. Both `Packages/` and `_PackageInt/` are gitignored.
+
+## What to model
+
+Two inventories. `docs/edmonton-bridges/bridges.md` is the North Saskatchewan crossings from Devon to Scotford. `docs/edmonton-bridges/freeway-bridges.md` is the freeway structures on VFR lines among CYXD, CYED, CYEG, CZVL, CFB6, and CEZ3. The freeway list names the cross road on the QE2, Yellowhead, Henday, Whitemud, and Sherwood Park Freeway decks, and records the Henday, Whitemud, Terwillegar, Groat, and Capilano bridges left off. Highway 16 west of the Henday, Highway 21, and the other crossings added on 14 October are plotted as crosses and still left off the include list. Deck, approach, ramp, and cross-road geometry for every plotted bridge is in `bridge-geometry.json`. Model the downtown river spans first.
+
+## Next
+
+1. Add bridge models under `PackageSources/modelLib/<model>/` (`<model>.xml` + glTF), then add a `ModelLib` asset group to the package definition. Output dir used by the other packages is `Scenery\cardboardgt\<short>\`.
+2. Place them as `SceneryObject` / `LibraryObject` entries in `edmonton-bridges.xml`.
+3. Bump the package version and add a release note when the first bridge is in the sim.

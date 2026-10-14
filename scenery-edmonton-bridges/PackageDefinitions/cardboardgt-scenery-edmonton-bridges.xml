@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="utf-8"?>
+<AssetPackage ReleaseNotes="PackageDefinitions\cardboardgt-scenery-edmonton-bridges\ReleaseNotes.xml" Version="0.1.0">
+	<ItemSettings>
+		<ContentType>SCENERY</ContentType>
+		<Title>Edmonton Bridges</Title>
+		<Manufacturer/>
+		<Creator>Cardboard_GT</Creator>
+	</ItemSettings>
+	<Flags>
+		<VisibleInStore>false</VisibleInStore>
+		<CanBeReferenced>false</CanBeReferenced>
+	</Flags>
+	<PackageOrderHint>CUSTOM_WORLD_SCENERY</PackageOrderHint>
+	<AssetGroups>
+		<AssetGroup Name="ContentInfo">
+			<Type Version="0">ContentInfo</Type>
+			<Flags>
+				<FSXCompatibility>false</FSXCompatibility>
+			</Flags>
+			<AssetDir>PackageDefinitions\cardboardgt-scenery-edmonton-bridges\ContentInfo\</AssetDir>
+			<OutputDir>ContentInfo\cardboardgt-scenery-edmonton-bridges\</OutputDir>
+		</AssetGroup>
+		<AssetGroup Name="edmonton-bridges">
+			<Type Version="0">BGL</Type>
+			<Flags>
+				<FSXCompatibility>false</FSXCompatibility>
+			</Flags>
+			<AssetDir>PackageSources\Scenery\edmonton-bridges\</AssetDir>
+			<OutputDir>Scenery\cardboardgt\edmonton-bridges\</OutputDir>
+		</AssetGroup>
+	</AssetGroups>
+</AssetPackage>
