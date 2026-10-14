@@ -730,72 +730,159 @@
 		<Com frequency="119.500000" type="APPROACH" name="BLATCHFORD"/>
 		<Com frequency="122.450000" type="TOWER" name="AIR AMBULANCE"/>
 		<Com frequency="119.500000" type="DEPARTURE" name="BLATCHFORD"/>
-		<Waypoint lat="53.3976882125845" lon="-113.512831775102" waypointType="UNNAMED" magvar="343.782990" waypointIdent="HH16N" waypointRegion="CY"/>
-		<Waypoint lat="53.68258769868339" lon="-113.68800177859305" waypointType="UNNAMED" magvar="343.782990" waypointIdent="CY12I" waypointRegion="CY"/>
-		<Waypoint lat="53.63315474473705" lon="-113.61263353800298" waypointType="UNNAMED" magvar="343.782990" waypointIdent="CY12F" waypointRegion="CY"/>
-		<Waypoint lat="53.46021886647151" lon="-113.35082222432193" waypointType="UNNAMED" magvar="343.782990" waypointIdent="CY30I" waypointRegion="CY"/>
-		<Waypoint lat="53.50980455736843" lon="-113.42559792246401" waypointType="UNNAMED" magvar="343.782990" waypointIdent="CY30F" waypointRegion="CY"/>
+		<Waypoint lat="53.68258769868339" lon="-113.68800177859305" waypointType="UNNAMED" magvar="343.782990" waypointIdent="XD12I" waypointRegion="CY"/>
+		<Waypoint lat="53.63315474473705" lon="-113.61263353800298" waypointType="UNNAMED" magvar="343.782990" waypointIdent="XD12F" waypointRegion="CY"/>
+		<Waypoint lat="53.46021886647151" lon="-113.35082222432193" waypointType="UNNAMED" magvar="343.782990" waypointIdent="XD30I" waypointRegion="CY"/>
+		<Waypoint lat="53.50980455736843" lon="-113.42559792246401" waypointType="UNNAMED" magvar="343.782990" waypointIdent="XD30F" waypointRegion="CY"/>
 		<!-- 1941-45 Edmonton radio range (XD 266 kc) approach fixes: station position computed from CAA 1941 'station-to-field 61 deg mag, 3.3 mi' (var 25E). Range legs not simulated; fixes are waypoints. -->
 		<Waypoint lat="53.56913115" lon="-113.60066521" waypointType="UNNAMED" magvar="343.782990" waypointIdent="XDRNG" waypointRegion="CY"/>
-		<Waypoint lat="53.735568" lon="-113.511002" waypointType="UNNAMED" magvar="343.782990" waypointIdent="LEFAT" waypointRegion="CY"/>
-		<Waypoint lat="53.693901" lon="-113.511002" waypointType="UNNAMED" magvar="343.782990" waypointIdent="CY16A" waypointRegion="CY"/>
-		<Waypoint lat="53.660568" lon="-113.511002" waypointType="UNNAMED" magvar="343.782990" waypointIdent="CY16B" waypointRegion="CY"/>
+		<Waypoint lat="53.73467" lon="-113.51283" waypointType="UNNAMED" magvar="343.782990" waypointIdent="LEFAT" waypointRegion="CY"/>
+		<Waypoint lat="53.693901" lon="-113.51283" waypointType="UNNAMED" magvar="343.782990" waypointIdent="XD16A" waypointRegion="CY"/>
+		<Waypoint lat="53.660568" lon="-113.51283" waypointType="UNNAMED" magvar="343.782990" waypointIdent="XD16B" waypointRegion="CY"/>
+		<Waypoint lat="53.6131" lon="-113.51283" waypointType="UNNAMED" magvar="343.782990" waypointIdent="XD16C" waypointRegion="CY"/>
+		<Waypoint lat="53.5456" lon="-113.51283" waypointType="UNNAMED" magvar="343.782990" waypointIdent="XD34A" waypointRegion="CY"/>
+		<Waypoint lat="53.74683" lon="-113.51317" waypointType="UNNAMED" magvar="343.782990" waypointIdent="KIPUN" waypointRegion="CY"/>
+		<Waypoint lat="53.33600" lon="-113.51383" waypointType="UNNAMED" magvar="343.782990" waypointIdent="ULIXU" waypointRegion="CY"/>
+		<!-- EDMONTON City FOUR DEP exit fixes (CAP 3 p.98, plate coordinates) -->
+		<Waypoint lat="54.278333" lon="-114.438333" waypointType="NAMED" magvar="343.782990" waypointIdent="AROUK" waypointRegion="CY"/>
+		<Waypoint lat="54.251667" lon="-113.075" waypointType="NAMED" magvar="343.782990" waypointIdent="ABENY" waypointRegion="CY"/>
+		<Waypoint lat="53.146667" lon="-113.505" waypointType="NAMED" magvar="343.782990" waypointIdent="NUPPS" waypointRegion="CY"/>
+		<Waypoint lat="52.985" lon="-114.305" waypointType="NAMED" magvar="343.782990" waypointIdent="REFIO" waypointRegion="CY"/>
+		<Waypoint lat="52.535" lon="-113.64" waypointType="NAMED" magvar="343.782990" waypointIdent="BACOS" waypointRegion="CY"/>
+		<Waypoint lat="53.41633" lon="-113.51283" waypointType="UNNAMED" magvar="343.782990" waypointIdent="MIRAN" waypointRegion="CY"/>
 		<Waypoint lat="53.57243598" lon="-113.52042834" waypointType="UNNAMED" magvar="343.782990" waypointIdent="XDFLD" waypointRegion="CY"/>
 		<Waypoint lat="53.57913293" lon="-113.40504083" waypointType="UNNAMED" magvar="343.782990" waypointIdent="XDE07" waypointRegion="CY"/>
 		<Waypoint lat="53.58608162" lon="-113.26525318" waypointType="UNNAMED" magvar="343.782990" waypointIdent="XDE12" waypointRegion="CY"/>
 		<Waypoint lat="53.65216176" lon="-113.84403279" waypointType="UNNAMED" magvar="343.782990" waypointIdent="XDW10" waypointRegion="CY"/>
-		<Approach type="ILS" runway="34" designator="NONE" suffix="Y" gpsOverlay="FALSE" fixType="NDB" fixRegion="CY" fixIdent="ZXD" altitude="3700.0F" heading="343.8" missedAltitude="4200.0F">
+		<!-- EDMONTON City FOUR DEP (CYXD 4.), SID (VECTOR), CAP 3 p.98: all runways climb runway heading for vectors to the assigned route or a depicted fix, maintain 7000 ft or flight-planned altitude if lower. Climb gradients (12: 390 ft/NM to 2800, 16: 250 to 2800, 30: 360 to 2500) cannot be encoded; VA climbs to 3200 (noise abatement, all runways). Enroute transitions are the plate exit fixes; ATC vectors to them are not modelled. -->
+		<Departure name="CITY4">
+			<RunwayTransitions>
+				<RunwayTransitionLegs number="12" designator="NONE">
+					<Leg type="VA" magneticCourse="121.8" altitudeDescriptor="+" altitude1="3200.0F"/>
+					<Leg type="VM" magneticCourse="121.8"/>
+				</RunwayTransitionLegs>
+				<RunwayTransitionLegs number="16" designator="NONE">
+					<Leg type="VA" magneticCourse="163.8" altitudeDescriptor="+" altitude1="3200.0F"/>
+					<Leg type="VM" magneticCourse="163.8"/>
+				</RunwayTransitionLegs>
+				<RunwayTransitionLegs number="30" designator="NONE">
+					<Leg type="VA" magneticCourse="301.8" altitudeDescriptor="+" altitude1="3200.0F"/>
+					<Leg type="VM" magneticCourse="301.8"/>
+				</RunwayTransitionLegs>
+				<RunwayTransitionLegs number="34" designator="NONE">
+					<Leg type="VA" magneticCourse="343.8" altitudeDescriptor="+" altitude1="3200.0F"/>
+					<Leg type="VM" magneticCourse="343.8"/>
+				</RunwayTransitionLegs>
+			</RunwayTransitions>
+			<CommonRouteLegs/>
+			<EnrouteTransitions>
+				<EnrouteTransitionLegs>
+					<Leg type="IF" fixType="WAYPOINT" fixRegion="CY" fixIdent="AROUK" altitudeDescriptor="-" altitude1="7000.0F"/>
+				</EnrouteTransitionLegs>
+				<EnrouteTransitionLegs>
+					<Leg type="IF" fixType="WAYPOINT" fixRegion="CY" fixIdent="ABENY" altitudeDescriptor="-" altitude1="7000.0F"/>
+				</EnrouteTransitionLegs>
+				<EnrouteTransitionLegs>
+					<Leg type="IF" fixType="WAYPOINT" fixRegion="CY" fixIdent="NUPPS" altitudeDescriptor="-" altitude1="7000.0F"/>
+				</EnrouteTransitionLegs>
+				<EnrouteTransitionLegs>
+					<Leg type="IF" fixType="WAYPOINT" fixRegion="CY" fixIdent="REFIO" altitudeDescriptor="-" altitude1="7000.0F"/>
+				</EnrouteTransitionLegs>
+				<EnrouteTransitionLegs>
+					<Leg type="IF" fixType="WAYPOINT" fixRegion="CY" fixIdent="BACOS" altitudeDescriptor="-" altitude1="7000.0F"/>
+				</EnrouteTransitionLegs>
+			</EnrouteTransitions>
+		</Departure>
+		<!-- Approaches below follow Canada Air Pilot CAP 3 effective 11 Feb 2010 (pages 94-97), see docs/cyxd/procedures-2010.md. Plate courses are 163/343 (var 17E); this file uses 163.8/343.8 (magvar 16.2E). Fix positions are the plate coordinates (KIPUN, LEFAT, MIRAN, ULIXU) or placed on the extended centreline from DME distances (IXD DME 53.568901 -113.511002). Minima (MDA) are not representable; level segments are flown at the MDA. -->
+		<!-- ILS or NDB RWY 34 (plate p.97), ILS part: ULIXU IF 14 DME (4100), no PT, MIRAN 9.2 DME, ZXD (LOC 3200), GP 3.0 deg, TCH 51 ft, missed: climb 4400 on 343 to XD. -->
+		<Approach type="ILS" runway="34" designator="NONE" suffix="Y" gpsOverlay="FALSE" fixType="TERMINAL_WAYPOINT" fixRegion="CY" fixIdent="ULIXU" altitude="4100.0F" heading="343.8" missedAltitude="4400.0F">
 			<ApproachLegs>
-				<Leg type="IF" fixType="TERMINAL_WAYPOINT" fixRegion="CY" fixIdent="HH16N" altitudeDescriptor="+" altitude1="4200.0F"/>
-				<Leg type="TF" fixType="NDB" fixRegion="CY" fixIdent="ZXD" turnDirection="R" magneticCourse="343.8" distance="6.6N" altitudeDescriptor="+" altitude1="3700.0F"/>
-				<Leg type="CF" fixType="RUNWAY" fixRegion="CY" fixIdent="RW34" flyOver="FALSE" recommendedType="LOCALIZER" recommendedRegion="CY" recommendedIdent="IXD" theta="163.8" rho="1.1N" magneticCourse="343.8" distance="3.9N" altitudeDescriptor="A" altitude1="2400.0F"/>
+				<Leg type="IF" fixType="TERMINAL_WAYPOINT" fixRegion="CY" fixIdent="ULIXU" altitudeDescriptor="+" altitude1="4100.0F" isIAF="TRUE" isIF="TRUE"/>
+				<Leg type="TF" fixType="TERMINAL_WAYPOINT" fixRegion="CY" fixIdent="MIRAN" turnDirection="R" magneticCourse="343.8" distance="4.8N" altitudeDescriptor="+" altitude1="4100.0F"/>
+				<Leg type="TF" fixType="NDB" fixRegion="CY" fixIdent="ZXD" turnDirection="R" magneticCourse="343.8" distance="5.0N" altitudeDescriptor="+" altitude1="3200.0F" isFAF="TRUE"/>
+				<Leg type="CF" fixType="RUNWAY" fixRegion="CY" fixIdent="RW34" flyOver="FALSE" recommendedType="LOCALIZER" recommendedRegion="CY" recommendedIdent="IXD" theta="163.8" rho="1.1N" magneticCourse="343.8" distance="3.9N" altitudeDescriptor="A" altitude1="2240.0F" isMAP="TRUE"/>
 			</ApproachLegs>
 			<MissedApproachLegs>
-				<Leg type="CA" turnDirection="R" magneticCourse="343.8" altitudeDescriptor="+" altitude1="4200.0F"/>
-				<Leg type="DF" fixType="NDB" fixRegion="CY" fixIdent="ZXD" flyOver="FALSE" turnDirection="R" altitudeDescriptor="+" altitude1="5200.0F"/>
-				<Leg type="HM" fixType="NDB" fixRegion="CY" fixIdent="ZXD" turnDirection="R" recommendedType="NDB" recommendedRegion="CY" recommendedIdent="ZXD" magneticCourse="343.8" time="1" altitudeDescriptor="+" altitude1="5200.0F"/>
+				<Leg type="CA" turnDirection="R" magneticCourse="343.8" altitudeDescriptor="+" altitude1="4400.0F"/>
+				<Leg type="DF" fixType="NDB" fixRegion="CY" fixIdent="XD" flyOver="FALSE" turnDirection="R" altitudeDescriptor="+" altitude1="4400.0F"/>
+				<Leg type="HM" fixType="NDB" fixRegion="CY" fixIdent="XD" turnDirection="R" recommendedType="NDB" recommendedRegion="CY" recommendedIdent="XD" magneticCourse="343.8" time="1" altitudeDescriptor="+" altitude1="4400.0F"/>
 			</MissedApproachLegs>
 		</Approach>
-		<Approach type="NDB" runway="16" designator="NONE" suffix="Y" gpsOverlay="FALSE" fixType="NDB" fixRegion="CY" fixIdent="XD" altitude="3000.0F" heading="163.8" missedAltitude="3100.0F">
+		<!-- NDB RWY 16 (GNSS) (plate p.94): KIPUN, XD NDB at 4300, procedure turn LEFT within 10 NM of XD, 163 inbound, 3400 at XD, MDA 2740, XD to MAP 3.8 NM, missed: climb 4400 on 163 to ZXD. Procedure turn as in the SDK sample SimpleNavData.xml: PI in a Transition, magneticCourse = 45 deg barb heading (outbound 343.8 + 45 for a left turn), distance = 10 NM limit, followed by CF to the first fix of ApproachLegs. KIPUN transition goes straight to XD (no PT shown from that track). -->
+		<Approach type="NDB" runway="16" designator="NONE" suffix="Y" gpsOverlay="TRUE" fixType="NDB" fixRegion="CY" fixIdent="XD" altitude="4300.0F" heading="163.8" missedAltitude="4400.0F">
 			<ApproachLegs>
-				<Leg type="IF" fixType="NDB" fixRegion="CY" fixIdent="XD" altitudeDescriptor="+" altitude1="4300.0F"/>
-				<Leg type="CF" fixType="RUNWAY" fixRegion="CY" fixIdent="RW16" flyOver="FALSE" recommendedType="NDB" recommendedRegion="CY" recommendedIdent="XD" theta="343.8" rho="3.8N" magneticCourse="163.8" distance="3.8N" altitudeDescriptor="A" altitude1="2400.0F"/>
+				<Leg type="IF" fixType="NDB" fixRegion="CY" fixIdent="XD" altitudeDescriptor="A" altitude1="3400.0F" isIF="TRUE" isFAF="TRUE"/>
+				<Leg type="TF" fixType="TERMINAL_WAYPOINT" fixRegion="CY" fixIdent="XD16C" magneticCourse="163.8" distance="1.8N" altitudeDescriptor="A" altitude1="2740.0F"/>
+				<Leg type="CF" fixType="RUNWAY" fixRegion="CY" fixIdent="RW16" flyOver="FALSE" recommendedType="NDB" recommendedRegion="CY" recommendedIdent="XD" theta="343.8" rho="3.8N" magneticCourse="163.8" distance="2.0N" altitudeDescriptor="+" altitude1="2740.0F" isMAP="TRUE"/>
 			</ApproachLegs>
 			<MissedApproachLegs>
-				<Leg type="CA" turnDirection="L" magneticCourse="163.8" altitudeDescriptor="+" altitude1="3100.0F"/>
-				<Leg type="DF" fixType="NDB" fixRegion="CY" fixIdent="ZXD" flyOver="FALSE" altitudeDescriptor="+" altitude1="5200.0F"/>
-				<Leg type="HM" fixType="NDB" fixRegion="CY" fixIdent="ZXD" turnDirection="R" recommendedType="NDB" recommendedRegion="CY" recommendedIdent="ZXD" magneticCourse="343.8" time="1" altitudeDescriptor="+" altitude1="5200.0F"/>
+				<Leg type="CA" turnDirection="L" magneticCourse="163.8" altitudeDescriptor="+" altitude1="4400.0F"/>
+				<Leg type="DF" fixType="NDB" fixRegion="CY" fixIdent="ZXD" flyOver="FALSE" altitudeDescriptor="+" altitude1="4400.0F"/>
+				<Leg type="HM" fixType="NDB" fixRegion="CY" fixIdent="ZXD" turnDirection="R" recommendedType="NDB" recommendedRegion="CY" recommendedIdent="ZXD" magneticCourse="163.8" time="1" altitudeDescriptor="+" altitude1="4400.0F"/>
 			</MissedApproachLegs>
+			<Transition transitionType="FULL" fixType="NDB" fixRegion="CY" fixIdent="XD" altitude="4300.0F">
+				<TransitionLegs>
+					<Leg type="PI" fixType="NDB" fixRegion="CY" fixIdent="XD" turnDirection="L" recommendedType="NDB" recommendedRegion="CY" recommendedIdent="ZXD" theta="343.8" rho="8.7N" magneticCourse="28.8" distance="10.0N" altitudeDescriptor="+" altitude1="4300.0F"/>
+					<Leg type="CF" fixType="NDB" fixRegion="CY" fixIdent="XD" flyOver="FALSE" recommendedType="NDB" recommendedRegion="CY" recommendedIdent="ZXD" theta="343.8" rho="8.7N" magneticCourse="163.8" distance="3.0N" altitudeDescriptor="+" altitude1="3400.0F"/>
+				</TransitionLegs>
+			</Transition>
+			<Transition transitionType="FULL" fixType="TERMINAL_WAYPOINT" fixRegion="CY" fixIdent="KIPUN" altitude="4300.0F">
+				<TransitionLegs>
+					<Leg type="TF" fixType="NDB" fixRegion="CY" fixIdent="XD" magneticCourse="163.8" distance="6.2N" altitudeDescriptor="+" altitude1="3400.0F"/>
+				</TransitionLegs>
+			</Transition>
 		</Approach>
-		<!-- LOC(BC) DME RWY 16, from TSB report A04W0200 (2004) Appendix A: IF LEFAT at 10 DME (IXD), min 4300 to 7.5 DME, 3700 to 5.5 DME, 3400 to XD NDB (4.5 DME). LEFAT/7.5/5.5 positions are 10/7.5/5.5 nm due north (343.8M = 360T) of the IXD DME. Altitudes after XD are placeholders. -->
-		<Approach type="LOCALIZER_BACKCOURSE" runway="16" designator="NONE" suffix="Z" gpsOverlay="FALSE" fixType="TERMINAL_WAYPOINT" fixRegion="CY" fixIdent="LEFAT" altitude="4300.0F" heading="163.8" missedAltitude="3100.0F">
+		<!-- LOC(BC)/DME RWY 16 (plate p.95): IF LEFAT 10 DME 4300, 7.5 DME, 5.5 DME 3700, XD (4.5 DME) 3400, MDA 2600, MAP 0.6 DME, no PT, radar or RNAV required, missed: climb 4400 on 163 to ZXD. LEFAT/7.5/5.5/2.65 DME fixes are on the 343 line from the IXD DME; the step to the MDA is read from the profile (about 1.85 NM after XD). -->
+		<Approach type="LOCALIZER_BACKCOURSE" runway="16" designator="NONE" suffix="Z" gpsOverlay="FALSE" fixType="TERMINAL_WAYPOINT" fixRegion="CY" fixIdent="LEFAT" altitude="4300.0F" heading="163.8" missedAltitude="4400.0F">
 			<ApproachLegs>
 				<Leg type="IF" fixType="TERMINAL_WAYPOINT" fixRegion="CY" fixIdent="LEFAT" altitudeDescriptor="+" altitude1="4300.0F" isIAF="TRUE" isIF="TRUE"/>
-				<Leg type="TF" fixType="TERMINAL_WAYPOINT" fixRegion="CY" fixIdent="CY16A" magneticCourse="163.8" distance="2.5N" altitudeDescriptor="+" altitude1="4300.0F"/>
-				<Leg type="TF" fixType="TERMINAL_WAYPOINT" fixRegion="CY" fixIdent="CY16B" magneticCourse="163.8" distance="2.0N" altitudeDescriptor="+" altitude1="3700.0F"/>
+				<Leg type="TF" fixType="TERMINAL_WAYPOINT" fixRegion="CY" fixIdent="XD16A" magneticCourse="163.8" distance="2.5N" altitudeDescriptor="+" altitude1="4300.0F"/>
+				<Leg type="TF" fixType="TERMINAL_WAYPOINT" fixRegion="CY" fixIdent="XD16B" magneticCourse="163.8" distance="2.0N" altitudeDescriptor="+" altitude1="3700.0F"/>
 				<Leg type="TF" fixType="NDB" fixRegion="CY" fixIdent="XD" magneticCourse="163.8" distance="1.0N" altitudeDescriptor="+" altitude1="3400.0F" isFAF="TRUE"/>
-				<Leg type="CF" fixType="RUNWAY" fixRegion="CY" fixIdent="RW16" flyOver="FALSE" recommendedType="LOCALIZER" recommendedRegion="CY" recommendedIdent="IXD" theta="343.8" rho="1.1N" magneticCourse="163.8" distance="3.8N" altitudeDescriptor="A" altitude1="2400.0F" isMAP="TRUE"/>
+				<Leg type="TF" fixType="TERMINAL_WAYPOINT" fixRegion="CY" fixIdent="XD16C" magneticCourse="163.8" distance="1.8N" altitudeDescriptor="A" altitude1="2600.0F"/>
+				<Leg type="CF" fixType="RUNWAY" fixRegion="CY" fixIdent="RW16" flyOver="FALSE" recommendedType="LOCALIZER" recommendedRegion="CY" recommendedIdent="IXD" theta="343.8" rho="0.6N" magneticCourse="163.8" distance="2.0N" altitudeDescriptor="+" altitude1="2600.0F" isMAP="TRUE"/>
 			</ApproachLegs>
 			<MissedApproachLegs>
-				<Leg type="CA" turnDirection="L" magneticCourse="163.8" altitudeDescriptor="+" altitude1="3100.0F"/>
-				<Leg type="DF" fixType="NDB" fixRegion="CY" fixIdent="ZXD" flyOver="FALSE" altitudeDescriptor="+" altitude1="5200.0F"/>
+				<Leg type="CA" turnDirection="L" magneticCourse="163.8" altitudeDescriptor="+" altitude1="4400.0F"/>
+				<Leg type="DF" fixType="NDB" fixRegion="CY" fixIdent="ZXD" flyOver="FALSE" altitudeDescriptor="+" altitude1="4400.0F"/>
 			</MissedApproachLegs>
 		</Approach>
-		<Approach type="NDB" runway="34" designator="NONE" suffix="Z" gpsOverlay="FALSE" fixType="NDB" fixRegion="CY" fixIdent="ZXD" altitude="3700.0F" heading="343.8" missedAltitude="4200.0F">
+		<!-- LOC/DME RWY 34 (plate p.96): IF MIRAN 9.2 DME 4100, ZXD (4.1 DME) 3200, 2800 from about 1.4 DME, MDA 2660, MAP 0.3 DME, no PT, radar or RNAV required, missed: climb 4400 on 343 to XD. -->
+		<Approach type="LOCALIZER" runway="34" designator="NONE" suffix="X" gpsOverlay="FALSE" fixType="TERMINAL_WAYPOINT" fixRegion="CY" fixIdent="MIRAN" altitude="4100.0F" heading="343.8" missedAltitude="4400.0F">
 			<ApproachLegs>
-				<Leg type="IF" fixType="NDB" fixRegion="CY" fixIdent="ZXD" altitudeDescriptor="+" altitude1="3700.0F"/>
-				<Leg type="CF" fixType="RUNWAY" fixRegion="CY" fixIdent="RW34" flyOver="FALSE" recommendedType="NDB" recommendedRegion="CY" recommendedIdent="ZXD" theta="163.8" rho="4.4N" magneticCourse="343.8" distance="4.4N" altitudeDescriptor="A" altitude1="2400.0F"/>
+				<Leg type="IF" fixType="TERMINAL_WAYPOINT" fixRegion="CY" fixIdent="MIRAN" altitudeDescriptor="+" altitude1="4100.0F" isIAF="TRUE" isIF="TRUE"/>
+				<Leg type="TF" fixType="NDB" fixRegion="CY" fixIdent="ZXD" magneticCourse="343.8" distance="5.0N" altitudeDescriptor="+" altitude1="3200.0F" isFAF="TRUE"/>
+				<Leg type="TF" fixType="TERMINAL_WAYPOINT" fixRegion="CY" fixIdent="XD34A" magneticCourse="343.8" distance="2.7N" altitudeDescriptor="A" altitude1="2800.0F"/>
+				<Leg type="CF" fixType="RUNWAY" fixRegion="CY" fixIdent="RW34" flyOver="FALSE" recommendedType="LOCALIZER" recommendedRegion="CY" recommendedIdent="IXD" theta="163.8" rho="1.1N" magneticCourse="343.8" distance="1.2N" altitudeDescriptor="+" altitude1="2660.0F" isMAP="TRUE"/>
 			</ApproachLegs>
 			<MissedApproachLegs>
-				<Leg type="CA" turnDirection="R" magneticCourse="343.8" altitudeDescriptor="+" altitude1="4200.0F"/>
-				<Leg type="DF" fixType="NDB" fixRegion="CY" fixIdent="ZXD" flyOver="FALSE" turnDirection="R" altitudeDescriptor="+" altitude1="5200.0F"/>
-				<Leg type="HM" fixType="NDB" fixRegion="CY" fixIdent="ZXD" turnDirection="R" recommendedType="NDB" recommendedRegion="CY" recommendedIdent="ZXD" magneticCourse="343.8" time="1" altitudeDescriptor="+" altitude1="5200.0F"/>
+				<Leg type="CA" turnDirection="R" magneticCourse="343.8" altitudeDescriptor="+" altitude1="4400.0F"/>
+				<Leg type="DF" fixType="NDB" fixRegion="CY" fixIdent="XD" flyOver="FALSE" turnDirection="R" altitudeDescriptor="+" altitude1="4400.0F"/>
+				<Leg type="HM" fixType="NDB" fixRegion="CY" fixIdent="XD" turnDirection="R" recommendedType="NDB" recommendedRegion="CY" recommendedIdent="XD" magneticCourse="343.8" time="1" altitudeDescriptor="+" altitude1="4400.0F"/>
 			</MissedApproachLegs>
 		</Approach>
-		<Approach type="RNAV" runway="12" designator="NONE" suffix="Y" gpsOverlay="FALSE" lnav="TRUE" lpv="TRUE" fixType="TERMINAL_WAYPOINT" fixRegion="CY" fixIdent="CY12I" altitude="3700.0F" heading="121.8" missedAltitude="4500.0F">
+		<!-- ILS or NDB RWY 34 (GNSS), NDB part (plate p.97): ZXD at 4100, procedure turn LEFT within 10 NM of ZXD, 343 inbound, 3200 at ZXD, MDA 3000, ZXD to MAP 3.9 NM, missed: climb 4400 on 343 to XD. PI barb heading = outbound 163.8 + 45. -->
+		<Approach type="NDB" runway="34" designator="NONE" suffix="Z" gpsOverlay="TRUE" fixType="NDB" fixRegion="CY" fixIdent="ZXD" altitude="4100.0F" heading="343.8" missedAltitude="4400.0F">
 			<ApproachLegs>
-				<Leg type="IF" fixType="TERMINAL_WAYPOINT" fixRegion="CY" fixIdent="CY12I" altitudeDescriptor="+" altitude1="5200.0F" isIAF="TRUE" isIF="TRUE"/>
-				<Leg type="TF" fixType="TERMINAL_WAYPOINT" fixRegion="CY" fixIdent="CY12F" magneticCourse="121.8" distance="4.0N" altitudeDescriptor="+" altitude1="3700.0F" isFAF="TRUE"/>
+				<Leg type="IF" fixType="NDB" fixRegion="CY" fixIdent="ZXD" altitudeDescriptor="A" altitude1="3200.0F" isIF="TRUE" isFAF="TRUE"/>
+				<Leg type="CF" fixType="RUNWAY" fixRegion="CY" fixIdent="RW34" flyOver="FALSE" recommendedType="NDB" recommendedRegion="CY" recommendedIdent="ZXD" theta="163.8" rho="3.9N" magneticCourse="343.8" distance="3.9N" altitudeDescriptor="+" altitude1="3000.0F" isMAP="TRUE"/>
+			</ApproachLegs>
+			<MissedApproachLegs>
+				<Leg type="CA" turnDirection="R" magneticCourse="343.8" altitudeDescriptor="+" altitude1="4400.0F"/>
+				<Leg type="DF" fixType="NDB" fixRegion="CY" fixIdent="XD" flyOver="FALSE" turnDirection="R" altitudeDescriptor="+" altitude1="4400.0F"/>
+				<Leg type="HM" fixType="NDB" fixRegion="CY" fixIdent="XD" turnDirection="R" recommendedType="NDB" recommendedRegion="CY" recommendedIdent="XD" magneticCourse="343.8" time="1" altitudeDescriptor="+" altitude1="4400.0F"/>
+			</MissedApproachLegs>
+			<Transition transitionType="FULL" fixType="NDB" fixRegion="CY" fixIdent="ZXD" altitude="4100.0F">
+				<TransitionLegs>
+					<Leg type="PI" fixType="NDB" fixRegion="CY" fixIdent="ZXD" turnDirection="L" recommendedType="NDB" recommendedRegion="CY" recommendedIdent="XD" theta="163.8" rho="8.7N" magneticCourse="208.8" distance="10.0N" altitudeDescriptor="+" altitude1="4100.0F"/>
+					<Leg type="CF" fixType="NDB" fixRegion="CY" fixIdent="ZXD" flyOver="FALSE" recommendedType="NDB" recommendedRegion="CY" recommendedIdent="XD" theta="163.8" rho="8.7N" magneticCourse="343.8" distance="3.0N" altitudeDescriptor="+" altitude1="3200.0F"/>
+				</TransitionLegs>
+			</Transition>
+		</Approach>
+		<Approach type="RNAV" runway="12" designator="NONE" suffix="Y" gpsOverlay="FALSE" lnav="TRUE" lpv="TRUE" fixType="TERMINAL_WAYPOINT" fixRegion="CY" fixIdent="XD12I" altitude="3700.0F" heading="121.8" missedAltitude="4500.0F">
+			<ApproachLegs>
+				<Leg type="IF" fixType="TERMINAL_WAYPOINT" fixRegion="CY" fixIdent="XD12I" altitudeDescriptor="+" altitude1="5200.0F" isIAF="TRUE" isIF="TRUE"/>
+				<Leg type="TF" fixType="TERMINAL_WAYPOINT" fixRegion="CY" fixIdent="XD12F" magneticCourse="121.8" distance="4.0N" altitudeDescriptor="+" altitude1="3700.0F" isFAF="TRUE"/>
 				<Leg type="TF" fixType="RUNWAY" fixRegion="CY" fixIdent="RW12" flyOver="FALSE" magneticCourse="121.8" distance="4.5N" altitudeDescriptor="A" altitude1="2400.0F" isMAP="TRUE"/>
 			</ApproachLegs>
 			<MissedApproachLegs>
@@ -804,10 +891,10 @@
 				<Leg type="HM" fixType="NDB" fixRegion="CY" fixIdent="ZXD" turnDirection="R" recommendedType="NDB" recommendedRegion="CY" recommendedIdent="ZXD" magneticCourse="343.8" time="1" altitudeDescriptor="+" altitude1="5200.0F"/>
 			</MissedApproachLegs>
 		</Approach>
-		<Approach type="RNAV" runway="30" designator="NONE" suffix="Y" gpsOverlay="FALSE" lnav="TRUE" fixType="TERMINAL_WAYPOINT" fixRegion="CY" fixIdent="CY30I" altitude="3700.0F" heading="301.8" missedAltitude="4500.0F">
+		<Approach type="RNAV" runway="30" designator="NONE" suffix="Y" gpsOverlay="FALSE" lnav="TRUE" fixType="TERMINAL_WAYPOINT" fixRegion="CY" fixIdent="XD30I" altitude="3700.0F" heading="301.8" missedAltitude="4500.0F">
 			<ApproachLegs>
-				<Leg type="IF" fixType="TERMINAL_WAYPOINT" fixRegion="CY" fixIdent="CY30I" altitudeDescriptor="+" altitude1="5200.0F" isIAF="TRUE" isIF="TRUE"/>
-				<Leg type="TF" fixType="TERMINAL_WAYPOINT" fixRegion="CY" fixIdent="CY30F" magneticCourse="301.8" distance="4.0N" altitudeDescriptor="+" altitude1="3700.0F" isFAF="TRUE"/>
+				<Leg type="IF" fixType="TERMINAL_WAYPOINT" fixRegion="CY" fixIdent="XD30I" altitudeDescriptor="+" altitude1="5200.0F" isIAF="TRUE" isIF="TRUE"/>
+				<Leg type="TF" fixType="TERMINAL_WAYPOINT" fixRegion="CY" fixIdent="XD30F" magneticCourse="301.8" distance="4.0N" altitudeDescriptor="+" altitude1="3700.0F" isFAF="TRUE"/>
 				<Leg type="TF" fixType="RUNWAY" fixRegion="CY" fixIdent="RW30" flyOver="FALSE" magneticCourse="301.8" distance="4.5N" altitudeDescriptor="A" altitude1="2400.0F" isMAP="TRUE"/>
 			</ApproachLegs>
 			<MissedApproachLegs>
