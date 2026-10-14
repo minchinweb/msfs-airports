@@ -123,12 +123,16 @@ Again, not a published procedure. It's built from the documented rules plus geog
 - City of Edmonton Archives: RG-11-4 (Commissioners: Transportation, 1926–1971) and RG-50-4 (Engineer's Dept. reports, to 1982) may hold DoT/MOT correspondence about procedures.
 - Old Jeppesen Edmonton Industrial pages on eBay or from retired pilots. The Alberta Aviation Museum is on the old field.
 
-## Images (saved in `images/`)
-- `c1942-aerial-RCAF-415.011-2AOS-16EFTS.jpg`: oblique aerial of the wartime field, looking north-ish over the three runways with the BCATP schools (No. 2 AOS / No. 16 EFTS) and hangar lines. National Defence image #415.011, via rcaf.info (shared there by Mike Anglin). 1024×878.
-- `c1942-RCAF-aerodrome-manual-p90-map-and-diagram.jpg`: RCAF/DoT *Pilots Manual of Aerodromes and Seaplane Bases*, Vol. 2, p. 90. Location map plus runway diagram (3-21, 11-29, 15-33), the wind tee and beacon positions, and the radio range note. Via rcaf.info.
-- `1978-OnTrack-aerial-and-aerodrome-diagram.jpg`: *On Track* (1978), page 2. Vertical-ish aerial photo plus aerodrome diagram showing taxiways, displaced thresholds, tower, the XD bearing line, and variation 23°E. Via rcaf.info.
+## Images
+- [`../aerials/c1942-RCAF-415.011-2AOS-16EFTS.jpg`](../aerials/c1942-RCAF-415.011-2AOS-16EFTS.jpg): oblique aerial of the wartime field, looking north-ish over the three runways with the BCATP schools (No. 2 AOS / No. 16 EFTS) and hangar lines. National Defence image #415.011, via rcaf.info (shared there by Mike Anglin).
+- [`../rcaf-manual-of-aerodromes-edmonton-p90.jpg`](../rcaf-manual-of-aerodromes-edmonton-p90.jpg): RCAF/DoT *Pilots Manual of Aerodromes and Seaplane Bases*, Vol. 2, p. 90. Location map plus runway diagram (3-21, 11-29, 15-33), the wind tee and beacon positions, and the radio range note. Via rcaf.info. Already in `docs/cyxd`; the extra copy was the same page.
+- [`../rcaf-on-track-1978-page1.jpg`](../rcaf-on-track-1978-page1.jpg): *On Track* (1978), page 1. Noise abatement block: calm-wind use of 16-34, 12,500 lb take-off cap on runway 11, 30,000 lb landing cap on runway 29. Via rcaf.info.
+- [`../rcaf-on-track-1978-edmonton-muni-2.jpg`](../rcaf-on-track-1978-edmonton-muni-2.jpg): *On Track* (1978), page 2. Aerial photo plus aerodrome diagram showing taxiways, displaced thresholds, tower, the XD bearing line (157° / 3.8 NM), and variation 23°E. Via rcaf.info. Already in `docs/cyxd`.
+- [`../charts/procedures-2010/cfs-b230.png`](../charts/procedures-2010/cfs-b230.png), [`../charts/procedures-2010/cfs-b231.png`](../charts/procedures-2010/cfs-b231.png), and [`../charts/procedures-2010/2008-CFS-CYXD-B230-B231.pdf`](../charts/procedures-2010/2008-CFS-CYXD-B230-B231.pdf): Canada Flight Supplement pages B230–B231, effective 20 November 2008–15 January 2009. B231 is the preferential-runway departure (climb runway heading to 3,200 / 4,500 / 4,000 ft ASL). Extracted from the IVAO copy of CFS_AD_E.pdf. The page footer on B231 reads issue 159, 20 November 2008. The full directory PDF is `../charts/procedures-2010/CFS_AD_E-ivao.pdf`.
 
-These are copyrighted or Crown images, kept here for personal reference only. Don't ship them in the package.
+No image of the Edmonton Special Procedures Chart was found. The 11 February 2010 City FOUR departure and the approach plates are in `../procedures-2010.md`, with the images under `../charts/procedures-2010/`. The IVAO CAP 3 link for CYXD (`charts.www.ivao.ca`) no longer resolves, and it is not in the Wayback Machine.
+
+These are copyrighted, Crown, or NAV CANADA pages, kept here for personal reference only. Don't ship them in the package.
 
 ## Sources
 - RCAF Station Edmonton Municipal, rcaf.info (images of the c.1942 RCAF manual page and the 1978 *On Track* pages): https://rcaf.info/rcaf-stations/alberta-rcaf-stations/rcaf-station-edmonton-municipal/
