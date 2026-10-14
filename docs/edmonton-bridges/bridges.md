@@ -1,6 +1,6 @@
 # Edmonton bridges to include
 
-Last updated: 2026-10-14. This file is the river scope, from Devon to Fort Saskatchewan. Freeway bridges on the VFR lines between CYXD, CYED, CYEG, CZVL, CFB6, and CEZ3 are a second scope in `freeway-bridges.md`. Ravine bridges (Mill Creek trestle and the like) are a separate set. Coordinates are approximate centres from the [Wikipedia crossing list](https://en.wikipedia.org/wiki/List_of_crossings_of_the_North_Saskatchewan_River), not surveyed abutments.
+Last updated: 2026-10-14. This file is the river scope, from Devon to Fort Saskatchewan. Freeway bridges on the VFR lines between CYXD, CYED, CYEG, CZVL, CFB6, and CEZ3 are a second scope in `freeway-bridges.md`. Above-ground LRT stations and viaducts are a third scope in `lrt.md`. Ravine bridges (Mill Creek trestle and the like) are a separate set. Coordinates are approximate centres from the [Wikipedia crossing list](https://en.wikipedia.org/wiki/List_of_crossings_of_the_North_Saskatchewan_River), not surveyed abutments.
 
 Listed upstream to downstream (southwest to northeast). Model the downtown road, rail, and LRT spans first. The Henday-ring footbridges and the crossings outside the ring are in the same package.
 

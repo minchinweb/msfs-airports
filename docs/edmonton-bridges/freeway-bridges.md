@@ -1,6 +1,6 @@
 # Regional freeway bridges
 
-Last updated: 2026-10-14. Second scope, beside the river crossings in `bridges.md`. These are the freeway structures that read from the air on a VFR flight among the six fields below. Diamond interchanges over a minor arterial are listed at the bottom and drawn as crosses on the map: from 2,000–3,500 ft AGL they are a speck next to the flyovers, ravine arches, and system interchanges. Cross streets were read from OpenStreetMap on 2026-10-14. 178 Street is the exception: that name comes from the street grid between the 170 Street and 184 Street overpasses, not from a tag on the deck.
+Last updated: 2026-10-14. Second scope, beside the river crossings in `bridges.md`. Above-ground LRT stations and viaducts are a third scope in `lrt.md`. These are the freeway structures that read from the air on a VFR flight among the six fields below. Diamond interchanges over a minor arterial are listed at the bottom and drawn as crosses on the map: from 2,000–3,500 ft AGL they are a speck next to the flyovers, ravine arches, and system interchanges. Cross streets were read from OpenStreetMap on 2026-10-14. 178 Street is the exception: that name comes from the street grid between the 170 Street and 184 Street overpasses, not from a tag on the deck.
 
 Centres are clusters of OpenStreetMap `bridge` ways on `motorway` and `motorway_link` roads, pulled 2026-10-14. They are deck centres, not abutment surveys. The Edmonton VTA tells pilots to use the published VFR routes; the chart in `docs/edmonton-area/` has outlined text and was not transcribed. The corridors here are the freeways on the direct line between these fields.
 
@@ -119,7 +119,7 @@ The river spans (Groat Bridge, Capilano Bridge) stay on the river list. These ar
 | --- | --- | --- |
 | 102 Avenue at Groat Road | 53.543, -113.540 | First crossing north of Groat Bridge. |
 | Wellington Bridge | 53.543, -113.548 | 102 Avenue across Groat Ravine, just west of Groat Road. |
-| Stony Plain Road | 53.548, -113.546 | The bridge is named Groat. |
+| Stony Plain Road | 53.548, -113.546 | The bridge is named Groat. Valley Line West is replacing this span with T133, a single span that also carries the LRT. See `lrt.md`. |
 | 107 Avenue | 53.551, -113.550 | |
 | Ada Boulevard | 53.560, -113.443 | First crossing north of Capilano Bridge, on Wayne Gretzky Drive. |
 | 112 Avenue | 53.563, -113.447 | Wayne Gretzky Drive. |
