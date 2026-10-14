@@ -1,0 +1,889 @@
+{
+  "code": "R14",
+  "name": "Tawatinâ Bridge",
+  "centre": [
+    53.5401,
+    -113.4772
+  ],
+  "crs": "EPSG:4326",
+  "coordinate_order": "[lat, lon]",
+  "geometry_source": "docs/edmonton-bridges/bridge-geometry.json",
+  "geometry_retrieved": "2026-10-14",
+  "plan_length_note": "plan_length_m is the horizontal length of the stored nodes, WGS84 haversine. The river span and the south elevated run are both bridge-tagged and are both kept. South approach ways in the extract continue about a kilometre past Muttart; the stored nodes stop at the mapped Muttart stop. Low Level, James MacDonald, and Dawson are not in this file. The river-valley cycleway that runs west from the south landing toward those bridges is not included.",
+  "decks": [
+    {
+      "osm_way": 636427023,
+      "part": "lrt_track_west",
+      "which": "West Valley Line track, north end of the bridge tag. Node order is north to south.",
+      "plan_length_m": 100.4,
+      "tags": {
+        "bridge": "yes",
+        "layer": "1",
+        "maxspeed": "65",
+        "name": "Valley Line",
+        "railway": "light_rail"
+      },
+      "nodes": [
+        [
+          53.541573,
+          -113.477161
+        ],
+        [
+          53.540671,
+          -113.477159
+        ]
+      ]
+    },
+    {
+      "osm_way": 1221895803,
+      "part": "lrt_track_west",
+      "which": "West Valley Line track across the river span. Node order is north to south. With way 636427023 this piece is the mapped river bridge.",
+      "plan_length_m": 160.5,
+      "tags": {
+        "bridge": "yes",
+        "layer": "1",
+        "maxspeed": "70",
+        "name": "Valley Line",
+        "railway": "light_rail"
+      },
+      "nodes": [
+        [
+          53.540671,
+          -113.477159
+        ],
+        [
+          53.539229,
+          -113.477171
+        ]
+      ]
+    },
+    {
+      "osm_way": 1221895802,
+      "part": "lrt_track_west",
+      "which": "West Valley Line track, south of the river, still on the bridge tag. Node order is north to south.",
+      "plan_length_m": 67.1,
+      "tags": {
+        "bridge": "yes",
+        "layer": "1",
+        "maxspeed": "35",
+        "name": "Valley Line",
+        "railway": "light_rail"
+      },
+      "nodes": [
+        [
+          53.539229,
+          -113.477171
+        ],
+        [
+          53.539123,
+          -113.477173
+        ],
+        [
+          53.539026,
+          -113.477174
+        ],
+        [
+          53.538934,
+          -113.477176
+        ],
+        [
+          53.538817,
+          -113.47718
+        ],
+        [
+          53.538725,
+          -113.477183
+        ],
+        [
+          53.538626,
+          -113.477184
+        ]
+      ]
+    },
+    {
+      "osm_way": 1221212818,
+      "part": "lrt_track_west",
+      "which": "West Valley Line track, south elevated run over the park and 98 Avenue to the end of the bridge tag at the Muttart ramp. Node order is north to south.",
+      "plan_length_m": 143.5,
+      "tags": {
+        "bridge": "yes",
+        "layer": "1",
+        "maxspeed": "45",
+        "name": "Valley Line",
+        "railway": "light_rail"
+      },
+      "nodes": [
+        [
+          53.538626,
+          -113.477184
+        ],
+        [
+          53.538537,
+          -113.477188
+        ],
+        [
+          53.538458,
+          -113.477193
+        ],
+        [
+          53.538387,
+          -113.477195
+        ],
+        [
+          53.538308,
+          -113.477204
+        ],
+        [
+          53.538228,
+          -113.47722
+        ],
+        [
+          53.538161,
+          -113.477238
+        ],
+        [
+          53.538099,
+          -113.477258
+        ],
+        [
+          53.538027,
+          -113.477284
+        ],
+        [
+          53.537962,
+          -113.477314
+        ],
+        [
+          53.537897,
+          -113.477351
+        ],
+        [
+          53.537815,
+          -113.477405
+        ],
+        [
+          53.537725,
+          -113.47747
+        ],
+        [
+          53.537658,
+          -113.477527
+        ],
+        [
+          53.53757,
+          -113.477611
+        ],
+        [
+          53.537497,
+          -113.47768
+        ],
+        [
+          53.537422,
+          -113.477777
+        ],
+        [
+          53.537415,
+          -113.477787
+        ]
+      ]
+    },
+    {
+      "osm_way": 1221895804,
+      "part": "lrt_track_east",
+      "which": "East Valley Line track from the north end of the bridge tag across the river span. Node order in OpenStreetMap is south to north.",
+      "plan_length_m": 260.8,
+      "tags": {
+        "bridge": "yes",
+        "layer": "1",
+        "maxspeed": "65",
+        "name": "Valley Line",
+        "railway": "light_rail"
+      },
+      "nodes": [
+        [
+          53.539229,
+          -113.477115
+        ],
+        [
+          53.540663,
+          -113.477092
+        ],
+        [
+          53.541572,
+          -113.477077
+        ]
+      ]
+    },
+    {
+      "osm_way": 1221212789,
+      "part": "lrt_track_east",
+      "which": "East Valley Line track, south of the river, still on the bridge tag. Node order is south to north.",
+      "plan_length_m": 65.1,
+      "tags": {
+        "bridge": "yes",
+        "layer": "1",
+        "maxspeed": "65",
+        "name": "Valley Line",
+        "railway": "light_rail"
+      },
+      "nodes": [
+        [
+          53.538644,
+          -113.477127
+        ],
+        [
+          53.538726,
+          -113.477127
+        ],
+        [
+          53.538849,
+          -113.477127
+        ],
+        [
+          53.538966,
+          -113.477125
+        ],
+        [
+          53.539068,
+          -113.477121
+        ],
+        [
+          53.539173,
+          -113.477118
+        ],
+        [
+          53.539229,
+          -113.477115
+        ]
+      ]
+    },
+    {
+      "osm_way": 672849775,
+      "part": "lrt_track_east",
+      "which": "East Valley Line track, south elevated run to the end of the bridge tag. Node order is south to north.",
+      "plan_length_m": 147.6,
+      "tags": {
+        "bridge": "yes",
+        "layer": "1",
+        "maxspeed": "45",
+        "name": "Valley Line",
+        "railway": "light_rail"
+      },
+      "nodes": [
+        [
+          53.537395,
+          -113.477728
+        ],
+        [
+          53.537406,
+          -113.477712
+        ],
+        [
+          53.537468,
+          -113.477639
+        ],
+        [
+          53.537536,
+          -113.477572
+        ],
+        [
+          53.537609,
+          -113.477504
+        ],
+        [
+          53.537668,
+          -113.477449
+        ],
+        [
+          53.53774,
+          -113.47739
+        ],
+        [
+          53.537836,
+          -113.477314
+        ],
+        [
+          53.537918,
+          -113.477266
+        ],
+        [
+          53.537973,
+          -113.477241
+        ],
+        [
+          53.538008,
+          -113.477225
+        ],
+        [
+          53.538051,
+          -113.477212
+        ],
+        [
+          53.538101,
+          -113.477196
+        ],
+        [
+          53.538157,
+          -113.477178
+        ],
+        [
+          53.538229,
+          -113.477161
+        ],
+        [
+          53.538327,
+          -113.477142
+        ],
+        [
+          53.538397,
+          -113.477139
+        ],
+        [
+          53.538471,
+          -113.477135
+        ],
+        [
+          53.538564,
+          -113.47713
+        ],
+        [
+          53.538644,
+          -113.477127
+        ]
+      ]
+    },
+    {
+      "osm_way": 732161091,
+      "part": "pedestrian_deck",
+      "which": "Shared-use path on the river span, hung under the box. Bridge-tagged. Node order is south to north. It does not continue over the south guideway.",
+      "plan_length_m": 190.8,
+      "tags": {
+        "bicycle": "designated",
+        "bridge": "yes",
+        "foot": "designated",
+        "highway": "cycleway",
+        "surface": "asphalt"
+      },
+      "nodes": [
+        [
+          53.539384,
+          -113.477135
+        ],
+        [
+          53.540666,
+          -113.477123
+        ],
+        [
+          53.541098,
+          -113.477119
+        ]
+      ]
+    },
+    {
+      "osm_way": 201613970,
+      "part": "pedestrian_deck_link",
+      "which": "Short bridge-tagged cycleway at the south landing of the shared-use path.",
+      "plan_length_m": 11.1,
+      "tags": {
+        "bicycle": "designated",
+        "bridge": "yes",
+        "foot": "designated",
+        "highway": "cycleway",
+        "surface": "paved"
+      },
+      "nodes": [
+        [
+          53.539428,
+          -113.477964
+        ],
+        [
+          53.539365,
+          -113.477833
+        ]
+      ]
+    }
+  ],
+  "approaches": [
+    {
+      "osm_way": 650830876,
+      "part": "lrt_north",
+      "which": "West track from the north end of the bridge tag to the south end of the tunnel tag. Not a climb from valley grade. The tunnel is not included.",
+      "plan_length_m": 42.9,
+      "tags": {
+        "maxspeed": "55",
+        "name": "Valley Line",
+        "railway": "light_rail"
+      },
+      "nodes": [
+        [
+          53.541958,
+          -113.477194
+        ],
+        [
+          53.541799,
+          -113.477168
+        ],
+        [
+          53.541673,
+          -113.477165
+        ],
+        [
+          53.541573,
+          -113.477161
+        ]
+      ],
+      "role": "approach"
+    },
+    {
+      "osm_way": 672849774,
+      "part": "lrt_north",
+      "which": "East track from the north end of the bridge tag to the south end of the tunnel tag. Not a climb from valley grade. The tunnel is not included.",
+      "plan_length_m": 43.4,
+      "tags": {
+        "maxspeed": "70",
+        "name": "Valley Line",
+        "railway": "light_rail"
+      },
+      "nodes": [
+        [
+          53.541572,
+          -113.477077
+        ],
+        [
+          53.541647,
+          -113.477075
+        ],
+        [
+          53.541729,
+          -113.477075
+        ],
+        [
+          53.541841,
+          -113.477077
+        ],
+        [
+          53.541962,
+          -113.47709
+        ]
+      ],
+      "role": "approach"
+    },
+    {
+      "osm_way": 1280982479,
+      "part": "lrt_south_to_muttart_stop",
+      "which": "West track from the end of the bridge tag to the mapped Muttart stop. Clipped there. The OpenStreetMap way continues south past the stop. This clip is not a surveyed point where the ramp meets grade.",
+      "plan_length_m": 199.1,
+      "tags": {
+        "maxspeed": "35",
+        "name": "Valley Line",
+        "railway": "light_rail"
+      },
+      "nodes": [
+        [
+          53.537415,
+          -113.477787
+        ],
+        [
+          53.537375,
+          -113.477838
+        ],
+        [
+          53.53735,
+          -113.477874
+        ],
+        [
+          53.537315,
+          -113.477924
+        ],
+        [
+          53.537275,
+          -113.477983
+        ],
+        [
+          53.537243,
+          -113.478034
+        ],
+        [
+          53.537217,
+          -113.478077
+        ],
+        [
+          53.537191,
+          -113.478124
+        ],
+        [
+          53.53716,
+          -113.478178
+        ],
+        [
+          53.537051,
+          -113.478384
+        ],
+        [
+          53.536785,
+          -113.478892
+        ],
+        [
+          53.53677,
+          -113.478921
+        ],
+        [
+          53.536207,
+          -113.480002
+        ]
+      ],
+      "role": "approach"
+    },
+    {
+      "osm_way": 1280982480,
+      "part": "lrt_south_to_muttart_stop",
+      "which": "East track from the end of the bridge tag to the node nearest the mapped Muttart stop. Clipped there. The OpenStreetMap way continues south past the stop.",
+      "plan_length_m": 213.1,
+      "tags": {
+        "maxspeed": "30",
+        "name": "Valley Line",
+        "railway": "light_rail"
+      },
+      "nodes": [
+        [
+          53.536104,
+          -113.4801
+        ],
+        [
+          53.536704,
+          -113.478951
+        ],
+        [
+          53.536742,
+          -113.478879
+        ],
+        [
+          53.536755,
+          -113.478854
+        ],
+        [
+          53.537071,
+          -113.478245
+        ],
+        [
+          53.537138,
+          -113.47812
+        ],
+        [
+          53.537172,
+          -113.478059
+        ],
+        [
+          53.537203,
+          -113.478002
+        ],
+        [
+          53.53724,
+          -113.47794
+        ],
+        [
+          53.537285,
+          -113.477874
+        ],
+        [
+          53.537329,
+          -113.477814
+        ],
+        [
+          53.537363,
+          -113.477768
+        ],
+        [
+          53.537395,
+          -113.477728
+        ]
+      ],
+      "role": "approach"
+    },
+    {
+      "osm_way": 732161090,
+      "part": "pedestrian_north",
+      "which": "Short cycleway leaving the north end of the bridge-tagged shared-use path into Louise McKinney Riverfront Park.",
+      "plan_length_m": 9.7,
+      "tags": {
+        "bicycle": "designated",
+        "foot": "designated",
+        "highway": "cycleway",
+        "surface": "asphalt"
+      },
+      "nodes": [
+        [
+          53.541098,
+          -113.477119
+        ],
+        [
+          53.541185,
+          -113.477118
+        ]
+      ],
+      "role": "approach"
+    },
+    {
+      "osm_way": 812703449,
+      "part": "pedestrian_south",
+      "which": "Cycleway leaving the south end of the bridge-tagged shared-use path into Henrietta Muir Edwards Park.",
+      "plan_length_m": 58.0,
+      "tags": {
+        "bicycle": "designated",
+        "foot": "designated",
+        "highway": "cycleway",
+        "surface": "asphalt"
+      },
+      "nodes": [
+        [
+          53.539384,
+          -113.477135
+        ],
+        [
+          53.539158,
+          -113.477137
+        ],
+        [
+          53.538988,
+          -113.477213
+        ],
+        [
+          53.538888,
+          -113.477322
+        ]
+      ],
+      "role": "approach"
+    },
+    {
+      "osm_way": 838868658,
+      "part": "pedestrian_south",
+      "which": "Cycleway at the south landing of the shared-use path, on the park side.",
+      "plan_length_m": 66.7,
+      "tags": {
+        "bicycle": "designated",
+        "foot": "designated",
+        "highway": "cycleway"
+      },
+      "nodes": [
+        [
+          53.539365,
+          -113.477833
+        ],
+        [
+          53.539354,
+          -113.477813
+        ],
+        [
+          53.539288,
+          -113.477685
+        ],
+        [
+          53.539212,
+          -113.47762
+        ],
+        [
+          53.539122,
+          -113.477607
+        ],
+        [
+          53.539066,
+          -113.477595
+        ],
+        [
+          53.539016,
+          -113.477563
+        ],
+        [
+          53.538953,
+          -113.477468
+        ],
+        [
+          53.53891,
+          -113.477411
+        ],
+        [
+          53.538888,
+          -113.477322
+        ]
+      ],
+      "role": "approach"
+    }
+  ],
+  "cross_roads": [
+    {
+      "osm_way": 1098987149,
+      "part": "cross_road",
+      "which": "98 Avenue NW under the south end of the elevated guideway. One-way. The way carries an OpenStreetMap maxheight tag of 5.9. That tag is not a design clearance.",
+      "plan_length_m": 118.7,
+      "tags": {
+        "bicycle": "yes",
+        "cycleway": "no",
+        "highway": "secondary",
+        "lanes": "2",
+        "maxheight": "5.9",
+        "maxspeed": "60",
+        "name": "98 Avenue NW",
+        "oneway": "yes",
+        "surface": "asphalt"
+      },
+      "nodes": [
+        [
+          53.537522,
+          -113.478539
+        ],
+        [
+          53.53756,
+          -113.478421
+        ],
+        [
+          53.537599,
+          -113.47827
+        ],
+        [
+          53.537643,
+          -113.478098
+        ],
+        [
+          53.537683,
+          -113.477922
+        ],
+        [
+          53.537726,
+          -113.477706
+        ],
+        [
+          53.537763,
+          -113.477486
+        ],
+        [
+          53.537794,
+          -113.477264
+        ],
+        [
+          53.537818,
+          -113.47704
+        ],
+        [
+          53.537827,
+          -113.476948
+        ],
+        [
+          53.537867,
+          -113.476855
+        ]
+      ],
+      "role": "cross_road"
+    },
+    {
+      "osm_way": 1095591579,
+      "part": "cross_road",
+      "which": "98 Avenue NW, the other one-way carriageway at the same crossing. Kept because it passes under this guideway. The long 98 Avenue way continuing east is not included.",
+      "plan_length_m": 121.1,
+      "tags": {
+        "bicycle": "yes",
+        "cycleway": "no",
+        "highway": "secondary",
+        "lanes": "2",
+        "maxspeed": "60",
+        "name": "98 Avenue NW",
+        "oneway": "yes",
+        "surface": "asphalt"
+      },
+      "nodes": [
+        [
+          53.537867,
+          -113.476855
+        ],
+        [
+          53.537887,
+          -113.476981
+        ],
+        [
+          53.537856,
+          -113.477357
+        ],
+        [
+          53.537818,
+          -113.477731
+        ],
+        [
+          53.537748,
+          -113.478269
+        ],
+        [
+          53.537713,
+          -113.478495
+        ],
+        [
+          53.537689,
+          -113.478646
+        ]
+      ],
+      "role": "cross_road"
+    }
+  ],
+  "dimensions": {
+    "structural_type": "extradosed concrete box, one north river pier with two pylons, pedestrian deck hung underneath",
+    "river_bridge_length_m": 260,
+    "river_spans_m": [
+      100,
+      110,
+      50
+    ],
+    "longest_span_m": 110,
+    "span_count": 3,
+    "mapped_river_bridge_per_track_m": [
+      260.9,
+      260.8
+    ],
+    "mapped_bridge_tag_per_track_m": [
+      471.5,
+      473.5
+    ],
+    "mapped_south_of_river_bridge_tag_m": [
+      210.6,
+      212.7
+    ],
+    "south_guideway_length_as_built_m": null,
+    "reference_design_river_plus_guideway_to_98_avenue_m": 380,
+    "pylon_count": 2,
+    "pylon_count_also_reported": 1,
+    "pylons_on": "north river pier",
+    "pylon_height_above_deck_min_required_m": 24,
+    "pylon_height_above_deck_max_required_m": 30,
+    "pylon_height_contractor_m": 30,
+    "pylon_height_as_built_survey_m": null,
+    "river_pier_count": 2,
+    "river_pier_count_also_reported": 1,
+    "girder_depth_m": 3.5,
+    "girder_depth_variable_option_at_piers_not_used_in_thesis_m": 4.0,
+    "upper_deck_width_m": 11,
+    "upper_deck_elevation_m": null,
+    "lower_deck_width_m": 8.0,
+    "lower_deck_width_minimum_required_m": 7.8,
+    "lower_deck_depth_m": 0.4,
+    "lower_deck_elevation_m": null,
+    "vertical_datum": null,
+    "gap_between_decks_m": null,
+    "track_count": 2,
+    "track_gauge_mm": 1435,
+    "crossfall": null,
+    "navigation_clearance_as_built_m": null,
+    "navigation_window_reference_design_2013_m": 10,
+    "normal_high_water_reference_design_2013_m": "615.60",
+    "navigation_water_level_agreement_m": 615.9,
+    "clearance_above_98_avenue_as_built_m": null,
+    "clearance_above_98_avenue_minimum_required_m": 5.4,
+    "clearance_above_98_avenue_reference_design_2013_m": 5.5,
+    "north_approach_length_m": null,
+    "north_approach_gradient": null,
+    "north_approach_elevation_change_m": null,
+    "south_approach_length_m": null,
+    "south_approach_gradient": null,
+    "south_approach_elevation_change_m": null,
+    "south_approach_gradient_reference_design_2013_percent": [
+      -5.6,
+      -0.275
+    ]
+  }
+}

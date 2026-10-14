@@ -1,0 +1,936 @@
+{
+  "code": "R13",
+  "name": "Low Level Bridge",
+  "centre": [
+    53.538,
+    -113.487
+  ],
+  "crs": "EPSG:4326",
+  "coordinate_order": "[lat, lon]",
+  "geometry_source": "docs/edmonton-bridges/bridge-geometry.json",
+  "geometry_retrieved": "2026-10-14",
+  "plan_length_note": "plan_length_m is the horizontal length of that OSM way, WGS84 haversine with radius 6378137 m, rounded to one decimal. These ways match the live OpenStreetMap node counts on 2026-10-14, so the stored polylines are the complete ways. An approach plan_length_m is still not the climb to grade. It is not the 213.1 m northbound structure length, and it is not the 211.7 m southbound length in the Wikipedia infobox.",
+  "dropped_note": "The R13 extract also contained Grierson Hill Road and way 106711211, tagged bridge:name=Grierson Bridge. That way is a short span on the north bank, west of the Low Level north abutment, and it is not one of the two river decks. Grierson Hill Road ways 106711201, 106711229, 106711206, and 151895211 were dropped with it. Way 1271848915 is an unnamed path bridge on the north hillside, separate from the river spans, with cycleways 533867748, 702363113, and 1271848916, steps 535658874, footway 702363114, and cycleway 1271848917. Those were dropped. James MacDonald Bridge is not in this extract.",
+  "decks": [
+    {
+      "osm_way": 31882107,
+      "part": "road_deck",
+      "which": "1900 span, the northbound deck. Connors Road NW, two lanes, one-way, asphalt. Node order is south to north, so the one-way is northbound. This centreline lies east of way 22916473. It is the downstream deck. The City's northbound bridge is the 1900 span. This centreline is 213.9 m. The published northbound structure length is 213.1 m. Those are different extents.",
+      "plan_length_m": 213.9,
+      "tags": {
+        "bridge": "yes",
+        "highway": "secondary",
+        "lanes": "2",
+        "layer": "1",
+        "maxspeed": "50",
+        "name": "Connors Road NW",
+        "oneway": "yes",
+        "surface": "asphalt"
+      },
+      "nodes": [
+        [
+          53.537494,
+          -113.485273
+        ],
+        [
+          53.538433,
+          -113.488094
+        ]
+      ]
+    },
+    {
+      "osm_way": 22916473,
+      "part": "road_deck",
+      "which": "1948/1949 span, the southbound deck. Connors Road NW, two lanes, one-way, asphalt, maxheight tag 5.2. Node order is north to south, so the one-way is southbound. This centreline lies west of way 31882107. It is the upstream deck, the side toward James MacDonald. The City's southbound bridge was completed in 1949. Wikipedia dates the upstream twin to 1948. This centreline is 212.6 m. The Wikipedia infobox length for the southbound span is 211.7 m. Those are different extents. The maxheight tag is not a deck elevation.",
+      "plan_length_m": 212.6,
+      "tags": {
+        "bridge": "yes",
+        "highway": "secondary",
+        "lanes": "2",
+        "layer": "1",
+        "maxheight": "5.2",
+        "maxspeed": "50",
+        "name": "Connors Road NW",
+        "oneway": "yes",
+        "surface": "asphalt"
+      },
+      "nodes": [
+        [
+          53.538352,
+          -113.488166
+        ],
+        [
+          53.537419,
+          -113.485362
+        ]
+      ]
+    },
+    {
+      "osm_way": 302605469,
+      "part": "east_sidewalk",
+      "which": "Cycleway on the east side of the northbound centreline, outside the 1900 truss. Foot and bicycle designated. The 2008 paper places the northbound sidewalk on the east side. The 2015 photograph shows a concrete sidewalk there. This way is tagged asphalt.",
+      "plan_length_m": 211.1,
+      "tags": {
+        "bicycle": "designated",
+        "bridge": "yes",
+        "foot": "designated",
+        "highway": "cycleway",
+        "layer": "1",
+        "surface": "asphalt"
+      },
+      "nodes": [
+        [
+          53.538465,
+          -113.488037
+        ],
+        [
+          53.537538,
+          -113.485253
+        ]
+      ]
+    },
+    {
+      "osm_way": 302605430,
+      "part": "west_sidewalk",
+      "which": "Footway on the west side of the southbound centreline, outside the 1948/1949 truss. Tagged concrete. The 2008 paper says each bridge has a sidewalk on one side and none between the two structures.",
+      "plan_length_m": 213.1,
+      "tags": {
+        "bridge": "yes",
+        "highway": "footway",
+        "layer": "1",
+        "surface": "concrete"
+      },
+      "nodes": [
+        [
+          53.53831,
+          -113.488195
+        ],
+        [
+          53.538274,
+          -113.488086
+        ],
+        [
+          53.537428,
+          -113.485549
+        ],
+        [
+          53.537375,
+          -113.485385
+        ]
+      ]
+    },
+    {
+      "osm_way": 462866197,
+      "part": "bridge_outline",
+      "which": "Closed outline tagged name=Low Level Bridge. It encloses both road centrelines. plan_length_m is the perimeter, 469.9 m. The long edges are 211.1 m on the west and 212.0 m on the east. The ends are 23.4 m on the north and 23.5 m on the south. That end width is the mapped outline of both decks together, not a published width of either span. The tags say trestle and beam. The spans are Pratt through trusses. Those tags are mapper tags.",
+      "plan_length_m": 469.9,
+      "tags": {
+        "bridge": "trestle",
+        "bridge:structure": "beam",
+        "layer": "1",
+        "man_made": "bridge",
+        "name": "Low Level Bridge"
+      },
+      "nodes": [
+        [
+          53.538485,
+          -113.488022
+        ],
+        [
+          53.5383,
+          -113.488189
+        ],
+        [
+          53.537372,
+          -113.485406
+        ],
+        [
+          53.537554,
+          -113.485227
+        ],
+        [
+          53.538485,
+          -113.488022
+        ]
+      ]
+    }
+  ],
+  "approaches": [
+    {
+      "osm_way": 1433098757,
+      "part": "north_road_southbound",
+      "which": "McDougall Hill Road NW onto the north end of the southbound deck. One lane, maxheight tag 5.2. Node order is toward the bridge. The far node is the previous McDougall Hill way, not a surveyed grade point. The extract calls this a cross road. It is the road onto the 1948/1949 span. The maxheight tag is not a deck elevation.",
+      "plan_length_m": 54.5,
+      "tags": {
+        "foot": "no",
+        "highway": "secondary",
+        "lanes": "1",
+        "maxheight": "5.2",
+        "maxspeed": "50",
+        "name": "McDougall Hill Road NW",
+        "oneway": "yes",
+        "sidewalk": "no",
+        "surface": "asphalt"
+      },
+      "nodes": [
+        [
+          53.538547,
+          -113.488915
+        ],
+        [
+          53.538532,
+          -113.488786
+        ],
+        [
+          53.538501,
+          -113.488631
+        ],
+        [
+          53.538447,
+          -113.488428
+        ],
+        [
+          53.538352,
+          -113.488166
+        ]
+      ],
+      "extract_role": "cross_road"
+    },
+    {
+      "osm_way": 303665637,
+      "part": "north_road_southbound",
+      "which": "McDougall Hill Road NW continuing north from way 1433098757. Two lanes, maxheight tag 5.2. Node order is toward the bridge. The far node is a cloverleaf connection, not a surveyed grade point. The extract calls this a cross road because it does not share a node with the bridge way. It is the same road.",
+      "plan_length_m": 86.3,
+      "tags": {
+        "highway": "secondary",
+        "lanes": "2",
+        "maxheight": "5.2",
+        "maxspeed": "50",
+        "name": "McDougall Hill Road NW",
+        "oneway": "yes",
+        "surface": "asphalt"
+      },
+      "nodes": [
+        [
+          53.538396,
+          -113.490155
+        ],
+        [
+          53.538464,
+          -113.489983
+        ],
+        [
+          53.538505,
+          -113.489826
+        ],
+        [
+          53.538538,
+          -113.48966
+        ],
+        [
+          53.538559,
+          -113.489482
+        ],
+        [
+          53.538568,
+          -113.489264
+        ],
+        [
+          53.538562,
+          -113.489091
+        ],
+        [
+          53.538547,
+          -113.488915
+        ]
+      ],
+      "extract_role": "cross_road"
+    },
+    {
+      "osm_way": 22942137,
+      "part": "north_road_northbound",
+      "which": "Short Connors Road NW way off the north end of the northbound deck, between the truss and McDougall Hill. Two lanes. Node order is away from the bridge. The far node is not a surveyed grade point.",
+      "plan_length_m": 10.2,
+      "tags": {
+        "highway": "secondary",
+        "lanes": "2",
+        "maxspeed": "50",
+        "name": "Connors Road NW",
+        "oneway": "yes",
+        "surface": "asphalt"
+      },
+      "nodes": [
+        [
+          53.538433,
+          -113.488094
+        ],
+        [
+          53.538478,
+          -113.488229
+        ]
+      ],
+      "extract_role": "approach"
+    },
+    {
+      "osm_way": 303665641,
+      "part": "north_road_northbound",
+      "which": "McDougall Hill Road NW leaving the north end of the northbound deck, from the far node of way 22942137. Two lanes, maxheight tag 5.0. Node order is away from the bridge, so the one-way is northbound off the 1900 span. The far node is not a surveyed grade point. The extract calls this a cross road. The maxheight tag is not a deck elevation.",
+      "plan_length_m": 127.4,
+      "tags": {
+        "highway": "secondary",
+        "lanes": "2",
+        "maxheight": "5.0",
+        "maxspeed": "50",
+        "name": "McDougall Hill Road NW",
+        "oneway": "yes",
+        "surface": "asphalt"
+      },
+      "nodes": [
+        [
+          53.538478,
+          -113.488229
+        ],
+        [
+          53.538545,
+          -113.48847
+        ],
+        [
+          53.53861,
+          -113.488815
+        ],
+        [
+          53.538641,
+          -113.489071
+        ],
+        [
+          53.538649,
+          -113.489285
+        ],
+        [
+          53.538642,
+          -113.489582
+        ],
+        [
+          53.538616,
+          -113.489861
+        ],
+        [
+          53.538583,
+          -113.490097
+        ]
+      ],
+      "extract_role": "cross_road"
+    },
+    {
+      "osm_way": 1433098760,
+      "part": "south_road_southbound",
+      "which": "Connors Road NW leaving the south end of the southbound deck. One lane. Node order is away from the bridge. 99A Street NW meets this way. The far node is not a surveyed grade point. The City also names Scona Road at this end. Scona Road is not the name on this way.",
+      "plan_length_m": 76.9,
+      "tags": {
+        "highway": "secondary",
+        "lanes": "1",
+        "maxspeed": "50",
+        "name": "Connors Road NW",
+        "oneway": "yes",
+        "surface": "asphalt"
+      },
+      "nodes": [
+        [
+          53.537419,
+          -113.485362
+        ],
+        [
+          53.537343,
+          -113.48514
+        ],
+        [
+          53.537223,
+          -113.484881
+        ],
+        [
+          53.53713,
+          -113.484725
+        ],
+        [
+          53.53694,
+          -113.484565
+        ]
+      ],
+      "extract_role": "approach"
+    },
+    {
+      "osm_way": 1095591592,
+      "part": "south_road_northbound",
+      "which": "Connors Road NW onto the south end of the northbound deck. Two lanes. Node order is toward the bridge. The far node is the previous Connors Road way, not a surveyed grade point.",
+      "plan_length_m": 22.7,
+      "tags": {
+        "highway": "secondary",
+        "lanes": "2",
+        "maxspeed": "50",
+        "name": "Connors Road NW",
+        "oneway": "yes",
+        "surface": "asphalt"
+      },
+      "nodes": [
+        [
+          53.537392,
+          -113.484976
+        ],
+        [
+          53.537454,
+          -113.485149
+        ],
+        [
+          53.537494,
+          -113.485273
+        ]
+      ],
+      "extract_role": "approach"
+    },
+    {
+      "osm_way": 31883773,
+      "part": "south_road_northbound",
+      "which": "Connors Road NW continuing southeast from way 1095591592, destination tag City Centre, maxheight tag 4.6. Two lanes. Node order is toward the bridge. The far node is not a surveyed grade point. The extract calls this a cross road because it does not share a node with the bridge way. It is the same road. The maxheight tag is not a deck elevation.",
+      "plan_length_m": 146.5,
+      "tags": {
+        "destination": "City Centre",
+        "highway": "secondary",
+        "lanes": "2",
+        "maxheight": "4.6",
+        "maxspeed": "50",
+        "name": "Connors Road NW",
+        "oneway": "yes",
+        "surface": "asphalt"
+      },
+      "nodes": [
+        [
+          53.536259,
+          -113.483962
+        ],
+        [
+          53.536658,
+          -113.484137
+        ],
+        [
+          53.536831,
+          -113.484238
+        ],
+        [
+          53.536976,
+          -113.484362
+        ],
+        [
+          53.537088,
+          -113.48448
+        ],
+        [
+          53.537183,
+          -113.484597
+        ],
+        [
+          53.537238,
+          -113.484678
+        ],
+        [
+          53.537392,
+          -113.484976
+        ]
+      ],
+      "extract_role": "cross_road"
+    }
+  ],
+  "cross_roads": [
+    {
+      "osm_way": 1126581681,
+      "part": "south_cross_street",
+      "which": "99A Street NW, meeting the southbound exit at the south end. A cross street. It is not the climb to grade.",
+      "plan_length_m": 72.8,
+      "tags": {
+        "bicycle": "designated",
+        "highway": "residential",
+        "name": "99A Street NW",
+        "surface": "asphalt"
+      },
+      "nodes": [
+        [
+          53.536675,
+          -113.485454
+        ],
+        [
+          53.536704,
+          -113.485384
+        ],
+        [
+          53.53673,
+          -113.485333
+        ],
+        [
+          53.536776,
+          -113.485276
+        ],
+        [
+          53.536818,
+          -113.485234
+        ],
+        [
+          53.536864,
+          -113.485197
+        ],
+        [
+          53.537012,
+          -113.485089
+        ],
+        [
+          53.537121,
+          -113.484999
+        ],
+        [
+          53.537168,
+          -113.484945
+        ],
+        [
+          53.537223,
+          -113.484881
+        ]
+      ],
+      "extract_role": "cross_road"
+    },
+    {
+      "osm_way": 106711192,
+      "part": "south_ramp",
+      "which": "One-lane link at the south end, joining the Connors Road ways. Not a Low Level deck, and not a surveyed grade point.",
+      "plan_length_m": 60.4,
+      "tags": {
+        "highway": "secondary_link",
+        "lanes": "1",
+        "oneway": "yes",
+        "surface": "asphalt"
+      },
+      "nodes": [
+        [
+          53.537151,
+          -113.484071
+        ],
+        [
+          53.537241,
+          -113.484238
+        ],
+        [
+          53.537372,
+          -113.484615
+        ],
+        [
+          53.537428,
+          -113.484848
+        ]
+      ],
+      "extract_role": "cross_road"
+    },
+    {
+      "osm_way": 106711212,
+      "part": "south_ramp",
+      "which": "One-lane link at the south end, joining way 106711192. Not a Low Level deck. The far node is not a surveyed grade point.",
+      "plan_length_m": 104.8,
+      "tags": {
+        "highway": "secondary_link",
+        "lanes": "1",
+        "oneway": "yes",
+        "surface": "asphalt"
+      },
+      "nodes": [
+        [
+          53.538035,
+          -113.483678
+        ],
+        [
+          53.537972,
+          -113.483968
+        ],
+        [
+          53.5379,
+          -113.48413
+        ],
+        [
+          53.53774,
+          -113.484387
+        ],
+        [
+          53.537481,
+          -113.48474
+        ],
+        [
+          53.537428,
+          -113.484848
+        ]
+      ],
+      "extract_role": "cross_road"
+    },
+    {
+      "osm_way": 1223720740,
+      "part": "south_ramp",
+      "which": "One-lane link between the south ramps and Connors Road way 1095591592. Not a Low Level deck.",
+      "plan_length_m": 9.4,
+      "tags": {
+        "highway": "secondary_link",
+        "lanes": "1",
+        "oneway": "yes",
+        "surface": "asphalt"
+      },
+      "nodes": [
+        [
+          53.537428,
+          -113.484848
+        ],
+        [
+          53.537392,
+          -113.484976
+        ]
+      ],
+      "extract_role": "cross_road"
+    },
+    {
+      "osm_way": 106711221,
+      "part": "north_ramp",
+      "which": "One-lane link from the north end of the northbound deck, at the far node of way 22942137, up toward Grierson Hill Road. A cloverleaf connection. It is not the Grierson Bridge, and the far node is not a surveyed grade point.",
+      "plan_length_m": 180.2,
+      "tags": {
+        "highway": "secondary_link",
+        "lanes": "1",
+        "oneway": "yes",
+        "surface": "asphalt"
+      },
+      "nodes": [
+        [
+          53.538478,
+          -113.488229
+        ],
+        [
+          53.538508,
+          -113.488242
+        ],
+        [
+          53.538562,
+          -113.48826
+        ],
+        [
+          53.53862,
+          -113.488268
+        ],
+        [
+          53.538697,
+          -113.488254
+        ],
+        [
+          53.538775,
+          -113.48819
+        ],
+        [
+          53.539422,
+          -113.487469
+        ],
+        [
+          53.539631,
+          -113.487238
+        ],
+        [
+          53.539882,
+          -113.487015
+        ]
+      ],
+      "extract_role": "cross_road"
+    },
+    {
+      "osm_way": 106711225,
+      "part": "north_ramp",
+      "which": "Cloverleaf link between McDougall Hill Road and Grierson Hill Road at the north end. It is not a Low Level deck and it is not the Grierson Bridge.",
+      "plan_length_m": 102.7,
+      "tags": {
+        "foot": "no",
+        "highway": "secondary_link",
+        "lanes": "2",
+        "oneway": "yes",
+        "sidewalk": "no",
+        "surface": "asphalt"
+      },
+      "nodes": [
+        [
+          53.538154,
+          -113.489353
+        ],
+        [
+          53.538085,
+          -113.489487
+        ],
+        [
+          53.538057,
+          -113.489563
+        ],
+        [
+          53.538033,
+          -113.489644
+        ],
+        [
+          53.538018,
+          -113.489711
+        ],
+        [
+          53.538007,
+          -113.489781
+        ],
+        [
+          53.537999,
+          -113.489856
+        ],
+        [
+          53.537999,
+          -113.489933
+        ],
+        [
+          53.538004,
+          -113.489991
+        ],
+        [
+          53.538014,
+          -113.490047
+        ],
+        [
+          53.538028,
+          -113.4901
+        ],
+        [
+          53.538046,
+          -113.490148
+        ],
+        [
+          53.538069,
+          -113.49019
+        ],
+        [
+          53.538095,
+          -113.490226
+        ],
+        [
+          53.538125,
+          -113.490254
+        ],
+        [
+          53.538162,
+          -113.490275
+        ],
+        [
+          53.5382,
+          -113.490285
+        ],
+        [
+          53.538242,
+          -113.490286
+        ],
+        [
+          53.538262,
+          -113.490276
+        ],
+        [
+          53.538307,
+          -113.490252
+        ],
+        [
+          53.538396,
+          -113.490155
+        ]
+      ],
+      "extract_role": "cross_road"
+    },
+    {
+      "osm_way": 302605472,
+      "part": "north_path",
+      "which": "Concrete footway continuing off the north end of the west sidewalk, along the bank. A valley path, not the McDougall Hill climb.",
+      "plan_length_m": 141.0,
+      "tags": {
+        "highway": "footway",
+        "surface": "concrete"
+      },
+      "nodes": [
+        [
+          53.538307,
+          -113.490164
+        ],
+        [
+          53.538309,
+          -113.490146
+        ],
+        [
+          53.538323,
+          -113.490135
+        ],
+        [
+          53.538361,
+          -113.490013
+        ],
+        [
+          53.538391,
+          -113.489919
+        ],
+        [
+          53.538434,
+          -113.489766
+        ],
+        [
+          53.538453,
+          -113.489663
+        ],
+        [
+          53.538474,
+          -113.489497
+        ],
+        [
+          53.538482,
+          -113.48946
+        ],
+        [
+          53.538516,
+          -113.489364
+        ],
+        [
+          53.538521,
+          -113.489336
+        ],
+        [
+          53.538522,
+          -113.489296
+        ],
+        [
+          53.538518,
+          -113.489121
+        ],
+        [
+          53.53851,
+          -113.488981
+        ],
+        [
+          53.53847,
+          -113.488771
+        ],
+        [
+          53.538429,
+          -113.488566
+        ],
+        [
+          53.538394,
+          -113.488431
+        ],
+        [
+          53.538363,
+          -113.48835
+        ],
+        [
+          53.53831,
+          -113.488195
+        ]
+      ],
+      "extract_role": "cross_road"
+    },
+    {
+      "osm_way": 302605533,
+      "part": "south_path",
+      "which": "Trans Canada Trail continuing off the south end of the west sidewalk. A valley path, not the Connors Road climb.",
+      "plan_length_m": 19.8,
+      "tags": {
+        "highway": "footway",
+        "name": "Trans Canada Trail",
+        "surface": "paved"
+      },
+      "nodes": [
+        [
+          53.537375,
+          -113.485385
+        ],
+        [
+          53.537369,
+          -113.485357
+        ],
+        [
+          53.537323,
+          -113.485235
+        ],
+        [
+          53.537278,
+          -113.485136
+        ]
+      ],
+      "extract_role": "cross_road"
+    },
+    {
+      "osm_way": 339561849,
+      "part": "north_path",
+      "which": "Short concrete cycleway onto the north end of the east sidewalk. Not the McDougall Hill climb.",
+      "plan_length_m": 15.4,
+      "tags": {
+        "bicycle": "designated",
+        "foot": "designated",
+        "highway": "cycleway",
+        "surface": "concrete"
+      },
+      "nodes": [
+        [
+          53.538563,
+          -113.488189
+        ],
+        [
+          53.538541,
+          -113.488178
+        ],
+        [
+          53.538525,
+          -113.488164
+        ],
+        [
+          53.538505,
+          -113.488136
+        ],
+        [
+          53.538485,
+          -113.488092
+        ],
+        [
+          53.538474,
+          -113.488062
+        ],
+        [
+          53.538465,
+          -113.488037
+        ]
+      ],
+      "extract_role": "cross_road"
+    },
+    {
+      "osm_way": 586002375,
+      "part": "south_path",
+      "which": "Short cycleway off the south end of the east sidewalk. Not the Connors Road climb.",
+      "plan_length_m": 11.5,
+      "tags": {
+        "bicycle": "designated",
+        "foot": "designated",
+        "highway": "cycleway"
+      },
+      "nodes": [
+        [
+          53.537538,
+          -113.485253
+        ],
+        [
+          53.537516,
+          -113.485186
+        ],
+        [
+          53.5375,
+          -113.485138
+        ],
+        [
+          53.537491,
+          -113.485099
+        ]
+      ],
+      "extract_role": "cross_road"
+    }
+  ]
+}

@@ -1,0 +1,1258 @@
+{
+  "code": "R10",
+  "name": "High Level Bridge",
+  "centre": [
+    53.531,
+    -113.511
+  ],
+  "crs": "EPSG:4326",
+  "coordinate_order": "[lat, lon]",
+  "geometry_source": "docs/edmonton-bridges/bridge-geometry.json",
+  "geometry_retrieved": "2026-10-14",
+  "plan_length_note": "plan_length_m is the horizontal length of that OSM way, computed from the WGS84 nodes. It is not the 777.24 m structural length.",
+  "decks": [
+    {
+      "osm_way": 22915822,
+      "part": "lower_road_deck",
+      "which": "Lower deck, roadway. 109 Street NW, two lanes, one-way southbound. This is the long centreline of the road on the bridge.",
+      "plan_length_m": 739.3,
+      "tags": {
+        "bicycle": "no",
+        "bridge": "yes",
+        "foot": "no",
+        "highway": "secondary",
+        "lanes": "2",
+        "layer": "1",
+        "maxheight": "3.2",
+        "maxspeed": "50",
+        "name": "109 Street NW",
+        "oneway": "yes",
+        "surface": "asphalt"
+      },
+      "nodes": [
+        [
+          53.532398,
+          -113.509743
+        ],
+        [
+          53.52685,
+          -113.512977
+        ],
+        [
+          53.526822,
+          -113.512988
+        ],
+        [
+          53.526789,
+          -113.512996
+        ],
+        [
+          53.526746,
+          -113.513002
+        ],
+        [
+          53.526712,
+          -113.512998
+        ],
+        [
+          53.52664,
+          -113.512985
+        ],
+        [
+          53.526489,
+          -113.512951
+        ],
+        [
+          53.526446,
+          -113.512946
+        ],
+        [
+          53.526404,
+          -113.512945
+        ],
+        [
+          53.526352,
+          -113.512949
+        ],
+        [
+          53.526284,
+          -113.512966
+        ],
+        [
+          53.52608,
+          -113.513026
+        ]
+      ]
+    },
+    {
+      "osm_way": 500327672,
+      "part": "lower_road_deck_north_split",
+      "which": "Lower deck, north end, east entry. One southbound lane, still tagged bridge. It is the east of the two lanes that join the two-lane deck. Wikipedia: 109 Street enters the left lane; southbound, left is east.",
+      "plan_length_m": 49.0,
+      "tags": {
+        "bridge": "yes",
+        "highway": "secondary",
+        "lanes": "1",
+        "layer": "1",
+        "maxheight": "3.2 m",
+        "maxspeed": "50",
+        "name": "109 Street NW",
+        "oneway": "yes",
+        "surface": "asphalt"
+      },
+      "nodes": [
+        [
+          53.532735,
+          -113.509277
+        ],
+        [
+          53.532701,
+          -113.5093
+        ],
+        [
+          53.53265,
+          -113.509353
+        ],
+        [
+          53.532606,
+          -113.509415
+        ],
+        [
+          53.532476,
+          -113.509646
+        ],
+        [
+          53.532457,
+          -113.509678
+        ],
+        [
+          53.53243,
+          -113.509712
+        ],
+        [
+          53.532398,
+          -113.509743
+        ]
+      ]
+    },
+    {
+      "osm_way": 22916464,
+      "part": "lower_road_deck_north_split",
+      "which": "Lower deck, north end, west entry. One southbound lane, still tagged bridge. It is the west of the two lanes. Wikipedia: 110 Street enters the right lane.",
+      "plan_length_m": 52.4,
+      "tags": {
+        "bridge": "yes",
+        "highway": "secondary",
+        "lanes": "1",
+        "layer": "1",
+        "maxheight": "3.2",
+        "maxspeed": "50",
+        "name": "109 Street NW",
+        "oneway": "yes",
+        "surface": "asphalt"
+      },
+      "nodes": [
+        [
+          53.53286,
+          -113.509833
+        ],
+        [
+          53.532836,
+          -113.509839
+        ],
+        [
+          53.532813,
+          -113.509843
+        ],
+        [
+          53.532789,
+          -113.509842
+        ],
+        [
+          53.53276,
+          -113.509839
+        ],
+        [
+          53.532725,
+          -113.50983
+        ],
+        [
+          53.532569,
+          -113.509758
+        ],
+        [
+          53.532536,
+          -113.509742
+        ],
+        [
+          53.532502,
+          -113.509732
+        ],
+        [
+          53.532478,
+          -113.509731
+        ],
+        [
+          53.532455,
+          -113.509734
+        ],
+        [
+          53.532398,
+          -113.509743
+        ]
+      ]
+    },
+    {
+      "osm_way": 461598491,
+      "part": "lower_deck_sidewalk",
+      "which": "Lower deck, east sidewalk or shared-use path. Cycleway tagged bridge, on the east side of the road centreline. The line flares away from the road at the ends, so the offset is not the path width.",
+      "plan_length_m": 774.7,
+      "tags": {
+        "bicycle": "designated",
+        "bridge": "yes",
+        "foot": "designated",
+        "highway": "cycleway",
+        "layer": "1",
+        "oneway": "no",
+        "surface": "concrete"
+      },
+      "nodes": [
+        [
+          53.526072,
+          -113.51295
+        ],
+        [
+          53.526213,
+          -113.512909
+        ],
+        [
+          53.526304,
+          -113.512888
+        ],
+        [
+          53.526419,
+          -113.512867
+        ],
+        [
+          53.526551,
+          -113.512887
+        ],
+        [
+          53.526655,
+          -113.512914
+        ],
+        [
+          53.526723,
+          -113.512921
+        ],
+        [
+          53.52677,
+          -113.512923
+        ],
+        [
+          53.526815,
+          -113.512917
+        ],
+        [
+          53.526875,
+          -113.512898
+        ],
+        [
+          53.526968,
+          -113.512839
+        ],
+        [
+          53.5298,
+          -113.511176
+        ],
+        [
+          53.53094,
+          -113.510501
+        ],
+        [
+          53.531455,
+          -113.510212
+        ],
+        [
+          53.532396,
+          -113.509684
+        ],
+        [
+          53.532471,
+          -113.509553
+        ],
+        [
+          53.532588,
+          -113.509361
+        ],
+        [
+          53.532593,
+          -113.509352
+        ],
+        [
+          53.532597,
+          -113.509342
+        ],
+        [
+          53.532599,
+          -113.50933
+        ],
+        [
+          53.532599,
+          -113.509318
+        ],
+        [
+          53.532598,
+          -113.509306
+        ],
+        [
+          53.532595,
+          -113.509295
+        ]
+      ]
+    },
+    {
+      "osm_way": 113767072,
+      "part": "lower_deck_sidewalk",
+      "which": "Lower deck, west sidewalk or shared-use path. Cycleway tagged bridge, on the west side of the road centreline. Same flare at the ends.",
+      "plan_length_m": 791.3,
+      "tags": {
+        "bicycle": "designated",
+        "bridge": "yes",
+        "foot": "designated",
+        "highway": "cycleway",
+        "layer": "1",
+        "oneway": "no",
+        "surface": "concrete"
+      },
+      "nodes": [
+        [
+          53.53286,
+          -113.509935
+        ],
+        [
+          53.532842,
+          -113.509939
+        ],
+        [
+          53.532812,
+          -113.509944
+        ],
+        [
+          53.532761,
+          -113.509934
+        ],
+        [
+          53.532683,
+          -113.509902
+        ],
+        [
+          53.53254,
+          -113.509825
+        ],
+        [
+          53.532514,
+          -113.509813
+        ],
+        [
+          53.532477,
+          -113.509797
+        ],
+        [
+          53.532457,
+          -113.509798
+        ],
+        [
+          53.532441,
+          -113.509799
+        ],
+        [
+          53.532424,
+          -113.509802
+        ],
+        [
+          53.528163,
+          -113.512296
+        ],
+        [
+          53.526841,
+          -113.513064
+        ],
+        [
+          53.526806,
+          -113.513074
+        ],
+        [
+          53.526764,
+          -113.513081
+        ],
+        [
+          53.526733,
+          -113.513079
+        ],
+        [
+          53.526555,
+          -113.513052
+        ],
+        [
+          53.526499,
+          -113.51304
+        ],
+        [
+          53.526441,
+          -113.513026
+        ],
+        [
+          53.526386,
+          -113.513024
+        ],
+        [
+          53.52609,
+          -113.513109
+        ]
+      ]
+    },
+    {
+      "osm_way": 463555601,
+      "part": "upper_deck_streetcar",
+      "which": "Upper deck. railway=tram and layer=2, so this is the streetcar deck above the road (layer 1). One track in the current map. The line sits west of the road centreline.",
+      "plan_length_m": 770.5,
+      "tags": {
+        "bridge": "yes",
+        "layer": "2",
+        "railway": "tram"
+      },
+      "nodes": [
+        [
+          53.526197,
+          -113.513244
+        ],
+        [
+          53.526324,
+          -113.513215
+        ],
+        [
+          53.526473,
+          -113.513169
+        ],
+        [
+          53.526602,
+          -113.513114
+        ],
+        [
+          53.526758,
+          -113.513038
+        ],
+        [
+          53.526829,
+          -113.512996
+        ],
+        [
+          53.526963,
+          -113.512917
+        ],
+        [
+          53.528361,
+          -113.512097
+        ],
+        [
+          53.529892,
+          -113.511193
+        ],
+        [
+          53.53074,
+          -113.510713
+        ],
+        [
+          53.531584,
+          -113.510206
+        ],
+        [
+          53.532397,
+          -113.509751
+        ],
+        [
+          53.532768,
+          -113.509572
+        ]
+      ]
+    },
+    {
+      "osm_way": 113767071,
+      "part": "upper_deck_streetcar_south_stub",
+      "which": "Upper deck, south end. Short tram way tagged bridge, layer 1, joining the south end of the layer-2 streetcar way.",
+      "plan_length_m": 18.8,
+      "tags": {
+        "bridge": "yes",
+        "layer": "1",
+        "railway": "tram"
+      },
+      "nodes": [
+        [
+          53.526029,
+          -113.51328
+        ],
+        [
+          53.526197,
+          -113.513244
+        ]
+      ]
+    }
+  ],
+  "approaches": [
+    {
+      "osm_way": 510090943,
+      "part": "north_road_approach",
+      "which": "North road approach, east branch. 109 Street NW, one lane, one-way toward the bridge. Not tagged bridge. Joins lower-deck way 500327672.",
+      "plan_length_m": 97.2,
+      "tags": {
+        "highway": "secondary",
+        "lanes": "1",
+        "maxheight": "3.2",
+        "maxspeed": "50",
+        "name": "109 Street NW",
+        "oneway": "yes",
+        "surface": "asphalt"
+      },
+      "nodes": [
+        [
+          53.533588,
+          -113.508957
+        ],
+        [
+          53.533312,
+          -113.509057
+        ],
+        [
+          53.532895,
+          -113.509207
+        ],
+        [
+          53.532735,
+          -113.509277
+        ]
+      ],
+      "meets_bridge_way": 500327672,
+      "role_in_extract": "approach"
+    },
+    {
+      "osm_way": 500327669,
+      "part": "north_road_approach",
+      "which": "North road approach, west branch. 109 Street NW by name, one-way toward the bridge. Not tagged bridge. Joins lower-deck way 22916464. This is the west entry, the 110 Street side.",
+      "plan_length_m": 109.4,
+      "tags": {
+        "highway": "secondary",
+        "maxheight": "3.2",
+        "maxspeed": "50",
+        "name": "109 Street NW",
+        "oneway": "yes",
+        "surface": "asphalt"
+      },
+      "nodes": [
+        [
+          53.533827,
+          -113.509532
+        ],
+        [
+          53.533536,
+          -113.5096
+        ],
+        [
+          53.533372,
+          -113.509649
+        ],
+        [
+          53.53324,
+          -113.509687
+        ],
+        [
+          53.533067,
+          -113.509751
+        ],
+        [
+          53.53286,
+          -113.509833
+        ]
+      ],
+      "meets_bridge_way": 22916464,
+      "role_in_extract": "approach"
+    },
+    {
+      "osm_way": 1095758755,
+      "part": "south_road_approach",
+      "which": "South road approach. 109 Street NW, two lanes, one-way away from the bridge (southbound). Not tagged bridge. Leaves the south end of lower-deck way 22915822 and bends east.",
+      "plan_length_m": 146.4,
+      "tags": {
+        "bicycle": "yes",
+        "foot": "yes",
+        "highway": "secondary",
+        "lanes": "2",
+        "maxspeed": "50",
+        "name": "109 Street NW",
+        "oneway": "yes",
+        "surface": "asphalt"
+      },
+      "nodes": [
+        [
+          53.52608,
+          -113.513026
+        ],
+        [
+          53.525997,
+          -113.513045
+        ],
+        [
+          53.52579,
+          -113.513078
+        ],
+        [
+          53.525655,
+          -113.51307
+        ],
+        [
+          53.525515,
+          -113.513038
+        ],
+        [
+          53.525387,
+          -113.512993
+        ],
+        [
+          53.525289,
+          -113.512939
+        ],
+        [
+          53.524915,
+          -113.512692
+        ],
+        [
+          53.524814,
+          -113.512607
+        ]
+      ],
+      "meets_bridge_way": 22915822,
+      "role_in_extract": "approach"
+    },
+    {
+      "osm_way": 219620022,
+      "part": "north_streetcar_approach",
+      "which": "North streetcar approach. railway=tram, not tagged bridge. The extract calls it a cross road. It shares the north node of upper-deck way 463555601.",
+      "plan_length_m": 136.6,
+      "tags": {
+        "railway": "tram"
+      },
+      "nodes": [
+        [
+          53.533976,
+          -113.509209
+        ],
+        [
+          53.533773,
+          -113.509244
+        ],
+        [
+          53.533536,
+          -113.509294
+        ],
+        [
+          53.533296,
+          -113.509369
+        ],
+        [
+          53.53303,
+          -113.50946
+        ],
+        [
+          53.532768,
+          -113.509572
+        ]
+      ],
+      "meets_bridge_way": 463555601,
+      "role_in_extract": "cross_road"
+    },
+    {
+      "osm_way": 1474789002,
+      "part": "south_streetcar_approach",
+      "which": "South streetcar track leaving the bridge. railway=tram, not tagged bridge. The extract calls it a cross road. It shares the south node of upper-deck stub 113767071. The mapped way is only the first few dozen metres.",
+      "plan_length_m": 25.3,
+      "tags": {
+        "railway": "tram"
+      },
+      "nodes": [
+        [
+          53.526029,
+          -113.51328
+        ],
+        [
+          53.525908,
+          -113.513289
+        ],
+        [
+          53.525802,
+          -113.513295
+        ]
+      ],
+      "meets_bridge_way": 113767071,
+      "role_in_extract": "cross_road"
+    }
+  ],
+  "outline": {
+    "osm_way": 461598489,
+    "part": "bridge_outline",
+    "which": "OSM area of the High Level Bridge (man_made=bridge, bridge=trestle, name=High Level Bridge). Closed ring. Not a deck centreline. Perimeter, not the bridge length.",
+    "plan_length_m": 1885.4,
+    "tags": {
+      "bridge": "trestle",
+      "bridge:structure": "trestle",
+      "layer": "1",
+      "man_made": "bridge",
+      "name": "High Level Bridge"
+    },
+    "nodes": [
+      [
+        53.532723,
+        -113.509665
+      ],
+      [
+        53.532714,
+        -113.509624
+      ],
+      [
+        53.532774,
+        -113.509597
+      ],
+      [
+        53.532768,
+        -113.509572
+      ],
+      [
+        53.532764,
+        -113.50954
+      ],
+      [
+        53.532706,
+        -113.509565
+      ],
+      [
+        53.5327,
+        -113.509523
+      ],
+      [
+        53.532571,
+        -113.509582
+      ],
+      [
+        53.532652,
+        -113.509447
+      ],
+      [
+        53.532699,
+        -113.509392
+      ],
+      [
+        53.53275,
+        -113.509357
+      ],
+      [
+        53.532717,
+        -113.509171
+      ],
+      [
+        53.532658,
+        -113.509205
+      ],
+      [
+        53.532608,
+        -113.509249
+      ],
+      [
+        53.53255,
+        -113.509342
+      ],
+      [
+        53.532493,
+        -113.509423
+      ],
+      [
+        53.532454,
+        -113.509507
+      ],
+      [
+        53.532413,
+        -113.509604
+      ],
+      [
+        53.532398,
+        -113.509639
+      ],
+      [
+        53.532308,
+        -113.50969
+      ],
+      [
+        53.532271,
+        -113.509715
+      ],
+      [
+        53.532059,
+        -113.509826
+      ],
+      [
+        53.532051,
+        -113.509784
+      ],
+      [
+        53.532017,
+        -113.509802
+      ],
+      [
+        53.532026,
+        -113.50985
+      ],
+      [
+        53.531799,
+        -113.509983
+      ],
+      [
+        53.531757,
+        -113.510002
+      ],
+      [
+        53.53143,
+        -113.510189
+      ],
+      [
+        53.531432,
+        -113.510209
+      ],
+      [
+        53.530976,
+        -113.510467
+      ],
+      [
+        53.530936,
+        -113.510432
+      ],
+      [
+        53.530918,
+        -113.510492
+      ],
+      [
+        53.530214,
+        -113.510903
+      ],
+      [
+        53.53018,
+        -113.510874
+      ],
+      [
+        53.53016,
+        -113.510936
+      ],
+      [
+        53.529967,
+        -113.511053
+      ],
+      [
+        53.52869,
+        -113.511828
+      ],
+      [
+        53.528159,
+        -113.512125
+      ],
+      [
+        53.527404,
+        -113.512556
+      ],
+      [
+        53.526918,
+        -113.512843
+      ],
+      [
+        53.526857,
+        -113.512874
+      ],
+      [
+        53.526802,
+        -113.512894
+      ],
+      [
+        53.526744,
+        -113.512891
+      ],
+      [
+        53.526625,
+        -113.512877
+      ],
+      [
+        53.526445,
+        -113.512843
+      ],
+      [
+        53.526371,
+        -113.512845
+      ],
+      [
+        53.52621,
+        -113.512879
+      ],
+      [
+        53.52607,
+        -113.512925
+      ],
+      [
+        53.526072,
+        -113.51295
+      ],
+      [
+        53.52608,
+        -113.513026
+      ],
+      [
+        53.52609,
+        -113.513109
+      ],
+      [
+        53.526096,
+        -113.513128
+      ],
+      [
+        53.526345,
+        -113.513053
+      ],
+      [
+        53.526399,
+        -113.513044
+      ],
+      [
+        53.526461,
+        -113.51305
+      ],
+      [
+        53.52649,
+        -113.513061
+      ],
+      [
+        53.526513,
+        -113.513069
+      ],
+      [
+        53.526413,
+        -113.513113
+      ],
+      [
+        53.526311,
+        -113.513141
+      ],
+      [
+        53.526086,
+        -113.513191
+      ],
+      [
+        53.526086,
+        -113.513225
+      ],
+      [
+        53.526026,
+        -113.513238
+      ],
+      [
+        53.526029,
+        -113.51328
+      ],
+      [
+        53.526031,
+        -113.513325
+      ],
+      [
+        53.526089,
+        -113.513313
+      ],
+      [
+        53.52609,
+        -113.513345
+      ],
+      [
+        53.52612,
+        -113.513339
+      ],
+      [
+        53.526292,
+        -113.513304
+      ],
+      [
+        53.526395,
+        -113.51327
+      ],
+      [
+        53.526613,
+        -113.513185
+      ],
+      [
+        53.526776,
+        -113.513109
+      ],
+      [
+        53.526837,
+        -113.513109
+      ],
+      [
+        53.526847,
+        -113.51316
+      ],
+      [
+        53.526913,
+        -113.513072
+      ],
+      [
+        53.527407,
+        -113.512743
+      ],
+      [
+        53.528187,
+        -113.512297
+      ],
+      [
+        53.528496,
+        -113.512099
+      ],
+      [
+        53.529283,
+        -113.511638
+      ],
+      [
+        53.529985,
+        -113.511217
+      ],
+      [
+        53.530192,
+        -113.51111
+      ],
+      [
+        53.530204,
+        -113.511186
+      ],
+      [
+        53.530244,
+        -113.511212
+      ],
+      [
+        53.530264,
+        -113.511164
+      ],
+      [
+        53.530252,
+        -113.511076
+      ],
+      [
+        53.530938,
+        -113.510673
+      ],
+      [
+        53.530946,
+        -113.510709
+      ],
+      [
+        53.531,
+        -113.510767
+      ],
+      [
+        53.531022,
+        -113.510672
+      ],
+      [
+        53.531011,
+        -113.510629
+      ],
+      [
+        53.531415,
+        -113.510387
+      ],
+      [
+        53.531458,
+        -113.510363
+      ],
+      [
+        53.531466,
+        -113.510405
+      ],
+      [
+        53.531799,
+        -113.510209
+      ],
+      [
+        53.531924,
+        -113.510133
+      ],
+      [
+        53.532067,
+        -113.510056
+      ],
+      [
+        53.532071,
+        -113.510075
+      ],
+      [
+        53.532105,
+        -113.510056
+      ],
+      [
+        53.532101,
+        -113.510033
+      ],
+      [
+        53.532281,
+        -113.509933
+      ],
+      [
+        53.532321,
+        -113.50991
+      ],
+      [
+        53.532461,
+        -113.509831
+      ],
+      [
+        53.532472,
+        -113.509835
+      ],
+      [
+        53.532622,
+        -113.509909
+      ],
+      [
+        53.532716,
+        -113.509951
+      ],
+      [
+        53.532808,
+        -113.509969
+      ],
+      [
+        53.53286,
+        -113.509959
+      ],
+      [
+        53.532834,
+        -113.509774
+      ],
+      [
+        53.532802,
+        -113.509782
+      ],
+      [
+        53.532768,
+        -113.509784
+      ],
+      [
+        53.532735,
+        -113.509783
+      ],
+      [
+        53.532617,
+        -113.509715
+      ],
+      [
+        53.532723,
+        -113.509665
+      ]
+    ]
+  },
+  "excluded": [
+    {
+      "osm_way": 37834327,
+      "reason": "Capital Line light rail. Dudley B. Menzies Bridge, west of the High Level."
+    },
+    {
+      "osm_way": 700467672,
+      "reason": "Capital Line light rail, the other Menzies track."
+    },
+    {
+      "osm_way": 533052900,
+      "reason": "Dudley B. Menzies Bridge outline."
+    },
+    {
+      "osm_way": 82699379,
+      "reason": "Capital Line approach, Menzies."
+    },
+    {
+      "osm_way": 463555599,
+      "reason": "Capital Line approach, Menzies."
+    },
+    {
+      "osm_way": 23266026,
+      "reason": "Cycleway on the Menzies side of the pair."
+    },
+    {
+      "osm_way": 424285379,
+      "reason": "Cycleway on the Menzies side of the pair."
+    },
+    {
+      "osm_way": 822801394,
+      "reason": "Short cycleway on the Menzies side of the pair."
+    },
+    {
+      "osm_way": 23266022,
+      "reason": "Short cycleway on the Menzies side of the pair."
+    }
+  ],
+  "dimensions": {
+    "overall_length_m": 777.24,
+    "overall_length_ft": 2550,
+    "overall_length_also_reported_ft": 2478,
+    "span_count": 28,
+    "river_pier_count": 4,
+    "main_pratt_span_count": 3,
+    "main_pratt_span_length_m": 87.78,
+    "main_pratt_span_length_ft": 288,
+    "north_warren_span_count": 2,
+    "north_warren_span_length_m": 39.62,
+    "north_warren_span_length_ft": 130,
+    "south_pratt_span_count_itemized": 7,
+    "south_pratt_span_length_m": 29.26,
+    "south_pratt_span_length_ft": 96,
+    "south_tower_span_count_itemized": 6,
+    "south_tower_span_length_m": 14.33,
+    "south_tower_span_length_ft": 47,
+    "spans_without_an_individual_length": 10,
+    "truss_depth_ft": 50,
+    "truss_depth_m": 15.24,
+    "rail_deck_base_above_mean_water_m": 47.55,
+    "rail_deck_base_above_mean_water_ft": 156,
+    "deck_separation_m": 6.1,
+    "deck_separation_ft": 20,
+    "roadway_top_below_base_of_rail_ft_in": "19 ft 2 in",
+    "each_deck_width_m": 11.89,
+    "each_deck_width_ft": 39,
+    "original_roadway_width_ft": 23,
+    "original_sidewalk_width_ft": 8,
+    "west_shared_use_path_m_2016": 2.8,
+    "east_shared_use_path_m_2016": 2.3,
+    "lanes": 2,
+    "direction": "southbound",
+    "posted_vehicle_clearance_m": 3.2,
+    "upper_deck": "streetcar, one centre track; originally CPR centre track with a streetcar track each side",
+    "lower_deck": "road, two southbound lanes, sidewalk or shared-use path each side",
+    "deck_grade_main_spans_1914": "level",
+    "deck_grade_south_approach_spans_1914": 0.0074,
+    "south_street_approach_grade_1914": 0.0545,
+    "north_approach_grade_1914": "level",
+    "south_end_above_north_end_ft": 10.34,
+    "roadway_crown_above_july_1906_water_ft": 153.2,
+    "south_tower_height_ft_1914_plate": 140,
+    "original_wood_block_thickness_in_at_crown": 14,
+    "deck_elevation_asl_m": null,
+    "mean_water_elevation_asl_m": null,
+    "traffic_deck_above_mean_water_m": null,
+    "deck_thickness_m": null,
+    "crossfall": null,
+    "lane_width_m": null,
+    "river_pier_height_m": null,
+    "north_approach_length_m": null,
+    "north_approach_elevation_change_m": null,
+    "south_approach_length_m": null,
+    "south_approach_elevation_change_m": null,
+    "upper_deck_track_bed_width_m": null
+  }
+}

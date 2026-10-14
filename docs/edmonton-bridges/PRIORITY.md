@@ -58,7 +58,7 @@ One scene. Runway 34 looks straight down this valley. Runway 30 looks up the eas
 
 - [ ] **R11 Walterdale**. 53.529, -113.502. Look 5, Where 5. Tied arch, two 56 m arches, no piers in the river. About 0.8 km east of the runway 34 centerline, 4.1 km out. Custom. This is the 2017 structure. The 1913 truss was demolished in 2017; do not model it.
 
-- [ ] **R14 Tawatinâ**, including the elevated guideway south of the river. 53.5401, -113.4772. Look 5, Where 5. Extradosed concrete box, pylons 24–30 m above the deck, pedestrian deck hung underneath. About 0.4 km off the runway 30 centerline, 4.0 km out. The mapped bridge ways continue south to about 53.5374, over 98 Avenue and down to the Muttart ramp (about 470 m per track from 53.5416). That south run is part of this box, not a second bridge. Custom.
+- [ ] **R14 Tawatinâ**, including the elevated guideway south of the river. 53.5401, -113.4772. Look 5, Where 5. Extradosed concrete box, pylons 24–30 m above the deck, pedestrian deck hung underneath. About 0.4 km off the runway 30 centerline, 4.0 km out. The mapped bridge ways continue south to about 53.5374, over 98 Avenue and down to the Muttart ramp (about 470 m per track from 53.5416). That south run is part of this box, not a second bridge. Custom. **Todo:** the Muttart stop (53.53621, -113.48000) sits at the bottom of this ramp. Consider building that station with this bridge rather than leaving it for the later station pass.
 
 - [ ] **R15 Dawson**. 53.549, -113.467. Look 5, Where 4. Truss. About 0.8 km off the runway 30 centerline, 3.7 km out. Custom. Not the same truss as the High Level; do not reuse that model.
 
@@ -284,12 +284,12 @@ NAIT / Blatchford Market and Blatchford Gate are inside the CYXD airport polygon
 
 ### Open, at grade, on the runway 30 side of downtown
 
-These are the street stops a runway 30 arrival flies past. Muttart is the bottom of the R14 ramp, so it is context for that bridge, not its own model.
+These are the street stops a runway 30 arrival flies past. Muttart is the bottom of the R14 ramp. The R14 box has a todo to consider building that station with the bridge.
 
 - [ ] **102 Street**. 53.54317, -113.49524.
 - [ ] **Churchill**. 53.54377, -113.48904. Valley Line stop is at street level. Capital and Metro platforms are underground. One surface stop.
 - [ ] **Quarters**. 53.54440, -113.48405.
-- [ ] **Muttart**. 53.53621, -113.48000.
+- [ ] **Muttart**. 53.53621, -113.48000. At grade, at the bottom of the south ramp off R14. See the R14 todo: this stop may belong in the bridge project.
 
 ### Open, at grade, the rest
 

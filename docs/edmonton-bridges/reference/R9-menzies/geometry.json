@@ -1,0 +1,856 @@
+{
+  "code": "R9",
+  "name": "Dudley B. Menzies Bridge",
+  "centre": [
+    53.531,
+    -113.512
+  ],
+  "crs": "EPSG:4326",
+  "coordinate_order": "[lat, lon]",
+  "geometry_source": "docs/edmonton-bridges/bridge-geometry.json",
+  "geometry_retrieved": "2026-10-14",
+  "plan_length_note": "plan_length_m is the horizontal length of that OSM way on the WGS84 nodes. It is not the 530 m seven-span box and it is not the 600 m length in the 1990 paper abstract.",
+  "dropped_note": "The R9 extract also contained the High Level Bridge, its road and streetcar, and its sidewalks, because the two bridges are adjacent. Those ways are not in this file.",
+  "decks": [
+    {
+      "osm_way": 533052900,
+      "part": "bridge_outline",
+      "which": "Named outline of the Dudley B. Menzies Bridge. Closed way. plan_length_m is the perimeter, not the bridge length. This is the mapped footprint from the downtown end to the university end. It is not a track centreline.",
+      "plan_length_m": 1410.1,
+      "tags": {
+        "bridge": "viaduct",
+        "bridge:structure": "beam",
+        "layer": "1",
+        "man_made": "bridge",
+        "name": "Dudley B. Menzies Bridge"
+      },
+      "nodes": [
+        [
+          53.532662,
+          -113.510829
+        ],
+        [
+          53.532641,
+          -113.510717
+        ],
+        [
+          53.532635,
+          -113.510686
+        ],
+        [
+          53.532393,
+          -113.510826
+        ],
+        [
+          53.531594,
+          -113.511294
+        ],
+        [
+          53.531145,
+          -113.511552
+        ],
+        [
+          53.530528,
+          -113.511918
+        ],
+        [
+          53.529595,
+          -113.512468
+        ],
+        [
+          53.52928,
+          -113.512673
+        ],
+        [
+          53.529217,
+          -113.512714
+        ],
+        [
+          53.529104,
+          -113.512801
+        ],
+        [
+          53.528899,
+          -113.51297
+        ],
+        [
+          53.528719,
+          -113.513144
+        ],
+        [
+          53.528577,
+          -113.513289
+        ],
+        [
+          53.52837,
+          -113.513557
+        ],
+        [
+          53.528243,
+          -113.513737
+        ],
+        [
+          53.52799,
+          -113.514153
+        ],
+        [
+          53.527848,
+          -113.514418
+        ],
+        [
+          53.527841,
+          -113.514432
+        ],
+        [
+          53.527569,
+          -113.51499
+        ],
+        [
+          53.527271,
+          -113.515601
+        ],
+        [
+          53.527294,
+          -113.515632
+        ],
+        [
+          53.527334,
+          -113.515686
+        ],
+        [
+          53.527352,
+          -113.515711
+        ],
+        [
+          53.527738,
+          -113.51488
+        ],
+        [
+          53.527975,
+          -113.514409
+        ],
+        [
+          53.52805,
+          -113.514261
+        ],
+        [
+          53.528342,
+          -113.513783
+        ],
+        [
+          53.528629,
+          -113.513408
+        ],
+        [
+          53.529047,
+          -113.513003
+        ],
+        [
+          53.52931,
+          -113.512812
+        ],
+        [
+          53.529459,
+          -113.512703
+        ],
+        [
+          53.530008,
+          -113.512373
+        ],
+        [
+          53.530427,
+          -113.512128
+        ],
+        [
+          53.53054,
+          -113.512058
+        ],
+        [
+          53.531229,
+          -113.511653
+        ],
+        [
+          53.53161,
+          -113.51143
+        ],
+        [
+          53.532323,
+          -113.511038
+        ],
+        [
+          53.532475,
+          -113.51096
+        ],
+        [
+          53.532666,
+          -113.510862
+        ],
+        [
+          53.532662,
+          -113.510829
+        ]
+      ]
+    },
+    {
+      "osm_way": 700467672,
+      "part": "east_track",
+      "which": "Capital Line, the track closer to the High Level Bridge. Bridge-tagged from the university end to the downtown end.",
+      "plan_length_m": 685.1,
+      "tags": {
+        "bridge": "yes",
+        "layer": "2",
+        "maxspeed": "70",
+        "name": "Capital Line",
+        "railway": "light_rail"
+      },
+      "nodes": [
+        [
+          53.527348,
+          -113.515518
+        ],
+        [
+          53.527648,
+          -113.514877
+        ],
+        [
+          53.527853,
+          -113.514468
+        ],
+        [
+          53.528015,
+          -113.514158
+        ],
+        [
+          53.528114,
+          -113.513991
+        ],
+        [
+          53.528184,
+          -113.513877
+        ],
+        [
+          53.528274,
+          -113.513741
+        ],
+        [
+          53.528386,
+          -113.513577
+        ],
+        [
+          53.528522,
+          -113.513407
+        ],
+        [
+          53.528651,
+          -113.513256
+        ],
+        [
+          53.528766,
+          -113.513138
+        ],
+        [
+          53.528858,
+          -113.513049
+        ],
+        [
+          53.529016,
+          -113.512911
+        ],
+        [
+          53.529198,
+          -113.512767
+        ],
+        [
+          53.529339,
+          -113.512668
+        ],
+        [
+          53.529671,
+          -113.512458
+        ],
+        [
+          53.529918,
+          -113.512313
+        ],
+        [
+          53.530175,
+          -113.512162
+        ],
+        [
+          53.531741,
+          -113.511241
+        ],
+        [
+          53.532641,
+          -113.510717
+        ]
+      ]
+    },
+    {
+      "osm_way": 37834327,
+      "part": "west_track",
+      "which": "Capital Line, the western track. Bridge-tagged from the downtown end to the university end.",
+      "plan_length_m": 682.3,
+      "tags": {
+        "bridge": "yes",
+        "layer": "2",
+        "maxspeed": "70",
+        "name": "Capital Line",
+        "railway": "light_rail"
+      },
+      "nodes": [
+        [
+          53.532662,
+          -113.510829
+        ],
+        [
+          53.532036,
+          -113.511159
+        ],
+        [
+          53.531956,
+          -113.511202
+        ],
+        [
+          53.529933,
+          -113.512385
+        ],
+        [
+          53.529578,
+          -113.512594
+        ],
+        [
+          53.529332,
+          -113.512747
+        ],
+        [
+          53.529185,
+          -113.512849
+        ],
+        [
+          53.529148,
+          -113.51288
+        ],
+        [
+          53.529006,
+          -113.512998
+        ],
+        [
+          53.528857,
+          -113.513132
+        ],
+        [
+          53.528743,
+          -113.513242
+        ],
+        [
+          53.528687,
+          -113.5133
+        ],
+        [
+          53.528591,
+          -113.513411
+        ],
+        [
+          53.528403,
+          -113.513647
+        ],
+        [
+          53.528285,
+          -113.513817
+        ],
+        [
+          53.528198,
+          -113.51395
+        ],
+        [
+          53.528094,
+          -113.514123
+        ],
+        [
+          53.528003,
+          -113.514289
+        ],
+        [
+          53.527856,
+          -113.514574
+        ],
+        [
+          53.527675,
+          -113.514953
+        ],
+        [
+          53.527595,
+          -113.515124
+        ],
+        [
+          53.527387,
+          -113.515571
+        ]
+      ]
+    },
+    {
+      "osm_way": 424285379,
+      "part": "lower_walkway",
+      "which": "Cycleway tagged on the bridge and lying inside the Menzies outline. Partial. It covers the middle of the elevated run, not the whole deck. PCL says the pedestrian walkway is hung under the three main river spans only. This way is not a survey of those three spans.",
+      "plan_length_m": 296.4,
+      "tags": {
+        "bicycle": "designated",
+        "bridge": "yes",
+        "foot": "designated",
+        "highway": "cycleway",
+        "layer": "1",
+        "surface": "concrete"
+      },
+      "nodes": [
+        [
+          53.529215,
+          -113.512792
+        ],
+        [
+          53.529227,
+          -113.512777
+        ],
+        [
+          53.529242,
+          -113.512764
+        ],
+        [
+          53.529281,
+          -113.512734
+        ],
+        [
+          53.529328,
+          -113.512701
+        ],
+        [
+          53.529379,
+          -113.512668
+        ],
+        [
+          53.529431,
+          -113.512634
+        ],
+        [
+          53.529482,
+          -113.512603
+        ],
+        [
+          53.529527,
+          -113.512575
+        ],
+        [
+          53.529565,
+          -113.512553
+        ],
+        [
+          53.529592,
+          -113.512537
+        ],
+        [
+          53.52964,
+          -113.512508
+        ],
+        [
+          53.530455,
+          -113.512031
+        ],
+        [
+          53.531487,
+          -113.511426
+        ],
+        [
+          53.531722,
+          -113.511289
+        ]
+      ]
+    },
+    {
+      "osm_way": 23266026,
+      "part": "lower_walkway_north_stub",
+      "which": "Short bridge-tagged cycleway at the north end of the mapped walkway. Not tagged as a ramp. PCL's spiral ramps are not identified as this way.",
+      "plan_length_m": 51.9,
+      "tags": {
+        "bicycle": "designated",
+        "bridge": "yes",
+        "foot": "designated",
+        "highway": "cycleway",
+        "surface": "concrete"
+      },
+      "nodes": [
+        [
+          53.531796,
+          -113.511244
+        ],
+        [
+          53.531804,
+          -113.511239
+        ],
+        [
+          53.531807,
+          -113.511236
+        ],
+        [
+          53.53181,
+          -113.511234
+        ],
+        [
+          53.531812,
+          -113.511231
+        ],
+        [
+          53.531816,
+          -113.511228
+        ],
+        [
+          53.531819,
+          -113.511223
+        ],
+        [
+          53.531823,
+          -113.511217
+        ],
+        [
+          53.531827,
+          -113.511211
+        ],
+        [
+          53.53183,
+          -113.511204
+        ],
+        [
+          53.531833,
+          -113.511195
+        ],
+        [
+          53.531835,
+          -113.511188
+        ],
+        [
+          53.531836,
+          -113.511177
+        ],
+        [
+          53.531838,
+          -113.511168
+        ],
+        [
+          53.531838,
+          -113.511159
+        ],
+        [
+          53.531838,
+          -113.511148
+        ],
+        [
+          53.531838,
+          -113.511139
+        ],
+        [
+          53.531837,
+          -113.511128
+        ],
+        [
+          53.531835,
+          -113.511115
+        ],
+        [
+          53.531831,
+          -113.511101
+        ],
+        [
+          53.531816,
+          -113.511071
+        ],
+        [
+          53.531801,
+          -113.511058
+        ],
+        [
+          53.531784,
+          -113.511054
+        ],
+        [
+          53.53176,
+          -113.511062
+        ],
+        [
+          53.531746,
+          -113.511075
+        ],
+        [
+          53.531735,
+          -113.511099
+        ],
+        [
+          53.531728,
+          -113.51113
+        ],
+        [
+          53.531729,
+          -113.511168
+        ],
+        [
+          53.531739,
+          -113.511203
+        ],
+        [
+          53.53176,
+          -113.511246
+        ],
+        [
+          53.531873,
+          -113.511401
+        ]
+      ]
+    },
+    {
+      "osm_way": 822801394,
+      "part": "lower_walkway_link",
+      "which": "Short bridge-tagged cycleway joining the north stub to the main mapped walkway.",
+      "plan_length_m": 8.8,
+      "tags": {
+        "bicycle": "designated",
+        "bridge": "yes",
+        "foot": "designated",
+        "highway": "cycleway",
+        "layer": "1",
+        "surface": "concrete"
+      },
+      "nodes": [
+        [
+          53.531722,
+          -113.511289
+        ],
+        [
+          53.531753,
+          -113.511271
+        ],
+        [
+          53.531776,
+          -113.511257
+        ],
+        [
+          53.531796,
+          -113.511244
+        ]
+      ]
+    },
+    {
+      "osm_way": 23266022,
+      "part": "lower_walkway_south_stub",
+      "which": "Short bridge-tagged cycleway at the south end of the mapped walkway. Partly inside the outline. Not tagged as a ramp.",
+      "plan_length_m": 28.2,
+      "tags": {
+        "bicycle": "designated",
+        "bridge": "yes",
+        "foot": "designated",
+        "highway": "cycleway",
+        "layer": "1",
+        "surface": "concrete"
+      },
+      "nodes": [
+        [
+          53.529215,
+          -113.512792
+        ],
+        [
+          53.529204,
+          -113.512808
+        ],
+        [
+          53.529196,
+          -113.512825
+        ],
+        [
+          53.529192,
+          -113.512844
+        ],
+        [
+          53.529192,
+          -113.512864
+        ],
+        [
+          53.529196,
+          -113.512885
+        ],
+        [
+          53.529206,
+          -113.512908
+        ],
+        [
+          53.529226,
+          -113.512936
+        ],
+        [
+          53.529241,
+          -113.512947
+        ],
+        [
+          53.52926,
+          -113.512949
+        ],
+        [
+          53.529283,
+          -113.512938
+        ],
+        [
+          53.529293,
+          -113.512928
+        ],
+        [
+          53.529307,
+          -113.512898
+        ],
+        [
+          53.529314,
+          -113.51284
+        ],
+        [
+          53.52931,
+          -113.512812
+        ]
+      ]
+    }
+  ],
+  "approaches": [
+    {
+      "osm_way": 463555599,
+      "part": "north_portal_west_track",
+      "which": "Capital Line surface stub from the downtown tunnel tag to the west track's bridge tag. This is the north portal transition in the extract, not an earth embankment.",
+      "plan_length_m": 16.4,
+      "tags": {
+        "maxspeed": "70",
+        "name": "Capital Line",
+        "railway": "light_rail"
+      },
+      "nodes": [
+        [
+          53.532803,
+          -113.510756
+        ],
+        [
+          53.532662,
+          -113.510829
+        ]
+      ]
+    },
+    {
+      "osm_way": 82699379,
+      "part": "north_portal_east_track",
+      "which": "Capital Line surface stub from the east track's bridge tag to the downtown tunnel tag.",
+      "plan_length_m": 16.3,
+      "tags": {
+        "maxspeed": "70",
+        "name": "Capital Line",
+        "railway": "light_rail"
+      },
+      "nodes": [
+        [
+          53.532641,
+          -113.510717
+        ],
+        [
+          53.53278,
+          -113.51064
+        ]
+      ]
+    },
+    {
+      "osm_way": 700467673,
+      "part": "south_portal_west_track",
+      "which": "Capital Line surface stub from the west track's bridge tag to the University tunnel tag.",
+      "plan_length_m": 9.6,
+      "tags": {
+        "maxspeed": "70",
+        "name": "Capital Line",
+        "railway": "light_rail"
+      },
+      "nodes": [
+        [
+          53.527387,
+          -113.515571
+        ],
+        [
+          53.527334,
+          -113.515686
+        ]
+      ]
+    },
+    {
+      "osm_way": 424284934,
+      "part": "south_portal_east_track",
+      "which": "Capital Line surface stub from the University tunnel tag to the east track's bridge tag.",
+      "plan_length_m": 9.6,
+      "tags": {
+        "maxspeed": "70",
+        "name": "Capital Line",
+        "railway": "light_rail"
+      },
+      "nodes": [
+        [
+          53.527294,
+          -113.515632
+        ],
+        [
+          53.527348,
+          -113.515518
+        ]
+      ]
+    }
+  ],
+  "dimensions": {
+    "note": "Published numbers are copied from the cited source. null means that source did not give the number. Plan lengths of the OSM ways are on each way. Nothing here was made by subtracting one citation from another.",
+    "seven_span_box_length_m": 530,
+    "published_length_hibbard_1990_m": 600,
+    "published_length_structurae_m": 600,
+    "river_spans_only_length_m": null,
+    "individual_span_length_m": null,
+    "box_span_count": 7,
+    "main_river_span_count": 3,
+    "north_abutment_span_count": 2,
+    "south_abutment_span_count": 4,
+    "north_abutment_length_m": null,
+    "south_abutment_length_m": null,
+    "box_depth_m": 4.5,
+    "box_width_m": 4.5,
+    "box_size_note": "PCL says approximately 4.5 m deep by 4.5 m wide.",
+    "segment_length_m": 2.5,
+    "precast_segment_count": 216,
+    "deck_width_m": 10,
+    "deck_width_note": "PCL says the top deck is approximately 10 m wide.",
+    "deck_thickness_m": null,
+    "deck_elevation_asl_m": null,
+    "height_above_river_m": null,
+    "clearance_above_river_m": null,
+    "vertical_datum": null,
+    "pier_height_m": null,
+    "pier_spacing_m": null,
+    "pier_count": null,
+    "track_count": 2,
+    "track_gauge_mm": 1435,
+    "track_spacing_m": null,
+    "catenary_height_m": null,
+    "walkway_width_m": null,
+    "walkway_below_soffit_m": null,
+    "crossfall": null,
+    "north_approach_length_m": null,
+    "north_approach_gradient": null,
+    "north_approach_elevation_change_m": null,
+    "south_approach_length_m": null,
+    "south_approach_gradient": null,
+    "south_approach_elevation_change_m": null,
+    "university_station_platform_below_road_m": 23,
+    "university_station_depth_note": "Depth of the University station platform below road level. Not the bridge deck and not the portal.",
+    "horizontal_gap_to_high_level_surveyed_m": null,
+    "plan_gap_to_high_level_outline_m": {
+      "minimum": 49.4,
+      "at": [53.532635, -113.510686],
+      "eastern_track_south_end": 165.6,
+      "eastern_track_middle_min": 57.9,
+      "eastern_track_middle_max": 67.9,
+      "eastern_track_north_end": 51.4,
+      "note": "Horizontal distance in the OSM plan, 2026-10-14. Not a surveyed clearance. The minimum is outline to outline at the north end of way 533052900. Eastern-track figures are way 700467672 to the High Level outline, way 461598489. Middle min and max are samples from 40 to 80 percent of that track, measured from the south end."
+    }
+  }
+}

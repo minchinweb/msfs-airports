@@ -1,0 +1,1152 @@
+{
+  "code": "R12",
+  "name": "James MacDonald Bridge",
+  "centre": [
+    53.536,
+    -113.488
+  ],
+  "crs": "EPSG:4326",
+  "coordinate_order": "[lat, lon]",
+  "geometry_source": "docs/edmonton-bridges/bridge-geometry.json",
+  "geometry_retrieved": "2026-10-14",
+  "plan_length_note": "plan_length_m is the horizontal length of that OSM way, WGS84 haversine with radius 6378137 m, rounded to one decimal. These ways match the live OpenStreetMap node counts on 2026-10-14, so the stored polylines are the complete ways. An approach plan_length_m is still not the climb to grade. It is not the 359.7 m Wikipedia infobox length, and it is not the 359.66 m Structurae length.",
+  "dropped_note": "The R12 object does not contain the Low Level Bridge. Those truss ways were not added. No way in the R12 object was dropped. Tags in this file are the tags stored in the extract. A live read of the same ways on 2026-10-14 also carried sidewalk, placement, and destination tags that the extract did not store. Those tags are quoted in NOTES.md. They are not copied here.",
+  "decks": [
+    {
+      "osm_way": 25455305,
+      "part": "road_deck",
+      "which": "Westbound carriageway, the northern of the two road centrelines. Three lanes, one-way, asphalt, width tag 11.1. Node order is from the Cloverdale end, east, to the Rossdale end, west, so the one-way is westbound. This centreline is 381.4 m. Wikipedia states 359.7 m and Structurae states 359.66 m. Those are different extents. The width tag is not a published structural width. No maxheight tag is stored on this way.",
+      "plan_length_m": 381.4,
+      "tags": {
+        "bridge": "yes",
+        "bridge:name": "James MacDonald Bridge",
+        "highway": "secondary",
+        "lanes": "3",
+        "layer": "1",
+        "maxspeed": "60",
+        "name": "James MacDonald Bridge",
+        "oneway": "yes",
+        "surface": "asphalt",
+        "width": "11.1"
+      },
+      "nodes": [
+        [
+          53.536157,
+          -113.485721
+        ],
+        [
+          53.536089,
+          -113.486245
+        ],
+        [
+          53.536043,
+          -113.486598
+        ],
+        [
+          53.535991,
+          -113.487033
+        ],
+        [
+          53.535939,
+          -113.48743
+        ],
+        [
+          53.535888,
+          -113.487822
+        ],
+        [
+          53.535826,
+          -113.488241
+        ],
+        [
+          53.535765,
+          -113.488637
+        ],
+        [
+          53.535701,
+          -113.489029
+        ],
+        [
+          53.535644,
+          -113.489355
+        ],
+        [
+          53.535553,
+          -113.489823
+        ],
+        [
+          53.535461,
+          -113.490286
+        ],
+        [
+          53.535377,
+          -113.490654
+        ],
+        [
+          53.535232,
+          -113.491261
+        ]
+      ]
+    },
+    {
+      "osm_way": 25455308,
+      "part": "road_deck",
+      "which": "Eastbound carriageway, the southern of the two road centrelines. Three lanes, one-way, asphalt, width tag 11.1. Node order is from the Rossdale end, west, to the Cloverdale end, east, so the one-way is eastbound. This centreline is 375.6 m. The two centrelines are separate OpenStreetMap ways. A published source does not call them separate structures. The width tag is not a published structural width. No maxheight tag is stored on this way.",
+      "plan_length_m": 375.6,
+      "tags": {
+        "bridge": "yes",
+        "bridge:name": "James MacDonald Bridge",
+        "highway": "secondary",
+        "lanes": "3",
+        "layer": "1",
+        "maxspeed": "60",
+        "name": "James MacDonald Bridge",
+        "oneway": "yes",
+        "surface": "asphalt",
+        "width": "11.1"
+      },
+      "nodes": [
+        [
+          53.535112,
+          -113.491198
+        ],
+        [
+          53.535268,
+          -113.490588
+        ],
+        [
+          53.535347,
+          -113.49024
+        ],
+        [
+          53.535443,
+          -113.489773
+        ],
+        [
+          53.535535,
+          -113.489313
+        ],
+        [
+          53.535591,
+          -113.488996
+        ],
+        [
+          53.535656,
+          -113.4886
+        ],
+        [
+          53.535715,
+          -113.48823
+        ],
+        [
+          53.535775,
+          -113.487786
+        ],
+        [
+          53.535821,
+          -113.487394
+        ],
+        [
+          53.535863,
+          -113.486998
+        ],
+        [
+          53.535906,
+          -113.486604
+        ],
+        [
+          53.535929,
+          -113.486341
+        ],
+        [
+          53.535956,
+          -113.48607
+        ],
+        [
+          53.53598,
+          -113.485735
+        ]
+      ]
+    },
+    {
+      "osm_way": 673730078,
+      "part": "north_sidewalk",
+      "which": "Concrete footway on the north side of the westbound centreline. The mapped line lies north of way 25455305. It is 367.4 m. A sidewalk width is not published.",
+      "plan_length_m": 367.4,
+      "tags": {
+        "bridge": "yes",
+        "highway": "footway",
+        "layer": "1",
+        "surface": "concrete"
+      },
+      "nodes": [
+        [
+          53.536265,
+          -113.485594
+        ],
+        [
+          53.53622,
+          -113.485912
+        ],
+        [
+          53.536043,
+          -113.487301
+        ],
+        [
+          53.535967,
+          -113.487864
+        ],
+        [
+          53.535885,
+          -113.488439
+        ],
+        [
+          53.535795,
+          -113.488995
+        ],
+        [
+          53.535714,
+          -113.489454
+        ],
+        [
+          53.535634,
+          -113.489882
+        ],
+        [
+          53.535529,
+          -113.490385
+        ],
+        [
+          53.535407,
+          -113.490949
+        ]
+      ]
+    },
+    {
+      "osm_way": 626069071,
+      "part": "bridge_outline",
+      "which": "Closed outline tagged name=James MacDonald Bridge and bridge:structure=beam. plan_length_m is the perimeter, 823.1 m. The south edge is 371.4 m and the north edge is 381.6 m. The west end is 29.9 m. The east end is a 37.3 m edge and a 2.9 m jog, not one straight line. Those widths are the mapped outline, not a published width of the crossing. The beam tag is a mapper tag.",
+      "plan_length_m": 823.1,
+      "tags": {
+        "bridge": "yes",
+        "bridge:structure": "beam",
+        "layer": "1",
+        "man_made": "bridge",
+        "name": "James MacDonald Bridge"
+      },
+      "nodes": [
+        [
+          53.535337,
+          -113.491259
+        ],
+        [
+          53.535074,
+          -113.491171
+        ],
+        [
+          53.535222,
+          -113.490567
+        ],
+        [
+          53.535403,
+          -113.489738
+        ],
+        [
+          53.535553,
+          -113.488935
+        ],
+        [
+          53.535677,
+          -113.48818
+        ],
+        [
+          53.535785,
+          -113.487355
+        ],
+        [
+          53.535855,
+          -113.486603
+        ],
+        [
+          53.535889,
+          -113.486175
+        ],
+        [
+          53.535898,
+          -113.486059
+        ],
+        [
+          53.535898,
+          -113.485761
+        ],
+        [
+          53.536232,
+          -113.485713
+        ],
+        [
+          53.536258,
+          -113.485714
+        ],
+        [
+          53.536136,
+          -113.486656
+        ],
+        [
+          53.536041,
+          -113.487453
+        ],
+        [
+          53.535923,
+          -113.48827
+        ],
+        [
+          53.535793,
+          -113.489059
+        ],
+        [
+          53.535645,
+          -113.48989
+        ],
+        [
+          53.535471,
+          -113.490695
+        ],
+        [
+          53.535337,
+          -113.491259
+        ]
+      ]
+    }
+  ],
+  "approaches": [
+    {
+      "osm_way": 25455281,
+      "part": "west_road_westbound",
+      "which": "97 Avenue NW leaving the Rossdale end of the westbound deck. Four lanes, width tag 14.8. Node order is away from the bridge, so the one-way continues westbound. The deck it leaves is tagged three lanes and width 11.1. The far node is not a surveyed grade point. The extract calls this a cross road because the street name is not James MacDonald Bridge. It is the road off the westbound carriageway. The width tag is not a deck elevation.",
+      "plan_length_m": 184.9,
+      "tags": {
+        "highway": "secondary",
+        "lanes": "4",
+        "maxspeed": "60",
+        "name": "97 Avenue NW",
+        "oneway": "yes",
+        "surface": "asphalt",
+        "width": "14.8"
+      },
+      "nodes": [
+        [
+          53.535232,
+          -113.491261
+        ],
+        [
+          53.535076,
+          -113.49189
+        ],
+        [
+          53.534924,
+          -113.492369
+        ],
+        [
+          53.534781,
+          -113.492752
+        ],
+        [
+          53.534543,
+          -113.493364
+        ],
+        [
+          53.534418,
+          -113.493689
+        ]
+      ],
+      "extract_role": "cross_road"
+    },
+    {
+      "osm_way": 432373966,
+      "part": "west_road_eastbound",
+      "which": "97 Avenue NW onto the Rossdale end of the eastbound deck. Three lanes, sidewalk tagged no, width tag 11.1. Node order is toward the bridge. The far node is not a surveyed grade point. The extract calls this a cross road. It is the road onto the eastbound carriageway. The width tag is not a deck elevation.",
+      "plan_length_m": 154.8,
+      "tags": {
+        "foot": "no",
+        "highway": "secondary",
+        "lanes": "3",
+        "maxspeed": "60",
+        "name": "97 Avenue NW",
+        "oneway": "yes",
+        "sidewalk": "no",
+        "surface": "asphalt",
+        "width": "11.1"
+      },
+      "nodes": [
+        [
+          53.534417,
+          -113.493219
+        ],
+        [
+          53.53465,
+          -113.492642
+        ],
+        [
+          53.534808,
+          -113.492223
+        ],
+        [
+          53.534942,
+          -113.491787
+        ],
+        [
+          53.535112,
+          -113.491198
+        ]
+      ],
+      "extract_role": "cross_road"
+    },
+    {
+      "osm_way": 926792878,
+      "part": "east_road_westbound",
+      "which": "98 Avenue NW onto the Cloverdale end of the westbound deck. Three lanes, width tag 11.1. Node order is toward the bridge. The far node is the next 98 Avenue node, not a surveyed grade point. The extract calls this a cross road. It is the road onto the westbound carriageway.",
+      "plan_length_m": 68.9,
+      "tags": {
+        "highway": "secondary",
+        "lanes": "3",
+        "maxspeed": "60",
+        "name": "98 Avenue NW",
+        "oneway": "yes",
+        "surface": "asphalt",
+        "width": "11.1"
+      },
+      "nodes": [
+        [
+          53.536307,
+          -113.484711
+        ],
+        [
+          53.536157,
+          -113.485721
+        ]
+      ],
+      "extract_role": "cross_road"
+    },
+    {
+      "osm_way": 106711215,
+      "part": "east_road_eastbound",
+      "which": "98 Avenue NW leaving the Cloverdale end of the eastbound deck. Three lanes, width tag 11.1. Node order is away from the bridge, so the one-way continues eastbound. The far node is the split into way 926792877 and way 926792876, not a surveyed grade point.",
+      "plan_length_m": 33.1,
+      "tags": {
+        "highway": "secondary",
+        "lanes": "3",
+        "maxspeed": "60",
+        "name": "98 Avenue NW",
+        "oneway": "yes",
+        "surface": "asphalt",
+        "width": "11.1"
+      },
+      "nodes": [
+        [
+          53.53598,
+          -113.485735
+        ],
+        [
+          53.536012,
+          -113.485238
+        ]
+      ],
+      "extract_role": "cross_road"
+    },
+    {
+      "osm_way": 926792877,
+      "part": "east_road_eastbound",
+      "which": "98 Avenue NW continuing east from way 106711215. Two lanes. The deck it comes from is tagged three lanes. Node order is away from the bridge. It does not share a node with the bridge way. It is the same road. The far node is not a surveyed grade point. The extract calls this a cross road.",
+      "plan_length_m": 40.6,
+      "tags": {
+        "highway": "secondary",
+        "lanes": "2",
+        "maxspeed": "60",
+        "name": "98 Avenue NW",
+        "oneway": "yes",
+        "surface": "asphalt"
+      },
+      "nodes": [
+        [
+          53.536012,
+          -113.485238
+        ],
+        [
+          53.536075,
+          -113.484634
+        ]
+      ],
+      "extract_role": "cross_road"
+    },
+    {
+      "osm_way": 926792876,
+      "part": "east_link",
+      "which": "Two-lane link splitting from the same node as way 926792877, at the Cloverdale end. It does not share a node with the bridge way. It is not 98 Avenue, and it is not a second river span. The far node is not a surveyed grade point. The extract calls this a cross road.",
+      "plan_length_m": 40.4,
+      "tags": {
+        "highway": "secondary_link",
+        "lanes": "2",
+        "oneway": "yes",
+        "surface": "asphalt"
+      },
+      "nodes": [
+        [
+          53.536012,
+          -113.485238
+        ],
+        [
+          53.536007,
+          -113.484628
+        ]
+      ],
+      "extract_role": "cross_road"
+    },
+    {
+      "osm_way": 106711220,
+      "part": "east_ramp",
+      "which": "One-lane ramp off the Cloverdale end of the eastbound deck. Node order is away from the bridge. The far node is not a surveyed grade point. The extract calls this a ramp. It is not a second river span.",
+      "plan_length_m": 308.1,
+      "tags": {
+        "highway": "secondary_link",
+        "lanes": "1",
+        "oneway": "yes",
+        "surface": "asphalt"
+      },
+      "nodes": [
+        [
+          53.53598,
+          -113.485735
+        ],
+        [
+          53.535928,
+          -113.485435
+        ],
+        [
+          53.53589,
+          -113.485216
+        ],
+        [
+          53.535855,
+          -113.485055
+        ],
+        [
+          53.535798,
+          -113.484876
+        ],
+        [
+          53.535713,
+          -113.484699
+        ],
+        [
+          53.535612,
+          -113.484569
+        ],
+        [
+          53.535475,
+          -113.484446
+        ],
+        [
+          53.53535,
+          -113.484369
+        ],
+        [
+          53.5352,
+          -113.484297
+        ],
+        [
+          53.53457,
+          -113.48414
+        ],
+        [
+          53.534533,
+          -113.484133
+        ],
+        [
+          53.534505,
+          -113.484127
+        ],
+        [
+          53.534437,
+          -113.484121
+        ],
+        [
+          53.534377,
+          -113.484123
+        ],
+        [
+          53.534312,
+          -113.484134
+        ],
+        [
+          53.534235,
+          -113.48416
+        ],
+        [
+          53.534147,
+          -113.4842
+        ],
+        [
+          53.534052,
+          -113.48426
+        ],
+        [
+          53.533748,
+          -113.484553
+        ]
+      ],
+      "extract_role": "ramp"
+    },
+    {
+      "osm_way": 1264715853,
+      "part": "west_path",
+      "which": "Concrete footway continuing off the Rossdale end of the north sidewalk. Tagged footway=sidewalk. A valley path, not the 97 Avenue climb. The far node is not a surveyed grade point.",
+      "plan_length_m": 195.1,
+      "tags": {
+        "highway": "footway",
+        "surface": "concrete"
+      },
+      "nodes": [
+        [
+          53.535407,
+          -113.490949
+        ],
+        [
+          53.535373,
+          -113.491084
+        ],
+        [
+          53.535301,
+          -113.491393
+        ],
+        [
+          53.535202,
+          -113.491798
+        ],
+        [
+          53.535109,
+          -113.492154
+        ],
+        [
+          53.535022,
+          -113.492453
+        ],
+        [
+          53.534936,
+          -113.492703
+        ],
+        [
+          53.534851,
+          -113.492928
+        ],
+        [
+          53.53472,
+          -113.493271
+        ],
+        [
+          53.534673,
+          -113.493396
+        ],
+        [
+          53.534639,
+          -113.493495
+        ],
+        [
+          53.534647,
+          -113.493579
+        ]
+      ],
+      "extract_role": "cross_road"
+    },
+    {
+      "osm_way": 226985622,
+      "part": "west_path",
+      "which": "Steps off the Rossdale end of the north sidewalk, from the same node as way 1264715853. Not the 97 Avenue climb.",
+      "plan_length_m": 20.0,
+      "tags": {
+        "highway": "steps"
+      },
+      "nodes": [
+        [
+          53.535407,
+          -113.490949
+        ],
+        [
+          53.535585,
+          -113.490993
+        ]
+      ],
+      "extract_role": "cross_road"
+    },
+    {
+      "osm_way": 673730077,
+      "part": "east_path",
+      "which": "Short footway at the Cloverdale end of the north sidewalk. Not the 98 Avenue climb.",
+      "plan_length_m": 3.3,
+      "tags": {
+        "highway": "footway"
+      },
+      "nodes": [
+        [
+          53.536272,
+          -113.485545
+        ],
+        [
+          53.536269,
+          -113.485568
+        ],
+        [
+          53.536265,
+          -113.485594
+        ]
+      ],
+      "extract_role": "cross_road"
+    }
+  ],
+  "cross_roads": [
+    {
+      "osm_way": 302605553,
+      "part": "west_cross_street",
+      "which": "100 Street NW, north-south, at the Rossdale end. It does not share a node with the deck. A cross street. It is not the 97 Avenue climb.",
+      "plan_length_m": 586.5,
+      "tags": {
+        "highway": "residential",
+        "name": "100 Street NW",
+        "surface": "asphalt"
+      },
+      "nodes": [
+        [
+          53.53255,
+          -113.49112
+        ],
+        [
+          53.533901,
+          -113.491131
+        ],
+        [
+          53.534071,
+          -113.491134
+        ],
+        [
+          53.534136,
+          -113.491127
+        ],
+        [
+          53.534194,
+          -113.491115
+        ],
+        [
+          53.534331,
+          -113.491079
+        ],
+        [
+          53.534449,
+          -113.491006
+        ],
+        [
+          53.534685,
+          -113.490827
+        ],
+        [
+          53.534839,
+          -113.490725
+        ],
+        [
+          53.535015,
+          -113.490626
+        ],
+        [
+          53.535336,
+          -113.490492
+        ],
+        [
+          53.535384,
+          -113.49048
+        ],
+        [
+          53.535453,
+          -113.490467
+        ],
+        [
+          53.535494,
+          -113.490464
+        ],
+        [
+          53.535536,
+          -113.490469
+        ],
+        [
+          53.535565,
+          -113.490475
+        ],
+        [
+          53.535593,
+          -113.490488
+        ],
+        [
+          53.53562,
+          -113.49051
+        ],
+        [
+          53.535648,
+          -113.49054
+        ],
+        [
+          53.535691,
+          -113.490589
+        ],
+        [
+          53.535789,
+          -113.490738
+        ],
+        [
+          53.535909,
+          -113.490904
+        ],
+        [
+          53.535964,
+          -113.490967
+        ],
+        [
+          53.536017,
+          -113.491016
+        ],
+        [
+          53.536065,
+          -113.491054
+        ],
+        [
+          53.536119,
+          -113.491081
+        ],
+        [
+          53.536172,
+          -113.491104
+        ],
+        [
+          53.536231,
+          -113.491112
+        ],
+        [
+          53.537199,
+          -113.491117
+        ],
+        [
+          53.537577,
+          -113.491112
+        ],
+        [
+          53.537638,
+          -113.491112
+        ]
+      ],
+      "extract_role": "cross_road"
+    },
+    {
+      "osm_way": 1126581680,
+      "part": "east_cross_street",
+      "which": "99A Street NW. It meets the mapped outline, way 626069071, and does not meet either road centreline. A cross street at the Cloverdale end. It is not the 98 Avenue climb.",
+      "plan_length_m": 122.8,
+      "tags": {
+        "highway": "residential",
+        "name": "99A Street NW",
+        "surface": "asphalt"
+      },
+      "nodes": [
+        [
+          53.535739,
+          -113.486128
+        ],
+        [
+          53.535766,
+          -113.48616
+        ],
+        [
+          53.535793,
+          -113.486174
+        ],
+        [
+          53.535829,
+          -113.486183
+        ],
+        [
+          53.535855,
+          -113.486183
+        ],
+        [
+          53.535889,
+          -113.486175
+        ],
+        [
+          53.536307,
+          -113.486023
+        ],
+        [
+          53.536355,
+          -113.486001
+        ],
+        [
+          53.5364,
+          -113.48597
+        ],
+        [
+          53.536446,
+          -113.485929
+        ],
+        [
+          53.536489,
+          -113.485875
+        ],
+        [
+          53.536535,
+          -113.4858
+        ],
+        [
+          53.536569,
+          -113.485732
+        ],
+        [
+          53.536675,
+          -113.485454
+        ]
+      ],
+      "extract_role": "cross_road"
+    },
+    {
+      "osm_way": 25364259,
+      "part": "east_cross_street",
+      "which": "99A Street NW continuing south from way 1126581680. Bicycle designated. It does not meet the road deck. A cross street, not the climb.",
+      "plan_length_m": 316.6,
+      "tags": {
+        "bicycle": "designated",
+        "highway": "residential",
+        "name": "99A Street NW",
+        "surface": "asphalt"
+      },
+      "nodes": [
+        [
+          53.533203,
+          -113.485722
+        ],
+        [
+          53.533277,
+          -113.485633
+        ],
+        [
+          53.533418,
+          -113.485474
+        ],
+        [
+          53.533442,
+          -113.485451
+        ],
+        [
+          53.533467,
+          -113.485433
+        ],
+        [
+          53.53349,
+          -113.485424
+        ],
+        [
+          53.533514,
+          -113.48542
+        ],
+        [
+          53.533539,
+          -113.485419
+        ],
+        [
+          53.53374,
+          -113.485413
+        ],
+        [
+          53.534386,
+          -113.485399
+        ],
+        [
+          53.53444,
+          -113.485399
+        ],
+        [
+          53.535061,
+          -113.485391
+        ],
+        [
+          53.535107,
+          -113.485394
+        ],
+        [
+          53.535152,
+          -113.485403
+        ],
+        [
+          53.535489,
+          -113.485472
+        ],
+        [
+          53.535526,
+          -113.485488
+        ],
+        [
+          53.535561,
+          -113.485511
+        ],
+        [
+          53.535587,
+          -113.485539
+        ],
+        [
+          53.535612,
+          -113.485585
+        ],
+        [
+          53.535629,
+          -113.485629
+        ],
+        [
+          53.535639,
+          -113.485673
+        ],
+        [
+          53.535645,
+          -113.485726
+        ],
+        [
+          53.535662,
+          -113.485944
+        ],
+        [
+          53.535671,
+          -113.485989
+        ],
+        [
+          53.535681,
+          -113.486025
+        ],
+        [
+          53.535694,
+          -113.48606
+        ],
+        [
+          53.535714,
+          -113.486095
+        ],
+        [
+          53.535739,
+          -113.486128
+        ]
+      ],
+      "extract_role": "cross_road"
+    },
+    {
+      "osm_way": 25455188,
+      "part": "west_98_avenue",
+      "which": "98 Avenue NW, unclassified, west of the Rossdale end. It does not share a node with the deck. It is not the 98 Avenue that leaves the Cloverdale end. The name is the same. The road is not. It is not the climb onto the bridge.",
+      "plan_length_m": 335.2,
+      "tags": {
+        "highway": "unclassified",
+        "name": "98 Avenue NW",
+        "surface": "asphalt"
+      },
+      "nodes": [
+        [
+          53.535789,
+          -113.490738
+        ],
+        [
+          53.535751,
+          -113.490828
+        ],
+        [
+          53.535711,
+          -113.490923
+        ],
+        [
+          53.535695,
+          -113.490971
+        ],
+        [
+          53.535682,
+          -113.491026
+        ],
+        [
+          53.535681,
+          -113.491031
+        ],
+        [
+          53.535673,
+          -113.49108
+        ],
+        [
+          53.535668,
+          -113.491147
+        ],
+        [
+          53.535664,
+          -113.491243
+        ],
+        [
+          53.535663,
+          -113.491772
+        ],
+        [
+          53.535662,
+          -113.492404
+        ],
+        [
+          53.53566,
+          -113.493042
+        ],
+        [
+          53.535659,
+          -113.493573
+        ],
+        [
+          53.535658,
+          -113.493719
+        ],
+        [
+          53.535659,
+          -113.493847
+        ],
+        [
+          53.535661,
+          -113.494173
+        ],
+        [
+          53.535661,
+          -113.494228
+        ],
+        [
+          53.535663,
+          -113.494666
+        ],
+        [
+          53.535661,
+          -113.49509
+        ],
+        [
+          53.535662,
+          -113.495459
+        ],
+        [
+          53.535664,
+          -113.495508
+        ],
+        [
+          53.53567,
+          -113.49557
+        ],
+        [
+          53.535686,
+          -113.495606
+        ],
+        [
+          53.53574,
+          -113.495702
+        ]
+      ],
+      "extract_role": "cross_road"
+    }
+  ]
+}

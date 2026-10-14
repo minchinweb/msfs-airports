@@ -1,0 +1,661 @@
+{
+  "code": "R15",
+  "name": "Dawson Bridge",
+  "centre": [
+    53.549,
+    -113.467
+  ],
+  "crs": "EPSG:4326",
+  "coordinate_order": "[lat, lon]",
+  "geometry_source": "docs/edmonton-bridges/bridge-geometry.json",
+  "geometry_retrieved": "2026-10-14",
+  "plan_length_note": "plan_length_m is the horizontal length of that OSM way, WGS84 haversine with radius 6378137 m, rounded to one decimal. These ways match the live OpenStreetMap node counts on 2026-10-14, so the stored polylines are the complete ways. An approach plan_length_m is still not the climb to grade, and it is not the 236.5 m length between abutment walls.",
+  "decks": [
+    {
+      "osm_way": 22916476,
+      "part": "road_deck",
+      "which": "Rowland Road NW on the truss. Two lanes, asphalt, sidewalk tagged separate. Node order is from the Riverdale end, west-southwest, to the Forest Heights end, east-northeast. This centreline is 237.1 m. The length between abutment walls is 236.5 m.",
+      "plan_length_m": 237.1,
+      "tags": {
+        "bicycle": "yes",
+        "bridge": "yes",
+        "bridge:name": "Dawson Bridge",
+        "bridge:structure": "truss",
+        "foot": "yes",
+        "highway": "secondary",
+        "lanes": "2",
+        "layer": "1",
+        "maxheight": "4.5",
+        "maxspeed": "50",
+        "name": "Rowland Road NW",
+        "sidewalk": "separate",
+        "surface": "asphalt",
+        "width": "7"
+      },
+      "nodes": [
+        [
+          53.548355,
+          -113.468868
+        ],
+        [
+          53.549123,
+          -113.465525
+        ]
+      ]
+    },
+    {
+      "osm_way": 303529127,
+      "part": "north_sidewalk",
+      "which": "Wood cycleway on the north side of the road centreline. Foot and bicycle designated. The 2010 sidewalks are wood, 2.65 m clear, on both sides. This is the north one in the map.",
+      "plan_length_m": 236.1,
+      "tags": {
+        "bicycle": "designated",
+        "bridge": "yes",
+        "foot": "designated",
+        "highway": "cycleway",
+        "layer": "1",
+        "surface": "wood"
+      },
+      "nodes": [
+        [
+          53.548403,
+          -113.4689
+        ],
+        [
+          53.549095,
+          -113.465863
+        ],
+        [
+          53.549161,
+          -113.465566
+        ]
+      ]
+    },
+    {
+      "osm_way": 451267263,
+      "part": "south_sidewalk",
+      "which": "Footway on the south side of the road centreline, tagged asphalt. The 2010 design sidewalks are wood on both sides. The asphalt tag is the mapper tag.",
+      "plan_length_m": 236.0,
+      "tags": {
+        "bicycle": "yes",
+        "bridge": "yes",
+        "foot": "destination",
+        "highway": "footway",
+        "layer": "1",
+        "surface": "asphalt"
+      },
+      "nodes": [
+        [
+          53.548308,
+          -113.468831
+        ],
+        [
+          53.548997,
+          -113.465814
+        ],
+        [
+          53.54907,
+          -113.465502
+        ]
+      ]
+    },
+    {
+      "osm_way": 642360972,
+      "part": "bridge_outline",
+      "which": "Closed OpenStreetMap outline of the bridge, tagged man_made=bridge and bridge:structure=truss. plan_length_m is the perimeter, 501.3 m. The two long edges are 236.2 m each and the two ends are 14.4 m each. That end width is the mapped outline, not the 8.1 m clear width.",
+      "plan_length_m": 501.3,
+      "tags": {
+        "bridge": "yes",
+        "bridge:structure": "truss",
+        "layer": "1",
+        "man_made": "bridge",
+        "name": "Dawson Bridge"
+      },
+      "nodes": [
+        [
+          53.549176,
+          -113.465572
+        ],
+        [
+          53.549055,
+          -113.465494
+        ],
+        [
+          53.548295,
+          -113.468829
+        ],
+        [
+          53.548416,
+          -113.468907
+        ],
+        [
+          53.549176,
+          -113.465572
+        ]
+      ]
+    }
+  ],
+  "approaches": [
+    {
+      "osm_way": 934518260,
+      "part": "west_road",
+      "which": "Rowland Road NW from 87 Street to the west, Riverdale, end of the road deck. Two lanes. The far node is the intersection, not a surveyed grade point.",
+      "plan_length_m": 21.4,
+      "tags": {
+        "highway": "secondary",
+        "lanes": "2",
+        "maxspeed": "50",
+        "name": "Rowland Road NW",
+        "surface": "asphalt",
+        "width": "10"
+      },
+      "nodes": [
+        [
+          53.548284,
+          -113.469168
+        ],
+        [
+          53.548355,
+          -113.468868
+        ]
+      ],
+      "extract_role": "approach"
+    },
+    {
+      "osm_way": 934518262,
+      "part": "west_road",
+      "which": "Rowland Road NW continuing southwest from 87 Street. Two lanes. The extract calls it a cross road because it does not share a node with the bridge way. It is the same road. The far node is not a surveyed grade point.",
+      "plan_length_m": 135.7,
+      "tags": {
+        "highway": "secondary",
+        "lanes": "2",
+        "maxspeed": "50",
+        "name": "Rowland Road NW",
+        "surface": "asphalt",
+        "width": "10"
+      },
+      "nodes": [
+        [
+          53.547844,
+          -113.471081
+        ],
+        [
+          53.54803,
+          -113.470281
+        ],
+        [
+          53.548143,
+          -113.469787
+        ],
+        [
+          53.548223,
+          -113.469448
+        ],
+        [
+          53.548284,
+          -113.469168
+        ]
+      ],
+      "extract_role": "cross_road"
+    },
+    {
+      "osm_way": 934518263,
+      "part": "east_road",
+      "which": "Rowland Road NW leaving the east, Forest Heights, end of the road deck. One lane, one-way, node order away from the bridge. Shorter than the opposing carriageway. The far node is not the top of the bank.",
+      "plan_length_m": 48.5,
+      "tags": {
+        "highway": "secondary",
+        "lanes": "1",
+        "maxspeed": "50",
+        "name": "Rowland Road NW",
+        "oneway": "yes",
+        "surface": "asphalt",
+        "width": "4"
+      },
+      "nodes": [
+        [
+          53.549123,
+          -113.465525
+        ],
+        [
+          53.549206,
+          -113.464988
+        ],
+        [
+          53.549233,
+          -113.464816
+        ]
+      ],
+      "extract_role": "approach"
+    },
+    {
+      "osm_way": 303529114,
+      "part": "east_road",
+      "which": "Rowland Road NW approaching the east end of the road deck. One lane, one-way, node order toward the bridge. The far node is not the top of the bank.",
+      "plan_length_m": 112.3,
+      "tags": {
+        "highway": "secondary",
+        "lanes": "1",
+        "maxspeed": "50",
+        "name": "Rowland Road NW",
+        "oneway": "yes",
+        "surface": "asphalt",
+        "width": "4"
+      },
+      "nodes": [
+        [
+          53.549416,
+          -113.463907
+        ],
+        [
+          53.549409,
+          -113.46398
+        ],
+        [
+          53.549381,
+          -113.464232
+        ],
+        [
+          53.549288,
+          -113.46484
+        ],
+        [
+          53.54925,
+          -113.465031
+        ],
+        [
+          53.549123,
+          -113.465525
+        ]
+      ],
+      "extract_role": "approach"
+    },
+    {
+      "osm_way": 842319728,
+      "part": "west_path",
+      "which": "Concrete cycleway, 10.2 m, joining the west end of the wood sidewalk. Not the road climb.",
+      "plan_length_m": 10.2,
+      "tags": {
+        "bicycle": "designated",
+        "foot": "designated",
+        "highway": "cycleway",
+        "surface": "concrete"
+      },
+      "nodes": [
+        [
+          53.548362,
+          -113.469037
+        ],
+        [
+          53.548389,
+          -113.468953
+        ],
+        [
+          53.548403,
+          -113.4689
+        ]
+      ],
+      "extract_role": "cross_road"
+    },
+    {
+      "osm_way": 1267852101,
+      "part": "west_path",
+      "which": "Asphalt footway, 7.4 m, off the west end of the south sidewalk. Not the road climb.",
+      "plan_length_m": 7.4,
+      "tags": {
+        "highway": "footway",
+        "surface": "asphalt"
+      },
+      "nodes": [
+        [
+          53.548308,
+          -113.468831
+        ],
+        [
+          53.548286,
+          -113.468936
+        ]
+      ],
+      "extract_role": "cross_road"
+    },
+    {
+      "osm_way": 451267265,
+      "part": "east_path",
+      "which": "Asphalt footway, 12.9 m, off the east end of the south sidewalk. Not the road climb.",
+      "plan_length_m": 12.9,
+      "tags": {
+        "highway": "footway",
+        "surface": "asphalt"
+      },
+      "nodes": [
+        [
+          53.54907,
+          -113.465502
+        ],
+        [
+          53.549092,
+          -113.465379
+        ],
+        [
+          53.549053,
+          -113.465369
+        ]
+      ],
+      "extract_role": "cross_road"
+    }
+  ],
+  "cross_roads": [
+    {
+      "osm_way": 27470956,
+      "part": "east_trail",
+      "which": "Concrete cycleway continuing off the east end of the wood sidewalk for 483.0 m, along the bank. The full mapped way. A valley trail, not the Forest Heights road climb.",
+      "plan_length_m": 483.0,
+      "tags": {
+        "bicycle": "designated",
+        "foot": "designated",
+        "highway": "cycleway",
+        "surface": "concrete"
+      },
+      "nodes": [
+        [
+          53.549161,
+          -113.465566
+        ],
+        [
+          53.549248,
+          -113.465183
+        ],
+        [
+          53.549291,
+          -113.464992
+        ],
+        [
+          53.549325,
+          -113.464935
+        ],
+        [
+          53.549343,
+          -113.464866
+        ],
+        [
+          53.549383,
+          -113.464649
+        ],
+        [
+          53.54942,
+          -113.46442
+        ],
+        [
+          53.549435,
+          -113.464288
+        ],
+        [
+          53.549441,
+          -113.464053
+        ],
+        [
+          53.549456,
+          -113.463911
+        ],
+        [
+          53.549457,
+          -113.46385
+        ],
+        [
+          53.549476,
+          -113.463696
+        ],
+        [
+          53.549588,
+          -113.462817
+        ],
+        [
+          53.549622,
+          -113.462551
+        ],
+        [
+          53.549681,
+          -113.462127
+        ],
+        [
+          53.549793,
+          -113.461549
+        ],
+        [
+          53.549853,
+          -113.461255
+        ],
+        [
+          53.550004,
+          -113.460515
+        ],
+        [
+          53.55005,
+          -113.460358
+        ],
+        [
+          53.550097,
+          -113.460094
+        ],
+        [
+          53.550126,
+          -113.459779
+        ],
+        [
+          53.550132,
+          -113.459601
+        ],
+        [
+          53.550133,
+          -113.45945
+        ],
+        [
+          53.55011,
+          -113.45911
+        ],
+        [
+          53.550081,
+          -113.458905
+        ],
+        [
+          53.550054,
+          -113.458753
+        ],
+        [
+          53.550041,
+          -113.458684
+        ],
+        [
+          53.550035,
+          -113.458656
+        ],
+        [
+          53.550039,
+          -113.458602
+        ],
+        [
+          53.55005,
+          -113.458543
+        ]
+      ],
+      "extract_role": "cross_road"
+    },
+    {
+      "osm_way": 106711193,
+      "part": "west_cross_street",
+      "which": "87 Street NW, two lanes, one-way, meeting Rowland Road at the west end of the bridge. A cross street in Riverdale, not the approach grade.",
+      "plan_length_m": 238.6,
+      "tags": {
+        "highway": "residential",
+        "lanes": "2",
+        "maxspeed": "40",
+        "name": "87 Street NW",
+        "oneway": "yes",
+        "surface": "asphalt"
+      },
+      "nodes": [
+        [
+          53.548284,
+          -113.469168
+        ],
+        [
+          53.548344,
+          -113.469205
+        ],
+        [
+          53.549493,
+          -113.469999
+        ],
+        [
+          53.549601,
+          -113.470073
+        ],
+        [
+          53.549652,
+          -113.470242
+        ],
+        [
+          53.549603,
+          -113.471262
+        ]
+      ],
+      "extract_role": "cross_road"
+    },
+    {
+      "osm_way": 25455710,
+      "part": "west_cross_street",
+      "which": "88 Street NW, meeting Rowland Road just southwest of the west end. A cross street, not the approach grade.",
+      "plan_length_m": 531.9,
+      "tags": {
+        "highway": "residential",
+        "maxspeed": "40",
+        "name": "88 Street NW",
+        "surface": "asphalt"
+      },
+      "nodes": [
+        [
+          53.548223,
+          -113.469448
+        ],
+        [
+          53.54817,
+          -113.469416
+        ],
+        [
+          53.546833,
+          -113.468542
+        ],
+        [
+          53.546827,
+          -113.468538
+        ],
+        [
+          53.54678,
+          -113.468508
+        ],
+        [
+          53.546739,
+          -113.468481
+        ],
+        [
+          53.54672,
+          -113.468469
+        ],
+        [
+          53.54541,
+          -113.467623
+        ],
+        [
+          53.54538,
+          -113.467605
+        ],
+        [
+          53.545331,
+          -113.467574
+        ],
+        [
+          53.545287,
+          -113.467546
+        ],
+        [
+          53.545265,
+          -113.467532
+        ],
+        [
+          53.543809,
+          -113.466606
+        ],
+        [
+          53.54376,
+          -113.466575
+        ]
+      ],
+      "extract_role": "cross_road"
+    }
+  ],
+  "dimensions": {
+    "structural_type": "five-span riveted steel through-truss. HistoricBridges: three Camelback, one 14-panel Pennsylvania, one small Pratt. The engineering papers say through-truss and do not name those families.",
+    "spans_west_to_east_m": [
+      43.3,
+      43.3,
+      43.3,
+      76.2,
+      30.5
+    ],
+    "spans_west_to_east_ft_on_general_arrangement": [
+      142,
+      142,
+      142,
+      250,
+      100
+    ],
+    "navigation_span_m": 76.2,
+    "east_approach_span_m": 30.5,
+    "length_between_abutment_walls_m": 236.5,
+    "total_length_also_reported_m": 236.6,
+    "structure_length_ft": 776.0,
+    "clear_width_m": 8.1,
+    "width_also_reported_m": 12.5,
+    "width_also_reported_source": "Wikipedia infobox and Structurae, without a cited measurement",
+    "osm_width_tag_m": 7,
+    "osm_maxheight_tag_m": 4.5,
+    "osm_maxheight_is_deck_elevation": false,
+    "lanes": 2,
+    "sidewalk_clear_width_m": 2.65,
+    "sidewalk_clear_width_before_2010_m": 1.5,
+    "sidewalk_count": 2,
+    "deck_panel_thickness_mm": 45,
+    "deck_face_plate_mm": 10,
+    "deck_elastomer_core_mm": 25,
+    "deck_panel_width_m": 1.9,
+    "deck_panel_length_m": 8.6,
+    "deck_panel_length_also_reported_m": 8.5,
+    "stringer_designation": "W460x74",
+    "stringer_lines": 5,
+    "asphalt_thickness_edge_mm": 40,
+    "asphalt_thickness_centreline_mm": 100,
+    "steel_deck_crossfall": "none; each span is planar",
+    "crossfall_slope": null,
+    "longitudinal_grade": null,
+    "river_pier_count": 4,
+    "abutment_count": 2,
+    "pier_type": "concrete on spread footings in the river",
+    "pier_height_m": null,
+    "truss_depth_m": null,
+    "floor_beam_depth_m": null,
+    "deck_to_soffit_m": null,
+    "deck_elevation_asl_m": null,
+    "soffit_elevation_asl_m": null,
+    "clearance_above_river_m": null,
+    "navigation_clearance_m": null,
+    "lane_width_m": null,
+    "shoulder_width_m": null,
+    "west_approach_gradient": null,
+    "west_approach_elevation_change_m": null,
+    "west_approach_meets_grade": null,
+    "east_approach_gradient": null,
+    "east_approach_elevation_change_m": null,
+    "east_approach_meets_grade": null,
+    "posted_speed_kmh_osm_tag": 50
+  }
+}

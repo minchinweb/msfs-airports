@@ -1,0 +1,455 @@
+{
+  "code": "R11",
+  "name": "Walterdale Bridge",
+  "centre": [
+    53.529,
+    -113.502
+  ],
+  "crs": "EPSG:4326",
+  "coordinate_order": "[lat, lon]",
+  "geometry_source": "docs/edmonton-bridges/bridge-geometry.json",
+  "geometry_retrieved": "2026-10-14",
+  "plan_length_note": "plan_length_m is the horizontal length of that OSM way, computed from the WGS84 nodes. Connected ways in the extract stop at the edge of the downloaded box, so an approach plan_length_m is not the climb to grade and is not the 230 m structural deck length.",
+  "decks": [
+    {
+      "osm_way": 175326660,
+      "part": "road_deck",
+      "which": "105 Street NW on the arch roadway. Three lanes, one-way northbound, asphalt. Node order is south to north. This centreline is longer than the 230 m deck between abutment centrelines.",
+      "plan_length_m": 260.7,
+      "tags": {
+        "bridge": "yes",
+        "highway": "secondary",
+        "lanes": "3",
+        "layer": "1",
+        "maxspeed": "50",
+        "name": "105 Street NW",
+        "oneway": "yes",
+        "surface": "asphalt"
+      },
+      "nodes": [
+        [
+          53.527264,
+          -113.502281
+        ],
+        [
+          53.529377,
+          -113.501183
+        ],
+        [
+          53.529505,
+          -113.501139
+        ]
+      ]
+    },
+    {
+      "osm_way": 709287392,
+      "part": "west_sidewalk",
+      "which": "West sidewalk, the path immediately west of the roadway. OpenStreetMap tags it as a cycleway with foot and bicycle designated, surface concrete. The design sidewalk is on the west side of the road, inside the hanger plane.",
+      "plan_length_m": 266.8,
+      "tags": {
+        "bicycle": "designated",
+        "bridge": "yes",
+        "foot": "designated",
+        "highway": "cycleway",
+        "layer": "1",
+        "surface": "concrete"
+      },
+      "nodes": [
+        [
+          53.527265,
+          -113.502391
+        ],
+        [
+          53.527749,
+          -113.50212
+        ],
+        [
+          53.528262,
+          -113.501844
+        ],
+        [
+          53.528645,
+          -113.50165
+        ],
+        [
+          53.529064,
+          -113.501429
+        ],
+        [
+          53.529331,
+          -113.501303
+        ],
+        [
+          53.529346,
+          -113.501297
+        ],
+        [
+          53.52936,
+          -113.501291
+        ],
+        [
+          53.52937,
+          -113.501287
+        ],
+        [
+          53.529374,
+          -113.501286
+        ],
+        [
+          53.529388,
+          -113.501281
+        ],
+        [
+          53.529401,
+          -113.501276
+        ],
+        [
+          53.529415,
+          -113.501271
+        ],
+        [
+          53.529426,
+          -113.501267
+        ],
+        [
+          53.529435,
+          -113.501264
+        ],
+        [
+          53.529444,
+          -113.501261
+        ],
+        [
+          53.529452,
+          -113.501258
+        ],
+        [
+          53.529461,
+          -113.501255
+        ],
+        [
+          53.529471,
+          -113.501252
+        ],
+        [
+          53.529483,
+          -113.501248
+        ],
+        [
+          53.529498,
+          -113.501244
+        ],
+        [
+          53.52951,
+          -113.50124
+        ],
+        [
+          53.529522,
+          -113.501236
+        ],
+        [
+          53.529534,
+          -113.501233
+        ],
+        [
+          53.529546,
+          -113.501231
+        ],
+        [
+          53.529558,
+          -113.50123
+        ]
+      ]
+    },
+    {
+      "osm_way": 451293733,
+      "part": "east_shared_use_path",
+      "which": "East shared-use path, offset east of the roadway and curved in plan. OpenStreetMap tags it as a cycleway with foot and bicycle designated, surface concrete. The design wearing surface is polymer-modified asphalt. Node order in the extract runs north to south.",
+      "plan_length_m": 275.4,
+      "tags": {
+        "bicycle": "designated",
+        "bridge": "yes",
+        "foot": "designated",
+        "highway": "cycleway",
+        "layer": "1",
+        "surface": "concrete"
+      },
+      "nodes": [
+        [
+          53.529401,
+          -113.500526
+        ],
+        [
+          53.529281,
+          -113.50067
+        ],
+        [
+          53.529249,
+          -113.500706
+        ],
+        [
+          53.529216,
+          -113.500743
+        ],
+        [
+          53.529184,
+          -113.500778
+        ],
+        [
+          53.529153,
+          -113.500812
+        ],
+        [
+          53.529123,
+          -113.500842
+        ],
+        [
+          53.52901,
+          -113.500953
+        ],
+        [
+          53.528868,
+          -113.501082
+        ],
+        [
+          53.528755,
+          -113.501175
+        ],
+        [
+          53.52865,
+          -113.501254
+        ],
+        [
+          53.528538,
+          -113.50133
+        ],
+        [
+          53.528389,
+          -113.501418
+        ],
+        [
+          53.528151,
+          -113.501535
+        ],
+        [
+          53.528013,
+          -113.50159
+        ],
+        [
+          53.527874,
+          -113.501635
+        ],
+        [
+          53.527738,
+          -113.501671
+        ],
+        [
+          53.527621,
+          -113.501693
+        ],
+        [
+          53.52747,
+          -113.501713
+        ],
+        [
+          53.527362,
+          -113.50172
+        ],
+        [
+          53.527214,
+          -113.501719
+        ],
+        [
+          53.527082,
+          -113.501707
+        ]
+      ]
+    }
+  ],
+  "approaches": [
+    {
+      "osm_way": 471835847,
+      "part": "north_road",
+      "which": "105 Street NW leaving the north end of the road deck and continuing north. Five lanes in OpenStreetMap. Clipped at the download box. The 2012 site study starts this alignment at 105 Street and River Valley Road. That intersection is not confirmed as the far node of this way.",
+      "plan_length_m": 112.3,
+      "tags": {
+        "highway": "secondary",
+        "lanes": "5",
+        "maxspeed": "50",
+        "name": "105 Street NW",
+        "oneway": "yes",
+        "surface": "asphalt"
+      },
+      "nodes": [
+        [
+          53.529505,
+          -113.501139
+        ],
+        [
+          53.529771,
+          -113.501096
+        ],
+        [
+          53.53009,
+          -113.501098
+        ],
+        [
+          53.530428,
+          -113.501099
+        ],
+        [
+          53.530513,
+          -113.501096
+        ]
+      ],
+      "extract_role": "approach"
+    },
+    {
+      "osm_way": 931254808,
+      "part": "south_road",
+      "which": "Walterdale Hill NW, the farther of the two south road ways in the extract. Three lanes. Clipped at the download box. It meets way 1516540140, which meets the south end of the road deck. The extract role is cross_road because the street name is not Walterdale Bridge.",
+      "plan_length_m": 31.3,
+      "tags": {
+        "highway": "secondary",
+        "lanes": "3",
+        "maxspeed": "50",
+        "name": "Walterdale Hill NW",
+        "oneway": "yes",
+        "surface": "asphalt"
+      },
+      "nodes": [
+        [
+          53.526834,
+          -113.502512
+        ],
+        [
+          53.527101,
+          -113.502365
+        ]
+      ],
+      "extract_role": "cross_road"
+    },
+    {
+      "osm_way": 1516540140,
+      "part": "south_road",
+      "which": "Walterdale Hill NW, from way 931254808 to the south end of the road deck. Three lanes. The extract role is cross_road because the street name is not Walterdale Bridge.",
+      "plan_length_m": 19.0,
+      "tags": {
+        "highway": "secondary",
+        "lanes": "3",
+        "maxspeed": "50",
+        "name": "Walterdale Hill NW",
+        "oneway": "yes",
+        "surface": "asphalt"
+      },
+      "nodes": [
+        [
+          53.527101,
+          -113.502365
+        ],
+        [
+          53.527264,
+          -113.502281
+        ]
+      ],
+      "extract_role": "cross_road"
+    }
+  ],
+  "excluded": [
+    {
+      "osm_way": 626712755,
+      "reason": "North-bank cycleway, 221.7 m, crossing beside the north end. A valley trail, not the deck and not the road climb."
+    },
+    {
+      "osm_way": 302444162,
+      "reason": "Cycleway continuing the west sidewalk north for 96.6 m off the bridge tag. It is the path leaving the north end, and it is clipped. It is not the 105 Street road climb."
+    },
+    {
+      "osm_way": 709291138,
+      "reason": "10.5 m cycleway stub off the north end of the east shared-use path."
+    },
+    {
+      "osm_way": 702370302,
+      "reason": "9.1 m cycleway stub off the south end of the east shared-use path."
+    },
+    {
+      "osm_way": 702370297,
+      "reason": "18.7 m cycleway stub off the south end of the west sidewalk."
+    }
+  ],
+  "dimensions": {
+    "structural_type": "twin through-arch on thrust blocks. Erection used temporary tension ties; they were removed. The project list calls this a tied arch; the design papers call it a thrust arch.",
+    "deck_length_between_abutment_centrelines_m": 230,
+    "arch_span_bank_to_bank_m": 206,
+    "planning_span_approx_m_2012": 240,
+    "plan_skew_deg_2012_study": 15,
+    "arch_height_above_thrust_blocks_m": 56,
+    "arch_height_published_as_tall_m": 56,
+    "arch_rise_above_deck_m": 43,
+    "arch_rise_above_roadway_also_reported_m": 40,
+    "arch_above_normal_river_m": 55,
+    "arch_above_river_also_reported_m": 54,
+    "arch_height_also_reported_tall_m": 54,
+    "arch_box_base_m": [
+      2.5,
+      2.5
+    ],
+    "arch_box_crown_m": [
+      1.4,
+      1.4
+    ],
+    "arch_plate_thickness_base_mm": 100,
+    "arch_plate_thickness_crown_mm": 75,
+    "arch_inclination_from_vertical_deg": 13.5,
+    "arch_inclination_from_vertical_also_reported_deg": 14,
+    "arch_segments_per_rib": 21,
+    "river_pier_count": 0,
+    "sup_delta_pier_count": null,
+    "thrust_block_count": 4,
+    "thrust_block_footing_plan_m": [
+      9,
+      10.5
+    ],
+    "thrust_block_depth_below_road_m": 20,
+    "thrust_block_depth_below_grade_also_reported_m": 15,
+    "thrust_block_concrete_m3": 600,
+    "thrust_block_concrete_also_reported_m3": 400,
+    "deck_hanger_count": 32,
+    "deck_hanger_planes": 2,
+    "deck_hangers_per_plane": 16,
+    "deck_hanger_spacing_m": 10,
+    "sup_hanger_count": 16,
+    "sup_hanger_count_also_reported": 14,
+    "sup_girder_depth_m": 1.4,
+    "sup_clear_width_at_banks_m": 8,
+    "sup_clear_width_near_midspan_m": 4.2,
+    "sup_width_at_ends_also_reported_m": 9,
+    "gap_between_road_deck_and_sup_m": [
+      8,
+      2
+    ],
+    "traffic_deck_width_m": 22.4,
+    "traffic_deck_width_also_reported_m": 22.5,
+    "lanes": 3,
+    "direction": "northbound",
+    "future_fourth_lane_not_built": true,
+    "midspan_height_above_water_m": 13.3,
+    "midspan_height_above_water_datum": null,
+    "deck_elevation_asl_m": null,
+    "deck_thickness_m": null,
+    "crossfall": null,
+    "lane_width_m": null,
+    "shoulder_width_m": null,
+    "west_sidewalk_width_m": null,
+    "navigation_clearance_m": null,
+    "north_approach_length_m": null,
+    "north_approach_gradient": null,
+    "north_approach_elevation_change_m": null,
+    "north_approach_meets_grade": null,
+    "south_approach_length_m": null,
+    "south_approach_gradient": null,
+    "south_approach_elevation_change_m": null,
+    "south_approach_meets_grade": null,
+    "posted_speed_kmh": 50
+  }
+}
