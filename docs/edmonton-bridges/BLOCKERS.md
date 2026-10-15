@@ -34,6 +34,8 @@ Work, not research. Each is a measurement on the 0.2 m aerial or a DSM-minus-DTM
 
 None of these can come from LiDAR. Cheapest source first.
 
+**Update 2026-10-14:** Mapillary street-level frames are now in `reference/<site>/street/` for every folder except Z125 (see `DATA-SOURCES.md`). They should settle the road-level items (railings, barriers, lamp posts, lane and sidewalk layout, approach shape) but not the underside, girder or truss depth, or night colour. Check them before treating those rows as open.
+
 | Item | Sites |
 | --- | --- |
 | Side and underside photo of the span, openly licensed (girder count, depth, abutment and pier form) | G116 (also deck and rail photo), G117, G119, N258, N259, N260 (B065 itself, not the 98 Avenue spans), T133, Z125, R12 (close deck and Rossdale approach), R14 (north end and finished 98 Avenue crossing), R15 (underside) |

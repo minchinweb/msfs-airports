@@ -48,6 +48,14 @@ Clip extent is the OSM geometry in `geometry.json` plus 120 m, at least 500 m ac
 - Dawson (a truss) is the likeliest to have photos on Flickr or from the City's Edmonton Archives; neither was searched in depth.
 - Colour temperatures in the table above are read by eye from long-exposure photos, which shift colour. Verify against a source with stated colour (the City's lighting specification for the High Level is described by Lumenpulse and in Construction Canada's article "Historic bridge gets a bright new look").
 
+## Street-level photos
+
+`street/` exists for 20 of the 21 folders (none for Z125 Wellington, which has no Mapillary frame within 250 m). Up to 5 daytime frames each, 2048 px, from Mapillary (licence CC BY-SA 4.0, credit the creator, listed in each `street/SOURCES.md`). About 24 MB in all, committed. Most frames are 2018 dashcam sequences (user `lvl5`), so lamp posts, barriers, lane layout and railings are good evidence but paint and signage may be dated. R15 has a single frame, taken in 2024.
+
+- Run: `fetch-street-photos.py [site ...]` with `mapbox-vector-tile` installed (the scratchpad venv has it). The token comes from env `MAPILLARY_TOKEN`, or the first line of the file named by `MAPILLARY_TOKEN_FILE`. **Never commit the token.** A free "Access Token" from a Mapillary developer app with Read on works; the "Client Token" did not for image details.
+- Gotcha: the Graph API `images?bbox=` search returns an empty list for this app (even over Paris), so candidates are read from the z14 vector tiles (`tiles.mapillary.com/maps/vtp/mly1_public/2/{z}/{x}/{y}`) and each pick is fetched by id (`graph.mapillary.com/<id>?fields=thumb_2048_url,...`).
+- Street photos are taken from the road: they do not show the underside, truss or girder depth, and they are not night frames.
+
 ## Not done
 
 - No 2018 or 2020 aerials were saved, only 2019. The 2018 service matches the LiDAR year; fetch it with the same script if the date matters.
