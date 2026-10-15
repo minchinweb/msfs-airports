@@ -8,6 +8,18 @@
 
 Reviewed from this folder only (NOTES.md, SOURCES.md, geometry.json, 11 photos). No other source used.
 
+<!-- data-update:begin -->
+## Update 2026-10-14: elevation, aerial and night data now in this folder
+
+- **Ground at the centre point** (2018 LiDAR bare earth, CGVD2013): 614.8 m (2,017 ft). Clips in `elevation/` (`dtm-2018-1m.tif`, `dsm-2018-1m.tif`); every deck's figures are in `elevation/README.md`.
+- **River surface here** (2018 LiDAR): 614.91 m. Gauge conversion and the seasonal range (about ±0.5 m) are in `../../RIVER-LEVEL.md`.
+- **Main deck height** (`upper_deck_streetcar`, DSM median): 662.45 m, 47.54 m above the river. It is the first return, so it includes rails, catenary and traffic and cannot see a deck under another deck. Not a design figure.
+- **Aerial:** `aerial/ortho-2019.jpg` (City 2019 orthophoto, 0.2 m, north up; bounds in `aerial/ortho-2019.json`). Gitignored, regenerate with `fetch-site-data.py`. Widths, pier positions and outlines can be measured from it; that has not been done.
+- **Night lighting:** 8 photos in `night/` with a lighting description in `night/SOURCES.md`.
+
+Blocking items below that ask for deck or ground elevation, datum, water level or terrain heights are answered by these files; the datum is CGVD2013 and still needs a check against the sim. Items asking for widths, pier or abutment positions or an overhead view can be measured from the aerial but are not yet. Everything else below still stands. All blockers across the 21 sites are ranked in `../../BLOCKERS.md`.
+<!-- data-update:end -->
+
 ## Verdict
 
 **Ready with assumptions.** The overall envelope is well sourced: length, deck width, deck gap, truss depth, span pattern, deck order and plan line. Three things are not in the folder and I would have to assume them: absolute deck elevation (ASL), river pier height, and the south tower/approach geometry. None stops a first model. The first two decide whether it sits right in the terrain.

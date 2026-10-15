@@ -51,5 +51,5 @@ Clip extent is the OSM geometry in `geometry.json` plus 120 m, at least 500 m ac
 ## Not done
 
 - No 2018 or 2020 aerials were saved, only 2019. The 2018 service matches the LiDAR year; fetch it with the same script if the date matters.
-- Heights are not yet in the individual `MODEL-HANDOFF.md` files. A modeller should read `ELEVATION.md` and `RIVER-LEVEL.md` first. Items there that were listed as blocking (deck ASL, water ASL, datum) are now answered, with the caveats above.
-- Nothing is committed: about 270 MB of images and rasters were added (aerials about 100 MB, DEM clips about 150 MB, night photos about 13 MB). If that is too much for the repo, keep only the scripts and `data/`, since the clips regenerate in a few minutes.
+- Heights are in each `MODEL-HANDOFF.md` (an Update block at the top, refreshed with `update-handoffs.py`). What still blocks is in `BLOCKERS.md`.
+- Not committed: about 270 MB of images and rasters were added (aerials about 100 MB, DEM clips about 150 MB, night photos about 13 MB). The aerial and DEM files are gitignored and regenerate with `fetch-site-data.py`.

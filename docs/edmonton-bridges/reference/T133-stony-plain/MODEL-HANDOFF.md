@@ -8,6 +8,18 @@
 
 Reviewed from this folder only (NOTES.md, SOURCES.md, geometry.json). The folder has no photos.
 
+<!-- data-update:begin -->
+## Update 2026-10-14: elevation, aerial and night data now in this folder
+
+- **Ground at the centre point** (2018 LiDAR bare earth, CGVD2013): 656.1 m (2,153 ft). Clips in `elevation/` (`dtm-2018-1m.tif`, `dsm-2018-1m.tif`); every deck's figures are in `elevation/README.md`.
+- **River surface here** (2018 LiDAR): 616.82 m. Gauge conversion and the seasonal range (about ±0.5 m) are in `../../RIVER-LEVEL.md`.
+- **Main deck height** (`road_deck`, DSM median): 665.73 m, 48.91 m above the river. It is the first return, so it includes rails, catenary and traffic and cannot see a deck under another deck. Not a design figure.
+- **Aerial:** `aerial/ortho-2019.jpg` (City 2019 orthophoto, 0.2 m, north up; bounds in `aerial/ortho-2019.json`). Gitignored, regenerate with `fetch-site-data.py`. Widths, pier positions and outlines can be measured from it; that has not been done.
+- **Night lighting:** no usable night photo found (see `../../DATA-SOURCES.md`).
+
+Blocking items below that ask for deck or ground elevation, datum, water level or terrain heights are answered by these files; the datum is CGVD2013 and still needs a check against the sim. Items asking for widths, pier or abutment positions or an overhead view can be measured from the aerial but are not yet. Everything else below still stands. All blockers across the 21 sites are ranked in `../../BLOCKERS.md`.
+<!-- data-update:end -->
+
 ## Verdict
 
 **Ready with assumptions.** The plan-view layout, cross-section parts and single-span/no-pier type are solid. Span length, deck elevation, girder depth and all colours are not in the folder. I would have to pick them. At 1,000-3,500 ft AGL this is a flat slab with rails and a rail corridor. That is enough for a plain model. A close fly-by would look generic.

@@ -8,6 +8,18 @@
 
 Reviewed using only this folder (NOTES.md, SOURCES.md, geometry.json, 11 photos).
 
+<!-- data-update:begin -->
+## Update 2026-10-14: elevation, aerial and night data now in this folder
+
+- **Ground at the centre point** (2018 LiDAR bare earth, CGVD2013): 613.7 m (2,014 ft). Clips in `elevation/` (`dtm-2018-1m.tif`, `dsm-2018-1m.tif`); every deck's figures are in `elevation/README.md`.
+- **River surface here** (2018 LiDAR): 613.74 m. Gauge conversion and the seasonal range (about ±0.5 m) are in `../../RIVER-LEVEL.md`.
+- **Main deck height** (`road_deck`, DSM median): 630.96 m, 17.22 m above the river. It is the first return, so it includes rails, catenary and traffic and cannot see a deck under another deck. Not a design figure.
+- **Aerial:** `aerial/ortho-2019.jpg` (City 2019 orthophoto, 0.2 m, north up; bounds in `aerial/ortho-2019.json`). Gitignored, regenerate with `fetch-site-data.py`. Widths, pier positions and outlines can be measured from it; that has not been done.
+- **Night lighting:** 3 photos in `night/` with a lighting description in `night/SOURCES.md`.
+
+Blocking items below that ask for deck or ground elevation, datum, water level or terrain heights are answered by these files; the datum is CGVD2013 and still needs a check against the sim. Items asking for widths, pier or abutment positions or an overhead view can be measured from the aerial but are not yet. Everything else below still stands. All blockers across the 21 sites are ranked in `../../BLOCKERS.md`.
+<!-- data-update:end -->
+
 ## Verdict
 
 **Ready with assumptions.** Plan shape, span count, truss type, lane layout, sidewalk side and look are solid. Deck elevation, truss depth, pier height and deck thickness are not in the folder. I would have to take the deck height from the sim's own terrain or scale it off photos. That makes the model buildable but not dimensionally accurate vertically.

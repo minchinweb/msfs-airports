@@ -6,6 +6,18 @@
 | Review date | 2026-10-14 |
 | Git commit | `bc90f82` (`bc90f82c495ab25c366da2749f43f4a003371849`, branch `agents/claude/1`). The reviewed notes, sources, geometry and photos are in that commit. This handoff file was written after it and is uncommitted. |
 
+<!-- data-update:begin -->
+## Update 2026-10-14: elevation, aerial and night data now in this folder
+
+- **Ground at the centre point** (2018 LiDAR bare earth, CGVD2013): 653.3 m (2,144 ft). Clips in `elevation/` (`dtm-2018-1m.tif`, `dsm-2018-1m.tif`); every deck's figures are in `elevation/README.md`.
+- **River surface:** this clip holds no river reach, so no water figure applies. For a ravine or rail crossing use the ground heights above and below.
+- **Main deck height** (`road_deck`, DSM median): 664.35 m. It is the first return, so it includes rails, catenary and traffic and cannot see a deck under another deck. Not a design figure.
+- **Aerial:** `aerial/ortho-2019.jpg` (City 2019 orthophoto, 0.2 m, north up; bounds in `aerial/ortho-2019.json`). Gitignored, regenerate with `fetch-site-data.py`. Widths, pier positions and outlines can be measured from it; that has not been done.
+- **Night lighting:** no usable night photo found (see `../../DATA-SOURCES.md`).
+
+Blocking items below that ask for deck or ground elevation, datum, water level or terrain heights are answered by these files; the datum is CGVD2013 and still needs a check against the sim. Items asking for widths, pier or abutment positions or an overhead view can be measured from the aerial but are not yet. Everything else below still stands. All blockers across the 21 sites are ranked in `../../BLOCKERS.md`.
+<!-- data-update:end -->
+
 ## Verdict
 
 **Ready with assumptions (plan-view massing only).** Position, heading, plan length and approximate plan width come from geometry.json. Span type is known (single clear-span girder). Deck elevation, ravine depth, girder depth, width and material are not in the folder. There are no photos (SOURCES.md: "Photos saved: None"). I can build a plausible low-detail girder deck. I cannot build a faithful ravine crossing or a close fly-by model.
