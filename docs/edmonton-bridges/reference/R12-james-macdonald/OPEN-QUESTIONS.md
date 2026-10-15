@@ -5,7 +5,7 @@ The "Ask before building" list in `CURSOR-HANDOFF.md` (another session's review,
 Elevations are CGVD2013 metres from the 2018 LiDAR. Deck tops are first returns (rails, traffic and catenary can add up to 1 m) and the sim's datum is not yet checked. "Rise" is deck top above the ground or water under it, not the clear height: take off the deck depth (1 to 2.5 m).
 
 1. **Deck elevation ASL and where 97 Avenue and 98 Avenue meet grade: Answered for the deck, Partly for the approaches.** Road deck top 631.63 m (westbound) and 631.10 m (eastbound); river 613.73 m, so 17.4 m above the river; the profiles of both approaches are in `elevation/profiles.csv`.
-2. **Span lengths, pier stations, shaft size: Open, measurable** (piers in the channel show on the aerial); not done. The raised structure measures about 340 m on both decks.
+2. **Span lengths, pier stations, shaft size: Open, needs source.** The aerial does not show them: the girder deck hides its piers from above (unlike R8, R13, R15), and only lamp-pole shadows and one deck joint (near chainage 350 m) show. The raised structure measures about 340 m on both decks.
 3. **Girder depth at pier and midspan: Open, needs source.**
 4. **Which structures are the 1971 approach bridges: Open, needs source.**
 5. **Overall width: Answered.** The raised width is about 26 to 27 m (plus or minus 1 m) for the six lanes. The street frames 2, 3 and 5 show a grey concrete parapet about 1 m high topped by a tan open railing (about 1.4 to 1.5 m overall) and twin-arm lamps along the centre of the deck.

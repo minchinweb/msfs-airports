@@ -9,7 +9,7 @@ Elevations are CGVD2013 metres from the 2018 LiDAR. Deck tops are first returns 
 3. **Clearance under the deck: Answered.** Deck top 5.7 m (median) above the road below; less 1 to 2 m of deck leaves roughly 4 m, consistent with the 4.5 m `maxheight` tag.
 4. **Abutments only or intermediate piers: Open, needs source.** The raised run is 31.3 m; nothing in the frames shows a pier.
 5. **Elevation change along the approach ways: Partly.** The north-east approach (way 36610268, 84 m) climbs from 632.9 to 635.85 m, about 3.5 percent; the rest are in `elevation/profiles.csv`.
-6. **McDougall Hill way 636183922 node list: Open, measurable** (one OSM fetch); not done.
+6. **McDougall Hill way 636183922 node list: Answered.** Fetched from OpenStreetMap on 2026-10-14 and saved as `mcdougall-hill-way-636183922.json` (15 nodes, west 53.537844, -113.493275 to east 53.537822, -113.491135; two-lane one-way expressway, `maxheight` 4.5, lit, no sidewalk).
 7. **A present-day view: Partly.** Four Mapillary frames, 2018 to 2024, after the 2013 rehabilitation.
 
 The review's "Do not invent" list still applies: keep the conflicting published figures separate and unaveraged, as the review set out, and do not turn a mapped plan length into a structural length. Where its "Photos" section says none are saved, check `street/` and `night/` first.

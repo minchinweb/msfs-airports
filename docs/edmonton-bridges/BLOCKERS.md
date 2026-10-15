@@ -27,14 +27,14 @@ The 2018 LiDAR and the 2019 aerial predate these structures, and the 2024 LiDAR 
 
 ## 3. Can be measured from the files we hold, not done yet
 
+Done 2026-10-14 (see `AERIAL-READINGS.md`): pier stations for R8, R13 and R15, hanger count and joint stations for R11, B255 roof peaks, the N259 McDougall Hill way.
+
 | Item | Sites |
 | --- | --- |
-| Pier and abutment positions and individual span lengths, from the aerial | R8 (seven spans), R9, R12, R13 (also the 1900 bay length, 53 m or 51.8 m), R15, G119 (two column piers seen), T133, N258 (column count), R10 (check the plate against the aerial) |
-| Truss and arch geometry: panel counts, truss depth, rib spacing, struts, hangers, delta piers | R11 (ribs, struts, hangers, delta piers), R13 (truss depth), R15 (truss depth, panel counts) |
-| Roof structure: turret count, ridge against turret, outline against the Bing ring | B255 |
-| McDougall Hill way node list (one OSM fetch) | N259 |
+| Pier and abutment positions from the aerial: only where the pier or its cap shows (a solid girder or box deck hides it) | R10 (check the plate), G119 (two columns seen from the road), T133 and N258 (column count; likely hidden) |
+| Truss depth and panel counts (the orthophoto is rectified to the ground, so tall features are displaced: use the DSM or photos) | R13, R15 |
 | Separate the individual decks where several sit at the same level (raised width merges them) | G116, N260, R8 |
-| Review the street frames not yet read | R8, R9, R10, R11, R14, F256, P152, B254, B255, V257 |
+| Review the street frames not yet read | see below |
 
 ## 4. Needs the sim (only William can clear these)
 
@@ -53,7 +53,7 @@ None of these can come from LiDAR or road-level photos.
 | Item | Sites |
 | --- | --- |
 | Girder, slab or truss depth and the underside (road-level frames cannot see it; G119 is the only site seen from below and only roughly) | G116, G117, G119, N258, N259, N260, T133, Z125, R8, R12, R13, R15, R9 |
-| Pier height and the plan size of shafts | R9, R12, R13, R15 (R10 done) |
+| Pier stations and plan size of shafts, where the deck hides the piers | R9, R12 (R8, R13, R15 done from the aerial); shaft heights at R9, R12, R13, R15 (R10 done) |
 | Abutments only, or piers? | N259 |
 | Plan tables: lane, shoulder, sidewalk and barrier widths as designed | G116, G117, G119, N260, R12, R11, R13, R15, Z125 |
 | R14: pylon height, as-built pier count and spans, finished ramp | R14 |

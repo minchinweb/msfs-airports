@@ -6,7 +6,7 @@ Elevations are CGVD2013 metres from the 2018 LiDAR. Deck tops are first returns 
 
 1. **Deck elevation ASL at each abutment: Answered.** Road deck top 631.31 m median (sidewalks 627.8 to 628.6 m); river 612.83 m, so 18.2 m above the river over the raised run. Ground at each end is in `elevation/profiles.csv`.
 2. **Truss depth and panel counts: Open, measurable** (the top chord and panels show on the aerial); not done.
-3. **Pier shaft height: Open, needs source.** The deck is 18.2 m above the river; the shaft is that less the bearing and truss floor depth, which are unknown.
+3. **Pier stations and shaft height: stations Answered, height Open, needs source.** Four pier cutwaters show on the south edge at chainage about 44.5, 87.9, 131.1 and 207.0 m from the west end of way 22916476, giving spans of about 43.3, 43.4, 43.2 and 75.9 m, then 30.5 m to the east abutment (abutments near 1 and 237.6 m). This confirms the published 43.3, 43.3, 43.3, 76.2 and 30.5 m (plus or minus 1 m). The deck is 18.2 m above the river; the shaft is that less the bearing and truss floor depth, which are unknown. See `AERIAL-READINGS.md`.
 4. **What the 12.5 m width measures: Open, needs source.** The LiDAR raised width (6.5 m) is not usable on a through truss. The Mapillary frame (2024) shows the approach, a concrete parapet with a steel rail and a footway of about 1.5 to 2 m, not the truss.
 5. **Where each approach meets grade: Partly.** Profiles in `elevation/profiles.csv`.
 

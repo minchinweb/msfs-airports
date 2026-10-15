@@ -5,10 +5,10 @@ The "Ask before building" list in `CURSOR-HANDOFF.md` (another session's review,
 Elevations are CGVD2013 metres from the 2018 LiDAR. Deck tops are first returns (rails, traffic and catenary can add up to 1 m) and the sim's datum is not yet checked. "Rise" is deck top above the ground or water under it, not the clear height: take off the deck depth (1 to 2.5 m).
 
 1. **Arch crown height: Partly.** The highest DSM return above the river along the road centreline is 52.8 m (river 614.13 m), consistent with the published 54 to 55 m above the river. Crown above the arch foot and above the roadway are still two separate unreconciled figures.
-2. **Rib spacing at crown and feet: Open, measurable** on the aerial (the ribs show in plan); not done.
+2. **Rib spacing at crown and feet: Open, needs source.** The aerial cannot give it: the orthophoto is rectified to the ground, so the 40 to 50 m high ribs are displaced sideways by an unknown amount. The rib feet read at about chainage 32 m (south) and 229 m (north) on way 175326660 in plan.
 3. **Deck elevation ASL, datum, 13.3 m label: Answered for the deck.** Deck top median 629.05 m; river 614.21 m, so 14.7 m above the river over the whole raised run. The 13.3 m mid-span label is a lower number, which fits a roadway-to-soffit reading with a deck about 1.4 m deep; unconfirmed.
-4. **Where the 230 m abutment centrelines sit on the 260.7 m way: Partly.** The raised structure is 248.6 m of that way, including approach fill. The centrelines themselves are not resolved.
-5. **Strut count, 6. delta-pier count, 8. first-hanger distance: Open, measurable** on the aerial; not done.
+4. **Where the 230 m abutment centrelines sit on the 260.7 m way: Partly answered.** Expansion-joint lines on the aerial fall at about chainage 14 m and 246 m, 232 m apart (plus or minus 3 m), consistent with the 230 m. The raised structure is 248.6 m of the way.
+5. **Hangers: Answered. Struts, delta piers: Open.** 16 hangers per plane are counted on the aerial, 10.3 m apart on average (first near chainage 49 m, last near 204 m), matching "16 at 10 m". The first hanger is about 34 m from the south joint (plus or minus 3 m). No struts show in the aerial; delta piers are not counted. See `AERIAL-READINGS.md`.
 7. **Longitudinal grade and where 105 Street and Walterdale Hill meet grade: Partly.** Ground profiles along the approach ways are in `elevation/profiles.csv`.
 
 The review's "Do not invent" list still applies: keep the conflicting published figures separate and unaveraged, as the review set out, and do not turn a mapped plan length into a structural length. Where its "Photos" section says none are saved, check `street/` and `night/` first.
