@@ -49,10 +49,25 @@ How the readings fit the earlier figures:
 - The three river spans are 88.95, 89.38 and 88.95 m between pier centres. The 87.78 m (288 ft) in `geometry.json` is the length between bearings, so about 1.2 to 1.6 m less per span. Use the plate for pier spacing and 87.78 m for the truss.
 - The south approach is the 99'-10" span plus five 97'-8" spans plus the span between towers 11/10 and 9/8, about 97'-8" if it follows the same pattern (not printed). That makes seven Pratt spans, matching "7 at 96 ft". The six towers match "6 tower spans at 47 ft"; the plate gives 49'-5" (15.06 m) for the bent width, so the 47 ft may be a clear length between legs rather than the bent width. This is a guess.
 - The 130 ft north spans match the plate. Of the 10 spans the designation does not itemize, six are now read (the 99'-10" span and the five 97'-8" spans). The other four plausibly include the span 11/10 to 9/8 and short spans between 9 and 4 near Soullier Avenue, but that count is not confirmed.
-- Sum check: north 129.75 + 131.75 = 261.5 ft; main 291.875 + 293.25 + 291.875 = 877.0 ft; the 99.83 ft span plus five 97.67 ft spans = 588.2 ft; six tower bents at 49.42 ft = 296.5 ft. Total 2,023 ft (616.7 m) against the 2,550 ft (777.24 m) overall length. About 527 ft (160 m) are not accounted for: the span 11/10 to 9/8 if it is a Pratt span, the short spans between supports 9 and 4, and the south end. Not resolved.
+- Sum check: see the scaled readings below. Adding the printed figures alone gives 2,023 ft, so the plate is read to scale for the rest.
 - Grades printed: crown of roadway and CPR base of rail "grade level" across the north and main spans, 0.74% over the south spans, level again at bent 9/8, then 5.45% for the last bents to the abutment near Soullier Avenue. A dimension of about 7 ft is printed near the abutment; the label is too small to be sure.
 - Heights printed: 50 ft truss depth on a river span; 153.2 ft from the crown of roadway to the July 1906 water level at pier 24; 140'-0" from ground to rail at bent 15/14 (the tallest tower).
-- Not settled: the spans between 9 and 4 and the abutment (labels absent or illegible at this resolution). A sharper scan would only help there.
+- The remaining spans are read off the drawing to scale, below.
+
+**Scaled readings (the plate is drawn to scale).** Pixel positions of the support legs were read on the 3113 px scan and converted with 1.155 px per ft, the scale set by the printed 97'-8" spans. Checks against printed figures: the 97'-8" spans measure 98.4 and 99.3 ft, the 49'-5" bent measures 49.6 ft, the two main spans measure 292.2 and 289.2 ft against 291.9 and 293.3 printed (so within 1 to 2%). The whole structure, from the north end (x 75 px) to the south abutment face (x 3029 px), comes to 2,558 ft against the documented 2,550 ft, so the drawing is complete and undistorted. Each reading is good to about +/-2 px, +/-2 ft. Vertical dimensions are to the same scale (the 50 ft truss depth and the 153.2 ft dimension both measure within 3%).
+
+| Piece (south of tower 11/10) | Measured | Metres | Note |
+| --- | --- | --- | --- |
+| 11/10 right leg to 9/8 left leg | about 100 ft | 30.5 | Same as the first span (99'-10"), so likely the seventh Pratt span at that length |
+| Bent 9/8, leg to leg | about 41 ft | 12.4 | Lower bent, no printed width |
+| 9/8 to 7/6 | about 63 ft | 19.2 | Short span |
+| Bent 7/6 | about 35 ft | 10.5 | |
+| 7/6 to 5/4 | about 56 ft | 17.1 | Short span |
+| Bent 5/4 | about 35 ft | 10.5 | |
+| 5/4 to the south abutment face | about 87 ft | 26.6 | Runs down the 5.45% grade to Soullier Avenue |
+| Soullier Avenue dimension | about 65 ft | 19.7 | The printed label is too small to read; the scale value is not a printed one |
+
+This closes the span list. Counting the Pratt spans gives seven (the 99'-10" span, five 97'-8" and the 100 ft one), matching "7 at 96 ft". The six tall bents (21/20 to 11/10, 49'-5" wide) are the six "47 ft" tower spans. The three lower bents (9/8, 7/6, 5/4) and the three short spans between them (63, 56, 87 ft) are the rest of the unitemised spans; the sources do not describe them. The north end, from the stub at x 75 px to pier 27, is about 120 ft and holds the small footings 28 and 29.
 
 HistoricBridges.org calls the main spans Baltimore deck trusses. The designation calls them Pratt. Baltimore is a subdivided Pratt; the plate shows subdivided panels. Use the designation's names, and the plate for the panel pattern.
 
@@ -149,5 +164,5 @@ Handrails run the length of the bridge on both the east and west sides (designat
 - A single as-built height for the river piers. The published figures disagree and are approximate.
 - Present north and south approach gradients, lengths, and elevation changes. The 1914 and 1910 figures predate the 1931 and 1971 approach rebuilds.
 - The point where each present approach meets natural grade, and the elevation there.
-- Lengths for the spans between supports 9 and 4 and the south abutment, which the 1914 plate does not figure legibly. The other spans are now read off the plate (see above).
+- Printed (rather than scaled) lengths for the spans between supports 9 and 4 and the south abutment; the scaled values, good to about 2 ft, are in the plate section.
 - Present width of the upper-deck track bed beside the streetcar.
