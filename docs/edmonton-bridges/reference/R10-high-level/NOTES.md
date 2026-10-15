@@ -31,6 +31,29 @@ Wikipedia and the CSCE historic-site note call the longest span 88 m (289 ft) an
 
 The 1914 general elevation (*Railway Age*, vol. 56, no. 22, pp. 1194–1195, reproduced on Wikimedia Commons) figures the spans differently. Readings below are from that scan; the type is small. North to south, as far as the labels could be read: 129 ft 9 in and 131 ft 9 in (the two north Warren spans), then three river spans labeled about 291 ft 10½ in, 293 ft 3 in, and 291 ft 10½ in, then south-approach spans alternating near 97 ft 8 in to 99 ft 10 in and tower spans near 49 ft 5 in. Those plate figures and the designation's 130 / 288 / 96 / 47 ft are the same spans described to different rounding, or centre-to-centre of piers versus length between bearings. They are not reconciled here.
 
+**1914 plate, read at 2x zoom (2026-10-14).** `photos/elevation-drawing-railway-age.png` is 3113 x 447 px and the labels are legible. Distances are along the bridge, in feet and inches as printed, between support centres. Metres are converted at 0.3048 m per ft. The drawing runs north (left) to south (right). Supports are numbered 4 at the south end to 29 at the north end; bents 22 to 25 are the river piers.
+
+| From to | Printed | Metres | What it is |
+| --- | --- | --- | --- |
+| 27 to 26 | 129'-9" | 39.55 | North Warren span |
+| 26 to 25 | 131'-9" | 40.16 | North Warren span |
+| 25 to 24 | 291'-10½" | 88.95 | River Pratt span 1 |
+| 24 to 23 | 293'-3" | 89.38 | River Pratt span 2 |
+| 23 to 22 | 291'-10½" | 88.95 | River Pratt span 3 |
+| 22 to first tower (21/20) | 99'-10" | 30.43 | First south-approach span |
+| Tower bent width (21 to 20, 19 to 18, and the same for 17/16, 15/14, 13/12, 11/10) | 49'-5" | 15.06 | Six steel towers; the width is printed on two of them and the others are drawn the same |
+| Between towers (20 to 19, and so on) | 97'-8" | 29.77 | Five spans, printed on two of them |
+
+How the readings fit the earlier figures:
+
+- The three river spans are 88.95, 89.38 and 88.95 m between pier centres. The 87.78 m (288 ft) in `geometry.json` is the length between bearings, so about 1.2 to 1.6 m less per span. Use the plate for pier spacing and 87.78 m for the truss.
+- The south approach is the 99'-10" span plus five 97'-8" spans plus the span between towers 11/10 and 9/8, about 97'-8" if it follows the same pattern (not printed). That makes seven Pratt spans, matching "7 at 96 ft". The six towers match "6 tower spans at 47 ft"; the plate gives 49'-5" (15.06 m) for the bent width, so the 47 ft is the clear length between legs, not the bent.
+- The 130 ft north spans match the plate. The 10 spans the designation does not itemize are therefore: the five 97'-8" spans, the 99'-10" span, the one at 11/10 to 9/8, and the three short spans between 9 and 4 near Soullier Avenue.
+- Sum check: 2 x 130 + 3 x 289 + 99.8 + 6 x 97.7 (taking six) + 6 x 49.4 = 260 + 867 + 100 + 586 + 296 = 2,109 ft, or 643 m, against the 777.24 m total. About 134 m remain for the unread spans between 9 and 4 and the ends. Not resolved.
+- Grades printed: crown of roadway and CPR base of rail "grade level" across the north and main spans, 0.74% over the south spans, level again at bent 9/8, then 5.45% for the last bents to the abutment near Soullier Avenue. A dimension of about 7 ft is printed near the abutment; the label is too small to be sure.
+- Heights printed: 50 ft truss depth on a river span; 153.2 ft from the crown of roadway to the July 1906 water level at pier 24; 140'-0" from ground to rail at bent 15/14 (the tallest tower).
+- Not settled: the spans between 9 and 4 and the abutment (labels absent or illegible at this resolution). A sharper scan would only help there.
+
 HistoricBridges.org calls the main spans Baltimore deck trusses. The designation calls them Pratt. Baltimore is a subdivided Pratt; the plate shows subdivided panels. Use the designation's names, and the plate for the panel pattern.
 
 **Truss depth.** 50 ft (15.24 m) on the 1914 elevation, the figured distance from the top chord to the bottom chord of a main span. The decks sit inside that depth. The designation's 20 ft between decks is not the truss depth. Steel also continues below the lower deck ("steel substructure below the lower deck" in the designation), so 50 ft is the chord depth on the plate, not a claim about every member under the roadway.
@@ -126,5 +149,5 @@ Handrails run the length of the bridge on both the east and west sides (designat
 - A single as-built height for the river piers. The published figures disagree and are approximate.
 - Present north and south approach gradients, lengths, and elevation changes. The 1914 and 1910 figures predate the 1931 and 1971 approach rebuilds.
 - The point where each present approach meets natural grade, and the elevation there.
-- Lengths for the 10 spans the designation does not itemize, and a reconciliation of the 1914 plate dimensions with the 288 ft spans.
+- Lengths for the spans between supports 9 and 4 and the south abutment, which the 1914 plate does not figure legibly. The other spans are now read off the plate (see above).
 - Present width of the upper-deck track bed beside the streetcar.
