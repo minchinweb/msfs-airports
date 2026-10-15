@@ -30,6 +30,9 @@ for hp in sorted(glob.glob(os.path.join(HERE, "reference", "**", "MODEL-HANDOFF.
     nd = os.path.join(folder, "night")
     n = len(glob.glob(os.path.join(nd, "*.jpg")))
     L.append(f"- **Night lighting:** {n} photos in `night/` with a lighting description in `night/SOURCES.md`." if n else "- **Night lighting:** no usable night photo found (see `" + rel + "DATA-SOURCES.md`).")
+    sd = os.path.join(folder, "street")
+    k = len(glob.glob(os.path.join(sd, "*.jpg")))
+    L.append(f"- **Street-level photos:** {k} daytime Mapillary frames in `street/` (CC BY-SA, credits in `street/SOURCES.md`). They show railings, barriers, lamp posts, lane and sidewalk layout and approach shape from the road; not the underside or truss depth. Check them before treating those items below as open." if k else "- **Street-level photos:** none (no Mapillary frame within 250 m).")
     L += ["", "Blocking items below that ask for deck or ground elevation, datum, water level or terrain heights are answered by these files; the datum is CGVD2013 and still needs a check against the sim. Items asking for widths, pier or abutment positions or an overhead view can be measured from the aerial but are not yet. Everything else below still stands. All blockers across the 21 sites are ranked in `" + rel + "BLOCKERS.md`.", END, ""]
     s = open(hp, encoding="utf-8").read()
     s = re.sub(re.escape(BEGIN) + r".*?" + re.escape(END) + r"\n*", "", s, flags=re.S)
