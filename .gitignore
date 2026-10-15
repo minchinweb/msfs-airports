@@ -1,3 +1,6 @@
 _build/*
 **/_PackageInt/*
 **/Packages/*
+
+# Edmonton bridges: LiDAR clips, regenerate with docs/edmonton-bridges/fetch-site-data.py
+docs/edmonton-bridges/reference/**/elevation/*.tif
