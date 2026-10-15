@@ -5,7 +5,7 @@ pylons on the north river pier, 24 to 30 m above the deck (30 m taken), seven st
 under the box through piers; park guideway on piers about 40 m apart, then 98 Avenue spans, then a ramp (about -5.6 percent) on fill and
 retaining walls to the stop.  NO deck elevations exist in the data (the 2018 LiDAR predates it).  ASSUMED levels, chosen to meet the
 published clearances: rail top 18.6 m above the river (632.0 m ASL) over the river, falling 2 percent to 98 Avenue, then 5.6 percent
-to the platform level 8.7 m (621.94 m, the 2018 ground at the stop).  Axis runs north -> south between the two track ways, t positive
+to the platform level 8.68 m (621.94 m, the 2018 ground at the stop).  Axis runs north -> south between the two track ways, t positive
 = east.
 """
 import math
@@ -15,7 +15,7 @@ CODE, TITLE = "R14", "Tawatina Bridge and Valley Line ramp"
 RIVER = 613.26
 F = "R14-tawatina"
 Y0 = 18.6
-Y_PLAT = 8.7
+Y_PLAT = 8.68
 BOX_H, BOX_W = 3.5, 11.0
 
 

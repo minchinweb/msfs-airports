@@ -75,35 +75,35 @@
   {
    "bufferView": 0,
    "componentType": 5126,
-   "count": 3424,
+   "count": 3384,
    "type": "VEC3",
    "min": [
-    -45.453900059575155,
+    -43.97440357329025,
     -1.6,
     -40.35116865997489
    ],
    "max": [
     45.45390006004626,
     7.539804022639957,
-    40.35116866037029
+    39.85503060873232
    ]
   },
   {
    "bufferView": 1,
    "componentType": 5126,
-   "count": 3424,
+   "count": 3384,
    "type": "VEC3"
   },
   {
    "bufferView": 2,
    "componentType": 5126,
-   "count": 3424,
+   "count": 3384,
    "type": "VEC2"
   },
   {
    "bufferView": 3,
    "componentType": 5123,
-   "count": 5136,
+   "count": 5076,
    "type": "SCALAR"
   }
  ],
@@ -111,28 +111,28 @@
   {
    "buffer": 0,
    "byteOffset": 0,
-   "byteLength": 41088
+   "byteLength": 40608
   },
   {
    "buffer": 0,
-   "byteOffset": 41088,
-   "byteLength": 41088
+   "byteOffset": 40608,
+   "byteLength": 40608
   },
   {
    "buffer": 0,
-   "byteOffset": 82176,
-   "byteLength": 27392
+   "byteOffset": 81216,
+   "byteLength": 27072
   },
   {
    "buffer": 0,
-   "byteOffset": 109568,
-   "byteLength": 10272
+   "byteOffset": 108288,
+   "byteLength": 10152
   }
  ],
  "buffers": [
   {
    "uri": "br_p152_muttart_stop.bin",
-   "byteLength": 119840
+   "byteLength": 118440
   }
  ]
 }

@@ -23,11 +23,13 @@ def build():
     ax = mid_axis(fr, WEST, EAST, n=1)
     L = ax.L
     m = BMesh()
-    # tracks (direct fixation) between the platforms, 4 m apart
+    # ballast bed and tracks between the platforms, 4 m apart.  Same section as the R14 ramp that arrives at s = L (fill top -0.3,
+    # slab -0.3..-0.18, rails to -0.02), which ends exactly here, so the two models meet flush and in the same colours.
+    ribbon(m, ax, 0.0, L, -4.2, 4.2, -1.6, -0.3, CONCD, step=40.0, sw_top=BALLAST)
     for tt in (-2.0, 2.0):
-        ribbon(m, ax, -6.0, L + 6.0, tt - 0.9, tt + 0.9, -0.45, -0.25, CONCD)
+        ribbon(m, ax, -6.0, L, tt - 0.9, tt + 0.9, -0.3, -0.18, CONCD)
         for r in (-0.72, 0.72):
-            ribbon(m, ax, -6.0, L + 6.0, tt + r - 0.04, tt + r + 0.04, -0.25, 0.0, RAILSTEEL)
+            ribbon(m, ax, -6.0, L, tt + r - 0.04, tt + r + 0.04, -0.18, -0.02, RAILSTEEL)
     # platforms: concrete on fill, 3.5 m wide, tactile strip on the edge
     for sg in (-1, 1):
         t0, t1 = (4.0, 7.5) if sg > 0 else (-7.5, -4.0)
@@ -49,7 +51,7 @@ def build():
         beam(m, ax.p3(s, 0.0, 0.0), ax.p3(s, 0.0, 7.0), 0.3, 0.3, GREY)
         beam(m, ax.p3(s, -2.4, 6.6), ax.p3(s, 2.4, 6.6), 0.15, 0.15, GREY)
     for tt in (-2.0, 2.0):
-        beam(m, ax.p3(-6.0, tt, 5.6), ax.p3(L + 6.0, tt, 5.6), 0.05, 0.05, LAMP)
+        beam(m, ax.p3(-6.0, tt, 5.6), ax.p3(L, tt, 5.6), 0.05, 0.05, LAMP)
     # light poles at the outer platform edges
     for sg in (-1, 1):
         for s in (10.0, 30.0, 52.0, 74.0, 94.0):
