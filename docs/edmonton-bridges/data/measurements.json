@@ -1,0 +1,3601 @@
+{
+ "B255-hotel-macdonald": {
+  "lines": [],
+  "polygons": [
+   {
+    "part": "building_outline",
+    "osm_way": 198826612,
+    "area_m2": 2426,
+    "dsm_median": 700.11,
+    "dsm_p95": 709.3,
+    "dsm_max": 714.95,
+    "ground_edge_median": 666.83,
+    "ground_edge_min": 665.0,
+    "ground_edge_max": 667.31,
+    "p95_above_ground": 42.47,
+    "max_above_ground": 48.12
+   }
+  ]
+ },
+ "F256-funicular": {
+  "lines": [
+   {
+    "part": "footbridge_cycleway",
+    "osm_way": 533867748,
+    "group": "ways",
+    "plan_length_m": 89.7,
+    "samples": 44,
+    "structure_run": {
+     "from_chainage_m": 0.0,
+     "to_chainage_m": 89.7,
+     "length_m": 91.7,
+     "rise_min": 3.54,
+     "rise_median": 8.71,
+     "rise_max": 20.51,
+     "dsm_median": 637.74,
+     "dtm_under_min": 618.41,
+     "dtm_under_max": 635.27
+    }
+   },
+   {
+    "part": "footbridge_cycleway",
+    "osm_way": 702363113,
+    "group": "ways",
+    "plan_length_m": 5.8,
+    "samples": 3
+   },
+   {
+    "part": "footbridge_cycleway",
+    "osm_way": 1271848916,
+    "group": "ways",
+    "plan_length_m": 15.5,
+    "samples": 8,
+    "structure_run": {
+     "from_chainage_m": 0.0,
+     "to_chainage_m": 15.5,
+     "length_m": 17.5,
+     "rise_min": 8.45,
+     "rise_median": 10.13,
+     "rise_max": 16.61,
+     "dsm_median": 637.34,
+     "dtm_under_min": 623.55,
+     "dtm_under_max": 628.6
+    }
+   },
+   {
+    "part": "footbridge_approach",
+    "osm_way": 1271848917,
+    "group": "ways",
+    "plan_length_m": 8.1,
+    "samples": 5
+   },
+   {
+    "part": "footbridge_footway",
+    "osm_way": 702363114,
+    "group": "ways",
+    "plan_length_m": 8.6,
+    "samples": 5,
+    "structure_run": {
+     "from_chainage_m": 0.0,
+     "to_chainage_m": 8.6,
+     "length_m": 10.6,
+     "rise_min": 16.61,
+     "rise_median": 17.13,
+     "rise_max": 17.74,
+     "dsm_median": 638.49,
+     "dtm_under_min": 620.73,
+     "dtm_under_max": 623.55
+    }
+   },
+   {
+    "part": "funicular_track",
+    "osm_way": 490235928,
+    "group": "ways",
+    "plan_length_m": 63.1,
+    "samples": 32,
+    "structure_run": {
+     "from_chainage_m": 0.0,
+     "to_chainage_m": 6.1,
+     "length_m": 8.1,
+     "rise_min": 3.3,
+     "rise_median": 6.43,
+     "rise_max": 7.34,
+     "dsm_median": 668.34,
+     "dtm_under_min": 659.87,
+     "dtm_under_max": 663.04
+    }
+   },
+   {
+    "part": "urban_stair",
+    "osm_way": 533867743,
+    "group": "ways",
+    "plan_length_m": 37.4,
+    "samples": 19
+   },
+   {
+    "part": "urban_stair",
+    "osm_way": 1301170658,
+    "group": "ways",
+    "plan_length_m": 22.4,
+    "samples": 12
+   },
+   {
+    "part": "bridge_steps",
+    "osm_way": 535658874,
+    "group": "ways",
+    "plan_length_m": 13.4,
+    "samples": 7,
+    "structure_run": {
+     "from_chainage_m": 0.0,
+     "to_chainage_m": 13.4,
+     "length_m": 15.4,
+     "rise_min": 3.56,
+     "rise_median": 6.6,
+     "rise_max": 11.64,
+     "dsm_median": 632.52,
+     "dtm_under_min": 621.73,
+     "dtm_under_max": 628.34
+    }
+   },
+   {
+    "part": "bridge_steps",
+    "osm_way": 622160716,
+    "group": "ways",
+    "plan_length_m": 14.2,
+    "samples": 8,
+    "structure_run": {
+     "from_chainage_m": 0.0,
+     "to_chainage_m": 14.2,
+     "length_m": 16.2,
+     "rise_min": 8.43,
+     "rise_median": 13.01,
+     "rise_max": 16.49,
+     "dsm_median": 637.56,
+     "dtm_under_min": 621.17,
+     "dtm_under_max": 628.61
+    }
+   }
+  ],
+  "polygons": [
+   {
+    "part": "footbridge_outline",
+    "osm_way": 1271848915,
+    "area_m2": 556,
+    "dsm_median": 637.74,
+    "dsm_p95": 640.65,
+    "dsm_max": 642.09,
+    "ground_edge_median": 628.41,
+    "ground_edge_min": 617.9,
+    "ground_edge_max": 635.3,
+    "p95_above_ground": 12.24,
+    "max_above_ground": 13.68
+   }
+  ]
+ },
+ "G116-hawrelak": {
+  "lines": [
+   {
+    "part": "road_deck",
+    "osm_way": 106605009,
+    "group": "decks",
+    "plan_length_m": 56.2,
+    "samples": 25,
+    "structure_run": {
+     "from_chainage_m": 12.2,
+     "to_chainage_m": 56.2,
+     "length_m": 46.0,
+     "rise_min": 3.74,
+     "rise_median": 5.84,
+     "rise_max": 6.38,
+     "dsm_median": 635.24,
+     "dtm_under_min": 628.86,
+     "dtm_under_max": 631.46
+    },
+    "raised_width_m": {
+     "median": 33.8,
+     "p10": 18.2,
+     "p90": 42.2,
+     "n": 6
+    }
+   },
+   {
+    "part": "road_deck",
+    "osm_way": 106605020,
+    "group": "decks",
+    "plan_length_m": 38.6,
+    "samples": 17,
+    "structure_run": {
+     "from_chainage_m": 0.0,
+     "to_chainage_m": 38.6,
+     "length_m": 40.6,
+     "rise_min": 3.21,
+     "rise_median": 5.87,
+     "rise_max": 6.54,
+     "dsm_median": 635.33,
+     "dtm_under_min": 628.78,
+     "dtm_under_max": 632.1
+    },
+    "raised_width_m": {
+     "median": 36.5,
+     "p10": 24.8,
+     "p90": 44.0,
+     "n": 6
+    }
+   },
+   {
+    "part": "road_deck",
+    "osm_way": 106605261,
+    "group": "decks",
+    "plan_length_m": 55.7,
+    "samples": 26,
+    "structure_run": {
+     "from_chainage_m": 4.4,
+     "to_chainage_m": 48.9,
+     "length_m": 46.5,
+     "rise_min": 3.67,
+     "rise_median": 6.15,
+     "rise_max": 6.75,
+     "dsm_median": 635.22,
+     "dtm_under_min": 628.43,
+     "dtm_under_max": 631.74
+    },
+    "raised_width_m": {
+     "median": 37.5,
+     "p10": 13.9,
+     "p90": 43.6,
+     "n": 7
+    }
+   },
+   {
+    "part": "cycleway",
+    "osm_way": 160418783,
+    "group": "decks",
+    "plan_length_m": 60.2,
+    "samples": 30,
+    "structure_run": {
+     "from_chainage_m": 4.3,
+     "to_chainage_m": 54.0,
+     "length_m": 51.7,
+     "rise_min": 3.15,
+     "rise_median": 6.39,
+     "rise_max": 7.27,
+     "dsm_median": 635.64,
+     "dtm_under_min": 628.32,
+     "dtm_under_max": 632.88
+    },
+    "raised_width_m": {
+     "median": 36.5,
+     "p10": 25.7,
+     "p90": 41.6,
+     "n": 8
+    }
+   },
+   {
+    "part": "road_deck",
+    "osm_way": 160418786,
+    "group": "decks",
+    "plan_length_m": 49.8,
+    "samples": 22,
+    "structure_run": {
+     "from_chainage_m": 2.5,
+     "to_chainage_m": 49.8,
+     "length_m": 49.3,
+     "rise_min": 3.16,
+     "rise_median": 5.93,
+     "rise_max": 6.64,
+     "dsm_median": 635.31,
+     "dtm_under_min": 628.62,
+     "dtm_under_max": 632.27
+    },
+    "raised_width_m": {
+     "median": 35.0,
+     "p10": 32.0,
+     "p90": 42.0,
+     "n": 7
+    }
+   },
+   {
+    "part": "road_deck",
+    "osm_way": 474575066,
+    "group": "decks",
+    "plan_length_m": 4.4,
+    "samples": 3
+   },
+   {
+    "part": "road_deck",
+    "osm_way": 474575069,
+    "group": "decks",
+    "plan_length_m": 8.3,
+    "samples": 5
+   },
+   {
+    "part": "road_deck",
+    "osm_way": 474575072,
+    "group": "decks",
+    "plan_length_m": 7.7,
+    "samples": 4
+   },
+   {
+    "part": "road_deck",
+    "osm_way": 501599774,
+    "group": "decks",
+    "plan_length_m": 14.2,
+    "samples": 8,
+    "structure_run": {
+     "from_chainage_m": 0.0,
+     "to_chainage_m": 6.1,
+     "length_m": 8.1,
+     "rise_min": 3.27,
+     "rise_median": 4.24,
+     "rise_max": 5.03,
+     "dsm_median": 635.48,
+     "dtm_under_min": 630.42,
+     "dtm_under_max": 632.23
+    }
+   },
+   {
+    "part": "ramp",
+    "osm_way": 106605008,
+    "group": "approaches",
+    "plan_length_m": 234.8,
+    "samples": 110
+   },
+   {
+    "part": "approach_road",
+    "osm_way": 106605027,
+    "group": "approaches",
+    "plan_length_m": 58.6,
+    "samples": 26
+   },
+   {
+    "part": "approach_road",
+    "osm_way": 106605044,
+    "group": "approaches",
+    "plan_length_m": 31.2,
+    "samples": 15
+   },
+   {
+    "part": "ramp",
+    "osm_way": 106605090,
+    "group": "approaches",
+    "plan_length_m": 152.1,
+    "samples": 69
+   },
+   {
+    "part": "approach_road",
+    "osm_way": 471833422,
+    "group": "approaches",
+    "plan_length_m": 36.2,
+    "samples": 19
+   },
+   {
+    "part": "approach_road",
+    "osm_way": 473737052,
+    "group": "approaches",
+    "plan_length_m": 35.7,
+    "samples": 18
+   },
+   {
+    "part": "under_groat_road",
+    "osm_way": 648645164,
+    "group": "approaches",
+    "plan_length_m": 904.5,
+    "samples": 432,
+    "structure_run": {
+     "from_chainage_m": 355.4,
+     "to_chainage_m": 396.2,
+     "length_m": 42.8,
+     "rise_min": 4.18,
+     "rise_median": 6.63,
+     "rise_max": 6.94,
+     "dsm_median": 635.29,
+     "dtm_under_min": 628.41,
+     "dtm_under_max": 629.01
+    }
+   },
+   {
+    "part": "under_groat_road",
+    "osm_way": 944414125,
+    "group": "approaches",
+    "plan_length_m": 598.7,
+    "samples": 284,
+    "structure_run": {
+     "from_chainage_m": 304.1,
+     "to_chainage_m": 340.7,
+     "length_m": 38.6,
+     "rise_min": 4.15,
+     "rise_median": 6.26,
+     "rise_max": 6.73,
+     "dsm_median": 635.36,
+     "dtm_under_min": 628.85,
+     "dtm_under_max": 629.35
+    }
+   }
+  ],
+  "polygons": []
+ },
+ "G117-102-avenue": {
+  "lines": [
+   {
+    "part": "road_deck",
+    "osm_way": 25601853,
+    "group": "decks",
+    "plan_length_m": 110.5,
+    "samples": 56,
+    "structure_run": {
+     "from_chainage_m": 4.0,
+     "to_chainage_m": 104.4,
+     "length_m": 102.4,
+     "rise_min": 3.18,
+     "rise_median": 14.42,
+     "rise_max": 23.63,
+     "dsm_median": 662.52,
+     "dtm_under_min": 638.92,
+     "dtm_under_max": 659.59
+    },
+    "raised_width_m": {
+     "median": 24.0,
+     "p10": 23.8,
+     "p90": 24.8,
+     "n": 16
+    }
+   },
+   {
+    "part": "sidewalk",
+    "osm_way": 114503872,
+    "group": "decks",
+    "plan_length_m": 119.4,
+    "samples": 60,
+    "structure_run": {
+     "from_chainage_m": 6.1,
+     "to_chainage_m": 117.3,
+     "length_m": 113.3,
+     "rise_min": 3.21,
+     "rise_median": 12.68,
+     "rise_max": 23.97,
+     "dsm_median": 663.03,
+     "dtm_under_min": 639.25,
+     "dtm_under_max": 661.97
+    },
+    "raised_width_m": {
+     "median": 23.5,
+     "p10": 23.0,
+     "p90": 24.0,
+     "n": 17
+    }
+   },
+   {
+    "part": "sidewalk",
+    "osm_way": 114503875,
+    "group": "decks",
+    "plan_length_m": 110.7,
+    "samples": 55,
+    "structure_run": {
+     "from_chainage_m": 0.0,
+     "to_chainage_m": 104.6,
+     "length_m": 106.6,
+     "rise_min": 3.47,
+     "rise_median": 14.97,
+     "rise_max": 24.4,
+     "dsm_median": 663.05,
+     "dtm_under_min": 638.6,
+     "dtm_under_max": 659.75
+    },
+    "raised_width_m": {
+     "median": 23.0,
+     "p10": 23.0,
+     "p90": 24.0,
+     "n": 16
+    }
+   },
+   {
+    "part": "bike_lane",
+    "osm_way": 1230468990,
+    "group": "decks",
+    "plan_length_m": 110.3,
+    "samples": 56,
+    "structure_run": {
+     "from_chainage_m": 8.0,
+     "to_chainage_m": 110.3,
+     "length_m": 104.3,
+     "rise_min": 3.48,
+     "rise_median": 13.04,
+     "rise_max": 23.33,
+     "dsm_median": 662.54,
+     "dtm_under_min": 639.17,
+     "dtm_under_max": 659.26
+    },
+    "raised_width_m": {
+     "median": 24.0,
+     "p10": 23.5,
+     "p90": 24.5,
+     "n": 16
+    }
+   },
+   {
+    "part": "approach_road",
+    "osm_way": 504698254,
+    "group": "approaches",
+    "plan_length_m": 12.7,
+    "samples": 7
+   },
+   {
+    "part": "bike_approach",
+    "osm_way": 1230468991,
+    "group": "approaches",
+    "plan_length_m": 12.5,
+    "samples": 7
+   },
+   {
+    "part": "bike_approach",
+    "osm_way": 1230468992,
+    "group": "approaches",
+    "plan_length_m": 1786.5,
+    "samples": 857,
+    "structure_run": {
+     "from_chainage_m": 715.7,
+     "to_chainage_m": 820.8,
+     "length_m": 107.0,
+     "rise_min": 3.54,
+     "rise_median": 12.77,
+     "rise_max": 16.94,
+     "dsm_median": 678.32,
+     "dtm_under_min": 665.16,
+     "dtm_under_max": 665.74
+    }
+   },
+   {
+    "part": "approach_road",
+    "osm_way": 1278086768,
+    "group": "approaches",
+    "plan_length_m": 10.5,
+    "samples": 6
+   },
+   {
+    "part": "under_groat_road",
+    "osm_way": 37749243,
+    "group": "approaches",
+    "plan_length_m": 1108.5,
+    "samples": 511,
+    "structure_run": {
+     "from_chainage_m": 442.1,
+     "to_chainage_m": 468.1,
+     "length_m": 28.0,
+     "rise_min": 6.85,
+     "rise_median": 23.23,
+     "rise_max": 24.03,
+     "dsm_median": 662.51,
+     "dtm_under_min": 638.93,
+     "dtm_under_max": 639.53
+    }
+   },
+   {
+    "part": "under_groat_road",
+    "osm_way": 484577623,
+    "group": "approaches",
+    "plan_length_m": 745.8,
+    "samples": 342,
+    "structure_run": {
+     "from_chainage_m": 444.3,
+     "to_chainage_m": 468.6,
+     "length_m": 26.2,
+     "rise_min": 20.12,
+     "rise_median": 23.53,
+     "rise_max": 24.19,
+     "dsm_median": 662.53,
+     "dtm_under_min": 638.7,
+     "dtm_under_max": 639.31
+    }
+   }
+  ],
+  "polygons": []
+ },
+ "G119-107-avenue": {
+  "lines": [
+   {
+    "part": "road_deck",
+    "osm_way": 22928017,
+    "group": "decks",
+    "plan_length_m": 74.8,
+    "samples": 38,
+    "structure_run": {
+     "from_chainage_m": 14.2,
+     "to_chainage_m": 62.7,
+     "length_m": 50.5,
+     "rise_min": 3.24,
+     "rise_median": 5.9,
+     "rise_max": 6.46,
+     "dsm_median": 667.95,
+     "dtm_under_min": 661.49,
+     "dtm_under_max": 664.75
+    },
+    "raised_width_m": {
+     "median": 37.5,
+     "p10": 36.2,
+     "p90": 38.3,
+     "n": 8
+    }
+   },
+   {
+    "part": "sidewalk",
+    "osm_way": 114768445,
+    "group": "decks",
+    "plan_length_m": 73.2,
+    "samples": 37,
+    "structure_run": {
+     "from_chainage_m": 10.2,
+     "to_chainage_m": 63.0,
+     "length_m": 54.8,
+     "rise_min": 3.08,
+     "rise_median": 6.44,
+     "rise_max": 7.84,
+     "dsm_median": 668.36,
+     "dtm_under_min": 661.43,
+     "dtm_under_max": 665.28
+    },
+    "raised_width_m": {
+     "median": 37.0,
+     "p10": 36.5,
+     "p90": 38.1,
+     "n": 9
+    }
+   },
+   {
+    "part": "road_deck",
+    "osm_way": 158414123,
+    "group": "decks",
+    "plan_length_m": 74.3,
+    "samples": 38,
+    "structure_run": {
+     "from_chainage_m": 14.1,
+     "to_chainage_m": 60.3,
+     "length_m": 48.2,
+     "rise_min": 3.16,
+     "rise_median": 5.99,
+     "rise_max": 6.52,
+     "dsm_median": 668.0,
+     "dtm_under_min": 661.48,
+     "dtm_under_max": 664.73
+    },
+    "raised_width_m": {
+     "median": 37.5,
+     "p10": 36.5,
+     "p90": 38.1,
+     "n": 8
+    }
+   },
+   {
+    "part": "sidewalk",
+    "osm_way": 159377842,
+    "group": "decks",
+    "plan_length_m": 74.5,
+    "samples": 38,
+    "structure_run": {
+     "from_chainage_m": 12.1,
+     "to_chainage_m": 62.4,
+     "length_m": 52.3,
+     "rise_min": 3.05,
+     "rise_median": 6.35,
+     "rise_max": 7.04,
+     "dsm_median": 668.32,
+     "dtm_under_min": 661.42,
+     "dtm_under_max": 665.09
+    },
+    "raised_width_m": {
+     "median": 37.5,
+     "p10": 36.5,
+     "p90": 39.5,
+     "n": 8
+    }
+   },
+   {
+    "part": "approach_road",
+    "osm_way": 472632840,
+    "group": "approaches",
+    "plan_length_m": 21.2,
+    "samples": 11
+   },
+   {
+    "part": "approach_road",
+    "osm_way": 472632842,
+    "group": "approaches",
+    "plan_length_m": 7.4,
+    "samples": 4
+   },
+   {
+    "part": "approach_road",
+    "osm_way": 472632845,
+    "group": "approaches",
+    "plan_length_m": 5.0,
+    "samples": 3
+   },
+   {
+    "part": "approach_road",
+    "osm_way": 472632850,
+    "group": "approaches",
+    "plan_length_m": 22.0,
+    "samples": 11
+   },
+   {
+    "part": "under_groat_road",
+    "osm_way": 98093800,
+    "group": "approaches",
+    "plan_length_m": 602.1,
+    "samples": 296,
+    "structure_run": {
+     "from_chainage_m": 296.5,
+     "to_chainage_m": 334.6,
+     "length_m": 40.0,
+     "rise_min": 6.24,
+     "rise_median": 6.35,
+     "rise_max": 6.65,
+     "dsm_median": 668.0,
+     "dtm_under_min": 661.57,
+     "dtm_under_max": 661.66
+    }
+   },
+   {
+    "part": "under_groat_road",
+    "osm_way": 157319879,
+    "group": "approaches",
+    "plan_length_m": 605.4,
+    "samples": 297,
+    "structure_run": {
+     "from_chainage_m": 317.1,
+     "to_chainage_m": 355.1,
+     "length_m": 40.0,
+     "rise_min": 6.26,
+     "rise_median": 6.48,
+     "rise_max": 6.84,
+     "dsm_median": 667.99,
+     "dtm_under_min": 661.4,
+     "dtm_under_max": 661.54
+    }
+   }
+  ],
+  "polygons": [
+   {
+    "part": "outline",
+    "osm_way": 1510405388,
+    "area_m2": 2618,
+    "dsm_median": 668.02,
+    "dsm_p95": 668.57,
+    "dsm_max": 670.94,
+    "ground_edge_median": 667.88,
+    "ground_edge_min": 667.62,
+    "ground_edge_max": 667.92,
+    "p95_above_ground": 0.7,
+    "max_above_ground": 3.07
+   }
+  ]
+ },
+ "N258-grierson": {
+  "lines": [
+   {
+    "part": "road_deck",
+    "osm_way": 106711211,
+    "group": "decks",
+    "plan_length_m": 58.2,
+    "samples": 30,
+    "structure_run": {
+     "from_chainage_m": 14.0,
+     "to_chainage_m": 48.2,
+     "length_m": 36.1,
+     "rise_min": 3.23,
+     "rise_median": 6.07,
+     "rise_max": 6.35,
+     "dsm_median": 630.92,
+     "dtm_under_min": 624.52,
+     "dtm_under_max": 627.5
+    },
+    "raised_width_m": {
+     "median": 11.5,
+     "p10": 10.8,
+     "p90": 11.8,
+     "n": 6
+    }
+   },
+   {
+    "part": "northeast_road",
+    "osm_way": 106711201,
+    "group": "approaches",
+    "plan_length_m": 156.1,
+    "samples": 78,
+    "structure_run": {
+     "from_chainage_m": 63.0,
+     "to_chainage_m": 69.1,
+     "length_m": 8.1,
+     "rise_min": 4.57,
+     "rise_median": 8.55,
+     "rise_max": 8.71,
+     "dsm_median": 637.58,
+     "dtm_under_min": 628.91,
+     "dtm_under_max": 629.09
+    }
+   },
+   {
+    "part": "northeast_road",
+    "osm_way": 697598868,
+    "group": "approaches",
+    "plan_length_m": 69.4,
+    "samples": 35
+   },
+   {
+    "part": "southwest_road",
+    "osm_way": 106711229,
+    "group": "approaches",
+    "plan_length_m": 29.0,
+    "samples": 15
+   },
+   {
+    "part": "southwest_road",
+    "osm_way": 151895211,
+    "group": "approaches",
+    "plan_length_m": 201.1,
+    "samples": 94
+   }
+  ],
+  "polygons": []
+ },
+ "N259-rossdale-mcdougall": {
+  "lines": [
+   {
+    "part": "road_deck",
+    "osm_way": 37120045,
+    "group": "decks",
+    "plan_length_m": 48.4,
+    "samples": 24,
+    "structure_run": {
+     "from_chainage_m": 12.9,
+     "to_chainage_m": 42.2,
+     "length_m": 31.3,
+     "rise_min": 3.34,
+     "rise_median": 5.69,
+     "rise_max": 5.89,
+     "dsm_median": 636.23,
+     "dtm_under_min": 630.39,
+     "dtm_under_max": 633.01
+    },
+    "raised_width_m": {
+     "median": 13.0,
+     "p10": 13.0,
+     "p90": 14.8,
+     "n": 5
+    }
+   },
+   {
+    "part": "northeast_road",
+    "osm_way": 36610268,
+    "group": "approaches",
+    "plan_length_m": 84.0,
+    "samples": 42
+   },
+   {
+    "part": "southwest_road",
+    "osm_way": 37120044,
+    "group": "approaches",
+    "plan_length_m": 39.4,
+    "samples": 19
+   },
+   {
+    "part": "southwest_link",
+    "osm_way": 321190619,
+    "group": "approaches",
+    "plan_length_m": 24.1,
+    "samples": 11
+   },
+   {
+    "part": "southwest_link",
+    "osm_way": 321190620,
+    "group": "approaches",
+    "plan_length_m": 19.2,
+    "samples": 9
+   }
+  ],
+  "polygons": []
+ },
+ "N260-scona-connors": {
+  "lines": [
+   {
+    "part": "scona_over_connors",
+    "osm_way": 22959547,
+    "group": "decks",
+    "plan_length_m": 49.7,
+    "samples": 25,
+    "structure_run": {
+     "from_chainage_m": 6.2,
+     "to_chainage_m": 41.4,
+     "length_m": 37.2,
+     "rise_min": 3.24,
+     "rise_median": 5.42,
+     "rise_max": 6.18,
+     "dsm_median": 631.57,
+     "dtm_under_min": 625.35,
+     "dtm_under_max": 628.92
+    },
+    "raised_width_m": {
+     "median": 9.8,
+     "p10": 9.2,
+     "p90": 10.2,
+     "n": 6
+    }
+   },
+   {
+    "part": "connors_over_ramp",
+    "osm_way": 34388891,
+    "group": "decks",
+    "plan_length_m": 42.1,
+    "samples": 22,
+    "structure_run": {
+     "from_chainage_m": 6.0,
+     "to_chainage_m": 38.1,
+     "length_m": 34.1,
+     "rise_min": 3.32,
+     "rise_median": 5.91,
+     "rise_max": 6.36,
+     "dsm_median": 631.45,
+     "dtm_under_min": 625.14,
+     "dtm_under_max": 627.96
+    },
+    "raised_width_m": {
+     "median": 16.5,
+     "p10": 16.5,
+     "p90": 17.0,
+     "n": 6
+    }
+   },
+   {
+    "part": "avenue_westbound",
+    "osm_way": 22916470,
+    "group": "decks",
+    "plan_length_m": 75.3,
+    "samples": 38,
+    "structure_run": {
+     "from_chainage_m": 8.1,
+     "to_chainage_m": 73.3,
+     "length_m": 67.1,
+     "rise_min": 3.3,
+     "rise_median": 6.85,
+     "rise_max": 7.45,
+     "dsm_median": 631.46,
+     "dtm_under_min": 624.09,
+     "dtm_under_max": 628.61
+    },
+    "raised_width_m": {
+     "median": 20.0,
+     "p10": 20.0,
+     "p90": 22.0,
+     "n": 11
+    }
+   },
+   {
+    "part": "avenue_eastbound",
+    "osm_way": 106711204,
+    "group": "decks",
+    "plan_length_m": 80.0,
+    "samples": 40,
+    "structure_run": {
+     "from_chainage_m": 0.0,
+     "to_chainage_m": 71.9,
+     "length_m": 73.9,
+     "rise_min": 3.15,
+     "rise_median": 8.38,
+     "rise_max": 8.52,
+     "dsm_median": 633.1,
+     "dtm_under_min": 624.43,
+     "dtm_under_max": 629.85
+    },
+    "raised_width_m": {
+     "median": 21.5,
+     "p10": 21.0,
+     "p90": 22.0,
+     "n": 11
+    }
+   },
+   {
+    "part": "avenue_eastbound_ramp",
+    "osm_way": 106711230,
+    "group": "decks",
+    "plan_length_m": 80.2,
+    "samples": 39,
+    "structure_run": {
+     "from_chainage_m": 2.1,
+     "to_chainage_m": 73.9,
+     "length_m": 73.8,
+     "rise_min": 3.06,
+     "rise_median": 7.93,
+     "rise_max": 8.08,
+     "dsm_median": 632.74,
+     "dtm_under_min": 624.61,
+     "dtm_under_max": 629.91
+    },
+    "raised_width_m": {
+     "median": 22.0,
+     "p10": 20.5,
+     "p90": 22.5,
+     "n": 11
+    }
+   },
+   {
+    "part": "scona_northbound",
+    "osm_way": 1363989830,
+    "group": "approaches",
+    "plan_length_m": 340.7,
+    "samples": 167
+   },
+   {
+    "part": "scona_northbound",
+    "osm_way": 22959548,
+    "group": "approaches",
+    "plan_length_m": 102.2,
+    "samples": 48
+   },
+   {
+    "part": "connors_toward_river",
+    "osm_way": 573341581,
+    "group": "approaches",
+    "plan_length_m": 66.4,
+    "samples": 33
+   },
+   {
+    "part": "connors_toward_river",
+    "osm_way": 697622884,
+    "group": "approaches",
+    "plan_length_m": 72.4,
+    "samples": 36,
+    "structure_run": {
+     "from_chainage_m": 39.2,
+     "to_chainage_m": 59.9,
+     "length_m": 22.7,
+     "rise_min": 7.87,
+     "rise_median": 8.27,
+     "rise_max": 8.79,
+     "dsm_median": 632.99,
+     "dtm_under_min": 624.58,
+     "dtm_under_max": 624.85
+    }
+   },
+   {
+    "part": "connors_from_low_level",
+    "osm_way": 22917297,
+    "group": "approaches",
+    "plan_length_m": 118.5,
+    "samples": 59,
+    "structure_run": {
+     "from_chainage_m": 88.2,
+     "to_chainage_m": 110.4,
+     "length_m": 24.2,
+     "rise_min": 3.81,
+     "rise_median": 8.14,
+     "rise_max": 8.88,
+     "dsm_median": 632.77,
+     "dtm_under_min": 624.31,
+     "dtm_under_max": 624.72
+    }
+   },
+   {
+    "part": "scona_southbound",
+    "osm_way": 1415752722,
+    "group": "approaches",
+    "plan_length_m": 145.2,
+    "samples": 73
+   },
+   {
+    "part": "scona_southbound",
+    "osm_way": 693125057,
+    "group": "approaches",
+    "plan_length_m": 101.2,
+    "samples": 48
+   },
+   {
+    "part": "scona_southbound",
+    "osm_way": 472624621,
+    "group": "approaches",
+    "plan_length_m": 44.7,
+    "samples": 22
+   },
+   {
+    "part": "scona_southbound",
+    "osm_way": 472624622,
+    "group": "approaches",
+    "plan_length_m": 52.9,
+    "samples": 26
+   },
+   {
+    "part": "scona_southbound",
+    "osm_way": 112188681,
+    "group": "approaches",
+    "plan_length_m": 137.9,
+    "samples": 67
+   },
+   {
+    "part": "connors_eastbound",
+    "osm_way": 238203855,
+    "group": "approaches",
+    "plan_length_m": 215.7,
+    "samples": 106
+   },
+   {
+    "part": "connors_eastbound",
+    "osm_way": 34388889,
+    "group": "approaches",
+    "plan_length_m": 266.0,
+    "samples": 124,
+    "structure_run": {
+     "from_chainage_m": 0.0,
+     "to_chainage_m": 6.5,
+     "length_m": 8.5,
+     "rise_min": 6.07,
+     "rise_median": 6.14,
+     "rise_max": 6.29,
+     "dsm_median": 631.54,
+     "dtm_under_min": 625.26,
+     "dtm_under_max": 625.43
+    }
+   },
+   {
+    "part": "connors_westbound",
+    "osm_way": 22914306,
+    "group": "approaches",
+    "plan_length_m": 295.3,
+    "samples": 141
+   },
+   {
+    "part": "connors_westbound",
+    "osm_way": 34388890,
+    "group": "approaches",
+    "plan_length_m": 108.0,
+    "samples": 53
+   },
+   {
+    "part": "avenue_westbound",
+    "osm_way": 1433613567,
+    "group": "approaches",
+    "plan_length_m": 10.7,
+    "samples": 6
+   },
+   {
+    "part": "scona_loop",
+    "osm_way": 472624620,
+    "group": "ramps",
+    "plan_length_m": 41.3,
+    "samples": 21
+   },
+   {
+    "part": "scona_loop",
+    "osm_way": 25364768,
+    "group": "ramps",
+    "plan_length_m": 76.8,
+    "samples": 36
+   },
+   {
+    "part": "scona_loop",
+    "osm_way": 25364763,
+    "group": "ramps",
+    "plan_length_m": 20.2,
+    "samples": 10
+   },
+   {
+    "part": "scona_to_99a",
+    "osm_way": 25364765,
+    "group": "ramps",
+    "plan_length_m": 124.4,
+    "samples": 58
+   },
+   {
+    "part": "avenue_ramp",
+    "osm_way": 106711214,
+    "group": "ramps",
+    "plan_length_m": 99.1,
+    "samples": 49,
+    "structure_run": {
+     "from_chainage_m": 12.4,
+     "to_chainage_m": 34.7,
+     "length_m": 24.4,
+     "rise_min": 5.02,
+     "rise_median": 6.6,
+     "rise_max": 7.41,
+     "dsm_median": 630.9,
+     "dtm_under_min": 624.2,
+     "dtm_under_max": 624.36
+    }
+   },
+   {
+    "part": "avenue_ramp",
+    "osm_way": 106711207,
+    "group": "ramps",
+    "plan_length_m": 56.0,
+    "samples": 29
+   },
+   {
+    "part": "avenue_ramp",
+    "osm_way": 106711231,
+    "group": "ramps",
+    "plan_length_m": 244.1,
+    "samples": 114
+   },
+   {
+    "part": "connors_ramp",
+    "osm_way": 106711195,
+    "group": "ramps",
+    "plan_length_m": 247.6,
+    "samples": 116
+   },
+   {
+    "part": "connors_ramp",
+    "osm_way": 106711213,
+    "group": "ramps",
+    "plan_length_m": 113.5,
+    "samples": 54,
+    "structure_run": {
+     "from_chainage_m": 50.4,
+     "to_chainage_m": 68.6,
+     "length_m": 20.2,
+     "rise_min": 3.59,
+     "rise_median": 6.36,
+     "rise_max": 6.88,
+     "dsm_median": 631.52,
+     "dtm_under_min": 625.07,
+     "dtm_under_max": 625.18
+    }
+   },
+   {
+    "part": "connors_ramp",
+    "osm_way": 106711210,
+    "group": "ramps",
+    "plan_length_m": 174.3,
+    "samples": 83
+   }
+  ],
+  "polygons": []
+ },
+ "P152-muttart": {
+  "lines": [],
+  "polygons": [
+   {
+    "part": "west_platform",
+    "osm_way": 1157283683,
+    "area_m2": 390,
+    "dsm_median": 621.93,
+    "dsm_p95": 622.69,
+    "dsm_max": 623.17,
+    "ground_edge_median": 622.05,
+    "ground_edge_min": 620.18,
+    "ground_edge_max": 622.06,
+    "p95_above_ground": 0.65,
+    "max_above_ground": 1.12
+   },
+   {
+    "part": "east_platform",
+    "osm_way": 1157283685,
+    "area_m2": 400,
+    "dsm_median": 622.68,
+    "dsm_p95": 623.88,
+    "dsm_max": 624.58,
+    "ground_edge_median": 622.44,
+    "ground_edge_min": 620.2,
+    "ground_edge_max": 622.56,
+    "p95_above_ground": 1.43,
+    "max_above_ground": 2.14
+   }
+  ]
+ },
+ "P152-muttart/B254-conservatory": {
+  "lines": [],
+  "polygons": [
+   {
+    "part": "east_ring",
+    "osm_way": 1287216689,
+    "area_m2": 4032,
+    "dsm_median": 629.7,
+    "dsm_p95": 639.98,
+    "dsm_max": 645.43,
+    "ground_edge_median": 627.89,
+    "ground_edge_min": 624.37,
+    "ground_edge_max": 628.17,
+    "p95_above_ground": 12.08,
+    "max_above_ground": 17.53
+   },
+   {
+    "part": "west_ring",
+    "osm_way": 1287216690,
+    "area_m2": 7462,
+    "dsm_median": 625.39,
+    "dsm_p95": 627.54,
+    "dsm_max": 630.38,
+    "ground_edge_median": 622.05,
+    "ground_edge_min": 621.5,
+    "ground_edge_max": 626.13,
+    "p95_above_ground": 5.49,
+    "max_above_ground": 8.33
+   },
+   {
+    "part": "small_ring_south",
+    "osm_way": 322972875,
+    "area_m2": 39,
+    "dsm_median": 628.15,
+    "dsm_p95": 628.82,
+    "dsm_max": 629.03,
+    "ground_edge_median": 624.8,
+    "ground_edge_min": 624.3,
+    "ground_edge_max": 624.98,
+    "p95_above_ground": 4.02,
+    "max_above_ground": 4.23
+   },
+   {
+    "part": "small_ring_south",
+    "osm_way": 322972340,
+    "area_m2": 61,
+    "dsm_median": 629.95,
+    "dsm_p95": 630.78,
+    "dsm_max": 630.83,
+    "ground_edge_median": 625.49,
+    "ground_edge_min": 625.22,
+    "ground_edge_max": 625.57,
+    "p95_above_ground": 5.29,
+    "max_above_ground": 5.34
+   },
+   {
+    "part": "tropical",
+    "osm_way": 714340898,
+    "area_m2": 809,
+    "dsm_median": 632.95,
+    "dsm_p95": 641.9,
+    "dsm_max": 645.43,
+    "ground_edge_median": 627.82,
+    "ground_edge_min": 624.37,
+    "ground_edge_max": 628.16,
+    "p95_above_ground": 14.08,
+    "max_above_ground": 17.61
+   },
+   {
+    "part": "temperate",
+    "osm_way": 714340901,
+    "area_m2": 809,
+    "dsm_median": 632.99,
+    "dsm_p95": 641.97,
+    "dsm_max": 645.16,
+    "ground_edge_median": 628.04,
+    "ground_edge_min": 627.7,
+    "ground_edge_max": 628.17,
+    "p95_above_ground": 13.92,
+    "max_above_ground": 17.12
+   },
+   {
+    "part": "arid",
+    "osm_way": 714340899,
+    "area_m2": 486,
+    "dsm_median": 632.03,
+    "dsm_p95": 638.88,
+    "dsm_max": 641.11,
+    "ground_edge_median": 627.9,
+    "ground_edge_min": 626.86,
+    "ground_edge_max": 628.08,
+    "p95_above_ground": 10.98,
+    "max_above_ground": 13.21
+   },
+   {
+    "part": "feature",
+    "osm_way": 714340900,
+    "area_m2": 506,
+    "dsm_median": 631.8,
+    "dsm_p95": 638.78,
+    "dsm_max": 641.23,
+    "ground_edge_median": 627.88,
+    "ground_edge_min": 627.68,
+    "ground_edge_max": 628.14,
+    "p95_above_ground": 10.9,
+    "max_above_ground": 13.35
+   },
+   {
+    "part": "centre_glass_part",
+    "osm_way": 714340902,
+    "area_m2": 30,
+    "dsm_median": 629.8,
+    "dsm_p95": 631.19,
+    "dsm_max": 631.54,
+    "ground_edge_median": 627.69,
+    "ground_edge_min": 627.68,
+    "ground_edge_max": 627.69,
+    "p95_above_ground": 3.51,
+    "max_above_ground": 3.86
+   },
+   {
+    "part": "grass_roof_part",
+    "osm_way": 714340904,
+    "area_m2": 231,
+    "dsm_median": 627.88,
+    "dsm_p95": 628.68,
+    "dsm_max": 629.02,
+    "ground_edge_median": 627.81,
+    "ground_edge_min": 626.25,
+    "ground_edge_max": 628.16,
+    "p95_above_ground": 0.87,
+    "max_above_ground": 1.21
+   }
+  ]
+ },
+ "R10-high-level": {
+  "lines": [
+   {
+    "part": "lower_road_deck",
+    "osm_way": 22915822,
+    "group": "decks",
+    "plan_length_m": 729.0,
+    "samples": 358,
+    "structure_run": {
+     "from_chainage_m": 0.0,
+     "to_chainage_m": 726.9,
+     "length_m": 728.9,
+     "rise_min": 3.91,
+     "rise_median": 39.11,
+     "rise_max": 47.53,
+     "dsm_median": 662.33,
+     "dtm_under_min": 614.69,
+     "dtm_under_max": 658.48
+    },
+    "raised_width_m": {
+     "median": 11.0,
+     "p10": 10.0,
+     "p90": 12.0,
+     "n": 108
+    }
+   },
+   {
+    "part": "lower_road_deck_north_split",
+    "osm_way": 500327672,
+    "group": "decks",
+    "plan_length_m": 48.3,
+    "samples": 23,
+    "structure_run": {
+     "from_chainage_m": 25.2,
+     "to_chainage_m": 48.3,
+     "length_m": 25.2,
+     "rise_min": 3.77,
+     "rise_median": 13.45,
+     "rise_max": 20.0,
+     "dsm_median": 661.84,
+     "dtm_under_min": 642.22,
+     "dtm_under_max": 653.05
+    },
+    "raised_width_m": {
+     "median": 12.5,
+     "p10": 12.1,
+     "p90": 12.9,
+     "n": 3
+    }
+   },
+   {
+    "part": "lower_road_deck_north_split",
+    "osm_way": 22916464,
+    "group": "decks",
+    "plan_length_m": 51.6,
+    "samples": 21,
+    "structure_run": {
+     "from_chainage_m": 14.9,
+     "to_chainage_m": 51.6,
+     "length_m": 38.7,
+     "rise_min": 3.35,
+     "rise_median": 10.22,
+     "rise_max": 20.0,
+     "dsm_median": 659.7,
+     "dtm_under_min": 642.22,
+     "dtm_under_max": 653.88
+    }
+   },
+   {
+    "part": "lower_deck_sidewalk",
+    "osm_way": 461598491,
+    "group": "decks",
+    "plan_length_m": 763.9,
+    "samples": 378,
+    "structure_run": {
+     "from_chainage_m": 2.2,
+     "to_chainage_m": 752.4,
+     "length_m": 752.2,
+     "rise_min": 3.27,
+     "rise_median": 37.27,
+     "rise_max": 47.1,
+     "dsm_median": 661.67,
+     "dtm_under_min": 614.39,
+     "dtm_under_max": 658.5
+    },
+    "raised_width_m": {
+     "median": 11.0,
+     "p10": 1.0,
+     "p90": 12.5,
+     "n": 109
+    }
+   },
+   {
+    "part": "lower_deck_sidewalk",
+    "osm_way": 113767072,
+    "group": "decks",
+    "plan_length_m": 780.2,
+    "samples": 384,
+    "structure_run": {
+     "from_chainage_m": 5.3,
+     "to_chainage_m": 780.2,
+     "length_m": 776.9,
+     "rise_min": 3.58,
+     "rise_median": 38.37,
+     "rise_max": 47.12,
+     "dsm_median": 661.75,
+     "dtm_under_min": 614.83,
+     "dtm_under_max": 657.87
+    },
+    "raised_width_m": {
+     "median": 11.0,
+     "p10": 2.5,
+     "p90": 12.3,
+     "n": 115
+    }
+   },
+   {
+    "part": "upper_deck_streetcar",
+    "osm_way": 463555601,
+    "group": "decks",
+    "plan_length_m": 759.7,
+    "samples": 376,
+    "structure_run": {
+     "from_chainage_m": 0.0,
+     "to_chainage_m": 751.7,
+     "length_m": 753.7,
+     "rise_min": 3.33,
+     "rise_median": 38.66,
+     "rise_max": 47.56,
+     "dsm_median": 662.45,
+     "dtm_under_min": 614.66,
+     "dtm_under_max": 658.88
+    },
+    "raised_width_m": {
+     "median": 11.0,
+     "p10": 10.0,
+     "p90": 12.0,
+     "n": 112
+    }
+   },
+   {
+    "part": "upper_deck_streetcar_south_stub",
+    "osm_way": 113767071,
+    "group": "decks",
+    "plan_length_m": 18.6,
+    "samples": 10,
+    "structure_run": {
+     "from_chainage_m": 6.2,
+     "to_chainage_m": 18.6,
+     "length_m": 14.4,
+     "rise_min": 4.17,
+     "rise_median": 10.68,
+     "rise_max": 10.92,
+     "dsm_median": 665.2,
+     "dtm_under_min": 654.26,
+     "dtm_under_max": 661.06
+    },
+    "raised_width_m": {
+     "median": 6.5,
+     "p10": 5.3,
+     "p90": 13.7,
+     "n": 3
+    }
+   },
+   {
+    "part": "north_road_approach",
+    "osm_way": 510090943,
+    "group": "approaches",
+    "plan_length_m": 95.8,
+    "samples": 48
+   },
+   {
+    "part": "north_road_approach",
+    "osm_way": 500327669,
+    "group": "approaches",
+    "plan_length_m": 107.9,
+    "samples": 53
+   },
+   {
+    "part": "south_road_approach",
+    "osm_way": 1095758755,
+    "group": "approaches",
+    "plan_length_m": 144.4,
+    "samples": 70
+   },
+   {
+    "part": "north_streetcar_approach",
+    "osm_way": 219620022,
+    "group": "approaches",
+    "plan_length_m": 134.7,
+    "samples": 66
+   },
+   {
+    "part": "south_streetcar_approach",
+    "osm_way": 1474789002,
+    "group": "approaches",
+    "plan_length_m": 24.9,
+    "samples": 12
+   }
+  ],
+  "polygons": [
+   {
+    "part": "bridge_outline",
+    "osm_way": 461598489,
+    "area_m2": 10848,
+    "dsm_median": 662.15,
+    "dsm_p95": 664.59,
+    "dsm_max": 670.95,
+    "ground_edge_median": 644.28,
+    "ground_edge_min": 614.4,
+    "ground_edge_max": 665.09,
+    "p95_above_ground": 20.31,
+    "max_above_ground": 26.67
+   }
+  ]
+ },
+ "R11-walterdale": {
+  "lines": [
+   {
+    "part": "road_deck",
+    "osm_way": 175326660,
+    "group": "decks",
+    "plan_length_m": 256.8,
+    "samples": 129,
+    "structure_run": {
+     "from_chainage_m": 4.0,
+     "to_chainage_m": 250.7,
+     "length_m": 248.6,
+     "rise_min": 3.35,
+     "rise_median": 14.5,
+     "rise_max": 52.82,
+     "dsm_median": 629.05,
+     "dtm_under_min": 614.13,
+     "dtm_under_max": 625.53
+    },
+    "raised_width_m": {
+     "median": 1.5,
+     "p10": 0.7,
+     "p90": 2.5,
+     "n": 5
+    }
+   },
+   {
+    "part": "west_sidewalk",
+    "osm_way": 709287392,
+    "group": "decks",
+    "plan_length_m": 262.7,
+    "samples": 137,
+    "structure_run": {
+     "from_chainage_m": 6.2,
+     "to_chainage_m": 254.4,
+     "length_m": 250.2,
+     "rise_min": 3.01,
+     "rise_median": 17.83,
+     "rise_max": 50.71,
+     "dsm_median": 632.08,
+     "dtm_under_min": 614.13,
+     "dtm_under_max": 625.91
+    },
+    "raised_width_m": {
+     "median": 1.2,
+     "p10": 0.5,
+     "p90": 2.4,
+     "n": 8
+    }
+   },
+   {
+    "part": "east_shared_use_path",
+    "osm_way": 451293733,
+    "group": "decks",
+    "plan_length_m": 271.2,
+    "samples": 127,
+    "structure_run": {
+     "from_chainage_m": 12.1,
+     "to_chainage_m": 256.8,
+     "length_m": 246.6,
+     "rise_min": 3.53,
+     "rise_median": 12.99,
+     "rise_max": 14.33,
+     "dsm_median": 627.55,
+     "dtm_under_min": 614.13,
+     "dtm_under_max": 624.68
+    },
+    "raised_width_m": {
+     "median": 8.0,
+     "p10": 5.5,
+     "p90": 12.5,
+     "n": 35
+    }
+   },
+   {
+    "part": "north_road",
+    "osm_way": 471835847,
+    "group": "approaches",
+    "plan_length_m": 110.6,
+    "samples": 54
+   },
+   {
+    "part": "south_road",
+    "osm_way": 931254808,
+    "group": "approaches",
+    "plan_length_m": 30.8,
+    "samples": 16
+   },
+   {
+    "part": "south_road",
+    "osm_way": 1516540140,
+    "group": "approaches",
+    "plan_length_m": 18.7,
+    "samples": 10
+   }
+  ],
+  "polygons": []
+ },
+ "R12-james-macdonald": {
+  "lines": [
+   {
+    "part": "road_deck",
+    "osm_way": 25455305,
+    "group": "decks",
+    "plan_length_m": 376.4,
+    "samples": 184,
+    "structure_run": {
+     "from_chainage_m": 6.2,
+     "to_chainage_m": 343.9,
+     "length_m": 339.7,
+     "rise_min": 3.26,
+     "rise_median": 17.38,
+     "rise_max": 18.43,
+     "dsm_median": 631.63,
+     "dtm_under_min": 613.68,
+     "dtm_under_max": 628.88
+    },
+    "raised_width_m": {
+     "median": 27.0,
+     "p10": 26.0,
+     "p90": 28.0,
+     "n": 50
+    }
+   },
+   {
+    "part": "road_deck",
+    "osm_way": 25455308,
+    "group": "decks",
+    "plan_length_m": 370.6,
+    "samples": 180,
+    "structure_run": {
+     "from_chainage_m": 26.8,
+     "to_chainage_m": 360.6,
+     "length_m": 335.8,
+     "rise_min": 3.51,
+     "rise_median": 16.86,
+     "rise_max": 18.2,
+     "dsm_median": 631.1,
+     "dtm_under_min": 613.68,
+     "dtm_under_max": 628.55
+    },
+    "raised_width_m": {
+     "median": 26.0,
+     "p10": 24.0,
+     "p90": 28.0,
+     "n": 49
+    }
+   },
+   {
+    "part": "north_sidewalk",
+    "osm_way": 673730078,
+    "group": "decks",
+    "plan_length_m": 362.6,
+    "samples": 177,
+    "structure_run": {
+     "from_chainage_m": 8.5,
+     "to_chainage_m": 350.2,
+     "length_m": 343.7,
+     "rise_min": 3.25,
+     "rise_median": 18.62,
+     "rise_max": 19.56,
+     "dsm_median": 632.89,
+     "dtm_under_min": 613.69,
+     "dtm_under_max": 629.92
+    },
+    "raised_width_m": {
+     "median": 22.5,
+     "p10": 3.0,
+     "p90": 28.0,
+     "n": 51
+    }
+   },
+   {
+    "part": "west_road_westbound",
+    "osm_way": 25455281,
+    "group": "approaches",
+    "plan_length_m": 182.4,
+    "samples": 89
+   },
+   {
+    "part": "west_road_eastbound",
+    "osm_way": 432373966,
+    "group": "approaches",
+    "plan_length_m": 152.7,
+    "samples": 76
+   },
+   {
+    "part": "east_road_westbound",
+    "osm_way": 926792878,
+    "group": "approaches",
+    "plan_length_m": 68.0,
+    "samples": 34
+   },
+   {
+    "part": "east_road_eastbound",
+    "osm_way": 106711215,
+    "group": "approaches",
+    "plan_length_m": 32.6,
+    "samples": 17
+   },
+   {
+    "part": "east_road_eastbound",
+    "osm_way": 926792877,
+    "group": "approaches",
+    "plan_length_m": 40.0,
+    "samples": 21
+   },
+   {
+    "part": "east_link",
+    "osm_way": 926792876,
+    "group": "approaches",
+    "plan_length_m": 39.8,
+    "samples": 20
+   },
+   {
+    "part": "east_ramp",
+    "osm_way": 106711220,
+    "group": "approaches",
+    "plan_length_m": 303.6,
+    "samples": 143
+   },
+   {
+    "part": "west_path",
+    "osm_way": 1264715853,
+    "group": "approaches",
+    "plan_length_m": 192.5,
+    "samples": 90
+   },
+   {
+    "part": "west_path",
+    "osm_way": 226985622,
+    "group": "approaches",
+    "plan_length_m": 19.7,
+    "samples": 10
+   },
+   {
+    "part": "east_path",
+    "osm_way": 673730077,
+    "group": "approaches",
+    "plan_length_m": 3.3,
+    "samples": 3
+   },
+   {
+    "part": "west_cross_street",
+    "osm_way": 302605553,
+    "group": "cross_roads",
+    "plan_length_m": 577.6,
+    "samples": 277,
+    "structure_run": {
+     "from_chainage_m": 300.3,
+     "to_chainage_m": 332.1,
+     "length_m": 33.8,
+     "rise_min": 6.0,
+     "rise_median": 8.19,
+     "rise_max": 9.07,
+     "dsm_median": 629.92,
+     "dtm_under_min": 621.69,
+     "dtm_under_max": 621.98
+    }
+   },
+   {
+    "part": "east_cross_street",
+    "osm_way": 1126581680,
+    "group": "cross_roads",
+    "plan_length_m": 121.0,
+    "samples": 52,
+    "structure_run": {
+     "from_chainage_m": 17.3,
+     "to_chainage_m": 54.0,
+     "length_m": 38.7,
+     "rise_min": 6.68,
+     "rise_median": 8.12,
+     "rise_max": 9.02,
+     "dsm_median": 632.29,
+     "dtm_under_min": 624.01,
+     "dtm_under_max": 624.46
+    }
+   },
+   {
+    "part": "east_cross_street",
+    "osm_way": 25364259,
+    "group": "cross_roads",
+    "plan_length_m": 311.8,
+    "samples": 145
+   },
+   {
+    "part": "west_98_avenue",
+    "osm_way": 25455188,
+    "group": "cross_roads",
+    "plan_length_m": 330.8,
+    "samples": 156
+   }
+  ],
+  "polygons": [
+   {
+    "part": "bridge_outline",
+    "osm_way": 626069071,
+    "area_m2": 10875,
+    "dsm_median": 631.56,
+    "dsm_p95": 632.86,
+    "dsm_max": 639.56,
+    "ground_edge_median": 620.25,
+    "ground_edge_min": 613.73,
+    "ground_edge_max": 631.39,
+    "p95_above_ground": 12.61,
+    "max_above_ground": 19.31
+   }
+  ]
+ },
+ "R13-low-level": {
+  "lines": [
+   {
+    "part": "road_deck",
+    "osm_way": 31882107,
+    "group": "decks",
+    "plan_length_m": 211.0,
+    "samples": 106,
+    "structure_run": {
+     "from_chainage_m": 0.0,
+     "to_chainage_m": 211.0,
+     "length_m": 213.0,
+     "rise_min": 3.04,
+     "rise_median": 17.55,
+     "rise_max": 19.48,
+     "dsm_median": 631.69,
+     "dtm_under_min": 613.58,
+     "dtm_under_max": 622.56
+    },
+    "raised_width_m": {
+     "median": 8.5,
+     "p10": 3.2,
+     "p90": 20.0,
+     "n": 23
+    }
+   },
+   {
+    "part": "road_deck",
+    "osm_way": 22916473,
+    "group": "decks",
+    "plan_length_m": 209.7,
+    "samples": 105,
+    "structure_run": {
+     "from_chainage_m": 0.0,
+     "to_chainage_m": 209.7,
+     "length_m": 211.7,
+     "rise_min": 3.39,
+     "rise_median": 18.08,
+     "rise_max": 19.94,
+     "dsm_median": 632.1,
+     "dtm_under_min": 613.55,
+     "dtm_under_max": 622.16
+    },
+    "raised_width_m": {
+     "median": 19.5,
+     "p10": 18.5,
+     "p90": 20.0,
+     "n": 23
+    }
+   },
+   {
+    "part": "east_sidewalk",
+    "osm_way": 302605469,
+    "group": "decks",
+    "plan_length_m": 208.3,
+    "samples": 105,
+    "structure_run": {
+     "from_chainage_m": 0.0,
+     "to_chainage_m": 208.3,
+     "length_m": 210.3,
+     "rise_min": 4.01,
+     "rise_median": 16.31,
+     "rise_max": 19.06,
+     "dsm_median": 630.04,
+     "dtm_under_min": 613.6,
+     "dtm_under_max": 622.15
+    },
+    "raised_width_m": {
+     "median": 1.5,
+     "p10": 0.5,
+     "p90": 20.0,
+     "n": 22
+    }
+   },
+   {
+    "part": "west_sidewalk",
+    "osm_way": 302605430,
+    "group": "decks",
+    "plan_length_m": 210.2,
+    "samples": 105,
+    "structure_run": {
+     "from_chainage_m": 0.0,
+     "to_chainage_m": 210.2,
+     "length_m": 212.2,
+     "rise_min": 3.87,
+     "rise_median": 14.95,
+     "rise_max": 18.15,
+     "dsm_median": 629.23,
+     "dtm_under_min": 613.57,
+     "dtm_under_max": 622.74
+    },
+    "raised_width_m": {
+     "median": 1.0,
+     "p10": 0.5,
+     "p90": 7.5,
+     "n": 21
+    }
+   },
+   {
+    "part": "north_road_southbound",
+    "osm_way": 1433098757,
+    "group": "approaches",
+    "plan_length_m": 53.8,
+    "samples": 27,
+    "structure_run": {
+     "from_chainage_m": 0.0,
+     "to_chainage_m": 12.9,
+     "length_m": 14.9,
+     "rise_min": 3.25,
+     "rise_median": 6.25,
+     "rise_max": 6.64,
+     "dsm_median": 630.92,
+     "dtm_under_min": 624.55,
+     "dtm_under_max": 624.76
+    }
+   },
+   {
+    "part": "north_road_southbound",
+    "osm_way": 303665637,
+    "group": "approaches",
+    "plan_length_m": 85.1,
+    "samples": 39
+   },
+   {
+    "part": "north_road_northbound",
+    "osm_way": 22942137,
+    "group": "approaches",
+    "plan_length_m": 10.1,
+    "samples": 6
+   },
+   {
+    "part": "north_road_northbound",
+    "osm_way": 303665641,
+    "group": "approaches",
+    "plan_length_m": 125.7,
+    "samples": 60,
+    "structure_run": {
+     "from_chainage_m": 30.3,
+     "to_chainage_m": 41.0,
+     "length_m": 12.7,
+     "rise_min": 5.75,
+     "rise_median": 6.28,
+     "rise_max": 6.81,
+     "dsm_median": 631.09,
+     "dtm_under_min": 624.77,
+     "dtm_under_max": 624.86
+    }
+   },
+   {
+    "part": "south_road_southbound",
+    "osm_way": 1433098760,
+    "group": "approaches",
+    "plan_length_m": 75.9,
+    "samples": 37
+   },
+   {
+    "part": "south_road_northbound",
+    "osm_way": 1095591592,
+    "group": "approaches",
+    "plan_length_m": 22.4,
+    "samples": 11
+   },
+   {
+    "part": "south_road_northbound",
+    "osm_way": 31883773,
+    "group": "approaches",
+    "plan_length_m": 144.3,
+    "samples": 70,
+    "structure_run": {
+     "from_chainage_m": 10.3,
+     "to_chainage_m": 30.8,
+     "length_m": 22.5,
+     "rise_min": 5.53,
+     "rise_median": 6.84,
+     "rise_max": 7.61,
+     "dsm_median": 631.16,
+     "dtm_under_min": 624.25,
+     "dtm_under_max": 624.38
+    }
+   },
+   {
+    "part": "south_cross_street",
+    "osm_way": 1126581681,
+    "group": "cross_roads",
+    "plan_length_m": 71.8,
+    "samples": 32
+   },
+   {
+    "part": "south_ramp",
+    "osm_way": 106711192,
+    "group": "cross_roads",
+    "plan_length_m": 59.6,
+    "samples": 30
+   },
+   {
+    "part": "south_ramp",
+    "osm_way": 106711212,
+    "group": "cross_roads",
+    "plan_length_m": 103.3,
+    "samples": 51
+   },
+   {
+    "part": "south_ramp",
+    "osm_way": 1223720740,
+    "group": "cross_roads",
+    "plan_length_m": 9.2,
+    "samples": 5
+   },
+   {
+    "part": "north_ramp",
+    "osm_way": 106711221,
+    "group": "cross_roads",
+    "plan_length_m": 177.5,
+    "samples": 86,
+    "structure_run": {
+     "from_chainage_m": 106.8,
+     "to_chainage_m": 114.9,
+     "length_m": 10.1,
+     "rise_min": 5.19,
+     "rise_median": 8.48,
+     "rise_max": 9.13,
+     "dsm_median": 637.23,
+     "dtm_under_min": 628.54,
+     "dtm_under_max": 628.88
+    }
+   },
+   {
+    "part": "north_ramp",
+    "osm_way": 106711225,
+    "group": "cross_roads",
+    "plan_length_m": 101.2,
+    "samples": 39
+   },
+   {
+    "part": "north_path",
+    "osm_way": 302605472,
+    "group": "cross_roads",
+    "plan_length_m": 139.1,
+    "samples": 64,
+    "structure_run": {
+     "from_chainage_m": 83.0,
+     "to_chainage_m": 95.4,
+     "length_m": 14.3,
+     "rise_min": 3.21,
+     "rise_median": 6.34,
+     "rise_max": 6.77,
+     "dsm_median": 630.86,
+     "dtm_under_min": 624.38,
+     "dtm_under_max": 624.58
+    }
+   },
+   {
+    "part": "south_path",
+    "osm_way": 302605533,
+    "group": "cross_roads",
+    "plan_length_m": 19.5,
+    "samples": 10
+   },
+   {
+    "part": "north_path",
+    "osm_way": 339561849,
+    "group": "cross_roads",
+    "plan_length_m": 15.2,
+    "samples": 7,
+    "structure_run": {
+     "from_chainage_m": 2.5,
+     "to_chainage_m": 15.2,
+     "length_m": 14.7,
+     "rise_min": 3.68,
+     "rise_median": 4.48,
+     "rise_max": 6.54,
+     "dsm_median": 627.41,
+     "dtm_under_min": 620.6,
+     "dtm_under_max": 625.34
+    }
+   },
+   {
+    "part": "south_path",
+    "osm_way": 586002375,
+    "group": "cross_roads",
+    "plan_length_m": 11.3,
+    "samples": 5,
+    "structure_run": {
+     "from_chainage_m": 0.0,
+     "to_chainage_m": 8.6,
+     "length_m": 10.6,
+     "rise_min": 3.02,
+     "rise_median": 3.06,
+     "rise_max": 4.01,
+     "dsm_median": 626.2,
+     "dtm_under_min": 622.15,
+     "dtm_under_max": 625.45
+    }
+   }
+  ],
+  "polygons": [
+   {
+    "part": "bridge_outline",
+    "osm_way": 462866197,
+    "area_m2": 4806,
+    "dsm_median": 631.72,
+    "dsm_p95": 633.56,
+    "dsm_max": 633.76,
+    "ground_edge_median": 620.86,
+    "ground_edge_min": 620.57,
+    "ground_edge_max": 622.47,
+    "p95_above_ground": 12.7,
+    "max_above_ground": 12.9
+   }
+  ]
+ },
+ "R14-tawatina": {
+  "lines": [
+   {
+    "part": "lrt_track_west",
+    "osm_way": 636427023,
+    "group": "decks",
+    "plan_length_m": 98.9,
+    "samples": 50,
+    "structure_run": {
+     "from_chainage_m": 70.6,
+     "to_chainage_m": 76.7,
+     "length_m": 8.1,
+     "rise_min": 19.4,
+     "rise_median": 34.27,
+     "rise_max": 43.35,
+     "dsm_median": 653.92,
+     "dtm_under_min": 618.37,
+     "dtm_under_max": 620.36
+    }
+   },
+   {
+    "part": "lrt_track_west",
+    "osm_way": 1221895803,
+    "group": "decks",
+    "plan_length_m": 158.1,
+    "samples": 80
+   },
+   {
+    "part": "lrt_track_west",
+    "osm_way": 1221895802,
+    "group": "decks",
+    "plan_length_m": 66.1,
+    "samples": 32
+   },
+   {
+    "part": "lrt_track_west",
+    "osm_way": 1221212818,
+    "group": "decks",
+    "plan_length_m": 141.4,
+    "samples": 64,
+    "structure_run": {
+     "from_chainage_m": 0.0,
+     "to_chainage_m": 14.1,
+     "length_m": 16.1,
+     "rise_min": 6.99,
+     "rise_median": 8.84,
+     "rise_max": 9.01,
+     "dsm_median": 629.66,
+     "dtm_under_min": 620.59,
+     "dtm_under_max": 621.73
+    },
+    "raised_width_m": {
+     "median": 15.0,
+     "p10": 15.0,
+     "p90": 15.8,
+     "n": 3
+    }
+   },
+   {
+    "part": "lrt_track_east",
+    "osm_way": 1221895804,
+    "group": "decks",
+    "plan_length_m": 256.8,
+    "samples": 128
+   },
+   {
+    "part": "lrt_track_east",
+    "osm_way": 1221212789,
+    "group": "decks",
+    "plan_length_m": 64.1,
+    "samples": 30
+   },
+   {
+    "part": "lrt_track_east",
+    "osm_way": 672849775,
+    "group": "decks",
+    "plan_length_m": 145.4,
+    "samples": 65,
+    "structure_run": {
+     "from_chainage_m": 128.5,
+     "to_chainage_m": 143.2,
+     "length_m": 16.7,
+     "rise_min": 4.94,
+     "rise_median": 8.78,
+     "rise_max": 9.26,
+     "dsm_median": 629.92,
+     "dtm_under_min": 620.62,
+     "dtm_under_max": 621.79
+    },
+    "raised_width_m": {
+     "median": 15.0,
+     "p10": 14.6,
+     "p90": 15.4,
+     "n": 3
+    }
+   },
+   {
+    "part": "pedestrian_deck",
+    "osm_way": 732161091,
+    "group": "decks",
+    "plan_length_m": 187.9,
+    "samples": 94,
+    "structure_run": {
+     "from_chainage_m": 165.2,
+     "to_chainage_m": 171.4,
+     "length_m": 8.2,
+     "rise_min": 17.27,
+     "rise_median": 32.36,
+     "rise_max": 46.36,
+     "dsm_median": 651.93,
+     "dtm_under_min": 619.48,
+     "dtm_under_max": 621.81
+    }
+   },
+   {
+    "part": "pedestrian_deck_link",
+    "osm_way": 201613970,
+    "group": "decks",
+    "plan_length_m": 11.0,
+    "samples": 6,
+    "structure_run": {
+     "from_chainage_m": 2.2,
+     "to_chainage_m": 11.0,
+     "length_m": 10.8,
+     "rise_min": 3.39,
+     "rise_median": 4.16,
+     "rise_max": 9.26,
+     "dsm_median": 620.28,
+     "dtm_under_min": 614.94,
+     "dtm_under_max": 617.07
+    }
+   },
+   {
+    "part": "lrt_north",
+    "osm_way": 650830876,
+    "group": "approaches",
+    "plan_length_m": 42.3,
+    "samples": 20
+   },
+   {
+    "part": "lrt_north",
+    "osm_way": 672849774,
+    "group": "approaches",
+    "plan_length_m": 42.8,
+    "samples": 21
+   },
+   {
+    "part": "lrt_south_to_muttart_stop",
+    "osm_way": 1280982479,
+    "group": "approaches",
+    "plan_length_m": 196.3,
+    "samples": 93
+   },
+   {
+    "part": "lrt_south_to_muttart_stop",
+    "osm_way": 1280982480,
+    "group": "approaches",
+    "plan_length_m": 210.1,
+    "samples": 101
+   },
+   {
+    "part": "pedestrian_north",
+    "osm_way": 732161090,
+    "group": "approaches",
+    "plan_length_m": 9.5,
+    "samples": 5
+   },
+   {
+    "part": "pedestrian_south",
+    "osm_way": 812703449,
+    "group": "approaches",
+    "plan_length_m": 57.1,
+    "samples": 28,
+    "structure_run": {
+     "from_chainage_m": 12.4,
+     "to_chainage_m": 22.7,
+     "length_m": 12.3,
+     "rise_min": 3.52,
+     "rise_median": 8.37,
+     "rise_max": 8.95,
+     "dsm_median": 630.57,
+     "dtm_under_min": 622.09,
+     "dtm_under_max": 622.32
+    }
+   },
+   {
+    "part": "pedestrian_south",
+    "osm_way": 838868658,
+    "group": "approaches",
+    "plan_length_m": 65.7,
+    "samples": 30,
+    "structure_run": {
+     "from_chainage_m": 0.0,
+     "to_chainage_m": 19.8,
+     "length_m": 21.8,
+     "rise_min": 5.79,
+     "rise_median": 12.8,
+     "rise_max": 16.72,
+     "dsm_median": 631.81,
+     "dtm_under_min": 614.94,
+     "dtm_under_max": 620.55
+    }
+   },
+   {
+    "part": "cross_road",
+    "osm_way": 1098987149,
+    "group": "cross_roads",
+    "plan_length_m": 117.2,
+    "samples": 56
+   },
+   {
+    "part": "cross_road",
+    "osm_way": 1095591579,
+    "group": "cross_roads",
+    "plan_length_m": 119.5,
+    "samples": 58
+   }
+  ],
+  "polygons": []
+ },
+ "R15-dawson": {
+  "lines": [
+   {
+    "part": "road_deck",
+    "osm_way": 22916476,
+    "group": "decks",
+    "plan_length_m": 233.9,
+    "samples": 117,
+    "structure_run": {
+     "from_chainage_m": 4.0,
+     "to_chainage_m": 231.9,
+     "length_m": 229.9,
+     "rise_min": 3.04,
+     "rise_median": 17.99,
+     "rise_max": 23.54,
+     "dsm_median": 631.31,
+     "dtm_under_min": 612.76,
+     "dtm_under_max": 623.94
+    },
+    "raised_width_m": {
+     "median": 6.5,
+     "p10": 1.1,
+     "p90": 9.9,
+     "n": 22
+    }
+   },
+   {
+    "part": "north_sidewalk",
+    "osm_way": 303529127,
+    "group": "decks",
+    "plan_length_m": 233.0,
+    "samples": 117,
+    "structure_run": {
+     "from_chainage_m": 2.0,
+     "to_chainage_m": 233.0,
+     "length_m": 233.0,
+     "rise_min": 3.33,
+     "rise_median": 15.12,
+     "rise_max": 21.11,
+     "dsm_median": 628.58,
+     "dtm_under_min": 612.69,
+     "dtm_under_max": 624.57
+    },
+    "raised_width_m": {
+     "median": 1.8,
+     "p10": 1.0,
+     "p90": 4.9,
+     "n": 32
+    }
+   },
+   {
+    "part": "south_sidewalk",
+    "osm_way": 451267263,
+    "group": "decks",
+    "plan_length_m": 232.8,
+    "samples": 116,
+    "structure_run": {
+     "from_chainage_m": 0.0,
+     "to_chainage_m": 232.8,
+     "length_m": 234.8,
+     "rise_min": 3.32,
+     "rise_median": 14.02,
+     "rise_max": 17.08,
+     "dsm_median": 627.76,
+     "dtm_under_min": 612.8,
+     "dtm_under_max": 624.49
+    },
+    "raised_width_m": {
+     "median": 2.0,
+     "p10": 1.0,
+     "p90": 3.7,
+     "n": 34
+    }
+   },
+   {
+    "part": "west_road",
+    "osm_way": 934518260,
+    "group": "approaches",
+    "plan_length_m": 21.1,
+    "samples": 11
+   },
+   {
+    "part": "west_road",
+    "osm_way": 934518262,
+    "group": "approaches",
+    "plan_length_m": 133.9,
+    "samples": 66
+   },
+   {
+    "part": "east_road",
+    "osm_way": 934518263,
+    "group": "approaches",
+    "plan_length_m": 47.8,
+    "samples": 24
+   },
+   {
+    "part": "east_road",
+    "osm_way": 303529114,
+    "group": "approaches",
+    "plan_length_m": 110.8,
+    "samples": 54
+   },
+   {
+    "part": "west_path",
+    "osm_way": 842319728,
+    "group": "approaches",
+    "plan_length_m": 10.0,
+    "samples": 5
+   },
+   {
+    "part": "west_path",
+    "osm_way": 1267852101,
+    "group": "approaches",
+    "plan_length_m": 7.3,
+    "samples": 4,
+    "structure_run": {
+     "from_chainage_m": 0.0,
+     "to_chainage_m": 7.3,
+     "length_m": 9.3,
+     "rise_min": 6.23,
+     "rise_median": 6.32,
+     "rise_max": 7.22,
+     "dsm_median": 629.16,
+     "dtm_under_min": 620.9,
+     "dtm_under_max": 622.91
+    }
+   },
+   {
+    "part": "east_path",
+    "osm_way": 451267265,
+    "group": "approaches",
+    "plan_length_m": 12.7,
+    "samples": 7
+   },
+   {
+    "part": "east_trail",
+    "osm_way": 27470956,
+    "group": "cross_roads",
+    "plan_length_m": 476.7,
+    "samples": 224,
+    "structure_run": {
+     "from_chainage_m": 447.5,
+     "to_chainage_m": 454.1,
+     "length_m": 8.7,
+     "rise_min": 3.79,
+     "rise_median": 5.17,
+     "rise_max": 7.91,
+     "dsm_median": 659.55,
+     "dtm_under_min": 653.61,
+     "dtm_under_max": 654.56
+    }
+   },
+   {
+    "part": "west_cross_street",
+    "osm_way": 106711193,
+    "group": "cross_roads",
+    "plan_length_m": 235.2,
+    "samples": 117,
+    "structure_run": {
+     "from_chainage_m": 190.6,
+     "to_chainage_m": 225.0,
+     "length_m": 36.4,
+     "rise_min": 3.58,
+     "rise_median": 6.61,
+     "rise_max": 10.54,
+     "dsm_median": 627.92,
+     "dtm_under_min": 621.08,
+     "dtm_under_max": 621.58
+    }
+   },
+   {
+    "part": "west_cross_street",
+    "osm_way": 25455710,
+    "group": "cross_roads",
+    "plan_length_m": 523.9,
+    "samples": 257,
+    "structure_run": {
+     "from_chainage_m": 60.6,
+     "to_chainage_m": 149.3,
+     "length_m": 90.7,
+     "rise_min": 3.85,
+     "rise_median": 14.88,
+     "rise_max": 17.44,
+     "dsm_median": 634.85,
+     "dtm_under_min": 619.79,
+     "dtm_under_max": 620.3
+    }
+   }
+  ],
+  "polygons": [
+   {
+    "part": "bridge_outline",
+    "osm_way": 642360972,
+    "area_m2": 3311,
+    "dsm_median": 629.67,
+    "dsm_p95": 635.96,
+    "dsm_max": 638.77,
+    "ground_edge_median": 624.25,
+    "ground_edge_min": 619.12,
+    "ground_edge_max": 624.53,
+    "p95_above_ground": 11.72,
+    "max_above_ground": 14.52
+   }
+  ]
+ },
+ "R8-groat": {
+  "lines": [
+   {
+    "part": "road_deck",
+    "osm_way": 22916458,
+    "group": "decks",
+    "plan_length_m": 287.1,
+    "samples": 144,
+    "structure_run": {
+     "from_chainage_m": 0.0,
+     "to_chainage_m": 287.1,
+     "length_m": 289.1,
+     "rise_min": 5.36,
+     "rise_median": 15.68,
+     "rise_max": 16.65,
+     "dsm_median": 631.82,
+     "dtm_under_min": 616.1,
+     "dtm_under_max": 626.09
+    },
+    "raised_width_m": {
+     "median": 19.0,
+     "p10": 18.5,
+     "p90": 20.0,
+     "n": 44
+    }
+   },
+   {
+    "part": "road_deck",
+    "osm_way": 191843040,
+    "group": "decks",
+    "plan_length_m": 286.8,
+    "samples": 144,
+    "structure_run": {
+     "from_chainage_m": 0.0,
+     "to_chainage_m": 286.8,
+     "length_m": 288.8,
+     "rise_min": 5.41,
+     "rise_median": 15.57,
+     "rise_max": 15.79,
+     "dsm_median": 631.79,
+     "dtm_under_min": 616.15,
+     "dtm_under_max": 625.98
+    },
+    "raised_width_m": {
+     "median": 19.0,
+     "p10": 18.5,
+     "p90": 20.0,
+     "n": 44
+    }
+   },
+   {
+    "part": "east_shared_use_path",
+    "osm_way": 27265608,
+    "group": "decks",
+    "plan_length_m": 286.7,
+    "samples": 144,
+    "structure_run": {
+     "from_chainage_m": 0.0,
+     "to_chainage_m": 286.7,
+     "length_m": 288.7,
+     "rise_min": 6.4,
+     "rise_median": 16.39,
+     "rise_max": 16.81,
+     "dsm_median": 632.53,
+     "dtm_under_min": 616.1,
+     "dtm_under_max": 625.86
+    },
+    "raised_width_m": {
+     "median": 18.5,
+     "p10": 18.5,
+     "p90": 19.5,
+     "n": 44
+    }
+   },
+   {
+    "part": "south_road",
+    "osm_way": 944417265,
+    "group": "approaches",
+    "plan_length_m": 47.1,
+    "samples": 23,
+    "structure_run": {
+     "from_chainage_m": 40.3,
+     "to_chainage_m": 47.1,
+     "length_m": 8.8,
+     "rise_min": 3.53,
+     "rise_median": 5.42,
+     "rise_max": 7.27,
+     "dsm_median": 631.25,
+     "dtm_under_min": 624.03,
+     "dtm_under_max": 627.68
+    }
+   },
+   {
+    "part": "south_road",
+    "osm_way": 141176415,
+    "group": "approaches",
+    "plan_length_m": 41.7,
+    "samples": 20
+   },
+   {
+    "part": "north_road",
+    "osm_way": 25601763,
+    "group": "approaches",
+    "plan_length_m": 22.7,
+    "samples": 12
+   },
+   {
+    "part": "north_road",
+    "osm_way": 25601730,
+    "group": "approaches",
+    "plan_length_m": 147.9,
+    "samples": 68
+   },
+   {
+    "part": "north_exit",
+    "osm_way": 25601796,
+    "group": "approaches",
+    "plan_length_m": 154.1,
+    "samples": 68
+   },
+   {
+    "part": "north_road",
+    "osm_way": 25601745,
+    "group": "approaches",
+    "plan_length_m": 185.4,
+    "samples": 85
+   },
+   {
+    "part": "north_ramp",
+    "osm_way": 1098987150,
+    "group": "approaches",
+    "plan_length_m": 35.6,
+    "samples": 17
+   },
+   {
+    "part": "north_road",
+    "osm_way": 944414123,
+    "group": "approaches",
+    "plan_length_m": 20.3,
+    "samples": 11
+   },
+   {
+    "part": "south_path",
+    "osm_way": 1536910301,
+    "group": "approaches",
+    "plan_length_m": 74.5,
+    "samples": 37,
+    "structure_run": {
+     "from_chainage_m": 65.9,
+     "to_chainage_m": 74.5,
+     "length_m": 10.6,
+     "rise_min": 3.56,
+     "rise_median": 5.67,
+     "rise_max": 8.0,
+     "dsm_median": 632.08,
+     "dtm_under_min": 624.19,
+     "dtm_under_max": 628.52
+    }
+   },
+   {
+    "part": "north_path",
+    "osm_way": 27265610,
+    "group": "approaches",
+    "plan_length_m": 37.2,
+    "samples": 18,
+    "structure_run": {
+     "from_chainage_m": 0.0,
+     "to_chainage_m": 6.1,
+     "length_m": 8.1,
+     "rise_min": 3.1,
+     "rise_median": 4.64,
+     "rise_max": 6.4,
+     "dsm_median": 632.25,
+     "dtm_under_min": 625.86,
+     "dtm_under_max": 629.14
+    }
+   },
+   {
+    "part": "under_north_end",
+    "osm_way": 22914738,
+    "group": "approaches",
+    "plan_length_m": 32.8,
+    "samples": 16
+   },
+   {
+    "part": "under_north_end",
+    "osm_way": 141709487,
+    "group": "approaches",
+    "plan_length_m": 87.4,
+    "samples": 43
+   },
+   {
+    "part": "under_north_end",
+    "osm_way": 933678761,
+    "group": "approaches",
+    "plan_length_m": 134.9,
+    "samples": 62,
+    "structure_run": {
+     "from_chainage_m": 14.5,
+     "to_chainage_m": 35.2,
+     "length_m": 22.7,
+     "rise_min": 3.38,
+     "rise_median": 6.5,
+     "rise_max": 7.25,
+     "dsm_median": 631.45,
+     "dtm_under_min": 624.89,
+     "dtm_under_max": 624.99
+    }
+   },
+   {
+    "part": "under_north_end",
+    "osm_way": 933678762,
+    "group": "approaches",
+    "plan_length_m": 166.5,
+    "samples": 83,
+    "structure_run": {
+     "from_chainage_m": 34.5,
+     "to_chainage_m": 52.8,
+     "length_m": 20.3,
+     "rise_min": 6.08,
+     "rise_median": 6.67,
+     "rise_max": 7.41,
+     "dsm_median": 631.55,
+     "dtm_under_min": 624.85,
+     "dtm_under_max": 624.95
+    }
+   },
+   {
+    "part": "north_cross_street",
+    "osm_way": 157328051,
+    "group": "approaches",
+    "plan_length_m": 83.9,
+    "samples": 42
+   }
+  ],
+  "polygons": [
+   {
+    "part": "outline",
+    "osm_way": 626069075,
+    "area_m2": 5775,
+    "dsm_median": 631.92,
+    "dsm_p95": 632.79,
+    "dsm_max": 635.69,
+    "ground_edge_median": 624.03,
+    "ground_edge_min": 616.11,
+    "ground_edge_max": 626.68,
+    "p95_above_ground": 8.75,
+    "max_above_ground": 11.65
+   }
+  ]
+ },
+ "R9-menzies": {
+  "lines": [
+   {
+    "part": "east_track",
+    "osm_way": 700467672,
+    "group": "decks",
+    "plan_length_m": 675.0,
+    "samples": 329,
+    "structure_run": {
+     "from_chainage_m": 86.1,
+     "to_chainage_m": 653.0,
+     "length_m": 568.9,
+     "rise_min": 3.13,
+     "rise_median": 15.73,
+     "rise_max": 25.14,
+     "dsm_median": 638.27,
+     "dtm_under_min": 614.6,
+     "dtm_under_max": 634.93
+    },
+    "raised_width_m": {
+     "median": 9.5,
+     "p10": 8.5,
+     "p90": 11.0,
+     "n": 83
+    }
+   },
+   {
+    "part": "west_track",
+    "osm_way": 37834327,
+    "group": "decks",
+    "plan_length_m": 672.3,
+    "samples": 327,
+    "structure_run": {
+     "from_chainage_m": 20.5,
+     "to_chainage_m": 587.3,
+     "length_m": 568.7,
+     "rise_min": 3.28,
+     "rise_median": 15.4,
+     "rise_max": 24.42,
+     "dsm_median": 638.16,
+     "dtm_under_min": 614.86,
+     "dtm_under_max": 634.73
+    },
+    "raised_width_m": {
+     "median": 9.5,
+     "p10": 8.5,
+     "p90": 10.5,
+     "n": 83
+    }
+   },
+   {
+    "part": "lower_walkway",
+    "osm_way": 424285379,
+    "group": "decks",
+    "plan_length_m": 291.9,
+    "samples": 140,
+    "structure_run": {
+     "from_chainage_m": 0.0,
+     "to_chainage_m": 291.9,
+     "length_m": 293.9,
+     "rise_min": 12.55,
+     "rise_median": 23.31,
+     "rise_max": 26.72,
+     "dsm_median": 638.21,
+     "dtm_under_min": 614.86,
+     "dtm_under_max": 625.58
+    },
+    "raised_width_m": {
+     "median": 9.0,
+     "p10": 8.5,
+     "p90": 10.0,
+     "n": 42
+    }
+   },
+   {
+    "part": "lower_walkway_north_stub",
+    "osm_way": 23266026,
+    "group": "decks",
+    "plan_length_m": 51.2,
+    "samples": 37,
+    "structure_run": {
+     "from_chainage_m": 0.0,
+     "to_chainage_m": 44.4,
+     "length_m": 46.4,
+     "rise_min": 4.04,
+     "rise_median": 14.83,
+     "rise_max": 17.08,
+     "dsm_median": 637.91,
+     "dtm_under_min": 620.15,
+     "dtm_under_max": 623.65
+    }
+   },
+   {
+    "part": "lower_walkway_link",
+    "osm_way": 822801394,
+    "group": "decks",
+    "plan_length_m": 8.6,
+    "samples": 4,
+    "structure_run": {
+     "from_chainage_m": 0.0,
+     "to_chainage_m": 8.6,
+     "length_m": 10.6,
+     "rise_min": 16.18,
+     "rise_median": 17.0,
+     "rise_max": 18.79,
+     "dsm_median": 637.98,
+     "dtm_under_min": 619.47,
+     "dtm_under_max": 621.79
+    }
+   },
+   {
+    "part": "lower_walkway_south_stub",
+    "osm_way": 23266022,
+    "group": "decks",
+    "plan_length_m": 27.8,
+    "samples": 15,
+    "structure_run": {
+     "from_chainage_m": 0.0,
+     "to_chainage_m": 27.8,
+     "length_m": 29.8,
+     "rise_min": 4.48,
+     "rise_median": 11.83,
+     "rise_max": 13.77,
+     "dsm_median": 637.19,
+     "dtm_under_min": 625.13,
+     "dtm_under_max": 625.43
+    }
+   },
+   {
+    "part": "north_portal_west_track",
+    "osm_way": 463555599,
+    "group": "approaches",
+    "plan_length_m": 16.2,
+    "samples": 9
+   },
+   {
+    "part": "north_portal_east_track",
+    "osm_way": 82699379,
+    "group": "approaches",
+    "plan_length_m": 16.0,
+    "samples": 9
+   },
+   {
+    "part": "south_portal_west_track",
+    "osm_way": 700467673,
+    "group": "approaches",
+    "plan_length_m": 9.5,
+    "samples": 5
+   },
+   {
+    "part": "south_portal_east_track",
+    "osm_way": 424284934,
+    "group": "approaches",
+    "plan_length_m": 9.5,
+    "samples": 5
+   }
+  ],
+  "polygons": [
+   {
+    "part": "bridge_outline",
+    "osm_way": 533052900,
+    "area_m2": 6636,
+    "dsm_median": 638.27,
+    "dsm_p95": 639.68,
+    "dsm_max": 648.2,
+    "ground_edge_median": 625.43,
+    "ground_edge_min": 614.69,
+    "ground_edge_max": 643.24,
+    "p95_above_ground": 14.26,
+    "max_above_ground": 22.77
+   }
+  ]
+ },
+ "T133-stony-plain": {
+  "lines": [
+   {
+    "part": "road_deck",
+    "osm_way": 25601841,
+    "group": "decks",
+    "plan_length_m": 59.9,
+    "samples": 30,
+    "structure_run": {
+     "from_chainage_m": 0.0,
+     "to_chainage_m": 45.9,
+     "length_m": 47.9,
+     "rise_min": 3.18,
+     "rise_median": 8.03,
+     "rise_max": 9.61,
+     "dsm_median": 665.92,
+     "dtm_under_min": 656.48,
+     "dtm_under_max": 662.55
+    },
+    "raised_width_m": {
+     "median": 18.0,
+     "p10": 17.0,
+     "p90": 23.7,
+     "n": 8
+    }
+   },
+   {
+    "part": "lrt_track",
+    "osm_way": 1160377622,
+    "group": "decks",
+    "plan_length_m": 57.4,
+    "samples": 27,
+    "structure_run": {
+     "from_chainage_m": 10.8,
+     "to_chainage_m": 55.3,
+     "length_m": 46.5,
+     "rise_min": 3.53,
+     "rise_median": 8.26,
+     "rise_max": 9.11,
+     "dsm_median": 665.32,
+     "dtm_under_min": 656.23,
+     "dtm_under_max": 661.68
+    },
+    "raised_width_m": {
+     "median": 18.0,
+     "p10": 17.0,
+     "p90": 26.8,
+     "n": 7
+    }
+   },
+   {
+    "part": "lrt_track",
+    "osm_way": 1222393198,
+    "group": "decks",
+    "plan_length_m": 57.4,
+    "samples": 27,
+    "structure_run": {
+     "from_chainage_m": 0.0,
+     "to_chainage_m": 44.9,
+     "length_m": 46.9,
+     "rise_min": 3.29,
+     "rise_median": 7.82,
+     "rise_max": 9.06,
+     "dsm_median": 665.44,
+     "dtm_under_min": 656.39,
+     "dtm_under_max": 662.2
+    },
+    "raised_width_m": {
+     "median": 18.0,
+     "p10": 16.6,
+     "p90": 24.2,
+     "n": 7
+    }
+   },
+   {
+    "part": "south_path",
+    "osm_way": 1229761594,
+    "group": "decks",
+    "plan_length_m": 56.7,
+    "samples": 27,
+    "structure_run": {
+     "from_chainage_m": 35.6,
+     "to_chainage_m": 50.4,
+     "length_m": 16.8,
+     "rise_min": 3.67,
+     "rise_median": 4.44,
+     "rise_max": 6.0,
+     "dsm_median": 665.96,
+     "dtm_under_min": 656.38,
+     "dtm_under_max": 663.59
+    }
+   },
+   {
+    "part": "north_sidewalk",
+    "osm_way": 1229761596,
+    "group": "decks",
+    "plan_length_m": 57.6,
+    "samples": 27,
+    "structure_run": {
+     "from_chainage_m": 10.4,
+     "to_chainage_m": 57.6,
+     "length_m": 49.2,
+     "rise_min": 3.17,
+     "rise_median": 4.92,
+     "rise_max": 9.42,
+     "dsm_median": 665.45,
+     "dtm_under_min": 656.53,
+     "dtm_under_max": 663.75
+    },
+    "raised_width_m": {
+     "median": 1.0,
+     "p10": 1.0,
+     "p90": 5.8,
+     "n": 5
+    }
+   },
+   {
+    "part": "road_deck",
+    "osm_way": 1352501168,
+    "group": "decks",
+    "plan_length_m": 56.5,
+    "samples": 26,
+    "structure_run": {
+     "from_chainage_m": 6.8,
+     "to_chainage_m": 56.5,
+     "length_m": 51.7,
+     "rise_min": 3.06,
+     "rise_median": 7.48,
+     "rise_max": 11.1,
+     "dsm_median": 665.96,
+     "dtm_under_min": 656.04,
+     "dtm_under_max": 662.91
+    },
+    "raised_width_m": {
+     "median": 17.2,
+     "p10": 17.0,
+     "p90": 19.8,
+     "n": 8
+    }
+   },
+   {
+    "part": "approach_road",
+    "osm_way": 692115845,
+    "group": "approaches",
+    "plan_length_m": 975.0,
+    "samples": 472,
+    "structure_run": {
+     "from_chainage_m": 139.9,
+     "to_chainage_m": 220.6,
+     "length_m": 82.7,
+     "rise_min": 3.02,
+     "rise_median": 12.35,
+     "rise_max": 14.33,
+     "dsm_median": 680.82,
+     "dtm_under_min": 668.39,
+     "dtm_under_max": 668.6
+    }
+   },
+   {
+    "part": "approach_road",
+    "osm_way": 1081194111,
+    "group": "approaches",
+    "plan_length_m": 19.1,
+    "samples": 9
+   },
+   {
+    "part": "lrt_approach",
+    "osm_way": 1160377619,
+    "group": "approaches",
+    "plan_length_m": 1578.6,
+    "samples": 775,
+    "structure_run": {
+     "from_chainage_m": 1146.8,
+     "to_chainage_m": 1163.6,
+     "length_m": 18.7,
+     "rise_min": 4.23,
+     "rise_median": 5.21,
+     "rise_max": 7.33,
+     "dsm_median": 674.46,
+     "dtm_under_min": 669.1,
+     "dtm_under_max": 669.25
+    }
+   },
+   {
+    "part": "lrt_approach",
+    "osm_way": 1160377620,
+    "group": "approaches",
+    "plan_length_m": 1580.6,
+    "samples": 775,
+    "structure_run": {
+     "from_chainage_m": 766.4,
+     "to_chainage_m": 784.5,
+     "length_m": 20.1,
+     "rise_min": 6.13,
+     "rise_median": 10.43,
+     "rise_max": 12.14,
+     "dsm_median": 678.91,
+     "dtm_under_min": 668.47,
+     "dtm_under_max": 668.52
+    }
+   },
+   {
+    "part": "lrt_approach",
+    "osm_way": 1221236007,
+    "group": "approaches",
+    "plan_length_m": 2569.8,
+    "samples": 1277,
+    "structure_run": {
+     "from_chainage_m": 2.0,
+     "to_chainage_m": 8.2,
+     "length_m": 8.1,
+     "rise_min": 3.62,
+     "rise_median": 6.97,
+     "rise_max": 7.11,
+     "dsm_median": 670.42,
+     "dtm_under_min": 663.3,
+     "dtm_under_max": 665.56
+    }
+   },
+   {
+    "part": "approach_road",
+    "osm_way": 1248168351,
+    "group": "approaches",
+    "plan_length_m": 66.2,
+    "samples": 30,
+    "structure_run": {
+     "from_chainage_m": 15.9,
+     "to_chainage_m": 43.2,
+     "length_m": 29.3,
+     "rise_min": 3.49,
+     "rise_median": 4.66,
+     "rise_max": 6.78,
+     "dsm_median": 670.47,
+     "dtm_under_min": 665.74,
+     "dtm_under_max": 665.93
+    }
+   },
+   {
+    "part": "lrt_approach",
+    "osm_way": 1308960173,
+    "group": "approaches",
+    "plan_length_m": 2574.0,
+    "samples": 1279,
+    "structure_run": {
+     "from_chainage_m": 1068.1,
+     "to_chainage_m": 1104.2,
+     "length_m": 38.1,
+     "rise_min": 3.02,
+     "rise_median": 5.44,
+     "rise_max": 6.33,
+     "dsm_median": 670.05,
+     "dtm_under_min": 664.52,
+     "dtm_under_max": 664.66
+    }
+   },
+   {
+    "part": "approach_road",
+    "osm_way": 1352501163,
+    "group": "approaches",
+    "plan_length_m": 132.7,
+    "samples": 64,
+    "structure_run": {
+     "from_chainage_m": 0.0,
+     "to_chainage_m": 43.2,
+     "length_m": 45.2,
+     "rise_min": 3.05,
+     "rise_median": 6.53,
+     "rise_max": 11.1,
+     "dsm_median": 671.89,
+     "dtm_under_min": 662.37,
+     "dtm_under_max": 666.37
+    }
+   },
+   {
+    "part": "under_groat_road",
+    "osm_way": 37749243,
+    "group": "approaches",
+    "plan_length_m": 1108.5,
+    "samples": 511,
+    "structure_run": {
+     "from_chainage_m": 442.1,
+     "to_chainage_m": 468.1,
+     "length_m": 28.0,
+     "rise_min": 6.85,
+     "rise_median": 23.23,
+     "rise_max": 24.03,
+     "dsm_median": 662.51,
+     "dtm_under_min": 638.93,
+     "dtm_under_max": 639.53
+    }
+   },
+   {
+    "part": "under_groat_road",
+    "osm_way": 521661798,
+    "group": "approaches",
+    "plan_length_m": 120.8,
+    "samples": 56,
+    "structure_run": {
+     "from_chainage_m": 13.6,
+     "to_chainage_m": 31.3,
+     "length_m": 19.6,
+     "rise_min": 7.28,
+     "rise_median": 9.08,
+     "rise_max": 9.74,
+     "dsm_median": 665.48,
+     "dtm_under_min": 656.04,
+     "dtm_under_max": 656.62
+    }
+   },
+   {
+    "part": "under_groat_road",
+    "osm_way": 521661800,
+    "group": "approaches",
+    "plan_length_m": 270.8,
+    "samples": 127,
+    "structure_run": {
+     "from_chainage_m": 43.9,
+     "to_chainage_m": 62.8,
+     "length_m": 20.9,
+     "rise_min": 7.26,
+     "rise_median": 9.03,
+     "rise_max": 9.92,
+     "dsm_median": 665.37,
+     "dtm_under_min": 656.06,
+     "dtm_under_max": 656.54
+    }
+   },
+   {
+    "part": "under_groat_road",
+    "osm_way": 1102766309,
+    "group": "approaches",
+    "plan_length_m": 97.9,
+    "samples": 49
+   }
+  ],
+  "polygons": []
+ },
+ "V257-river-queen": {
+  "lines": [],
+  "polygons": [
+   {
+    "part": "pier",
+    "osm_way": 67563569,
+    "area_m2": 28,
+    "dsm_median": 613.84,
+    "dsm_p95": 619.57,
+    "dsm_max": 620.06,
+    "ground_edge_median": 613.87,
+    "ground_edge_min": 613.62,
+    "ground_edge_max": 614.17,
+    "p95_above_ground": 5.7,
+    "max_above_ground": 6.19
+   },
+   {
+    "part": "mapped_vessel",
+    "osm_way": 1373511013,
+    "area_m2": 567,
+    "dsm_median": 620.09,
+    "dsm_p95": 620.83,
+    "dsm_max": 623.64,
+    "ground_edge_median": 613.65,
+    "ground_edge_min": 613.63,
+    "ground_edge_max": 613.71,
+    "p95_above_ground": 7.18,
+    "max_above_ground": 9.99
+   }
+  ]
+ },
+ "Z125-wellington": {
+  "lines": [
+   {
+    "part": "road_deck",
+    "osm_way": 37749246,
+    "group": "decks",
+    "plan_length_m": 71.4,
+    "samples": 36,
+    "structure_run": {
+     "from_chainage_m": 4.1,
+     "to_chainage_m": 59.1,
+     "length_m": 57.0,
+     "rise_min": 3.21,
+     "rise_median": 9.07,
+     "rise_max": 11.4,
+     "dsm_median": 664.36,
+     "dtm_under_min": 652.99,
+     "dtm_under_max": 661.1
+    },
+    "raised_width_m": {
+     "median": 17.0,
+     "p10": 15.5,
+     "p90": 25.8,
+     "n": 9
+    }
+   },
+   {
+    "part": "north_shared_path",
+    "osm_way": 842281120,
+    "group": "decks",
+    "plan_length_m": 72.0,
+    "samples": 37,
+    "structure_run": {
+     "from_chainage_m": 0.0,
+     "to_chainage_m": 64.0,
+     "length_m": 66.0,
+     "rise_min": 3.1,
+     "rise_median": 9.88,
+     "rise_max": 12.26,
+     "dsm_median": 665.44,
+     "dtm_under_min": 653.31,
+     "dtm_under_max": 662.18
+    },
+    "raised_width_m": {
+     "median": 17.0,
+     "p10": 15.5,
+     "p90": 24.0,
+     "n": 11
+    }
+   },
+   {
+    "part": "south_construction_way",
+    "osm_way": 845134789,
+    "group": "decks",
+    "plan_length_m": 67.8,
+    "samples": 34,
+    "structure_run": {
+     "from_chainage_m": 0.0,
+     "to_chainage_m": 67.8,
+     "length_m": 69.8,
+     "rise_min": 5.18,
+     "rise_median": 9.62,
+     "rise_max": 12.89,
+     "dsm_median": 665.46,
+     "dtm_under_min": 652.4,
+     "dtm_under_max": 664.21
+    },
+    "raised_width_m": {
+     "median": 19.0,
+     "p10": 15.0,
+     "p90": 24.0,
+     "n": 11
+    }
+   },
+   {
+    "part": "approach",
+    "osm_way": 37749245,
+    "group": "approaches",
+    "plan_length_m": 8.9,
+    "samples": 5
+   },
+   {
+    "part": "approach",
+    "osm_way": 759487867,
+    "group": "approaches",
+    "plan_length_m": 10.9,
+    "samples": 5,
+    "structure_run": {
+     "from_chainage_m": 0.0,
+     "to_chainage_m": 10.9,
+     "length_m": 12.9,
+     "rise_min": 3.35,
+     "rise_median": 4.91,
+     "rise_max": 5.8,
+     "dsm_median": 667.96,
+     "dtm_under_min": 661.62,
+     "dtm_under_max": 664.0
+    }
+   },
+   {
+    "part": "approach",
+    "osm_way": 842281119,
+    "group": "approaches",
+    "plan_length_m": 9.3,
+    "samples": 5
+   },
+   {
+    "part": "approach",
+    "osm_way": 1462636302,
+    "group": "approaches",
+    "plan_length_m": 111.8,
+    "samples": 54
+   }
+  ],
+  "polygons": [
+   {
+    "part": "outline",
+    "osm_way": 1227946189,
+    "area_m2": 1137,
+    "dsm_median": 664.38,
+    "dsm_p95": 667.61,
+    "dsm_max": 674.47,
+    "ground_edge_median": 663.32,
+    "ground_edge_min": 661.11,
+    "ground_edge_max": 664.12,
+    "p95_above_ground": 4.29,
+    "max_above_ground": 11.15
+   }
+  ]
+ }
+}
