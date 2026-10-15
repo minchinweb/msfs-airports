@@ -82,7 +82,7 @@ def outline_t(folder, outline_way, fr, ax):
 
 
 def girder_deck(m, ax, s0, s1, y_fn, tlo, thi, ground, sup=(), n_girders=5, depth=3.0, slab=0.3, inner=+1, sidewalk=0,
-                sidewalk_w=2.0, carriage=11.1, left_sign=+1, lamp_step=36.0, lamps_outer=True, pier_kind=None, girder_sw=None):
+                sidewalk_w=2.0, carriage=11.1, left_sign=+1, lamp_step=36.0, lamps_outer=True, pier_kind=None, girder_sw=None, lanes=3):
     """Plate-girder highway deck between s0 and s1 on abutments.
 
     tlo..thi: lateral extent of the deck.  inner: side (+1 / -1 in t) facing the other carriageway (concrete parapet there);
@@ -107,7 +107,7 @@ def girder_deck(m, ax, s0, s1, y_fn, tlo, thi, ground, sup=(), n_girders=5, dept
     for t, sg in ((tlo, -1), (thi, 1)):
         ribbon(m, ax, s0, s1, t - 0.05 if sg < 0 else t - 0.2, t + 0.2 if sg < 0 else t + 0.05, lambda s: y_fn(s) - slab - 0.55, y_fn, CONC, step=12.0)
     # lane lines: dashed white, yellow on the left edge of the carriageway, white on the right edge
-    for j, off in enumerate((-carriage / 2 + carriage / 3, -carriage / 2 + 2 * carriage / 3)):
+    for j, off in enumerate([-carriage / 2 + i * carriage / lanes for i in range(1, lanes)]):
         ds = 9.0
         s = s0 + 2.0
         while s + 3.0 < s1:

@@ -76,7 +76,7 @@ The first four boxes are named fixes on the Edmonton VFR terminal chart. Then th
 
 - [x] **Y79 Bremner Cloverleaf**. 53.5702, -113.2461. Look 3, Where 5. Highway 16 / Highway 21. The VFR checkpoint **Bremner Cloverleaf** (VCBCL, N53° 34.30′ W113° 14.70′). It was on the cross list. The loops are the landmark, so this is not a diamond speck. Model the cloverleaf.
 
-- [ ] **H52 Sherwood Park Cloverleaf**. 53.513, -113.344. Look 3, Where 5. Sherwood Park Freeway / Henday. The VFR checkpoint **Sherwood Park Cloverleaf** (VCSWP, N53° 31.00′ W113° 20.50′). The freeway's own bridges through the interchange. Model the interchange, not a single girder.
+- [x] **H52 Sherwood Park Cloverleaf**. 53.513, -113.344. Look 3, Where 5. Sherwood Park Freeway / Henday. The VFR checkpoint **Sherwood Park Cloverleaf** (VCSWP, N53° 31.00′ W113° 20.50′). The freeway's own bridges through the interchange. Model the interchange, not a single girder.
 
 - [ ] **H39 Henday / Yellowhead west**. 53.574, -113.662. Look 4, Where 4. System interchange, ten bridge ways. The northwest helicopter route follows Yellowhead Trail at 3,000 ft ASL and meets the ring here. A CZVL arrival comes down the same side. **City Limits** (VCCTY, N53° 33.00′ W113° 39.00′) sits between this interchange and **H38 Henday / Stony Plain Road** (53.540, -113.659); place H38 in this box. Flyovers are the part that reads. Ramps can be the shared girder.
 

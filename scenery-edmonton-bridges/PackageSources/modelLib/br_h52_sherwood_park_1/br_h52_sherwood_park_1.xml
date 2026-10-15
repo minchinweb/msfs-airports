@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ModelInfo guid="{78B168C9-B8F2-564C-8280-A1091252F70A}" version="1.1">
+	<LODS>
+		<LOD minSize="0" ModelFile="br_h52_sherwood_park_1.gltf"/>
+	</LODS>
+</ModelInfo>

@@ -93,5 +93,13 @@
 	<SceneryObject lat="53.57020000" lon="-113.24610000" alt="670.000" pitch="0.000000" bank="0.000000" heading="0.000000" imageComplexity="VERY_SPARSE" altitudeIsAgl="FALSE" snapToGround="FALSE" snapToNormal="FALSE">
 		<LibraryObject name="{91ADF963-3CB7-5FE7-A434-D23257466072}" scale="1.000000"/>
 	</SceneryObject>
+	<!-- H52 Sherwood Park Cloverleaf (br_h52_sherwood_park_1) -->
+	<SceneryObject lat="53.51300000" lon="-113.34400000" alt="700.000" pitch="0.000000" bank="0.000000" heading="0.000000" imageComplexity="VERY_SPARSE" altitudeIsAgl="FALSE" snapToGround="FALSE" snapToNormal="FALSE">
+		<LibraryObject name="{78B168C9-B8F2-564C-8280-A1091252F70A}" scale="1.000000"/>
+	</SceneryObject>
+	<!-- H52 Sherwood Park Cloverleaf (br_h52_sherwood_park_2) -->
+	<SceneryObject lat="53.51300000" lon="-113.34400000" alt="700.000" pitch="0.000000" bank="0.000000" heading="0.000000" imageComplexity="VERY_SPARSE" altitudeIsAgl="FALSE" snapToGround="FALSE" snapToNormal="FALSE">
+		<LibraryObject name="{C534018D-3D0C-5E9D-A8D8-ECF012892093}" scale="1.000000"/>
+	</SceneryObject>
 	<!-- END bridges -->
 </FSData>

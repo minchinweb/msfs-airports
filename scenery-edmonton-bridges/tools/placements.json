@@ -243,5 +243,23 @@
     "{91ADF963-3CB7-5FE7-A434-D23257466072}"
    ]
   ]
+ },
+ "h52": {
+  "br_h52_sherwood_park": [
+   [
+    "H52 Sherwood Park Cloverleaf (br_h52_sherwood_park_1)",
+    53.513,
+    -113.344,
+    700.0,
+    "{78B168C9-B8F2-564C-8280-A1091252F70A}"
+   ],
+   [
+    "H52 Sherwood Park Cloverleaf (br_h52_sherwood_park_2)",
+    53.513,
+    -113.344,
+    700.0,
+    "{C534018D-3D0C-5E9D-A8D8-ECF012892093}"
+   ]
+  ]
  }
 }

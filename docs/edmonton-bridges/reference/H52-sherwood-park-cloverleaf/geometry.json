@@ -1,0 +1,1888 @@
+{
+  "code": "H52",
+  "name": "Sherwood Park Cloverleaf",
+  "centre": [
+    53.513,
+    -113.344
+  ],
+  "crs": "EPSG:4326",
+  "coordinate_order": "[lat, lon]",
+  "geometry_source": "docs/edmonton-bridges/bridge-geometry.json",
+  "geometry_retrieved": "2026-10-14",
+  "plan_length_note": "plan_length_m is the horizontal length of that OSM way, WGS84 haversine with radius 6378137 m, rounded to one decimal. Extract ways match the live OpenStreetMap node counts on 14 October 2026, so those stored polylines are the complete ways. Ways 103485448 and 103485443 were read live the same day; they are not in the extract. An approach plan_length_m is still not the climb to grade. The 147.4 m and 137.7 m freeway centrelines are not the inventory 128.5 figures. The 147.0 m and 90.0 m ramp-bridge centrelines are not the inventory 123.5 m and 71.5 m figures. They were not averaged.",
+  "dropped_note": "The two Sherwood Park Freeway overpasses in the extract are kept. Ways 103485448 and 103485443 are extra bridge=yes motorway_link decks at this interchange; they belong here and were added from the live read. Extract approaches, the south-to-westbound ramp, and the southwest loop that share a node with the freeway decks are kept. Anthony Henday Drive way 430222934 (2,402.6 m, three lanes, 100 km/h, maxheight tag 5.7) passes under the freeway decks and continues toward H50 (53.568, -113.345) and H53 (53.4829, -113.3427). It was dropped so the clip stays on this interchange. The 5.7 tag is a mapper tag; Alberta's vertical-clearances table states 5.3 m north and south under Sherwood Park Fwy east of Edmonton. Other OSM loops and outer ramps at this interchange (ways 38001208, 103485440, 103485444, 103485445, 1262002013) are not in the extract and were not copied here; they are named in NOTES still-missing. Alberta sign structures ZN, ZE, ZS, and ZW under file 75543 are not decks. File 75543 E-1 and W-2 are the demolished 1965 Salisbury Interchange decks. S107, H50, H53, H54, W91, and Y79 are different codes.",
+  "decks": [
+    {
+      "osm_way": 34572698,
+      "part": "eastbound_overpass",
+      "which": "Sherwood Park Freeway eastbound over Anthony Henday Drive. Three lanes, one-way, motorway, layer 1, 80 km/h, asphalt. Node order is west to east, so the one-way is eastbound toward Wye Road. Alberta file 75543 E-7, year 2016, WG, two spans. This centreline is 147.4 m. That is not the inventory 128.5 figure.",
+      "plan_length_m": 147.4,
+      "tags": {
+        "bridge": "yes",
+        "highway": "motorway",
+        "lanes": "3",
+        "layer": "1",
+        "maxspeed": "80",
+        "name": "Sherwood Park Freeway",
+        "oneway": "yes",
+        "surface": "asphalt"
+      },
+      "nodes": [
+        [
+          53.512944,
+          -113.345151
+        ],
+        [
+          53.512583,
+          -113.343008
+        ]
+      ]
+    },
+    {
+      "osm_way": 232709695,
+      "part": "westbound_overpass",
+      "which": "Sherwood Park Freeway westbound over Anthony Henday Drive. Four lanes, one-way, motorway, layer 1, 70 km/h. Node order is east to west, so the one-way is westbound toward Edmonton. Alberta file 75543 W-8, year 2016, WG, two spans. This centreline is 137.7 m. That is not the inventory 128.5 figure.",
+      "plan_length_m": 137.7,
+      "tags": {
+        "bridge": "yes",
+        "highway": "motorway",
+        "lanes": "4",
+        "layer": "1",
+        "maxspeed": "70",
+        "name": "Sherwood Park Freeway",
+        "oneway": "yes"
+      },
+      "nodes": [
+        [
+          53.51289,
+          -113.342988
+        ],
+        [
+          53.513219,
+          -113.344994
+        ]
+      ]
+    },
+    {
+      "osm_way": 103485448,
+      "part": "en_ramp1_over_henday",
+      "which": "Two-lane motorway_link, layer 1, destination:ref 216 North, destination:street Anthony Henday Drive. Crosses the Henday longitude south of the Sherwood Park Freeway decks. Not in the extract (the 180 m deck search). A live Overpass and OSM map read on 14 October 2026 returned this way. Alberta file 75543 EN1-9 is Sherwood Park Freeway EN Ramp 1 over AHD, year 2016, WG, two spans. This centreline is 147.0 m. That is not the inventory 123.5 figure.",
+      "plan_length_m": 147.0,
+      "tags": {
+        "bridge": "yes",
+        "destination:ref": "216 North",
+        "destination:street": "Anthony Henday Drive",
+        "highway": "motorway_link",
+        "lanes": "2",
+        "layer": "1",
+        "oneway": "yes",
+        "source": "AB Transportation"
+      },
+      "nodes": [
+        [
+          53.511041,
+          -113.345142
+        ],
+        [
+          53.51104,
+          -113.344904
+        ],
+        [
+          53.511044,
+          -113.344661
+        ],
+        [
+          53.511067,
+          -113.344275
+        ],
+        [
+          53.5111,
+          -113.343949
+        ],
+        [
+          53.511145,
+          -113.343621
+        ],
+        [
+          53.511183,
+          -113.34342
+        ],
+        [
+          53.51128,
+          -113.342976
+        ]
+      ]
+    },
+    {
+      "osm_way": 103485443,
+      "part": "en_ramp2_over_freeway",
+      "which": "Two-lane motorway_link, layer 1, destination:ref 216 North, destination:street Anthony Henday Drive. East of Henday, over the Sherwood Park Freeway / Wye Road side. Not in the extract. Same live read as way 103485448. Alberta file 75543 EN2-10 is Sherwood Park Freeway EN Ramp 2 over Sherwood Park Freeway, year 2016, NU, two spans. This centreline is 90.0 m. That is not the inventory 71.5 figure.",
+      "plan_length_m": 90.0,
+      "tags": {
+        "bridge": "yes",
+        "destination:ref": "216 North",
+        "destination:street": "Anthony Henday Drive",
+        "highway": "motorway_link",
+        "lanes": "2",
+        "layer": "1",
+        "oneway": "yes",
+        "source": "AB Transportation"
+      },
+      "nodes": [
+        [
+          53.512037,
+          -113.341208
+        ],
+        [
+          53.512192,
+          -113.340979
+        ],
+        [
+          53.512305,
+          -113.340833
+        ],
+        [
+          53.512422,
+          -113.340699
+        ],
+        [
+          53.512528,
+          -113.340586
+        ],
+        [
+          53.512698,
+          -113.340435
+        ]
+      ]
+    }
+  ],
+  "approaches": [
+    {
+      "osm_way": 995106404,
+      "part": "west_eastbound_stub",
+      "which": "Sherwood Park Freeway onto the west end of the eastbound overpass, 19.9 m, three lanes, one-way, 80 km/h, asphalt. Node order runs toward the deck. The far node is not a surveyed grade point.",
+      "plan_length_m": 19.9,
+      "tags": {
+        "highway": "motorway",
+        "lanes": "3",
+        "maxspeed": "80",
+        "name": "Sherwood Park Freeway",
+        "oneway": "yes",
+        "surface": "asphalt"
+      },
+      "nodes": [
+        [
+          53.512997,
+          -113.345438
+        ],
+        [
+          53.512972,
+          -113.345298
+        ],
+        [
+          53.512944,
+          -113.345151
+        ]
+      ],
+      "extract_role": "approach"
+    },
+    {
+      "osm_way": 373938261,
+      "part": "west_eastbound_road",
+      "which": "Sherwood Park Freeway continuing west from way 995106404. Two lanes, one-way, 80 km/h, asphalt. The extract role is cross_road because this way does not share a node with a bridge=yes way. It is the same road, heading toward S107 (17 Street, 53.517, -113.369). It is not that deck. The far node is not a surveyed grade point.",
+      "plan_length_m": 639.2,
+      "tags": {
+        "highway": "motorway",
+        "lanes": "2",
+        "maxspeed": "80",
+        "name": "Sherwood Park Freeway",
+        "oneway": "yes",
+        "surface": "asphalt"
+      },
+      "nodes": [
+        [
+          53.514557,
+          -113.354732
+        ],
+        [
+          53.512997,
+          -113.345438
+        ]
+      ],
+      "extract_role": "cross_road"
+    },
+    {
+      "osm_way": 995106405,
+      "part": "west_westbound_road",
+      "which": "Sherwood Park Freeway leaving the west end of the westbound overpass. Four lanes, one-way, 70 km/h, asphalt. Node order runs away from the deck. The far node is not a surveyed grade point.",
+      "plan_length_m": 73.1,
+      "tags": {
+        "highway": "motorway",
+        "lanes": "4",
+        "maxspeed": "70",
+        "name": "Sherwood Park Freeway",
+        "oneway": "yes",
+        "surface": "asphalt"
+      },
+      "nodes": [
+        [
+          53.513219,
+          -113.344994
+        ],
+        [
+          53.513385,
+          -113.346062
+        ]
+      ],
+      "extract_role": "approach"
+    },
+    {
+      "osm_way": 32834429,
+      "part": "east_westbound_road",
+      "which": "Wye Road onto the east end of the westbound overpass. Three lanes, one-way, 70 km/h. Node order runs toward the deck, from 53.512194, -113.332806. The extract role is cross_road because the street name is Wye Road. It is the eastbound-to-westbound through road from Sherwood Park. The far node is not a surveyed grade point.",
+      "plan_length_m": 683.0,
+      "tags": {
+        "highway": "motorway",
+        "lanes": "3",
+        "maxspeed": "70",
+        "name": "Wye Road",
+        "oneway": "yes"
+      },
+      "nodes": [
+        [
+          53.512194,
+          -113.332806
+        ],
+        [
+          53.512191,
+          -113.335207
+        ],
+        [
+          53.512197,
+          -113.336021
+        ],
+        [
+          53.512212,
+          -113.33729
+        ],
+        [
+          53.512235,
+          -113.33787
+        ],
+        [
+          53.512258,
+          -113.338394
+        ],
+        [
+          53.512303,
+          -113.339031
+        ],
+        [
+          53.512346,
+          -113.339508
+        ],
+        [
+          53.512419,
+          -113.340077
+        ],
+        [
+          53.512515,
+          -113.340839
+        ],
+        [
+          53.512632,
+          -113.341621
+        ],
+        [
+          53.512816,
+          -113.342661
+        ],
+        [
+          53.51289,
+          -113.342988
+        ]
+      ],
+      "extract_role": "cross_road"
+    },
+    {
+      "osm_way": 373938269,
+      "part": "east_eastbound_road",
+      "which": "Wye Road leaving the east end of the eastbound overpass. Three lanes, one-way, 80 km/h. Node order runs away from the deck to 53.512059, -113.334656. The extract role is cross_road because the street name is Wye Road. It is the same through road into Sherwood Park. The far node is not a surveyed grade point.",
+      "plan_length_m": 559.7,
+      "tags": {
+        "highway": "motorway",
+        "lanes": "3",
+        "maxspeed": "80",
+        "name": "Wye Road",
+        "oneway": "yes"
+      },
+      "nodes": [
+        [
+          53.512583,
+          -113.343008
+        ],
+        [
+          53.512494,
+          -113.342472
+        ],
+        [
+          53.512394,
+          -113.341875
+        ],
+        [
+          53.512305,
+          -113.341326
+        ],
+        [
+          53.512259,
+          -113.341046
+        ],
+        [
+          53.51218,
+          -113.34048
+        ],
+        [
+          53.512137,
+          -113.340078
+        ],
+        [
+          53.512107,
+          -113.339719
+        ],
+        [
+          53.512076,
+          -113.33923
+        ],
+        [
+          53.512064,
+          -113.338818
+        ],
+        [
+          53.512059,
+          -113.338359
+        ],
+        [
+          53.512059,
+          -113.3377
+        ],
+        [
+          53.512058,
+          -113.337322
+        ],
+        [
+          53.512058,
+          -113.336368
+        ],
+        [
+          53.512056,
+          -113.335993
+        ],
+        [
+          53.51206,
+          -113.335051
+        ],
+        [
+          53.512059,
+          -113.334861
+        ],
+        [
+          53.512059,
+          -113.334656
+        ]
+      ],
+      "extract_role": "cross_road"
+    },
+    {
+      "osm_way": 103485446,
+      "part": "south_to_westbound_ramp",
+      "which": "Motorway link, destination West; Edmonton; Sherwood Park Freeway. From 53.507251, -113.343351 north along the Henday side, then looping onto the east end of the westbound overpass. The extract role is ramp. It is not tagged bridge=yes. The far node is not a surveyed grade point.",
+      "plan_length_m": 1090.2,
+      "tags": {
+        "destination": "West;Edmonton;Sherwood Park Freeway",
+        "highway": "motorway_link",
+        "oneway": "yes"
+      },
+      "nodes": [
+        [
+          53.507251,
+          -113.343351
+        ],
+        [
+          53.507753,
+          -113.343353
+        ],
+        [
+          53.511442,
+          -113.343294
+        ],
+        [
+          53.513096,
+          -113.343295
+        ],
+        [
+          53.513338,
+          -113.343287
+        ],
+        [
+          53.51344,
+          -113.343272
+        ],
+        [
+          53.513565,
+          -113.343241
+        ],
+        [
+          53.513726,
+          -113.343166
+        ],
+        [
+          53.513858,
+          -113.343053
+        ],
+        [
+          53.513954,
+          -113.342935
+        ],
+        [
+          53.514038,
+          -113.342785
+        ],
+        [
+          53.514113,
+          -113.34257
+        ],
+        [
+          53.514153,
+          -113.342359
+        ],
+        [
+          53.514161,
+          -113.342161
+        ],
+        [
+          53.514135,
+          -113.341845
+        ],
+        [
+          53.514063,
+          -113.341581
+        ],
+        [
+          53.513973,
+          -113.3414
+        ],
+        [
+          53.513878,
+          -113.341275
+        ],
+        [
+          53.51381,
+          -113.341206
+        ],
+        [
+          53.513721,
+          -113.341136
+        ],
+        [
+          53.51358,
+          -113.341082
+        ],
+        [
+          53.513434,
+          -113.34108
+        ],
+        [
+          53.513299,
+          -113.341125
+        ],
+        [
+          53.513156,
+          -113.341229
+        ],
+        [
+          53.513035,
+          -113.341415
+        ],
+        [
+          53.512936,
+          -113.34166
+        ],
+        [
+          53.512885,
+          -113.34198
+        ],
+        [
+          53.512881,
+          -113.342304
+        ],
+        [
+          53.512902,
+          -113.342611
+        ],
+        [
+          53.51289,
+          -113.342988
+        ]
+      ],
+      "extract_role": "ramp"
+    },
+    {
+      "osm_way": 32834242,
+      "part": "southwest_loop",
+      "which": "Motorway link, one lane, destination Sherwood Park, asphalt. Loop from way 1286998212 onto the west stub of the eastbound overpass. The extract role is cross_road. This is a loop at this interchange. It is not tagged bridge=yes.",
+      "plan_length_m": 395.2,
+      "tags": {
+        "destination": "Sherwood Park",
+        "highway": "motorway_link",
+        "lanes": "1",
+        "oneway": "yes",
+        "surface": "asphalt"
+      },
+      "nodes": [
+        [
+          53.512463,
+          -113.344816
+        ],
+        [
+          53.512357,
+          -113.344881
+        ],
+        [
+          53.51224,
+          -113.344915
+        ],
+        [
+          53.512144,
+          -113.344962
+        ],
+        [
+          53.512059,
+          -113.34502
+        ],
+        [
+          53.511965,
+          -113.345106
+        ],
+        [
+          53.511883,
+          -113.345215
+        ],
+        [
+          53.511809,
+          -113.345352
+        ],
+        [
+          53.511752,
+          -113.345499
+        ],
+        [
+          53.511714,
+          -113.345641
+        ],
+        [
+          53.511682,
+          -113.345822
+        ],
+        [
+          53.511674,
+          -113.34598
+        ],
+        [
+          53.511676,
+          -113.346116
+        ],
+        [
+          53.511691,
+          -113.346278
+        ],
+        [
+          53.511715,
+          -113.346393
+        ],
+        [
+          53.511765,
+          -113.346579
+        ],
+        [
+          53.511836,
+          -113.346739
+        ],
+        [
+          53.511904,
+          -113.34685
+        ],
+        [
+          53.51202,
+          -113.346981
+        ],
+        [
+          53.512129,
+          -113.347048
+        ],
+        [
+          53.512249,
+          -113.347086
+        ],
+        [
+          53.512364,
+          -113.347091
+        ],
+        [
+          53.512478,
+          -113.347063
+        ],
+        [
+          53.512599,
+          -113.34699
+        ],
+        [
+          53.512695,
+          -113.346901
+        ],
+        [
+          53.512779,
+          -113.346793
+        ],
+        [
+          53.51286,
+          -113.346638
+        ],
+        [
+          53.512922,
+          -113.346474
+        ],
+        [
+          53.512966,
+          -113.346276
+        ],
+        [
+          53.512983,
+          -113.346078
+        ],
+        [
+          53.512988,
+          -113.345849
+        ],
+        [
+          53.512997,
+          -113.345438
+        ]
+      ],
+      "extract_role": "cross_road"
+    },
+    {
+      "osm_way": 1286998212,
+      "part": "north_to_loop",
+      "which": "Motorway link, two lanes, destination East; Sherwood Park, maxheight tag 5.8. From 53.514006, -113.344831 onto the north end of the southwest loop. The extract role is cross_road. The 5.8 tag is a mapper tag. It is not a deck elevation.",
+      "plan_length_m": 171.8,
+      "tags": {
+        "destination": "East;Sherwood Park",
+        "highway": "motorway_link",
+        "lanes": "2",
+        "maxheight": "5.8",
+        "oneway": "yes",
+        "surface": "asphalt"
+      },
+      "nodes": [
+        [
+          53.514006,
+          -113.344831
+        ],
+        [
+          53.512463,
+          -113.344816
+        ]
+      ],
+      "extract_role": "cross_road"
+    }
+  ],
+  "excluded": [
+    {
+      "osm_way": 430222934,
+      "reason": "Anthony Henday Drive through this interchange and well past it, 2,402.6 m, three lanes, 100 km/h, ref 216, maxheight tag 5.7. Complete OSM way from 53.523575, -113.344831 to 53.502001, -113.344379. It runs north toward H50 and south toward H53. Dropped so the clip stays on this interchange. The 5.7 tag is a mapper tag. Alberta's vertical-clearances table states 5.3 m north and south under Sherwood Park Fwy on Highway 216."
+    }
+  ],
+  "dimensions": {
+    "structural_type": "Four separate 2016 grade-separation decks at the Sherwood Park Freeway / Henday combination interchange, plus loops. E-7 and W-8: Alberta WG girders, two spans each, Sherwood Park Freeway over Henday. EN1-9: WG girder, two spans, EN Ramp 1 over Henday (the eastbound-to-northbound flyover). EN2-10: NU girder, two spans, EN Ramp 2 over Sherwood Park Freeway. Not a truss. Not a single girder line for the whole interchange. The 1965 Salisbury Interchange cloverleaf decks (file 75543 E-1 and W-2) were demolished.",
+    "alberta_file": "75543",
+    "e7_year_built": 2016,
+    "e7_span_type_code": "WG",
+    "e7_span_count": 2,
+    "e7_inventory_prints": [
+      16.1,
+      65.5,
+      128.5
+    ],
+    "w8_year_built": 2016,
+    "w8_span_type_code": "WG",
+    "w8_span_count": 2,
+    "w8_inventory_prints": [
+      19.8,
+      65.5,
+      128.5
+    ],
+    "en1_year_built": 2016,
+    "en1_span_type_code": "WG",
+    "en1_span_count": 2,
+    "en1_inventory_prints": [
+      13.9,
+      63.0,
+      123.5
+    ],
+    "en2_year_built": 2016,
+    "en2_span_type_code": "NU",
+    "en2_span_count": 2,
+    "en2_inventory_prints": [
+      13.9,
+      36.5,
+      71.5
+    ],
+    "osm_eastbound_overpass_m": 147.4,
+    "osm_westbound_overpass_m": 137.7,
+    "osm_en_ramp1_m": 147.0,
+    "osm_en_ramp2_m": 90.0,
+    "clearance_under_spf_on_216_m_alberta_table": 5.3,
+    "osm_maxheight_tag_m_henday": 5.7,
+    "osm_maxheight_tag_m_north_to_loop": 5.8,
+    "osm_maxheight_is_deck_elevation": false,
+    "sidewalk": false,
+    "posted_speed_kmh_eastbound_osm_tag": 80,
+    "posted_speed_kmh_westbound_osm_tag": 70,
+    "posted_speed_kmh_henday_osm_tag": 100,
+    "hwy216_exit": 61,
+    "demolished_1965_e1_span_lengths_m_inspection_2013": [
+      12.2,
+      19.8,
+      19.8,
+      12.2
+    ],
+    "deck_elevation_asl_m": null,
+    "soffit_elevation_asl_m": null,
+    "girder_depth_m": null,
+    "lane_width_m": null,
+    "crossfall": null,
+    "longitudinal_grade": null,
+    "west_approach_gradient": null,
+    "west_approach_elevation_change_m": null,
+    "west_approach_meets_grade": null,
+    "east_approach_gradient": null,
+    "east_approach_elevation_change_m": null,
+    "east_approach_meets_grade": null
+  },
+  "ramps_added_2026_10_15": {
+    "source": "OSM API 0.6 map read of box 53.507,-113.355,53.519,-113.333 on 2026-10-15 (ODbL; Overpass was returning 502/500 that day). Complete ways (every node inside the box). Plan geometry only; no elevations, widths are not tagged.",
+    "ways": [
+      {
+        "osm_way": 245395446,
+        "part": "added_245395446",
+        "tags": {
+          "cycleway:both": "shoulder",
+          "cycleway:left:oneway": "-1",
+          "highway": "motorway",
+          "lanes": "3",
+          "lit": "yes",
+          "maxspeed": "100",
+          "name": "Anthony Henday Drive",
+          "name:etymology:wikidata": "Q573339",
+          "oneway": "yes",
+          "oneway:bicycle": "no",
+          "placement": "left_of:2",
+          "ref": "216",
+          "source": "AB Transportation;local_knowledge",
+          "surface": "asphalt"
+        },
+        "nodes": [
+          [
+            53.5029361,
+            -113.3438298
+          ],
+          [
+            53.5129002,
+            -113.3437686
+          ],
+          [
+            53.5147087,
+            -113.3437793
+          ],
+          [
+            53.5179865,
+            -113.34378
+          ],
+          [
+            53.5191534,
+            -113.3437818
+          ],
+          [
+            53.5203862,
+            -113.3438438
+          ],
+          [
+            53.5214493,
+            -113.3439834
+          ]
+        ]
+      },
+      {
+        "osm_way": 430222934,
+        "part": "added_430222934",
+        "tags": {
+          "cycleway:both": "shoulder",
+          "cycleway:left:oneway": "-1",
+          "highway": "motorway",
+          "lanes": "3",
+          "lit": "yes",
+          "maxheight": "5.7",
+          "maxspeed": "100",
+          "name": "Anthony Henday Drive",
+          "name:etymology:wikidata": "Q573339",
+          "oneway": "yes",
+          "oneway:bicycle": "no",
+          "placement": "left_of:2",
+          "ref": "216",
+          "surface": "asphalt"
+        },
+        "nodes": [
+          [
+            53.5235754,
+            -113.3448315
+          ],
+          [
+            53.5230909,
+            -113.3447684
+          ],
+          [
+            53.5214131,
+            -113.3445536
+          ],
+          [
+            53.5203648,
+            -113.3444694
+          ],
+          [
+            53.5195649,
+            -113.3444028
+          ],
+          [
+            53.5184923,
+            -113.3443643
+          ],
+          [
+            53.5108828,
+            -113.3443613
+          ],
+          [
+            53.5020013,
+            -113.344379
+          ]
+        ]
+      },
+      {
+        "osm_way": 505630336,
+        "part": "added_505630336",
+        "tags": {
+          "highway": "motorway",
+          "lanes": "3",
+          "lit": "yes",
+          "maxspeed": "80",
+          "name": "Sherwood Park Freeway",
+          "oneway": "yes",
+          "source": "Bing",
+          "source:name": "Canvec",
+          "unsigned_ref": "100"
+        },
+        "nodes": [
+          [
+            53.5133851,
+            -113.346062
+          ],
+          [
+            53.5137699,
+            -113.3482272
+          ],
+          [
+            53.5141743,
+            -113.350769
+          ],
+          [
+            53.5147347,
+            -113.3540007
+          ]
+        ]
+      },
+      {
+        "osm_way": 38001208,
+        "part": "added_38001208",
+        "tags": {
+          "destination": "Anthony;Henday Drive",
+          "destination:ref": "216 South",
+          "highway": "motorway_link",
+          "lanes": "1",
+          "oneway": "yes",
+          "source": "AB Transportation",
+          "surface": "asphalt"
+        },
+        "nodes": [
+          [
+            53.5133851,
+            -113.346062
+          ],
+          [
+            53.513514,
+            -113.3462962
+          ],
+          [
+            53.513596,
+            -113.3465417
+          ],
+          [
+            53.5136769,
+            -113.3467309
+          ],
+          [
+            53.5137565,
+            -113.3468538
+          ],
+          [
+            53.513841,
+            -113.3469437
+          ],
+          [
+            53.5139302,
+            -113.3470267
+          ],
+          [
+            53.5140219,
+            -113.3470667
+          ],
+          [
+            53.5141093,
+            -113.3470883
+          ],
+          [
+            53.5142115,
+            -113.3470905
+          ],
+          [
+            53.5143354,
+            -113.3470561
+          ],
+          [
+            53.5144319,
+            -113.3469925
+          ],
+          [
+            53.5145365,
+            -113.346897
+          ],
+          [
+            53.51463,
+            -113.3467557
+          ],
+          [
+            53.514696,
+            -113.34662
+          ],
+          [
+            53.51475,
+            -113.3464518
+          ],
+          [
+            53.5147936,
+            -113.3462718
+          ],
+          [
+            53.5148144,
+            -113.3460543
+          ],
+          [
+            53.5148055,
+            -113.3458154
+          ],
+          [
+            53.5147672,
+            -113.3455984
+          ],
+          [
+            53.514713,
+            -113.3454147
+          ],
+          [
+            53.5146146,
+            -113.3452273
+          ],
+          [
+            53.5145283,
+            -113.3451009
+          ],
+          [
+            53.5144293,
+            -113.3450105
+          ],
+          [
+            53.5143208,
+            -113.3449363
+          ],
+          [
+            53.514006,
+            -113.3448308
+          ]
+        ]
+      },
+      {
+        "osm_way": 103485440,
+        "part": "added_103485440",
+        "tags": {
+          "destination": "West;Edmonton",
+          "destination:street": "Sherwood Park Freeway",
+          "highway": "motorway_link",
+          "junction:ref": "61A",
+          "lanes": "1",
+          "oneway": "yes",
+          "source": "AB Transportation",
+          "surface": "asphalt"
+        },
+        "nodes": [
+          [
+            53.5179393,
+            -113.3448113
+          ],
+          [
+            53.5178046,
+            -113.3448818
+          ],
+          [
+            53.5169275,
+            -113.3449647
+          ],
+          [
+            53.5166346,
+            -113.345003
+          ],
+          [
+            53.5164203,
+            -113.3450583
+          ],
+          [
+            53.5162213,
+            -113.3451463
+          ],
+          [
+            53.5160209,
+            -113.3452473
+          ],
+          [
+            53.5158509,
+            -113.3453732
+          ],
+          [
+            53.5156681,
+            -113.3455351
+          ],
+          [
+            53.5154803,
+            -113.3457586
+          ],
+          [
+            53.5152993,
+            -113.3460024
+          ],
+          [
+            53.5151318,
+            -113.3462749
+          ],
+          [
+            53.5149587,
+            -113.3466203
+          ],
+          [
+            53.5147967,
+            -113.3469975
+          ],
+          [
+            53.5146423,
+            -113.3474283
+          ],
+          [
+            53.5145338,
+            -113.3478287
+          ],
+          [
+            53.5144551,
+            -113.3481652
+          ],
+          [
+            53.5144002,
+            -113.3484738
+          ],
+          [
+            53.5143475,
+            -113.3488212
+          ],
+          [
+            53.5143077,
+            -113.3492001
+          ],
+          [
+            53.5142806,
+            -113.3496144
+          ],
+          [
+            53.5142875,
+            -113.3501822
+          ],
+          [
+            53.5143369,
+            -113.3508108
+          ],
+          [
+            53.5144115,
+            -113.3513545
+          ],
+          [
+            53.5147099,
+            -113.3533689
+          ],
+          [
+            53.5147347,
+            -113.3540007
+          ]
+        ]
+      },
+      {
+        "osm_way": 103485442,
+        "part": "added_103485442",
+        "tags": {
+          "destination:ref": "216 North",
+          "destination:street": "Anthony Henday Drive",
+          "highway": "motorway_link",
+          "lanes": "2",
+          "oneway": "yes",
+          "source": "AB Transportation"
+        },
+        "nodes": [
+          [
+            53.5126981,
+            -113.3404355
+          ],
+          [
+            53.5127689,
+            -113.340375
+          ],
+          [
+            53.5129059,
+            -113.3402695
+          ],
+          [
+            53.5130508,
+            -113.3401646
+          ],
+          [
+            53.513203,
+            -113.3400808
+          ],
+          [
+            53.5134136,
+            -113.3399898
+          ],
+          [
+            53.5136201,
+            -113.3399237
+          ],
+          [
+            53.5137771,
+            -113.3398869
+          ],
+          [
+            53.5139249,
+            -113.3398648
+          ],
+          [
+            53.514137,
+            -113.3398624
+          ],
+          [
+            53.5143107,
+            -113.3398723
+          ],
+          [
+            53.5144973,
+            -113.3399032
+          ],
+          [
+            53.5146916,
+            -113.3399586
+          ],
+          [
+            53.5148763,
+            -113.3400325
+          ],
+          [
+            53.5150759,
+            -113.3401236
+          ],
+          [
+            53.5152924,
+            -113.3402634
+          ],
+          [
+            53.5155306,
+            -113.3404652
+          ],
+          [
+            53.5157348,
+            -113.3406709
+          ],
+          [
+            53.5159004,
+            -113.3408647
+          ],
+          [
+            53.5160956,
+            -113.3411126
+          ],
+          [
+            53.5169672,
+            -113.3422628
+          ]
+        ]
+      },
+      {
+        "osm_way": 103485444,
+        "part": "added_103485444",
+        "tags": {
+          "destination": "Anthony Henday Drive",
+          "destination:ref": "216 North",
+          "highway": "motorway_link",
+          "lanes": "1",
+          "maxspeed:advisory": "70",
+          "oneway": "yes",
+          "source": "AB Transportation"
+        },
+        "nodes": [
+          [
+            53.5121942,
+            -113.3328059
+          ],
+          [
+            53.5122805,
+            -113.3332791
+          ],
+          [
+            53.5123143,
+            -113.333974
+          ],
+          [
+            53.5123487,
+            -113.3350352
+          ],
+          [
+            53.5123751,
+            -113.3355649
+          ],
+          [
+            53.5124377,
+            -113.3361204
+          ],
+          [
+            53.512511,
+            -113.3364964
+          ],
+          [
+            53.5126619,
+            -113.337038
+          ],
+          [
+            53.5128244,
+            -113.3374437
+          ],
+          [
+            53.5130346,
+            -113.3378626
+          ],
+          [
+            53.5132093,
+            -113.3381189
+          ],
+          [
+            53.5134009,
+            -113.3383519
+          ],
+          [
+            53.513549,
+            -113.3384967
+          ],
+          [
+            53.5137309,
+            -113.3386579
+          ],
+          [
+            53.5144109,
+            -113.3391758
+          ],
+          [
+            53.5147493,
+            -113.3394415
+          ],
+          [
+            53.5150893,
+            -113.3397071
+          ],
+          [
+            53.5153267,
+            -113.3398929
+          ],
+          [
+            53.5154996,
+            -113.3400692
+          ],
+          [
+            53.5156391,
+            -113.3402252
+          ],
+          [
+            53.5158192,
+            -113.3404542
+          ],
+          [
+            53.5159698,
+            -113.3406574
+          ],
+          [
+            53.5161475,
+            -113.3409225
+          ],
+          [
+            53.5169491,
+            -113.3421273
+          ],
+          [
+            53.5169672,
+            -113.3422628
+          ]
+        ]
+      },
+      {
+        "osm_way": 103485445,
+        "part": "added_103485445",
+        "tags": {
+          "destination": "East;Sherwood Park;Wye Road",
+          "destination:street": "Sherwood Park East;Wye Road East",
+          "highway": "motorway_link",
+          "lanes": "1",
+          "oneway": "yes",
+          "source": "AB Transportation"
+        },
+        "nodes": [
+          [
+            53.5072506,
+            -113.3433508
+          ],
+          [
+            53.5077596,
+            -113.3432599
+          ],
+          [
+            53.508768,
+            -113.343134
+          ],
+          [
+            53.508966,
+            -113.3430859
+          ],
+          [
+            53.5091961,
+            -113.343006
+          ],
+          [
+            53.509399,
+            -113.3429235
+          ],
+          [
+            53.5096375,
+            -113.3427976
+          ],
+          [
+            53.5098792,
+            -113.3426262
+          ],
+          [
+            53.510083,
+            -113.3424601
+          ],
+          [
+            53.5102645,
+            -113.3422671
+          ],
+          [
+            53.510504,
+            -113.3419779
+          ],
+          [
+            53.5107331,
+            -113.3416963
+          ],
+          [
+            53.5109279,
+            -113.3413769
+          ],
+          [
+            53.5110929,
+            -113.3411003
+          ],
+          [
+            53.5112515,
+            -113.3408074
+          ],
+          [
+            53.511388,
+            -113.3404699
+          ],
+          [
+            53.5114989,
+            -113.3401271
+          ],
+          [
+            53.5115892,
+            -113.3397758
+          ],
+          [
+            53.5116623,
+            -113.3394197
+          ],
+          [
+            53.5117167,
+            -113.33911
+          ],
+          [
+            53.5117728,
+            -113.3387617
+          ],
+          [
+            53.5118212,
+            -113.3383938
+          ],
+          [
+            53.5118626,
+            -113.3380682
+          ],
+          [
+            53.511892,
+            -113.3377783
+          ],
+          [
+            53.5119076,
+            -113.3374256
+          ],
+          [
+            53.5119162,
+            -113.3370153
+          ],
+          [
+            53.5119524,
+            -113.3352502
+          ],
+          [
+            53.5119675,
+            -113.3348628
+          ],
+          [
+            53.5119697,
+            -113.334805
+          ],
+          [
+            53.5120593,
+            -113.3346562
+          ]
+        ]
+      },
+      {
+        "osm_way": 103485449,
+        "part": "added_103485449",
+        "tags": {
+          "destination:ref": "216 North",
+          "destination:street": "Anthony Henday Drive",
+          "highway": "motorway_link",
+          "lanes": "2",
+          "oneway": "yes",
+          "source": "AB Transportation"
+        },
+        "nodes": [
+          [
+            53.5112802,
+            -113.3429764
+          ],
+          [
+            53.5113491,
+            -113.3427378
+          ],
+          [
+            53.5114394,
+            -113.3424404
+          ],
+          [
+            53.5115575,
+            -113.3421315
+          ],
+          [
+            53.5116625,
+            -113.3418801
+          ],
+          [
+            53.5117735,
+            -113.3416539
+          ],
+          [
+            53.5118981,
+            -113.3414215
+          ],
+          [
+            53.5120375,
+            -113.341208
+          ]
+        ]
+      },
+      {
+        "osm_way": 333132008,
+        "part": "added_333132008",
+        "tags": {
+          "destination:ref": "216 South",
+          "destination:street": "Anthony Henday Drive",
+          "highway": "motorway_link",
+          "lanes": "1",
+          "oneway": "yes",
+          "source": "local_knowledge",
+          "surface": "asphalt"
+        },
+        "nodes": [
+          [
+            53.512909,
+            -113.349925
+          ],
+          [
+            53.5124498,
+            -113.3494729
+          ],
+          [
+            53.5122887,
+            -113.3492947
+          ],
+          [
+            53.512166,
+            -113.349138
+          ],
+          [
+            53.5119496,
+            -113.3488544
+          ],
+          [
+            53.5118415,
+            -113.3487005
+          ],
+          [
+            53.5117053,
+            -113.3484775
+          ],
+          [
+            53.5116268,
+            -113.3483372
+          ],
+          [
+            53.5114876,
+            -113.3480533
+          ],
+          [
+            53.5113777,
+            -113.347807
+          ],
+          [
+            53.5110456,
+            -113.34697
+          ],
+          [
+            53.5109146,
+            -113.3466657
+          ],
+          [
+            53.5107767,
+            -113.3463708
+          ],
+          [
+            53.5106249,
+            -113.346092
+          ],
+          [
+            53.5104787,
+            -113.3458628
+          ],
+          [
+            53.5103341,
+            -113.3456797
+          ],
+          [
+            53.5102186,
+            -113.3455572
+          ],
+          [
+            53.5100951,
+            -113.3454405
+          ],
+          [
+            53.5099172,
+            -113.3453
+          ],
+          [
+            53.5097365,
+            -113.3451953
+          ],
+          [
+            53.5095383,
+            -113.3451053
+          ],
+          [
+            53.5093794,
+            -113.3450544
+          ],
+          [
+            53.5092468,
+            -113.3450246
+          ],
+          [
+            53.5074742,
+            -113.3447821
+          ],
+          [
+            53.5072016,
+            -113.3447026
+          ]
+        ]
+      },
+      {
+        "osm_way": 430222935,
+        "part": "added_430222935",
+        "tags": {
+          "destination:ref": "216 North",
+          "destination:street": "Anthony Henday Drive",
+          "highway": "motorway_link",
+          "lanes": "2",
+          "oneway": "yes",
+          "source": "AB Transportation"
+        },
+        "nodes": [
+          [
+            53.512909,
+            -113.349925
+          ],
+          [
+            53.5124222,
+            -113.3493252
+          ],
+          [
+            53.5122362,
+            -113.3490732
+          ],
+          [
+            53.5120033,
+            -113.3487398
+          ],
+          [
+            53.511775,
+            -113.3483506
+          ],
+          [
+            53.5115966,
+            -113.3479557
+          ],
+          [
+            53.5114817,
+            -113.3476566
+          ],
+          [
+            53.5113668,
+            -113.3473113
+          ],
+          [
+            53.5112753,
+            -113.3469998
+          ],
+          [
+            53.5112136,
+            -113.3467022
+          ],
+          [
+            53.5111523,
+            -113.3463539
+          ],
+          [
+            53.5111114,
+            -113.3460625
+          ],
+          [
+            53.51107,
+            -113.3456783
+          ],
+          [
+            53.5110553,
+            -113.3454259
+          ],
+          [
+            53.511041,
+            -113.3451423
+          ]
+        ]
+      },
+      {
+        "osm_way": 496863877,
+        "part": "added_496863877",
+        "tags": {
+          "destination:ref": "216 North",
+          "destination:street": "Anthony Henday Drive",
+          "highway": "motorway_link",
+          "lanes": "2",
+          "oneway": "yes",
+          "source": "AB Transportation"
+        },
+        "nodes": [
+          [
+            53.5177885,
+            -113.3431537
+          ],
+          [
+            53.5179596,
+            -113.3432499
+          ],
+          [
+            53.518152,
+            -113.3433324
+          ],
+          [
+            53.5184074,
+            -113.3434087
+          ],
+          [
+            53.5186124,
+            -113.3434497
+          ],
+          [
+            53.5211499,
+            -113.3437604
+          ],
+          [
+            53.5214493,
+            -113.3439834
+          ]
+        ]
+      },
+      {
+        "osm_way": 496863878,
+        "part": "added_496863878",
+        "tags": {
+          "destination:ref": "216",
+          "destination:street": "Anthony Henday Drive",
+          "highway": "motorway_link",
+          "lanes": "2",
+          "maxspeed:advisory": "70",
+          "oneway": "yes",
+          "turn:lanes": "|through;slight_right"
+        },
+        "nodes": [
+          [
+            53.5145572,
+            -113.3547324
+          ],
+          [
+            53.5144349,
+            -113.3544521
+          ],
+          [
+            53.5139361,
+            -113.3520248
+          ],
+          [
+            53.5138347,
+            -113.3516207
+          ],
+          [
+            53.5137047,
+            -113.3512059
+          ],
+          [
+            53.5135427,
+            -113.350791
+          ],
+          [
+            53.5134059,
+            -113.3505326
+          ],
+          [
+            53.5132641,
+            -113.3503122
+          ],
+          [
+            53.512909,
+            -113.349925
+          ]
+        ]
+      },
+      {
+        "osm_way": 1261356104,
+        "part": "added_1261356104",
+        "tags": {
+          "destination:ref": "216 North",
+          "destination:street": "Anthony Henday Drive",
+          "highway": "motorway_link",
+          "lanes": "3",
+          "oneway": "yes",
+          "source": "AB Transportation",
+          "turn:lanes": "||merge_to_left"
+        },
+        "nodes": [
+          [
+            53.5169672,
+            -113.3422628
+          ],
+          [
+            53.5174782,
+            -113.3428959
+          ],
+          [
+            53.5176356,
+            -113.343036
+          ],
+          [
+            53.5177885,
+            -113.3431537
+          ]
+        ]
+      },
+      {
+        "osm_way": 1262002013,
+        "part": "added_1262002013",
+        "tags": {
+          "destination": "East;Sherwood Park",
+          "destination:street": "Wye Road",
+          "highway": "motorway_link",
+          "junction:ref": "61B",
+          "lanes": "1",
+          "lit": "yes",
+          "oneway": "yes",
+          "source": "AB Transportation",
+          "surface": "asphalt"
+        },
+        "nodes": [
+          [
+            53.5179393,
+            -113.3448113
+          ],
+          [
+            53.5178222,
+            -113.3447827
+          ],
+          [
+            53.514006,
+            -113.3448308
+          ]
+        ]
+      }
+    ]
+  }
+}

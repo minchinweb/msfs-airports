@@ -1,0 +1,138 @@
+{
+ "asset": {
+  "version": "2.0",
+  "generator": "scenery-edmonton-bridges/tools/bridgelib.py",
+  "extensions": {
+   "ASOBO_normal_map_convention": {
+    "tangent_space_convention": "DirectX"
+   }
+  }
+ },
+ "extensionsUsed": [
+  "ASOBO_normal_map_convention"
+ ],
+ "scene": 0,
+ "scenes": [
+  {
+   "nodes": [
+    0
+   ]
+  }
+ ],
+ "nodes": [
+  {
+   "mesh": 0,
+   "name": "br_h52_sherwood_park_2"
+  }
+ ],
+ "meshes": [
+  {
+   "name": "br_h52_sherwood_park_2",
+   "primitives": [
+    {
+     "attributes": {
+      "POSITION": 0,
+      "NORMAL": 1,
+      "TEXCOORD_0": 2
+     },
+     "indices": 3,
+     "mode": 4,
+     "material": 0
+    }
+   ]
+  }
+ ],
+ "materials": [
+  {
+   "name": "bridge_palette",
+   "pbrMetallicRoughness": {
+    "baseColorTexture": {
+     "index": 0
+    },
+    "metallicFactor": 0.0,
+    "roughnessFactor": 0.9
+   }
+  }
+ ],
+ "textures": [
+  {
+   "sampler": 0,
+   "source": 0
+  }
+ ],
+ "samplers": [
+  {
+   "magFilter": 9728,
+   "minFilter": 9728
+  }
+ ],
+ "images": [
+  {
+   "uri": "bridge_palette.png"
+  }
+ ],
+ "accessors": [
+  {
+   "bufferView": 0,
+   "componentType": 5126,
+   "count": 5904,
+   "type": "VEC3",
+   "min": [
+    -240.13358161601622,
+    7.9,
+    -225.73747640609847
+   ],
+   "max": [
+    69.24269196249377,
+    34.90955911351384,
+    -35.934111017647226
+   ]
+  },
+  {
+   "bufferView": 1,
+   "componentType": 5126,
+   "count": 5904,
+   "type": "VEC3"
+  },
+  {
+   "bufferView": 2,
+   "componentType": 5126,
+   "count": 5904,
+   "type": "VEC2"
+  },
+  {
+   "bufferView": 3,
+   "componentType": 5123,
+   "count": 9048,
+   "type": "SCALAR"
+  }
+ ],
+ "bufferViews": [
+  {
+   "buffer": 0,
+   "byteOffset": 0,
+   "byteLength": 70848
+  },
+  {
+   "buffer": 0,
+   "byteOffset": 70848,
+   "byteLength": 70848
+  },
+  {
+   "buffer": 0,
+   "byteOffset": 141696,
+   "byteLength": 47232
+  },
+  {
+   "buffer": 0,
+   "byteOffset": 188928,
+   "byteLength": 18096
+  }
+ ],
+ "buffers": [
+  {
+   "uri": "br_h52_sherwood_park_2.bin",
+   "byteLength": 207024
+  }
+ ]
+}
