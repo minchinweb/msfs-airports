@@ -68,3 +68,9 @@ Written 2026-10-14. These are the first models in `scenery-edmonton-bridges` (ve
 - No night lighting, no transparency, no textures on any of these. Glass is opaque. Lamps are plain poles.
 - The two unbuilt-in-data structures (R14 verticals, the Muttart ramp grade) and every "assumed" item above are marked for replacement when drawings or photos with a scale turn up (`BLOCKERS.md` section 5).
 - N258 to N260 and G116 and the other ravine decks that share a road with these are not part of Tier 1.
+
+## Exclusion polygons, palette size, Muttart greenhouses (2026-10-15)
+- `tools/exclusions.py` writes one or more exclusion polygons per site into `edmonton-bridges.xml` (block between `BEGIN/END exclusions`): the plan-view union of the model's triangles, grown 4 m, simplified, cut open at loop holes. Same attributes as the CYXD polygons (buildings, OSM/MS buildings, TIN; `ExclusionFlags` 3). Not confirmed in the sim. Library objects (sim-placed trees and the like) are not excluded; that needs an `ExclusionRectangle`.
+- The palette strip is padded to 64 swatches (1024 x 16) so it is a power of two like CYXD's; it was 864 wide, the suspected cause of pink models. Real swatch indices did not change.
+- B254 support greenhouses were turned 90 degrees: ten rectangles read off the 2019 orthophoto (long bays, ridge along the ring's NW-SE axis). The four pyramids already matched the aerial.
+- Thumbnail cropped to 412 x 170 (the package validator rejected 412 x 250).

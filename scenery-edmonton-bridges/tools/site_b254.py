@@ -3,8 +3,9 @@ Apex positions are the 2018 DSM peaks inside each OSM ring (+-2 m): tropical 53.
 -113.477293 (645.16 m); arid 53.535211, -113.476792 (641.11 m); feature 53.535218, -113.47777 (641.23 m).  Floor-to-apex heights 24 m
 (tropical, temperate) and 18 m (arid, feature); floor areas 660 and 381 m2, taken as square bases of 25.7 m and 19.5 m, turned 45
 degrees to the grid (the mapped ring edges run SE).  Datum (y = 0) is the ground at the pyramid ring edge, 627.9 m; the pyramids stand
-in a berm, so the model runs to the floor (about 4 to 6.5 m below the datum) and the sim terrain hides the rest.  The six support
-greenhouses are placed in the west ring (way 1287216690, ground 622.05 m) with an assumed 4.5 m eave and 2.5 m ridge.  Glass is opaque
+in a berm, so the model runs to the floor (about 4 to 6.5 m below the datum) and the sim terrain hides the rest.  The support
+greenhouses (west ring, way 1287216690, ground 622.05 m) follow the 2019 orthophoto: long bays with the ridge along the ring's NW-SE axis,
+an assumed 4.5 m eave and 2.5 m ridge.  Glass is opaque
 pale blue-green (no transparency yet).
 """
 import math
@@ -18,6 +19,20 @@ PYR = [("tropical", 53.535532, -113.477289, 645.43, 24.0, 25.7),
        ("temperate", 53.534903, -113.477293, 645.16, 24.0, 25.7),
        ("arid", 53.535211, -113.476792, 641.11, 18.0, 19.5),
        ("feature", 53.535218, -113.47777, 641.23, 18.0, 19.5)]
+
+
+# (kind, (s0, s1, t0, t1)) in metres in the west ring's PCA frame; kind g = gabled house, n = narrow low link, s = flat glazed spine,
+# b = flat-roofed service building.  Read off the 2019 orthophoto (docs/.../P152-muttart/B254-conservatory/aerial) turned to the axis.
+HOUSES = [("g", (-34.3, 8.3, 0.9, 14.5)),       # A, NW bay on the NE side of the SW range
+          ("n", (-38.3, 7.3, -4.2, 0.7)),       # B, low link
+          ("g", (-57.7, 8.3, -20.6, -4.6)),     # C, widest house
+          ("n", (-42.7, -5.7, -26.2, -19.6)),   # D, low link
+          ("g", (-44.3, -5.1, -40.2, -26.4)),   # E
+          ("g", (-5.1, 80.9, -45.8, -28.8)),    # F, the long SE house
+          ("g", (17.3, 64.3, -3.8, 11.5)),      # G, stand-alone NE bay
+          ("g", (15.7, 62.7, -24.2, -9.2)),     # H, stand-alone NE bay
+          ("s", (8.3, 15.7, -28.8, 18.9)),      # spine joining the ranges
+          ("b", (9.7, 37.3, 17.5, 31.9))]       # service building (flat roof)
 
 
 def pyramid(m, e, n, apex_y, height, side, rot=math.radians(45)):
@@ -63,17 +78,29 @@ def build():
     wid = [(p[0] - cx) * perp[0] + (p[1] - cy) * perp[1] for p in ring]
     w0, w1 = min(wid), max(wid)
     base = 622.05 - G0
-    nh = 6
-    seg = (hi_ - lo_) / nh
-    for i in range(nh):
-        a, b = lo_ + i * seg + 0.5, lo_ + (i + 1) * seg - 0.5
-        P = lambda s, t: (cx + d[0] * s + perp[0] * t, cy + d[1] * s + perp[1] * t)
-        q = [P(a, w0), P(b, w0), P(b, w1), P(a, w1)]
-        prism(m, q, base - 1.0, base + 4.5, GLASSLT)
-        mid0, mid1 = P(a, (w0 + w1) / 2), P(b, (w0 + w1) / 2)
-        ridge = base + 4.5 + 2.5
-        m.poly([(q[0][0], base + 4.5, q[0][1]), (q[1][0], base + 4.5, q[1][1]), (mid1[0], ridge, mid1[1]), (mid0[0], ridge, mid0[1])], GLASSLT, ((q[0][0] + q[2][0]) / 2, base, (q[0][1] + q[2][1]) / 2))
-        m.poly([(q[3][0], base + 4.5, q[3][1]), (q[2][0], base + 4.5, q[2][1]), (mid1[0], ridge, mid1[1]), (mid0[0], ridge, mid0[1])], GLASSLT, ((q[0][0] + q[2][0]) / 2, base, (q[0][1] + q[2][1]) / 2))
+    P = lambda s, t: (cx + d[0] * s + perp[0] * t, cy + d[1] * s + perp[1] * t)
+    # Support greenhouses, measured on the 2019 orthophoto turned to the ring's long axis (axis runs NW -> SE; s along it from the ring
+    # centroid, t across, positive to the NE).  The houses are long gabled bays with the ridge along the axis: three on the SW range
+    # (C, E, F, with narrow lower links B and D between), two stand-alone bays on the NE side (G, H), a glazed spine joining them
+    # and a flat-roofed service building at the NE end.  Eave/ridge heights are assumed (4.5 + 2.5 m; links 3.2 + 1.8 m).
+    for kind, (s0, s1, t0, t1) in HOUSES:
+        q = [P(s0, t0), P(s1, t0), P(s1, t1), P(s0, t1)]
+        if kind == "b":
+            prism(m, q, base - 1.0, base + 6.5, CONC)
+            continue
+        eave, rise = {"g": (4.5, 2.5), "n": (3.2, 1.8), "s": (3.5, 0.0)}[kind]
+        prism(m, q, base - 1.0, base + eave, GLASSLT)
+        if not rise:
+            continue
+        tm = (t0 + t1) / 2
+        mid0, mid1 = P(s0, tm), P(s1, tm)
+        ridge = base + eave + rise
+        c0 = ((q[0][0] + q[2][0]) / 2, base, (q[0][1] + q[2][1]) / 2)
+        m.poly([(q[0][0], base + eave, q[0][1]), (q[1][0], base + eave, q[1][1]), (mid1[0], ridge, mid1[1]), (mid0[0], ridge, mid0[1])], GLASSLT, c0)
+        m.poly([(q[3][0], base + eave, q[3][1]), (q[2][0], base + eave, q[2][1]), (mid1[0], ridge, mid1[1]), (mid0[0], ridge, mid0[1])], GLASSLT, c0)
+        for sa in (s0, s1):   # gable ends
+            a, b2, tp = P(sa, t0), P(sa, t1), P(sa, tm)
+            m.poly([(a[0], base + eave, a[1]), (b2[0], base + eave, b2[1]), (tp[0], ridge, tp[1])], GLASSLT, c0)
         beam(m, (mid0[0], ridge, mid0[1]), (mid1[0], ridge, mid1[1]), 0.2, 0.2, DGREY)
     return dict(code=CODE, title=TITLE, lat0=lat0, lon0=lon0, alt=RIVER, parts=[("br_b254_muttart_conservatory", m)], frame=fr,
                 axis=Axis([(0, 0), (1, 0)]))

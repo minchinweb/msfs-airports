@@ -55,6 +55,10 @@ _NEW = [
 for _i, (_n, _rgb) in enumerate(_NEW):
     globals()[_n] = len(PALETTE)
     PALETTE.append(_rgb)
+# Pad to 64 swatches so the strip is 1024 px wide: the sim's texture streamer wants power-of-two sizes (the 54-swatch, 864 px strip
+# is not, and some models showed pink).  CYXD's 32 swatches are 512 px.  Swatch indices of the real colours do not change.
+while len(PALETTE) < 64:
+    PALETTE.append(PALETTE[-1])
 
 
 # local frame -------------------------------------------------------------------------------------
