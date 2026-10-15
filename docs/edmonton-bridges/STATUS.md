@@ -4,13 +4,13 @@ Last updated: 2026-10-14. Package: `scenery-edmonton-bridges/` (project `scenery
 
 ## What this is
 
-Scaffolding only. The scenery XML (`PackageSources/Scenery/edmonton-bridges/edmonton-bridges.xml`) is an empty `FSData` document, so the package builds and loads with nothing placed. `PackageOrderHint` is `CUSTOM_WORLD_SCENERY` because these are city objects, not an airport.
+Version 0.2.0 holds the Tier 1 downtown valley: 15 models and 16 placements (R10, R9, R11, R15, R13, R12, R14, P152, B254, B255, F256, V257, N258, N259, N260). Flat-colour glTF built by `scenery-edmonton-bridges/tools/gen_bridges.py` from the reference data; what is sourced and what is assumed is in `docs/edmonton-bridges/MODEL-NOTES.md`. Compiled, not yet seen in the sim. `PackageOrderHint` is `CUSTOM_WORLD_SCENERY` because these are city objects, not an airport.
 
 ## Build
 
 From the repo root: `build.bat bridges` (PowerShell: `cmd /c ".\build.bat bridges"`). Short name `bridges` matches the folder `scenery-edmonton-bridges`. See `CLAUDE.md` for the SDK path override.
 
-Compiled once on 2026-10-14 with the sim closed. `_PackageInt/_RPTErrors.xml` is empty and `Packages/cardboardgt-scenery-edmonton-bridges/Scenery/cardboardgt/edmonton-bridges/edmonton-bridges.bgl` was written (56 bytes, nothing placed). `fspackagetool` did not write `layout.json`; one was added from the built files so the package folder has an index. Both `Packages/` and `_PackageInt/` are gitignored.
+Built on 2026-10-14 with the sim closed (the 0.1.0 text follows; 0.2.0 compiled the same way, with a `ModelLib` asset group added). `_PackageInt/_RPTErrors.xml` is empty and `Packages/cardboardgt-scenery-edmonton-bridges/Scenery/cardboardgt/edmonton-bridges/edmonton-bridges.bgl` was written (56 bytes, nothing placed). `fspackagetool` did not write `layout.json`; one was added from the built files so the package folder has an index. Both `Packages/` and `_PackageInt/` are gitignored.
 
 ## What to model
 
@@ -18,8 +18,7 @@ Three inventories. `docs/edmonton-bridges/bridges.md` is the North Saskatchewan 
 
 ## Next
 
-Read `CURSOR-HANDOFF.md` before modeling. The coded briefs were reviewed on 2026-10-14. Every one can be laid in plan. None has a deck elevation above sea level, so none can be seated yet.
-
-1. Work `PRIORITY.md` from the top. Add bridge models under `PackageSources/modelLib/<model>/` (`<model>.xml` + glTF), then add a `ModelLib` asset group to the package definition. Output dir used by the other packages is `Scenery\cardboardgt\<short>\`.
-2. Place them as `SceneryObject` / `LibraryObject` entries in `edmonton-bridges.xml`.
-3. Bump the package version and add a release note when the first bridge is in the sim.
+1. Open the sim and look: terrain clipping at piers, the datum, the High Level ridge (`MODEL-NOTES.md`, last section). Then fix what shows, by changing the site modules and rerunning `tools/gen_bridges.py`.
+2. `build.bat bridges` (clear `gamingservicesui` and `gamelaunchhelper` first if it says NO BUILD), then `python -I scenery-edmonton-bridges/tools/make_layout.py` if `Packages/.../layout.json` is missing.
+3. Next boxes in `PRIORITY.md`: section 2 landmarks, starting with the Bridges checkpoint (R20, R21, R22) and Quesnell (R6). The T133, Z125, G116, G117 and G119 ravine decks of the R8 task are not built.
+4. Night lighting and transparent glass are not done for any model.

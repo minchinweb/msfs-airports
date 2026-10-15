@@ -8,3 +8,6 @@ docs/edmonton-bridges/reference/**/aerial/*.jpg
 
 # Mapillary access token (never commit)
 .mapillary.txt
+
+__pycache__/
+*.xml.user

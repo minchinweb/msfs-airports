@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ModelInfo guid="{0BE92ABF-5246-59D4-8911-78A0169DF10D}" version="1.1">
+	<LODS>
+		<LOD minSize="0" ModelFile="br_r14_tawatina.gltf"/>
+	</LODS>
+</ModelInfo>

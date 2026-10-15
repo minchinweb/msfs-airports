@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ModelInfo guid="{EBF9AADC-779C-5C23-A5D2-6C143A7E4891}" version="1.1">
+	<LODS>
+		<LOD minSize="0" ModelFile="br_r11_walterdale.gltf"/>
+	</LODS>
+</ModelInfo>

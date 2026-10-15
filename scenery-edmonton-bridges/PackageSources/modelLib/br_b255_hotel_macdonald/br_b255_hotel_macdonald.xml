@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ModelInfo guid="{F84A355C-7888-5EB2-8257-5298E295AB4E}" version="1.1">
+	<LODS>
+		<LOD minSize="0" ModelFile="br_b255_hotel_macdonald.gltf"/>
+	</LODS>
+</ModelInfo>

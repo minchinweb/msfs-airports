@@ -1,0 +1,174 @@
+{
+ "r10": {
+  "br_r10_high_level": [
+   [
+    "R10 High Level Bridge (br_r10_high_level_1)",
+    53.52926077042734,
+    -113.51157173115321,
+    614.91,
+    "{C2641F3C-B927-5D09-A46E-AD374023EB8D}"
+   ],
+   [
+    "R10 High Level Bridge (br_r10_high_level_2)",
+    53.52926077042734,
+    -113.51157173115321,
+    614.91,
+    "{877C2F98-5345-5548-A979-EA5B8C7C1746}"
+   ]
+  ]
+ },
+ "r9": {
+  "br_r9_menzies": [
+   [
+    "R9 Dudley B. Menzies Bridge (br_r9_menzies)",
+    53.52974682323268,
+    -113.51245403771681,
+    614.92,
+    "{3BA84ACA-E1D3-5AE1-8AEA-20FD1BBD5CDF}"
+   ]
+  ]
+ },
+ "r11": {
+  "br_r11_walterdale": [
+   [
+    "R11 Walterdale Bridge (br_r11_walterdale)",
+    53.528382905790146,
+    -113.50169957143513,
+    614.21,
+    "{EBF9AADC-779C-5C23-A5D2-6C143A7E4891}"
+   ]
+  ]
+ },
+ "r15": {
+  "br_r15_dawson": [
+   [
+    "R15 Dawson Bridge (br_r15_dawson)",
+    53.548739,
+    -113.4671965,
+    612.83,
+    "{1CC036BF-C4C3-5E01-A8A9-453844BC84DF}"
+   ]
+  ]
+ },
+ "r13": {
+  "br_r13_low_level": [
+   [
+    "R13 Low Level Bridge (br_r13_low_level)",
+    53.537958572237976,
+    -113.4866686957224,
+    613.74,
+    "{E2366A61-EEF3-5917-AC2C-10A4E30CC277}"
+   ]
+  ]
+ },
+ "r12": {
+  "br_r12_james_macdonald": [
+   [
+    "R12 James MacDonald Bridge (br_r12_james_macdonald)",
+    53.53578104204365,
+    -113.48853285820842,
+    613.73,
+    "{F0C408DF-3861-5506-8119-33ECEC094E3E}"
+   ]
+  ]
+ },
+ "r14": {
+  "br_r14_tawatina": [
+   [
+    "R14 Tawatina Bridge and Valley Line ramp (br_r14_tawatina)",
+    53.53944991503241,
+    -113.47714032838317,
+    613.26,
+    "{0BE92ABF-5246-59D4-8911-78A0169DF10D}"
+   ]
+  ]
+ },
+ "n258": {
+  "br_n258_grierson": [
+   [
+    "N258 Grierson Hill Bridge (br_n258_grierson)",
+    53.538563999999994,
+    -113.48878900000001,
+    613.74,
+    "{3617EF62-AC12-521B-B32C-69F86092ED13}"
+   ]
+  ]
+ },
+ "n259": {
+  "br_n259_rossdale": [
+   [
+    "N259 Rossdale Road Bridge (br_n259_rossdale)",
+    53.537724478456404,
+    -113.49313244429237,
+    613.74,
+    "{062DAA88-FB8C-5A86-9AB8-4FF585E6E4F4}"
+   ]
+  ]
+ },
+ "n260": {
+  "br_n260_scona_connors": [
+   [
+    "N260 Scona / Connors road bridges (br_n260_scona_connors)",
+    53.536405900000005,
+    -113.4841586,
+    613.66,
+    "{14B9B604-2564-51C8-9E87-22C9B43EFD1F}"
+   ]
+  ]
+ },
+ "f256": {
+  "br_f256_funicular": [
+   [
+    "F256 100 Street Funicular and footbridge (br_f256_funicular)",
+    53.539305,
+    -113.487472,
+    637.74,
+    "{1A644E8D-0605-5FDC-BE01-35101536C9F5}"
+   ]
+  ]
+ },
+ "v257": {
+  "br_v257_riverboat": [
+   [
+    "V257 Edmonton Riverboat (br_v257_riverboat)",
+    53.53961960913753,
+    -113.48195868125671,
+    613.66,
+    "{F83753F3-68E2-53FC-918E-DA21405F7CF6}"
+   ]
+  ]
+ },
+ "b255": {
+  "br_b255_hotel_macdonald": [
+   [
+    "B255 Fairmont Hotel Macdonald (br_b255_hotel_macdonald)",
+    53.540304961764704,
+    -113.4894997235294,
+    666.83,
+    "{F84A355C-7888-5EB2-8257-5298E295AB4E}"
+   ]
+  ]
+ },
+ "p152": {
+  "br_p152_muttart_stop": [
+   [
+    "P152 Muttart stop (br_p152_muttart_stop)",
+    53.536424225,
+    -113.479490575,
+    621.94,
+    "{2C5A59E8-8A70-52EB-8E00-4018EC96695E}"
+   ]
+  ]
+ },
+ "b254": {
+  "br_b254_muttart_conservatory": [
+   [
+    "B254 Muttart Conservatory (br_b254_muttart_conservatory)",
+    53.535216,
+    -113.477286,
+    627.9,
+    "{9ED7463C-33B1-5073-AFD8-7BFA934A2EDF}"
+   ]
+  ]
+ }
+}

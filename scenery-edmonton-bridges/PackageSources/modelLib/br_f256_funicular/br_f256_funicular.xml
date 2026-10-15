@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ModelInfo guid="{1A644E8D-0605-5FDC-BE01-35101536C9F5}" version="1.1">
+	<LODS>
+		<LOD minSize="0" ModelFile="br_f256_funicular.gltf"/>
+	</LODS>
+</ModelInfo>

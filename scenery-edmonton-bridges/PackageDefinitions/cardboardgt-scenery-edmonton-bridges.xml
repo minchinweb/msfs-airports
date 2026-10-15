@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="utf-8"?>
-<AssetPackage ReleaseNotes="PackageDefinitions\cardboardgt-scenery-edmonton-bridges\ReleaseNotes.xml" Version="0.1.0">
+<AssetPackage ReleaseNotes="PackageDefinitions\cardboardgt-scenery-edmonton-bridges\ReleaseNotes.xml" Version="0.2.0">
 	<ItemSettings>
 		<ContentType>SCENERY</ContentType>
 		<Title>Edmonton Bridges</Title>
@@ -19,6 +19,14 @@
 			</Flags>
 			<AssetDir>PackageDefinitions\cardboardgt-scenery-edmonton-bridges\ContentInfo\</AssetDir>
 			<OutputDir>ContentInfo\cardboardgt-scenery-edmonton-bridges\</OutputDir>
+		</AssetGroup>
+		<AssetGroup Name="bridges-modellib">
+			<Type Version="1">ModelLib</Type>
+			<Flags>
+				<FSXCompatibility>false</FSXCompatibility>
+			</Flags>
+			<AssetDir>PackageSources\modelLib\</AssetDir>
+			<OutputDir>Scenery\cardboardgt\edmonton-bridges\</OutputDir>
 		</AssetGroup>
 		<AssetGroup Name="edmonton-bridges">
 			<Type Version="0">BGL</Type>

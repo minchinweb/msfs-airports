@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ModelInfo guid="{14B9B604-2564-51C8-9E87-22C9B43EFD1F}" version="1.1">
+	<LODS>
+		<LOD minSize="0" ModelFile="br_n260_scona_connors.gltf"/>
+	</LODS>
+</ModelInfo>

@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ModelInfo guid="{2C5A59E8-8A70-52EB-8E00-4018EC96695E}" version="1.1">
+	<LODS>
+		<LOD minSize="0" ModelFile="br_p152_muttart_stop.gltf"/>
+	</LODS>
+</ModelInfo>

@@ -1,0 +1,138 @@
+{
+ "asset": {
+  "version": "2.0",
+  "generator": "scenery-edmonton-bridges/tools/bridgelib.py",
+  "extensions": {
+   "ASOBO_normal_map_convention": {
+    "tangent_space_convention": "DirectX"
+   }
+  }
+ },
+ "extensionsUsed": [
+  "ASOBO_normal_map_convention"
+ ],
+ "scene": 0,
+ "scenes": [
+  {
+   "nodes": [
+    0
+   ]
+  }
+ ],
+ "nodes": [
+  {
+   "mesh": 0,
+   "name": "br_b255_hotel_macdonald"
+  }
+ ],
+ "meshes": [
+  {
+   "name": "br_b255_hotel_macdonald",
+   "primitives": [
+    {
+     "attributes": {
+      "POSITION": 0,
+      "NORMAL": 1,
+      "TEXCOORD_0": 2
+     },
+     "indices": 3,
+     "mode": 4,
+     "material": 0
+    }
+   ]
+  }
+ ],
+ "materials": [
+  {
+   "name": "bridge_palette",
+   "pbrMetallicRoughness": {
+    "baseColorTexture": {
+     "index": 0
+    },
+    "metallicFactor": 0.0,
+    "roughnessFactor": 0.9
+   }
+  }
+ ],
+ "textures": [
+  {
+   "sampler": 0,
+   "source": 0
+  }
+ ],
+ "samplers": [
+  {
+   "magFilter": 9728,
+   "minFilter": 9728
+  }
+ ],
+ "images": [
+  {
+   "uri": "bridge_palette.png"
+  }
+ ],
+ "accessors": [
+  {
+   "bufferView": 0,
+   "componentType": 5126,
+   "count": 944,
+   "type": "VEC3",
+   "min": [
+    -42.65645529930048,
+    -3.0,
+    -36.48982633857832
+   ],
+   "max": [
+    27.783125604973645,
+    48.1,
+    34.91792869537817
+   ]
+  },
+  {
+   "bufferView": 1,
+   "componentType": 5126,
+   "count": 944,
+   "type": "VEC3"
+  },
+  {
+   "bufferView": 2,
+   "componentType": 5126,
+   "count": 944,
+   "type": "VEC2"
+  },
+  {
+   "bufferView": 3,
+   "componentType": 5123,
+   "count": 1338,
+   "type": "SCALAR"
+  }
+ ],
+ "bufferViews": [
+  {
+   "buffer": 0,
+   "byteOffset": 0,
+   "byteLength": 11328
+  },
+  {
+   "buffer": 0,
+   "byteOffset": 11328,
+   "byteLength": 11328
+  },
+  {
+   "buffer": 0,
+   "byteOffset": 22656,
+   "byteLength": 7552
+  },
+  {
+   "buffer": 0,
+   "byteOffset": 30208,
+   "byteLength": 2676
+  }
+ ],
+ "buffers": [
+  {
+   "uri": "br_b255_hotel_macdonald.bin",
+   "byteLength": 32884
+  }
+ ]
+}

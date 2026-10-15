@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ModelInfo guid="{062DAA88-FB8C-5A86-9AB8-4FF585E6E4F4}" version="1.1">
+	<LODS>
+		<LOD minSize="0" ModelFile="br_n259_rossdale.gltf"/>
+	</LODS>
+</ModelInfo>

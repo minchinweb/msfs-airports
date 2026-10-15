@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ModelInfo guid="{3BA84ACA-E1D3-5AE1-8AEA-20FD1BBD5CDF}" version="1.1">
+	<LODS>
+		<LOD minSize="0" ModelFile="br_r9_menzies.gltf"/>
+	</LODS>
+</ModelInfo>

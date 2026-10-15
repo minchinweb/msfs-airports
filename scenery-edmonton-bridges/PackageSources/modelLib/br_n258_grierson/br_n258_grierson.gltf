@@ -1,0 +1,138 @@
+{
+ "asset": {
+  "version": "2.0",
+  "generator": "scenery-edmonton-bridges/tools/bridgelib.py",
+  "extensions": {
+   "ASOBO_normal_map_convention": {
+    "tangent_space_convention": "DirectX"
+   }
+  }
+ },
+ "extensionsUsed": [
+  "ASOBO_normal_map_convention"
+ ],
+ "scene": 0,
+ "scenes": [
+  {
+   "nodes": [
+    0
+   ]
+  }
+ ],
+ "nodes": [
+  {
+   "mesh": 0,
+   "name": "br_n258_grierson"
+  }
+ ],
+ "meshes": [
+  {
+   "name": "br_n258_grierson",
+   "primitives": [
+    {
+     "attributes": {
+      "POSITION": 0,
+      "NORMAL": 1,
+      "TEXCOORD_0": 2
+     },
+     "indices": 3,
+     "mode": 4,
+     "material": 0
+    }
+   ]
+  }
+ ],
+ "materials": [
+  {
+   "name": "bridge_palette",
+   "pbrMetallicRoughness": {
+    "baseColorTexture": {
+     "index": 0
+    },
+    "metallicFactor": 0.0,
+    "roughnessFactor": 0.9
+   }
+  }
+ ],
+ "textures": [
+  {
+   "sampler": 0,
+   "source": 0
+  }
+ ],
+ "samplers": [
+  {
+   "magFilter": 9728,
+   "minFilter": 9728
+  }
+ ],
+ "images": [
+  {
+   "uri": "bridge_palette.png"
+  }
+ ],
+ "accessors": [
+  {
+   "bufferView": 0,
+   "componentType": 5126,
+   "count": 556,
+   "type": "VEC3",
+   "min": [
+    -15.685608251420742,
+    6.389999999999942,
+    -19.769576743921313
+   ],
+   "max": [
+    17.632460357297024,
+    27.1798040226399,
+    17.344785478214483
+   ]
+  },
+  {
+   "bufferView": 1,
+   "componentType": 5126,
+   "count": 556,
+   "type": "VEC3"
+  },
+  {
+   "bufferView": 2,
+   "componentType": 5126,
+   "count": 556,
+   "type": "VEC2"
+  },
+  {
+   "bufferView": 3,
+   "componentType": 5123,
+   "count": 864,
+   "type": "SCALAR"
+  }
+ ],
+ "bufferViews": [
+  {
+   "buffer": 0,
+   "byteOffset": 0,
+   "byteLength": 6672
+  },
+  {
+   "buffer": 0,
+   "byteOffset": 6672,
+   "byteLength": 6672
+  },
+  {
+   "buffer": 0,
+   "byteOffset": 13344,
+   "byteLength": 4448
+  },
+  {
+   "buffer": 0,
+   "byteOffset": 17792,
+   "byteLength": 1728
+  }
+ ],
+ "buffers": [
+  {
+   "uri": "br_n258_grierson.bin",
+   "byteLength": 19520
+  }
+ ]
+}

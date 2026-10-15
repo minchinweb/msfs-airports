@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ModelInfo guid="{3617EF62-AC12-521B-B32C-69F86092ED13}" version="1.1">
+	<LODS>
+		<LOD minSize="0" ModelFile="br_n258_grierson.gltf"/>
+	</LODS>
+</ModelInfo>
