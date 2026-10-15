@@ -72,7 +72,7 @@ The first four boxes are named fixes on the Edmonton VFR terminal chart. Then th
 
 - [x] **R20 Beverly**, **R21 Clover Bar**, and **R22 Clover Bar Railway**, one task. 53.571, -113.373 / 53.572, -113.372 / 53.573, -113.372. Look 4, Where 5. This crossing is the VFR checkpoint **Bridges** (VCBRG, N53° 34.30′ W113° 22.30′). Three decks. Do all three. It is not on a runway centerline.
 
-- [ ] **R6 Quesnell**. 53.507, -113.567. Look 4, Where 5. The VFR checkpoint **Quesnell Bridge** (VCQSN, N53° 30.25′ W113° 34.00′). Whitemud Drive, eight lanes. About 3.4 km off the runway 34 long final at 6.6 km. Wide deck, not a truss. With it, place **W85 Fox Drive (Campbell Bridge)**, 53.5032, -113.5610, the creek span beside it. W85 was left off the freeway list.
+- [x] **R6 Quesnell**. 53.507, -113.567. Look 4, Where 5. The VFR checkpoint **Quesnell Bridge** (VCQSN, N53° 30.25′ W113° 34.00′). Whitemud Drive, eight lanes. About 3.4 km off the runway 34 long final at 6.6 km. Wide deck, not a truss. With it, place **W85 Fox Drive (Campbell Bridge)**, 53.5032, -113.5610, the creek span beside it. W85 was left off the freeway list.
 
 - [ ] **Y79 Bremner Cloverleaf**. 53.5702, -113.2461. Look 3, Where 5. Highway 16 / Highway 21. The VFR checkpoint **Bremner Cloverleaf** (VCBCL, N53° 34.30′ W113° 14.70′). It was on the cross list. The loops are the landmark, so this is not a diamond speck. Model the cloverleaf.
 
@@ -183,7 +183,7 @@ A few names in the cross tables already have a box above. They are repeated here
 
 - H37 Henday / 87 Avenue — with T131
 - H53 Henday / Whitemud east — section 4
-- W85 Fox Drive, Campbell Bridge — with R6
+- W85 Fox Drive, Campbell Bridge — with R6 (built with R6, Tier 2)
 - W88 Whitemud / Calgary Trail — section 4
 - W89 Whitemud / 66 Street — with T128
 - W91 Whitemud / 17 Street — with H53

@@ -1,0 +1,138 @@
+{
+ "asset": {
+  "version": "2.0",
+  "generator": "scenery-edmonton-bridges/tools/bridgelib.py",
+  "extensions": {
+   "ASOBO_normal_map_convention": {
+    "tangent_space_convention": "DirectX"
+   }
+  }
+ },
+ "extensionsUsed": [
+  "ASOBO_normal_map_convention"
+ ],
+ "scene": 0,
+ "scenes": [
+  {
+   "nodes": [
+    0
+   ]
+  }
+ ],
+ "nodes": [
+  {
+   "mesh": 0,
+   "name": "br_r6_quesnell_2"
+  }
+ ],
+ "meshes": [
+  {
+   "name": "br_r6_quesnell_2",
+   "primitives": [
+    {
+     "attributes": {
+      "POSITION": 0,
+      "NORMAL": 1,
+      "TEXCOORD_0": 2
+     },
+     "indices": 3,
+     "mode": 4,
+     "material": 0
+    }
+   ]
+  }
+ ],
+ "materials": [
+  {
+   "name": "bridge_palette",
+   "pbrMetallicRoughness": {
+    "baseColorTexture": {
+     "index": 0
+    },
+    "metallicFactor": 0.0,
+    "roughnessFactor": 0.9
+   }
+  }
+ ],
+ "textures": [
+  {
+   "sampler": 0,
+   "source": 0
+  }
+ ],
+ "samplers": [
+  {
+   "magFilter": 9728,
+   "minFilter": 9728
+  }
+ ],
+ "images": [
+  {
+   "uri": "bridge_palette.png"
+  }
+ ],
+ "accessors": [
+  {
+   "bufferView": 0,
+   "componentType": 5126,
+   "count": 16128,
+   "type": "VEC3",
+   "min": [
+    -35.07165189859874,
+    -5.0,
+    -159.81418292409913
+   ],
+   "max": [
+    40.98438276623425,
+    32.07946692810005,
+    162.49047180319263
+   ]
+  },
+  {
+   "bufferView": 1,
+   "componentType": 5126,
+   "count": 16128,
+   "type": "VEC3"
+  },
+  {
+   "bufferView": 2,
+   "componentType": 5126,
+   "count": 16128,
+   "type": "VEC2"
+  },
+  {
+   "bufferView": 3,
+   "componentType": 5123,
+   "count": 24552,
+   "type": "SCALAR"
+  }
+ ],
+ "bufferViews": [
+  {
+   "buffer": 0,
+   "byteOffset": 0,
+   "byteLength": 193536
+  },
+  {
+   "buffer": 0,
+   "byteOffset": 193536,
+   "byteLength": 193536
+  },
+  {
+   "buffer": 0,
+   "byteOffset": 387072,
+   "byteLength": 129024
+  },
+  {
+   "buffer": 0,
+   "byteOffset": 516096,
+   "byteLength": 49104
+  }
+ ],
+ "buffers": [
+  {
+   "uri": "br_r6_quesnell_2.bin",
+   "byteLength": 565200
+  }
+ ]
+}

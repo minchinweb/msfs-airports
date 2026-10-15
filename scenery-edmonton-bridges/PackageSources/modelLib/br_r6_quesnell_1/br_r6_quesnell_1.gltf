@@ -1,0 +1,138 @@
+{
+ "asset": {
+  "version": "2.0",
+  "generator": "scenery-edmonton-bridges/tools/bridgelib.py",
+  "extensions": {
+   "ASOBO_normal_map_convention": {
+    "tangent_space_convention": "DirectX"
+   }
+  }
+ },
+ "extensionsUsed": [
+  "ASOBO_normal_map_convention"
+ ],
+ "scene": 0,
+ "scenes": [
+  {
+   "nodes": [
+    0
+   ]
+  }
+ ],
+ "nodes": [
+  {
+   "mesh": 0,
+   "name": "br_r6_quesnell_1"
+  }
+ ],
+ "meshes": [
+  {
+   "name": "br_r6_quesnell_1",
+   "primitives": [
+    {
+     "attributes": {
+      "POSITION": 0,
+      "NORMAL": 1,
+      "TEXCOORD_0": 2
+     },
+     "indices": 3,
+     "mode": 4,
+     "material": 0
+    }
+   ]
+  }
+ ],
+ "materials": [
+  {
+   "name": "bridge_palette",
+   "pbrMetallicRoughness": {
+    "baseColorTexture": {
+     "index": 0
+    },
+    "metallicFactor": 0.0,
+    "roughnessFactor": 0.9
+   }
+  }
+ ],
+ "textures": [
+  {
+   "sampler": 0,
+   "source": 0
+  }
+ ],
+ "samplers": [
+  {
+   "magFilter": 9728,
+   "minFilter": 9728
+  }
+ ],
+ "images": [
+  {
+   "uri": "bridge_palette.png"
+  }
+ ],
+ "accessors": [
+  {
+   "bufferView": 0,
+   "componentType": 5126,
+   "count": 60000,
+   "type": "VEC3",
+   "min": [
+    -34.471657329313274,
+    15.352857142857188,
+    -157.81164821862464
+   ],
+   "max": [
+    40.10103846735197,
+    20.700738467683465,
+    160.42465903061768
+   ]
+  },
+  {
+   "bufferView": 1,
+   "componentType": 5126,
+   "count": 60000,
+   "type": "VEC3"
+  },
+  {
+   "bufferView": 2,
+   "componentType": 5126,
+   "count": 60000,
+   "type": "VEC2"
+  },
+  {
+   "bufferView": 3,
+   "componentType": 5123,
+   "count": 90000,
+   "type": "SCALAR"
+  }
+ ],
+ "bufferViews": [
+  {
+   "buffer": 0,
+   "byteOffset": 0,
+   "byteLength": 720000
+  },
+  {
+   "buffer": 0,
+   "byteOffset": 720000,
+   "byteLength": 720000
+  },
+  {
+   "buffer": 0,
+   "byteOffset": 1440000,
+   "byteLength": 480000
+  },
+  {
+   "buffer": 0,
+   "byteOffset": 1920000,
+   "byteLength": 180000
+  }
+ ],
+ "buffers": [
+  {
+   "uri": "br_r6_quesnell_1.bin",
+   "byteLength": 2100000
+  }
+ ]
+}

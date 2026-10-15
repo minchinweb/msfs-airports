@@ -1,0 +1,354 @@
+{
+  "code": "W85",
+  "name": "Fox Drive, Campbell Bridge",
+  "centre": [
+    53.5032,
+    -113.561
+  ],
+  "crs": "EPSG:4326",
+  "coordinate_order": "[lat, lon]",
+  "geometry_source": "docs/edmonton-bridges/bridge-geometry.json",
+  "geometry_retrieved": "2026-10-14",
+  "plan_length_note": "plan_length_m is the horizontal length of that OSM way, WGS84 haversine with radius 6378137 m, rounded to one decimal. These ways match the live OpenStreetMap node counts on 2026-10-14, so the stored polylines are the complete ways. An approach plan_length_m is still not the climb to grade. No published structural length was found for this deck. Quesnell lengths 315 m, 319.8 m, and 333 m are not used here.",
+  "dropped_note": "The extract lists footway 25475768 first. That way is a trail about 170 m south of Fox Drive and is excluded. Path 840389481 is about 180 m north, toward Quesnell, and is excluded. This file keeps only the Fox Drive / Campbell Bridge decks and the two paths on this crossing. Fort Edmonton Park Road, Keillor Road, and the other trail stubs are excluded.",
+  "decks": [
+    {
+      "osm_way": 25475831,
+      "part": "south_road_deck",
+      "which": "Fox Drive NW on the south carriageway. Three lanes, one-way, secondary, width tag 11.1, tagged bridge:name Campbell Bridge. Node order is west to east, so the one-way is eastbound. This centreline is 88.7 m. That is not a published structural length. Quesnell lengths are not used here.",
+      "plan_length_m": 88.7,
+      "tags": {
+        "bridge": "yes",
+        "bridge:name": "Campbell Bridge",
+        "highway": "secondary",
+        "lanes": "3",
+        "layer": "2",
+        "maxspeed": "70",
+        "name": "Fox Drive NW",
+        "oneway": "yes",
+        "surface": "asphalt",
+        "width": "11.1"
+      },
+      "nodes": [
+        [
+          53.503126,
+          -113.561549
+        ],
+        [
+          53.503109,
+          -113.561211
+        ],
+        [
+          53.503094,
+          -113.560851
+        ],
+        [
+          53.503063,
+          -113.560214
+        ]
+      ]
+    },
+    {
+      "osm_way": 25475833,
+      "part": "north_road_deck_east",
+      "which": "Fox Drive NW on the east part of the north carriageway. Three lanes, one-way, secondary, width tag 11.1, tagged bridge:name Campbell Bridge. Node order is east to west, so the one-way is westbound. Continues as way 944470767. This centreline is 67.1 m.",
+      "plan_length_m": 67.1,
+      "tags": {
+        "bridge": "yes",
+        "bridge:name": "Campbell Bridge",
+        "highway": "secondary",
+        "lanes": "3",
+        "layer": "2",
+        "maxspeed": "70",
+        "name": "Fox Drive NW",
+        "oneway": "yes",
+        "surface": "asphalt",
+        "width": "11.1"
+      },
+      "nodes": [
+        [
+          53.503148,
+          -113.560201
+        ],
+        [
+          53.503173,
+          -113.560839
+        ],
+        [
+          53.503194,
+          -113.561211
+        ]
+      ]
+    },
+    {
+      "osm_way": 944470767,
+      "part": "north_road_deck_west",
+      "which": "Fox Drive NW on the west part of the north carriageway. Three lanes, one-way, secondary, width tag 11.1, tagged bridge:name Campbell Bridge. Continues way 25475833 west. This centreline is 22.1 m. With way 25475833 it is 89.2 m.",
+      "plan_length_m": 22.1,
+      "tags": {
+        "bridge": "yes",
+        "bridge:name": "Campbell Bridge",
+        "highway": "secondary",
+        "lanes": "3",
+        "layer": "2",
+        "maxspeed": "70",
+        "name": "Fox Drive NW",
+        "oneway": "yes",
+        "surface": "asphalt",
+        "width": "11.1"
+      },
+      "nodes": [
+        [
+          53.503194,
+          -113.561211
+        ],
+        [
+          53.503214,
+          -113.561543
+        ]
+      ]
+    },
+    {
+      "osm_way": 27265227,
+      "part": "north_shared_use_path",
+      "which": "Shared-use path on the north side of the deck. OpenStreetMap tags it as a cycleway with foot and bicycle designated, surface concrete, layer 2. Node order is west to east. This centreline is 89.5 m.",
+      "plan_length_m": 89.5,
+      "tags": {
+        "bicycle": "designated",
+        "bridge": "yes",
+        "foot": "designated",
+        "highway": "cycleway",
+        "layer": "2",
+        "surface": "concrete"
+      },
+      "nodes": [
+        [
+          53.503308,
+          -113.561536
+        ],
+        [
+          53.503284,
+          -113.561233
+        ],
+        [
+          53.503268,
+          -113.560923
+        ],
+        [
+          53.503233,
+          -113.560191
+        ]
+      ]
+    },
+    {
+      "osm_way": 582712471,
+      "part": "south_sidewalk",
+      "which": "South sidewalk. OpenStreetMap tags it as a footway, footway=sidewalk on a live read, surface concrete, layer 1. Node order is east to west. This centreline is 89.3 m. Layer 1 is the mapper tag. The road ways are layer 2.",
+      "plan_length_m": 89.3,
+      "tags": {
+        "bridge": "yes",
+        "highway": "footway",
+        "layer": "1",
+        "surface": "concrete"
+      },
+      "nodes": [
+        [
+          53.502986,
+          -113.560209
+        ],
+        [
+          53.503035,
+          -113.561555
+        ]
+      ]
+    }
+  ],
+  "approaches": [
+    {
+      "osm_way": 581374049,
+      "part": "west_south_road",
+      "which": "Fox Drive NW onto the west end of the south carriageway. Three lanes, one-way, 70 km/h, width tag 11.1. Node order runs toward the deck. The far node is not a surveyed grade point.",
+      "plan_length_m": 56.5,
+      "tags": {
+        "highway": "secondary",
+        "lanes": "3",
+        "maxspeed": "70",
+        "name": "Fox Drive NW",
+        "oneway": "yes",
+        "surface": "asphalt",
+        "width": "11.1"
+      },
+      "nodes": [
+        [
+          53.503183,
+          -113.562397
+        ],
+        [
+          53.503172,
+          -113.562222
+        ],
+        [
+          53.503126,
+          -113.561549
+        ]
+      ],
+      "extract_role": "approach"
+    },
+    {
+      "osm_way": 25475832,
+      "part": "west_north_road",
+      "which": "Fox Drive NW leaving the west end of the north carriageway. Four lanes, one-way, 70 km/h, width tag 14.6. Node order runs away from the deck toward Fort Edmonton Park Road and Whitemud. The far node is not a surveyed grade point.",
+      "plan_length_m": 56.4,
+      "tags": {
+        "highway": "secondary",
+        "lanes": "4",
+        "maxspeed": "70",
+        "name": "Fox Drive NW",
+        "oneway": "yes",
+        "surface": "asphalt",
+        "width": "14.6"
+      },
+      "nodes": [
+        [
+          53.503214,
+          -113.561543
+        ],
+        [
+          53.503262,
+          -113.56221
+        ],
+        [
+          53.503275,
+          -113.562389
+        ]
+      ],
+      "extract_role": "approach"
+    },
+    {
+      "osm_way": 930880546,
+      "part": "east_south_road",
+      "which": "Fox Drive NW leaving the east end of the south carriageway. Three lanes, one-way, 70 km/h, width tag 11.1. Node order runs away from the deck. The far node is not a surveyed grade point.",
+      "plan_length_m": 112.3,
+      "tags": {
+        "highway": "secondary",
+        "lanes": "3",
+        "maxspeed": "70",
+        "name": "Fox Drive NW",
+        "oneway": "yes",
+        "surface": "asphalt",
+        "width": "11.1"
+      },
+      "nodes": [
+        [
+          53.503063,
+          -113.560214
+        ],
+        [
+          53.503038,
+          -113.559389
+        ],
+        [
+          53.503024,
+          -113.558519
+        ]
+      ],
+      "extract_role": "approach"
+    },
+    {
+      "osm_way": 474378988,
+      "part": "east_north_road",
+      "which": "Fox Drive NW onto the east end of the north carriageway. Three lanes, one-way, 70 km/h, width tag 11.1. Node order runs toward the deck. The far node is not a surveyed grade point.",
+      "plan_length_m": 167.7,
+      "tags": {
+        "highway": "secondary",
+        "lanes": "3",
+        "maxspeed": "70",
+        "name": "Fox Drive NW",
+        "oneway": "yes",
+        "surface": "asphalt",
+        "width": "11.1"
+      },
+      "nodes": [
+        [
+          53.503144,
+          -113.557669
+        ],
+        [
+          53.503128,
+          -113.558513
+        ],
+        [
+          53.503127,
+          -113.558996
+        ],
+        [
+          53.503132,
+          -113.559512
+        ],
+        [
+          53.503148,
+          -113.560201
+        ]
+      ],
+      "extract_role": "approach"
+    }
+  ],
+  "excluded": [
+    {
+      "osm_way": 25475768,
+      "reason": "Footway, 28.6 m, layer 1, about 170 m south of Fox Drive. A trail crossing, not this deck. The extract listed it first."
+    },
+    {
+      "osm_way": 840389481,
+      "reason": "Path, 46.5 m, layer 1, about 180 m north of Fox Drive toward Quesnell. A different crossing. Not this file."
+    },
+    {
+      "osm_way": 240053448,
+      "reason": "Fort Edmonton Park Road NW, 185.3 m, west of this deck. A valley road, not the Fox Drive climb."
+    },
+    {
+      "osm_way": 323386335,
+      "reason": "Keillor Road, 388.9 m, east of this deck. A park road, not the Fox Drive climb."
+    },
+    {
+      "osm_way": 22916673,
+      "reason": "R6 Quesnell east carriageway. River span. Not this file."
+    },
+    {
+      "osm_way": 22916674,
+      "reason": "R6 Quesnell west carriageway. Not this file."
+    }
+  ],
+  "dimensions": {
+    "structural_type": "Road bridge over Whitemud Creek. No published girder, beam, or truss name was found. OSM road ways have no bridge:structure tag. The 2012 photograph shows a deck with a metal railing. It is not a truss.",
+    "published_structural_length_m": null,
+    "osm_south_centreline_m": 88.7,
+    "osm_north_centreline_sum_m": 89.2,
+    "osm_north_path_m": 89.5,
+    "osm_south_sidewalk_m": 89.3,
+    "osm_width_tag_m": 11.1,
+    "osm_width_is_structural_width": false,
+    "lanes_each_way": 3,
+    "posted_speed_kmh_osm_tag": 70,
+    "year_present_structure": 1969,
+    "span_count": null,
+    "span_lengths_m": null,
+    "girder_depth_m": null,
+    "pier_count": null,
+    "deck_elevation_asl_m": null,
+    "soffit_elevation_asl_m": null,
+    "clearance_above_creek_m": null,
+    "deck_thickness_m": null,
+    "lane_width_m": null,
+    "shoulder_width_m": null,
+    "sidewalk_width_m": null,
+    "crossfall": null,
+    "longitudinal_grade": null,
+    "west_approach_gradient": null,
+    "west_approach_elevation_change_m": null,
+    "west_approach_meets_grade": null,
+    "east_approach_gradient": null,
+    "east_approach_elevation_change_m": null,
+    "east_approach_meets_grade": null
+  }
+}

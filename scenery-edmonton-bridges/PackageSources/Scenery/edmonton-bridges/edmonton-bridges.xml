@@ -77,5 +77,17 @@
 	<SceneryObject lat="53.57307532" lon="-113.37099870" alt="610.000" pitch="0.000000" bank="0.000000" heading="0.000000" imageComplexity="VERY_SPARSE" altitudeIsAgl="FALSE" snapToGround="FALSE" snapToNormal="FALSE">
 		<LibraryObject name="{3C0AF1F2-0229-5578-B448-41CB67266398}" scale="1.000000"/>
 	</SceneryObject>
+	<!-- R6 Quesnell Bridge (br_r6_quesnell_1) -->
+	<SceneryObject lat="53.50626232" lon="-113.56665319" alt="618.300" pitch="0.000000" bank="0.000000" heading="0.000000" imageComplexity="VERY_SPARSE" altitudeIsAgl="FALSE" snapToGround="FALSE" snapToNormal="FALSE">
+		<LibraryObject name="{8B6D55AA-9C2A-509E-A417-6BC943D1068E}" scale="1.000000"/>
+	</SceneryObject>
+	<!-- R6 Quesnell Bridge (br_r6_quesnell_2) -->
+	<SceneryObject lat="53.50626232" lon="-113.56665319" alt="618.300" pitch="0.000000" bank="0.000000" heading="0.000000" imageComplexity="VERY_SPARSE" altitudeIsAgl="FALSE" snapToGround="FALSE" snapToNormal="FALSE">
+		<LibraryObject name="{CDB7553B-6F4E-5206-85B7-B158214D795C}" scale="1.000000"/>
+	</SceneryObject>
+	<!-- W85 Fox Drive Campbell Bridge (br_w85_fox_drive) -->
+	<SceneryObject lat="53.50313509" lon="-113.56087711" alt="618.300" pitch="0.000000" bank="0.000000" heading="0.000000" imageComplexity="VERY_SPARSE" altitudeIsAgl="FALSE" snapToGround="FALSE" snapToNormal="FALSE">
+		<LibraryObject name="{BD5AD88E-08A8-5EDE-90A1-043BDBECC17F}" scale="1.000000"/>
+	</SceneryObject>
 	<!-- END bridges -->
 </FSData>

@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ModelInfo guid="{CDB7553B-6F4E-5206-85B7-B158214D795C}" version="1.1">
+	<LODS>
+		<LOD minSize="0" ModelFile="br_r6_quesnell_2.gltf"/>
+	</LODS>
+</ModelInfo>

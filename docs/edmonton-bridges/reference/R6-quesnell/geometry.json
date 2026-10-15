@@ -1,0 +1,699 @@
+{
+  "code": "R6",
+  "name": "Quesnell Bridge",
+  "centre": [
+    53.507,
+    -113.567
+  ],
+  "crs": "EPSG:4326",
+  "coordinate_order": "[lat, lon]",
+  "geometry_source": "docs/edmonton-bridges/bridge-geometry.json",
+  "geometry_retrieved": "2026-10-14",
+  "plan_length_note": "plan_length_m is the horizontal length of that OSM way, WGS84 haversine with radius 6378137 m, rounded to one decimal. These ways match the live OpenStreetMap node counts on 2026-10-14, so the stored polylines are the complete ways. An approach plan_length_m is still not the climb to grade. Published lengths 315 m, 319.8 m, and 333 m are different extents from these plan lengths. They were not averaged.",
+  "dropped_note": "The east carriageway is three mapped ways plus the Fox Drive ramp on the deck; the west carriageway is one way. Path stubs 336939293 and 1536910307 leave the east path and are excluded. Fort Edmonton Park Road, way 240053449, passes the south end and is excluded. W85 Campbell Bridge ways are not in this object.",
+  "decks": [
+    {
+      "osm_way": 22916674,
+      "part": "west_road_deck",
+      "which": "Whitemud Drive NW on the west carriageway. Four lanes, one-way, motorway, ref 2, width tag 14.6. Node order is north to south, so the one-way is southbound. Wikipedia calls this direction eastbound. This centreline is 315.6 m. That is not a published structural length.",
+      "plan_length_m": 315.6,
+      "tags": {
+        "bridge": "yes",
+        "bridge:name": "Quesnell Bridge",
+        "highway": "motorway",
+        "lanes": "4",
+        "layer": "2",
+        "maxspeed": "80",
+        "name": "Whitemud Drive NW",
+        "oneway": "yes",
+        "ref": "2",
+        "surface": "asphalt",
+        "width": "14.6"
+      },
+      "nodes": [
+        [
+          53.507669,
+          -113.567023
+        ],
+        [
+          53.507103,
+          -113.566884
+        ],
+        [
+          53.506377,
+          -113.566755
+        ],
+        [
+          53.50572,
+          -113.566688
+        ],
+        [
+          53.505277,
+          -113.566666
+        ],
+        [
+          53.504845,
+          -113.566675
+        ]
+      ]
+    },
+    {
+      "osm_way": 22916673,
+      "part": "east_road_deck_south",
+      "which": "Whitemud Drive NW on the south part of the east carriageway. Three lanes, one-way, motorway, ref 2. Node order is south to north, so the one-way is northbound. Wikipedia calls this direction westbound. The Fox Drive ramp, way 134926900, meets the north end of this way. This centreline is 101.9 m. With ways 944470769 and 297284104 it is 315.9 m. That sum is not a published structural length.",
+      "plan_length_m": 101.9,
+      "tags": {
+        "bridge": "yes",
+        "bridge:name": "Quesnell Bridge",
+        "highway": "motorway",
+        "lanes": "3",
+        "layer": "2",
+        "maxspeed": "80",
+        "name": "Whitemud Drive NW",
+        "oneway": "yes",
+        "ref": "2",
+        "surface": "asphalt"
+      },
+      "nodes": [
+        [
+          53.504846,
+          -113.56648
+        ],
+        [
+          53.505304,
+          -113.566483
+        ],
+        [
+          53.505761,
+          -113.5665
+        ]
+      ]
+    },
+    {
+      "osm_way": 944470769,
+      "part": "east_road_deck_mid",
+      "which": "Whitemud Drive NW on the middle part of the east carriageway. Four lanes, one-way, motorway, ref 2, width tag 14.6. Continues way 22916673 north. This centreline is 71.9 m.",
+      "plan_length_m": 71.9,
+      "tags": {
+        "bridge": "yes",
+        "bridge:name": "Quesnell Bridge",
+        "highway": "motorway",
+        "lanes": "4",
+        "layer": "2",
+        "maxspeed": "80",
+        "name": "Whitemud Drive NW",
+        "oneway": "yes",
+        "ref": "2",
+        "surface": "asphalt",
+        "width": "14.6"
+      },
+      "nodes": [
+        [
+          53.505761,
+          -113.5665
+        ],
+        [
+          53.506405,
+          -113.566581
+        ]
+      ]
+    },
+    {
+      "osm_way": 297284104,
+      "part": "east_road_deck_north",
+      "which": "Whitemud Drive NW on the north part of the east carriageway. Four lanes, one-way, motorway, ref 2, width tag 14.6. Continues way 944470769 north. This centreline is 142.1 m.",
+      "plan_length_m": 142.1,
+      "tags": {
+        "bridge": "yes",
+        "bridge:name": "Quesnell Bridge",
+        "highway": "motorway",
+        "lanes": "4",
+        "layer": "2",
+        "maxspeed": "80",
+        "name": "Whitemud Drive NW",
+        "oneway": "yes",
+        "ref": "2",
+        "surface": "asphalt",
+        "width": "14.6"
+      },
+      "nodes": [
+        [
+          53.506405,
+          -113.566581
+        ],
+        [
+          53.507228,
+          -113.566727
+        ],
+        [
+          53.507672,
+          -113.566836
+        ]
+      ]
+    },
+    {
+      "osm_way": 134926900,
+      "part": "fox_drive_ramp_on_deck",
+      "which": "Motorway link on the Quesnell deck, one lane, width tag 4.8. The Fox Drive merge onto the east carriageway. Node order is south to north. It meets ways 22916673 and 944470769 at 53.505761, -113.5665. This is the ramp on this river deck. It is not W85 Campbell Bridge.",
+      "plan_length_m": 103.4,
+      "tags": {
+        "bridge": "yes",
+        "bridge:name": "Quesnell Bridge",
+        "highway": "motorway_link",
+        "lanes": "1",
+        "layer": "2",
+        "oneway": "yes",
+        "surface": "asphalt",
+        "width": "4.8"
+      },
+      "nodes": [
+        [
+          53.504846,
+          -113.566272
+        ],
+        [
+          53.505464,
+          -113.566362
+        ],
+        [
+          53.505761,
+          -113.5665
+        ]
+      ]
+    },
+    {
+      "osm_way": 25748617,
+      "part": "east_shared_use_path",
+      "which": "Shared-use path on the east side of the deck. OpenStreetMap tags it as a cycleway with foot and bicycle designated, surface paved. Node order is south to north. The City 2018 note states the shared-use path is 4.2 m wide. This centreline is 316.3 m. That is not the 4.2 m width.",
+      "plan_length_m": 316.3,
+      "tags": {
+        "bicycle": "designated",
+        "bridge": "yes",
+        "foot": "designated",
+        "highway": "cycleway",
+        "layer": "2",
+        "surface": "paved"
+      },
+      "nodes": [
+        [
+          53.504848,
+          -113.566167
+        ],
+        [
+          53.505327,
+          -113.566218
+        ],
+        [
+          53.505506,
+          -113.566235
+        ],
+        [
+          53.505768,
+          -113.566245
+        ],
+        [
+          53.506484,
+          -113.566318
+        ],
+        [
+          53.507227,
+          -113.566477
+        ],
+        [
+          53.507675,
+          -113.566596
+        ]
+      ]
+    }
+  ],
+  "approaches": [
+    {
+      "osm_way": 22916665,
+      "part": "south_east_road",
+      "which": "Whitemud Drive NW onto the south end of the east carriageway. Three lanes, one-way, 80 km/h, sidewalk tagged no. Node order runs toward the deck. The far node is not a surveyed grade point.",
+      "plan_length_m": 97.2,
+      "tags": {
+        "highway": "motorway",
+        "lanes": "3",
+        "maxspeed": "80",
+        "name": "Whitemud Drive NW",
+        "oneway": "yes",
+        "ref": "2",
+        "sidewalk": "no",
+        "surface": "asphalt"
+      },
+      "nodes": [
+        [
+          53.503974,
+          -113.566553
+        ],
+        [
+          53.504239,
+          -113.566524
+        ],
+        [
+          53.504507,
+          -113.566508
+        ],
+        [
+          53.504846,
+          -113.56648
+        ]
+      ],
+      "extract_role": "approach"
+    },
+    {
+      "osm_way": 22916672,
+      "part": "south_west_road",
+      "which": "Whitemud Drive NW leaving the south end of the west carriageway. Four lanes, one-way, 80 km/h, width tag 14.6, sidewalk tagged no. Node order runs away from the deck. The far node is not a surveyed grade point.",
+      "plan_length_m": 96.9,
+      "tags": {
+        "highway": "motorway",
+        "lanes": "4",
+        "maxspeed": "80",
+        "name": "Whitemud Drive NW",
+        "oneway": "yes",
+        "ref": "2",
+        "sidewalk": "no",
+        "surface": "asphalt",
+        "width": "14.6"
+      },
+      "nodes": [
+        [
+          53.504845,
+          -113.566675
+        ],
+        [
+          53.504666,
+          -113.566679
+        ],
+        [
+          53.504445,
+          -113.566697
+        ],
+        [
+          53.503976,
+          -113.566745
+        ]
+      ],
+      "extract_role": "approach"
+    },
+    {
+      "osm_way": 22900291,
+      "part": "south_fox_drive_ramp",
+      "which": "Motorway link from the Fox Drive side onto the south end of way 134926900. One lane, width tag 4.8. Node order runs toward the deck. This is the ramp onto Quesnell. It is not the W85 creek span.",
+      "plan_length_m": 229.2,
+      "tags": {
+        "highway": "motorway_link",
+        "lanes": "1",
+        "oneway": "yes",
+        "surface": "asphalt",
+        "width": "4.8"
+      },
+      "nodes": [
+        [
+          53.503536,
+          -113.5639
+        ],
+        [
+          53.503669,
+          -113.5645
+        ],
+        [
+          53.50384,
+          -113.565116
+        ],
+        [
+          53.503922,
+          -113.56536
+        ],
+        [
+          53.504021,
+          -113.565571
+        ],
+        [
+          53.504115,
+          -113.56574
+        ],
+        [
+          53.504223,
+          -113.565878
+        ],
+        [
+          53.504374,
+          -113.566045
+        ],
+        [
+          53.504518,
+          -113.566153
+        ],
+        [
+          53.504722,
+          -113.566237
+        ],
+        [
+          53.504846,
+          -113.566272
+        ]
+      ],
+      "extract_role": "ramp"
+    },
+    {
+      "osm_way": 22916676,
+      "part": "north_east_road",
+      "which": "Whitemud Drive NW leaving the north end of the east carriageway. Four lanes, one-way, 80 km/h, width tag 14.6. Tagged maxheight 7.5. That mapper tag is on this approach, not on the river deck, and it is not a deck elevation. Node order runs away from the deck. The far node is not a surveyed grade point.",
+      "plan_length_m": 502.9,
+      "tags": {
+        "highway": "motorway",
+        "lanes": "4",
+        "maxheight": "7.5",
+        "maxspeed": "80",
+        "name": "Whitemud Drive NW",
+        "oneway": "yes",
+        "ref": "2",
+        "surface": "asphalt",
+        "width": "14.6"
+      },
+      "nodes": [
+        [
+          53.507672,
+          -113.566836
+        ],
+        [
+          53.508029,
+          -113.566947
+        ],
+        [
+          53.508356,
+          -113.567056
+        ],
+        [
+          53.508669,
+          -113.567174
+        ],
+        [
+          53.508884,
+          -113.567268
+        ],
+        [
+          53.509093,
+          -113.567363
+        ],
+        [
+          53.509331,
+          -113.567481
+        ],
+        [
+          53.509525,
+          -113.567601
+        ],
+        [
+          53.509659,
+          -113.567696
+        ],
+        [
+          53.509819,
+          -113.567818
+        ],
+        [
+          53.509974,
+          -113.567961
+        ],
+        [
+          53.510106,
+          -113.568103
+        ],
+        [
+          53.510236,
+          -113.568249
+        ],
+        [
+          53.510412,
+          -113.568477
+        ],
+        [
+          53.510531,
+          -113.568657
+        ],
+        [
+          53.51068,
+          -113.568913
+        ],
+        [
+          53.510765,
+          -113.569075
+        ],
+        [
+          53.510866,
+          -113.569273
+        ],
+        [
+          53.511003,
+          -113.569616
+        ],
+        [
+          53.511094,
+          -113.569851
+        ],
+        [
+          53.51117,
+          -113.570092
+        ],
+        [
+          53.511247,
+          -113.570359
+        ],
+        [
+          53.51131,
+          -113.570617
+        ]
+      ],
+      "extract_role": "approach"
+    },
+    {
+      "osm_way": 297284108,
+      "part": "north_west_road",
+      "which": "Whitemud Drive NW onto the north end of the west carriageway. Four lanes, one-way, 80 km/h, width tag 14.6. Tagged maxheight 7.5. That mapper tag is on this approach, not on the river deck, and it is not a deck elevation. Node order runs toward the deck. The far node is not a surveyed grade point.",
+      "plan_length_m": 711.0,
+      "tags": {
+        "highway": "motorway",
+        "lanes": "4",
+        "maxheight": "7.5",
+        "maxspeed": "80",
+        "name": "Whitemud Drive NW",
+        "oneway": "yes",
+        "ref": "2",
+        "surface": "asphalt",
+        "width": "14.6"
+      },
+      "nodes": [
+        [
+          53.511437,
+          -113.573991
+        ],
+        [
+          53.511428,
+          -113.573476
+        ],
+        [
+          53.511422,
+          -113.57302
+        ],
+        [
+          53.511404,
+          -113.572252
+        ],
+        [
+          53.511394,
+          -113.571974
+        ],
+        [
+          53.511371,
+          -113.571675
+        ],
+        [
+          53.511341,
+          -113.571418
+        ],
+        [
+          53.5113,
+          -113.571144
+        ],
+        [
+          53.511245,
+          -113.57085
+        ],
+        [
+          53.51121,
+          -113.570685
+        ],
+        [
+          53.511179,
+          -113.570545
+        ],
+        [
+          53.511125,
+          -113.570327
+        ],
+        [
+          53.51105,
+          -113.570087
+        ],
+        [
+          53.510974,
+          -113.569861
+        ],
+        [
+          53.510881,
+          -113.569609
+        ],
+        [
+          53.51075,
+          -113.569312
+        ],
+        [
+          53.51065,
+          -113.569121
+        ],
+        [
+          53.510567,
+          -113.568965
+        ],
+        [
+          53.51044,
+          -113.568753
+        ],
+        [
+          53.510304,
+          -113.568553
+        ],
+        [
+          53.510163,
+          -113.568376
+        ],
+        [
+          53.509997,
+          -113.568189
+        ],
+        [
+          53.509863,
+          -113.568054
+        ],
+        [
+          53.509727,
+          -113.567936
+        ],
+        [
+          53.509565,
+          -113.56781
+        ],
+        [
+          53.509411,
+          -113.567704
+        ],
+        [
+          53.509267,
+          -113.567624
+        ],
+        [
+          53.509064,
+          -113.56753
+        ],
+        [
+          53.508857,
+          -113.567432
+        ],
+        [
+          53.508586,
+          -113.567326
+        ],
+        [
+          53.50834,
+          -113.567243
+        ],
+        [
+          53.508011,
+          -113.567129
+        ],
+        [
+          53.507669,
+          -113.567023
+        ]
+      ],
+      "extract_role": "approach"
+    }
+  ],
+  "excluded": [
+    {
+      "osm_way": 336939293,
+      "reason": "Cycleway leaving the north end of the east shared-use path, 77.3 m. A path off the deck, not the Whitemud climb."
+    },
+    {
+      "osm_way": 1536910307,
+      "reason": "Cycleway stub leaving the south end of the east shared-use path, 13.5 m. Not the Whitemud climb."
+    },
+    {
+      "osm_way": 240053449,
+      "reason": "Fort Edmonton Park Road NW, 300.3 m, passing the south end under or beside the freeway. A valley road, not the deck and not the Whitemud climb."
+    },
+    {
+      "osm_way": 25475831,
+      "reason": "W85 Fox Drive / Campbell Bridge road deck. Creek span beside Quesnell. Not this file."
+    },
+    {
+      "osm_way": 25475833,
+      "reason": "W85 Fox Drive / Campbell Bridge road deck. Not this file."
+    }
+  ],
+  "dimensions": {
+    "structural_type": "Six-span girder. PIEVC 2008 and IABSE 2008: parabolic precast prestressed post-tensioned girders with a cast-in-place deck, originally 10 girder lines. City 2018: prestressed haunch type girder. Structurae and Wikipedia: girder bridge. Not a truss.",
+    "published_length_m_pievc_2008": 315,
+    "published_length_m_iabse_2008": 315,
+    "published_length_m_structurae": 319.8,
+    "published_length_m_city_2018": 333,
+    "osm_west_centreline_m": 315.6,
+    "osm_east_centreline_sum_m": 315.9,
+    "osm_east_path_m": 316.3,
+    "span_count": 6,
+    "span_layout_pievc_2008": "50 m simple span; three-span continuous 164.7 m; two-span continuous 53.3 m and 46.6 m",
+    "three_span_continuous_equal_span_m_iabse_2008": 54.9,
+    "original_girder_lines": 10,
+    "widening_girders_added_each_direction_pievc": 2,
+    "girder_depth_m": null,
+    "river_pier_count_pievc_2008": 5,
+    "pier_shafts_per_pier_pievc_2008": 2,
+    "pier_footing": "concrete spread footings set into bedrock",
+    "approach_slab_m_pievc_2008": 3.2,
+    "original_lanes_1968": 5,
+    "original_southbound_lanes_1968": 2,
+    "original_northbound_lanes_1968": 3,
+    "original_outside_shoulder_m_1968": 3.0,
+    "original_inside_shoulder_m_1968": 0.6,
+    "original_east_sidewalk_m_1968": 4.5,
+    "lanes_stated_as_current_in_pievc_2008": 6,
+    "finished_lanes_after_widening": 8,
+    "finished_lanes_each_way": 4,
+    "finished_emergency_shoulder_each_way_pievc": true,
+    "finished_shared_use_path_width_m": 4.2,
+    "osm_width_tag_four_lane_m": 14.6,
+    "osm_width_tag_ramp_m": 4.8,
+    "osm_width_is_structural_width": false,
+    "osm_maxheight_tag_m_on_north_approaches": 7.5,
+    "osm_maxheight_is_deck_elevation": false,
+    "posted_speed_kmh_osm_tag": 80,
+    "deck_elevation_asl_m": null,
+    "soffit_elevation_asl_m": null,
+    "clearance_above_river_m": null,
+    "navigation_clearance_m": null,
+    "deck_thickness_m": null,
+    "lane_width_m": null,
+    "crossfall": null,
+    "longitudinal_grade": null,
+    "south_approach_gradient": null,
+    "south_approach_elevation_change_m": null,
+    "south_approach_meets_grade": null,
+    "north_approach_gradient": null,
+    "north_approach_elevation_change_m": null,
+    "north_approach_meets_grade": null
+  }
+}
