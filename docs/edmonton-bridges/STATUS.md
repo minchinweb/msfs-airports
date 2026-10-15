@@ -18,6 +18,8 @@ Three inventories. `docs/edmonton-bridges/bridges.md` is the North Saskatchewan 
 
 ## Next
 
+Read `CURSOR-HANDOFF.md` before modeling. The coded briefs were reviewed on 2026-10-14. Every one can be laid in plan. None has a deck elevation above sea level, so none can be seated yet.
+
 1. Work `PRIORITY.md` from the top. Add bridge models under `PackageSources/modelLib/<model>/` (`<model>.xml` + glTF), then add a `ModelLib` asset group to the package definition. Output dir used by the other packages is `Scenery\cardboardgt\<short>\`.
 2. Place them as `SceneryObject` / `LibraryObject` entries in `edmonton-bridges.xml`.
 3. Bump the package version and add a release note when the first bridge is in the sim.
