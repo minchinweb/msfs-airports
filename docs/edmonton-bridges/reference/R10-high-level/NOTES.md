@@ -69,6 +69,37 @@ How the readings fit the earlier figures:
 
 This closes the span list. Counting the Pratt spans gives seven (the 99'-10" span, five 97'-8" and the 100 ft one), matching "7 at 96 ft". The six tall bents (21/20 to 11/10, 49'-5" wide) are the six "47 ft" tower spans. The three lower bents (9/8, 7/6, 5/4) and the three short spans between them (63, 56, 87 ft) are the rest of the unitemised spans; the sources do not describe them. The north end, from the stub at x 75 px to pier 27, is about 120 ft and holds the small footings 28 and 29.
 
+**Heights read from the plate (vertical scale).** The vertical scale was set the same way: the printed 153.2 ft (crown of roadway to the July 1906 water level) measures 177 px, and the printed 140'-0" at bent 15/14 measures 159 px, so about 1.14 to 1.16 px per ft. Readings are good to about 3 ft for the piers and 4 ft for the towers; the stepped footings and drawn ground line make the bent bases the least certain. Reference level is the dashed line the plate labels both "Crown of Roadway" and "CPR base of rail".
+
+| Piece | Feet | Metres | Note |
+| --- | --- | --- | --- |
+| River pier 24 or 23, head to bottom of footing | 140 | 42.5 | Matches the 138 ft in the 1910 *Edmonton Bulletin* |
+| River pier 22 (south bank), same | 137 | 41.6 | Stands on the bank; about 65 ft of shaft above ground |
+| River pier 25 (north bank), same | 131 | 39.9 | About 81 ft of shaft above ground at the river edge |
+| River pier head above the July 1906 water level | 98 | 29.8 | Matches Herzog's "nearly 100 ft". The PAA caption's "about 125 ft" is not a figure the plate gives; it may exclude part of the stepped footing or count from a different level |
+| Footing base below the July 1906 water level (piers 24, 23) | 42 | 12.7 | |
+| Extreme high water above the July 1906 water level | 28 | 8.7 | The plate's upper water line, undated |
+| Truss soffit below the rail line | 53 | 16.2 | Main trusses: 50 ft deep, top chord about 5 ft below the dashed line |
+| Approach deck depth (top chord to soffit) | 18 | 5.6 | The shallow trusses over the south approach |
+
+Tower and low-bent heights, rail line to the base of the steel (top of each concrete pedestal). Subtract the deck depth (about 23 ft from the rail line to the soffit) to get the leg length alone: 21/20 and 19/18 are 99 to 104 ft long, 17/16 and 15/14 are 114 to 118 ft (the tallest, 140 ft to the rail line is the printed one at 15/14), 13/12 is 98 ft, 11/10 is 70 to 82 ft.
+
+| Bent | Left leg to base, ft (m) | Right leg to base, ft (m) |
+| --- | --- | --- |
+| 21 / 20 | 122 (37.2) | 122 (37.2) |
+| 19 / 18 | 122 (37.2) | 126 (38.5) |
+| 17 / 16 | 137 (41.7) | 139 (42.5) |
+| 15 / 14 | 138 (42.2) | 140 (42.8), printed |
+| 13 / 12 | 121 (36.8) | 121 (36.8) |
+| 11 / 10 | 105 (31.9) | 93 (28.3) |
+| 9 / 8 | 77 (23.4) | 67 (20.3) |
+| 7 / 6 | 58 (17.6) | 49 (15.0) |
+| 5 / 4 | 42 (12.8) | 32 (9.6) |
+
+The right-hand leg stands on the downhill side of each low bent, so the two legs of a bent differ in length by 4 to 12 ft in the south. Footings are stepped to the ground line, not level.
+
+Check against the LiDAR: the 2018 river surface at the High Level is 614.91 m and the upper deck DSM is 47.54 m above it (156.0 ft), against 153.2 ft over the July 1906 water on the plate and 156 ft over mean water in the designation. The July 1906 level is therefore about 0.8 m below the 2018 river, which is consistent with low water.
+
 HistoricBridges.org calls the main spans Baltimore deck trusses. The designation calls them Pratt. Baltimore is a subdivided Pratt; the plate shows subdivided panels. Use the designation's names, and the plate for the panel pattern.
 
 **Truss depth.** 50 ft (15.24 m) on the 1914 elevation, the figured distance from the top chord to the bottom chord of a main span. The decks sit inside that depth. The designation's 20 ft between decks is not the truss depth. Steel also continues below the lower deck ("steel substructure below the lower deck" in the designation), so 50 ft is the chord depth on the plate, not a claim about every member under the roadway.
@@ -161,7 +192,7 @@ Handrails run the length of the bridge on both the east and west sides (designat
 - Present deck thickness, roadway and sidewalk.
 - Present crossfall.
 - Present lane width.
-- A single as-built height for the river piers. The published figures disagree and are approximate.
+- A surveyed as-built height for the river piers. The plate now gives about 140 ft head to footing base and 98 ft above the 1906 water (scaled, good to 3 ft); the published figures of 100, 125 and 138 ft are consistent with that depending on what is counted.
 - Present north and south approach gradients, lengths, and elevation changes. The 1914 and 1910 figures predate the 1931 and 1971 approach rebuilds.
 - The point where each present approach meets natural grade, and the elevation there.
 - Printed (rather than scaled) lengths for the spans between supports 9 and 4 and the south abutment; the scaled values, good to about 2 ft, are in the plate section.
