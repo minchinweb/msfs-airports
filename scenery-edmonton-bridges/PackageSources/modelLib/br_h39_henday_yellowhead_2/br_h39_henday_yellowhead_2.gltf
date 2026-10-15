@@ -1,0 +1,138 @@
+{
+ "asset": {
+  "version": "2.0",
+  "generator": "scenery-edmonton-bridges/tools/bridgelib.py",
+  "extensions": {
+   "ASOBO_normal_map_convention": {
+    "tangent_space_convention": "DirectX"
+   }
+  }
+ },
+ "extensionsUsed": [
+  "ASOBO_normal_map_convention"
+ ],
+ "scene": 0,
+ "scenes": [
+  {
+   "nodes": [
+    0
+   ]
+  }
+ ],
+ "nodes": [
+  {
+   "mesh": 0,
+   "name": "br_h39_henday_yellowhead_2"
+  }
+ ],
+ "meshes": [
+  {
+   "name": "br_h39_henday_yellowhead_2",
+   "primitives": [
+    {
+     "attributes": {
+      "POSITION": 0,
+      "NORMAL": 1,
+      "TEXCOORD_0": 2
+     },
+     "indices": 3,
+     "mode": 4,
+     "material": 0
+    }
+   ]
+  }
+ ],
+ "materials": [
+  {
+   "name": "bridge_palette",
+   "pbrMetallicRoughness": {
+    "baseColorTexture": {
+     "index": 0
+    },
+    "metallicFactor": 0.0,
+    "roughnessFactor": 0.9
+   }
+  }
+ ],
+ "textures": [
+  {
+   "sampler": 0,
+   "source": 0
+  }
+ ],
+ "samplers": [
+  {
+   "magFilter": 9728,
+   "minFilter": 9728
+  }
+ ],
+ "images": [
+  {
+   "uri": "bridge_palette.png"
+  }
+ ],
+ "accessors": [
+  {
+   "bufferView": 0,
+   "componentType": 5126,
+   "count": 46016,
+   "type": "VEC3",
+   "min": [
+    -316.50190123750946,
+    0.17099999999999993,
+    -284.59949215714624
+   ],
+   "max": [
+    285.5279877314072,
+    24.464419319814354,
+    256.1938683591454
+   ]
+  },
+  {
+   "bufferView": 1,
+   "componentType": 5126,
+   "count": 46016,
+   "type": "VEC3"
+  },
+  {
+   "bufferView": 2,
+   "componentType": 5126,
+   "count": 46016,
+   "type": "VEC2"
+  },
+  {
+   "bufferView": 3,
+   "componentType": 5123,
+   "count": 69384,
+   "type": "SCALAR"
+  }
+ ],
+ "bufferViews": [
+  {
+   "buffer": 0,
+   "byteOffset": 0,
+   "byteLength": 552192
+  },
+  {
+   "buffer": 0,
+   "byteOffset": 552192,
+   "byteLength": 552192
+  },
+  {
+   "buffer": 0,
+   "byteOffset": 1104384,
+   "byteLength": 368128
+  },
+  {
+   "buffer": 0,
+   "byteOffset": 1472512,
+   "byteLength": 138768
+  }
+ ],
+ "buffers": [
+  {
+   "uri": "br_h39_henday_yellowhead_2.bin",
+   "byteLength": 1611280
+  }
+ ]
+}

@@ -261,5 +261,23 @@
     "{C534018D-3D0C-5E9D-A8D8-ECF012892093}"
    ]
   ]
+ },
+ "h39": {
+  "br_h39_henday_yellowhead": [
+   [
+    "H39 Henday / Yellowhead west (br_h39_henday_yellowhead_1)",
+    53.574,
+    -113.662,
+    680.0,
+    "{00780A36-BE20-548A-A506-9A27D5D72835}"
+   ],
+   [
+    "H39 Henday / Yellowhead west (br_h39_henday_yellowhead_2)",
+    53.574,
+    -113.662,
+    680.0,
+    "{163628E7-1243-55BB-AAFF-8B1B4159C8F9}"
+   ]
+  ]
  }
 }

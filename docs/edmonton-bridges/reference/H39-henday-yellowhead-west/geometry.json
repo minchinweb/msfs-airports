@@ -1,0 +1,3047 @@
+{
+ "code": "H39",
+ "name": "Henday / Yellowhead west",
+ "centre": [
+  53.574,
+  -113.662
+ ],
+ "crs": "EPSG:4326",
+ "coordinate_order": "[lat, lon]",
+ "geometry_source": "docs/edmonton-bridges/bridge-geometry.json",
+ "geometry_retrieved": "2026-10-14",
+ "plan_length_note": "plan_length_m is the horizontal length of that OSM way, WGS84 haversine with radius 6378137 m, rounded to one decimal. Extract ways match the live OpenStreetMap node counts on 14 October 2026, so those stored polylines are the complete ways. Ways 43402325, 43531503, 43402275, 43531474, 153725899, and 132571388 were read live the same day; they are not in the extract. An approach plan_length_m is still not the climb to grade. The mapped centrelines are not the inspection span totals. They were not averaged.",
+ "dropped_note": "The four extract road decks (Henday NB and SB, the NW ramp, the SE ramp) are kept. Six more bridge=yes motorway_link decks at this interchange were added from the live read so the folder has the ten major bridges in Alberta file 85047. Extract Henday approaches and the four ramps that share a node with the extract decks are kept. Yellowhead through-ways 60064623, 256516539, 279472325, and 313692014 pass under the Henday decks and continue toward Y64 and the city; they were dropped so the clip stays on this interchange. Closed man_made=bridge ways are footprints of decks already stored as centrelines. Golf cart paths 1309172199 and 1309185329 are Lewis Estates, not this interchange. Alberta sign and pole structures under file 85047 (ZN2, ZS3, ZW4 and the others) are not decks. The 1998 N-1 deck is the one existing bridge; the other nine are 2011. H38, H36, H37, H41, Y64, and A111 are different codes.",
+ "decks": [
+  {
+   "osm_way": 22916287,
+   "part": "henday_nb_over_yellowhead",
+   "which": "Anthony Henday Drive northbound over Yellowhead Trail. Three lanes, one-way, motorway, ref 216, layer 1, 100 km/h, width tag 11.1. Node order is south to north, so the one-way is northbound toward Ray Gibbon Drive. Alberta file 85047 N-1, year 1998, WG, two spans 44 m and 40 m. This centreline is 97.5 m. That is not the inspection span total 84 m.",
+   "plan_length_m": 97.5,
+   "tags": {
+    "bridge": "yes",
+    "highway": "motorway",
+    "lanes": "3",
+    "layer": "1",
+    "maxspeed": "100",
+    "name": "Anthony Henday Drive NW",
+    "oneway": "yes",
+    "ref": "216",
+    "width": "11.1"
+   },
+   "nodes": [
+    [
+     53.573283,
+     -113.661426
+    ],
+    [
+     53.573708,
+     -113.661382
+    ],
+    [
+     53.574157,
+     -113.661321
+    ]
+   ]
+  },
+  {
+   "osm_way": 22916290,
+   "part": "henday_sb_over_yellowhead",
+   "which": "Anthony Henday Drive southbound over Yellowhead Trail. Three lanes, one-way, motorway, ref 216, layer 1, 100 km/h, width tag 11.1. Node order is north to south, so the one-way is southbound toward Stony Plain Road. Alberta file 85047 S-6, year 2011, WG, two spans 46.025 m and 45.053 m. This centreline is 104.9 m. That is not the inspection span total 91.078 m.",
+   "plan_length_m": 104.9,
+   "tags": {
+    "bridge": "yes",
+    "highway": "motorway",
+    "lanes": "3",
+    "layer": "1",
+    "maxspeed": "100",
+    "name": "Anthony Henday Drive NW",
+    "oneway": "yes",
+    "ref": "216",
+    "width": "11.1"
+   },
+   "nodes": [
+    [
+     53.574226,
+     -113.661828
+    ],
+    [
+     53.573753,
+     -113.661898
+    ],
+    [
+     53.573286,
+     -113.661945
+    ]
+   ]
+  },
+  {
+   "osm_way": 273639882,
+   "part": "nw_ramp_over_yellowhead",
+   "which": "One-lane motorway_link, layer 1, asphalt, width tag 3.7, east of the Henday northbound deck. Node order is south to north. Alberta file 85047 NW-7 is the Henday NW ramp over Yellowhead, year 2011, WG, two spans 46.038 m and 45.084 m, clear roadway 8.3 m. This centreline is 105.0 m. That is not the inspection span total 91.122 m.",
+   "plan_length_m": 105.0,
+   "tags": {
+    "bridge": "yes",
+    "highway": "motorway_link",
+    "lanes": "1",
+    "layer": "1",
+    "oneway": "yes",
+    "surface": "asphalt",
+    "width": "3.7"
+   },
+   "nodes": [
+    [
+     53.573255,
+     -113.660938
+    ],
+    [
+     53.573757,
+     -113.660885
+    ],
+    [
+     53.574196,
+     -113.66082
+    ]
+   ]
+  },
+  {
+   "osm_way": 135719193,
+   "part": "se_ramp_over_yellowhead",
+   "which": "Motorway_link, layer 1, destination Edmonton, destination:ref 16 East. West of the Henday southbound deck. Node order is north to south, so the one-way is toward Yellowhead eastbound. Alberta file 85047 SE-8, year 2011, WG, two spans 45.088 m and 46.04 m, clear roadway 8.3 m. This centreline is 101.7 m. That is not the inspection span total 91.128 m.",
+   "plan_length_m": 101.7,
+   "tags": {
+    "bridge": "yes",
+    "destination": "Edmonton",
+    "destination:ref": "16 East",
+    "highway": "motorway_link",
+    "layer": "1",
+    "oneway": "yes"
+   },
+   "nodes": [
+    [
+     53.574228,
+     -113.662252
+    ],
+    [
+     53.573761,
+     -113.662323
+    ],
+    [
+     53.573318,
+     -113.662386
+    ]
+   ]
+  },
+  {
+   "osm_way": 43402325,
+   "part": "ws2_flyover_over_henday",
+   "which": "Motorway_link, layer 1, destination:ref 216, destination:street Anthony Henday Drive South. Crosses Henday north of Yellowhead. Not in the extract (the 180 m deck search). A live Overpass read on 14 October 2026 returned this way. Alberta file 85047 WS2-10, year 2011, NU, three spans 45.354 m, 37.075 m, and 42.221 m, five girders. This centreline is 126.8 m. That is not the inspection span total 124.650 m. The flyovers are the part that reads.",
+   "plan_length_m": 126.8,
+   "tags": {
+    "bridge": "yes",
+    "destination:ref": "216",
+    "destination:street": "Anthony Henday Drive South",
+    "highway": "motorway_link",
+    "layer": "1",
+    "oneway": "yes",
+    "source": "GPS"
+   },
+   "nodes": [
+    [
+     53.576203,
+     -113.66039
+    ],
+    [
+     53.576229,
+     -113.660728
+    ],
+    [
+     53.576239,
+     -113.661023
+    ],
+    [
+     53.576238,
+     -113.661298
+    ],
+    [
+     53.576226,
+     -113.661626
+    ],
+    [
+     53.576194,
+     -113.662022
+    ],
+    [
+     53.576156,
+     -113.662293
+    ]
+   ]
+  },
+  {
+   "osm_way": 43531503,
+   "part": "en2_flyover_over_henday",
+   "which": "One-lane motorway_link, layer 1, destination:street Anthony Henday Drive North, width tag 3.7, advisory 80 km/h. Crosses Henday south of Yellowhead. Not in the extract. Same live read as way 43402325. Alberta file 85047 EN2-13, year 2011, NU, three spans 44.054 m, 36.914 m, and 30.049 m, five girders. This centreline is 140.0 m. That is not the inspection span total 111.017 m.",
+   "plan_length_m": 140.0,
+   "tags": {
+    "bridge": "yes",
+    "destination:street": "Anthony Henday Drive North",
+    "highway": "motorway_link",
+    "lanes": "1",
+    "layer": "1",
+    "maxspeed:advisory": "80",
+    "oneway": "yes",
+    "source": "GPS",
+    "surface": "asphalt",
+    "width": "3.7"
+   },
+   "nodes": [
+    [
+     53.571513,
+     -113.662555
+    ],
+    [
+     53.571509,
+     -113.662109
+    ],
+    [
+     53.571544,
+     -113.661633
+    ],
+    [
+     53.5716,
+     -113.661227
+    ],
+    [
+     53.571661,
+     -113.660904
+    ],
+    [
+     53.571758,
+     -113.660499
+    ]
+   ]
+  },
+  {
+   "osm_way": 43402275,
+   "part": "ws3_over_yellowhead",
+   "which": "One-lane motorway_link, layer 1, destination:ref 216, destination:street Anthony Henday Drive South. West of Henday, over Yellowhead. Not in the extract. Alberta file 85047 WS3-11, year 2011, WG, two spans 63.954 m and 42.751 m. This centreline is 116.1 m. That is not the inspection span total 106.705 m.",
+   "plan_length_m": 116.1,
+   "tags": {
+    "bridge": "yes",
+    "destination:ref": "216",
+    "destination:street": "Anthony Henday Drive South",
+    "highway": "motorway_link",
+    "lanes": "1",
+    "layer": "1",
+    "oneway": "yes",
+    "source": "Bing"
+   },
+   "nodes": [
+    [
+     53.574318,
+     -113.665848
+    ],
+    [
+     53.574011,
+     -113.666012
+    ],
+    [
+     53.573777,
+     -113.666108
+    ],
+    [
+     53.573512,
+     -113.666179
+    ],
+    [
+     53.573301,
+     -113.6662
+    ]
+   ]
+  },
+  {
+   "osm_way": 43531474,
+   "part": "en3_over_yellowhead",
+   "which": "Motorway_link, layer 1, destination:street Anthony Henday Drive North. East of Henday, over Yellowhead. Not in the extract. Alberta file 85047 EN3-14, year 2011, NU, two spans 45.945 m and 38.468 m, five girders. This centreline is 85.8 m. That is not the inspection span total 84.413 m.",
+   "plan_length_m": 85.8,
+   "tags": {
+    "bridge": "yes",
+    "destination:street": "Anthony Henday Drive North",
+    "highway": "motorway_link",
+    "layer": "1",
+    "oneway": "yes"
+   },
+   "nodes": [
+    [
+     53.57327,
+     -113.65789
+    ],
+    [
+     53.573498,
+     -113.657724
+    ],
+    [
+     53.573721,
+     -113.657609
+    ],
+    [
+     53.574003,
+     -113.6575
+    ]
+   ]
+  },
+  {
+   "osm_way": 153725899,
+   "part": "ws1_over_en_ramp",
+   "which": "Motorway_link, layer 1, destination:ref 216, destination:street Anthony Henday Drive South. Northeast of the interchange, over the EN ramp. Not in the extract. Alberta file 85047 WS1-9, year 2011, WG, one span 58.488 m. This centreline is 66.0 m. That is not the inspection 58.488 m.",
+   "plan_length_m": 66.0,
+   "tags": {
+    "bridge": "yes",
+    "destination:ref": "216",
+    "destination:street": "Anthony Henday Drive South",
+    "highway": "motorway_link",
+    "layer": "1",
+    "oneway": "yes",
+    "source": "GPS"
+   },
+   "nodes": [
+    [
+     53.575249,
+     -113.657315
+    ],
+    [
+     53.575442,
+     -113.657664
+    ],
+    [
+     53.575636,
+     -113.65807
+    ]
+   ]
+  },
+  {
+   "osm_way": 132571388,
+   "part": "en1_over_ws_ramp",
+   "which": "One-lane motorway_link, layer 1, destination:street Anthony Henday Drive North, width tag 3.7, advisory 80 km/h. Southwest of the interchange, over the WS ramp. Not in the extract. Alberta file 85047 EN1-12, year 2011, WG, one span 40.537 m. This centreline is 43.4 m. That is not the inspection 40.537 m.",
+   "plan_length_m": 43.4,
+   "tags": {
+    "bridge": "yes",
+    "destination:street": "Anthony Henday Drive North",
+    "highway": "motorway_link",
+    "lanes": "1",
+    "layer": "1",
+    "maxspeed:advisory": "80",
+    "oneway": "yes",
+    "source": "GPS",
+    "width": "3.7"
+   },
+   "nodes": [
+    [
+     53.572167,
+     -113.666135
+    ],
+    [
+     53.572012,
+     -113.665532
+    ]
+   ]
+  }
+ ],
+ "approaches": [
+  {
+   "osm_way": 198515213,
+   "part": "north_sb_road",
+   "which": "Anthony Henday Drive southbound onto the southbound overpass. Two lanes, one-way, 100 km/h, ref 216, maxheight tag 9.0. Node order runs toward the deck, from 53.577181, -113.661028. The 9.0 tag is a mapper tag; Alberta's table and the WS2-10 inspection post 9.9 m northbound and 9.0 m southbound under that flyover. The far node is not a surveyed grade point.",
+   "plan_length_m": 333.4,
+   "tags": {
+    "highway": "motorway",
+    "lanes": "2",
+    "maxheight": "9.0",
+    "maxspeed": "100",
+    "name": "Anthony Henday Drive NW",
+    "oneway": "yes",
+    "ref": "216"
+   },
+   "nodes": [
+    [
+     53.577181,
+     -113.661028
+    ],
+    [
+     53.576624,
+     -113.661239
+    ],
+    [
+     53.57542,
+     -113.66157
+    ],
+    [
+     53.574827,
+     -113.661726
+    ],
+    [
+     53.574226,
+     -113.661828
+    ]
+   ],
+   "extract_role": "approach"
+  },
+  {
+   "osm_way": 847002330,
+   "part": "south_sb_road",
+   "which": "Anthony Henday Drive southbound leaving the southbound overpass. Three lanes, one-way, 100 km/h, ref 216, width tag 11.1. Node order runs away from the deck toward H38 (53.540, -113.659). The far node is not a surveyed grade point.",
+   "plan_length_m": 160.1,
+   "tags": {
+    "highway": "motorway",
+    "lanes": "3",
+    "maxspeed": "100",
+    "name": "Anthony Henday Drive NW",
+    "oneway": "yes",
+    "ref": "216",
+    "width": "11.1"
+   },
+   "nodes": [
+    [
+     53.573286,
+     -113.661945
+    ],
+    [
+     53.572846,
+     -113.66198
+    ],
+    [
+     53.572471,
+     -113.661992
+    ],
+    [
+     53.572186,
+     -113.661996
+    ],
+    [
+     53.571848,
+     -113.661992
+    ]
+   ],
+   "extract_role": "approach"
+  },
+  {
+   "osm_way": 279661277,
+   "part": "south_nb_road",
+   "which": "Anthony Henday Drive northbound onto the northbound overpass. Three lanes, one-way, 100 km/h, ref 216, asphalt, width tag 11.1. Node order runs toward the deck, from 53.566066, -113.660538. It comes from the H38 side. The far node is not a surveyed grade point.",
+   "plan_length_m": 806.8,
+   "tags": {
+    "highway": "motorway",
+    "lanes": "3",
+    "maxspeed": "100",
+    "name": "Anthony Henday Drive NW",
+    "oneway": "yes",
+    "ref": "216",
+    "surface": "asphalt",
+    "width": "11.1"
+   },
+   "nodes": [
+    [
+     53.566066,
+     -113.660538
+    ],
+    [
+     53.56763,
+     -113.660857
+    ],
+    [
+     53.568798,
+     -113.661099
+    ],
+    [
+     53.569671,
+     -113.661269
+    ],
+    [
+     53.570476,
+     -113.661378
+    ],
+    [
+     53.571157,
+     -113.661438
+    ],
+    [
+     53.571747,
+     -113.661468
+    ],
+    [
+     53.572227,
+     -113.661476
+    ],
+    [
+     53.572642,
+     -113.661469
+    ],
+    [
+     53.573283,
+     -113.661426
+    ]
+   ],
+   "extract_role": "approach"
+  },
+  {
+   "osm_way": 601916867,
+   "part": "north_nb_road",
+   "which": "Anthony Henday Drive northbound leaving the northbound overpass. Three lanes, one-way, 100 km/h, ref 216, asphalt, width tag 11.1. Node order runs away from the deck toward H41 (53.600, -113.632). The far node is not a surveyed grade point.",
+   "plan_length_m": 1064.5,
+   "tags": {
+    "highway": "motorway",
+    "lanes": "3",
+    "maxspeed": "100",
+    "name": "Anthony Henday Drive NW",
+    "oneway": "yes",
+    "ref": "216",
+    "surface": "asphalt",
+    "width": "11.1"
+   },
+   "nodes": [
+    [
+     53.574157,
+     -113.661321
+    ],
+    [
+     53.574865,
+     -113.661183
+    ],
+    [
+     53.575613,
+     -113.660998
+    ],
+    [
+     53.576142,
+     -113.660842
+    ],
+    [
+     53.576594,
+     -113.66069
+    ],
+    [
+     53.577333,
+     -113.660408
+    ],
+    [
+     53.57803,
+     -113.660091
+    ],
+    [
+     53.579067,
+     -113.659541
+    ],
+    [
+     53.579635,
+     -113.659201
+    ],
+    [
+     53.580541,
+     -113.658582
+    ],
+    [
+     53.581322,
+     -113.657993
+    ],
+    [
+     53.581967,
+     -113.657453
+    ],
+    [
+     53.582554,
+     -113.65694
+    ],
+    [
+     53.583177,
+     -113.656363
+    ]
+   ],
+   "extract_role": "approach"
+  },
+  {
+   "osm_way": 43072628,
+   "part": "south_to_nw_ramp",
+   "which": "Motorway_link, destination Jasper, destination:ref 16 West, width tag 3.7. From the south onto the south end of the NW ramp deck, way 273639882. The far node is not a surveyed grade point.",
+   "plan_length_m": 607.1,
+   "tags": {
+    "destination": "Jasper",
+    "destination:ref": "16 West",
+    "highway": "motorway_link",
+    "oneway": "yes",
+    "width": "3.7"
+   },
+   "nodes": [
+    [
+     53.56781,
+     -113.660613
+    ],
+    [
+     53.569491,
+     -113.660858
+    ],
+    [
+     53.570402,
+     -113.660952
+    ],
+    [
+     53.571377,
+     -113.660989
+    ],
+    [
+     53.573255,
+     -113.660938
+    ]
+   ],
+   "extract_role": "ramp"
+  },
+  {
+   "osm_way": 499078195,
+   "part": "north_to_se_ramp",
+   "which": "Motorway_link, destination Edmonton, destination:ref 16 East. From the north onto the north end of the SE ramp deck, way 135719193. The far node is not a surveyed grade point.",
+   "plan_length_m": 288.5,
+   "tags": {
+    "destination": "Edmonton",
+    "destination:ref": "16 East",
+    "highway": "motorway_link",
+    "oneway": "yes"
+   },
+   "nodes": [
+    [
+     53.576794,
+     -113.661638
+    ],
+    [
+     53.574809,
+     -113.662118
+    ],
+    [
+     53.574228,
+     -113.662252
+    ]
+   ],
+   "extract_role": "ramp"
+  },
+  {
+   "osm_way": 135719192,
+   "part": "se_ramp_eastbound",
+   "which": "Motorway_link, destination Edmonton, destination:ref 16 East, one lane. From the south end of the SE ramp deck, looping toward Yellowhead eastbound. The extract role is ramp. The far node is not a surveyed grade point.",
+   "plan_length_m": 932.7,
+   "tags": {
+    "destination": "Edmonton",
+    "destination:ref": "16 East",
+    "highway": "motorway_link",
+    "lanes": "1",
+    "oneway": "yes"
+   },
+   "nodes": [
+    [
+     53.573318,
+     -113.662386
+    ],
+    [
+     53.572962,
+     -113.662417
+    ],
+    [
+     53.572717,
+     -113.662446
+    ],
+    [
+     53.572595,
+     -113.662503
+    ],
+    [
+     53.572472,
+     -113.662574
+    ],
+    [
+     53.572362,
+     -113.662673
+    ],
+    [
+     53.572267,
+     -113.662802
+    ],
+    [
+     53.572187,
+     -113.662959
+    ],
+    [
+     53.572115,
+     -113.663122
+    ],
+    [
+     53.57206,
+     -113.663385
+    ],
+    [
+     53.572033,
+     -113.66354
+    ],
+    [
+     53.572021,
+     -113.663735
+    ],
+    [
+     53.572034,
+     -113.6639
+    ],
+    [
+     53.572061,
+     -113.664073
+    ],
+    [
+     53.572096,
+     -113.664187
+    ],
+    [
+     53.572142,
+     -113.664343
+    ],
+    [
+     53.572194,
+     -113.664469
+    ],
+    [
+     53.572257,
+     -113.664572
+    ],
+    [
+     53.572361,
+     -113.664713
+    ],
+    [
+     53.572479,
+     -113.664806
+    ],
+    [
+     53.572604,
+     -113.664877
+    ],
+    [
+     53.572704,
+     -113.664909
+    ],
+    [
+     53.572814,
+     -113.664915
+    ],
+    [
+     53.572931,
+     -113.664894
+    ],
+    [
+     53.573054,
+     -113.664823
+    ],
+    [
+     53.573141,
+     -113.664736
+    ],
+    [
+     53.573221,
+     -113.664656
+    ],
+    [
+     53.573286,
+     -113.664564
+    ],
+    [
+     53.573354,
+     -113.664422
+    ],
+    [
+     53.573395,
+     -113.664325
+    ],
+    [
+     53.573434,
+     -113.664245
+    ],
+    [
+     53.573472,
+     -113.664111
+    ],
+    [
+     53.573502,
+     -113.663972
+    ],
+    [
+     53.573525,
+     -113.663707
+    ],
+    [
+     53.573525,
+     -113.663369
+    ],
+    [
+     53.573519,
+     -113.662522
+    ],
+    [
+     53.573501,
+     -113.660374
+    ],
+    [
+     53.573476,
+     -113.658958
+    ],
+    [
+     53.573476,
+     -113.657312
+    ],
+    [
+     53.573498,
+     -113.656336
+    ]
+   ],
+   "extract_role": "ramp"
+  },
+  {
+   "osm_way": 153725851,
+   "part": "nw_ramp_loop",
+   "which": "Motorway_link, one lane, asphalt, width tag 3.7. From the north end of the NW ramp deck, looping east then west. The extract role is ramp. The far node is not a surveyed grade point.",
+   "plan_length_m": 793.6,
+   "tags": {
+    "highway": "motorway_link",
+    "lanes": "1",
+    "oneway": "yes",
+    "surface": "asphalt",
+    "width": "3.7"
+   },
+   "nodes": [
+    [
+     53.574196,
+     -113.66082
+    ],
+    [
+     53.574557,
+     -113.660741
+    ],
+    [
+     53.574732,
+     -113.660701
+    ],
+    [
+     53.574857,
+     -113.660649
+    ],
+    [
+     53.574964,
+     -113.660579
+    ],
+    [
+     53.575054,
+     -113.660515
+    ],
+    [
+     53.575161,
+     -113.660396
+    ],
+    [
+     53.575226,
+     -113.660299
+    ],
+    [
+     53.575285,
+     -113.660196
+    ],
+    [
+     53.575334,
+     -113.660066
+    ],
+    [
+     53.575383,
+     -113.659935
+    ],
+    [
+     53.575424,
+     -113.659782
+    ],
+    [
+     53.575436,
+     -113.659571
+    ],
+    [
+     53.575445,
+     -113.659418
+    ],
+    [
+     53.575433,
+     -113.659173
+    ],
+    [
+     53.575403,
+     -113.658999
+    ],
+    [
+     53.575359,
+     -113.658828
+    ],
+    [
+     53.575302,
+     -113.658682
+    ],
+    [
+     53.57524,
+     -113.658559
+    ],
+    [
+     53.575157,
+     -113.658434
+    ],
+    [
+     53.575082,
+     -113.658349
+    ],
+    [
+     53.574994,
+     -113.658274
+    ],
+    [
+     53.574899,
+     -113.658215
+    ],
+    [
+     53.574786,
+     -113.658187
+    ],
+    [
+     53.574672,
+     -113.658184
+    ],
+    [
+     53.574581,
+     -113.6582
+    ],
+    [
+     53.574473,
+     -113.65824
+    ],
+    [
+     53.574357,
+     -113.65832
+    ],
+    [
+     53.574259,
+     -113.658423
+    ],
+    [
+     53.574182,
+     -113.658535
+    ],
+    [
+     53.574114,
+     -113.658672
+    ],
+    [
+     53.574051,
+     -113.658826
+    ],
+    [
+     53.574004,
+     -113.658998
+    ],
+    [
+     53.573975,
+     -113.659165
+    ],
+    [
+     53.573942,
+     -113.659495
+    ],
+    [
+     53.573945,
+     -113.660258
+    ],
+    [
+     53.573958,
+     -113.661084
+    ],
+    [
+     53.573973,
+     -113.664306
+    ],
+    [
+     53.573915,
+     -113.664664
+    ]
+   ],
+   "extract_role": "ramp"
+  }
+ ],
+ "excluded": [
+  {
+   "osm_way": 60064623,
+   "reason": "Yellowhead Trail westbound through this interchange and west past it, 1,161.6 m, two lanes, 100 km/h. Complete OSM way from about -113.678 to -113.661. It runs west toward Y64 (Highway 16 / Winterburn). Dropped so the clip stays on this interchange. Yellowhead is the road under the Henday decks, not a deck here."
+  },
+  {
+   "osm_way": 256516539,
+   "reason": "Yellowhead Trail westbound continuing east of the interchange, 552.7 m, two lanes, 100 km/h, width tag 7.4. Dropped with the other Yellowhead through-ways."
+  },
+  {
+   "osm_way": 279472325,
+   "reason": "Yellowhead Trail eastbound through the east side of the interchange, 350.4 m, two lanes, 100 km/h, width tag 7.4. Dropped so the clip stays on this interchange."
+  },
+  {
+   "osm_way": 313692014,
+   "reason": "Yellowhead Trail eastbound through the west side of the interchange, 262.1 m, two lanes, 100 km/h. Dropped with the other Yellowhead through-ways."
+  },
+  {
+   "osm_way": 1025593567,
+   "reason": "Mapped footprint of the SE ramp deck, closed way, man_made=bridge. The centreline is way 135719193."
+  },
+  {
+   "osm_way": 1025593569,
+   "reason": "Mapped footprint of the Henday southbound deck, closed way, man_made=bridge. The centreline is way 22916290."
+  },
+  {
+   "osm_way": 1025593574,
+   "reason": "Mapped footprint of the NW ramp deck, closed way, man_made=bridge. The centreline is way 273639882."
+  },
+  {
+   "osm_way": 1025593575,
+   "reason": "Mapped footprint of the Henday northbound deck, closed way, man_made=bridge. The centreline is way 22916287."
+  },
+  {
+   "osm_way": 1025593568,
+   "reason": "Mapped footprint of WS1, closed way, man_made=bridge. The centreline is way 153725899. Not in the extract."
+  },
+  {
+   "osm_way": 1025593570,
+   "reason": "Mapped footprint of EN2, closed way, man_made=bridge. The centreline is way 43531503. Not in the extract."
+  },
+  {
+   "osm_way": 1025593571,
+   "reason": "Mapped footprint of WS2, closed way, man_made=bridge. The centreline is way 43402325. Not in the extract."
+  },
+  {
+   "osm_way": 1025593572,
+   "reason": "Mapped footprint of EN1, closed way, man_made=bridge. The centreline is way 132571388. Not in the extract."
+  },
+  {
+   "osm_way": 1025593573,
+   "reason": "Mapped footprint of EN3, closed way, man_made=bridge. The centreline is way 43531474. Not in the extract."
+  },
+  {
+   "osm_way": 1309172199,
+   "reason": "Golf cart path, 5 m, about 600 m west of the interchange. Lewis Estates. Not a deck here."
+  },
+  {
+   "osm_way": 1309185329,
+   "reason": "Golf cart path, 5 m, about 600 m west of the interchange. Lewis Estates. Not a deck here."
+  }
+ ],
+ "dimensions": {
+  "structural_type": "Ten separate grade-separation decks at the west Henday / Yellowhead combination interchange. N-1 (1998) and S-6, NW-7, SE-8, WS1-9, WS3-11, EN1-12 (2011) are Alberta WG girders. WS2-10, EN2-13, and EN3-14 are NU girders. The flyovers that read from the air are WS2-10 and EN2-13 over Henday. Ramps can be the shared girder. Not a truss. Not a single girder line for the whole interchange. Wikipedia: the directional ramps were built one lane wide initially; the decks are wide enough for a second lane.",
+  "alberta_file": "85047",
+  "n1_year_built": 1998,
+  "n1_span_type_code": "WG",
+  "n1_span_count": 2,
+  "n1_span_lengths_m_inspection_2013": [
+   44,
+   40
+  ],
+  "n1_clear_roadway_m": 16.6,
+  "s6_year_built": 2011,
+  "s6_span_type_code": "WG",
+  "s6_span_count": 2,
+  "s6_span_lengths_m_inspection_2012": [
+   46.025,
+   45.053
+  ],
+  "s6_clear_roadway_m": 17.1,
+  "nw7_year_built": 2011,
+  "nw7_span_type_code": "WG",
+  "nw7_span_count": 2,
+  "nw7_span_lengths_m_inspection_2012": [
+   46.038,
+   45.084
+  ],
+  "nw7_clear_roadway_m": 8.3,
+  "se8_year_built": 2011,
+  "se8_span_type_code": "WG",
+  "se8_span_count": 2,
+  "se8_span_lengths_m_inspection_2012": [
+   45.088,
+   46.04
+  ],
+  "se8_clear_roadway_m": 8.3,
+  "ws1_year_built": 2011,
+  "ws1_span_type_code": "WG",
+  "ws1_span_count": 1,
+  "ws1_span_lengths_m_inspection_2012": [
+   58.488
+  ],
+  "ws1_clear_roadway_m": 13.9,
+  "ws2_year_built": 2011,
+  "ws2_span_type_code": "NU",
+  "ws2_span_count": 3,
+  "ws2_span_lengths_m_inspection_2012": [
+   45.354,
+   37.075,
+   42.221
+  ],
+  "ws2_girder_count": 5,
+  "ws2_clear_roadway_m": 13.9,
+  "ws3_year_built": 2011,
+  "ws3_span_type_code": "WG",
+  "ws3_span_count": 2,
+  "ws3_span_lengths_m_inspection_2012": [
+   63.954,
+   42.751
+  ],
+  "ws3_clear_roadway_m": 13.9,
+  "en1_year_built": 2011,
+  "en1_span_type_code": "WG",
+  "en1_span_count": 1,
+  "en1_span_lengths_m_inspection_2012": [
+   40.537
+  ],
+  "en1_clear_roadway_m": 13.9,
+  "en2_year_built": 2011,
+  "en2_span_type_code": "NU",
+  "en2_span_count": 3,
+  "en2_span_lengths_m_inspection_2012": [
+   44.054,
+   36.914,
+   30.049
+  ],
+  "en2_girder_count": 5,
+  "en2_clear_roadway_m": 13.9,
+  "en3_year_built": 2011,
+  "en3_span_type_code": "NU",
+  "en3_span_count": 2,
+  "en3_span_lengths_m_inspection_2012": [
+   45.945,
+   38.468
+  ],
+  "en3_girder_count": 5,
+  "en3_clear_roadway_m": 13.9,
+  "osm_henday_nb_m": 97.5,
+  "osm_henday_sb_m": 104.9,
+  "osm_nw_ramp_m": 105.0,
+  "osm_se_ramp_m": 101.7,
+  "osm_ws2_flyover_m": 126.8,
+  "osm_en2_flyover_m": 140.0,
+  "osm_ws3_m": 116.1,
+  "osm_en3_m": 85.8,
+  "osm_ws1_m": 66.0,
+  "osm_en1_m": 43.4,
+  "clearance_under_216_west_on_16_m_alberta_table": 5.8,
+  "clearance_under_nw_ramp_on_16_m_alberta_table": 5.5,
+  "clearance_under_se_ramp_on_16_m_alberta_table": 5.6,
+  "clearance_under_en_ramp_on_16_m_alberta_table": 5.5,
+  "clearance_under_ws_ramp_on_16_m_alberta_table": 5.5,
+  "clearance_under_ws2_nb_m_inspection_2012": 9.9,
+  "clearance_under_ws2_sb_m_inspection_2012": 9.0,
+  "clearance_under_en2_m_inspection_2012": 9.5,
+  "clearance_under_en2_ne_ramp_m_inspection_2012": 7.7,
+  "osm_maxheight_tag_m_north_sb_approach": 9.0,
+  "osm_maxheight_is_deck_elevation": false,
+  "sidewalk": false,
+  "posted_speed_kmh_henday_osm_tag": 100,
+  "posted_speed_kmh_yellowhead_osm_tag": 100,
+  "hwy216_exit": 25,
+  "hwy16_exit": 378,
+  "deck_elevation_asl_m": null,
+  "deck_thickness_m": null,
+  "girder_depth_m": null,
+  "crossfall": null,
+  "lane_width_m": null,
+  "shoulder_width_m": null,
+  "navigation_clearance_m": null,
+  "north_approach_gradient": null,
+  "south_approach_gradient": null,
+  "north_approach_meets_grade": null,
+  "south_approach_meets_grade": null
+ },
+ "ramps_added_2026_10_15": {
+  "source": "OSM API 0.6 map read of box 53.566,-113.672,53.582,-113.650 on 2026-10-15 (ODbL). Every motorway and motorway_link way touching the box, complete (all nodes), that was not already in this file: the ramp and flyover approach chains and the Yellowhead carriageways. Plan geometry only; no elevations.",
+  "ways": [
+   {
+    "osm_way": 22911977,
+    "part": "added_22911977",
+    "tags": {
+     "destination": "Edmonton",
+     "destination:ref": "16 East",
+     "destination:street": "Yellowhead Trail",
+     "highway": "motorway_link",
+     "lanes": "1",
+     "maxspeed:advisory": "80",
+     "oneway": "yes",
+     "surface": "asphalt",
+     "width": "4.8"
+    },
+    "nodes": [
+     [
+      53.5678097,
+      -113.6606134
+     ],
+     [
+      53.5679915,
+      -113.6605599
+     ],
+     [
+      53.568659,
+      -113.6605986
+     ],
+     [
+      53.5693801,
+      -113.6606292
+     ],
+     [
+      53.569757,
+      -113.6605896
+     ],
+     [
+      53.5700408,
+      -113.6604982
+     ],
+     [
+      53.5703007,
+      -113.6603843
+     ],
+     [
+      53.5705388,
+      -113.6602229
+     ],
+     [
+      53.5708665,
+      -113.6599707
+     ],
+     [
+      53.5711042,
+      -113.659724
+     ],
+     [
+      53.5713456,
+      -113.6594123
+     ],
+     [
+      53.5716457,
+      -113.6589258
+     ],
+     [
+      53.5718423,
+      -113.6585245
+     ],
+     [
+      53.5720505,
+      -113.6580696
+     ],
+     [
+      53.5722551,
+      -113.6576035
+     ],
+     [
+      53.5724923,
+      -113.6570645
+     ],
+     [
+      53.5726648,
+      -113.656652
+     ],
+     [
+      53.5728951,
+      -113.656078
+     ],
+     [
+      53.5730186,
+      -113.6555904
+     ],
+     [
+      53.5731052,
+      -113.6551943
+     ],
+     [
+      53.5731961,
+      -113.6547249
+     ],
+     [
+      53.5732778,
+      -113.6538593
+     ],
+     [
+      53.5733113,
+      -113.6531992
+     ],
+     [
+      53.5733132,
+      -113.6506112
+     ],
+     [
+      53.5733516,
+      -113.6496678
+     ]
+    ]
+   },
+   {
+    "osm_way": 22916292,
+    "part": "added_22916292",
+    "tags": {
+     "hazmat": "designated",
+     "hgv": "designated",
+     "highway": "motorway",
+     "lanes": "3",
+     "lit": "yes",
+     "maxspeed": "100",
+     "name": "Anthony Henday Drive NW",
+     "name:etymology:wikidata": "Q573339",
+     "oneway": "yes",
+     "placement": "left_of:2",
+     "ref": "216",
+     "source": "GPS",
+     "surface": "asphalt",
+     "turn:lanes": "through|through|merge_to_left",
+     "width": "11.1"
+    },
+    "nodes": [
+     [
+      53.571848,
+      -113.661992
+     ],
+     [
+      53.5714491,
+      -113.6619749
+     ],
+     [
+      53.5711472,
+      -113.6619489
+     ],
+     [
+      53.5707383,
+      -113.6619111
+     ],
+     [
+      53.5703909,
+      -113.6618683
+     ],
+     [
+      53.5700189,
+      -113.6618089
+     ],
+     [
+      53.5696447,
+      -113.6617478
+     ],
+     [
+      53.5676001,
+      -113.6613076
+     ]
+    ]
+   },
+   {
+    "osm_way": 43531499,
+    "part": "added_43531499",
+    "tags": {
+     "destination:street": "Anthony Henday Drive North",
+     "highway": "motorway_link",
+     "lanes": "1",
+     "maxspeed:advisory": "80",
+     "oneway": "yes",
+     "source": "GPS",
+     "surface": "asphalt",
+     "width": "3.7"
+    },
+    "nodes": [
+     [
+      53.5717579,
+      -113.6604992
+     ],
+     [
+      53.571873,
+      -113.6600563
+     ],
+     [
+      53.5720868,
+      -113.6594995
+     ],
+     [
+      53.5724162,
+      -113.6588584
+     ],
+     [
+      53.5726915,
+      -113.6584582
+     ],
+     [
+      53.5729982,
+      -113.6581141
+     ],
+     [
+      53.5732703,
+      -113.6578899
+     ]
+    ]
+   },
+   {
+    "osm_way": 60064623,
+    "part": "added_60064623",
+    "tags": {
+     "addr:housenumber:first:right": "19707",
+     "addr:housenumber:last:right": "21459",
+     "alt_name": "Yellowhead Highway",
+     "alt_name:en": "Yellowhead Highway",
+     "alt_name:fr": "Route Yellowhead",
+     "attribution": "GeoBase®",
+     "geobase:acquisitionTechnique": "GPS",
+     "geobase:roadsegmentid": "352657;66797;115938",
+     "hazmat": "designated",
+     "hgv": "designated",
+     "highway": "motorway",
+     "lanes": "2",
+     "lit": "yes",
+     "maxspeed": "100",
+     "name": "Yellowhead Trail NW",
+     "name:etymology:wikidata": "Q22647683",
+     "nat_name": "Trans-Canada Highway",
+     "nat_name:en": "Trans-Canada Highway",
+     "nat_name:fr": "Route Transcanadienne",
+     "NHS": "yes",
+     "oneway": "yes",
+     "ref": "16",
+     "source": "NRN - Alberta V7.0",
+     "surface": "asphalt"
+    },
+    "nodes": [
+     [
+      53.5718655,
+      -113.6779575
+     ],
+     [
+      53.5728955,
+      -113.6725354
+     ],
+     [
+      53.5730976,
+      -113.6713234
+     ],
+     [
+      53.5732668,
+      -113.6701225
+     ],
+     [
+      53.5733883,
+      -113.6690515
+     ],
+     [
+      53.5734896,
+      -113.6679579
+     ],
+     [
+      53.5735351,
+      -113.6673645
+     ],
+     [
+      53.5735684,
+      -113.6668614
+     ],
+     [
+      53.5735956,
+      -113.6663734
+     ],
+     [
+      53.5736233,
+      -113.6657696
+     ],
+     [
+      53.5736358,
+      -113.6653795
+     ],
+     [
+      53.5736513,
+      -113.6646003
+     ],
+     [
+      53.5736534,
+      -113.6640214
+     ],
+     [
+      53.573647,
+      -113.6628629
+     ],
+     [
+      53.5736219,
+      -113.6607807
+     ]
+    ]
+   },
+   {
+    "osm_way": 61423533,
+    "part": "added_61423533",
+    "tags": {
+     "addr:housenumber:first:left": "26118;26106;21504;18904",
+     "addr:housenumber:last:left": "26216;26116;23060;19660",
+     "alt_name": "Yellowhead Highway",
+     "alt_name:en": "Yellowhead Highway",
+     "alt_name:fr": "Route Yellowhead",
+     "attribution": "GeoBase®",
+     "geobase:acquisitionTechnique": "GPS",
+     "geobase:roadsegmentid": "39964;113387;176887;72813;137365;348843;260905",
+     "hazmat": "designated",
+     "hgv": "designated",
+     "highway": "motorway",
+     "is_in": "Parkland County;Edmonton",
+     "lanes": "3",
+     "lit": "yes",
+     "maxspeed": "100",
+     "name": "Yellowhead Trail NW",
+     "name:etymology:wikidata": "Q22647683",
+     "nat_name": "Trans-Canada Highway",
+     "nat_name:en": "Trans-Canada Highway",
+     "nat_name:fr": "Route Transcanadienne",
+     "NHS": "yes",
+     "oneway": "yes",
+     "placement": "left_of:2",
+     "ref": "16",
+     "shoulder": "both",
+     "source": "NRN - Alberta V7.0",
+     "surface": "asphalt",
+     "width": "11.1"
+    },
+    "nodes": [
+     [
+      53.5734945,
+      -113.6476137
+     ],
+     [
+      53.5736001,
+      -113.6501715
+     ],
+     [
+      53.5736722,
+      -113.6524547
+     ],
+     [
+      53.573733,
+      -113.6554031
+     ]
+    ]
+   },
+   {
+    "osm_way": 61513669,
+    "part": "added_61513669",
+    "tags": {
+     "addr:housenumber:first:right": "18403",
+     "addr:housenumber:last:right": "19659",
+     "alt_name": "Yellowhead Highway",
+     "alt_name:en": "Yellowhead Highway",
+     "alt_name:fr": "Route Yellowhead",
+     "attribution": "GeoBase®",
+     "geobase:acquisitionTechnique": "GPS",
+     "geobase:roadsegmentid": "254303",
+     "hazmat": "designated",
+     "hgv": "designated",
+     "highway": "motorway",
+     "lanes": "3",
+     "lit": "yes",
+     "maxspeed": "100",
+     "name": "Yellowhead Trail NW",
+     "name:etymology:wikidata": "Q22647683",
+     "nat_name": "Trans-Canada Highway",
+     "nat_name:en": "Trans-Canada Highway",
+     "nat_name:fr": "Route Transcanadienne",
+     "NHS": "yes",
+     "oneway": "yes",
+     "placement": "right_of:2",
+     "ref": "16",
+     "source": "NRN - Alberta V7.0",
+     "surface": "asphalt",
+     "width": "11.1"
+    },
+    "nodes": [
+     [
+      53.573416,
+      -113.6524272
+     ],
+     [
+      53.5733516,
+      -113.6496678
+     ]
+    ]
+   },
+   {
+    "osm_way": 132978477,
+    "part": "added_132978477",
+    "tags": {
+     "destination": "Cold Lake;Fort McMurray",
+     "destination:ref": "216 North",
+     "destination:ref:to": "15 North",
+     "destination:street": "Anthony Henday Drive North",
+     "highway": "motorway_link",
+     "lanes": "1",
+     "maxspeed:advisory": "80",
+     "oneway": "yes",
+     "source": "GPS",
+     "surface": "asphalt",
+     "width": "3.7"
+    },
+    "nodes": [
+     [
+      53.5726419,
+      -113.6731391
+     ],
+     [
+      53.5727965,
+      -113.6721727
+     ],
+     [
+      53.5729306,
+      -113.6712361
+     ],
+     [
+      53.5729728,
+      -113.6707657
+     ],
+     [
+      53.5729747,
+      -113.6701718
+     ],
+     [
+      53.5729326,
+      -113.6695143
+     ],
+     [
+      53.5728324,
+      -113.6687995
+     ],
+     [
+      53.5727082,
+      -113.6682192
+     ],
+     [
+      53.5725418,
+      -113.6675559
+     ],
+     [
+      53.5723384,
+      -113.6667819
+     ],
+     [
+      53.5721671,
+      -113.6661347
+     ]
+    ]
+   },
+   {
+    "osm_way": 135719195,
+    "part": "added_135719195",
+    "tags": {
+     "destination": "Jasper",
+     "destination:ref": "16 West",
+     "highway": "motorway_link",
+     "maxspeed:advisory": "80",
+     "oneway": "yes",
+     "source": "GPS",
+     "surface": "asphalt",
+     "width": "3.7"
+    },
+    "nodes": [
+     [
+      53.5767945,
+      -113.6616379
+     ],
+     [
+      53.5764687,
+      -113.6617842
+     ],
+     [
+      53.5762397,
+      -113.6618738
+     ],
+     [
+      53.5759823,
+      -113.662029
+     ],
+     [
+      53.5755284,
+      -113.6623893
+     ],
+     [
+      53.5752478,
+      -113.6627233
+     ],
+     [
+      53.5748727,
+      -113.6633037
+     ],
+     [
+      53.5745725,
+      -113.6639631
+     ],
+     [
+      53.5743579,
+      -113.6645812
+     ],
+     [
+      53.5741633,
+      -113.6654231
+     ],
+     [
+      53.5740909,
+      -113.6658821
+     ],
+     [
+      53.574023,
+      -113.6667583
+     ],
+     [
+      53.5738956,
+      -113.6684722
+     ],
+     [
+      53.5737921,
+      -113.6695237
+     ],
+     [
+      53.5736551,
+      -113.6705993
+     ],
+     [
+      53.5735022,
+      -113.6715433
+     ],
+     [
+      53.5730928,
+      -113.6736327
+     ],
+     [
+      53.5728489,
+      -113.6745952
+     ]
+    ]
+   },
+   {
+    "osm_way": 135927518,
+    "part": "added_135927518",
+    "tags": {
+     "destination": "Jasper;Edmonton",
+     "destination:ref": "16",
+     "destination:street": "Yellowhead Trail",
+     "highway": "motorway_link",
+     "junction:ref": "25",
+     "oneway": "yes"
+    },
+    "nodes": [
+     [
+      53.5809918,
+      -113.6589717
+     ],
+     [
+      53.580394,
+      -113.6594948
+     ],
+     [
+      53.5798902,
+      -113.6599057
+     ],
+     [
+      53.5785573,
+      -113.6609683
+     ],
+     [
+      53.5784064,
+      -113.6610588
+     ]
+    ]
+   },
+   {
+    "osm_way": 153725850,
+    "part": "added_153725850",
+    "tags": {
+     "destination:ref": "216",
+     "destination:street": "Anthony Henday Drive South",
+     "highway": "motorway_link",
+     "oneway": "yes",
+     "source": "GPS"
+    },
+    "nodes": [
+     [
+      53.5756361,
+      -113.6580704
+     ],
+     [
+      53.5757275,
+      -113.6582868
+     ],
+     [
+      53.5758215,
+      -113.6585381
+     ],
+     [
+      53.5759195,
+      -113.6588478
+     ],
+     [
+      53.5759805,
+      -113.6590729
+     ],
+     [
+      53.5760328,
+      -113.6592913
+     ],
+     [
+      53.5760898,
+      -113.6595334
+     ],
+     [
+      53.5761364,
+      -113.659822
+     ],
+     [
+      53.5761703,
+      -113.6600921
+     ],
+     [
+      53.5762034,
+      -113.6603904
+     ]
+    ]
+   },
+   {
+    "osm_way": 153725852,
+    "part": "added_153725852",
+    "tags": {
+     "destination:ref": "216 South",
+     "destination:street": "Anthony Henday Drive South",
+     "highway": "motorway_link",
+     "lanes": "1",
+     "oneway": "yes",
+     "source": "GPS"
+    },
+    "nodes": [
+     [
+      53.5738273,
+      -113.6517747
+     ],
+     [
+      53.5739089,
+      -113.6531616
+     ],
+     [
+      53.5739695,
+      -113.653811
+     ],
+     [
+      53.5740274,
+      -113.6542596
+     ],
+     [
+      53.5741062,
+      -113.6546736
+     ],
+     [
+      53.5742473,
+      -113.6551961
+     ],
+     [
+      53.5744125,
+      -113.6556747
+     ],
+     [
+      53.5745661,
+      -113.6560325
+     ],
+     [
+      53.5747311,
+      -113.6563636
+     ],
+     [
+      53.5749566,
+      -113.6567766
+     ],
+     [
+      53.5752485,
+      -113.6573146
+     ]
+    ]
+   },
+   {
+    "osm_way": 153725854,
+    "part": "added_153725854",
+    "tags": {
+     "destination:ref": "216",
+     "destination:street": "Anthony Henday Drive South",
+     "highway": "motorway_link",
+     "oneway": "yes",
+     "source": "GPS"
+    },
+    "nodes": [
+     [
+      53.5761564,
+      -113.6622929
+     ],
+     [
+      53.5760929,
+      -113.6626395
+     ],
+     [
+      53.5760201,
+      -113.6629893
+     ],
+     [
+      53.575915,
+      -113.6633504
+     ],
+     [
+      53.5758107,
+      -113.6636986
+     ],
+     [
+      53.5756819,
+      -113.664022
+     ],
+     [
+      53.5755879,
+      -113.6642446
+     ],
+     [
+      53.5754544,
+      -113.6645135
+     ],
+     [
+      53.5753112,
+      -113.6647569
+     ],
+     [
+      53.5751645,
+      -113.6649832
+     ],
+     [
+      53.5750143,
+      -113.6651851
+     ],
+     [
+      53.5748114,
+      -113.6654171
+     ],
+     [
+      53.5746358,
+      -113.6655924
+     ],
+     [
+      53.5744634,
+      -113.6657517
+     ],
+     [
+      53.5743185,
+      -113.6658478
+     ]
+    ]
+   },
+   {
+    "osm_way": 153725855,
+    "part": "added_153725855",
+    "tags": {
+     "destination:ref": "216",
+     "destination:street": "Anthony Henday Drive South",
+     "highway": "motorway_link",
+     "lanes": "1",
+     "lit": "yes",
+     "maxspeed:advisory": "80",
+     "oneway": "yes",
+     "source": "Bing"
+    },
+    "nodes": [
+     [
+      53.5733009,
+      -113.6662002
+     ],
+     [
+      53.573061,
+      -113.6661879
+     ],
+     [
+      53.572857,
+      -113.666164
+     ],
+     [
+      53.5726695,
+      -113.666113
+     ],
+     [
+      53.5724542,
+      -113.6660339
+     ],
+     [
+      53.5722396,
+      -113.6659323
+     ],
+     [
+      53.5719885,
+      -113.6657733
+     ],
+     [
+      53.5717546,
+      -113.665588
+     ],
+     [
+      53.5716121,
+      -113.6654478
+     ],
+     [
+      53.5714693,
+      -113.6652927
+     ],
+     [
+      53.5711711,
+      -113.6649084
+     ],
+     [
+      53.5709043,
+      -113.6645439
+     ],
+     [
+      53.5700114,
+      -113.6632849
+     ],
+     [
+      53.5695688,
+      -113.6626905
+     ]
+    ]
+   },
+   {
+    "osm_way": 153725874,
+    "part": "added_153725874",
+    "tags": {
+     "destination:street": "Anthony Henday Drive North",
+     "highway": "motorway_link",
+     "lanes": "1",
+     "maxheight": "5.4",
+     "oneway": "yes",
+     "source": "GPS",
+     "surface": "asphalt"
+    },
+    "nodes": [
+     [
+      53.5740032,
+      -113.6574999
+     ],
+     [
+      53.5742118,
+      -113.6574556
+     ],
+     [
+      53.5745166,
+      -113.657412
+     ],
+     [
+      53.574726,
+      -113.6574218
+     ],
+     [
+      53.5749003,
+      -113.657446
+     ],
+     [
+      53.5751528,
+      -113.6575209
+     ],
+     [
+      53.5755815,
+      -113.6577008
+     ],
+     [
+      53.5758121,
+      -113.6578102
+     ],
+     [
+      53.5765681,
+      -113.6581805
+     ],
+     [
+      53.5778359,
+      -113.6587982
+     ],
+     [
+      53.5781757,
+      -113.6589499
+     ],
+     [
+      53.5784973,
+      -113.6590378
+     ],
+     [
+      53.5787644,
+      -113.6590673
+     ],
+     [
+      53.5789603,
+      -113.6590633
+     ],
+     [
+      53.5792516,
+      -113.6590157
+     ],
+     [
+      53.579517,
+      -113.6589482
+     ],
+     [
+      53.5798409,
+      -113.6587965
+     ],
+     [
+      53.5799884,
+      -113.6587073
+     ],
+     [
+      53.5805164,
+      -113.6583452
+     ],
+     [
+      53.5810271,
+      -113.6579862
+     ]
+    ]
+   },
+   {
+    "osm_way": 153725888,
+    "part": "added_153725888",
+    "tags": {
+     "destination:street": "Anthony Henday Drive North",
+     "highway": "motorway_link",
+     "lanes": "1",
+     "maxspeed:advisory": "80",
+     "oneway": "yes",
+     "source": "GPS",
+     "surface": "asphalt",
+     "width": "3.7"
+    },
+    "nodes": [
+     [
+      53.5720123,
+      -113.6655315
+     ],
+     [
+      53.5718625,
+      -113.664961
+     ],
+     [
+      53.5717412,
+      -113.6644967
+     ],
+     [
+      53.5716287,
+      -113.6640002
+     ],
+     [
+      53.5715513,
+      -113.663426
+     ],
+     [
+      53.5715198,
+      -113.6630129
+     ],
+     [
+      53.5715133,
+      -113.6625546
+     ]
+    ]
+   },
+   {
+    "osm_way": 256516539,
+    "part": "added_256516539",
+    "tags": {
+     "addr:housenumber:first:right": "19707",
+     "addr:housenumber:last:right": "21459",
+     "alt_name": "Yellowhead Highway",
+     "alt_name:en": "Yellowhead Highway",
+     "alt_name:fr": "Route Yellowhead",
+     "attribution": "GeoBase®",
+     "geobase:acquisitionTechnique": "GPS",
+     "geobase:roadsegmentid": "352657;66797;115938",
+     "hazmat": "designated",
+     "hgv": "designated",
+     "highway": "motorway",
+     "lanes": "2",
+     "lit": "yes",
+     "maxspeed": "100",
+     "name": "Yellowhead Trail NW",
+     "name:etymology:wikidata": "Q22647683",
+     "nat_name": "Trans-Canada Highway",
+     "nat_name:en": "Trans-Canada Highway",
+     "nat_name:fr": "Route Transcanadienne",
+     "NHS": "yes",
+     "oneway": "yes",
+     "ref": "16",
+     "source": "NRN - Alberta V7.0",
+     "surface": "asphalt",
+     "width": "7.4"
+    },
+    "nodes": [
+     [
+      53.5736219,
+      -113.6607807
+     ],
+     [
+      53.5734976,
+      -113.6563359
+     ],
+     [
+      53.573416,
+      -113.6524272
+     ]
+    ]
+   },
+   {
+    "osm_way": 256516540,
+    "part": "added_256516540",
+    "tags": {
+     "destination:ref": "216 North",
+     "destination:street": "Anthony Henday Drive North",
+     "highway": "motorway_link",
+     "lanes": "1",
+     "oneway": "yes",
+     "source": "GPS",
+     "surface": "asphalt"
+    },
+    "nodes": [
+     [
+      53.5738273,
+      -113.6517747
+     ],
+     [
+      53.5741187,
+      -113.6536391
+     ],
+     [
+      53.5742843,
+      -113.6543472
+     ],
+     [
+      53.5744565,
+      -113.6549192
+     ],
+     [
+      53.5746293,
+      -113.655373
+     ],
+     [
+      53.5749345,
+      -113.6558704
+     ],
+     [
+      53.5751627,
+      -113.6562127
+     ],
+     [
+      53.5753122,
+      -113.6564297
+     ],
+     [
+      53.5754492,
+      -113.6566142
+     ],
+     [
+      53.5756105,
+      -113.6567776
+     ],
+     [
+      53.575947,
+      -113.6571354
+     ],
+     [
+      53.5765298,
+      -113.6576008
+     ],
+     [
+      53.5775104,
+      -113.6582864
+     ],
+     [
+      53.5779133,
+      -113.6585885
+     ],
+     [
+      53.5784874,
+      -113.6588504
+     ],
+     [
+      53.5788765,
+      -113.6588918
+     ],
+     [
+      53.5791612,
+      -113.6588816
+     ],
+     [
+      53.5794011,
+      -113.6588395
+     ],
+     [
+      53.5797281,
+      -113.6587255
+     ],
+     [
+      53.5799824,
+      -113.6585983
+     ],
+     [
+      53.5805045,
+      -113.6582826
+     ],
+     [
+      53.5810271,
+      -113.6579862
+     ]
+    ]
+   },
+   {
+    "osm_way": 279472325,
+    "part": "added_279472325",
+    "tags": {
+     "addr:housenumber:first:left": "26118;26106;21504;18904",
+     "addr:housenumber:last:left": "26216;26116;23060;19660",
+     "alt_name": "Yellowhead Highway",
+     "alt_name:en": "Yellowhead Highway",
+     "alt_name:fr": "Route Yellowhead",
+     "attribution": "GeoBase®",
+     "geobase:acquisitionTechnique": "GPS",
+     "geobase:roadsegmentid": "39964;113387;176887;72813;137365;348843;260905",
+     "hazmat": "designated",
+     "hgv": "designated",
+     "highway": "motorway",
+     "is_in": "Parkland County;Edmonton",
+     "lanes": "2",
+     "lit": "yes",
+     "maxspeed": "100",
+     "name": "Yellowhead Trail NW",
+     "name:etymology:wikidata": "Q22647683",
+     "nat_name": "Trans-Canada Highway",
+     "nat_name:en": "Trans-Canada Highway",
+     "nat_name:fr": "Route Transcanadienne",
+     "NHS": "yes",
+     "oneway": "yes",
+     "ref": "16",
+     "source": "NRN - Alberta V7.0",
+     "surface": "asphalt",
+     "width": "7.4"
+    },
+    "nodes": [
+     [
+      53.573733,
+      -113.6554031
+     ],
+     [
+      53.5738555,
+      -113.6606998
+     ]
+    ]
+   },
+   {
+    "osm_way": 313692014,
+    "part": "added_313692014",
+    "tags": {
+     "addr:housenumber:first:left": "26118;26106;21504;18904",
+     "addr:housenumber:last:left": "26216;26116;23060;19660",
+     "alt_name": "Yellowhead Highway",
+     "alt_name:en": "Yellowhead Highway",
+     "alt_name:fr": "Route Yellowhead",
+     "attribution": "GeoBase®",
+     "geobase:acquisitionTechnique": "GPS",
+     "geobase:roadsegmentid": "39964;113387;176887;72813;137365;348843;260905",
+     "hazmat": "designated",
+     "hgv": "designated",
+     "highway": "motorway",
+     "is_in": "Parkland County;Edmonton",
+     "lanes": "2",
+     "lit": "yes",
+     "maxspeed": "100",
+     "name": "Yellowhead Trail NW",
+     "name:etymology:wikidata": "Q22647683",
+     "nat_name": "Trans-Canada Highway",
+     "nat_name:en": "Trans-Canada Highway",
+     "nat_name:fr": "Route Transcanadienne",
+     "NHS": "yes",
+     "oneway": "yes",
+     "ref": "16",
+     "source": "NRN - Alberta V7.0"
+    },
+    "nodes": [
+     [
+      53.5738555,
+      -113.6606998
+     ],
+     [
+      53.573884,
+      -113.6621225
+     ],
+     [
+      53.5739067,
+      -113.6633411
+     ],
+     [
+      53.5739154,
+      -113.6646644
+     ]
+    ]
+   },
+   {
+    "osm_way": 431012835,
+    "part": "added_431012835",
+    "tags": {
+     "destination": "Calgary",
+     "destination:ref": "216 South",
+     "destination:ref:to": "2 South",
+     "destination:street": "Anthony Henday Drive South",
+     "highway": "motorway_link",
+     "lanes": "1",
+     "maxspeed:advisory": "80",
+     "oneway": "yes",
+     "source": "GPS",
+     "surface": "asphalt",
+     "width": "3.7"
+    },
+    "nodes": [
+     [
+      53.5726419,
+      -113.6731391
+     ],
+     [
+      53.5727376,
+      -113.6722981
+     ],
+     [
+      53.5727511,
+      -113.6720657
+     ],
+     [
+      53.5727654,
+      -113.6711709
+     ],
+     [
+      53.5727153,
+      -113.6704368
+     ],
+     [
+      53.5726214,
+      -113.6698186
+     ],
+     [
+      53.5724936,
+      -113.6691727
+     ],
+     [
+      53.5722871,
+      -113.6682012
+     ],
+     [
+      53.5721143,
+      -113.6674042
+     ],
+     [
+      53.5720398,
+      -113.6671113
+     ],
+     [
+      53.5718861,
+      -113.6666332
+     ],
+     [
+      53.5716757,
+      -113.6660909
+     ],
+     [
+      53.5715229,
+      -113.6657528
+     ],
+     [
+      53.5713768,
+      -113.6654831
+     ],
+     [
+      53.5711262,
+      -113.6651183
+     ],
+     [
+      53.5708989,
+      -113.6647703
+     ],
+     [
+      53.5704219,
+      -113.6640333
+     ],
+     [
+      53.5699557,
+      -113.6633201
+     ],
+     [
+      53.5695688,
+      -113.6626905
+     ]
+    ]
+   },
+   {
+    "osm_way": 499079876,
+    "part": "added_499079876",
+    "tags": {
+     "destination": "Edmonton;Jasper",
+     "destination:ref": "16",
+     "destination:street": "Yellowhead Trail",
+     "highway": "motorway_link",
+     "junction:ref": "25",
+     "lanes": "1",
+     "maxspeed:advisory": "80",
+     "oneway": "yes",
+     "surface": "asphalt",
+     "width": "3.7"
+    },
+    "nodes": [
+     [
+      53.5660658,
+      -113.660538
+     ],
+     [
+      53.5662851,
+      -113.6604309
+     ],
+     [
+      53.567214,
+      -113.6605313
+     ]
+    ]
+   },
+   {
+    "osm_way": 499789126,
+    "part": "added_499789126",
+    "tags": {
+     "destination:ref": "216",
+     "destination:street": "Anthony Henday Drive",
+     "highway": "motorway_link",
+     "junction:ref": "378",
+     "lanes": "1",
+     "oneway": "yes",
+     "source": "GPS",
+     "surface": "asphalt",
+     "width": "4.8"
+    },
+    "nodes": [
+     [
+      53.5734945,
+      -113.6476137
+     ],
+     [
+      53.5736256,
+      -113.6485541
+     ],
+     [
+      53.573745,
+      -113.6503591
+     ]
+    ]
+   },
+   {
+    "osm_way": 601916868,
+    "part": "added_601916868",
+    "tags": {
+     "hazmat": "designated",
+     "hgv": "designated",
+     "highway": "motorway",
+     "lanes": "3",
+     "lit": "yes",
+     "maxspeed": "100",
+     "name": "Anthony Henday Drive NW",
+     "name:etymology:wikidata": "Q573339",
+     "oneway": "yes",
+     "ref": "216",
+     "source": "AB Transportation",
+     "turn:lanes": "through|through|through;slight_right"
+    },
+    "nodes": [
+     [
+      53.5860779,
+      -113.6542346
+     ],
+     [
+      53.5857316,
+      -113.6546235
+     ],
+     [
+      53.5847583,
+      -113.6556555
+     ],
+     [
+      53.5839787,
+      -113.6564539
+     ],
+     [
+      53.5833979,
+      -113.6569978
+     ],
+     [
+      53.5829466,
+      -113.6574073
+     ],
+     [
+      53.5825497,
+      -113.6577439
+     ],
+     [
+      53.5821289,
+      -113.6580944
+     ],
+     [
+      53.5816201,
+      -113.6584976
+     ],
+     [
+      53.5809918,
+      -113.6589717
+     ]
+    ]
+   },
+   {
+    "osm_way": 641722671,
+    "part": "added_641722671",
+    "tags": {
+     "highway": "motorway_link",
+     "lanes": "2",
+     "lit": "yes",
+     "maxspeed:advisory": "80",
+     "oneway": "yes",
+     "placement": "middle_of:1",
+     "source": "Bing",
+     "surface": "asphalt",
+     "turn:lanes": "through|merge_to_left",
+     "width": "7.4"
+    },
+    "nodes": [
+     [
+      53.5695688,
+      -113.6626905
+     ],
+     [
+      53.5693493,
+      -113.6624453
+     ],
+     [
+      53.5691073,
+      -113.6622113
+     ],
+     [
+      53.5688969,
+      -113.6620468
+     ],
+     [
+      53.5687069,
+      -113.6619186
+     ],
+     [
+      53.5685376,
+      -113.6618311
+     ],
+     [
+      53.5683779,
+      -113.6617679
+     ],
+     [
+      53.5681062,
+      -113.6616729
+     ],
+     [
+      53.5678128,
+      -113.6615981
+     ],
+     [
+      53.5666582,
+      -113.6613432
+     ]
+    ]
+   },
+   {
+    "osm_way": 847002313,
+    "part": "added_847002313",
+    "tags": {
+     "highway": "motorway_link",
+     "lanes": "1",
+     "lit": "yes",
+     "maxheight": "5.4",
+     "maxspeed:advisory": "80",
+     "oneway": "yes",
+     "source": "Bing",
+     "width": "3.7"
+    },
+    "nodes": [
+     [
+      53.5666582,
+      -113.6613432
+     ],
+     [
+      53.5644596,
+      -113.6607139
+     ],
+     [
+      53.5639694,
+      -113.6605214
+     ]
+    ]
+   },
+   {
+    "osm_way": 847002329,
+    "part": "added_847002329",
+    "tags": {
+     "hazmat": "designated",
+     "hgv": "designated",
+     "highway": "motorway",
+     "lanes": "2",
+     "lit": "yes",
+     "maxheight": "5.4",
+     "maxspeed": "100",
+     "name": "Anthony Henday Drive NW",
+     "name:etymology:wikidata": "Q573339",
+     "oneway": "yes",
+     "ref": "216",
+     "source": "GPS",
+     "width": "7.4"
+    },
+    "nodes": [
+     [
+      53.5676001,
+      -113.6613076
+     ],
+     [
+      53.5666098,
+      -113.6610798
+     ],
+     [
+      53.5639694,
+      -113.6605214
+     ]
+    ]
+   },
+   {
+    "osm_way": 1025356482,
+    "part": "added_1025356482",
+    "tags": {
+     "hazmat": "designated",
+     "hgv": "designated",
+     "highway": "motorway",
+     "lanes": "3",
+     "lit": "yes",
+     "maxspeed": "100",
+     "name": "Anthony Henday Drive NW",
+     "name:etymology:wikidata": "Q573339",
+     "oneway": "yes",
+     "ref": "216",
+     "source": "AB Transportation"
+    },
+    "nodes": [
+     [
+      53.5809918,
+      -113.6589717
+     ],
+     [
+      53.5806488,
+      -113.6591593
+     ],
+     [
+      53.5797567,
+      -113.6597392
+     ],
+     [
+      53.5791847,
+      -113.6600733
+     ],
+     [
+      53.5783172,
+      -113.6605332
+     ],
+     [
+      53.5776793,
+      -113.6608197
+     ],
+     [
+      53.5771808,
+      -113.6610278
+     ]
+    ]
+   },
+   {
+    "osm_way": 1280799949,
+    "part": "added_1280799949",
+    "tags": {
+     "destination:ref": "216 North",
+     "destination:street": "Anthony Henday Drive North",
+     "highway": "motorway_link",
+     "lanes": "1",
+     "oneway": "yes",
+     "source": "GPS",
+     "surface": "asphalt"
+    },
+    "nodes": [
+     [
+      53.5812876,
+      -113.6577995
+     ],
+     [
+      53.5815136,
+      -113.6576221
+     ],
+     [
+      53.5817805,
+      -113.6574211
+     ],
+     [
+      53.5821763,
+      -113.6571002
+     ],
+     [
+      53.5825097,
+      -113.6568101
+     ],
+     [
+      53.5831771,
+      -113.6563631
+     ]
+    ]
+   },
+   {
+    "osm_way": 1280799950,
+    "part": "added_1280799950",
+    "tags": {
+     "destination:ref": "216 North",
+     "destination:street": "Anthony Henday Drive North",
+     "highway": "motorway_link",
+     "lanes": "2",
+     "oneway": "yes",
+     "source": "GPS",
+     "surface": "asphalt",
+     "turn:lanes": "none|merge_to_left"
+    },
+    "nodes": [
+     [
+      53.5810271,
+      -113.6579862
+     ],
+     [
+      53.5812876,
+      -113.6577995
+     ]
+    ]
+   },
+   {
+    "osm_way": 1285934488,
+    "part": "added_1285934488",
+    "tags": {
+     "destination": "Edmonton;Jasper",
+     "destination:ref": "16",
+     "destination:street": "Yellowhead Trail",
+     "highway": "motorway_link",
+     "junction:ref": "25",
+     "lanes": "2",
+     "maxspeed:advisory": "80",
+     "oneway": "yes",
+     "surface": "asphalt",
+     "turn:lanes": "none|slight_right",
+     "width": "3.7"
+    },
+    "nodes": [
+     [
+      53.567214,
+      -113.6605313
+     ],
+     [
+      53.5678097,
+      -113.6606134
+     ]
+    ]
+   },
+   {
+    "osm_way": 1286221278,
+    "part": "added_1286221278",
+    "tags": {
+     "destination": "Jasper;Edmonton",
+     "destination:ref": "16",
+     "destination:street": "Yellowhead Trail",
+     "highway": "motorway_link",
+     "junction:ref": "25",
+     "lanes": "2",
+     "oneway": "yes",
+     "turn:lanes": "|slight_right"
+    },
+    "nodes": [
+     [
+      53.5784064,
+      -113.6610588
+     ],
+     [
+      53.5782554,
+      -113.6611493
+     ],
+     [
+      53.577983,
+      -113.6612861
+     ],
+     [
+      53.5773202,
+      -113.6615356
+     ],
+     [
+      53.5767945,
+      -113.6616379
+     ]
+    ]
+   },
+   {
+    "osm_way": 1286248798,
+    "part": "added_1286248798",
+    "tags": {
+     "destination:ref": "216",
+     "destination:street": "Anthony Henday Drive",
+     "highway": "motorway_link",
+     "junction:ref": "378",
+     "lanes": "2",
+     "oneway": "yes",
+     "source": "GPS",
+     "surface": "asphalt",
+     "turn:lanes": "slight_left|slight_right",
+     "width": "4.8"
+    },
+    "nodes": [
+     [
+      53.573745,
+      -113.6503591
+     ],
+     [
+      53.5737835,
+      -113.650941
+     ],
+     [
+      53.5738273,
+      -113.6517747
+     ]
+    ]
+   },
+   {
+    "osm_way": 1287655151,
+    "part": "added_1287655151",
+    "tags": {
+     "addr:housenumber:first:left": "26118;26106;21504;18904",
+     "addr:housenumber:last:left": "26216;26116;23060;19660",
+     "alt_name": "Yellowhead Highway",
+     "alt_name:en": "Yellowhead Highway",
+     "alt_name:fr": "Route Yellowhead",
+     "attribution": "GeoBase®",
+     "geobase:acquisitionTechnique": "GPS",
+     "geobase:roadsegmentid": "39964;113387;176887;72813;137365;348843;260905",
+     "hazmat": "designated",
+     "hgv": "designated",
+     "highway": "motorway",
+     "is_in": "Parkland County;Edmonton",
+     "lanes": "2",
+     "lit": "yes",
+     "maxheight": "5.4",
+     "maxspeed": "100",
+     "name": "Yellowhead Trail NW",
+     "name:etymology:wikidata": "Q22647683",
+     "nat_name": "Trans-Canada Highway",
+     "nat_name:en": "Trans-Canada Highway",
+     "nat_name:fr": "Route Transcanadienne",
+     "NHS": "yes",
+     "oneway": "yes",
+     "ref": "16",
+     "source": "NRN - Alberta V7.0",
+     "surface": "asphalt"
+    },
+    "nodes": [
+     [
+      53.5739154,
+      -113.6646644
+     ],
+     [
+      53.5739088,
+      -113.6652346
+     ],
+     [
+      53.5739033,
+      -113.6656555
+     ],
+     [
+      53.5738903,
+      -113.6660304
+     ],
+     [
+      53.5738707,
+      -113.6665481
+     ],
+     [
+      53.5738475,
+      -113.6670008
+     ],
+     [
+      53.5738336,
+      -113.6672817
+     ],
+     [
+      53.5737911,
+      -113.6678994
+     ],
+     [
+      53.5737385,
+      -113.6685496
+     ],
+     [
+      53.5736148,
+      -113.6698024
+     ],
+     [
+      53.5734683,
+      -113.6710197
+     ],
+     [
+      53.5732867,
+      -113.6722194
+     ],
+     [
+      53.5730741,
+      -113.6734129
+     ],
+     [
+      53.5728489,
+      -113.6745952
+     ],
+     [
+      53.5725107,
+      -113.6763655
+     ]
+    ]
+   },
+   {
+    "osm_way": 1289580009,
+    "part": "added_1289580009",
+    "tags": {
+     "destination:lanes": "|||Edmonton;Jasper",
+     "destination:ref:lanes": "216 North|216 North|216 North|16",
+     "destination:street:lanes": "Anthony Henday Drive|Anthony Henday Drive|Anthony Henday Drive|Yellowhead Trail",
+     "hazmat": "designated",
+     "hgv": "designated",
+     "highway": "motorway",
+     "lanes": "4",
+     "lit": "yes",
+     "maxspeed": "100",
+     "name": "Anthony Henday Drive NW",
+     "name:etymology:wikidata": "Q573339",
+     "oneway": "yes",
+     "placement": "left_of:2",
+     "ref": "216",
+     "source": "GPS",
+     "surface": "asphalt",
+     "turn:lanes": "|||slight_right",
+     "width": "11.1"
+    },
+    "nodes": [
+     [
+      53.5655409,
+      -113.6604302
+     ],
+     [
+      53.5660658,
+      -113.660538
+     ]
+    ]
+   }
+  ]
+ }
+}
