@@ -1,0 +1,12 @@
+# Open questions, merged 2026-10-14
+
+The "Ask before building" list in `CURSOR-HANDOFF.md` (another session's review, commit c5f3a92) re-checked against the data added since: LiDAR heights and measurements (`elevation/README.md`, `elevation/MEASUREMENTS.md`, `../../MEASUREMENTS.md`), the 2019 aerial, Mapillary street frames (`street/`, read in `../../STREET-READINGS.md` for ten sites) and the river gauge (`../../RIVER-LEVEL.md`). Status words: **Answered** (a value is now held), **Partly** (a value or bound is held, a gap remains), **Open, measurable** (can be done from files we hold, not done yet), **Open, needs source** (a document, photo or survey is needed), **Sim** (only William can test it).
+
+Elevations are CGVD2013 metres from the 2018 LiDAR. Deck tops are first returns (rails, traffic and catenary can add up to 1 m) and the sim's datum is not yet checked. "Rise" is deck top above the ground or water under it, not the clear height: take off the deck depth (1 to 2.5 m).
+
+1. **Base side of each pyramid, and whether square: Partly.** The OSM ring areas are 809 m2 (tropical and temperate) and 486 and 506 m2 (arid and feature), which would be square sides of about 28.4 m and 22 m. The mapped edges are unequal, so a square is an assumption.
+2. **Apex positions: Answered from the DSM peak inside each ring.** Tropical 53.535532, -113.477289; temperate 53.534903, -113.477293; arid 53.535211, -113.476792; feature 53.535218, -113.47777. The DSM can clip a glass apex, so accuracy is perhaps 2 m in plan.
+3. **Ground elevation ASL, berm height, glass-line sill: Partly.** Ground at the pyramid ring edges is 627.9 m (624.4 to 628.2 m); the west greenhouse ring sits on 622.05 m. DSM tops: tropical 645.43 m, temperate 645.16 m, arid 641.11 m, feature 641.23 m. Subtracting the published floor-to-apex heights (24 m and 18 m) gives implied floors of 621.4, 621.2, 623.1 and 623.2 m, which do not agree with each other or the 627.9 m ring ground, so the figures cannot be combined into a berm height. Berm and sill remain open, needs source.
+4. **Support-house height, pitch, six or nine houses: Partly.** West ring DSM 95th percentile is 5.5 m and maximum 8.3 m above its edge ground (622.05 m), so the roofs run about 5.5 to 8 m. Pitch and count are open.
+
+The review's "Do not invent" list still applies: keep the conflicting published figures separate and unaveraged, as the review set out, and do not turn a mapped plan length into a structural length. Where its "Photos" section says none are saved, check `street/` and `night/` first.

@@ -1,0 +1,15 @@
+# Open questions, merged 2026-10-14
+
+The "Ask before building" list in `CURSOR-HANDOFF.md` (another session's review, commit c5f3a92) re-checked against the data added since: LiDAR heights and measurements (`elevation/README.md`, `elevation/MEASUREMENTS.md`, `../../MEASUREMENTS.md`), the 2019 aerial, Mapillary street frames (`street/`, read in `../../STREET-READINGS.md` for ten sites) and the river gauge (`../../RIVER-LEVEL.md`). Status words: **Answered** (a value is now held), **Partly** (a value or bound is held, a gap remains), **Open, measurable** (can be done from files we hold, not done yet), **Open, needs source** (a document, photo or survey is needed), **Sim** (only William can test it).
+
+Elevations are CGVD2013 metres from the 2018 LiDAR. Deck tops are first returns (rails, traffic and catenary can add up to 1 m) and the sim's datum is not yet checked. "Rise" is deck top above the ground or water under it, not the clear height: take off the deck depth (1 to 2.5 m).
+
+The 2018 LiDAR shows the old 1932 arch structure, not the finished replacement. No Mapillary frame exists within 250 m.
+
+1. **Which option was built and whether it stands now: Open, needs source.**
+2. **Built span length: Open, needs source.** The raised run of the old structure is 57 to 70 m.
+3. **Deck elevation ASL, datum: Partly.** The old deck top is 664.36 m, and the ravine floor under it is 653.0 to 661.1 m, so the deck was 9.1 m (median) and up to 11.4 m above ground. The new deck may differ.
+4. **As-built width: Open, needs source.** The old structure reads 17 to 19 m raised width.
+5. **Girder depth: Open, needs source.**
+
+The review's "Do not invent" list still applies: keep the conflicting published figures separate and unaveraged, as the review set out, and do not turn a mapped plan length into a structural length. Where its "Photos" section says none are saved, check `street/` and `night/` first.

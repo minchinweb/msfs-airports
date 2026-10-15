@@ -1,60 +1,77 @@
 # Bridges: remaining blocking items
 
-Written 2026-10-14, after the elevation, aerial and night data landed (`DATA-SOURCES.md`, `RIVER-LEVEL.md`, `ELEVATION.md`). Every `reference/<site>/MODEL-HANDOFF.md` now opens with an "Update 2026-10-14" block holding that site's ground, river and deck heights. This file ranks what still blocks modelling, by who or what can clear it. Codes are those in `PRIORITY.md`.
+Written 2026-10-14, revised after the LiDAR measurements, the street-photo readings and the merge of the other session's review (`CURSOR-HANDOFF.md`). Per-site detail, item by item, is in `reference/<site>/OPEN-QUESTIONS.md` (21 files); this file ranks what is left by who or what can clear it. Codes are those in `PRIORITY.md`. Companion files: `DATA-SOURCES.md`, `RIVER-LEVEL.md`, `ELEVATION.md`, `MEASUREMENTS.md`, `STREET-READINGS.md`.
 
-## 1. Cleared by the new data
+## 1. Cleared by the data
 
-All 21 handoffs asked for deck ASL, water ASL, datum or terrain heights. These are answered at the level the 2018 LiDAR allows (first-return deck tops, river surface, bare earth). The High Level check matches the handoff's own figure (47.54 m against 47.55 m). Nothing more to research for: R8, R9, R10, R11, R12, R13, R14, R15, G116, G117, G119, N258, N259, N260, T133, Z125, F256, P152, B254, B255, V257 on that one question.
+- **Deck elevation ASL, water level, datum** (the number one blocker in every handoff and in the other session's review): answered at 2018 LiDAR accuracy for R8, R9, R10, R11, R12, R13, R15, G116, G117, G119, N258, N259, N260, F256 (terrain), B255, V257, and approximately for T133 and Z125 (the old structures). The High Level check matches the handoff's own figure (47.54 m against 47.55 m).
+- **Clearance and ground under the road and ravine bridges:** G116, G119, N258, N259 and N260 carry a deck top 5.4 to 8.4 m above the road below, so about 4 to 5 m clear after the deck, matching the mapped `maxheight` tags. G117 is 14.4 m (median) and up to 23.6 m above its ravine; T133 8.0 m; Z125 9.1 m (old structure).
+- **Overall deck widths** (plus or minus 1 m): N258 11.5 m, N259 13.0 m, G117 24 m, T133 18 m (matches the old 18.4 m), R8 19 m, R12 26 to 27 m. Not usable for trusses and arches (R9, R10, R11, R14, R15).
+- **High Level (R10):** spans, river-pier heights and tower-bent heights read from the 1914 plate (`R10-high-level/NOTES.md`).
+- **B255:** ground at the building edge 666.8 m, roof maximum 48.1 m above it (the published 47.7 m is probably to the tallest point). This replaces the earlier note that put the ground at 614 to 640 m.
+- **B254:** apex positions of the four pyramids, from the DSM peaks (`P152-muttart/B254-conservatory/OPEN-QUESTIONS.md`).
+- **Valley Line ramp:** William decided R14 owns it and runs it to the edge of the P152 stop. The join is the two ramp-way ends at 53.536207, -113.480002 and 53.536104, -113.4801 (`R14-tawatina/OPEN-QUESTIONS.md`).
+- **Street-level detail** for G116, G117, G119, N258, N259, N260, T133, R12, R13, R15 (railing types, barriers, lamp type, lane layout): `STREET-READINGS.md`.
 
-## 2. Answerable from the files we have, but not yet extracted
+## 2. Data that does not exist yet (not fixable by more measuring)
 
-Work, not research. Each is a measurement on the 0.2 m aerial or a DSM-minus-DTM subtraction.
+The 2018 LiDAR and the 2019 aerial predate these structures, and the 2024 LiDAR mosaic repeats the 2018 values there.
 
-| Item | Sites | How |
-| --- | --- | --- |
-| Clearance over the road, rail or ravine below | G116, G117, G119, N258, N259, N260, T133, Z125 | Deck DSM minus the DTM under the span. Deck DSM is already in each `elevation/README.md`. |
-| Deck width, outline and approach shape | all | Measure on `aerial/ortho-2019.jpg` (bounds in the `.json`). |
-| Pier and abutment positions, end points, span lengths | R8 (pier count, positions, true end points), R10 (4 river piers, 28-support layout), G116, G119, T133, R9, R12, R13, R15, N258 (pier columns), Z125 | Same. Piers show as shadows and caps in the High Level sample. |
-| Roof ridge and tower heights | B255 (blocking item 2), B254 | DSM over the roof minus ground. Marked as an estimate. B255 reads 677.0 m at the outline against ground about 614 to 640 m (the hotel sits on the slope; take grade at 100 Street from the DTM). |
-| Ramp grades and tie-in heights | R13, P152, R14, N259 | DTM profile along the road. |
-| Track and ramp terrain profile at 25 m steps | P152 (blocking item 2) | DTM sampling along the line. |
-| Plan view of the crossing (G116 item 4) | G116 | The aerial. |
+| Site | What is missing |
+| --- | --- |
+| R14 Tawatinâ | Every vertical figure: deck elevations, pylon height, pier and span layout, the finished ramp grade. **The R14 deck row in `ELEVATION.md` is not a deck.** Needs drawings, an as-built, or photos with a scale. |
+| P152 Muttart stop | Platform elevation (about 622 m, at grade, unverified), canopy plan, the storage track. |
+| Z125 Wellington | Which girder was built; the finished deck, span and width. The data shows the old arch. No Mapillary frame within 250 m. |
+| T133 Stony Plain | The new girders and the Valley Line West deck. The data shows the old bridge (which does agree with the published 18.4 m width and 6 m clearance). |
+| F256 Funicular | Heights of the finished structure (terrain is answered). |
 
-## 3. Needs the sim (only William can clear these)
+## 3. Can be measured from the files we hold, not done yet
 
 | Item | Sites |
 | --- | --- |
-| ~~Does MSFS 2024 already draw this bridge?~~ **Answered by William:** no bridge is drawn. Some show only as bridge-shaped features in the aerial texture where they cross land, so a model may need to hide or sit over that texture. The High Level was treated as a solid ridge of land joining the two banks, so R10 needs the terrain under the span lowered or cut away, or the span will sit on a ridge. | R10 (cut the ridge); the rest only the texture overlap |
-| Does the sim's terrain or water clip the piers and abutments, or the ravine cut? Test with a box at the lat/lon. | R8, R13, G116, G117, G119, N258, N260, T133, Z125 (R10 is the ridge case above) |
-| Datum check: the LiDAR is CGVD2013, the sim has its own geoid and mesh. Compare the sim's ground height at a bridge end with `elevation/README.md`. The CYXD runway gives a one-off comparison with no sim visit. | all |
-| P152 heading check (49 deg true, within 2 deg) | P152 |
-| ~~Who owns the Valley Line ramp?~~ **Decided by William:** the bridge (R14) owns it and runs it to the edge of the station (P152). R14 and P152 need the join point in lat/lon, and the DTM profile along it. | R14, P152 |
+| Pier and abutment positions and individual span lengths, from the aerial | R8 (seven spans), R9, R12, R13 (also the 1900 bay length, 53 m or 51.8 m), R15, G119 (two column piers seen), T133, N258 (column count), R10 (check the plate against the aerial) |
+| Truss and arch geometry: panel counts, truss depth, rib spacing, struts, hangers, delta piers | R11 (ribs, struts, hangers, delta piers), R13 (truss depth), R15 (truss depth, panel counts) |
+| Roof structure: turret count, ridge against turret, outline against the Bing ring | B255 |
+| McDougall Hill way node list (one OSM fetch) | N259 |
+| Separate the individual decks where several sit at the same level (raised width merges them) | G116, N260, R8 |
+| Review the street frames not yet read | R8, R9, R10, R11, R14, F256, P152, B254, B255, V257 |
 
-## 4. Needs photos, drawings or documents
-
-None of these can come from LiDAR. Cheapest source first.
-
-**Update 2026-10-14:** Mapillary street-level frames are now in `reference/<site>/street/` for every folder except Z125 (see `DATA-SOURCES.md`). They should settle the road-level items (railings, barriers, lamp posts, lane and sidewalk layout, approach shape) but not the underside, girder or truss depth, or night colour. Check them before treating those rows as open.
+## 4. Needs the sim (only William can clear these)
 
 | Item | Sites |
 | --- | --- |
-| Side and underside photo of the span, openly licensed (girder count, depth, abutment and pier form) | G116 (also deck and rail photo), G117, G119, N258, N259, N260 (B065 itself, not the 98 Avenue spans), T133, Z125, R12 (close deck and Rossdale approach), R14 (north end and finished 98 Avenue crossing), R15 (underside) |
-| Truss or girder depth, truss spacing, deck thickness | R12, R13, R15, R9, G117, T133, Z125, N259, N260 |
-| Plan tables: lane, shoulder, sidewalk and barrier widths | G116, G117, G119, N260, R12, R11, R13, R15, Z125 (post-August 2024 girder width) |
-| R10: the 1914 plate is already in `R10-high-level/photos/elevation-drawing-railway-age.png` and its labels are legible (checked 2026-10-14): piers 4 to 29, spans 129'-9" and 131'-9" north, 291'-10½" and 293'-3" and 291'-10½" main, 99'-10" then 97'-8" south spans with 49'-5" tower bents, tower 140'-0", grades 0.74% and 5.45%. The plate is drawn to scale, and the short spans between piers 9 and 4 were measured from it (about 63, 56 and 87 ft, good to 2 ft), as were the river pier and tower heights (pier about 140 ft head to footing, 98 ft above the 1906 water; towers 122 to 140 ft to the rail line); see the R10 `NOTES.md`. | R10 (answered) |
-| R14 pylon survey, pier dimensions (only 8.5 m base known) | R14 |
-| Platform width and shape, canopy size, ramp shape | P152 |
-| B254 base side, berm height, support greenhouses | B254 |
-| Roof colour from a recent daylight photo | B255 (roof), R8 (steel or grey, post-2020), R15 (paint spec; photos HDR) |
-| R9 south portal photo; R9 spiral ramps | R9 |
-| V257 aerial or high-angle view for the roof layout, and the 2026 wheelchair lift | V257 |
+| Does the sim's terrain or water clip the piers and abutments or the ravine cut? Test with a box at the lat/lon. | R8, R13, G116, G117, G119, N258, N260, T133, Z125 |
+| High Level terrain cut: the sim has it as a solid ridge (answered by William), so lower or cut the terrain under the span. | R10 |
+| Datum check: the LiDAR is CGVD2013; compare the sim's ground height at a bridge end with `elevation/README.md`. The CYXD runway gives a no-sim comparison. | all |
+| P152 heading check (49 degrees true, within 2 degrees). | P152 |
+| Texture overlap: no bridges are drawn in the sim, but some show as bridge-shaped marks in the aerial texture where they cross land. | all |
 
-## 5. Night lighting still missing
+## 5. Needs photos, drawings or documents
 
-Photos exist and are described for R10, R9, R11, R13, F256, P152, B255. **No usable night photo for R12, R14, R15, R8, G116, G117, G119, T133, Z125, N258, N259, N260, V257.** Dawson and Tawatinâ are the two most visible. The R13 frames are from 2006 and 2009, so they may not match present lighting. Colour temperatures are by eye from long exposures. A lamp specification for the City street lights would settle the road bridges in one go.
+None of these can come from LiDAR or road-level photos.
+
+| Item | Sites |
+| --- | --- |
+| Girder, slab or truss depth and the underside (road-level frames cannot see it; G119 is the only site seen from below and only roughly) | G116, G117, G119, N258, N259, N260, T133, Z125, R8, R12, R13, R15, R9 |
+| Pier height and the plan size of shafts | R9, R12, R13, R15 (R10 done) |
+| Abutments only, or piers? | N259 |
+| Plan tables: lane, shoulder, sidewalk and barrier widths as designed | G116, G117, G119, N260, R12, R11, R13, R15, Z125 |
+| R14: pylon height, as-built pier count and spans, finished ramp | R14 |
+| Which structures the Journal's two 1971 approach bridges are | R12 |
+| B126 wording (Scona or Connors) | N260 |
+| Platform width, canopy size | P152 |
+| B254: berm height, glass-line sill, support-house pitch and count | B254 |
+| Roof colour from a recent photo (copper, steel or grey, paint spec) | B255, R8, R15 |
+| R9: the University tunnel mouth, the soffit-to-walkway distance, which part is the river spans | R9 |
+| V257: freeboard and the deck line; a view from above | V257 |
+| F256: the as-built length along the rails | F256 |
+
+## 6. Night lighting still missing
+
+Photos exist and are described for R10, R9, R11, R13, F256, P152, B255. **No usable night photo for R12, R14, R15, R8, G116, G117, G119, T133, Z125, N258, N259, N260, V257.** Street-level frames are daytime, so they show the lamp fixture (curved-arm cobra-head, grey) but not the colour. The R13 night frames are from 2006 and 2009. A lamp specification for the City street lights would settle the road bridges in one go.
 
 ## Suggested order
 
-1. Extract the section 2 measurements: R10, R9, R8, R13, R12, R11, R14, R15, G116, G117 first, matching `PRIORITY.md`. Most blockers disappear at once.
-2. The datum check in section 3 (CYXD runway comparison needs no sim; the in-sim check needs William).
-3. Photos for the ravine road bridges in section 4, which have the worst coverage: G116, G117, G119, N258, N259, N260, T133, Z125.
+1. The section 3 measurements (pier positions, spans, truss geometry, roofs). Needs no one else.
+2. The section 4 datum check, then the in-sim clipping tests.
+3. Source documents for section 5, in the order of `PRIORITY.md`, starting with the structures whose heights are in no data (R14, then Z125 and T133).

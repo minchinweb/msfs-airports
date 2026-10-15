@@ -1,5 +1,7 @@
 # Cursor handoff — model from the reference briefs
 
+> **Partly superseded 2026-10-14.** This review was written from each folder alone, before the LiDAR, aerial, river-gauge, street-photo and plate-reading work. Its statement that no site has a deck elevation is no longer true. Each site's "Ask before building" list has been re-checked item by item in `reference/<site>/OPEN-QUESTIONS.md` (Answered, Partly, Open, Sim). Its "Do not invent" lists and unreconciled figures still apply. Read the per-site file first.
+
 Last updated: 2026-10-14. Package: `scenery-edmonton-bridges`. Nothing in this package has been modeled. The coded briefs named in `PRIORITY.md` have all been reviewed.
 
 Each section is one site, reviewed from that site's own `NOTES.md`, `SOURCES.md`, `geometry.json`, and `photos/` only. A number that is not in that folder was not supplied here. A photograph was not scaled. Do not start the glTF for a site until its "Ask before building" list is answered.
