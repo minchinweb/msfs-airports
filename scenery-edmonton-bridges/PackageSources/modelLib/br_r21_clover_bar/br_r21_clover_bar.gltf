@@ -1,0 +1,138 @@
+{
+ "asset": {
+  "version": "2.0",
+  "generator": "scenery-edmonton-bridges/tools/bridgelib.py",
+  "extensions": {
+   "ASOBO_normal_map_convention": {
+    "tangent_space_convention": "DirectX"
+   }
+  }
+ },
+ "extensionsUsed": [
+  "ASOBO_normal_map_convention"
+ ],
+ "scene": 0,
+ "scenes": [
+  {
+   "nodes": [
+    0
+   ]
+  }
+ ],
+ "nodes": [
+  {
+   "mesh": 0,
+   "name": "br_r21_clover_bar"
+  }
+ ],
+ "meshes": [
+  {
+   "name": "br_r21_clover_bar",
+   "primitives": [
+    {
+     "attributes": {
+      "POSITION": 0,
+      "NORMAL": 1,
+      "TEXCOORD_0": 2
+     },
+     "indices": 3,
+     "mode": 4,
+     "material": 0
+    }
+   ]
+  }
+ ],
+ "materials": [
+  {
+   "name": "bridge_palette",
+   "pbrMetallicRoughness": {
+    "baseColorTexture": {
+     "index": 0
+    },
+    "metallicFactor": 0.0,
+    "roughnessFactor": 0.9
+   }
+  }
+ ],
+ "textures": [
+  {
+   "sampler": 0,
+   "source": 0
+  }
+ ],
+ "samplers": [
+  {
+   "magFilter": 9728,
+   "minFilter": 9728
+  }
+ ],
+ "images": [
+  {
+   "uri": "bridge_palette.png"
+  }
+ ],
+ "accessors": [
+  {
+   "bufferView": 0,
+   "componentType": 5126,
+   "count": 16032,
+   "type": "VEC3",
+   "min": [
+    -157.8286112084526,
+    -6.0,
+    -77.45401173441574
+   ],
+   "max": [
+    165.96434852137662,
+    35.23577468737032,
+    86.12074479804033
+   ]
+  },
+  {
+   "bufferView": 1,
+   "componentType": 5126,
+   "count": 16032,
+   "type": "VEC3"
+  },
+  {
+   "bufferView": 2,
+   "componentType": 5126,
+   "count": 16032,
+   "type": "VEC2"
+  },
+  {
+   "bufferView": 3,
+   "componentType": 5123,
+   "count": 24072,
+   "type": "SCALAR"
+  }
+ ],
+ "bufferViews": [
+  {
+   "buffer": 0,
+   "byteOffset": 0,
+   "byteLength": 192384
+  },
+  {
+   "buffer": 0,
+   "byteOffset": 192384,
+   "byteLength": 192384
+  },
+  {
+   "buffer": 0,
+   "byteOffset": 384768,
+   "byteLength": 128256
+  },
+  {
+   "buffer": 0,
+   "byteOffset": 513024,
+   "byteLength": 48144
+  }
+ ],
+ "buffers": [
+  {
+   "uri": "br_r21_clover_bar.bin",
+   "byteLength": 561168
+  }
+ ]
+}

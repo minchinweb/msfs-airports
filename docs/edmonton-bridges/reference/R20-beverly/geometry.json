@@ -1,0 +1,237 @@
+{
+  "code": "R20",
+  "name": "Beverly Bridge",
+  "centre": [
+    53.571,
+    -113.373
+  ],
+  "crs": "EPSG:4326",
+  "coordinate_order": "[lat, lon]",
+  "geometry_source": "docs/edmonton-bridges/bridge-geometry.json",
+  "geometry_retrieved": "2026-10-14",
+  "plan_length_note": "plan_length_m is the horizontal length of that OSM way, WGS84 haversine with radius 6378137 m, rounded to one decimal. These ways match the live OpenStreetMap node counts on 2026-10-14, so the stored polylines are the complete ways. An approach plan_length_m is still not the climb to grade. No published structural length was found for this deck. The 504 m and 504.44 m figures belong to the railway and are not used here.",
+  "dropped_note": "The R20 extract stores way 61430014 tagged bridge:name Clover Bar Bridge and outline 642360969 tagged name Beverly Bridge. Both names are kept. The R21 object also stores outline 642360969; that outline is in this file and is dropped from R21. Way 61431758, the other Yellowhead carriageway, is not in this file. Way 1271013522 is a valley track and is listed under excluded.",
+  "decks": [
+    {
+      "osm_way": 61430014,
+      "part": "road_deck",
+      "which": "Yellowhead Trail NW on this object. Three lanes, one-way, motorway, ref 16, width tag 11.1. Tagged bridge:name Clover Bar Bridge. Node order is northwest to southeast. The outline in this object is named Beverly Bridge. Both names are on the map. This centreline is 321.5 m. That is not a published structural length.",
+      "plan_length_m": 321.5,
+      "tags": {
+        "bridge": "yes",
+        "bridge:name": "Clover Bar Bridge",
+        "highway": "motorway",
+        "lanes": "3",
+        "layer": "1",
+        "maxspeed": "100",
+        "name": "Yellowhead Trail NW",
+        "oneway": "yes",
+        "ref": "16",
+        "width": "11.1"
+      },
+      "nodes": [
+        [
+          53.571685,
+          -113.375267
+        ],
+        [
+          53.570196,
+          -113.371099
+        ]
+      ]
+    },
+    {
+      "osm_way": 642360969,
+      "part": "bridge_outline",
+      "which": "Named outline tagged Beverly Bridge, bridge:structure beam. Closed way. plan_length_m is the perimeter, not the bridge length. The mapped northwest end is 19.4 m across. The mapped southeast end is 19.2 m across. Those are the OpenStreetMap outline, not a published structural width. The R21 extract also stores this way; it is kept only here.",
+      "plan_length_m": 719.6,
+      "tags": {
+        "bridge": "yes",
+        "bridge:structure": "beam",
+        "layer": "1",
+        "man_made": "bridge",
+        "name": "Beverly Bridge"
+      },
+      "nodes": [
+        [
+          53.571829,
+          -113.375361
+        ],
+        [
+          53.571673,
+          -113.375492
+        ],
+        [
+          53.570106,
+          -113.371089
+        ],
+        [
+          53.57025,
+          -113.370929
+        ],
+        [
+          53.571174,
+          -113.373485
+        ],
+        [
+          53.571829,
+          -113.375361
+        ]
+      ]
+    }
+  ],
+  "approaches": [
+    {
+      "osm_way": 61431778,
+      "part": "northwest_road",
+      "which": "Yellowhead Trail NW from the northwest, onto the northwest end of way 61430014. Three lanes, one-way, 100 km/h, width tag 11.1. Node order runs toward the deck. Clipped at the download box. The far node is not a surveyed grade point.",
+      "plan_length_m": 131.1,
+      "tags": {
+        "alt_name": "Yellowhead Highway",
+        "highway": "motorway",
+        "lanes": "3",
+        "maxspeed": "100",
+        "name": "Yellowhead Trail NW",
+        "oneway": "yes",
+        "ref": "16",
+        "width": "11.1"
+      },
+      "nodes": [
+        [
+          53.572318,
+          -113.376939
+        ],
+        [
+          53.571685,
+          -113.375267
+        ]
+      ],
+      "extract_role": "approach"
+    },
+    {
+      "osm_way": 32832524,
+      "part": "southeast_road",
+      "which": "Yellowhead Trail NW leaving the southeast end of way 61430014 and continuing southeast. Three lanes, one-way, 100 km/h, width tag 11.1. Node order runs away from the deck. The far node is not a surveyed grade point.",
+      "plan_length_m": 452.7,
+      "tags": {
+        "alt_name": "Yellowhead Highway",
+        "highway": "motorway",
+        "lanes": "3",
+        "maxspeed": "100",
+        "name": "Yellowhead Trail NW",
+        "oneway": "yes",
+        "ref": "16",
+        "width": "11.1"
+      },
+      "nodes": [
+        [
+          53.570196,
+          -113.371099
+        ],
+        [
+          53.569975,
+          -113.370488
+        ],
+        [
+          53.569852,
+          -113.370119
+        ],
+        [
+          53.569761,
+          -113.369836
+        ],
+        [
+          53.569682,
+          -113.369572
+        ],
+        [
+          53.569589,
+          -113.369212
+        ],
+        [
+          53.569461,
+          -113.368645
+        ],
+        [
+          53.569381,
+          -113.368272
+        ],
+        [
+          53.5693,
+          -113.367826
+        ],
+        [
+          53.569215,
+          -113.367257
+        ],
+        [
+          53.569149,
+          -113.366593
+        ],
+        [
+          53.569092,
+          -113.365637
+        ],
+        [
+          53.569084,
+          -113.365111
+        ],
+        [
+          53.569092,
+          -113.364628
+        ]
+      ],
+      "extract_role": "approach"
+    }
+  ],
+  "excluded": [
+    {
+      "osm_way": 1271013522,
+      "reason": "Valley track, 258.9 m, at the northwest end. A trail, not the deck and not the Yellowhead climb."
+    },
+    {
+      "osm_way": 61431758,
+      "reason": "The other Yellowhead carriageway, tagged bridge:name Beverly Bridge. It belongs to the R21 object. Not this file."
+    },
+    {
+      "osm_way": 642360970,
+      "reason": "Named outline tagged Clover Bar Bridge. It belongs to the R21 object. Not this file."
+    }
+  ],
+  "dimensions": {
+    "structural_type": "City rehab of a structure it names Beverly Bridge: concrete deck and steel girders. Wikipedia: 1972 south span is a steel girder named Beverly. OSM outline 642360969: beam. OSM road 61430014 has no bridge:structure tag.",
+    "published_structural_length_m": null,
+    "osm_road_centreline_m": 321.5,
+    "osm_outline_perimeter_m": 719.6,
+    "osm_outline_nw_end_m": 19.4,
+    "osm_outline_se_end_m": 19.2,
+    "osm_width_tag_m": 11.1,
+    "osm_width_is_structural_width": false,
+    "lanes": 3,
+    "direction_inventory": "westbound",
+    "direction_naming_edmonton_and_wikipedia_article": "eastbound",
+    "posted_speed_kmh_osm_tag": 100,
+    "span_count": null,
+    "span_lengths_m": null,
+    "girder_depth_m": null,
+    "river_pier_count": null,
+    "abutment_count": null,
+    "pier_height_m": null,
+    "deck_elevation_asl_m": null,
+    "soffit_elevation_asl_m": null,
+    "clearance_above_river_m": null,
+    "navigation_clearance_m": null,
+    "deck_thickness_m": null,
+    "lane_width_m": null,
+    "shoulder_width_m": null,
+    "sidewalk_width_m": null,
+    "crossfall": null,
+    "longitudinal_grade": null,
+    "northwest_approach_gradient": null,
+    "northwest_approach_elevation_change_m": null,
+    "northwest_approach_meets_grade": null,
+    "southeast_approach_gradient": null,
+    "southeast_approach_elevation_change_m": null,
+    "southeast_approach_meets_grade": null
+  }
+}

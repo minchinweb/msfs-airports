@@ -65,5 +65,17 @@
 	<SceneryObject lat="53.53521600" lon="-113.47728600" alt="627.900" pitch="0.000000" bank="0.000000" heading="0.000000" imageComplexity="VERY_SPARSE" altitudeIsAgl="FALSE" snapToGround="FALSE" snapToNormal="FALSE">
 		<LibraryObject name="{9ED7463C-33B1-5073-AFD8-7BFA934A2EDF}" scale="1.000000"/>
 	</SceneryObject>
+	<!-- R20 Beverly Bridge (br_r20_beverly) -->
+	<SceneryObject lat="53.57094050" lon="-113.37318300" alt="610.000" pitch="0.000000" bank="0.000000" heading="0.000000" imageComplexity="VERY_SPARSE" altitudeIsAgl="FALSE" snapToGround="FALSE" snapToNormal="FALSE">
+		<LibraryObject name="{614478D3-91C8-58AC-895D-FD37A7C0AE65}" scale="1.000000"/>
+	</SceneryObject>
+	<!-- R21 Clover Bar Bridge (br_r21_clover_bar) -->
+	<SceneryObject lat="53.57205100" lon="-113.37197350" alt="610.000" pitch="0.000000" bank="0.000000" heading="0.000000" imageComplexity="VERY_SPARSE" altitudeIsAgl="FALSE" snapToGround="FALSE" snapToNormal="FALSE">
+		<LibraryObject name="{85F5D8C8-A7EE-525F-A23D-053D7BBEA530}" scale="1.000000"/>
+	</SceneryObject>
+	<!-- R22 Clover Bar Railway Bridge (br_r22_clover_bar_railway) -->
+	<SceneryObject lat="53.57307532" lon="-113.37099870" alt="610.000" pitch="0.000000" bank="0.000000" heading="0.000000" imageComplexity="VERY_SPARSE" altitudeIsAgl="FALSE" snapToGround="FALSE" snapToNormal="FALSE">
+		<LibraryObject name="{3C0AF1F2-0229-5578-B448-41CB67266398}" scale="1.000000"/>
+	</SceneryObject>
 	<!-- END bridges -->
 </FSData>

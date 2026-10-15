@@ -31,6 +31,9 @@ Written 2026-10-14. These are the first models in `scenery-edmonton-bridges` (ve
 | B255 | `br_b255_hotel_macdonald` | 53.540305, -113.489500 | 666.83 (ground) |
 | P152 | `br_p152_muttart_stop` | 53.536424, -113.479491 | 621.94 (rail top) |
 | B254 | `br_b254_muttart_conservatory` | 53.535216, -113.477286 | 627.90 (ground at the ring) |
+| R20 | `br_r20_beverly` | 53.570941, -113.373183 | 610.00 |
+| R21 | `br_r21_clover_bar` | 53.572051, -113.371974 | 610.00 |
+| R22 | `br_r22_clover_bar_railway` | 53.573075, -113.370999 | 610.00 |
 
 ## Sourced and assumed, per model
 
@@ -47,6 +50,8 @@ Written 2026-10-14. These are the first models in `scenery-edmonton-bridges` (ve
 - **F256 funicular and footbridge.** Sourced: the track way, 24.6 m drop, urban stair ways, footbridge way, spans (50 m main, 19 m lookout), timber-clad sides, one round pier, glass elevator shaft. Assumed: cabin position and size, canopy, stair width, pier and shaft heights.
 - **V257 Edmonton Riverboat.** Sourced: 51.8 x 12.0 m, outline orientation, bow west, colours. Assumed: all deck heights.
 - **N258, N259, N260.** Sourced: ways, raised runs and deck lines from the LiDAR, widths (N258 11.5 m, N259 13.0 m), parapet types. Assumed: girder depths 1.5 to 1.7 m, a centre column at N258, abutments only at N259, the N260 deck widths (several decks were merged in the LiDAR width).
+
+- **R20 Beverly, R21 Clover Bar, R22 Clover Bar Railway (Tier 2, the Bridges checkpoint, 2026-10-15).** Helpers in `tools/t2lib.py`, LiDAR profiles from `tools/lidar_pil.py` (Pillow only; `profiles.csv` did not exist for these sites). One common datum, 610.00 m, for all three (the clips give 610.14, 610.07 and 609.84). Sourced: axes and deck footprints from the OSM ways and outlines, deck and rail levels from the 2018 LiDAR (R20 22.1 to 23.0 m, R21 22.5 to 25.3 m, R22 rail top 41.5 m above the datum), three lanes each, R22 single track and length 504 m, 29 m approach piers, blue steel railing (2011 photograph). Assumed: **every pier station and shape on the two highway decks** (R20 read from the 2015 photograph, R21 copied as fractions because the far deck is hidden behind R20), girder depths 3.0 and 2.8 m, which carriageway carries which name, R22 truss depth 14.5 m, panel counts, plate-girder depths, towers. R22 river piers and trestle bents are read from the aerial. The three structures are separate (plan gap about 100 m), so there is no seam to match beyond the shared datum. Details and sim checks: `reference/R20-beverly/`, `R21-clover-bar/`, `R22-clover-bar-railway/` `HANDOFF-T2.md`.
 
 ## Left for William, and what is still missing
 

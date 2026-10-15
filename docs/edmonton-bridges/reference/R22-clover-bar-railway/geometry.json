@@ -1,0 +1,368 @@
+{
+  "code": "R22",
+  "name": "Clover Bar Railway",
+  "centre": [
+    53.573,
+    -113.372
+  ],
+  "crs": "EPSG:4326",
+  "coordinate_order": "[lat, lon]",
+  "geometry_source": "OpenStreetMap API 0.6 way/full on 2026-10-14. The R22 object in docs/edmonton-bridges/bridge-geometry.json attached a Yellowhead road way; those ways are dropped.",
+  "geometry_retrieved": "2026-10-14",
+  "plan_length_note": "plan_length_m is the horizontal length of that OSM way, WGS84 haversine with radius 6378137 m, rounded to one decimal. These ways match the live OpenStreetMap node counts on 2026-10-14, so the stored polylines are the complete ways. An approach plan_length_m is still not the climb to grade. The published lengths are 504 m (Forth Junction; Wikipedia) and 504.44 m (Structurae). The mapped rail centreline is 513.3 m. Those are different extents.",
+  "dropped_note": "The R22 extract attached way 61431758 (Yellowhead Trail NW, tagged bridge:name Beverly Bridge) and outline 642360970 (named Clover Bar Bridge, a highway footprint), plus Yellowhead approaches 61430196 and 61432008 and track 1271013522. Those are not this rail span. This file uses OSM ways 23426591 (rail centreline) and 654886208 (named railway outline) and the connecting Wainwright Subdivision ways.",
+  "decks": [
+    {
+      "osm_way": 23426591,
+      "part": "rail_deck",
+      "which": "Wainwright Subdivision on the river span. OpenStreetMap tags railway=rail, bridge=cantilever, gauge 1435, operator Canadian National Railway and VIA Rail, usage main, electrified no, maxspeed 40 mph. Node order is southeast to northwest. This centreline is 513.3 m. Forth Junction and Wikipedia state 504 m. Structurae states 504.44 m. Those are different extents.",
+      "plan_length_m": 513.3,
+      "tags": {
+        "bridge": "cantilever",
+        "electrified": "no",
+        "gauge": "1435",
+        "layer": "1",
+        "maxspeed": "40 mph",
+        "name": "Wainwright Subdivision",
+        "operator": "Canadian National Railway;VIA Rail",
+        "owner": "Canadian National Railway",
+        "railway": "rail",
+        "usage": "main"
+      },
+      "nodes": [
+        [
+          53.572198,
+          -113.367408
+        ],
+        [
+          53.573114,
+          -113.371157
+        ],
+        [
+          53.573943,
+          -113.374596
+        ]
+      ]
+    },
+    {
+      "osm_way": 654886208,
+      "part": "bridge_outline",
+      "which": "Named outline tagged Clover Bar Railway Bridge, bridge=cantilever, bridge:structure=truss, construction_year 1932. Closed way. plan_length_m is the perimeter, not the bridge length. The mapped northwest end is 7.9 m across. The mapped southeast end is 7.1 m across. Those are the OpenStreetMap outline, not a published structural width. The construction_year tag is 1932. Published completion is 1908.",
+      "plan_length_m": 1040.5,
+      "tags": {
+        "bridge": "cantilever",
+        "bridge:structure": "truss",
+        "construction_year": "1932",
+        "layer": "1",
+        "man_made": "bridge",
+        "name": "Clover Bar Railway Bridge",
+        "wikipedia": "en:Clover Bar Railway Bridge"
+      },
+      "nodes": [
+        [
+          53.573978,
+          -113.374544
+        ],
+        [
+          53.573917,
+          -113.374604
+        ],
+        [
+          53.573069,
+          -113.370974
+        ],
+        [
+          53.572169,
+          -113.36741
+        ],
+        [
+          53.572231,
+          -113.367384
+        ],
+        [
+          53.573978,
+          -113.374544
+        ]
+      ]
+    }
+  ],
+  "approaches": [
+    {
+      "osm_way": 23426590,
+      "part": "northwest_rail",
+      "which": "Wainwright Subdivision leaving the northwest end of way 23426591. Not tagged bridge. Node order runs away from the span, northwest. The far node is not a surveyed grade point.",
+      "plan_length_m": 562.8,
+      "tags": {
+        "electrified": "no",
+        "gauge": "1435",
+        "maxspeed": "40 mph",
+        "name": "Wainwright Subdivision",
+        "operator": "Canadian National Railway;VIA Rail",
+        "owner": "Canadian National Railway",
+        "railway": "rail",
+        "usage": "main"
+      },
+      "nodes": [
+        [
+          53.573943,
+          -113.374596
+        ],
+        [
+          53.575857,
+          -113.382477
+        ]
+      ],
+      "extract_role": "not_in_extract"
+    },
+    {
+      "osm_way": 1308613066,
+      "part": "southeast_rail",
+      "which": "Wainwright Subdivision from the east onto the southeast end of way 23426591. Not tagged bridge. Node order runs toward the span. The far node is not a surveyed grade point. This way is long; it is not the climb to grade.",
+      "plan_length_m": 1168.7,
+      "tags": {
+        "electrified": "no",
+        "gauge": "1435",
+        "maxspeed": "40 mph",
+        "name": "Wainwright Subdivision",
+        "operator": "Canadian National Railway;VIA Rail",
+        "owner": "Canadian National Railway",
+        "railway": "rail",
+        "usage": "main"
+      },
+      "nodes": [
+        [
+          53.57485,
+          -113.351699
+        ],
+        [
+          53.574191,
+          -113.353161
+        ],
+        [
+          53.574149,
+          -113.353257
+        ],
+        [
+          53.573688,
+          -113.354279
+        ],
+        [
+          53.573436,
+          -113.354838
+        ],
+        [
+          53.573242,
+          -113.35527
+        ],
+        [
+          53.572975,
+          -113.35587
+        ],
+        [
+          53.572635,
+          -113.356635
+        ],
+        [
+          53.572463,
+          -113.357022
+        ],
+        [
+          53.572341,
+          -113.357306
+        ],
+        [
+          53.572218,
+          -113.357615
+        ],
+        [
+          53.572116,
+          -113.357888
+        ],
+        [
+          53.571997,
+          -113.358241
+        ],
+        [
+          53.571898,
+          -113.358564
+        ],
+        [
+          53.571808,
+          -113.358895
+        ],
+        [
+          53.571718,
+          -113.359275
+        ],
+        [
+          53.571646,
+          -113.359619
+        ],
+        [
+          53.571591,
+          -113.359917
+        ],
+        [
+          53.571557,
+          -113.360144
+        ],
+        [
+          53.571509,
+          -113.360498
+        ],
+        [
+          53.571469,
+          -113.360818
+        ],
+        [
+          53.571437,
+          -113.361181
+        ],
+        [
+          53.571413,
+          -113.361531
+        ],
+        [
+          53.571402,
+          -113.361782
+        ],
+        [
+          53.571395,
+          -113.362014
+        ],
+        [
+          53.571389,
+          -113.362384
+        ],
+        [
+          53.571394,
+          -113.362716
+        ],
+        [
+          53.571403,
+          -113.362999
+        ],
+        [
+          53.571421,
+          -113.36333
+        ],
+        [
+          53.571449,
+          -113.363675
+        ],
+        [
+          53.57148,
+          -113.363974
+        ],
+        [
+          53.571516,
+          -113.364293
+        ],
+        [
+          53.571561,
+          -113.364584
+        ],
+        [
+          53.571611,
+          -113.364877
+        ],
+        [
+          53.571665,
+          -113.365156
+        ],
+        [
+          53.571735,
+          -113.365485
+        ],
+        [
+          53.571816,
+          -113.365838
+        ],
+        [
+          53.571914,
+          -113.366245
+        ],
+        [
+          53.572115,
+          -113.36707
+        ],
+        [
+          53.572128,
+          -113.36712
+        ],
+        [
+          53.572198,
+          -113.367408
+        ]
+      ],
+      "extract_role": "not_in_extract"
+    }
+  ],
+  "excluded": [
+    {
+      "osm_way": 61431758,
+      "reason": "Yellowhead Trail NW, tagged bridge:name Beverly Bridge. A road way the extract attached to R22. It belongs to R21. Not this rail span."
+    },
+    {
+      "osm_way": 642360970,
+      "reason": "Named outline tagged Clover Bar Bridge, a highway footprint. The extract attached it to R22. It belongs to R21. Not this rail span."
+    },
+    {
+      "osm_way": 61430196,
+      "reason": "Yellowhead approach attached by the extract. Not this rail span."
+    },
+    {
+      "osm_way": 61432008,
+      "reason": "Yellowhead approach attached by the extract. Not this rail span."
+    },
+    {
+      "osm_way": 1271013522,
+      "reason": "Valley track attached by the extract. Not this rail span."
+    },
+    {
+      "osm_way": 37841289,
+      "reason": "A different CN railway east of the southeast end, not tagged Wainwright Subdivision. Not this span."
+    }
+  ],
+  "dimensions": {
+    "structural_type": "Structurae: steel deck truss. Forth Junction: iron truss with concrete piers and trestle towers. OSM outline: truss, cantilever. OSM rail way: cantilever. Wikipedia: iron and concrete truss.",
+    "length_structurae_m": 504.44,
+    "length_forth_junction_m": 504,
+    "length_forth_junction_ft": 1655,
+    "length_wikipedia_m": 504,
+    "length_wikipedia_ft": 1654,
+    "osm_rail_centreline_m": 513.3,
+    "height_structurae_m": 42.06,
+    "height_forth_junction_m": 42,
+    "height_forth_junction_ft": 138,
+    "height_wikipedia_m": 42,
+    "height_wikipedia_ft": 138,
+    "height_datum": "Structurae: above valley floor or water. Forth Junction and Wikipedia do not name a datum.",
+    "pier_height_bulletin_1906_ft": 95,
+    "opened_year_inventory": 1908,
+    "completed_bulletin_date": "1908-12-26",
+    "naming_edmonton_railway_year": 1907,
+    "osm_construction_year_tag": 1932,
+    "osm_outline_nw_end_m": 7.9,
+    "osm_outline_se_end_m": 7.1,
+    "osm_outline_perimeter_m": 1040.5,
+    "gauge_mm_osm_tag": 1435,
+    "tracks": null,
+    "span_count": null,
+    "span_lengths_m": null,
+    "truss_depth_m": null,
+    "river_pier_count": null,
+    "abutment_count": null,
+    "deck_elevation_asl_m": null,
+    "soffit_elevation_asl_m": null,
+    "clearance_above_river_m": null,
+    "navigation_clearance_m": null,
+    "northwest_approach_gradient": null,
+    "northwest_approach_elevation_change_m": null,
+    "northwest_approach_meets_grade": null,
+    "southeast_approach_gradient": null,
+    "southeast_approach_elevation_change_m": null,
+    "southeast_approach_meets_grade": null,
+    "posted_speed_osm_tag": "40 mph"
+  }
+}

@@ -1,0 +1,138 @@
+{
+ "asset": {
+  "version": "2.0",
+  "generator": "scenery-edmonton-bridges/tools/bridgelib.py",
+  "extensions": {
+   "ASOBO_normal_map_convention": {
+    "tangent_space_convention": "DirectX"
+   }
+  }
+ },
+ "extensionsUsed": [
+  "ASOBO_normal_map_convention"
+ ],
+ "scene": 0,
+ "scenes": [
+  {
+   "nodes": [
+    0
+   ]
+  }
+ ],
+ "nodes": [
+  {
+   "mesh": 0,
+   "name": "br_r22_clover_bar_railway"
+  }
+ ],
+ "meshes": [
+  {
+   "name": "br_r22_clover_bar_railway",
+   "primitives": [
+    {
+     "attributes": {
+      "POSITION": 0,
+      "NORMAL": 1,
+      "TEXCOORD_0": 2
+     },
+     "indices": 3,
+     "mode": 4,
+     "material": 0
+    }
+   ]
+  }
+ ],
+ "materials": [
+  {
+   "name": "bridge_palette",
+   "pbrMetallicRoughness": {
+    "baseColorTexture": {
+     "index": 0
+    },
+    "metallicFactor": 0.0,
+    "roughnessFactor": 0.9
+   }
+  }
+ ],
+ "textures": [
+  {
+   "sampler": 0,
+   "source": 0
+  }
+ ],
+ "samplers": [
+  {
+   "magFilter": 9728,
+   "minFilter": 9728
+  }
+ ],
+ "images": [
+  {
+   "uri": "bridge_palette.png"
+  }
+ ],
+ "accessors": [
+  {
+   "bufferView": 0,
+   "componentType": 5126,
+   "count": 35544,
+   "type": "VEC3",
+   "min": [
+    -238.1218249258523,
+    -6.0,
+    -100.51770569494379
+   ],
+   "max": [
+    237.8000223168968,
+    42.14999999999998,
+    99.15578074383335
+   ]
+  },
+  {
+   "bufferView": 1,
+   "componentType": 5126,
+   "count": 35544,
+   "type": "VEC3"
+  },
+  {
+   "bufferView": 2,
+   "componentType": 5126,
+   "count": 35544,
+   "type": "VEC2"
+  },
+  {
+   "bufferView": 3,
+   "componentType": 5123,
+   "count": 53340,
+   "type": "SCALAR"
+  }
+ ],
+ "bufferViews": [
+  {
+   "buffer": 0,
+   "byteOffset": 0,
+   "byteLength": 426528
+  },
+  {
+   "buffer": 0,
+   "byteOffset": 426528,
+   "byteLength": 426528
+  },
+  {
+   "buffer": 0,
+   "byteOffset": 853056,
+   "byteLength": 284352
+  },
+  {
+   "buffer": 0,
+   "byteOffset": 1137408,
+   "byteLength": 106680
+  }
+ ],
+ "buffers": [
+  {
+   "uri": "br_r22_clover_bar_railway.bin",
+   "byteLength": 1244088
+  }
+ ]
+}

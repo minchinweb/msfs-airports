@@ -70,7 +70,7 @@ One scene. Runway 34 looks straight down this valley. Runway 30 looks up the eas
 
 The first four boxes are named fixes on the Edmonton VFR terminal chart. Then the open landmarks, then the two structures still rising. Each is custom, except where the line says the loops can share a cloverleaf model.
 
-- [ ] **R20 Beverly**, **R21 Clover Bar**, and **R22 Clover Bar Railway**, one task. 53.571, -113.373 / 53.572, -113.372 / 53.573, -113.372. Look 4, Where 5. This crossing is the VFR checkpoint **Bridges** (VCBRG, N53° 34.30′ W113° 22.30′). Three decks. Do all three. It is not on a runway centerline.
+- [x] **R20 Beverly**, **R21 Clover Bar**, and **R22 Clover Bar Railway**, one task. 53.571, -113.373 / 53.572, -113.372 / 53.573, -113.372. Look 4, Where 5. This crossing is the VFR checkpoint **Bridges** (VCBRG, N53° 34.30′ W113° 22.30′). Three decks. Do all three. It is not on a runway centerline.
 
 - [ ] **R6 Quesnell**. 53.507, -113.567. Look 4, Where 5. The VFR checkpoint **Quesnell Bridge** (VCQSN, N53° 30.25′ W113° 34.00′). Whitemud Drive, eight lanes. About 3.4 km off the runway 34 long final at 6.6 km. Wide deck, not a truss. With it, place **W85 Fox Drive (Campbell Bridge)**, 53.5032, -113.5610, the creek span beside it. W85 was left off the freeway list.
 

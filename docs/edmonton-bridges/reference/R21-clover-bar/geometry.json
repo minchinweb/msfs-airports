@@ -1,0 +1,224 @@
+{
+  "code": "R21",
+  "name": "Clover Bar Bridge",
+  "centre": [
+    53.572,
+    -113.372
+  ],
+  "crs": "EPSG:4326",
+  "coordinate_order": "[lat, lon]",
+  "geometry_source": "docs/edmonton-bridges/bridge-geometry.json",
+  "geometry_retrieved": "2026-10-14",
+  "plan_length_note": "plan_length_m is the horizontal length of that OSM way, WGS84 haversine with radius 6378137 m, rounded to one decimal. These ways match the live OpenStreetMap node counts on 2026-10-14, so the stored polylines are the complete ways. An approach plan_length_m is still not the climb to grade. No published structural length was found for this deck. The 504 m and 504.44 m figures belong to the railway and are not used here. The 321.5 m centreline in R20 is a different way and is not copied here.",
+  "dropped_note": "The R21 extract stores way 61431758 tagged bridge:name Beverly Bridge, outline 642360970 tagged name Clover Bar Bridge, and also outline 642360969 tagged name Beverly Bridge. Outline 642360969 is the R20 footprint and is dropped here; it is in reference/R20-beverly/geometry.json. Ways 32832524 and 61431778 are the R20 Yellowhead carriageway approaches; the extract called them cross_road. They are dropped. Way 1271013522 is a valley track and is listed under excluded.",
+  "decks": [
+    {
+      "osm_way": 61431758,
+      "part": "road_deck",
+      "which": "Yellowhead Trail NW on this object. Three lanes, one-way, motorway, ref 16. Tagged bridge:name Beverly Bridge. Node order is southeast to northwest. The outline in this object is named Clover Bar Bridge. Both names are on the map. This centreline is 355.1 m. That is not a published structural length.",
+      "plan_length_m": 355.1,
+      "tags": {
+        "bridge": "yes",
+        "bridge:name": "Beverly Bridge",
+        "highway": "motorway",
+        "lanes": "3",
+        "layer": "1",
+        "maxspeed": "100",
+        "name": "Yellowhead Trail NW",
+        "oneway": "yes",
+        "ref": "16"
+      },
+      "nodes": [
+        [
+          53.571378,
+          -113.369538
+        ],
+        [
+          53.572724,
+          -113.374409
+        ]
+      ]
+    },
+    {
+      "osm_way": 642360970,
+      "part": "bridge_outline",
+      "which": "Named outline tagged Clover Bar Bridge, bridge:structure beam. Closed way. plan_length_m is the perimeter, not the bridge length. The mapped northwest end is 17.2 m across. The mapped southeast end is 17.1 m across. Those are the OpenStreetMap outline, not a published structural width.",
+      "plan_length_m": 723.6,
+      "tags": {
+        "bridge": "yes",
+        "bridge:structure": "beam",
+        "layer": "1",
+        "man_made": "bridge",
+        "name": "Clover Bar Bridge"
+      },
+      "nodes": [
+        [
+          53.572815,
+          -113.37435
+        ],
+        [
+          53.572675,
+          -113.374461
+        ],
+        [
+          53.57137,
+          -113.369737
+        ],
+        [
+          53.571507,
+          -113.36962
+        ],
+        [
+          53.572815,
+          -113.37435
+        ]
+      ]
+    }
+  ],
+  "approaches": [
+    {
+      "osm_way": 61432008,
+      "part": "northwest_road",
+      "which": "Yellowhead Trail NW leaving the northwest end of way 61431758 and continuing northwest. Three lanes, one-way, 100 km/h. Node order runs away from the deck. The far node is not a surveyed grade point.",
+      "plan_length_m": 150.6,
+      "tags": {
+        "alt_name": "Yellowhead Highway",
+        "highway": "motorway",
+        "lanes": "3",
+        "maxspeed": "100",
+        "name": "Yellowhead Trail NW",
+        "oneway": "yes",
+        "ref": "16"
+      },
+      "nodes": [
+        [
+          53.572724,
+          -113.374409
+        ],
+        [
+          53.572863,
+          -113.374914
+        ],
+        [
+          53.573296,
+          -113.376474
+        ]
+      ],
+      "extract_role": "approach"
+    },
+    {
+      "osm_way": 61430196,
+      "part": "southeast_road",
+      "which": "Yellowhead Trail NW from the southeast, onto the southeast end of way 61431758. Three lanes, one-way, 100 km/h. Node order runs toward the deck. The far node is not a surveyed grade point.",
+      "plan_length_m": 401.5,
+      "tags": {
+        "alt_name": "Yellowhead Highway",
+        "highway": "motorway",
+        "lanes": "3",
+        "maxspeed": "100",
+        "name": "Yellowhead Trail NW",
+        "oneway": "yes",
+        "ref": "16"
+      },
+      "nodes": [
+        [
+          53.57044,
+          -113.363695
+        ],
+        [
+          53.570474,
+          -113.364114
+        ],
+        [
+          53.570588,
+          -113.365261
+        ],
+        [
+          53.570658,
+          -113.365848
+        ],
+        [
+          53.570743,
+          -113.366438
+        ],
+        [
+          53.570822,
+          -113.366927
+        ],
+        [
+          53.570952,
+          -113.367651
+        ],
+        [
+          53.571146,
+          -113.368562
+        ],
+        [
+          53.571378,
+          -113.369538
+        ]
+      ],
+      "extract_role": "approach"
+    }
+  ],
+  "excluded": [
+    {
+      "osm_way": 642360969,
+      "reason": "Named outline tagged Beverly Bridge. It is the R20 footprint. Kept in reference/R20-beverly/geometry.json."
+    },
+    {
+      "osm_way": 61430014,
+      "reason": "The other Yellowhead carriageway, tagged bridge:name Clover Bar Bridge. It belongs to the R20 object. Not this file."
+    },
+    {
+      "osm_way": 32832524,
+      "reason": "R20 southeast Yellowhead approach. Extract role cross_road. Not this climb."
+    },
+    {
+      "osm_way": 61431778,
+      "reason": "R20 northwest Yellowhead approach. Extract role cross_road. Not this climb."
+    },
+    {
+      "osm_way": 1271013522,
+      "reason": "Valley track, 258.9 m, at the northwest end. A trail, not the deck and not the Yellowhead climb."
+    }
+  ],
+  "dimensions": {
+    "structural_type": "Wikipedia: original 1953 Clover Bar is a truss. OSM outline 642360970: beam. Truck News 2001: construction of a three-lane Clover Bar Bridge for westbound traffic. The 2011 highway-deck photograph next to the railway shows an asphalt deck and a railing, not a through-truss portal.",
+    "opened_year_wikipedia": 1953,
+    "completion_year_structurae": 1952,
+    "constructed_years_loc_eia": "1952/3",
+    "published_structural_length_m": null,
+    "osm_road_centreline_m": 355.1,
+    "osm_outline_perimeter_m": 723.6,
+    "osm_outline_nw_end_m": 17.2,
+    "osm_outline_se_end_m": 17.1,
+    "osm_width_tag_m": null,
+    "lanes": 3,
+    "direction_inventory": "eastbound",
+    "direction_naming_edmonton_and_wikipedia_article": "westbound",
+    "posted_speed_kmh_osm_tag": 100,
+    "span_count": null,
+    "span_lengths_m": null,
+    "truss_or_girder_depth_m": null,
+    "river_pier_count": null,
+    "abutment_count": null,
+    "pier_height_m": null,
+    "deck_elevation_asl_m": null,
+    "soffit_elevation_asl_m": null,
+    "clearance_above_river_m": null,
+    "navigation_clearance_m": null,
+    "deck_thickness_m": null,
+    "lane_width_m": null,
+    "shoulder_width_m": null,
+    "sidewalk_width_m": null,
+    "crossfall": null,
+    "longitudinal_grade": null,
+    "northwest_approach_gradient": null,
+    "northwest_approach_elevation_change_m": null,
+    "northwest_approach_meets_grade": null,
+    "southeast_approach_gradient": null,
+    "southeast_approach_elevation_change_m": null,
+    "southeast_approach_meets_grade": null
+  }
+}
