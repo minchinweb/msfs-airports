@@ -24,11 +24,11 @@ Work, not research. Each is a measurement on the 0.2 m aerial or a DSM-minus-DTM
 
 | Item | Sites |
 | --- | --- |
-| Does MSFS 2024 already draw this bridge, hotel or track (photogrammetry or autogen)? Avoid a duplicate. | R8, R10, R13, G116, N260, P152, R14, B255, Z125, T133 |
-| Does the sim's terrain or water clip the piers and abutments, or the ravine cut? Test with a box at the lat/lon. | R8, R10, R13, G116, G117, G119, N258, N260, T133, Z125 |
+| ~~Does MSFS 2024 already draw this bridge?~~ **Answered by William:** no bridge is drawn. Some show only as bridge-shaped features in the aerial texture where they cross land, so a model may need to hide or sit over that texture. The High Level was treated as a solid ridge of land joining the two banks, so R10 needs the terrain under the span lowered or cut away, or the span will sit on a ridge. | R10 (cut the ridge); the rest only the texture overlap |
+| Does the sim's terrain or water clip the piers and abutments, or the ravine cut? Test with a box at the lat/lon. | R8, R13, G116, G117, G119, N258, N260, T133, Z125 (R10 is the ridge case above) |
 | Datum check: the LiDAR is CGVD2013, the sim has its own geoid and mesh. Compare the sim's ground height at a bridge end with `elevation/README.md`. The CYXD runway gives a one-off comparison with no sim visit. | all |
 | P152 heading check (49 deg true, within 2 deg) | P152 |
-| Who owns the Valley Line ramp, fill and retaining walls, P152 or R14 (join point in lat/lon). A decision, not a lookup. | P152, R14 |
+| ~~Who owns the Valley Line ramp?~~ **Decided by William:** the bridge (R14) owns it and runs it to the edge of the station (P152). R14 and P152 need the join point in lat/lon, and the DTM profile along it. | R14, P152 |
 
 ## 4. Needs photos, drawings or documents
 
@@ -39,7 +39,7 @@ None of these can come from LiDAR. Cheapest source first.
 | Side and underside photo of the span, openly licensed (girder count, depth, abutment and pier form) | G116 (also deck and rail photo), G117, G119, N258, N259, N260 (B065 itself, not the 98 Avenue spans), T133, Z125, R12 (close deck and Rossdale approach), R14 (north end and finished 98 Avenue crossing), R15 (underside) |
 | Truss or girder depth, truss spacing, deck thickness | R12, R13, R15, R9, G117, T133, Z125, N259, N260 |
 | Plan tables: lane, shoulder, sidewalk and barrier widths | G116, G117, G119, N260, R12, R11, R13, R15, Z125 (post-August 2024 girder width) |
-| R10: full-resolution 1914 plate or its labels (10 unitemised spans, tower heights, pier numbering). HathiTrust seq. 1096. | R10 |
+| R10: the 1914 plate is already in `R10-high-level/photos/elevation-drawing-railway-age.png` and its labels are legible (checked 2026-10-14): piers 4 to 29, spans 129'-9" and 131'-9" north, 291'-10½" and 293'-3" and 291'-10½" main, 99'-10" then 97'-8" south spans with 49'-5" tower bents, tower 140'-0", grades 0.74% and 5.45%. Not settled: the short spans between piers 9 and 4 near Soullier Avenue. A sharper scan would only help there. | R10 (mostly answered) |
 | R14 pylon survey, pier dimensions (only 8.5 m base known) | R14 |
 | Platform width and shape, canopy size, ramp shape | P152 |
 | B254 base side, berm height, support greenhouses | B254 |
