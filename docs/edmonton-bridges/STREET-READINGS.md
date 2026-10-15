@@ -1,6 +1,6 @@
 # What the street-level photos show
 
-Written 2026-10-14. I looked at every frame in `reference/<site>/street/` for G116, G117, G119, N258, N259, N260, T133, R12, R13 and R15 (the sites whose handoffs ask for railing, barrier, lamp and lane detail). Frames are numbered in file-name order within each site (`ls` order), which is the order of the contact sheets I read. The other sites' frames (R8, R9, R10, R11, R14, F256, P152, B254, B255, V257) were not reviewed.
+Written 2026-10-14. I looked at every frame in `reference/<site>/street/` for G116, G117, G119, N258, N259, N260, T133, R12, R13 and R15 (the sites whose handoffs ask for railing, barrier, lamp and lane detail). Frames are numbered in file-name order within each site (`ls` order), which is the order of the contact sheets I read. The other sites' frames are in the second part at the end. Mapillary matches frames by distance, so several sites share frames, and some frames filed under one site show a neighbour: the V257 and B255 folders hold frames of the Low Level truss, the R9 folder holds the High Level interior, and the R8 folder repeats the G116 ramp frames.
 
 **Limits.** These are 2018 to 2024 dashcam frames, daytime, from the road, mostly 20 to 80 m from the bridge, and many show the approaches rather than the deck. Nothing here gives a dimension. Where a size is stated it is an estimate against a car or a lane (a lane is about 3.5 m, a car about 1.8 m wide), good to perhaps 30 percent. They cannot show lamp colour: a daytime frame does not say sodium from LED. G116 was being rehabilitated in 2018, so its 2018 frames show work zones.
 
@@ -71,3 +71,39 @@ Frame: `1048127546441327` (1), 2024.
 - **Barriers and railings**: two types recur, a plain grey concrete jersey barrier (ramps, medians) and a tan concrete post-and-rail parapet (G117, T133, R12 and N259 variants). Model those rather than an invented rail.
 - **Lamps**: cobra-head, curved arm, grey. Colour is not settled.
 - **Still open**: girder depth and underside on all of these (only G119 is visible from below, and only roughly), N258's pier size, the T133 LRT deck, and anything about R13 or R15 spans themselves.
+
+# Second part: the remaining sites
+
+Same method and limits as above. Frames numbered in file-name order within each folder.
+
+## R13 Low Level (frames filed under V257: `1176811929436733`, `1236379403470396`, `225166029375747`, `291452116026762`, `851299475762691`; also B255 frames 2 and 4)
+These are the best deck views of the Low Level. On the 1900 truss deck (two northbound lanes):
+- **Two truss colours.** One truss line is weathered rust-brown (riveted lattice members, large gusset plates), the second line seen at the left of every frame is pale sea-green. Which span each belongs to is not stated by the frames.
+- **Deck edge:** a low concrete curb or barrier about 0.7 to 0.8 m high with a **steel W-beam rail on top** on both sides; no sidewalk inside the trusses. The east sidewalk lies outside the truss behind a **pale green diamond-lattice railing** about 1.2 m high.
+- A large pale green utility pipe runs outside the truss at deck level on the left.
+- Portal bracing is a lattice of diagonals and struts overhead; the lane is about 3.3 m against a car; the deck is two lanes plus the curbs.
+- No lamps on the deck in these frames.
+
+## F256 Funicular (frames filed under F256 repeat N258 frames; the footbridge shows in the B255 folder: frames 1 and 3)
+The Grierson-side footbridge is a **timber-slat-clad box** (vertical brown slats along the side) on a **round concrete pier**, with a railing and a fence along the deck edge; it crosses the road above the approach. This is the cladding to model, not the glass the funicular itself uses.
+
+## R10 High Level and R9 (frames filed under R9 and R10)
+- Frame `2279989952399643` (in both folders) is inside the lower deck: a single wide lane each way, narrow sidewalks both sides inside the trusses, **dark brown-grey steel**, riveted tower legs and X-bracing, cables strung along the walkway, safety fencing on top. This is the High Level lower road, not the Menzies bridge.
+- Frames `1128630230939188`, `1219128208519073`, `332135808323723`, `498251264945678`, `956626091750705`, `486176959100329` show the north and south approaches: a **red-and-black steel railing** with **anti-climb wire mesh fencing** above it, a concrete barrier with a brown steel rail on the older approach (frame 1 of R10), and plain light poles with square black arms near the bridge.
+- Two frames in these folders are sunsets over the river, no structure.
+- No frame shows the Menzies box deck.
+
+## R11 Walterdale (4 frames)
+- Frame 2 (from the river path, side-on) and frames 3 and 4 (on the deck) are good views. The **white box ribs** are inclined toward each other, meeting at the crown with **five to seven cross struts** visible as the ribs rise (frame 3 shows about six at different heights, the wider ones lower down); the hangers are thin white cables that fan slightly; the deck edge is a **concrete barrier about 0.9 to 1 m high with a steel and glass railing** on top; the soffit is a thin concrete box girder; the east path hangs separately below the deck. Lamps are **slender, curved, single-arm poles** outside the barrier.
+- Frame 1 is the 105 Street approach: wide signalled intersection, tall tapered poles.
+
+## R14 Tawatina and P152 (frames shared: `1965015420835933`)
+- Frame `1965015420835933` shows the **finished at-grade Valley Line crossing**: tall grey tubular catenary poles with cantilever arms and double contact wire, a signalled crossing, tracks in a bed beside the road, and a **sloped concrete retaining wall** behind the track on the right, so the track runs in a shallow cut beside the road near the stop.
+- Frames `127680272668372` and `787870432099132` (R14) show the pre-construction view from 98 Avenue: a **dark steel pedestrian truss deck crossing the road** on **concrete V-shaped pier heads** (a pair of splayed concrete legs), with fences and signs. This is the old structure at the south end, not the finished Valley Line guideway; whether the V piers belong to the new elevated guideway is not known.
+- The remaining frames are the cross road, lamps and cranes: construction-era (cranes visible in `303387821227110`, `315301076772769`).
+
+## R8 Groat
+All five frames are 2018 work-zone views of the Mayfair and Glenora ramps (two are the same frames as G116). They show orange barrels, temporary concrete barriers, twin-arm lamps and a concrete median barrier. None shows the river span or the 2020 steel.
+
+## B255, V257, B254
+No frame shows the hotel, the boat or the pyramids; the frames filed there are the neighbouring trusses and the timber footbridge covered above. Nothing was added for these three.

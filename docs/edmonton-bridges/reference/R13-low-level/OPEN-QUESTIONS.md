@@ -9,6 +9,6 @@ Elevations are CGVD2013 metres from the 2018 LiDAR. Deck tops are first returns 
 3. **Pier height and a pier count for the 1949 span: Open, needs source.** The deck is 17.2 m above the river; the pier is that less the truss and deck depth.
 4. **Southbound span lengths one by one: Open, needs source.** The raised structure measures 209.7 m (west deck) and 211.0 m (east deck), against the mapped 212.6 m and 213.9 m and the published 211.7 m and 213.1 m.
 5. **Which 1900 bay length (53 m or 51.8 m): Answered, 53 m.** Pier cutwater noses show on the west edge at chainage 52.4, 105.3 and 158.4 m on the east deck way (31882107, from its south-east node), 53 m apart, with the truss ends at about 0 and 212 m: four equal spans of 53 m (212 m), and three piers for the 1900 span. See `AERIAL-READINGS.md`. Truss depth and panel counts are still not measured.
-6. The Mapillary frames show only approaches and ramps; they do not date the lighting.
+6. **Deck frames exist** (filed under V257, read in `STREET-READINGS.md`): two truss colours (rust-brown and pale sea-green), a low concrete curb with a steel W-beam rail on both sides, a pale green lattice fence on the east sidewalk, no lamps on the deck. They do not date the lighting.
 
 The review's "Do not invent" list still applies: keep the conflicting published figures separate and unaveraged, as the review set out, and do not turn a mapped plan length into a structural length. Where its "Photos" section says none are saved, check `street/` and `night/` first.

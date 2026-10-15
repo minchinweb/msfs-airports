@@ -27,14 +27,13 @@ The 2018 LiDAR and the 2019 aerial predate these structures, and the 2024 LiDAR 
 
 ## 3. Can be measured from the files we hold, not done yet
 
-Done 2026-10-14 (see `AERIAL-READINGS.md`): pier stations for R8, R13 and R15, hanger count and joint stations for R11, B255 roof peaks, the N259 McDougall Hill way.
+Done 2026-10-14 (see `AERIAL-READINGS.md`; all street frames are now read in `STREET-READINGS.md`): pier stations for R8, R13 and R15, hanger count and joint stations for R11, B255 roof peaks, the N259 McDougall Hill way.
 
 | Item | Sites |
 | --- | --- |
 | Pier and abutment positions from the aerial: only where the pier or its cap shows (a solid girder or box deck hides it) | R10 (check the plate), G119 (two columns seen from the road), T133 and N258 (column count; likely hidden) |
 | Truss depth and panel counts (the orthophoto is rectified to the ground, so tall features are displaced: use the DSM or photos) | R13, R15 |
 | Separate the individual decks where several sit at the same level (raised width merges them) | G116, N260, R8 |
-| Review the street frames not yet read | see below |
 
 ## 4. Needs the sim (only William can clear these)
 
