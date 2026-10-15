@@ -1,0 +1,1637 @@
+{
+  "code": "N260",
+  "name": "Scona Road Bridge",
+  "name_note": "City inventory: Scona Road Bridge (B065), year built 1957. City bridge-renewal update: Scona Road Bridge over Connors Road. No R code is assigned. The ask said Scona Drive and Conner's Road. Those spellings were not the City name. OpenStreetMap names the ways Scona Road NW and Connors Road NW.",
+  "centre": [
+    53.533941,
+    -113.483610
+  ],
+  "centre_note": "Midpoint of the two nodes of way 22959547, read from OpenStreetMap on 2026-10-14. The unrounded midpoint is 53.53394115, -113.4836101. Given here to six decimal places.",
+  "crs": "EPSG:4326",
+  "coordinate_order": "[lat, lon]",
+  "geometry_source": "OpenStreetMap Overpass API, 2026-10-14. Not in docs/edmonton-bridges/bridge-geometry.json.",
+  "geometry_retrieved": "2026-10-14",
+  "plan_length_note": "plan_length_m is the horizontal length of that way's nodes, WGS84 haversine with radius 6378137 m, rounded to one decimal. These ways are not in bridge-geometry.json. Nodes were read from the OpenStreetMap Overpass API on 2026-10-14. An approach or ramp plan_length_m is not the climb to grade. No elevations are stored. The 50.4 m figure is the mapped centreline of way 22959547. It is not a published structure length.",
+  "dropped_note": "The Low Level truss decks, ways 31882107 and 22916473, stay in the R13 geometry. The James MacDonald river decks, ways 25455305 and 25455308, stay in the R12 geometry. So do the Cloverdale approach ways 926792878, 106711215, 926792877, and 926792876, and the one-lane ramp 106711220 whose destination tag is South Scona Road. The three one-lane links at the Low Level south end, ways 106711192, 106711212, and 1223720740, stay in the R13 geometry. Way 31883773 and way 1433098760, the Connors Road ways at the truss, stay there too. Way 25364865, the Kâhasinîskâk Bridge, is the pedestrian span further east. It was not copied. Footways 447942631 and 302605460 are bridge-tagged and were not copied as road decks.",
+  "decks": [
+    {
+      "osm_way": 22959547,
+      "part": "scona_over_connors",
+      "which": "Scona Road NW on the overpass. Two lanes, one-way, asphalt, 50 km/h, layer 1. Node order is from the south end, which is the uphill end, to the north, toward the river, so the one-way is down the hill. This centreline is 50.4 m. No published structure length was found. The way has no maxheight tag, no width tag, no bridge:structure tag, and no bridge:name tag. It crosses Connors Road way 34388889. They do not share a node. Way 34388889 is not bridge-tagged. The maxheight tags 4.3 and 4.6 are on other Connors ways, under the 98 Avenue spans. They are not a deck elevation and they are not a clearance under this span.",
+      "plan_length_m": 50.4,
+      "tags": {
+        "bridge": "yes",
+        "expressway": "yes",
+        "hgv": "designated",
+        "highway": "secondary",
+        "lanes": "2",
+        "layer": "1",
+        "maxspeed": "50",
+        "name": "Scona Road NW",
+        "oneway": "yes",
+        "parking:both": "no",
+        "surface": "asphalt"
+      },
+      "nodes": [
+        [
+          53.5337467,
+          -113.4838053
+        ],
+        [
+          53.5341356,
+          -113.4834149
+        ]
+      ]
+    },
+    {
+      "osm_way": 34388891,
+      "part": "connors_over_ramp",
+      "which": "Connors Road NW, bridge-tagged, one-way, layer 1, 60 km/h. No lanes tag. Node order is from the east to the northwest, so the one-way is westbound, toward the Scona junction. This centreline is 42.7 m. It crosses ramp way 106711213. It does not cross Scona Road. No City bridge number was found for it. It is not B065 and it is not B126. The midpoint is 77.9 m from the midpoint of way 22959547. That distance is horizontal. It is not a clearance.",
+      "plan_length_m": 42.7,
+      "tags": {
+        "bridge": "yes",
+        "expressway": "yes",
+        "hgv": "designated",
+        "highway": "secondary",
+        "layer": "1",
+        "lit": "yes",
+        "maxspeed": "60",
+        "maxspeed:type": "sign",
+        "name": "Connors Road NW",
+        "oneway": "yes",
+        "surface": "asphalt"
+      },
+      "nodes": [
+        [
+          53.5338471,
+          -113.4822663
+        ],
+        [
+          53.5341715,
+          -113.4826114
+        ]
+      ]
+    },
+    {
+      "osm_way": 22916470,
+      "part": "avenue_westbound",
+      "which": "98 Avenue NW, westbound, on the bridge immediately east of the James MacDonald river deck. Three lanes, one-way, layer 1, 60 km/h, width tag 11.1. Node order is from the east to the west, toward the river. This centreline is 76.3 m. It crosses Connors Road ways 22917297 and 31883773. Way 31883773 is already in the R13 geometry. The west end joins way 926792878, which is already in the R12 geometry. This is not the river girder. No City number was found for this westbound span. B126's inventory row says eastbound. The width tag is not a published structural width. No maxheight tag is on this way.",
+      "plan_length_m": 76.3,
+      "tags": {
+        "bridge": "yes",
+        "expressway": "yes",
+        "hgv": "designated",
+        "highway": "secondary",
+        "lanes": "3",
+        "layer": "1",
+        "lit": "yes",
+        "maxspeed": "60",
+        "name": "98 Avenue NW",
+        "oneway": "yes",
+        "placement": "left_of:2",
+        "sidewalk:left": "no",
+        "sidewalk:right": "separate",
+        "surface": "asphalt",
+        "width": "11.1"
+      },
+      "nodes": [
+        [
+          53.5365048,
+          -113.4836064
+        ],
+        [
+          53.536307,
+          -113.4847108
+        ]
+      ]
+    },
+    {
+      "osm_way": 106711204,
+      "part": "avenue_eastbound",
+      "which": "98 Avenue NW, eastbound, bridge-tagged. Two lanes, one-way, layer 1, 60 km/h. Node order is from the west, at the river side, to the east. This centreline is 81.1 m. It crosses Connors Road way 697622884, which is tagged maxheight 4.3. That tag is on Connors Road. It is not a deck elevation. The way does not cross a way named Scona Road. The City inventory names B126 as 98 Avenue Eastbound Bridge over Scona Road, year built 1971. A tender listing names B126 as 98 Ave Eastbound over Connors Road. Those names were not averaged. The west end joins way 926792877, already in the R12 geometry. The east end is way 22916468, which was not copied.",
+      "plan_length_m": 81.1,
+      "tags": {
+        "bridge": "yes",
+        "expressway": "yes",
+        "hgv": "no",
+        "hgv:conditional": "yes @ (Mo-Sa 07:00-22:00)",
+        "highway": "secondary",
+        "lanes": "2",
+        "layer": "1",
+        "lit": "yes",
+        "maxspeed": "60",
+        "name": "98 Avenue NW",
+        "oneway": "yes",
+        "source": "NRCan-CanVec-7.0",
+        "surface": "asphalt"
+      },
+      "nodes": [
+        [
+          53.5360746,
+          -113.4846343
+        ],
+        [
+          53.5360934,
+          -113.4839721
+        ],
+        [
+          53.536089,
+          -113.4834097
+        ]
+      ]
+    },
+    {
+      "osm_way": 106711230,
+      "part": "avenue_eastbound_ramp",
+      "which": "Unnamed two-lane ramp, bridge-tagged, layer 1, one-way. Node order is from the west to the east, away from the river. This centreline is 81.3 m. It crosses the same Connors Road way, 697622884, as way 106711204. The west end joins way 926792876, already in the R12 geometry. The east end is ramp way 106711195. It is not named 98 Avenue. It is not the river girder. No maxheight tag is on this way.",
+      "plan_length_m": 81.3,
+      "tags": {
+        "bridge": "yes",
+        "highway": "secondary_link",
+        "lanes": "2",
+        "layer": "1",
+        "oneway": "yes",
+        "source": "NRCan-CanVec-7.0",
+        "surface": "asphalt"
+      },
+      "nodes": [
+        [
+          53.5360068,
+          -113.4846276
+        ],
+        [
+          53.536011,
+          -113.4840285
+        ],
+        [
+          53.5360077,
+          -113.4836919
+        ],
+        [
+          53.5359949,
+          -113.4833998
+        ]
+      ]
+    }
+  ],
+  "approaches": [
+    {
+      "osm_way": 1363989830,
+      "part": "scona_northbound",
+      "which": "Scona Road NW down the hill to the south end of way 22959547. Two lanes, one-way. Node order is toward the bridge. The far node, 53.5308920, -113.4855926, is shared with way 1363989829, Scona Road NW. That way was not copied. The node is not Saskatchewan Drive, and it is not a surveyed grade point.",
+      "plan_length_m": 345.9,
+      "tags": {
+        "expressway": "yes",
+        "foot": "no",
+        "hgv": "designated",
+        "highway": "secondary",
+        "lanes": "2",
+        "lit": "yes",
+        "maxspeed": "50",
+        "name": "Scona Road NW",
+        "oneway": "yes",
+        "parking:both": "no",
+        "sidewalk": "no",
+        "surface": "asphalt"
+      },
+      "nodes": [
+        [
+          53.530892,
+          -113.4855926
+        ],
+        [
+          53.5310106,
+          -113.4855509
+        ],
+        [
+          53.5310982,
+          -113.4855535
+        ],
+        [
+          53.5311578,
+          -113.4855564
+        ],
+        [
+          53.5315125,
+          -113.4855271
+        ],
+        [
+          53.5317019,
+          -113.4855033
+        ],
+        [
+          53.5320601,
+          -113.4853456
+        ],
+        [
+          53.5322205,
+          -113.4852611
+        ],
+        [
+          53.5323571,
+          -113.4851612
+        ],
+        [
+          53.5325617,
+          -113.4849779
+        ],
+        [
+          53.5328009,
+          -113.4847406
+        ],
+        [
+          53.5337467,
+          -113.4838053
+        ]
+      ]
+    },
+    {
+      "osm_way": 22959548,
+      "part": "scona_northbound",
+      "which": "Scona Road NW off the north end of the overpass, to the junction at 53.5350386, -113.4833947. Two lanes, one-way. Node order is away from the bridge. At that junction the next way toward the river is named Connors Road, way 573341581, not Scona Road.",
+      "plan_length_m": 103.8,
+      "tags": {
+        "expressway": "yes",
+        "hgv": "designated",
+        "highway": "secondary",
+        "lanes": "2",
+        "maxspeed": "50",
+        "name": "Scona Road NW",
+        "oneway": "yes",
+        "parking:both": "no",
+        "surface": "asphalt"
+      },
+      "nodes": [
+        [
+          53.5341356,
+          -113.4834149
+        ],
+        [
+          53.5342124,
+          -113.4833547
+        ],
+        [
+          53.5342894,
+          -113.4833069
+        ],
+        [
+          53.534363,
+          -113.4832626
+        ],
+        [
+          53.5344459,
+          -113.4832492
+        ],
+        [
+          53.5345867,
+          -113.4832358
+        ],
+        [
+          53.5346938,
+          -113.4832491
+        ],
+        [
+          53.5350386,
+          -113.4833947
+        ]
+      ]
+    },
+    {
+      "osm_way": 573341581,
+      "part": "connors_toward_river",
+      "which": "Connors Road NW from the north end of the Scona overpass toward the Low Level. Two lanes, one-way. Node order is away from the Scona span, toward the river. The far node is way 697622884. It is not a surveyed grade point.",
+      "plan_length_m": 67.5,
+      "tags": {
+        "expressway": "yes",
+        "hgv": "designated",
+        "highway": "secondary",
+        "lane_markings": "yes",
+        "lanes": "2",
+        "lit": "yes",
+        "maxspeed": "50",
+        "name": "Connors Road NW",
+        "oneway": "yes",
+        "parking:both": "no",
+        "surface": "asphalt"
+      },
+      "nodes": [
+        [
+          53.5350386,
+          -113.4833947
+        ],
+        [
+          53.5354491,
+          -113.4835873
+        ],
+        [
+          53.5356221,
+          -113.4836706
+        ]
+      ]
+    },
+    {
+      "osm_way": 697622884,
+      "part": "connors_toward_river",
+      "which": "Connors Road NW under the eastbound 98 Avenue bridges, ways 106711204 and 106711230. Three lanes, one-way, maxheight tag 4.3. Node order is toward the Low Level. The far node is way 31883773, already in the R13 geometry, which is also tagged maxheight 4.6. Neither tag is a deck elevation. Neither tag is a clearance under the Scona Road span.",
+      "plan_length_m": 73.5,
+      "tags": {
+        "expressway": "yes",
+        "foot": "no",
+        "hgv": "designated",
+        "highway": "secondary",
+        "lane_markings": "yes",
+        "lanes": "3",
+        "lit": "yes",
+        "maxheight": "4.3",
+        "maxspeed": "50",
+        "name": "Connors Road NW",
+        "oneway": "yes",
+        "parking:both": "no",
+        "sidewalk": "no",
+        "surface": "asphalt"
+      },
+      "nodes": [
+        [
+          53.5356221,
+          -113.4836706
+        ],
+        [
+          53.5361678,
+          -113.4839177
+        ],
+        [
+          53.5362593,
+          -113.4839618
+        ]
+      ]
+    },
+    {
+      "osm_way": 22917297,
+      "part": "connors_from_low_level",
+      "which": "Connors Road NW from the southbound Low Level exit to the split at 53.5358828, -113.4842123. Two lanes, one-way, maxheight tag 4.6. Node order is away from the truss. The way passes under westbound 98 Avenue bridge way 22916470. The south end of the truss exit, way 1433098760, is already in the R13 geometry. The maxheight tag is not a deck elevation.",
+      "plan_length_m": 120.3,
+      "tags": {
+        "expressway": "yes",
+        "hgv": "designated",
+        "highway": "secondary",
+        "lanes": "2",
+        "maxheight": "4.6",
+        "maxspeed": "50",
+        "name": "Connors Road NW",
+        "oneway": "yes",
+        "sidewalk:left": "no",
+        "sidewalk:right": "separate",
+        "surface": "asphalt"
+      },
+      "nodes": [
+        [
+          53.53694,
+          -113.4845648
+        ],
+        [
+          53.5365218,
+          -113.4843576
+        ],
+        [
+          53.5358828,
+          -113.4842123
+        ]
+      ]
+    },
+    {
+      "osm_way": 1415752722,
+      "part": "scona_southbound",
+      "which": "Scona Road NW, the southbound carriageway, from the split at 53.5358828, -113.4842123. Two lanes, one-way. That split is also the node where Connors ways 22917297 and 238203855 meet. Node order is away from the river, up the hill. This carriageway does not use way 22959547. It is not bridge-tagged. Destination-lanes tag 98 Avenue and Scona Road; 99 Street.",
+      "plan_length_m": 147.4,
+      "tags": {
+        "cycleway:both": "no",
+        "destination:street:lanes": "98 Avenue|Scona Road;99 Street",
+        "expressway": "yes",
+        "hgv": "designated",
+        "highway": "secondary",
+        "lanes": "2",
+        "maxspeed": "50",
+        "name": "Scona Road NW",
+        "oneway": "yes",
+        "parking:both": "no",
+        "sidewalk:left": "no",
+        "sidewalk:right": "separate",
+        "surface": "asphalt"
+      },
+      "nodes": [
+        [
+          53.5358828,
+          -113.4842123
+        ],
+        [
+          53.5352813,
+          -113.4841025
+        ],
+        [
+          53.5346603,
+          -113.4839769
+        ],
+        [
+          53.5345671,
+          -113.4839615
+        ]
+      ]
+    },
+    {
+      "osm_way": 693125057,
+      "part": "scona_southbound",
+      "which": "Scona Road NW continuing southbound, two lanes, one-way, to 53.5337482, -113.4845529. The James MacDonald ramp way 106711220 ends at that node. That ramp stays in the R12 geometry. This way is not bridge-tagged.",
+      "plan_length_m": 102.7,
+      "tags": {
+        "cycleway:both": "no",
+        "destination:street:lanes": "98 Avenue|Scona Road;99 Street",
+        "expressway": "yes",
+        "foot": "no",
+        "hgv": "designated",
+        "highway": "secondary",
+        "lanes": "2",
+        "maxspeed": "50",
+        "name": "Scona Road NW",
+        "oneway": "yes",
+        "sidewalk": "no",
+        "surface": "asphalt"
+      },
+      "nodes": [
+        [
+          53.5345671,
+          -113.4839615
+        ],
+        [
+          53.5344805,
+          -113.4839615
+        ],
+        [
+          53.5344017,
+          -113.4839703
+        ],
+        [
+          53.5343093,
+          -113.4839963
+        ],
+        [
+          53.534252,
+          -113.4840189
+        ],
+        [
+          53.5341811,
+          -113.4840543
+        ],
+        [
+          53.5341115,
+          -113.4840984
+        ],
+        [
+          53.5340432,
+          -113.4841537
+        ],
+        [
+          53.5339815,
+          -113.4842089
+        ],
+        [
+          53.5339159,
+          -113.4842906
+        ],
+        [
+          53.5338568,
+          -113.4843746
+        ],
+        [
+          53.5337482,
+          -113.4845529
+        ]
+      ]
+    },
+    {
+      "osm_way": 472624621,
+      "part": "scona_southbound",
+      "which": "Scona Road NW southbound, three lanes, one-way, 45.3 m. Not bridge-tagged. The lane count on the mapped southbound road changes from two on way 693125057 to three on this way.",
+      "plan_length_m": 45.3,
+      "tags": {
+        "cycleway:both": "no",
+        "expressway": "yes",
+        "hgv": "designated",
+        "highway": "secondary",
+        "lanes": "3",
+        "lit": "yes",
+        "maxspeed": "50",
+        "name": "Scona Road NW",
+        "oneway": "yes",
+        "sidewalk": "no",
+        "surface": "asphalt"
+      },
+      "nodes": [
+        [
+          53.5337482,
+          -113.4845529
+        ],
+        [
+          53.5336993,
+          -113.4846397
+        ],
+        [
+          53.5335391,
+          -113.4849335
+        ],
+        [
+          53.5334695,
+          -113.4850527
+        ]
+      ]
+    },
+    {
+      "osm_way": 472624622,
+      "part": "scona_southbound",
+      "which": "Scona Road NW southbound, three lanes, one-way. Not bridge-tagged. The south node is the start of way 112188681 and of one-lane way 472624620.",
+      "plan_length_m": 53.6,
+      "tags": {
+        "cycleway:both": "no",
+        "expressway": "yes",
+        "hgv": "designated",
+        "highway": "secondary",
+        "lanes": "3",
+        "lit": "yes",
+        "maxspeed": "50",
+        "name": "Scona Road NW",
+        "oneway": "yes",
+        "sidewalk:left": "no",
+        "sidewalk:right": "separate",
+        "surface": "asphalt"
+      },
+      "nodes": [
+        [
+          53.5334695,
+          -113.4850527
+        ],
+        [
+          53.5333894,
+          -113.4851809
+        ],
+        [
+          53.5333159,
+          -113.4852781
+        ],
+        [
+          53.5332437,
+          -113.4853576
+        ],
+        [
+          53.5331596,
+          -113.4854349
+        ],
+        [
+          53.5330743,
+          -113.4855078
+        ]
+      ]
+    },
+    {
+      "osm_way": 112188681,
+      "part": "scona_southbound",
+      "which": "Scona Road NW southbound, three lanes, one-way, continuing up the hill. Not bridge-tagged. The far node, 53.5318272, -113.4856768, is the next Scona Road way. It is not a surveyed grade point. Way 697262000 continues and was not copied.",
+      "plan_length_m": 140.0,
+      "tags": {
+        "cycleway:both": "no",
+        "expressway": "yes",
+        "hgv": "designated",
+        "highway": "secondary",
+        "lanes": "3",
+        "lit": "yes",
+        "maxspeed": "50",
+        "name": "Scona Road NW",
+        "oneway": "yes",
+        "sidewalk:left": "no",
+        "sidewalk:right": "separate",
+        "surface": "asphalt"
+      },
+      "nodes": [
+        [
+          53.5330743,
+          -113.4855078
+        ],
+        [
+          53.5330014,
+          -113.4855508
+        ],
+        [
+          53.5329106,
+          -113.4855987
+        ],
+        [
+          53.5328073,
+          -113.4856287
+        ],
+        [
+          53.5326809,
+          -113.4856417
+        ],
+        [
+          53.5318272,
+          -113.4856768
+        ]
+      ]
+    },
+    {
+      "osm_way": 238203855,
+      "part": "connors_eastbound",
+      "which": "Connors Road NW eastbound from the split at 53.5358828, -113.4842123 to way 34388889. Two lanes, one-way. Node order is away from the Low Level. Not bridge-tagged.",
+      "plan_length_m": 219.1,
+      "tags": {
+        "cycleway:both": "no",
+        "expressway": "yes",
+        "foot": "no",
+        "hgv": "designated",
+        "highway": "secondary",
+        "lanes": "2",
+        "lit": "yes",
+        "maxspeed": "60",
+        "name": "Connors Road NW",
+        "oneway": "yes",
+        "parking:both": "no",
+        "sidewalk": "no",
+        "surface": "asphalt"
+      },
+      "nodes": [
+        [
+          53.5358828,
+          -113.4842123
+        ],
+        [
+          53.5356713,
+          -113.4840797
+        ],
+        [
+          53.5352888,
+          -113.4839698
+        ],
+        [
+          53.5345842,
+          -113.483817
+        ],
+        [
+          53.5341992,
+          -113.4837262
+        ],
+        [
+          53.5340794,
+          -113.4836847
+        ],
+        [
+          53.5339518,
+          -113.4836236
+        ]
+      ]
+    },
+    {
+      "osm_way": 34388889,
+      "part": "connors_eastbound",
+      "which": "Connors Road NW, the way under Scona Road way 22959547. One-way. No lanes tag and no maxheight tag. Node order is from the west, at the crossing, toward the east. The far node, 53.5328560, -113.4803450, is way 112328116. That way was not copied. It is tagged maxheight 6.1. The 6.1 is not a clearance under this span, and it is not a deck elevation. The far node is not the top of Connors Hill.",
+      "plan_length_m": 269.7,
+      "tags": {
+        "expressway": "yes",
+        "hgv": "designated",
+        "highway": "secondary",
+        "lit": "yes",
+        "maxspeed": "60",
+        "maxspeed:type": "sign",
+        "name": "Connors Road NW",
+        "oneway": "yes",
+        "parking:both": "no",
+        "surface": "asphalt"
+      },
+      "nodes": [
+        [
+          53.5339518,
+          -113.4836236
+        ],
+        [
+          53.5338051,
+          -113.4835268
+        ],
+        [
+          53.5336938,
+          -113.4834285
+        ],
+        [
+          53.5335758,
+          -113.483311
+        ],
+        [
+          53.5334338,
+          -113.483124
+        ],
+        [
+          53.5333768,
+          -113.4830355
+        ],
+        [
+          53.5332941,
+          -113.4829021
+        ],
+        [
+          53.5332019,
+          -113.4827244
+        ],
+        [
+          53.5331191,
+          -113.482515
+        ],
+        [
+          53.533044,
+          -113.4823066
+        ],
+        [
+          53.5329971,
+          -113.4821535
+        ],
+        [
+          53.5329554,
+          -113.4819649
+        ],
+        [
+          53.5329196,
+          -113.4817427
+        ],
+        [
+          53.5328914,
+          -113.481558
+        ],
+        [
+          53.5328685,
+          -113.4813269
+        ],
+        [
+          53.5328597,
+          -113.4811185
+        ],
+        [
+          53.5328579,
+          -113.4809743
+        ],
+        [
+          53.532856,
+          -113.480345
+        ]
+      ]
+    },
+    {
+      "osm_way": 22914306,
+      "part": "connors_westbound",
+      "which": "Connors Road NW westbound onto bridge way 34388891. One-way. No lanes tag. Node order is toward the bridge, from the east. The far node, 53.5330059, -113.4782963, is the east end of way 112328116. It is not a surveyed grade point.",
+      "plan_length_m": 299.4,
+      "tags": {
+        "expressway": "yes",
+        "hgv": "designated",
+        "highway": "secondary",
+        "lit": "yes",
+        "maxspeed": "60",
+        "name": "Connors Road NW",
+        "oneway": "yes",
+        "sidewalk": "no",
+        "surface": "asphalt"
+      },
+      "nodes": [
+        [
+          53.5330059,
+          -113.4782963
+        ],
+        [
+          53.5330009,
+          -113.478762
+        ],
+        [
+          53.5329704,
+          -113.4794948
+        ],
+        [
+          53.5329699,
+          -113.4798621
+        ],
+        [
+          53.5329952,
+          -113.4802282
+        ],
+        [
+          53.5330033,
+          -113.4803464
+        ],
+        [
+          53.5330349,
+          -113.4805885
+        ],
+        [
+          53.5331084,
+          -113.4809357
+        ],
+        [
+          53.5331756,
+          -113.481162
+        ],
+        [
+          53.5332539,
+          -113.4813857
+        ],
+        [
+          53.5333289,
+          -113.4815537
+        ],
+        [
+          53.5334131,
+          -113.4817127
+        ],
+        [
+          53.5335363,
+          -113.481892
+        ],
+        [
+          53.5338471,
+          -113.4822663
+        ]
+      ]
+    },
+    {
+      "osm_way": 34388890,
+      "part": "connors_westbound",
+      "which": "Connors Road NW westbound off bridge way 34388891, to the junction at 53.5350386, -113.4833947, where northbound Scona way 22959548 also ends. Two lanes, one-way. Node order is away from the Connors bridge, toward that junction.",
+      "plan_length_m": 109.6,
+      "tags": {
+        "expressway": "yes",
+        "hgv": "designated",
+        "highway": "secondary",
+        "lanes": "2",
+        "lit": "yes",
+        "maxspeed": "60",
+        "name": "Connors Road NW",
+        "oneway": "yes",
+        "parking:both": "no",
+        "surface": "asphalt"
+      },
+      "nodes": [
+        [
+          53.5341715,
+          -113.4826114
+        ],
+        [
+          53.5343252,
+          -113.4827521
+        ],
+        [
+          53.5345451,
+          -113.4829361
+        ],
+        [
+          53.5347194,
+          -113.4830742
+        ],
+        [
+          53.5350386,
+          -113.4833947
+        ]
+      ]
+    },
+    {
+      "osm_way": 1433613567,
+      "part": "avenue_westbound",
+      "which": "98 Avenue NW, the short westbound way onto bridge way 22916470. Three lanes, one-way, width tag 11.1. Node order is toward the bridge. The far node is way 1095591593, which continues 98 Avenue to the east and was not copied. It is not a surveyed grade point. The width tag is not a published structural width.",
+      "plan_length_m": 10.9,
+      "tags": {
+        "bicycle": "yes",
+        "cycleway": "no",
+        "expressway": "yes",
+        "hgv": "no",
+        "hgv:conditional": "yes @ (Mo-Sa 07:00-22:00)",
+        "highway": "secondary",
+        "lanes": "3",
+        "lit": "yes",
+        "maxspeed": "60",
+        "name": "98 Avenue NW",
+        "oneway": "yes",
+        "placement": "left_of:2",
+        "sidewalk:left": "no",
+        "sidewalk:right": "separate",
+        "surface": "asphalt",
+        "width": "11.1"
+      },
+      "nodes": [
+        [
+          53.5365383,
+          -113.4834518
+        ],
+        [
+          53.5365048,
+          -113.4836064
+        ]
+      ]
+    }
+  ],
+  "ramps": [
+    {
+      "osm_way": 472624620,
+      "part": "scona_loop",
+      "which": "One-lane link from southbound Scona at the south node of way 472624622 to the loop node 53.5328180, -113.4850443. Node order is away from the southbound carriageway. Not bridge-tagged. Not a surveyed grade point.",
+      "plan_length_m": 41.9,
+      "tags": {
+        "highway": "secondary_link",
+        "lanes": "1",
+        "oneway": "yes",
+        "parking:both": "no",
+        "surface": "asphalt"
+      },
+      "nodes": [
+        [
+          53.5330743,
+          -113.4855078
+        ],
+        [
+          53.5328696,
+          -113.4851522
+        ],
+        [
+          53.5328465,
+          -113.4851043
+        ],
+        [
+          53.532818,
+          -113.4850443
+        ]
+      ]
+    },
+    {
+      "osm_way": 25364768,
+      "part": "scona_loop",
+      "which": "One-lane link from southbound Scona at 53.5334695, -113.4850527 to the same loop node. Node order is away from the southbound carriageway. Not bridge-tagged.",
+      "plan_length_m": 78.0,
+      "tags": {
+        "highway": "secondary_link",
+        "lanes": "1",
+        "oneway": "yes",
+        "parking:both": "no",
+        "surface": "asphalt"
+      },
+      "nodes": [
+        [
+          53.5334695,
+          -113.4850527
+        ],
+        [
+          53.5333986,
+          -113.485119
+        ],
+        [
+          53.5333448,
+          -113.4851588
+        ],
+        [
+          53.5332696,
+          -113.4852019
+        ],
+        [
+          53.5331962,
+          -113.485226
+        ],
+        [
+          53.5331356,
+          -113.4852395
+        ],
+        [
+          53.5330767,
+          -113.4852341
+        ],
+        [
+          53.5330228,
+          -113.4852181
+        ],
+        [
+          53.5329683,
+          -113.4851939
+        ],
+        [
+          53.5329141,
+          -113.4851563
+        ],
+        [
+          53.532818,
+          -113.4850443
+        ]
+      ]
+    },
+    {
+      "osm_way": 25364763,
+      "part": "scona_loop",
+      "which": "One-lane link from the loop node to northbound Scona way 1363989830 at 53.5328009, -113.4847406. Node order is toward northbound Scona. Not bridge-tagged.",
+      "plan_length_m": 20.5,
+      "tags": {
+        "highway": "secondary_link",
+        "lanes": "1",
+        "oneway": "yes",
+        "parking:both": "no",
+        "surface": "asphalt"
+      },
+      "nodes": [
+        [
+          53.532818,
+          -113.4850443
+        ],
+        [
+          53.5328055,
+          -113.4849844
+        ],
+        [
+          53.5327948,
+          -113.4849125
+        ],
+        [
+          53.5327966,
+          -113.4848405
+        ],
+        [
+          53.5328009,
+          -113.4847406
+        ]
+      ]
+    },
+    {
+      "osm_way": 25364765,
+      "part": "scona_to_99a",
+      "which": "One-lane link from northbound Scona at 53.5328009, -113.4847406 to 99A Street NW. Node order is away from Scona Road. The far node is shared with way 25364259, 99A Street NW. That street was not copied. It is a cross street. It is not a surveyed grade point.",
+      "plan_length_m": 126.2,
+      "tags": {
+        "foot": "no",
+        "highway": "secondary_link",
+        "lanes": "1",
+        "oneway": "yes",
+        "parking:both": "no",
+        "sidewalk": "no",
+        "surface": "asphalt"
+      },
+      "nodes": [
+        [
+          53.5328009,
+          -113.4847406
+        ],
+        [
+          53.532973,
+          -113.4847191
+        ],
+        [
+          53.5330591,
+          -113.4847084
+        ],
+        [
+          53.5331532,
+          -113.4847137
+        ],
+        [
+          53.5332201,
+          -113.4847272
+        ],
+        [
+          53.5333224,
+          -113.4847744
+        ],
+        [
+          53.5334012,
+          -113.4848274
+        ],
+        [
+          53.5334695,
+          -113.4848782
+        ],
+        [
+          53.5335391,
+          -113.4849335
+        ],
+        [
+          53.5335903,
+          -113.4849776
+        ],
+        [
+          53.5336218,
+          -113.4850102
+        ],
+        [
+          53.533631,
+          -113.4850218
+        ],
+        [
+          53.5336586,
+          -113.4850704
+        ],
+        [
+          53.5336809,
+          -113.485119
+        ],
+        [
+          53.5337321,
+          -113.4852825
+        ],
+        [
+          53.5337369,
+          -113.4853143
+        ],
+        [
+          53.5337394,
+          -113.4853527
+        ],
+        [
+          53.5337397,
+          -113.4854134
+        ]
+      ]
+    },
+    {
+      "osm_way": 106711214,
+      "part": "avenue_ramp",
+      "which": "Two-lane link from Connors Road at 53.5362593, -113.4839618, the node between ways 697622884 and 31883773. Destination tag 98 Avenue East; 97 Avenue West. Node order is away from that Connors node. Not bridge-tagged. The far node meets ways 106711207 and 106711192. Way 106711192 stays in the R13 geometry.",
+      "plan_length_m": 100.7,
+      "tags": {
+        "destination:street": "98 Avenue East; 97 Avenue West",
+        "highway": "secondary_link",
+        "lanes": "2",
+        "oneway": "yes",
+        "sidewalk:left": "no",
+        "sidewalk:right": "separate",
+        "source": "NRCan-CanVec-7.0",
+        "surface": "asphalt"
+      },
+      "nodes": [
+        [
+          53.5362593,
+          -113.4839618
+        ],
+        [
+          53.5363658,
+          -113.4838995
+        ],
+        [
+          53.5368795,
+          -113.4840278
+        ],
+        [
+          53.5371505,
+          -113.4840709
+        ]
+      ]
+    },
+    {
+      "osm_way": 106711207,
+      "part": "avenue_ramp",
+      "which": "Two-lane link from the end of way 106711214 to 53.5376231, -113.4837861. Not bridge-tagged. Not a Low Level deck.",
+      "plan_length_m": 56.9,
+      "tags": {
+        "highway": "secondary_link",
+        "lanes": "2",
+        "oneway": "yes",
+        "sidewalk:both": "separate",
+        "source": "NRCan-CanVec-7.0",
+        "surface": "asphalt"
+      },
+      "nodes": [
+        [
+          53.5371505,
+          -113.4840709
+        ],
+        [
+          53.537373,
+          -113.484008
+        ],
+        [
+          53.5373818,
+          -113.4840058
+        ],
+        [
+          53.5375013,
+          -113.4839281
+        ],
+        [
+          53.5376231,
+          -113.4837861
+        ]
+      ]
+    },
+    {
+      "osm_way": 106711231,
+      "part": "avenue_ramp",
+      "which": "Two-lane loop from way 106711207 around to westbound 98 Avenue at 53.5365383, -113.4834518, the east node of way 1433613567. Not bridge-tagged. The far nodes are junctions. They are not surveyed grade points.",
+      "plan_length_m": 247.6,
+      "tags": {
+        "foot": "no",
+        "highway": "secondary_link",
+        "lanes": "2",
+        "lit": "yes",
+        "oneway": "yes",
+        "sidewalk": "no",
+        "source": "NRCan-CanVec-7.0",
+        "surface": "asphalt"
+      },
+      "nodes": [
+        [
+          53.5376231,
+          -113.4837861
+        ],
+        [
+          53.5376828,
+          -113.4836665
+        ],
+        [
+          53.5377243,
+          -113.4835548
+        ],
+        [
+          53.53776,
+          -113.48339
+        ],
+        [
+          53.5377733,
+          -113.4832294
+        ],
+        [
+          53.5377717,
+          -113.4830687
+        ],
+        [
+          53.5377501,
+          -113.4829081
+        ],
+        [
+          53.5377194,
+          -113.4827894
+        ],
+        [
+          53.5376795,
+          -113.4826861
+        ],
+        [
+          53.5376364,
+          -113.4825911
+        ],
+        [
+          53.5375617,
+          -113.4824863
+        ],
+        [
+          53.5374753,
+          -113.4824025
+        ],
+        [
+          53.5373782,
+          -113.4823536
+        ],
+        [
+          53.5372803,
+          -113.4823411
+        ],
+        [
+          53.5371408,
+          -113.4823746
+        ],
+        [
+          53.537008,
+          -113.4824752
+        ],
+        [
+          53.5369109,
+          -113.4825953
+        ],
+        [
+          53.5368129,
+          -113.4827866
+        ],
+        [
+          53.5366594,
+          -113.4832336
+        ],
+        [
+          53.5365383,
+          -113.4834518
+        ]
+      ]
+    },
+    {
+      "osm_way": 106711195,
+      "part": "connors_ramp",
+      "which": "Two-lane ramp off the east end of bridge way 106711230, curving to ramp way 106711213. Not bridge-tagged. It is the road that then passes under Connors bridge way 34388891.",
+      "plan_length_m": 251.1,
+      "tags": {
+        "highway": "secondary_link",
+        "lanes": "2",
+        "oneway": "yes",
+        "source": "NRCan-CanVec-7.0",
+        "surface": "paved"
+      },
+      "nodes": [
+        [
+          53.5359949,
+          -113.4833998
+        ],
+        [
+          53.5359753,
+          -113.4831025
+        ],
+        [
+          53.5359521,
+          -113.4828636
+        ],
+        [
+          53.5359213,
+          -113.4826276
+        ],
+        [
+          53.5358951,
+          -113.482493
+        ],
+        [
+          53.535865,
+          -113.4823404
+        ],
+        [
+          53.5358202,
+          -113.4821871
+        ],
+        [
+          53.5357769,
+          -113.4820713
+        ],
+        [
+          53.53573,
+          -113.4819673
+        ],
+        [
+          53.5356649,
+          -113.4818675
+        ],
+        [
+          53.5356223,
+          -113.4818019
+        ],
+        [
+          53.5355588,
+          -113.4817346
+        ],
+        [
+          53.5354609,
+          -113.4816598
+        ],
+        [
+          53.5353356,
+          -113.4815963
+        ],
+        [
+          53.5352427,
+          -113.4815781
+        ],
+        [
+          53.5351051,
+          -113.4815955
+        ],
+        [
+          53.5349275,
+          -113.4816764
+        ],
+        [
+          53.5347517,
+          -113.4818097
+        ],
+        [
+          53.5345026,
+          -113.482036
+        ]
+      ]
+    },
+    {
+      "osm_way": 106711213,
+      "part": "connors_ramp",
+      "which": "Two-lane ramp under Connors bridge way 34388891. Not itself bridge-tagged. Node order is from way 106711195 to way 106711210. Footway way 302605460, bridge-tagged, also crosses this ramp and was not copied.",
+      "plan_length_m": 115.2,
+      "tags": {
+        "highway": "secondary_link",
+        "lanes": "2",
+        "oneway": "yes",
+        "source": "NRCan-CanVec-7.0",
+        "surface": "paved"
+      },
+      "nodes": [
+        [
+          53.5345026,
+          -113.482036
+        ],
+        [
+          53.5344728,
+          -113.4820629
+        ],
+        [
+          53.5344604,
+          -113.4820752
+        ],
+        [
+          53.5342291,
+          -113.4822898
+        ],
+        [
+          53.5339445,
+          -113.4825111
+        ],
+        [
+          53.5338411,
+          -113.4825436
+        ],
+        [
+          53.5337408,
+          -113.4825634
+        ],
+        [
+          53.5336357,
+          -113.4825604
+        ],
+        [
+          53.5335383,
+          -113.4825427
+        ]
+      ]
+    },
+    {
+      "osm_way": 106711210,
+      "part": "connors_ramp",
+      "which": "One-lane ramp from the end of way 106711213 to eastbound Connors at 53.5328560, -113.4803450, the far node of way 34388889. Not bridge-tagged. The far node is not a surveyed grade point.",
+      "plan_length_m": 176.7,
+      "tags": {
+        "highway": "secondary_link",
+        "lanes": "1",
+        "oneway": "yes",
+        "source": "NRCan-CanVec-7.0",
+        "surface": "asphalt"
+      },
+      "nodes": [
+        [
+          53.5335383,
+          -113.4825427
+        ],
+        [
+          53.5334291,
+          -113.4824824
+        ],
+        [
+          53.5333322,
+          -113.4824064
+        ],
+        [
+          53.5332577,
+          -113.4823066
+        ],
+        [
+          53.5331755,
+          -113.4821851
+        ],
+        [
+          53.533091,
+          -113.4820024
+        ],
+        [
+          53.5330323,
+          -113.4818257
+        ],
+        [
+          53.5329683,
+          -113.4815857
+        ],
+        [
+          53.5329213,
+          -113.4812321
+        ],
+        [
+          53.5328984,
+          -113.4809684
+        ],
+        [
+          53.532856,
+          -113.480345
+        ]
+      ]
+    }
+  ],
+  "excluded": [
+    {
+      "osm_way": 31882107,
+      "reason": "1900 Low Level northbound deck. Not this span. It stays in the R13 geometry."
+    },
+    {
+      "osm_way": 22916473,
+      "reason": "1948/1949 Low Level southbound deck. Not this span. It stays in the R13 geometry. The south node of this way is 404.2 m from the midpoint of way 22959547. That distance is horizontal."
+    },
+    {
+      "osm_way": 25455305,
+      "reason": "James MacDonald westbound river deck. Not this span. It stays in the R12 geometry."
+    },
+    {
+      "osm_way": 25455308,
+      "reason": "James MacDonald eastbound river deck. Not this span. It stays in the R12 geometry."
+    },
+    {
+      "osm_way": 926792878,
+      "reason": "98 Avenue westbound from bridge way 22916470 onto the James MacDonald river deck. Already in the R12 geometry."
+    },
+    {
+      "osm_way": 106711215,
+      "reason": "98 Avenue eastbound off the James MacDonald river deck. Already in the R12 geometry. It splits into ways 926792877 and 926792876."
+    },
+    {
+      "osm_way": 926792877,
+      "reason": "98 Avenue eastbound between way 106711215 and bridge way 106711204. Already in the R12 geometry."
+    },
+    {
+      "osm_way": 926792876,
+      "reason": "Two-lane link between way 106711215 and ramp bridge way 106711230. Already in the R12 geometry."
+    },
+    {
+      "osm_way": 106711220,
+      "reason": "One-lane ramp off the James MacDonald eastbound deck. Destination tag South Scona Road. It ends on southbound Scona at way 472624621. Already in the R12 geometry. It is not a Scona Road span."
+    },
+    {
+      "osm_way": 106711192,
+      "reason": "One-lane link at the Low Level south end. Already in the R13 geometry. It meets way 106711214. It is not the Scona Road span."
+    },
+    {
+      "osm_way": 106711212,
+      "reason": "One-lane link at the Low Level south end. Already in the R13 geometry."
+    },
+    {
+      "osm_way": 1223720740,
+      "reason": "One-lane link at the Low Level south end. Already in the R13 geometry."
+    },
+    {
+      "osm_way": 31883773,
+      "reason": "Connors Road onto the northbound Low Level deck, maxheight tag 4.6. Already in the R13 geometry. Westbound 98 Avenue bridge way 22916470 crosses it."
+    },
+    {
+      "osm_way": 1433098760,
+      "reason": "Connors Road leaving the southbound Low Level deck. Already in the R13 geometry. Way 22917297 continues it."
+    },
+    {
+      "osm_way": 25364865,
+      "reason": "Kâhasinîskâk Bridge, the pedestrian span over Connors Road further east. Not a road span of this interchange."
+    },
+    {
+      "osm_way": 447942631,
+      "reason": "Bridge-tagged footway beside westbound 98 Avenue bridge way 22916470. Not copied as a road deck."
+    },
+    {
+      "osm_way": 302605460,
+      "reason": "Bridge-tagged footway crossing ramp way 106711213, beside Connors bridge way 34388891. Not copied as a road deck."
+    },
+    {
+      "osm_way": 22916468,
+      "reason": "98 Avenue NW continuing east from bridge way 106711204. Outside the grade separation. Not copied."
+    },
+    {
+      "osm_way": 1095591593,
+      "reason": "98 Avenue NW approaching from the east, into way 1433613567. Not copied. The far end is not a surveyed grade point."
+    },
+    {
+      "osm_way": 112328116,
+      "reason": "Connors Road continuing east from way 34388889, tagged maxheight 6.1. The tag is not a clearance under way 22959547 and not a deck elevation. Not copied."
+    },
+    {
+      "osm_way": 25364259,
+      "reason": "99A Street NW, at the far node of ramp way 25364765. A cross street. Not copied."
+    }
+  ],
+  "dimensions": {
+    "structural_type": null,
+    "city_bridge_number": "B065",
+    "crosses": "Connors Road",
+    "year_built": 1957,
+    "anticipated_construction_start_year": 2025,
+    "span_count": null,
+    "plan_length_m": 50.4,
+    "published_structure_length_m": null,
+    "width_m": null,
+    "lane_width_m": null,
+    "lanes_osm_tag": 2,
+    "oneway": true,
+    "surface": "asphalt",
+    "pier_count": null,
+    "pier_height_m": null,
+    "pier_type": null,
+    "abutment_form": null,
+    "deck_thickness_m": null,
+    "deck_elevation_asl_m": null,
+    "soffit_elevation_asl_m": null,
+    "vertical_datum": null,
+    "clearance_under_deck_m": null,
+    "osm_maxheight_on_this_way": null,
+    "osm_maxheight_on_connors_under_this_span": null,
+    "osm_width_on_this_way": null,
+    "osm_maxheight_is_deck_elevation": false,
+    "crossfall": null,
+    "longitudinal_grade": null,
+    "posted_speed_kmh_osm_tag": 50,
+    "horizontal_distance_to_low_level_south_end_m": 404.2,
+    "note_98_avenue_eastbound_year_built": 1971,
+    "note_98_avenue_eastbound_city_number": "B126"
+  }
+}

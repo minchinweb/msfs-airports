@@ -1,0 +1,174 @@
+{
+  "code": "P152",
+  "name": "Muttart",
+  "centre": [
+    53.53621,
+    -113.48000
+  ],
+  "crs": "EPSG:4326",
+  "coordinate_order": "[lat, lon]",
+  "geometry_source": "docs/edmonton-bridges/lrt-tracks.json",
+  "geometry_retrieved": "2026-10-14",
+  "plan_length_note": "plan_length_m is a horizontal WGS84 length of the stored nodes, haversine, sphere radius 6378137 m, one decimal. The extract stores one stop node and no platform. A node has no length. The platform rings were read from the OpenStreetMap API on the same day. They are not in lrt-tracks.json. Each ring is closed. plan_length_m on a ring is the perimeter. long_side_m is each long side of that ring. Neither length is a surveyed platform. No elevations are stored.",
+  "extract_stop": {
+    "name": "Muttart",
+    "part": "stop_node",
+    "which": "The only Muttart feature in lrt-tracks.json. railway=stop, on the west-track surface route. The project centre 53.53621, -113.48000 is this node. It is the south stop position. It is not a platform outline.",
+    "plan_length_m": null,
+    "lat": 53.536207,
+    "lon": -113.480002,
+    "tags": {
+      "railway": "stop",
+      "light_rail": "yes",
+      "operator": "Edmonton Transit Service"
+    }
+  },
+  "live_nodes_not_in_extract": [
+    {
+      "osm_node": 6304461464,
+      "part": "stop_position_south",
+      "which": "Same point as the extract node, at the precision of the API. public_transport=stop_position. start_date tag 2023-11-04.",
+      "lat": 53.5362066,
+      "lon": -113.4800023
+    },
+    {
+      "osm_node": 10762066052,
+      "part": "stop_position_north",
+      "which": "Second stop position, on the east track near the north end of the platforms. The R14 notes clip the east track at this node. It is not in the stations list of lrt-tracks.json.",
+      "lat": 53.5367042,
+      "lon": -113.4789514
+    },
+    {
+      "osm_node": 11327592271,
+      "part": "station_node",
+      "which": "public_transport=station, railway=station. Between the two stop positions. Wikipedia's coordinate, 53.53639, -113.47944, is a different point. Neither was used as the project centre.",
+      "lat": 53.5364394,
+      "lon": -113.4795032
+    }
+  ],
+  "platforms": [
+    {
+      "osm_way": 1157283683,
+      "part": "west_platform",
+      "which": "Closed ring. The more westerly of the two platform ways. Long sides 103.8 m and 103.8 m. The short sides are the ends. They were not added into a width. Tagged railway=platform, shelter=yes, tactile_paving=yes. Node order follows the way, and the first node is repeated at the end.",
+      "plan_length_m": 215.4,
+      "long_side_m": [
+        103.8,
+        103.8
+      ],
+      "source": "OpenStreetMap API, way 1157283683, 2026-10-14. Not in lrt-tracks.json.",
+      "tags": {
+        "railway": "platform",
+        "public_transport": "platform",
+        "light_rail": "yes",
+        "shelter": "yes",
+        "tactile_paving": "yes",
+        "lit": "yes",
+        "operator": "Edmonton Transit Service"
+      },
+      "nodes": [
+        [
+          53.5361554,
+          -113.4801367
+        ],
+        [
+          53.536772,
+          -113.4789592
+        ],
+        [
+          53.5367868,
+          -113.4789811
+        ],
+        [
+          53.5367979,
+          -113.4789976
+        ],
+        [
+          53.5361814,
+          -113.4801754
+        ],
+        [
+          53.5361689,
+          -113.4801569
+        ],
+        [
+          53.5361554,
+          -113.4801367
+        ]
+      ]
+    },
+    {
+      "osm_way": 1157283685,
+      "part": "east_platform",
+      "which": "Closed ring. The more easterly platform way. Long sides 103.6 m and 103.6 m. The short sides are the ends. They were not added into a width. Tagged railway=platform, shelter=yes, tactile_paving=yes. Node order follows the way, and the first node is repeated at the end.",
+      "plan_length_m": 215.0,
+      "long_side_m": [
+        103.6,
+        103.6
+      ],
+      "source": "OpenStreetMap API, way 1157283685, 2026-10-14. Not in lrt-tracks.json.",
+      "tags": {
+        "railway": "platform",
+        "public_transport": "platform",
+        "light_rail": "yes",
+        "shelter": "yes",
+        "tactile_paving": "yes",
+        "lit": "yes",
+        "operator": "Edmonton Transit Service"
+      },
+      "nodes": [
+        [
+          53.5360782,
+          -113.4800218
+        ],
+        [
+          53.5366913,
+          -113.4788446
+        ],
+        [
+          53.5367053,
+          -113.4788653
+        ],
+        [
+          53.5367181,
+          -113.4788842
+        ],
+        [
+          53.5361049,
+          -113.4800612
+        ],
+        [
+          53.5360925,
+          -113.4800429
+        ],
+        [
+          53.5360782,
+          -113.4800218
+        ]
+      ]
+    }
+  ],
+  "excluded": [
+    {
+      "reason": "The west-track and east-track surface routes in lrt-tracks.json pass the stop and continue for about 5 km. They are not a short way that is the stop. The run from the bridge tag to the stop is already in the R14 geometry, 199.1 m and 213.1 m. It was not copied here."
+    },
+    {
+      "reason": "A surface crossover south of the stop is stored in lrt-tracks.json at 39 m. It is not a platform."
+    }
+  ],
+  "dimensions": {
+    "structural_type": "at-grade side-loading stop on the Valley Line south ramp. Not a bridge.",
+    "platform_count": 2,
+    "platform_arrangement": "side-loading",
+    "mapped_west_platform_long_side_m": 103.8,
+    "mapped_east_platform_long_side_m": 103.6,
+    "platform_length_surveyed_m": null,
+    "platform_width_surveyed_m": null,
+    "platform_height_above_rail_m": null,
+    "platform_elevation_m": null,
+    "vertical_datum": null,
+    "ramp_length_surveyed_m": null,
+    "ramp_gradient": null,
+    "ramp_elevation_change_m": null
+  }
+}

@@ -1,0 +1,1572 @@
+{
+  "code": "T133",
+  "name": "Stony Plain Road replacement",
+  "centre": [
+    53.5478,
+    -113.5458
+  ],
+  "crs": "EPSG:4326",
+  "coordinate_order": "[lat, lon]",
+  "geometry_source": "docs/edmonton-bridges/bridge-geometry.json G118 object, plus docs/edmonton-bridges/lrt-tracks.json construction routes 13 and 14",
+  "geometry_retrieved": "2026-10-14",
+  "plan_length_note": "plan_length_m is the horizontal length of that OSM way, WGS84 haversine with radius 6378137 m, rounded to one decimal. It is not a climb and not a structural length. An approach plan_length_m stops at the far node stored in the extract. That node is not a surveyed grade point. None of these plan lengths is the structural span. The agreement says the span length shall be a minimum of 46 m. The EIA says the replacement is about 8 m shorter than the existing bridge. Those two sentences were not combined. Way 25601841 is 60.7 m horizontally. That mapped length is not the new span length.",
+  "dropped_note": "G118 is the old span, demolished across 29 December 2022 to 3 January 2023. It is not modeled. No G118 folder was written. The ways below are the bridge-tagged lines the extract stored on the G118 object, including the Valley Line construction ways and the two road carriageways. lrt-tracks.json routes 13 and 14 are the full Valley Line West construction centrelines, about 14.1 km each. They pass the centre. They are not a span length and their node lists are not copied. River-span lengths, the river path width, and the river-pier notes are not copied. Alberta file B055 is the 1954 bridge. Its printed lengths were not used as the new span.",
+  "decks": [
+    {
+      "osm_way": 25601841,
+      "part": "road_deck",
+      "which": "North road carriageway on the mapped crossing, Stony Plain Road NW, two lanes, one-way, asphalt, layer 1, bridge:name Groat. Node order runs east to west. This horizontal length is not the structural span length. The agreement's minimum span is 46 m. The two figures were not reconciled, and 8 m was not subtracted from this length. A live read also has hgv=no, lit=yes, sidewalk:left=no, sidewalk:right=separate. hgv=no is not a clearance and not a deck elevation. The old span is not a separate model.",
+      "plan_length_m": 60.7,
+      "tags": {
+        "bridge": "yes",
+        "bridge:name": "Groat",
+        "highway": "secondary",
+        "lanes": "2",
+        "layer": "1",
+        "maxspeed": "50",
+        "name": "Stony Plain Road NW",
+        "oneway": "yes",
+        "surface": "asphalt"
+      },
+      "nodes": [
+        [
+          53.547959,
+          -113.545566
+        ],
+        [
+          53.547952,
+          -113.545636
+        ],
+        [
+          53.547927,
+          -113.545819
+        ],
+        [
+          53.547891,
+          -113.546041
+        ],
+        [
+          53.547812,
+          -113.546449
+        ]
+      ]
+    },
+    {
+      "osm_way": 1160377622,
+      "part": "lrt_track",
+      "which": "Valley Line, railway=construction, bridge-tagged, layer 1. Node order runs west to east. It lies between the two road centrelines. A live read also has gauge=1435, voltage=750, frequency=0, electrified=contact_line, opening_date=2028, check_date=2023-11-04. Those are mapper tags. opening_date=2028 is not a City opening date found in the project pages read. This horizontal length is not the structural span length.",
+      "plan_length_m": 58.2,
+      "tags": {
+        "bridge": "yes",
+        "layer": "1",
+        "name": "Valley Line",
+        "railway": "construction"
+      },
+      "nodes": [
+        [
+          53.547756,
+          -113.546316
+        ],
+        [
+          53.547804,
+          -113.546064
+        ],
+        [
+          53.547846,
+          -113.545804
+        ],
+        [
+          53.54787,
+          -113.545628
+        ],
+        [
+          53.547889,
+          -113.545466
+        ]
+      ]
+    },
+    {
+      "osm_way": 1222393198,
+      "part": "lrt_track",
+      "which": "Valley Line, railway=construction, bridge-tagged, layer 1. Node order runs east to west. It lies between the two road centrelines, paired with way 1160377622. The same live tags as that way. This horizontal length is not the structural span length.",
+      "plan_length_m": 58.2,
+      "tags": {
+        "bridge": "yes",
+        "layer": "1",
+        "name": "Valley Line",
+        "railway": "construction"
+      },
+      "nodes": [
+        [
+          53.547923,
+          -113.545525
+        ],
+        [
+          53.547916,
+          -113.5456
+        ],
+        [
+          53.547896,
+          -113.545773
+        ],
+        [
+          53.547864,
+          -113.545978
+        ],
+        [
+          53.547831,
+          -113.546162
+        ],
+        [
+          53.547788,
+          -113.546373
+        ]
+      ]
+    },
+    {
+      "osm_way": 1229761594,
+      "part": "south_path",
+      "which": "Cycleway on the bridge, foot and bicycle yes, oneway no, surface concrete. No layer tag. It lies south of the south road centreline. The agreement's south side is a shared-use path. This is the mapped south path. Its length is not the structural span.",
+      "plan_length_m": 57.5,
+      "tags": {
+        "bicycle": "yes",
+        "bridge": "yes",
+        "foot": "yes",
+        "highway": "cycleway",
+        "oneway": "no",
+        "surface": "concrete"
+      },
+      "nodes": [
+        [
+          53.5478,
+          -113.545393
+        ],
+        [
+          53.547787,
+          -113.545523
+        ],
+        [
+          53.547777,
+          -113.545631
+        ],
+        [
+          53.547762,
+          -113.545737
+        ],
+        [
+          53.547684,
+          -113.546239
+        ]
+      ]
+    },
+    {
+      "osm_way": 1229761596,
+      "part": "north_sidewalk",
+      "which": "Footway on the bridge, foot and bicycle yes, surface concrete. It lies north of the north road centreline. The agreement's north side is a sidewalk. This is the mapped north path. Its length is not the structural span.",
+      "plan_length_m": 58.4,
+      "tags": {
+        "bicycle": "yes",
+        "bridge": "yes",
+        "foot": "yes",
+        "highway": "footway",
+        "surface": "concrete"
+      },
+      "nodes": [
+        [
+          53.547841,
+          -113.546453
+        ],
+        [
+          53.547893,
+          -113.546213
+        ],
+        [
+          53.547939,
+          -113.545961
+        ],
+        [
+          53.547961,
+          -113.545816
+        ],
+        [
+          53.547989,
+          -113.545607
+        ]
+      ]
+    },
+    {
+      "osm_way": 1352501168,
+      "part": "road_deck",
+      "which": "South road carriageway on the mapped crossing, Stony Plain Road NW, two lanes, one-way, asphalt, layer 1, bridge:name Groat. Node order runs west to east. The City's finished cross-section is one vehicle lane each way. The two-lane tag is the map. This horizontal length is not the structural span length.",
+      "plan_length_m": 57.3,
+      "tags": {
+        "bridge": "yes",
+        "bridge:name": "Groat",
+        "highway": "secondary",
+        "lanes": "2",
+        "layer": "1",
+        "maxspeed": "50",
+        "name": "Stony Plain Road NW",
+        "oneway": "yes",
+        "surface": "asphalt"
+      },
+      "nodes": [
+        [
+          53.547722,
+          -113.546264
+        ],
+        [
+          53.547759,
+          -113.546064
+        ],
+        [
+          53.547785,
+          -113.545906
+        ],
+        [
+          53.547807,
+          -113.545749
+        ],
+        [
+          53.547819,
+          -113.545664
+        ],
+        [
+          53.54783,
+          -113.545569
+        ],
+        [
+          53.547845,
+          -113.545424
+        ]
+      ]
+    }
+  ],
+  "approaches": [
+    {
+      "osm_way": 692115845,
+      "part": "approach_road",
+      "which": "Stony Plain Road NW, secondary, 1 lanes, one-way, width tag 4, which is not a published width. The far node is not a surveyed grade point. A Valley Line approach length is the mapped way leaving the bridge. It is not the span.",
+      "plan_length_m": 988.3,
+      "tags": {
+        "highway": "secondary",
+        "lanes": "1",
+        "maxspeed": "50",
+        "name": "Stony Plain Road NW",
+        "oneway": "yes",
+        "width": "4"
+      },
+      "nodes": [
+        [
+          53.543897,
+          -113.55971
+        ],
+        [
+          53.544082,
+          -113.558873
+        ],
+        [
+          53.54426,
+          -113.55808
+        ],
+        [
+          53.544651,
+          -113.556345
+        ],
+        [
+          53.544674,
+          -113.556218
+        ],
+        [
+          53.544919,
+          -113.555178
+        ],
+        [
+          53.545054,
+          -113.55471
+        ],
+        [
+          53.545362,
+          -113.553739
+        ],
+        [
+          53.545497,
+          -113.553317
+        ],
+        [
+          53.545564,
+          -113.553108
+        ],
+        [
+          53.545611,
+          -113.552959
+        ],
+        [
+          53.545711,
+          -113.552637
+        ],
+        [
+          53.545821,
+          -113.552296
+        ],
+        [
+          53.545849,
+          -113.552205
+        ],
+        [
+          53.545862,
+          -113.552165
+        ],
+        [
+          53.545907,
+          -113.551974
+        ],
+        [
+          53.545942,
+          -113.551841
+        ],
+        [
+          53.545986,
+          -113.55168
+        ],
+        [
+          53.546087,
+          -113.551363
+        ],
+        [
+          53.546655,
+          -113.549599
+        ],
+        [
+          53.546686,
+          -113.549507
+        ],
+        [
+          53.546853,
+          -113.54899
+        ],
+        [
+          53.546901,
+          -113.548857
+        ],
+        [
+          53.546942,
+          -113.54875
+        ],
+        [
+          53.547008,
+          -113.548582
+        ],
+        [
+          53.547049,
+          -113.548474
+        ],
+        [
+          53.547084,
+          -113.548375
+        ],
+        [
+          53.547203,
+          -113.547999
+        ],
+        [
+          53.547406,
+          -113.547412
+        ],
+        [
+          53.547591,
+          -113.546815
+        ],
+        [
+          53.547646,
+          -113.546603
+        ],
+        [
+          53.547648,
+          -113.54659
+        ],
+        [
+          53.547722,
+          -113.546264
+        ]
+      ],
+      "extract_role": "approach"
+    },
+    {
+      "osm_way": 1081194111,
+      "part": "approach_road",
+      "which": "Stony Plain Road NW, secondary, 4 lanes, one-way, width tag 12.2, which is not a published width. The far node is not a surveyed grade point. A Valley Line approach length is the mapped way leaving the bridge. It is not the span.",
+      "plan_length_m": 19.3,
+      "tags": {
+        "highway": "secondary",
+        "lanes": "4",
+        "maxspeed": "50",
+        "name": "Stony Plain Road NW",
+        "oneway": "yes",
+        "surface": "asphalt",
+        "width": "12.2"
+      },
+      "nodes": [
+        [
+          53.547812,
+          -113.546449
+        ],
+        [
+          53.5478,
+          -113.546508
+        ],
+        [
+          53.547774,
+          -113.546608
+        ],
+        [
+          53.547743,
+          -113.546717
+        ]
+      ],
+      "extract_role": "approach"
+    },
+    {
+      "osm_way": 1160377619,
+      "part": "lrt_approach",
+      "which": "Valley Line, railway construction. The far node is not a surveyed grade point. A Valley Line approach length is the mapped way leaving the bridge. It is not the span.",
+      "plan_length_m": 1599.9,
+      "tags": {
+        "name": "Valley Line",
+        "railway": "construction"
+      },
+      "nodes": [
+        [
+          53.547788,
+          -113.546373
+        ],
+        [
+          53.547732,
+          -113.546626
+        ],
+        [
+          53.54766,
+          -113.546877
+        ],
+        [
+          53.546808,
+          -113.549499
+        ],
+        [
+          53.545705,
+          -113.552954
+        ],
+        [
+          53.545154,
+          -113.554664
+        ],
+        [
+          53.545049,
+          -113.555016
+        ],
+        [
+          53.544925,
+          -113.555526
+        ],
+        [
+          53.543957,
+          -113.559819
+        ],
+        [
+          53.543682,
+          -113.561038
+        ],
+        [
+          53.543604,
+          -113.561384
+        ],
+        [
+          53.543476,
+          -113.561948
+        ],
+        [
+          53.543391,
+          -113.562377
+        ],
+        [
+          53.543322,
+          -113.562807
+        ],
+        [
+          53.543271,
+          -113.563251
+        ],
+        [
+          53.543239,
+          -113.563701
+        ],
+        [
+          53.543222,
+          -113.564069
+        ],
+        [
+          53.543148,
+          -113.56543
+        ],
+        [
+          53.54314,
+          -113.56566
+        ],
+        [
+          53.543135,
+          -113.565795
+        ],
+        [
+          53.543122,
+          -113.566113
+        ],
+        [
+          53.543098,
+          -113.566677
+        ],
+        [
+          53.543081,
+          -113.566917
+        ],
+        [
+          53.543063,
+          -113.567116
+        ],
+        [
+          53.543028,
+          -113.567387
+        ],
+        [
+          53.542962,
+          -113.56775
+        ],
+        [
+          53.542858,
+          -113.568224
+        ],
+        [
+          53.542797,
+          -113.568427
+        ],
+        [
+          53.542704,
+          -113.568737
+        ]
+      ],
+      "extract_role": "approach"
+    },
+    {
+      "osm_way": 1160377620,
+      "part": "lrt_approach",
+      "which": "Valley Line, railway construction. The far node is not a surveyed grade point. A Valley Line approach length is the mapped way leaving the bridge. It is not the span.",
+      "plan_length_m": 1602.0,
+      "tags": {
+        "name": "Valley Line",
+        "railway": "construction"
+      },
+      "nodes": [
+        [
+          53.542668,
+          -113.568706
+        ],
+        [
+          53.542766,
+          -113.568375
+        ],
+        [
+          53.542843,
+          -113.568108
+        ],
+        [
+          53.542926,
+          -113.56772
+        ],
+        [
+          53.542983,
+          -113.567414
+        ],
+        [
+          53.543022,
+          -113.567131
+        ],
+        [
+          53.543044,
+          -113.566924
+        ],
+        [
+          53.543057,
+          -113.566717
+        ],
+        [
+          53.54306,
+          -113.56668
+        ],
+        [
+          53.543081,
+          -113.566109
+        ],
+        [
+          53.543093,
+          -113.565794
+        ],
+        [
+          53.543099,
+          -113.56566
+        ],
+        [
+          53.543108,
+          -113.565426
+        ],
+        [
+          53.543182,
+          -113.564065
+        ],
+        [
+          53.543193,
+          -113.563692
+        ],
+        [
+          53.543227,
+          -113.563239
+        ],
+        [
+          53.543274,
+          -113.562823
+        ],
+        [
+          53.543277,
+          -113.56279
+        ],
+        [
+          53.543347,
+          -113.562348
+        ],
+        [
+          53.543436,
+          -113.56192
+        ],
+        [
+          53.54353,
+          -113.561503
+        ],
+        [
+          53.54364,
+          -113.561011
+        ],
+        [
+          53.543909,
+          -113.55982
+        ],
+        [
+          53.544883,
+          -113.555496
+        ],
+        [
+          53.545006,
+          -113.554982
+        ],
+        [
+          53.545114,
+          -113.554629
+        ],
+        [
+          53.545666,
+          -113.552919
+        ],
+        [
+          53.546762,
+          -113.5495
+        ],
+        [
+          53.547624,
+          -113.546849
+        ],
+        [
+          53.547697,
+          -113.546575
+        ],
+        [
+          53.547756,
+          -113.546316
+        ]
+      ],
+      "extract_role": "approach"
+    },
+    {
+      "osm_way": 1221236007,
+      "part": "lrt_approach",
+      "which": "Valley Line, railway construction. The far node is not a surveyed grade point. A Valley Line approach length is the mapped way leaving the bridge. It is not the span.",
+      "plan_length_m": 2603.7,
+      "tags": {
+        "maxspeed": "50",
+        "name": "Valley Line",
+        "railway": "construction"
+      },
+      "nodes": [
+        [
+          53.547889,
+          -113.545466
+        ],
+        [
+          53.547913,
+          -113.545155
+        ],
+        [
+          53.547921,
+          -113.54498
+        ],
+        [
+          53.547922,
+          -113.54482
+        ],
+        [
+          53.547922,
+          -113.544648
+        ],
+        [
+          53.547911,
+          -113.544446
+        ],
+        [
+          53.547894,
+          -113.544256
+        ],
+        [
+          53.547665,
+          -113.54224
+        ],
+        [
+          53.54761,
+          -113.541769
+        ],
+        [
+          53.546268,
+          -113.531141
+        ],
+        [
+          53.546246,
+          -113.53096
+        ],
+        [
+          53.546226,
+          -113.530736
+        ],
+        [
+          53.546212,
+          -113.530514
+        ],
+        [
+          53.5462,
+          -113.530301
+        ],
+        [
+          53.546194,
+          -113.530141
+        ],
+        [
+          53.546189,
+          -113.529907
+        ],
+        [
+          53.546189,
+          -113.529694
+        ],
+        [
+          53.546217,
+          -113.506399
+        ]
+      ],
+      "extract_role": "approach"
+    },
+    {
+      "osm_way": 1248168351,
+      "part": "approach_road",
+      "which": "Stony Plain Road NW, secondary, 4 lanes, one-way. The far node is not a surveyed grade point. A Valley Line approach length is the mapped way leaving the bridge. It is not the span.",
+      "plan_length_m": 67.1,
+      "tags": {
+        "highway": "secondary",
+        "lanes": "4",
+        "maxspeed": "50",
+        "name": "Stony Plain Road NW",
+        "oneway": "yes",
+        "surface": "asphalt"
+      },
+      "nodes": [
+        [
+          53.548001,
+          -113.544557
+        ],
+        [
+          53.548006,
+          -113.544678
+        ],
+        [
+          53.548006,
+          -113.544762
+        ],
+        [
+          53.548005,
+          -113.544878
+        ],
+        [
+          53.548002,
+          -113.54501
+        ],
+        [
+          53.547995,
+          -113.545152
+        ],
+        [
+          53.547983,
+          -113.545316
+        ],
+        [
+          53.547959,
+          -113.545566
+        ]
+      ],
+      "extract_role": "approach"
+    },
+    {
+      "osm_way": 1308960173,
+      "part": "lrt_approach",
+      "which": "Valley Line, railway construction. The far node is not a surveyed grade point. A Valley Line approach length is the mapped way leaving the bridge. It is not the span.",
+      "plan_length_m": 2608.0,
+      "tags": {
+        "maxspeed": "50",
+        "name": "Valley Line",
+        "railway": "construction"
+      },
+      "nodes": [
+        [
+          53.546248,
+          -113.506397
+        ],
+        [
+          53.54624,
+          -113.513005
+        ],
+        [
+          53.546238,
+          -113.514717
+        ],
+        [
+          53.546221,
+          -113.529695
+        ],
+        [
+          53.546224,
+          -113.529886
+        ],
+        [
+          53.546229,
+          -113.530214
+        ],
+        [
+          53.546248,
+          -113.530557
+        ],
+        [
+          53.546262,
+          -113.530744
+        ],
+        [
+          53.546279,
+          -113.530926
+        ],
+        [
+          53.546301,
+          -113.53112
+        ],
+        [
+          53.547654,
+          -113.541747
+        ],
+        [
+          53.547712,
+          -113.542224
+        ],
+        [
+          53.547904,
+          -113.543894
+        ],
+        [
+          53.547926,
+          -113.544117
+        ],
+        [
+          53.547948,
+          -113.544365
+        ],
+        [
+          53.54796,
+          -113.544574
+        ],
+        [
+          53.547961,
+          -113.544814
+        ],
+        [
+          53.547958,
+          -113.545031
+        ],
+        [
+          53.547947,
+          -113.545245
+        ],
+        [
+          53.547923,
+          -113.545525
+        ]
+      ],
+      "extract_role": "approach"
+    },
+    {
+      "osm_way": 1352501163,
+      "part": "approach_road",
+      "which": "Stony Plain Road NW, secondary, 1 lanes, one-way. The far node is not a surveyed grade point. A Valley Line approach length is the mapped way leaving the bridge. It is not the span.",
+      "plan_length_m": 134.4,
+      "tags": {
+        "highway": "secondary",
+        "lanes": "1",
+        "maxspeed": "50",
+        "name": "Stony Plain Road NW",
+        "oneway": "yes"
+      },
+      "nodes": [
+        [
+          53.547845,
+          -113.545424
+        ],
+        [
+          53.54787,
+          -113.545076
+        ],
+        [
+          53.547876,
+          -113.5449
+        ],
+        [
+          53.547876,
+          -113.544697
+        ],
+        [
+          53.547873,
+          -113.544524
+        ],
+        [
+          53.547821,
+          -113.543757
+        ],
+        [
+          53.547836,
+          -113.5434
+        ]
+      ],
+      "extract_role": "approach"
+    },
+    {
+      "osm_way": 37749243,
+      "part": "under_groat_road",
+      "which": "Groat Road NW, secondary, 2 lanes, one-way. The road under the deck. It is not an approach and not a climb. Groat Road under Stony Plain Road. The way continues past this bridge.",
+      "plan_length_m": 1124.7,
+      "tags": {
+        "highway": "secondary",
+        "lanes": "2",
+        "maxspeed": "50",
+        "name": "Groat Road NW",
+        "oneway": "yes",
+        "surface": "asphalt"
+      },
+      "nodes": [
+        [
+          53.540048,
+          -113.538247
+        ],
+        [
+          53.540112,
+          -113.538392
+        ],
+        [
+          53.540145,
+          -113.538491
+        ],
+        [
+          53.540178,
+          -113.538597
+        ],
+        [
+          53.540235,
+          -113.538813
+        ],
+        [
+          53.540264,
+          -113.538921
+        ],
+        [
+          53.540485,
+          -113.539972
+        ],
+        [
+          53.540549,
+          -113.540218
+        ],
+        [
+          53.540669,
+          -113.540532
+        ],
+        [
+          53.54075,
+          -113.540695
+        ],
+        [
+          53.540831,
+          -113.540811
+        ],
+        [
+          53.540916,
+          -113.540925
+        ],
+        [
+          53.540982,
+          -113.541005
+        ],
+        [
+          53.541056,
+          -113.541073
+        ],
+        [
+          53.541133,
+          -113.541132
+        ],
+        [
+          53.541228,
+          -113.541193
+        ],
+        [
+          53.541301,
+          -113.54123
+        ],
+        [
+          53.541388,
+          -113.541259
+        ],
+        [
+          53.541462,
+          -113.541275
+        ],
+        [
+          53.541541,
+          -113.541288
+        ],
+        [
+          53.541636,
+          -113.541287
+        ],
+        [
+          53.541733,
+          -113.541274
+        ],
+        [
+          53.541787,
+          -113.541262
+        ],
+        [
+          53.541848,
+          -113.541239
+        ],
+        [
+          53.541908,
+          -113.54121
+        ],
+        [
+          53.54197,
+          -113.541186
+        ],
+        [
+          53.542028,
+          -113.541152
+        ],
+        [
+          53.542095,
+          -113.541096
+        ],
+        [
+          53.542153,
+          -113.541049
+        ],
+        [
+          53.542226,
+          -113.54097
+        ],
+        [
+          53.542491,
+          -113.540662
+        ],
+        [
+          53.542553,
+          -113.540592
+        ],
+        [
+          53.542612,
+          -113.540527
+        ],
+        [
+          53.542674,
+          -113.540468
+        ],
+        [
+          53.54274,
+          -113.540413
+        ],
+        [
+          53.542828,
+          -113.540356
+        ],
+        [
+          53.542876,
+          -113.540332
+        ],
+        [
+          53.543039,
+          -113.540288
+        ],
+        [
+          53.543148,
+          -113.54028
+        ],
+        [
+          53.54352,
+          -113.540311
+        ],
+        [
+          53.543663,
+          -113.540337
+        ],
+        [
+          53.543796,
+          -113.540384
+        ],
+        [
+          53.543931,
+          -113.540462
+        ],
+        [
+          53.544053,
+          -113.540557
+        ],
+        [
+          53.544175,
+          -113.540685
+        ],
+        [
+          53.544286,
+          -113.54083
+        ],
+        [
+          53.544375,
+          -113.540961
+        ],
+        [
+          53.544467,
+          -113.541158
+        ],
+        [
+          53.544555,
+          -113.541383
+        ],
+        [
+          53.544606,
+          -113.541529
+        ],
+        [
+          53.544659,
+          -113.541684
+        ],
+        [
+          53.544715,
+          -113.541839
+        ],
+        [
+          53.544777,
+          -113.541991
+        ],
+        [
+          53.544851,
+          -113.542117
+        ],
+        [
+          53.544916,
+          -113.542212
+        ],
+        [
+          53.544986,
+          -113.542292
+        ],
+        [
+          53.545058,
+          -113.542354
+        ],
+        [
+          53.545141,
+          -113.542405
+        ],
+        [
+          53.545233,
+          -113.542454
+        ],
+        [
+          53.545527,
+          -113.542597
+        ],
+        [
+          53.545601,
+          -113.542653
+        ],
+        [
+          53.545666,
+          -113.542712
+        ],
+        [
+          53.545732,
+          -113.542783
+        ],
+        [
+          53.545791,
+          -113.542856
+        ],
+        [
+          53.545845,
+          -113.542937
+        ],
+        [
+          53.545902,
+          -113.543052
+        ],
+        [
+          53.545935,
+          -113.543132
+        ],
+        [
+          53.545988,
+          -113.54328
+        ],
+        [
+          53.54606,
+          -113.543535
+        ],
+        [
+          53.546154,
+          -113.54389
+        ],
+        [
+          53.546192,
+          -113.544013
+        ],
+        [
+          53.546234,
+          -113.544122
+        ],
+        [
+          53.546278,
+          -113.544206
+        ],
+        [
+          53.54632,
+          -113.544279
+        ],
+        [
+          53.546391,
+          -113.544382
+        ],
+        [
+          53.546453,
+          -113.54445
+        ],
+        [
+          53.546524,
+          -113.54452
+        ],
+        [
+          53.546615,
+          -113.54458
+        ],
+        [
+          53.546702,
+          -113.544627
+        ],
+        [
+          53.546918,
+          -113.544744
+        ],
+        [
+          53.546983,
+          -113.544781
+        ],
+        [
+          53.547041,
+          -113.544816
+        ],
+        [
+          53.547124,
+          -113.544887
+        ],
+        [
+          53.547186,
+          -113.544949
+        ],
+        [
+          53.547711,
+          -113.545593
+        ]
+      ],
+      "extract_role": "cross_road"
+    },
+    {
+      "osm_way": 521661798,
+      "part": "under_groat_road",
+      "which": "Groat Road NW, secondary, 2 lanes, one-way. The road under the deck. It is not an approach and not a climb. Groat Road under Stony Plain Road. The way continues past this bridge.",
+      "plan_length_m": 122.6,
+      "tags": {
+        "highway": "secondary",
+        "lanes": "2",
+        "maxspeed": "60",
+        "name": "Groat Road NW",
+        "oneway": "yes",
+        "surface": "asphalt"
+      },
+      "nodes": [
+        [
+          53.547711,
+          -113.545593
+        ],
+        [
+          53.547812,
+          -113.545715
+        ],
+        [
+          53.547941,
+          -113.545876
+        ],
+        [
+          53.548116,
+          -113.546079
+        ],
+        [
+          53.5482,
+          -113.546191
+        ],
+        [
+          53.548278,
+          -113.546309
+        ],
+        [
+          53.548433,
+          -113.546559
+        ],
+        [
+          53.548552,
+          -113.54678
+        ]
+      ],
+      "extract_role": "cross_road"
+    },
+    {
+      "osm_way": 521661800,
+      "part": "under_groat_road",
+      "which": "Groat Road NW, secondary, 2 lanes, one-way. The road under the deck. It is not an approach and not a climb. Groat Road under Stony Plain Road. The way continues past this bridge.",
+      "plan_length_m": 274.8,
+      "tags": {
+        "highway": "secondary",
+        "lanes": "2",
+        "maxspeed": "60",
+        "name": "Groat Road NW",
+        "oneway": "yes",
+        "surface": "asphalt"
+      },
+      "nodes": [
+        [
+          53.548236,
+          -113.546427
+        ],
+        [
+          53.548158,
+          -113.546311
+        ],
+        [
+          53.548091,
+          -113.546214
+        ],
+        [
+          53.548001,
+          -113.546104
+        ],
+        [
+          53.547922,
+          -113.546011
+        ],
+        [
+          53.547784,
+          -113.545838
+        ],
+        [
+          53.547611,
+          -113.545627
+        ],
+        [
+          53.547147,
+          -113.545059
+        ],
+        [
+          53.547066,
+          -113.544983
+        ],
+        [
+          53.546998,
+          -113.544928
+        ],
+        [
+          53.546935,
+          -113.544885
+        ],
+        [
+          53.546865,
+          -113.54485
+        ],
+        [
+          53.546715,
+          -113.544771
+        ],
+        [
+          53.546577,
+          -113.5447
+        ],
+        [
+          53.546504,
+          -113.544648
+        ],
+        [
+          53.54645,
+          -113.544605
+        ],
+        [
+          53.546397,
+          -113.54456
+        ],
+        [
+          53.546329,
+          -113.544468
+        ],
+        [
+          53.546275,
+          -113.544391
+        ],
+        [
+          53.546221,
+          -113.544297
+        ],
+        [
+          53.546183,
+          -113.54421
+        ]
+      ],
+      "extract_role": "cross_road"
+    },
+    {
+      "osm_way": 1102766309,
+      "part": "under_groat_road",
+      "which": "Groat Road NW, secondary, 2 lanes, one-way. The road under the deck. It is not an approach and not a climb. Groat Road under Stony Plain Road. The way continues past this bridge.",
+      "plan_length_m": 99.3,
+      "tags": {
+        "highway": "secondary",
+        "lanes": "2",
+        "maxspeed": "60",
+        "name": "Groat Road NW",
+        "oneway": "yes",
+        "surface": "asphalt"
+      },
+      "nodes": [
+        [
+          53.5488,
+          -113.547587
+        ],
+        [
+          53.548499,
+          -113.546904
+        ],
+        [
+          53.548363,
+          -113.546649
+        ],
+        [
+          53.548236,
+          -113.546427
+        ]
+      ],
+      "extract_role": "cross_road"
+    }
+  ],
+  "excluded": [
+    {
+      "osm_way": 431905418,
+      "reason": "Lover's Lane, path. Not the deck. Horizontal length 853.9 m."
+    },
+    {
+      "osm_way": 1229761593,
+      "reason": "unnamed, cycleway. Not the deck. Horizontal length 19.1 m."
+    },
+    {
+      "osm_way": 1248168352,
+      "reason": "unnamed, footway. Not the deck. Horizontal length 61.3 m."
+    },
+    {
+      "osm_way": 1271662332,
+      "reason": "unnamed, footway. Not the deck. Horizontal length 97.0 m."
+    },
+    {
+      "osm_way": 1537071890,
+      "reason": "unnamed, cycleway. Not the deck. Horizontal length 55.4 m."
+    },
+    {
+      "osm_way": 23238024,
+      "reason": "Stony Plain Road NW, secondary, 1 lanes, one-way, width tag 4, which is not a published width. Not the deck. Horizontal length 1062.3 m."
+    },
+    {
+      "osm_way": 31678485,
+      "reason": "Connaught Drive NW, residential, 2 lanes. Not the deck. Horizontal length 681.5 m."
+    }
+  ],
+  "dimensions": {
+    "structural_type": "Single span, no piers. Reference design: steel haunched girder. Steel girders were set in August 2023. Integral abutments. Full-depth cast-in-place deck. Trackway slab separate from the deck.",
+    "model": "finished bridge",
+    "old_span": "G118, not modeled",
+    "alberta_file_old_bridge": "B055",
+    "old_bridge_year_alberta": 1954,
+    "span_count": 1,
+    "pier_count": 0,
+    "minimum_span_length_m": 46,
+    "minimum_span_length_status": "Project agreement requirement. Not an as-built length.",
+    "shorter_than_existing_by_about_m": 8,
+    "shorter_than_existing_status": "EIA comparison. Not a span length. Not subtracted from a mapped length.",
+    "minimum_clearance_over_groat_road_m": 6,
+    "minimum_clearance_status": "Project agreement requirement. Not a deck elevation. The EIA says the vertical clearance under the replacement remains the same as the existing bridge and does not give that height.",
+    "reference_design_width_m": 25.4,
+    "existing_width_m_eia": 18.4,
+    "north_sidewalk_minimum_m": 4.2,
+    "south_sup_minimum_m": 4.2,
+    "site_study_two_sidewalks_m": 4.2,
+    "lane_width_minimum_m": 4.0,
+    "acp_minimum_mm": 80,
+    "abutment_seat_height_maximum_m": 1.2,
+    "longitudinal_grade_minimum": "0.5 percent",
+    "transverse_grade_minimum": "2 percent away from the centre unless superelevated",
+    "deck_elevation_asl_m": null,
+    "girder_depth_m": null,
+    "girder_count": null,
+    "each_girder_mass_kg": 78000,
+    "lanes_each_way_city": 1,
+    "lanes_tag_on_each_road_way": 2,
+    "old_wildlife_bench_clearance_under_old_girders_m": 4.0,
+    "old_wildlife_bench_note": "EIA description of the old bridge's west abutment bench. Not the roadway clearance and not the new bridge."
+  }
+}

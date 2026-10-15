@@ -1,0 +1,515 @@
+{
+  "code": "G119",
+  "name": "107 Avenue at Groat Road",
+  "centre": [
+    53.551,
+    -113.5498
+  ],
+  "crs": "EPSG:4326",
+  "coordinate_order": "[lat, lon]",
+  "geometry_source": "docs/edmonton-bridges/bridge-geometry.json",
+  "geometry_retrieved": "2026-10-14",
+  "plan_length_note": "plan_length_m is the horizontal length of that OSM way, WGS84 haversine with radius 6378137 m, rounded to one decimal. It is not a climb and not a structural length. An approach plan_length_m stops at the far node stored in the extract. That node is not a surveyed grade point. The two carriageway plan lengths are not a published structure length. No published length was found.",
+  "dropped_note": "Two carriageways of 107 Avenue over Groat Road, Glenora Overpass, Alberta file B097. Not the river span. River-span lengths, the river path width, and the river-pier notes are not copied. The maxheight tags on Groat Road underneath are not copied onto the deck as an elevation.",
+  "decks": [
+    {
+      "osm_way": 22928017,
+      "part": "road_deck",
+      "which": "South carriageway, 107 Avenue NW, two lanes, one-way, asphalt, layer 1, 50 km/h. Node order is west to east, so the one-way is eastbound. A live read also has hgv=designated. That tag is not a deck elevation. No published structure length was found. This centreline is the plan shape.",
+      "plan_length_m": 75.8,
+      "tags": {
+        "bridge": "yes",
+        "highway": "secondary",
+        "lanes": "2",
+        "layer": "1",
+        "maxspeed": "50",
+        "name": "107 Avenue NW",
+        "oneway": "yes",
+        "surface": "asphalt"
+      },
+      "nodes": [
+        [
+          53.550914,
+          -113.550336
+        ],
+        [
+          53.550913,
+          -113.54919
+        ]
+      ]
+    },
+    {
+      "osm_way": 114768445,
+      "part": "sidewalk",
+      "which": "South footway, foot yes, surface concrete, layer 1. It lies south of the south carriageway.",
+      "plan_length_m": 74.1,
+      "tags": {
+        "bridge": "yes",
+        "foot": "yes",
+        "highway": "footway",
+        "layer": "1",
+        "surface": "concrete"
+      },
+      "nodes": [
+        [
+          53.55083,
+          -113.550264
+        ],
+        [
+          53.550829,
+          -113.549143
+        ]
+      ]
+    },
+    {
+      "osm_way": 158414123,
+      "part": "road_deck",
+      "which": "North carriageway, 107 Avenue NW, two lanes, one-way, asphalt, layer 1, 50 km/h. Node order is east to west, so the one-way is westbound. A live read also has hgv=designated, sidewalk:left=no, sidewalk:right=separate. A second carriageway, not a second bridge. No published structure length was found.",
+      "plan_length_m": 75.3,
+      "tags": {
+        "bridge": "yes",
+        "highway": "secondary",
+        "lanes": "2",
+        "layer": "1",
+        "maxspeed": "50",
+        "name": "107 Avenue NW",
+        "oneway": "yes",
+        "surface": "asphalt"
+      },
+      "nodes": [
+        [
+          53.551054,
+          -113.549275
+        ],
+        [
+          53.551054,
+          -113.550414
+        ]
+      ]
+    },
+    {
+      "osm_way": 159377842,
+      "part": "sidewalk",
+      "which": "North footway, foot yes, surface concrete, layer 1. It lies north of the north carriageway.",
+      "plan_length_m": 75.5,
+      "tags": {
+        "bridge": "yes",
+        "foot": "yes",
+        "highway": "footway",
+        "layer": "1",
+        "surface": "concrete"
+      },
+      "nodes": [
+        [
+          53.551134,
+          -113.550459
+        ],
+        [
+          53.551134,
+          -113.549318
+        ]
+      ]
+    },
+    {
+      "osm_way": 1510405388,
+      "part": "outline",
+      "which": "Closed ring, bridge:structure=beam, layer 1. No name. plan_length_m is the perimeter. It is not a span length. The edge lengths are the mapped ring. They are not a published width.",
+      "plan_length_m": 224.7,
+      "tags": {
+        "bridge": "yes",
+        "bridge:structure": "beam",
+        "layer": "1",
+        "man_made": "bridge"
+      },
+      "nodes": [
+        [
+          53.550816,
+          -113.550262
+        ],
+        [
+          53.550815,
+          -113.549148
+        ],
+        [
+          53.551144,
+          -113.549339
+        ],
+        [
+          53.551144,
+          -113.550453
+        ],
+        [
+          53.550816,
+          -113.550262
+        ]
+      ]
+    }
+  ],
+  "approaches": [
+    {
+      "osm_way": 472632840,
+      "part": "approach_road",
+      "which": "107 Avenue NW, secondary, 2 lanes, one-way. The far node is not a surveyed grade point.",
+      "plan_length_m": 21.4,
+      "tags": {
+        "highway": "secondary",
+        "lanes": "2",
+        "maxspeed": "50",
+        "name": "107 Avenue NW",
+        "oneway": "yes",
+        "surface": "asphalt"
+      },
+      "nodes": [
+        [
+          53.550913,
+          -113.54919
+        ],
+        [
+          53.550911,
+          -113.548866
+        ]
+      ],
+      "extract_role": "approach"
+    },
+    {
+      "osm_way": 472632842,
+      "part": "approach_road",
+      "which": "107 Avenue NW, secondary, 2 lanes, one-way. The far node is not a surveyed grade point.",
+      "plan_length_m": 7.5,
+      "tags": {
+        "highway": "secondary",
+        "lanes": "2",
+        "maxspeed": "50",
+        "name": "107 Avenue NW",
+        "oneway": "yes",
+        "surface": "asphalt"
+      },
+      "nodes": [
+        [
+          53.550914,
+          -113.550449
+        ],
+        [
+          53.550914,
+          -113.550336
+        ]
+      ],
+      "extract_role": "approach"
+    },
+    {
+      "osm_way": 472632845,
+      "part": "approach_road",
+      "which": "107 Avenue NW, secondary, 2 lanes, one-way. The far node is not a surveyed grade point.",
+      "plan_length_m": 5.1,
+      "tags": {
+        "highway": "secondary",
+        "lanes": "2",
+        "maxspeed": "50",
+        "name": "107 Avenue NW",
+        "oneway": "yes",
+        "surface": "asphalt"
+      },
+      "nodes": [
+        [
+          53.551054,
+          -113.550414
+        ],
+        [
+          53.551053,
+          -113.550491
+        ]
+      ],
+      "extract_role": "approach"
+    },
+    {
+      "osm_way": 472632850,
+      "part": "approach_road",
+      "which": "107 Avenue NW, secondary, 2 lanes, one-way. The far node is not a surveyed grade point.",
+      "plan_length_m": 22.3,
+      "tags": {
+        "highway": "secondary",
+        "lanes": "2",
+        "maxspeed": "50",
+        "name": "107 Avenue NW",
+        "oneway": "yes",
+        "surface": "asphalt"
+      },
+      "nodes": [
+        [
+          53.551056,
+          -113.548938
+        ],
+        [
+          53.551054,
+          -113.549275
+        ]
+      ],
+      "extract_role": "approach"
+    },
+    {
+      "osm_way": 98093800,
+      "part": "under_groat_road",
+      "which": "Groat Road NW, secondary, 2 lanes, one-way, maxheight tag 4.8, which is not a deck elevation. The road under the deck. It is not an approach and not a climb. Groat Road under 107 Avenue. maxheight tags 4.8 and 4.9 are on these ways. No published source found states either number. They are not a deck elevation.",
+      "plan_length_m": 611.2,
+      "tags": {
+        "foot": "no",
+        "highway": "secondary",
+        "lanes": "2",
+        "maxheight": "4.8",
+        "maxspeed": "60",
+        "name": "Groat Road NW",
+        "oneway": "yes",
+        "sidewalk": "no",
+        "surface": "asphalt"
+      },
+      "nodes": [
+        [
+          53.553775,
+          -113.550899
+        ],
+        [
+          53.553561,
+          -113.550887
+        ],
+        [
+          53.553163,
+          -113.550822
+        ],
+        [
+          53.552903,
+          -113.550771
+        ],
+        [
+          53.552602,
+          -113.55068
+        ],
+        [
+          53.552297,
+          -113.550579
+        ],
+        [
+          53.55189,
+          -113.550408
+        ],
+        [
+          53.551447,
+          -113.550172
+        ],
+        [
+          53.550595,
+          -113.549621
+        ],
+        [
+          53.550207,
+          -113.549336
+        ],
+        [
+          53.549726,
+          -113.548961
+        ],
+        [
+          53.549426,
+          -113.548661
+        ],
+        [
+          53.549134,
+          -113.548271
+        ],
+        [
+          53.5488,
+          -113.547587
+        ]
+      ],
+      "extract_role": "cross_road"
+    },
+    {
+      "osm_way": 157319879,
+      "part": "under_groat_road",
+      "which": "Groat Road NW, secondary, 2 lanes, one-way, maxheight tag 4.9, which is not a deck elevation. The road under the deck. It is not an approach and not a climb. Groat Road under 107 Avenue. maxheight tags 4.8 and 4.9 are on these ways. No published source found states either number. They are not a deck elevation.",
+      "plan_length_m": 614.5,
+      "tags": {
+        "foot": "no",
+        "highway": "secondary",
+        "lanes": "2",
+        "maxheight": "4.9",
+        "maxspeed": "60",
+        "name": "Groat Road NW",
+        "oneway": "yes",
+        "sidewalk": "no",
+        "surface": "asphalt"
+      },
+      "nodes": [
+        [
+          53.548552,
+          -113.54678
+        ],
+        [
+          53.548951,
+          -113.547703
+        ],
+        [
+          53.549196,
+          -113.548162
+        ],
+        [
+          53.549445,
+          -113.548516
+        ],
+        [
+          53.549816,
+          -113.548876
+        ],
+        [
+          53.550302,
+          -113.549258
+        ],
+        [
+          53.550694,
+          -113.549546
+        ],
+        [
+          53.551547,
+          -113.55009
+        ],
+        [
+          53.55195,
+          -113.550286
+        ],
+        [
+          53.552186,
+          -113.550391
+        ],
+        [
+          53.552405,
+          -113.550471
+        ],
+        [
+          53.552699,
+          -113.550569
+        ],
+        [
+          53.552947,
+          -113.550636
+        ],
+        [
+          53.553157,
+          -113.550687
+        ],
+        [
+          53.55335,
+          -113.550719
+        ]
+      ],
+      "extract_role": "cross_road"
+    }
+  ],
+  "excluded": [
+    {
+      "osm_way": 114768443,
+      "reason": "unnamed, footway. Not the deck. Horizontal length 53.6 m."
+    },
+    {
+      "osm_way": 114768444,
+      "reason": "unnamed, footway. Not the deck. Horizontal length 84.4 m."
+    },
+    {
+      "osm_way": 159377828,
+      "reason": "unnamed, footway. Not the deck. Horizontal length 225.1 m."
+    },
+    {
+      "osm_way": 159377831,
+      "reason": "unnamed, footway. Not the deck. Horizontal length 13.2 m."
+    },
+    {
+      "osm_way": 31675151,
+      "reason": "unnamed, secondary_link, 1 lanes, one-way. Not the deck. Horizontal length 136.4 m."
+    },
+    {
+      "osm_way": 31686506,
+      "reason": "unnamed, secondary_link, 1 lanes, one-way. Not the deck. Horizontal length 114.8 m."
+    },
+    {
+      "osm_way": 106605033,
+      "reason": "unnamed, secondary_link, 1 lanes, one-way. Not the deck. Horizontal length 197.1 m."
+    },
+    {
+      "osm_way": 106605036,
+      "reason": "unnamed, secondary_link, 1 lanes, one-way. Not the deck. Horizontal length 67.9 m."
+    },
+    {
+      "osm_way": 106605099,
+      "reason": "unnamed, secondary_link, 2 lanes, one-way. Not the deck. Horizontal length 52.5 m."
+    },
+    {
+      "osm_way": 106605199,
+      "reason": "unnamed, secondary_link, 1 lanes, one-way. Not the deck. Horizontal length 97.5 m."
+    },
+    {
+      "osm_way": 106605255,
+      "reason": "unnamed, secondary_link, 2 lanes, one-way. Not the deck. Horizontal length 103.0 m."
+    },
+    {
+      "osm_way": 472632839,
+      "reason": "107 Avenue NW, secondary, 2 lanes, one-way. Not the deck. Horizontal length 51.5 m."
+    },
+    {
+      "osm_way": 472632841,
+      "reason": "unnamed, secondary_link, 1 lanes, one-way. Not the deck. Horizontal length 69.6 m."
+    },
+    {
+      "osm_way": 472632843,
+      "reason": "107 Avenue NW, secondary, 3 lanes, one-way. Not the deck. Horizontal length 90.6 m."
+    },
+    {
+      "osm_way": 472632844,
+      "reason": "107 Avenue NW, secondary, 2 lanes, one-way. Not the deck. Horizontal length 46.0 m."
+    },
+    {
+      "osm_way": 472632846,
+      "reason": "unnamed, secondary_link, 2 lanes, one-way. Not the deck. Horizontal length 15.7 m."
+    },
+    {
+      "osm_way": 472632847,
+      "reason": "unnamed, secondary_link, 2 lanes, one-way. Not the deck. Horizontal length 76.7 m."
+    },
+    {
+      "osm_way": 472632849,
+      "reason": "unnamed, secondary_link, one-way. Not the deck. Horizontal length 16.8 m."
+    },
+    {
+      "osm_way": 472632851,
+      "reason": "107 Avenue NW, secondary, 2 lanes, one-way. Not the deck. Horizontal length 123.8 m."
+    }
+  ],
+  "dimensions": {
+    "structural_type": "Grade separation. Alberta's row prints GS 3. Full rehabilitation. One council table says construction was completed in 2021. Another says planned completion in 2022.",
+    "also_called": "Glenora Overpass",
+    "alberta_file": "B097",
+    "year_built": 1967,
+    "alberta_row_prints": "GS 3",
+    "span_count_printed_on_alberta_row": 3,
+    "span_lengths_m": null,
+    "published_length_m": null,
+    "published_width_m": null,
+    "deck_elevation_asl_m": null,
+    "clearance_over_groat_road_m": null,
+    "carriageways": 2,
+    "lanes_per_carriageway": 2,
+    "direction_south_carriageway": "eastbound",
+    "direction_north_carriageway": "westbound",
+    "posted_speed_kmh": 50,
+    "osm_centreline_end_separation_west_m": 16.4,
+    "osm_centreline_end_separation_east_m": 16.7,
+    "osm_centreline_separation_note": "Distance between the end nodes of the two road centrelines. Not a published width.",
+    "osm_maxheight_tags_on_groat_road": [
+      "4.8",
+      "4.9"
+    ],
+    "outline_edge_lengths_m": [
+      73.7,
+      38.7,
+      73.7,
+      38.6
+    ]
+  }
+}

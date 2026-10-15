@@ -1,0 +1,272 @@
+{
+  "code": "N259",
+  "name": "Rossdale Road over McDougall Hill",
+  "name_note": "The Edmonton Sun, 30 April 2013, lists Rossdale Road Bridge, and the body says the Rossdale bridge over MacDougall Drive. Global News, 30 April 2013, says the Rossdale Road Bridge over MacDougall Drive. Alberco says Rossdale Rd - McDougall Overpass Rehabilitation. The Montgomery biography says Rossdale/McDougall Overpass Rehabilitation. OpenStreetMap names the deck Rossdale Road NW and the road underneath McDougall Hill Road NW. No bridge:name tag. No R code is assigned. No City bridge number was found. B001 and B037 are the Low Level bridges.",
+  "centre": [
+    53.537724,
+    -113.493132
+  ],
+  "centre_note": "Midpoint along way 37120045, half the horizontal length, on coordinates read from the OpenStreetMap API on 2026-10-14. Rounded to 6 decimal places from 53.5377245, -113.4931324. Not a surveyed centre. The Grierson midpoint, 53.538564, -113.488789, is a different way. The horizontal distance between these two midpoints is 302.2 m. That distance is not a clearance.",
+  "crs": "EPSG:4326",
+  "coordinate_order": "[lat, lon]",
+  "geometry_source": "OpenStreetMap API, ways 37120045, 36610268, 37120044, 321190619, and 321190620, read 2026-10-14. Not in docs/edmonton-bridges/bridge-geometry.json.",
+  "geometry_retrieved": "2026-10-14",
+  "plan_length_note": "plan_length_m is the horizontal length of the way's nodes, WGS84 haversine with radius 6378137 m, rounded to one decimal. All of these ways were read from the OpenStreetMap API on 2026-10-14. Way 37120045 is 49.1 m. That is not a published structure length. An approach plan_length_m is not the climb to grade. No elevations are stored.",
+  "dropped_note": "The Grierson Hill Bridge, way 106711211, is not this span. It stays in the grierson geometry. The Low Level truss decks, ways 31882107 and 22916473, are not this span. They stay in the R13 geometry. McDougall Hill way 636183922 is the road under this deck. It was not copied. Way 113653301 is one-lane Rossdale Road. It meets the east end of way 636183922 and does not use this deck. Way 37120050 is 99 Avenue NW, past the southwest end. Way 697598858 has no tags. The funicular footbridge is not this span.",
+  "decks": [
+    {
+      "osm_way": 37120045,
+      "part": "road_deck",
+      "which": "Rossdale Road NW on the overpass. One-way, asphalt, 50 km/h, layer 1. No lanes tag, no width tag, no maxheight tag, no bridge:name, no bridge:structure. Node order is from the northeast to the southwest, so the one-way is westbound. This centreline is 49.1 m. No published structure length was found. The way crosses McDougall Hill Road way 636183922 and does not share a node with it. The maxheight tag 4.5 is on way 636183922. It is not a deck elevation.",
+      "plan_length_m": 49.1,
+      "tags": {
+        "bridge": "yes",
+        "expressway": "yes",
+        "hgv": "designated",
+        "highway": "tertiary",
+        "layer": "1",
+        "maxspeed": "50",
+        "name": "Rossdale Road NW",
+        "oneway": "yes",
+        "surface": "asphalt"
+      },
+      "nodes": [
+        [
+          53.537865,
+          -113.4928469
+        ],
+        [
+          53.5377277,
+          -113.4931258
+        ],
+        [
+          53.5375852,
+          -113.4934197
+        ]
+      ]
+    }
+  ],
+  "approaches": [
+    {
+      "osm_way": 36610268,
+      "part": "northeast_road",
+      "which": "Rossdale Road NW from the junction with McDougall Hill Road down to the northeast end of the deck. No lanes tag, one-way, asphalt, 50 km/h. Node order is toward the bridge. The far node is shared with McDougall Hill ways 303665639 and 1098987151. It is not a surveyed grade point.",
+      "plan_length_m": 85.1,
+      "source": "OpenStreetMap API, way 36610268, 2026-10-14. Not in bridge-geometry.json.",
+      "tags": {
+        "expressway": "yes",
+        "hgv": "designated",
+        "highway": "tertiary",
+        "maxspeed": "50",
+        "name": "Rossdale Road NW",
+        "oneway": "yes",
+        "surface": "asphalt"
+      },
+      "nodes": [
+        [
+          53.5382232,
+          -113.4917136
+        ],
+        [
+          53.5380713,
+          -113.492274
+        ],
+        [
+          53.5379815,
+          -113.4925563
+        ],
+        [
+          53.537865,
+          -113.4928469
+        ]
+      ]
+    },
+    {
+      "osm_way": 37120044,
+      "part": "southwest_road",
+      "which": "Rossdale Road NW off the southwest end of the deck, to the node where the name becomes 99 Avenue NW. No lanes tag, one-way, asphalt, 50 km/h. Node order is away from the bridge. The far node is the start of way 37120050. It is not a surveyed grade point.",
+      "plan_length_m": 40.0,
+      "source": "OpenStreetMap API, way 37120044, 2026-10-14. Not in bridge-geometry.json.",
+      "tags": {
+        "expressway": "yes",
+        "hgv": "designated",
+        "highway": "tertiary",
+        "maxspeed": "50",
+        "name": "Rossdale Road NW",
+        "oneway": "yes",
+        "surface": "asphalt"
+      },
+      "nodes": [
+        [
+          53.5375852,
+          -113.4934197
+        ],
+        [
+          53.5374694,
+          -113.4936342
+        ],
+        [
+          53.5373984,
+          -113.4937656
+        ],
+        [
+          53.5373567,
+          -113.4938829
+        ]
+      ]
+    },
+    {
+      "osm_way": 321190619,
+      "part": "southwest_link",
+      "which": "Unnamed tertiary link off the southwest end of the deck. One-way. No surface tag. Node order is away from the deck. The far node is also on way 321190620 and on 101 Street NW way 321190618. It is not a surveyed grade point.",
+      "plan_length_m": 24.4,
+      "source": "OpenStreetMap API, way 321190619, 2026-10-14. Not in bridge-geometry.json.",
+      "tags": {
+        "highway": "tertiary_link",
+        "oneway": "yes"
+      },
+      "nodes": [
+        [
+          53.5375852,
+          -113.4934197
+        ],
+        [
+          53.5375509,
+          -113.4935582
+        ],
+        [
+          53.5375467,
+          -113.4936573
+        ],
+        [
+          53.5375552,
+          -113.4937104
+        ],
+        [
+          53.5375708,
+          -113.4937693
+        ]
+      ]
+    },
+    {
+      "osm_way": 321190620,
+      "part": "southwest_link",
+      "which": "Unnamed tertiary link from the far node of way 321190619 back to a node of way 37120044, short of 99 Avenue. One-way, asphalt. Node order is toward the west approach. The end node is not a surveyed grade point.",
+      "plan_length_m": 19.5,
+      "source": "OpenStreetMap API, way 321190620, 2026-10-14. Not in bridge-geometry.json.",
+      "tags": {
+        "highway": "tertiary_link",
+        "oneway": "yes",
+        "surface": "asphalt"
+      },
+      "nodes": [
+        [
+          53.5375708,
+          -113.4937693
+        ],
+        [
+          53.5375362,
+          -113.4937493
+        ],
+        [
+          53.5375005,
+          -113.4937493
+        ],
+        [
+          53.5374626,
+          -113.4937528
+        ],
+        [
+          53.5373984,
+          -113.4937656
+        ]
+      ]
+    }
+  ],
+  "excluded": [
+    {
+      "osm_way": 106711211,
+      "reason": "Grierson Hill Bridge. Grierson Hill Road over McDougall Hill Road. Centre 53.538564, -113.488789. Not this span. It stays in the grierson geometry."
+    },
+    {
+      "osm_way": 31882107,
+      "reason": "1900 Low Level northbound deck. Not this span. It stays in the R13 geometry."
+    },
+    {
+      "osm_way": 22916473,
+      "reason": "1948/1949 Low Level southbound deck. Not this span. It stays in the R13 geometry."
+    },
+    {
+      "osm_way": 636183922,
+      "reason": "McDougall Hill Road NW under this deck. Two lanes, one-way, 165.5 m, maxheight tag 4.5. The deck crosses it and does not share a node with it. The maxheight tag is not a deck elevation. The way was not copied."
+    },
+    {
+      "osm_way": 113653301,
+      "reason": "Rossdale Road NW, one lane, 78.5 m. It meets the east end of McDougall way 636183922. It does not use way 37120045."
+    },
+    {
+      "osm_way": 303665639,
+      "reason": "McDougall Hill Road NW, two lanes, 164.4 m, from the northeast junction of way 36610268. Not this deck."
+    },
+    {
+      "osm_way": 1098987151,
+      "reason": "McDougall Hill Road NW, two lanes, 114.2 m, into the same northeast junction. Not this deck."
+    },
+    {
+      "osm_way": 37120050,
+      "reason": "99 Avenue NW, 54.1 m, from the southwest end of way 37120044. The name is not Rossdale Road. Not copied."
+    },
+    {
+      "osm_way": 321190618,
+      "reason": "101 Street NW. It meets link way 321190619. Not this deck."
+    },
+    {
+      "osm_way": 697598858,
+      "reason": "Untagged way, 105.7 m, from the southwest deck node to a McDougall Hill node. No highway tag on 2026-10-14. Not copied."
+    }
+  ],
+  "dimensions": {
+    "structural_type": "Road overpass. Alberco, June 2013: bridge rehabilitation, hydro-blasting a CIP deck, new curbs, abutment repairs. The page does not expand CIP. Girder, slab, or beam is not published.",
+    "crosses": "McDougall Hill Road",
+    "signed_name_news_2013": "Rossdale Road Bridge over MacDougall Drive",
+    "alberco_name": "Rossdale Rd - McDougall Overpass Rehabilitation",
+    "osm_name_on_deck": "Rossdale Road NW",
+    "osm_name_under_deck": "McDougall Hill Road NW",
+    "city_bridge_number": null,
+    "year_built": null,
+    "rehabilitation_completion_alberco": "June 2013",
+    "waze_reopened": "2013-06-25",
+    "contract_value_alberco_cad": 1400000,
+    "span_count": null,
+    "plan_length_m": 49.1,
+    "published_structure_length_m": null,
+    "width_m": null,
+    "lane_width_m": null,
+    "lanes": null,
+    "oneway": true,
+    "oneway_direction": "westbound, northeast to southwest, toward 99 Avenue",
+    "surface": "asphalt",
+    "pier_count": null,
+    "pier_height_m": null,
+    "pier_type": null,
+    "abutment_form": null,
+    "abutment_note": "Alberco says abutment repairs. A count is not given.",
+    "deck_thickness_m": null,
+    "deck_elevation_asl_m": null,
+    "soffit_elevation_asl_m": null,
+    "vertical_datum": null,
+    "clearance_under_deck_m": null,
+    "osm_maxheight_on_this_way": null,
+    "osm_maxheight_on_way_636183922": "4.5",
+    "osm_width_on_this_way": null,
+    "osm_maxheight_is_deck_elevation": false,
+    "osm_maxheight_is_published_clearance": false,
+    "crossfall": null,
+    "longitudinal_grade": null,
+    "northeast_approach_gradient": null,
+    "northeast_approach_meets_grade": null,
+    "southwest_approach_gradient": null,
+    "southwest_approach_meets_grade": null,
+    "posted_speed_kmh_osm_tag": 50
+  }
+}

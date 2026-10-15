@@ -220,62 +220,63 @@ LRT_STRUCTURES = [
     ("T136", "Walker Bridge", 53.586, -113.515, "proposed"),
 ]
 
-# name, lat, lon, kind. kind is open, elevated, built, construction, or proposed.
+# code, name, lat, lon, kind. kind is open, elevated, built, construction, or proposed.
 # Elevated stations are open or under construction and sit on a viaduct.
+# P codes match lrt.md. They are not bridge numbers.
 LRT_STATIONS = [
-    ("Clareview", 53.60177, -113.41142, "open"),
-    ("Belvedere", 53.58805, -113.43348, "open"),
-    ("Coliseum", 53.57068, -113.45838, "open"),
-    ("Stadium", 53.55995, -113.47071, "open"),
-    ("Churchill", 53.54377, -113.48904, "open"),
-    ("Health Sciences", 53.52006, -113.52589, "open"),
-    ("McKernan", 53.51308, -113.52619, "open"),
-    ("South Campus", 53.50287, -113.52842, "open"),
-    ("Southgate", 53.48576, -113.51678, "open"),
-    ("Century Park", 53.45731, -113.51637, "open"),
-    ("Kingsway", 53.55803, -113.50147, "open"),
-    ("NAIT", 53.56695, -113.50909, "open"),
-    ("Blatchford Gate", 53.57695, -113.51041, "built"),
-    ("102 Street", 53.54317, -113.49524, "open"),
-    ("Quarters", 53.54440, -113.48405, "open"),
-    ("Muttart", 53.53621, -113.48000, "open"),
-    ("Strathearn", 53.53171, -113.46231, "open"),
-    ("Holyrood", 53.52751, -113.45740, "open"),
-    ("Bonnie Doon", 53.51981, -113.45538, "open"),
-    ("Avonmore", 53.51046, -113.45508, "open"),
-    ("Davies", 53.49988, -113.44415, "elevated"),
-    ("Millbourne", 53.47469, -113.43896, "open"),
-    ("Grey Nuns", 53.46243, -113.43451, "open"),
-    ("Mill Woods", 53.45839, -113.43097, "open"),
-    ("Lewis Farms", 53.5228, -113.6679, "construction"),
-    ("Aldergrove", 53.5213, -113.648, "construction"),
-    ("WEM", 53.5206, -113.624, "elevated-build"),
-    ("Misericordia", 53.5197, -113.613, "elevated-build"),
-    ("Meadowlark", 53.5198, -113.5965, "construction"),
-    ("Glenwood", 53.528, -113.591, "construction"),
-    ("Jasper Place", 53.5412, -113.5902, "construction"),
-    ("149 Street", 53.5413, -113.5799, "construction"),
-    ("Grovenor", 53.5432, -113.5641, "construction"),
-    ("Glenora", 53.5468, -113.5495, "construction"),
-    ("124 Street", 53.5463, -113.5311, "construction"),
-    ("Brewery", 53.5462, -113.523, "construction"),
-    ("116 Street", 53.5462, -113.514, "construction"),
-    ("MacEwan Arts", 53.5462, -113.5064, "construction"),
-    ("NorQuest", 53.5430, -113.4991, "construction"),
-    ("Alex Decoteau", 53.5431, -113.497, "construction"),
-    ("Twin Brooks", 53.4468, -113.5167, "construction"),
-    ("Heritage Valley N", 53.42512, -113.54559, "construction"),
-    ("20 Avenue SW", 53.4198, -113.5448, "proposed"),
-    ("Heritage Valley", 53.4102, -113.5455, "proposed"),
-    ("Desrochers", 53.3953, -113.5414, "proposed"),
-    ("Gorman", 53.6218, -113.3704, "proposed"),
-    ("132 Avenue", 53.596, -113.517, "proposed"),
-    ("137 Avenue", 53.602, -113.517, "proposed"),
-    ("145 Avenue", 53.610, -113.517, "proposed"),
-    ("Castle Downs", 53.6160, -113.5269, "proposed"),
-    ("127 Street", 53.6166, -113.5450, "proposed"),
-    ("137 Street", 53.6145, -113.5660, "proposed"),
-    ("Campbell Road", 53.6153, -113.5949, "proposed"),
+    ("P137", "Clareview", 53.60177, -113.41142, "open"),
+    ("P138", "Belvedere", 53.58805, -113.43348, "open"),
+    ("P139", "Coliseum", 53.57068, -113.45838, "open"),
+    ("P140", "Stadium", 53.55995, -113.47071, "open"),
+    ("P150", "Churchill", 53.54377, -113.48904, "open"),
+    ("P141", "Health Sciences", 53.52006, -113.52589, "open"),
+    ("P142", "McKernan", 53.51308, -113.52619, "open"),
+    ("P143", "South Campus", 53.50287, -113.52842, "open"),
+    ("P144", "Southgate", 53.48576, -113.51678, "open"),
+    ("P145", "Century Park", 53.45731, -113.51637, "open"),
+    ("P146", "Kingsway", 53.55803, -113.50147, "open"),
+    ("P147", "NAIT", 53.56695, -113.50909, "open"),
+    ("P148", "Blatchford Gate", 53.57695, -113.51041, "built"),
+    ("P149", "102 Street", 53.54317, -113.49524, "open"),
+    ("P151", "Quarters", 53.54440, -113.48405, "open"),
+    ("P152", "Muttart", 53.53621, -113.48000, "open"),
+    ("P153", "Strathearn", 53.53171, -113.46231, "open"),
+    ("P154", "Holyrood", 53.52751, -113.45740, "open"),
+    ("P155", "Bonnie Doon", 53.51981, -113.45538, "open"),
+    ("P156", "Avonmore", 53.51046, -113.45508, "open"),
+    ("P157", "Davies", 53.49988, -113.44415, "elevated"),
+    ("P158", "Millbourne", 53.47469, -113.43896, "open"),
+    ("P159", "Grey Nuns", 53.46243, -113.43451, "open"),
+    ("P160", "Mill Woods", 53.45839, -113.43097, "open"),
+    ("P161", "Lewis Farms", 53.5228, -113.6679, "construction"),
+    ("P162", "Aldergrove", 53.5213, -113.648, "construction"),
+    ("P163", "WEM", 53.5206, -113.624, "elevated-build"),
+    ("P164", "Misericordia", 53.5197, -113.613, "elevated-build"),
+    ("P165", "Meadowlark", 53.5198, -113.5965, "construction"),
+    ("P166", "Glenwood", 53.528, -113.591, "construction"),
+    ("P167", "Jasper Place", 53.5412, -113.5902, "construction"),
+    ("P168", "149 Street", 53.5413, -113.5799, "construction"),
+    ("P169", "Grovenor", 53.5432, -113.5641, "construction"),
+    ("P170", "Glenora", 53.5468, -113.5495, "construction"),
+    ("P171", "124 Street", 53.5463, -113.5311, "construction"),
+    ("P172", "Brewery", 53.5462, -113.523, "construction"),
+    ("P173", "116 Street", 53.5462, -113.514, "construction"),
+    ("P174", "MacEwan Arts", 53.5462, -113.5064, "construction"),
+    ("P175", "NorQuest", 53.5430, -113.4991, "construction"),
+    ("P176", "Alex Decoteau", 53.5431, -113.497, "construction"),
+    ("P177", "Twin Brooks", 53.4468, -113.5167, "construction"),
+    ("P178", "Heritage Valley N", 53.42512, -113.54559, "construction"),
+    ("P179", "20 Avenue SW", 53.4198, -113.5448, "proposed"),
+    ("P180", "Heritage Valley", 53.4102, -113.5455, "proposed"),
+    ("P181", "Desrochers", 53.3953, -113.5414, "proposed"),
+    ("P182", "Gorman", 53.6218, -113.3704, "proposed"),
+    ("P183", "132 Avenue", 53.596, -113.517, "proposed"),
+    ("P184", "137 Avenue", 53.602, -113.517, "proposed"),
+    ("P185", "145 Avenue", 53.610, -113.517, "proposed"),
+    ("P186", "Castle Downs", 53.6160, -113.5269, "proposed"),
+    ("P187", "127 Street", 53.6166, -113.5450, "proposed"),
+    ("P188", "137 Street", 53.6145, -113.5660, "proposed"),
+    ("P189", "Campbell Road", 53.6153, -113.5949, "proposed"),
 ]
 
 # Station names worth attempting on the regional map. The rest are dots.
@@ -289,11 +290,11 @@ YELLOWHEAD_ROW = {"Y68", "Y69", "Y70", "Y71", "Y72", "Y73", "Y74"}
 LEFT_OFF = {code for code, *_rest in SKIPPED}
 CATALOGUE = {row[0]: row for row in (*RIVER, *FREEWAY, *SKIPPED)}
 
-# Numbers are unique across every bridge and increase along each road.
-# Moving a bridge to another road, or between the include list and left off,
+# Numbers are unique across every prefix. Moving a bridge to another road
 # changes the letter and keeps the number. A bridge on two roads keeps the
 # number from the first road it was counted on: the river, then the Henday,
-# then the other highways.
+# then the other highways. Bridge codes use 1-136. Later codes continue
+# from 137. The next free number is 261.
 KEY_GROUPS = [
     ("River", ["R1", "R2", "R3", "R4", "R5", "R6", "R7", "R8", "R9", "R10", "R11", "R12", "R13"]),
     ("River", ["R14", "R15", "R16", "R17", "R18", "R19", "R20", "R21", "R22", "R23", "R24", "R25", "R26"]),
@@ -637,7 +638,7 @@ def draw_lrt_markers(draw, project, labels, label_names, code_face):
         r = 5
         draw.rectangle([x - r, y - r, x + r, y + r], fill=lrt_fill(state), outline=HALO)
         labels.reserve(marker_box(x, y, r + 2))
-    for name, lat, lon, kind in LRT_STATIONS:
+    for _code, name, lat, lon, kind in LRT_STATIONS:
         x, y = project(lat, lon)
         fill = lrt_fill(kind)
         if kind in {"elevated", "elevated-build"}:
@@ -657,14 +658,14 @@ def draw_lrt_markers(draw, project, labels, label_names, code_face):
             continue
         x, y = project(lat, lon)
         labels.place(draw, code, (x, y), code_face, lrt_fill(state), prefer.get(code, "n"))
-    for name, lat, lon, kind in LRT_STATIONS:
+    for _code, name, lat, lon, kind in LRT_STATIONS:
         if label_names:
             if not in_inset(lat, lon):
                 continue
         elif name not in LRT_OVERVIEW_NAMES or in_inset(lat, lon):
             continue
         x, y = project(lat, lon)
-        labels.place(draw, name, (x, y), code_face, lrt_fill(kind), "s")
+        labels.place(draw, _code if label_names else name, (x, y), code_face, lrt_fill(kind), "s")
 
 
 def in_inset(lat, lon) -> bool:

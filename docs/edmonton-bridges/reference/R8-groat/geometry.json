@@ -1,0 +1,952 @@
+{
+  "code": "R8",
+  "name": "Groat Bridge",
+  "centre": [
+    53.537,
+    -113.539
+  ],
+  "crs": "EPSG:4326",
+  "coordinate_order": "[lat, lon]",
+  "geometry_source": "docs/edmonton-bridges/bridge-geometry.json",
+  "geometry_retrieved": "2026-10-14",
+  "plan_length_note": "plan_length_m is the horizontal length of that OSM way, WGS84 haversine with radius 6378137 m, rounded to one decimal. The two road centrelines and the cycleway are two-node straight lines. An approach plan_length_m is not the climb to grade. It is not the 315.5 m Wikipedia and Structurae length, the 315 m City Archives length, Graham's 1,000 feet, or Graham's 330 m. The outline plan_length_m is the perimeter of the closed ring.",
+  "dropped_note": "The R8 bridge ways are the river span. No bridge way is G116 Hawrelak access, G117 102 Avenue, Z125 Wellington, T133 Stony Plain Road, G119 107 Avenue, or G118, the old Stony Plain Road span demolished in 2023. Connected way 648645164 runs through the G116 location and was dropped. Connected way 106605160 leaves the south end toward G116 and was dropped. Tags in this file are the tags stored in the extract. A live read of the four bridge ways on 14 October 2026 also carried expressway, hgv, horse, lit, segregated, wikidata, and wikipedia tags that the extract did not store. Those tags are quoted in NOTES.md. They are not copied here. The live bridge ways had the same node counts as the extract.",
+  "decks": [
+    {
+      "osm_way": 22916458,
+      "part": "road_deck",
+      "which": "East carriageway, northbound. Groat Road NW, two lanes, one-way, asphalt, layer 2, bridge:name Groat Bridge. Node order is south to north, from 53.535607,-113.539669 to 53.538001,-113.537884. This centreline is 291.5 m. Wikipedia states 315.5 m, the City Archives scope line states 315 m, Graham's project page states 1,000 feet, and Graham's case study states 330 m. Those are different extents. No width tag and no maxheight tag are stored on this way.",
+      "plan_length_m": 291.5,
+      "tags": {
+        "bridge": "yes",
+        "bridge:name": "Groat Bridge",
+        "foot": "no",
+        "highway": "secondary",
+        "lanes": "2",
+        "layer": "2",
+        "maxspeed": "60",
+        "name": "Groat Road NW",
+        "oneway": "yes",
+        "surface": "asphalt"
+      },
+      "nodes": [
+        [
+          53.535607,
+          -113.539669
+        ],
+        [
+          53.538001,
+          -113.537884
+        ]
+      ]
+    },
+    {
+      "osm_way": 191843040,
+      "part": "road_deck",
+      "which": "West carriageway, southbound. Groat Road NW, two lanes, one-way, asphalt, layer 2, bridge:name Groat Bridge. Node order is north to south, from 53.538044,-113.538008 to 53.535654,-113.539794. This centreline is 291.1 m. It lies 9.8 m west of the east carriageway at the south end and 9.5 m west of it at the north end. That separation is the distance between mapped centrelines. It is not a published width.",
+      "plan_length_m": 291.1,
+      "tags": {
+        "bridge": "yes",
+        "bridge:name": "Groat Bridge",
+        "highway": "secondary",
+        "lanes": "2",
+        "layer": "2",
+        "maxspeed": "60",
+        "name": "Groat Road NW",
+        "oneway": "yes",
+        "surface": "asphalt"
+      },
+      "nodes": [
+        [
+          53.538044,
+          -113.538008
+        ],
+        [
+          53.535654,
+          -113.539794
+        ]
+      ]
+    },
+    {
+      "osm_way": 27265608,
+      "part": "east_shared_use_path",
+      "which": "Cycleway on the bridge, east of the northbound carriageway. Node order is south to north. The mapped centreline is 3.3 m east of the east road centreline at the south end and 4.3 m east of it at the north end. That offset is not the published 4.2 m path width. Tags: foot yes, bicycle yes, surface asphalt, note Open. The design path is the east shared-use path.",
+      "plan_length_m": 291.1,
+      "tags": {
+        "bicycle": "yes",
+        "bridge": "yes",
+        "foot": "yes",
+        "highway": "cycleway",
+        "layer": "2",
+        "note": "Open",
+        "surface": "asphalt"
+      },
+      "nodes": [
+        [
+          53.535589,
+          -113.53963
+        ],
+        [
+          53.537976,
+          -113.537834
+        ]
+      ]
+    },
+    {
+      "osm_way": 626069075,
+      "part": "outline",
+      "which": "Closed ring around the crossing, tagged bridge:structure beam and name Groat Bridge. plan_length_m is the perimeter of the ring, 627.4 m. It is not a span length. The north-end edge of the ring is 22.1 m. That is the mapped outline, not a published structural width.",
+      "plan_length_m": 627.4,
+      "tags": {
+        "bridge": "yes",
+        "bridge:structure": "beam",
+        "layer": "2",
+        "man_made": "bridge",
+        "name": "Groat Bridge"
+      },
+      "nodes": [
+        [
+          53.538086,
+          -113.538097
+        ],
+        [
+          53.53798,
+          -113.537814
+        ],
+        [
+          53.537616,
+          -113.538078
+        ],
+        [
+          53.53656,
+          -113.538875
+        ],
+        [
+          53.535581,
+          -113.539599
+        ],
+        [
+          53.535589,
+          -113.53963
+        ],
+        [
+          53.535607,
+          -113.539669
+        ],
+        [
+          53.535654,
+          -113.539794
+        ],
+        [
+          53.535684,
+          -113.539869
+        ],
+        [
+          53.537236,
+          -113.538688
+        ],
+        [
+          53.538086,
+          -113.538097
+        ]
+      ]
+    }
+  ],
+  "approaches": [
+    {
+      "osm_way": 944417265,
+      "part": "south_road",
+      "which": "South end, east carriageway. Groat Road NW, two lanes, one-way, onto the northbound deck. Node order runs toward the bridge. The far node is not a surveyed grade point.",
+      "plan_length_m": 47.8,
+      "tags": {
+        "highway": "secondary",
+        "lanes": "2",
+        "maxspeed": "60",
+        "name": "Groat Road NW",
+        "oneway": "yes",
+        "surface": "asphalt"
+      },
+      "nodes": [
+        [
+          53.535204,
+          -113.539911
+        ],
+        [
+          53.535331,
+          -113.539862
+        ],
+        [
+          53.535466,
+          -113.539773
+        ],
+        [
+          53.53555,
+          -113.539709
+        ],
+        [
+          53.535607,
+          -113.539669
+        ]
+      ],
+      "extract_role": "approach"
+    },
+    {
+      "osm_way": 141176415,
+      "part": "south_road",
+      "which": "South end, west carriageway. Groat Road NW, two lanes, one-way, sidewalk no, leaving the southbound deck. Node order runs away from the bridge. The far node is not a surveyed grade point.",
+      "plan_length_m": 42.4,
+      "tags": {
+        "highway": "secondary",
+        "lanes": "2",
+        "maxspeed": "60",
+        "name": "Groat Road NW",
+        "oneway": "yes",
+        "sidewalk": "no",
+        "surface": "asphalt"
+      },
+      "nodes": [
+        [
+          53.535654,
+          -113.539794
+        ],
+        [
+          53.535625,
+          -113.539815
+        ],
+        [
+          53.535534,
+          -113.539875
+        ],
+        [
+          53.535481,
+          -113.539911
+        ],
+        [
+          53.535408,
+          -113.539962
+        ],
+        [
+          53.535298,
+          -113.540019
+        ]
+      ],
+      "extract_role": "approach"
+    },
+    {
+      "osm_way": 25601763,
+      "part": "north_road",
+      "which": "North end, east carriageway. Groat Road NW, two lanes, one-way, bicycle no, foot no, leaving the northbound deck. Node order runs away from the bridge. The far node is not a surveyed grade point.",
+      "plan_length_m": 23.1,
+      "tags": {
+        "bicycle": "no",
+        "foot": "no",
+        "highway": "secondary",
+        "lanes": "2",
+        "maxspeed": "60",
+        "name": "Groat Road NW",
+        "oneway": "yes",
+        "surface": "asphalt"
+      },
+      "nodes": [
+        [
+          53.538001,
+          -113.537884
+        ],
+        [
+          53.538191,
+          -113.537744
+        ]
+      ],
+      "extract_role": "approach"
+    },
+    {
+      "osm_way": 25601730,
+      "part": "north_road",
+      "which": "Northbound Groat Road NW continuing from way 25601763. Tagged one lane. The extract role is cross_road. It is the same road. The far node is not a surveyed grade point. The one-lane tag is the map. No published source states a lane drop here.",
+      "plan_length_m": 150.1,
+      "tags": {
+        "highway": "secondary",
+        "lanes": "1",
+        "maxspeed": "60",
+        "name": "Groat Road NW",
+        "oneway": "yes",
+        "surface": "asphalt"
+      },
+      "nodes": [
+        [
+          53.538191,
+          -113.537744
+        ],
+        [
+          53.538317,
+          -113.537677
+        ],
+        [
+          53.538509,
+          -113.537565
+        ],
+        [
+          53.538586,
+          -113.537518
+        ],
+        [
+          53.538662,
+          -113.537475
+        ],
+        [
+          53.538745,
+          -113.537446
+        ],
+        [
+          53.53882,
+          -113.53743
+        ],
+        [
+          53.538902,
+          -113.537419
+        ],
+        [
+          53.538977,
+          -113.537415
+        ],
+        [
+          53.539051,
+          -113.537414
+        ],
+        [
+          53.539119,
+          -113.537425
+        ],
+        [
+          53.53922,
+          -113.537444
+        ],
+        [
+          53.539308,
+          -113.537473
+        ],
+        [
+          53.53937,
+          -113.5375
+        ],
+        [
+          53.539434,
+          -113.537535
+        ],
+        [
+          53.539502,
+          -113.537551
+        ]
+      ],
+      "extract_role": "cross_road"
+    },
+    {
+      "osm_way": 25601796,
+      "part": "north_exit",
+      "which": "One-lane link from the north end of the northbound carriageway down to River Valley Road. It is the exit signed for River Valley Road and Victoria Park Road. It is not the climb to grade.",
+      "plan_length_m": 156.3,
+      "tags": {
+        "highway": "secondary_link",
+        "lanes": "1",
+        "oneway": "yes",
+        "surface": "asphalt"
+      },
+      "nodes": [
+        [
+          53.538191,
+          -113.537744
+        ],
+        [
+          53.538254,
+          -113.537622
+        ],
+        [
+          53.538284,
+          -113.537504
+        ],
+        [
+          53.538282,
+          -113.537447
+        ],
+        [
+          53.538282,
+          -113.537354
+        ],
+        [
+          53.53827,
+          -113.537254
+        ],
+        [
+          53.538249,
+          -113.537162
+        ],
+        [
+          53.538141,
+          -113.536768
+        ],
+        [
+          53.538116,
+          -113.536703
+        ],
+        [
+          53.538094,
+          -113.536665
+        ],
+        [
+          53.538062,
+          -113.53662
+        ],
+        [
+          53.538019,
+          -113.536585
+        ],
+        [
+          53.53797,
+          -113.536568
+        ],
+        [
+          53.537917,
+          -113.536558
+        ],
+        [
+          53.537865,
+          -113.536561
+        ],
+        [
+          53.537821,
+          -113.536603
+        ],
+        [
+          53.537778,
+          -113.536658
+        ],
+        [
+          53.537749,
+          -113.536708
+        ],
+        [
+          53.537726,
+          -113.536768
+        ],
+        [
+          53.53771,
+          -113.536841
+        ],
+        [
+          53.537704,
+          -113.536906
+        ],
+        [
+          53.537733,
+          -113.537186
+        ]
+      ],
+      "extract_role": "cross_road"
+    },
+    {
+      "osm_way": 25601745,
+      "part": "north_road",
+      "which": "Southbound Groat Road NW approaching way 944414123. Tagged one lane. Node order runs toward the bridge. The extract role is cross_road. It is the same road. The far node is not a surveyed grade point.",
+      "plan_length_m": 188.2,
+      "tags": {
+        "highway": "secondary",
+        "lanes": "1",
+        "maxspeed": "50",
+        "name": "Groat Road NW",
+        "oneway": "yes",
+        "surface": "asphalt"
+      },
+      "nodes": [
+        [
+          53.539792,
+          -113.537966
+        ],
+        [
+          53.539721,
+          -113.537862
+        ],
+        [
+          53.539649,
+          -113.537784
+        ],
+        [
+          53.539575,
+          -113.537718
+        ],
+        [
+          53.539479,
+          -113.537646
+        ],
+        [
+          53.53942,
+          -113.537607
+        ],
+        [
+          53.539363,
+          -113.537578
+        ],
+        [
+          53.539302,
+          -113.537553
+        ],
+        [
+          53.539245,
+          -113.537531
+        ],
+        [
+          53.539189,
+          -113.537512
+        ],
+        [
+          53.539138,
+          -113.537498
+        ],
+        [
+          53.539078,
+          -113.537494
+        ],
+        [
+          53.539018,
+          -113.537488
+        ],
+        [
+          53.538961,
+          -113.537488
+        ],
+        [
+          53.538888,
+          -113.537499
+        ],
+        [
+          53.538817,
+          -113.537512
+        ],
+        [
+          53.538759,
+          -113.537524
+        ],
+        [
+          53.538703,
+          -113.537545
+        ],
+        [
+          53.538648,
+          -113.537563
+        ],
+        [
+          53.538589,
+          -113.537597
+        ],
+        [
+          53.538509,
+          -113.537642
+        ],
+        [
+          53.538348,
+          -113.537752
+        ],
+        [
+          53.538212,
+          -113.537877
+        ]
+      ],
+      "extract_role": "cross_road"
+    },
+    {
+      "osm_way": 1098987150,
+      "part": "north_ramp",
+      "which": "One-lane link joining the southbound carriageway at the start of way 944414123. A ramp onto the bridge approach, not the climb to grade.",
+      "plan_length_m": 36.2,
+      "tags": {
+        "highway": "secondary_link",
+        "lanes": "1",
+        "oneway": "yes",
+        "surface": "asphalt"
+      },
+      "nodes": [
+        [
+          53.538526,
+          -113.53774
+        ],
+        [
+          53.53845,
+          -113.53776
+        ],
+        [
+          53.538346,
+          -113.537815
+        ],
+        [
+          53.538212,
+          -113.537877
+        ]
+      ],
+      "extract_role": "cross_road"
+    },
+    {
+      "osm_way": 944414123,
+      "part": "north_road",
+      "which": "North end, west carriageway. Groat Road NW, two lanes, one-way, onto the southbound deck. Node order runs toward the bridge. Bicycle no. The far node of the longer southbound way is not a surveyed grade point.",
+      "plan_length_m": 20.6,
+      "tags": {
+        "bicycle": "no",
+        "highway": "secondary",
+        "lanes": "2",
+        "maxspeed": "60",
+        "name": "Groat Road NW",
+        "oneway": "yes",
+        "surface": "asphalt"
+      },
+      "nodes": [
+        [
+          53.538212,
+          -113.537877
+        ],
+        [
+          53.538044,
+          -113.538008
+        ]
+      ],
+      "extract_role": "approach"
+    },
+    {
+      "osm_way": 1536910301,
+      "part": "south_path",
+      "which": "Path south of the bridge cycleway. Foot and bicycle designated, surface concrete. It is the path leaving the south end. It is not the road climb.",
+      "plan_length_m": 75.7,
+      "tags": {
+        "bicycle": "designated",
+        "foot": "designated",
+        "highway": "cycleway",
+        "surface": "concrete"
+      },
+      "nodes": [
+        [
+          53.534921,
+          -113.539823
+        ],
+        [
+          53.535104,
+          -113.539797
+        ],
+        [
+          53.535272,
+          -113.539759
+        ],
+        [
+          53.53538,
+          -113.53972
+        ],
+        [
+          53.535476,
+          -113.539687
+        ],
+        [
+          53.535551,
+          -113.539648
+        ],
+        [
+          53.535589,
+          -113.53963
+        ]
+      ],
+      "extract_role": "cross_road"
+    },
+    {
+      "osm_way": 27265610,
+      "part": "north_path",
+      "which": "Path north of the bridge cycleway. Foot and bicycle designated, surface concrete. It is the path leaving the north end. It is not the road climb.",
+      "plan_length_m": 37.7,
+      "tags": {
+        "bicycle": "designated",
+        "foot": "designated",
+        "highway": "cycleway",
+        "surface": "concrete"
+      },
+      "nodes": [
+        [
+          53.537976,
+          -113.537834
+        ],
+        [
+          53.538061,
+          -113.537773
+        ],
+        [
+          53.538152,
+          -113.537698
+        ],
+        [
+          53.538183,
+          -113.537659
+        ],
+        [
+          53.538207,
+          -113.537606
+        ],
+        [
+          53.538221,
+          -113.537563
+        ],
+        [
+          53.538233,
+          -113.537503
+        ]
+      ],
+      "extract_role": "cross_road"
+    },
+    {
+      "osm_way": 22914738,
+      "part": "under_north_end",
+      "which": "River Valley Road NW, layer 1, one-way, passing the north end of the bridge. The road under the north end. It is not an approach.",
+      "plan_length_m": 33.3,
+      "tags": {
+        "highway": "secondary",
+        "layer": "1",
+        "maxspeed": "60",
+        "name": "River Valley Road NW",
+        "oneway": "yes",
+        "surface": "asphalt"
+      },
+      "nodes": [
+        [
+          53.537733,
+          -113.537186
+        ],
+        [
+          53.537748,
+          -113.53724
+        ],
+        [
+          53.537863,
+          -113.537639
+        ]
+      ],
+      "extract_role": "cross_road"
+    },
+    {
+      "osm_way": 141709487,
+      "part": "under_north_end",
+      "which": "River Valley Road NW, layer 1, one-way. The road under the north end. It is not an approach.",
+      "plan_length_m": 88.7,
+      "tags": {
+        "highway": "secondary",
+        "layer": "1",
+        "maxspeed": "60",
+        "name": "River Valley Road NW",
+        "oneway": "yes",
+        "surface": "asphalt"
+      },
+      "nodes": [
+        [
+          53.538798,
+          -113.539007
+        ],
+        [
+          53.538687,
+          -113.539069
+        ],
+        [
+          53.53853,
+          -113.539091
+        ],
+        [
+          53.538435,
+          -113.539052
+        ],
+        [
+          53.538337,
+          -113.538967
+        ],
+        [
+          53.538229,
+          -113.538794
+        ],
+        [
+          53.538123,
+          -113.538581
+        ]
+      ],
+      "extract_role": "cross_road"
+    },
+    {
+      "osm_way": 933678761,
+      "part": "under_north_end",
+      "which": "River Valley Road NW, one-way, continuing from way 22914738. The road under the north end. It is not an approach.",
+      "plan_length_m": 136.9,
+      "tags": {
+        "highway": "secondary",
+        "maxspeed": "60",
+        "name": "River Valley Road NW",
+        "oneway": "yes",
+        "surface": "asphalt"
+      },
+      "nodes": [
+        [
+          53.537863,
+          -113.537639
+        ],
+        [
+          53.53802,
+          -113.53811
+        ],
+        [
+          53.538206,
+          -113.538538
+        ],
+        [
+          53.538269,
+          -113.538665
+        ],
+        [
+          53.538322,
+          -113.538741
+        ],
+        [
+          53.538377,
+          -113.538811
+        ],
+        [
+          53.53842,
+          -113.538843
+        ],
+        [
+          53.538468,
+          -113.538874
+        ],
+        [
+          53.538519,
+          -113.538882
+        ],
+        [
+          53.538585,
+          -113.538874
+        ],
+        [
+          53.53864,
+          -113.538854
+        ],
+        [
+          53.538719,
+          -113.538803
+        ]
+      ],
+      "extract_role": "cross_road"
+    },
+    {
+      "osm_way": 933678762,
+      "part": "under_north_end",
+      "which": "River Valley Road NW, one-way. The road under the north end. It is not an approach.",
+      "plan_length_m": 168.8,
+      "tags": {
+        "highway": "secondary",
+        "maxspeed": "60",
+        "name": "River Valley Road NW",
+        "oneway": "yes",
+        "surface": "asphalt"
+      },
+      "nodes": [
+        [
+          53.538123,
+          -113.538581
+        ],
+        [
+          53.537641,
+          -113.537326
+        ],
+        [
+          53.537296,
+          -113.536442
+        ]
+      ],
+      "extract_role": "cross_road"
+    },
+    {
+      "osm_way": 157328051,
+      "part": "north_cross_street",
+      "which": "Victoria Park Road NW, two lanes, one-way, leaving the north end of the northbound carriageway. A cross street. It is not the climb.",
+      "plan_length_m": 85.2,
+      "tags": {
+        "highway": "secondary",
+        "lanes": "2",
+        "maxspeed": "60",
+        "name": "Victoria Park Road NW",
+        "oneway": "yes",
+        "surface": "asphalt"
+      },
+      "nodes": [
+        [
+          53.538191,
+          -113.537744
+        ],
+        [
+          53.538456,
+          -113.537523
+        ],
+        [
+          53.538883,
+          -113.537194
+        ]
+      ],
+      "extract_role": "cross_road"
+    }
+  ],
+  "excluded": [
+    {
+      "osm_way": 648645164,
+      "reason": "Groat Road NW southbound, 918.2 m, two lanes, one-way, maxheight tag 5.3. A node lies within 10.2 m of G116 Hawrelak access (53.5322, -113.5383). Dropped. It is not the climb to grade on the river span. The maxheight tag is not a deck elevation of Groat Bridge."
+    },
+    {
+      "osm_way": 106605160,
+      "reason": "One-lane link, destination Parks Area, 213.9 m, from the south end toward G116. Dropped. It is not the river span and not the climb to grade."
+    }
+  ],
+  "dimensions": {
+    "structural_type": "Girder bridge. The 2020 superstructure is haunched weathering-steel plate girders and a cast-in-place deck. The superstructure removed in 2018-2020 was six lines of cast-in-place concrete girders. Structurae says girder. The OSM outline tags beam.",
+    "span_count": 7,
+    "span_lengths_m": null,
+    "side_by_side_carriageways": 2,
+    "published_length_m_wikipedia": 315.5,
+    "published_length_ft_wikipedia": 1035,
+    "published_length_m_structurae": 315.5,
+    "published_length_m_city_archives": 315,
+    "published_length_ft_graham_project_page": 1000,
+    "published_length_m_graham_case_study": 330,
+    "old_girder_line_count": 6,
+    "new_girder_line_count": null,
+    "girder_depth_m": null,
+    "haunch_depth_m": null,
+    "pier_count": null,
+    "pier_type": "Existing concrete river piers, described as rocking piers in the pre-2020 design. Majority reused. Faces above the waterline repaired. New concrete collar at the base of three piers.",
+    "piers_with_new_base_collars": 3,
+    "clearance_above_river_m": null,
+    "navigation_clearance_m": null,
+    "deck_elevation_asl_m": null,
+    "deck_elevation_datum": null,
+    "deck_thickness_m": null,
+    "carriageway_width_m": null,
+    "overall_width_m": null,
+    "lane_width_m": null,
+    "shoulder_width_m": null,
+    "lanes_per_carriageway": 2,
+    "lanes": 4,
+    "direction_east_carriageway": "northbound",
+    "direction_west_carriageway": "southbound",
+    "east_shared_use_path_width_m": 4.2,
+    "east_shared_use_path_width_before_2020_m": 2.4,
+    "west_sidewalk_width_m": null,
+    "crossfall": null,
+    "longitudinal_grade": null,
+    "north_approach_length_m": null,
+    "north_approach_gradient": null,
+    "north_approach_elevation_change_m": null,
+    "north_approach_meets_grade": null,
+    "south_approach_length_m": null,
+    "south_approach_gradient": null,
+    "south_approach_elevation_change_m": null,
+    "south_approach_meets_grade": null,
+    "posted_speed_kmh": 60,
+    "osm_centreline_separation_south_m": 9.8,
+    "osm_centreline_separation_north_m": 9.5
+  }
+}

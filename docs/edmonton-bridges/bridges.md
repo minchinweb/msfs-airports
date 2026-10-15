@@ -13,7 +13,7 @@ Listed upstream to downstream (southwest to northeast). Model the downtown road,
 | Fort Edmonton Footbridge | Pedestrians and cyclists | 2010 | 53.495, -113.590 | Footbridge by Fort Edmonton. |
 | Quesnell Bridge | Whitemud Drive (Highway 2), 8 lanes | 1968 | 53.507, -113.567 | Wide deck, main west-end highway crossing. |
 | Buena Vista / Hawrelak Park Footbridge | Pedestrians and cyclists | 1996 | 53.523, -113.547 | Footbridge between Buena Vista and Hawrelak. |
-| Groat Bridge | Groat Road, 4 lanes | 1955 | 53.537, -113.539 | West edge of the central valley. |
+| Groat Bridge | Groat Road, 4 lanes | 1955 | 53.537, -113.539 | West edge of the central valley. Superstructure replaced 2018–2020. Brief: `reference/R8-groat/`. |
 | Dudley B. Menzies Bridge | Capital Line LRT, 2 tracks | 1989 | 53.531, -113.512 | Hard against the High Level. Modelling one without the other leaves a gap. |
 | High Level Bridge | 109 Street southbound, streetcar on the upper deck | 1913 | 53.531, -113.511 | The landmark. Steel truss, about 777 m long, deck about 46 m above the river. Municipal historic resource. |
 | Walterdale Bridge | 105 Street, 3 lanes northbound | 2017 structure, opened 2018 | 53.529, -113.502 | Tied arch, two 56 m arches, no piers in the river. Replaced the 1913 truss, demolished 2017. |
@@ -32,5 +32,25 @@ Listed upstream to downstream (southwest to northeast). Model the downtown road,
 | Amisk Wâciw Âsokan (Beaver Hills Bridge) | Pedestrians and cyclists, Edmonton to Strathcona County | 2025 | 53.628, -113.322 | New footbridge east of the Henday, opened August 2025. |
 | Highway 15 | Fort Saskatchewan, 1957 span and 2022 twin | 1957 / 2022 | 53.706, -113.235 | River crossing at Fort Saskatchewan. |
 | CN bridge west of Scotford | CN | Year not in the crossing list | 53.761, -113.171 | Rail span downstream of Fort Saskatchewan, west of Scotford. |
+
+## Spans in the Low Level scene that do not cross the river
+
+These are not rows in the table above. They sit at the Low Level ends. Centres are the midpoints of the mapped bridge ways, from the briefs in `reference/`.
+
+| Name | Carries | Year | Approx. centre | Why it is here |
+| --- | --- | --- | --- | --- |
+| Grierson Hill Bridge | Grierson Hill Road over McDougall Hill Road | Deck replaced 2012 | 53.538564, -113.488789 | N258. North end of the Low Level. Also called the Grierson/McDougall Overpass. Model with R13. Brief: `reference/N258-grierson/`. |
+| 100 Street Funicular | Pedestrians, from 100 Street to the valley promenade, and a footbridge over Grierson Hill Road | Opened 9 December 2017 | 53.539305, -113.487472 | F256. North bank, east of the Low Level. Frederick G. Todd Lookout. Model with R13. Brief: `reference/F256-funicular/`. |
+| Rossdale Road Bridge | Rossdale Road over McDougall Hill Road | Rehabilitation completed June 2013 | 53.537724, -113.493132 | N259. Also called the Rossdale/McDougall Overpass. 2013 news says MacDougall Drive. Not N258. Model with R13. Brief: `reference/N259-rossdale-mcdougall/`. |
+| Low Level south roadworks | 98 Avenue and Connors Road at the valley floor; Scona Road over Connors Road on the slope | 1971 and 1957 | 53.533941, -113.483610 | N260. Model the 98 Avenue spans with R13. Eastbound is City bridge B126. Omit Scona Road Bridge (B065) on the wooded slope. Brief: `reference/N260-scona-connors/`. |
+
+## Other objects in the same scene
+
+These are not bridges. They sit in the downtown valley picture with the Low Level and the Tawatinâ.
+
+| Name | What it is | Year | Approx. centre | Why it is here |
+| --- | --- | --- | --- | --- |
+| Edmonton Queen | Paddlewheel passenger boat, docked at Rafter's Landing on the south bank | Hull 1995 | 53.539534, -113.481883 | V257. Between the Low Level and the Tawatinâ. Also called the Edmonton River Queen and the Edmonton Riverboat. Model it tied up. Brief: `reference/V257-river-queen/`. |
+| Fairmont Hotel Macdonald | Château hotel at 10065 100 Street, above the funicular | 1915 | 53.540305, -113.489500 | B255. North bank, above F256. The ask's spelling MacDonald is not the published name. Brief: `reference/B255-hotel-macdonald/`. |
 
 Sources: Wikipedia, [List of crossings of the North Saskatchewan River](https://en.wikipedia.org/wiki/List_of_crossings_of_the_North_Saskatchewan_River); City of Edmonton on the [High Level Bridge](https://www.edmonton.ca/city_government/edmonton_archives/high-level-bridge) and the [Walterdale Bridge](https://www.edmonton.ca/projects_plans/walterdale-bridge); Edmonton Police Service, Henday spans named 29 November 2024; CityNews Edmonton, Beaver Hills Bridge opened 5 August 2025.

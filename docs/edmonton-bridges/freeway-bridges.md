@@ -117,10 +117,10 @@ The river spans (Groat Bridge, Capilano Bridge) stay on the river list. These ar
 
 | Crossing | Centre | Notes |
 | --- | --- | --- |
-| 102 Avenue at Groat Road | 53.543, -113.540 | First crossing north of Groat Bridge. |
-| Wellington Bridge | 53.543, -113.548 | 102 Avenue across Groat Ravine, just west of Groat Road. |
-| Stony Plain Road | 53.548, -113.546 | The bridge is named Groat. Valley Line West is replacing this span with T133, a single span that also carries the LRT. See `lrt.md`. |
-| 107 Avenue | 53.551, -113.550 | |
+| 102 Avenue at Groat Road | 53.543, -113.540 | First crossing north of Groat Bridge. Brief: `reference/G117-102-avenue/`. |
+| Wellington Bridge | 53.543, -113.548 | 102 Avenue across Groat Ravine, just west of Groat Road. Model the finished clear-span girder. Brief: `reference/Z125-wellington/`. |
+| Stony Plain Road | 53.548, -113.546 | The old bridge was named Groat and was demolished in 2023. Model the finished T133. Brief: `reference/T133-stony-plain/`. |
+| 107 Avenue | 53.551, -113.550 | Glenora Overpass. Brief: `reference/G119-107-avenue/`. |
 | Ada Boulevard | 53.560, -113.443 | First crossing north of Capilano Bridge, on Wayne Gretzky Drive. |
 | 112 Avenue | 53.563, -113.447 | Wayne Gretzky Drive. |
 | Grant Moellmann Bridge | 53.575, -113.453 | Wayne Gretzky Drive over the rail yard, just south of the Yellowhead. Not the Yellowhead interchange itself. |
@@ -171,7 +171,7 @@ Plotted as crosses. Still off the include list. Centres are OpenStreetMap deck c
 | Highway 28 / Highway 28A | 53.844, -113.322 | North of Gibbons. Northbound Highway 28 flyover at the trumpet. The southbound loop is the other bridge a few metres away. |
 | Highway 28 / 195 Avenue | 53.658, -113.499 | 195 Avenue is the bridge, over Highway 28 on 97 Street. |
 | Sherwood Park Freeway / 82 Avenue and Argyll Road | 53.518, -113.474 | West end of the freeway, where it splits. OpenStreetMap names the viaduct Mill Creek Bridge. Not the Mill Creek trestle. |
-| Groat Road / Hawrelak access | 53.532, -113.538 | Just south of Groat Bridge. Emily Murphy Park Road is the deck, between Hawrelak Park and the university. |
+| Groat Road / Hawrelak access | 53.532, -113.538 | Just south of Groat Bridge. Emily Murphy Park Road is the deck, between Hawrelak Park and the university. Also called the Mayfair Bridge. Brief: `reference/G116-hawrelak/`. |
 | Sherwood Park Freeway / 17 Street | 53.517, -113.369 | 17 Street is the bridge. Not the Henday interchange, and not Whitemud at 17 Street. |
 | Yellowhead / 17 Street | 53.570, -113.363 | 17 Street is the bridge, just east of the Beverly and Clover Bar river spans. |
 | Whitemud / 178 Street | 53.512, -113.630 | 178 Street is the bridge, west of the 170 Street crossing. |

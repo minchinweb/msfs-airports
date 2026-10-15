@@ -1,0 +1,308 @@
+{
+  "code": "F256",
+  "name": "100 Street Funicular",
+  "name_note": "City page: 100 Street Funicular. Global News: the river-valley funicular. Construction name: Mechanized River Valley Access. The lookout is the Frederick G. Todd Lookout. Wikipedia says Frederick G. Todd Overlook. No R code is assigned. This is not the Grierson Hill Bridge and not a Low Level deck.",
+  "centre": [
+    53.539305,
+    -113.487472
+  ],
+  "centre_note": "Mean of the 12 corners of way 1271848915, the repeated closing node dropped. The unrounded mean is 53.53930454, -113.48747175. Given here to six decimal places. It is the footbridge outline, not the funicular track. The track midpoint is stored on way 490235928. Wikipedia's coordinate was not used.",
+  "crs": "EPSG:4326",
+  "coordinate_order": "[lat, lon]",
+  "geometry_source": "OpenStreetMap Overpass API, 2026-10-14. Not in docs/edmonton-bridges/bridge-geometry.json as a kept deck. The Grierson and R13 files dropped this outline.",
+  "geometry_retrieved": "2026-10-14",
+  "plan_length_note": "plan_length_m is the horizontal length of that way's nodes, WGS84 haversine with radius 6378137 m, rounded to one decimal. On the outline it is the perimeter, not a span. On way 490235928 it is the horizontal length of a two-node line. It is not the Journal's 55 m incline and not the award submission's 66.0 m along the grade. No elevations are stored. A slope length was not computed.",
+  "dropped_note": "The Grierson Hill road deck, way 106711211, stays in the grierson geometry. Grierson Hill Road way 106711201 is the road this outline crosses. It was not copied. The Low Level decks, ways 31882107 and 22916473, and the Low Level outline way 462866197, stay in the R13 geometry. Way 1289700141 is an indoor funicular elsewhere. It is not this track. Way 490235927 is a wood stair west of this track and is not tagged with the funicular name.",
+  "ways": [
+    {
+      "osm_way": 1271848915,
+      "part": "footbridge_outline",
+      "which": "Unnamed outline of the pedestrian bridge over Grierson Hill Road. Tagged bridge:structure=beam and man_made=bridge. No name, no width, no maxheight. The perimeter is 191.0 m. That is the ring, not a published span length. The ring crosses way 106711201 and does not cross way 106711211. The mean of the corners is the project centre. Edge lengths in node order, horizontal, are 3.6, 3.5, 48.5, 19.1, 21.2, 4.4, 19.8, 1.1, 1.3, 16.8, 3.2, and 48.7 m. Those are mapped edges. They were not matched to the published spans of 50.0 m, 19.4 m, and 19.0 m.",
+      "plan_length_m": 191.0,
+      "plan_length_is": "perimeter",
+      "tags": {
+        "bridge": "yes",
+        "bridge:structure": "beam",
+        "layer": "1",
+        "man_made": "bridge"
+      },
+      "nodes": [
+        [53.5395847, -113.4880594],
+        [53.5396096, -113.4880256],
+        [53.5396332, -113.4879909],
+        [53.5393356, -113.487456],
+        [53.5392408, -113.487215],
+        [53.5390925, -113.4870148],
+        [53.539062, -113.4870575],
+        [53.5391641, -113.4873026],
+        [53.5391714, -113.4872921],
+        [53.5391798, -113.4872795],
+        [53.5392844, -113.487462],
+        [53.5392964, -113.4875056],
+        [53.5395847, -113.4880594]
+      ]
+    },
+    {
+      "osm_way": 533867748,
+      "part": "footbridge_cycleway",
+      "which": "Cycleway on the outline. Foot and bicycle designated, bridge=yes, layer 1, surface tag concrete, motor_vehicle=no. Horizontal length 91.0 m on these nodes. The Grierson Hill Bridge notes record 91.1 m for this way. Those were not averaged. Neither is a published structure length. The line crosses way 106711201. It bends in the short middle segments. That bend is the mapped kink. It is not a published angle.",
+      "plan_length_m": 91.0,
+      "tags": {
+        "bicycle": "designated",
+        "bridge": "yes",
+        "foot": "designated",
+        "highway": "cycleway",
+        "layer": "1",
+        "motor_vehicle": "no",
+        "surface": "concrete"
+      },
+      "nodes": [
+        [53.5396096, -113.4880256],
+        [53.5393168, -113.4874787],
+        [53.5393061, -113.4874505],
+        [53.5392342, -113.4872399],
+        [53.5392026, -113.4871976],
+        [53.5391798, -113.4872259],
+        [53.5390824, -113.4870404]
+      ]
+    },
+    {
+      "osm_way": 702363113,
+      "part": "footbridge_cycleway",
+      "which": "Short bridge-tagged cycleway at the kink. It shares nodes with the outline and with way 533867748. Horizontal length 5.8 m. Surface tag concrete. Not a separate bridge.",
+      "plan_length_m": 5.8,
+      "tags": {
+        "bicycle": "designated",
+        "bridge": "yes",
+        "foot": "designated",
+        "highway": "cycleway",
+        "layer": "1",
+        "surface": "concrete"
+      },
+      "nodes": [
+        [53.5391714, -113.4872921],
+        [53.5391586, -113.4872576],
+        [53.5391798, -113.4872259]
+      ]
+    },
+    {
+      "osm_way": 1271848916,
+      "part": "footbridge_cycleway",
+      "which": "Short bridge-tagged cycleway at the kink, from a node of way 533867748 to the footway below. Horizontal length 15.7 m. Surface tag concrete. Not a separate bridge.",
+      "plan_length_m": 15.7,
+      "tags": {
+        "bicycle": "designated",
+        "bridge": "yes",
+        "foot": "designated",
+        "highway": "cycleway",
+        "layer": "1",
+        "surface": "concrete"
+      },
+      "nodes": [
+        [53.5393061, -113.4874505],
+        [53.5392068, -113.4872816]
+      ]
+    },
+    {
+      "osm_way": 1271848917,
+      "part": "footbridge_approach",
+      "which": "Cycleway that meets the north node of way 533867748. Not tagged bridge. Horizontal length 8.2 m. Surface tag concrete. It is the mapped path onto the bridge from the promenade side. It is not a span.",
+      "plan_length_m": 8.2,
+      "tags": {
+        "bicycle": "designated",
+        "foot": "designated",
+        "highway": "cycleway",
+        "motor_vehicle": "no",
+        "surface": "concrete"
+      },
+      "nodes": [
+        [53.5396583, -113.4881195],
+        [53.5396096, -113.4880256]
+      ]
+    },
+    {
+      "osm_way": 702363114,
+      "part": "footbridge_footway",
+      "which": "Short footway at the kink. It shares its north node with way 1271848916. Not tagged bridge. Horizontal length 8.8 m. Surface tag concrete. It is not a span.",
+      "plan_length_m": 8.8,
+      "tags": {
+        "highway": "footway",
+        "surface": "concrete"
+      },
+      "nodes": [
+        [53.5392068, -113.4872816],
+        [53.5391533, -113.4871844]
+      ]
+    },
+    {
+      "osm_way": 490235928,
+      "part": "funicular_track",
+      "which": "The inclined railway. Name tag 100 Street Funicular. Operator City of Edmonton. Two nodes, so the mapped line is straight. Horizontal length 64.0 m. This is not the Journal's 55 m incline and not the 66.0 m along a 23.5 degree grade. No gauge tag, no incline tag, no width tag, no elevation. The north node is the upper end, toward 100 Street. The south node is the lower end, at the promenade. opening_hours tag 07:00-21:00. That tag matches the City's 7 am to 9 pm. It is a mapper tag.",
+      "plan_length_m": 64.0,
+      "plan_length_is": "horizontal_two_node_line",
+      "tags": {
+        "bicycle": "designated",
+        "name": "100 Street Funicular",
+        "opening_hours": "07:00-21:00",
+        "operator": "City of Edmonton",
+        "railway": "funicular",
+        "wheelchair": "yes"
+      },
+      "nodes": [
+        [53.5396888, -113.4896381],
+        [53.5394103, -113.4887917]
+      ]
+    },
+    {
+      "osm_way": 533867743,
+      "part": "urban_stair",
+      "which": "Steps beside the upper part of the track. Wood, incline=down toward the south, bicycle ramp, width tag 6. Horizontal length 37.9 m. The width tag is not the City's 4.5 m to 7.5 m stair width. The south end does not meet way 1301170658. The gap is 3.9 m, map distance.",
+      "plan_length_m": 37.9,
+      "tags": {
+        "bicycle": "dismount",
+        "highway": "steps",
+        "incline": "down",
+        "ramp:bicycle": "yes",
+        "surface": "wood",
+        "width": "6"
+      },
+      "nodes": [
+        [53.5396522, -113.4896845],
+        [53.5396434, -113.4896557],
+        [53.5394863, -113.489184]
+      ]
+    },
+    {
+      "osm_way": 1301170658,
+      "part": "urban_stair",
+      "which": "Steps beside the lower part of the track. Wood, incline=down toward the south, bicycle ramp, width tag 6. Horizontal length 22.7 m. The south end is 5.6 m from the lower track node, map distance. The width tag is not a published stair width. This length was not added to way 533867743.",
+      "plan_length_m": 22.7,
+      "tags": {
+        "bicycle": "dismount",
+        "highway": "steps",
+        "incline": "down",
+        "ramp:bicycle": "yes",
+        "surface": "wood",
+        "width": "6"
+      },
+      "nodes": [
+        [53.5394691, -113.4891324],
+        [53.5393666, -113.4888349]
+      ]
+    },
+    {
+      "osm_way": 535658874,
+      "part": "bridge_steps",
+      "which": "Steps that share a node with the outline. Incline=down. No surface tag and no step count. Horizontal length 13.6 m. Not added to the urban stair.",
+      "plan_length_m": 13.6,
+      "tags": {
+        "highway": "steps",
+        "incline": "down"
+      },
+      "nodes": [
+        [53.5391714, -113.4872921],
+        [53.5392625, -113.4874288]
+      ]
+    },
+    {
+      "osm_way": 622160716,
+      "part": "bridge_steps",
+      "which": "Steps beside the outline. They do not share a node. The nearer end is 2.8 m from an outline node. Incline=down. No surface tag and no step count. Horizontal length 14.4 m. Not added to the urban stair.",
+      "plan_length_m": 14.4,
+      "tags": {
+        "highway": "steps",
+        "incline": "down"
+      },
+      "nodes": [
+        [53.5393069, -113.4873538],
+        [53.5392321, -113.4871761]
+      ]
+    }
+  ],
+  "map_distances": {
+    "note": "Horizontal WGS84, radius 6378137 m, one decimal. Bearings are degrees clockwise from north, from the reference point to the subject point. The Grierson midpoint and the Low Level north nodes are not ways of this project. They were not copied as decks.",
+    "grierson_midpoint": [53.538564, -113.488789],
+    "low_level_1900_north_node": [53.5384329, -113.4880941],
+    "low_level_southbound_north_node": [53.538352, -113.4881657],
+    "outline_centroid_to_grierson_midpoint_m": 120.0,
+    "outline_centroid_bearing_from_grierson_midpoint_deg": 46.6,
+    "outline_centroid_to_1900_north_node_m": 105.4,
+    "outline_centroid_bearing_from_1900_north_node_deg": 23.0,
+    "outline_centroid_to_southbound_north_node_m": 115.5,
+    "outline_centroid_bearing_from_southbound_north_node_deg": 23.4,
+    "outline_centroid_to_low_level_north_midpoint_m": 110.5,
+    "outline_centroid_bearing_from_low_level_north_midpoint_deg": 23.2,
+    "outline_southeast_node_to_1900_north_node_m": 102.4,
+    "outline_southeast_node_bearing_from_1900_north_node_deg": 44.2,
+    "track_upper_to_1900_north_node_m": 173.1,
+    "track_upper_bearing_from_1900_north_node_deg": 323.8,
+    "track_upper_to_grierson_midpoint_m": 137.2,
+    "track_lower_to_grierson_midpoint_m": 94.2,
+    "track_lower_bearing_from_grierson_midpoint_deg": 359.9,
+    "track_lower_to_1900_north_node_m": 118.2,
+    "track_lower_to_bridge_cycleway_north_node_m": 55.3
+  },
+  "excluded": [
+    {
+      "osm_way": 106711211,
+      "reason": "Grierson Hill Bridge. Grierson Hill Road over McDougall Hill Road. Not this span. It stays in the grierson geometry."
+    },
+    {
+      "osm_way": 106711201,
+      "reason": "Grierson Hill Road NW, the road under the footbridge. Not a deck of this project. It stays in the grierson geometry."
+    },
+    {
+      "osm_way": 31882107,
+      "reason": "1900 Low Level northbound deck. Not this span. It stays in the R13 geometry. Its north node is a distance reference only."
+    },
+    {
+      "osm_way": 22916473,
+      "reason": "1948/1949 Low Level southbound deck. Not this span. It stays in the R13 geometry. Its north node is a distance reference only."
+    },
+    {
+      "osm_way": 462866197,
+      "reason": "Outline tagged name=Low Level Bridge. Not this footbridge. It stays with the Low Level."
+    },
+    {
+      "osm_way": 1289700141,
+      "reason": "Indoor railway=funicular, about 360 m from the Grierson midpoint. Not the 100 Street funicular."
+    },
+    {
+      "osm_way": 1289700138,
+      "reason": "Indoor steps beside that other funicular. Not this project."
+    },
+    {
+      "osm_way": 490235927,
+      "reason": "Wood steps west of the mapped track, 53.3 m, not named as the funicular. Not copied as the urban stair. The urban stair is ways 533867743 and 1301170658."
+    }
+  ],
+  "dimensions": {
+    "structural_type": "inclined elevator, one cabin, on elevated steel rails; pedestrian bridge of two weathering-steel girders",
+    "r_code": null,
+    "cars": 1,
+    "cabin_m": "3 x 2.2",
+    "cabin_which_dimension_is_length": null,
+    "capacity_people": 20,
+    "gauge": null,
+    "published_incline_length_m_journal": 55,
+    "published_track_length_along_grade_m": 66.0,
+    "grade_degrees_from_horizontal": 23.5,
+    "mapped_track_plan_length_m": 64.0,
+    "vertical_rise_m_as_built": null,
+    "vertical_rise_m_stated_before_construction_2015": 25,
+    "top_speed_m_s": 2,
+    "run_time_s_journal": 48,
+    "bridge_main_span_m": 50.0,
+    "bridge_second_span_m": 19.4,
+    "bridge_cantilever_m": 19.0,
+    "bridge_published_total_length_m": null,
+    "bridge_mapped_centreline_m": 91.0,
+    "bridge_width_m": null,
+    "clearance_above_road_m_city_approximate": 6,
+    "lookout_cantilever_m": 19,
+    "lookout_height_above_river_bank_m": 19,
+    "stair_width_m_published": "4.5 to 7.5",
+    "deck_elevation_asl_m": null,
+    "vertical_datum": null
+  }
+}

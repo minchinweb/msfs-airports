@@ -1,0 +1,1069 @@
+{
+  "code": "G116",
+  "name": "Hawrelak access, Emily Murphy Park bridge over Groat Road",
+  "centre": [
+    53.5322,
+    -113.5383
+  ],
+  "crs": "EPSG:4326",
+  "coordinate_order": "[lat, lon]",
+  "geometry_source": "docs/edmonton-bridges/bridge-geometry.json",
+  "geometry_retrieved": "2026-10-14",
+  "plan_length_note": "plan_length_m is the horizontal length of that OSM way, WGS84 haversine with radius 6378137 m, rounded to one decimal. It is not a climb and not a structural length. An approach plan_length_m stops at the far node stored in the extract. That node is not a surveyed grade point. No length from the Groat Bridge river span is stored here.",
+  "dropped_note": "These ways are the Emily Murphy Park Road crossing of Groat Road, also called the Mayfair Bridge. They are not the river span. River-span lengths, the 4.2 m shared-use path, and the river-pier notes are not copied. Way 648645164 is the road under this deck. It is included as under_groat_road. It is not an approach of the river span.",
+  "decks": [
+    {
+      "osm_way": 106605009,
+      "part": "road_deck",
+      "which": "Ramp, tertiary_link, two lanes, one-way, surface paved, layer 1. No name tag. Node order runs from the southwest toward Emily Murphy Park Road. This centreline is the mapped ramp, not a published span length. A live read on 14 October 2026 also has source=NRCan-CanVec-7.0. The extract does not store that tag.",
+      "plan_length_m": 57.0,
+      "tags": {
+        "bridge": "yes",
+        "highway": "tertiary_link",
+        "lanes": "2",
+        "layer": "1",
+        "maxspeed": "50",
+        "oneway": "yes",
+        "surface": "paved"
+      },
+      "nodes": [
+        [
+          53.531886,
+          -113.538579
+        ],
+        [
+          53.531946,
+          -113.538466
+        ],
+        [
+          53.531987,
+          -113.538387
+        ],
+        [
+          53.532026,
+          -113.538291
+        ],
+        [
+          53.532072,
+          -113.53814
+        ],
+        [
+          53.532107,
+          -113.538011
+        ],
+        [
+          53.532138,
+          -113.537842
+        ]
+      ]
+    },
+    {
+      "osm_way": 106605020,
+      "part": "road_deck",
+      "which": "Emily Murphy Park Road NW, two lanes, one-way, asphalt, layer 1. Node order runs toward the east end of the crossing. This is part of the park-road deck. It is not a published span length.",
+      "plan_length_m": 39.1,
+      "tags": {
+        "bridge": "yes",
+        "highway": "tertiary",
+        "lanes": "2",
+        "layer": "1",
+        "maxspeed": "50",
+        "name": "Emily Murphy Park Road NW",
+        "oneway": "yes",
+        "surface": "asphalt"
+      },
+      "nodes": [
+        [
+          53.532169,
+          -113.538428
+        ],
+        [
+          53.532153,
+          -113.538326
+        ],
+        [
+          53.532147,
+          -113.538241
+        ],
+        [
+          53.532137,
+          -113.53812
+        ],
+        [
+          53.532136,
+          -113.538004
+        ],
+        [
+          53.532138,
+          -113.537842
+        ]
+      ]
+    },
+    {
+      "osm_way": 106605261,
+      "part": "road_deck",
+      "which": "Ramp, tertiary_link, two lanes, one-way, surface paved, layer 1. No name tag. Node order runs from the east side of the crossing toward the southwest. A mapped ramp, not a published span length.",
+      "plan_length_m": 56.4,
+      "tags": {
+        "bridge": "yes",
+        "highway": "tertiary_link",
+        "lanes": "2",
+        "layer": "1",
+        "maxspeed": "50",
+        "oneway": "yes",
+        "surface": "paved"
+      },
+      "nodes": [
+        [
+          53.532303,
+          -113.537705
+        ],
+        [
+          53.532328,
+          -113.538037
+        ],
+        [
+          53.532337,
+          -113.538223
+        ],
+        [
+          53.53234,
+          -113.538328
+        ],
+        [
+          53.532349,
+          -113.538449
+        ],
+        [
+          53.532365,
+          -113.53855
+        ]
+      ]
+    },
+    {
+      "osm_way": 160418783,
+      "part": "cycleway",
+      "which": "Cycleway on the bridge, foot and bicycle yes, surface concrete, layer 1. The width tag is the string 1.5 m. No published source found states 1.5 m. The tag is not a deck elevation.",
+      "plan_length_m": 61.0,
+      "tags": {
+        "bicycle": "yes",
+        "bridge": "yes",
+        "foot": "yes",
+        "highway": "cycleway",
+        "layer": "1",
+        "surface": "concrete",
+        "width": "1.5 m"
+      },
+      "nodes": [
+        [
+          53.532394,
+          -113.53855
+        ],
+        [
+          53.53237,
+          -113.538322
+        ],
+        [
+          53.53237,
+          -113.537632
+        ]
+      ]
+    },
+    {
+      "osm_way": 160418786,
+      "part": "road_deck",
+      "which": "Emily Murphy Park Road NW, two lanes, one-way, asphalt, layer 1. Node order runs from the east side back toward the west side of the crossing. Part of the park-road deck.",
+      "plan_length_m": 50.5,
+      "tags": {
+        "bridge": "yes",
+        "highway": "tertiary",
+        "lanes": "2",
+        "layer": "1",
+        "maxspeed": "50",
+        "name": "Emily Murphy Park Road NW",
+        "oneway": "yes",
+        "surface": "asphalt"
+      },
+      "nodes": [
+        [
+          53.532303,
+          -113.537705
+        ],
+        [
+          53.532288,
+          -113.537856
+        ],
+        [
+          53.532275,
+          -113.537952
+        ],
+        [
+          53.532261,
+          -113.538061
+        ],
+        [
+          53.532254,
+          -113.538115
+        ],
+        [
+          53.532222,
+          -113.538235
+        ],
+        [
+          53.532198,
+          -113.538331
+        ],
+        [
+          53.532169,
+          -113.538428
+        ]
+      ]
+    },
+    {
+      "osm_way": 474575066,
+      "part": "road_deck",
+      "which": "Emily Murphy Park Road NW, two lanes, one-way, asphalt, layer 1. A short bridge-tagged piece at the east side of the crossing.",
+      "plan_length_m": 4.5,
+      "tags": {
+        "bridge": "yes",
+        "highway": "tertiary",
+        "lanes": "2",
+        "layer": "1",
+        "maxspeed": "50",
+        "name": "Emily Murphy Park Road NW",
+        "oneway": "yes",
+        "surface": "asphalt"
+      },
+      "nodes": [
+        [
+          53.532308,
+          -113.537638
+        ],
+        [
+          53.532303,
+          -113.537705
+        ]
+      ]
+    },
+    {
+      "osm_way": 474575069,
+      "part": "road_deck",
+      "which": "Emily Murphy Park Road NW, two lanes, one-way, asphalt, layer 1. A short bridge-tagged piece at the west side of the crossing.",
+      "plan_length_m": 8.4,
+      "tags": {
+        "bridge": "yes",
+        "highway": "tertiary",
+        "lanes": "2",
+        "layer": "1",
+        "maxspeed": "50",
+        "name": "Emily Murphy Park Road NW",
+        "oneway": "yes",
+        "surface": "asphalt"
+      },
+      "nodes": [
+        [
+          53.532169,
+          -113.538428
+        ],
+        [
+          53.532122,
+          -113.538527
+        ]
+      ]
+    },
+    {
+      "osm_way": 474575072,
+      "part": "road_deck",
+      "which": "Emily Murphy Park Road NW, two lanes, one-way, asphalt, layer 1. A short bridge-tagged piece at the west side of the crossing.",
+      "plan_length_m": 7.8,
+      "tags": {
+        "bridge": "yes",
+        "highway": "tertiary",
+        "lanes": "2",
+        "layer": "1",
+        "maxspeed": "50",
+        "name": "Emily Murphy Park Road NW",
+        "oneway": "yes",
+        "surface": "asphalt"
+      },
+      "nodes": [
+        [
+          53.532194,
+          -113.538538
+        ],
+        [
+          53.532169,
+          -113.538428
+        ]
+      ]
+    },
+    {
+      "osm_way": 501599774,
+      "part": "road_deck",
+      "which": "Emily Murphy Park Road NW, two lanes, one-way, asphalt, layer 1. A short bridge-tagged piece at the east side of the crossing.",
+      "plan_length_m": 14.4,
+      "tags": {
+        "bridge": "yes",
+        "highway": "tertiary",
+        "lanes": "2",
+        "layer": "1",
+        "maxspeed": "50",
+        "name": "Emily Murphy Park Road NW",
+        "oneway": "yes",
+        "surface": "asphalt"
+      },
+      "nodes": [
+        [
+          53.532138,
+          -113.537842
+        ],
+        [
+          53.532163,
+          -113.537628
+        ]
+      ]
+    }
+  ],
+  "approaches": [
+    {
+      "osm_way": 106605008,
+      "part": "ramp",
+      "which": "unnamed, tertiary_link, 2 lanes, one-way. The far node is not a surveyed grade point.",
+      "plan_length_m": 238.3,
+      "tags": {
+        "highway": "tertiary_link",
+        "lanes": "2",
+        "maxspeed": "50",
+        "oneway": "yes",
+        "surface": "asphalt"
+      },
+      "nodes": [
+        [
+          53.529927,
+          -113.539784
+        ],
+        [
+          53.529964,
+          -113.539683
+        ],
+        [
+          53.530005,
+          -113.539596
+        ],
+        [
+          53.53004,
+          -113.539539
+        ],
+        [
+          53.53008,
+          -113.539485
+        ],
+        [
+          53.530117,
+          -113.539445
+        ],
+        [
+          53.530158,
+          -113.539408
+        ],
+        [
+          53.530199,
+          -113.539384
+        ],
+        [
+          53.530255,
+          -113.539359
+        ],
+        [
+          53.530354,
+          -113.539328
+        ],
+        [
+          53.530755,
+          -113.539235
+        ],
+        [
+          53.530866,
+          -113.539204
+        ],
+        [
+          53.53099,
+          -113.539157
+        ],
+        [
+          53.531151,
+          -113.53909
+        ],
+        [
+          53.531245,
+          -113.539041
+        ],
+        [
+          53.531613,
+          -113.538843
+        ],
+        [
+          53.531676,
+          -113.5388
+        ],
+        [
+          53.531743,
+          -113.53874
+        ],
+        [
+          53.531811,
+          -113.53868
+        ],
+        [
+          53.531886,
+          -113.538579
+        ]
+      ],
+      "extract_role": "ramp"
+    },
+    {
+      "osm_way": 106605027,
+      "part": "approach_road",
+      "which": "Emily Murphy Park Road NW, tertiary, 2 lanes, one-way. The far node is not a surveyed grade point.",
+      "plan_length_m": 59.4,
+      "tags": {
+        "highway": "tertiary",
+        "lanes": "2",
+        "maxspeed": "50",
+        "name": "Emily Murphy Park Road NW",
+        "oneway": "yes",
+        "surface": "asphalt"
+      },
+      "nodes": [
+        [
+          53.532542,
+          -113.539193
+        ],
+        [
+          53.532442,
+          -113.539083
+        ],
+        [
+          53.532395,
+          -113.539019
+        ],
+        [
+          53.53236,
+          -113.538959
+        ],
+        [
+          53.532319,
+          -113.538894
+        ],
+        [
+          53.532298,
+          -113.538853
+        ],
+        [
+          53.532236,
+          -113.538704
+        ],
+        [
+          53.532194,
+          -113.538538
+        ]
+      ],
+      "extract_role": "approach"
+    },
+    {
+      "osm_way": 106605044,
+      "part": "approach_road",
+      "which": "Emily Murphy Park Road NW, tertiary, 2 lanes, one-way. The far node is not a surveyed grade point.",
+      "plan_length_m": 31.7,
+      "tags": {
+        "highway": "tertiary",
+        "lanes": "2",
+        "maxspeed": "50",
+        "name": "Emily Murphy Park Road NW",
+        "oneway": "yes",
+        "surface": "asphalt"
+      },
+      "nodes": [
+        [
+          53.532122,
+          -113.538527
+        ],
+        [
+          53.532081,
+          -113.538595
+        ],
+        [
+          53.532026,
+          -113.538687
+        ],
+        [
+          53.531982,
+          -113.538746
+        ],
+        [
+          53.531933,
+          -113.538805
+        ],
+        [
+          53.531906,
+          -113.538836
+        ]
+      ],
+      "extract_role": "approach"
+    },
+    {
+      "osm_way": 106605090,
+      "part": "ramp",
+      "which": "unnamed, tertiary_link, 2 lanes, one-way. The far node is not a surveyed grade point.",
+      "plan_length_m": 154.4,
+      "tags": {
+        "highway": "tertiary_link",
+        "lanes": "2",
+        "maxspeed": "50",
+        "oneway": "yes",
+        "surface": "asphalt"
+      },
+      "nodes": [
+        [
+          53.532365,
+          -113.53855
+        ],
+        [
+          53.532385,
+          -113.538638
+        ],
+        [
+          53.532405,
+          -113.538705
+        ],
+        [
+          53.532446,
+          -113.538787
+        ],
+        [
+          53.532485,
+          -113.538849
+        ],
+        [
+          53.532528,
+          -113.538907
+        ],
+        [
+          53.532579,
+          -113.538961
+        ],
+        [
+          53.533337,
+          -113.539488
+        ],
+        [
+          53.533369,
+          -113.539512
+        ],
+        [
+          53.533399,
+          -113.539539
+        ],
+        [
+          53.533424,
+          -113.539574
+        ],
+        [
+          53.533442,
+          -113.539616
+        ],
+        [
+          53.533449,
+          -113.539673
+        ],
+        [
+          53.533447,
+          -113.539717
+        ],
+        [
+          53.533439,
+          -113.539783
+        ]
+      ],
+      "extract_role": "ramp"
+    },
+    {
+      "osm_way": 471833422,
+      "part": "approach_road",
+      "which": "Emily Murphy Park Road NW, tertiary, 2 lanes, one-way. The far node is not a surveyed grade point.",
+      "plan_length_m": 36.6,
+      "tags": {
+        "highway": "tertiary",
+        "lanes": "2",
+        "maxspeed": "50",
+        "name": "Emily Murphy Park Road NW",
+        "oneway": "yes",
+        "surface": "asphalt"
+      },
+      "nodes": [
+        [
+          53.532333,
+          -113.537086
+        ],
+        [
+          53.532308,
+          -113.537638
+        ]
+      ],
+      "extract_role": "approach"
+    },
+    {
+      "osm_way": 473737052,
+      "part": "approach_road",
+      "which": "Emily Murphy Park Road NW, tertiary, 2 lanes, one-way. The far node is not a surveyed grade point.",
+      "plan_length_m": 36.1,
+      "tags": {
+        "highway": "tertiary",
+        "lanes": "2",
+        "maxspeed": "50",
+        "name": "Emily Murphy Park Road NW",
+        "oneway": "yes",
+        "surface": "asphalt"
+      },
+      "nodes": [
+        [
+          53.532163,
+          -113.537628
+        ],
+        [
+          53.532208,
+          -113.537087
+        ]
+      ],
+      "extract_role": "approach"
+    },
+    {
+      "osm_way": 648645164,
+      "part": "under_groat_road",
+      "which": "Groat Road NW, secondary, 2 lanes, one-way, maxheight tag 5.3, which is not a deck elevation. The road under the deck. It is not an approach and not a climb. Way 648645164 is Groat Road under Emily Murphy Park Road. The maxheight tag, where present, is not a clearance under this deck and not a deck elevation.",
+      "plan_length_m": 918.2,
+      "tags": {
+        "destination": "South University",
+        "foot": "no",
+        "highway": "secondary",
+        "lanes": "2",
+        "maxheight": "5.3",
+        "maxspeed": "60",
+        "name": "Groat Road NW",
+        "oneway": "yes",
+        "sidewalk": "no",
+        "surface": "asphalt"
+      },
+      "nodes": [
+        [
+          53.535298,
+          -113.540019
+        ],
+        [
+          53.535111,
+          -113.54008
+        ],
+        [
+          53.535011,
+          -113.540096
+        ],
+        [
+          53.534934,
+          -113.540105
+        ],
+        [
+          53.534837,
+          -113.540099
+        ],
+        [
+          53.534713,
+          -113.540086
+        ],
+        [
+          53.534551,
+          -113.540063
+        ],
+        [
+          53.534495,
+          -113.540046
+        ],
+        [
+          53.53443,
+          -113.540025
+        ],
+        [
+          53.534336,
+          -113.53998
+        ],
+        [
+          53.534184,
+          -113.539903
+        ],
+        [
+          53.534124,
+          -113.53986
+        ],
+        [
+          53.534054,
+          -113.539805
+        ],
+        [
+          53.533951,
+          -113.539704
+        ],
+        [
+          53.533862,
+          -113.539611
+        ],
+        [
+          53.533795,
+          -113.539532
+        ],
+        [
+          53.533721,
+          -113.539437
+        ],
+        [
+          53.533633,
+          -113.539312
+        ],
+        [
+          53.533522,
+          -113.539152
+        ],
+        [
+          53.533393,
+          -113.53896
+        ],
+        [
+          53.533239,
+          -113.538751
+        ],
+        [
+          53.533141,
+          -113.53864
+        ],
+        [
+          53.533036,
+          -113.538534
+        ],
+        [
+          53.532918,
+          -113.53843
+        ],
+        [
+          53.532793,
+          -113.538339
+        ],
+        [
+          53.532699,
+          -113.538282
+        ],
+        [
+          53.532618,
+          -113.53825
+        ],
+        [
+          53.532518,
+          -113.538205
+        ],
+        [
+          53.532444,
+          -113.538184
+        ],
+        [
+          53.53238,
+          -113.538166
+        ],
+        [
+          53.532202,
+          -113.538146
+        ],
+        [
+          53.532009,
+          -113.538167
+        ],
+        [
+          53.531934,
+          -113.538181
+        ],
+        [
+          53.531856,
+          -113.538209
+        ],
+        [
+          53.531683,
+          -113.53828
+        ],
+        [
+          53.531477,
+          -113.538383
+        ],
+        [
+          53.53111,
+          -113.53859
+        ],
+        [
+          53.530725,
+          -113.538813
+        ],
+        [
+          53.530003,
+          -113.539229
+        ],
+        [
+          53.529413,
+          -113.539566
+        ],
+        [
+          53.528876,
+          -113.539874
+        ],
+        [
+          53.528428,
+          -113.540131
+        ],
+        [
+          53.528138,
+          -113.540295
+        ],
+        [
+          53.527764,
+          -113.540511
+        ],
+        [
+          53.527609,
+          -113.540607
+        ]
+      ],
+      "extract_role": "cross_road"
+    },
+    {
+      "osm_way": 944414125,
+      "part": "under_groat_road",
+      "which": "Groat Road NW, secondary, 2 lanes, one-way. The road under the deck. It is not an approach and not a climb. Way 944414125 is Groat Road under Emily Murphy Park Road. The maxheight tag, where present, is not a clearance under this deck and not a deck elevation.",
+      "plan_length_m": 607.8,
+      "tags": {
+        "highway": "secondary",
+        "lanes": "2",
+        "maxspeed": "60",
+        "name": "Groat Road NW",
+        "oneway": "yes",
+        "sidewalk": "no",
+        "surface": "asphalt"
+      },
+      "nodes": [
+        [
+          53.529409,
+          -113.539411
+        ],
+        [
+          53.529967,
+          -113.539091
+        ],
+        [
+          53.530303,
+          -113.538904
+        ],
+        [
+          53.530698,
+          -113.538678
+        ],
+        [
+          53.531088,
+          -113.538445
+        ],
+        [
+          53.531454,
+          -113.538246
+        ],
+        [
+          53.531669,
+          -113.538133
+        ],
+        [
+          53.531848,
+          -113.538064
+        ],
+        [
+          53.531945,
+          -113.53804
+        ],
+        [
+          53.532052,
+          -113.538017
+        ],
+        [
+          53.532222,
+          -113.538001
+        ],
+        [
+          53.532385,
+          -113.538025
+        ],
+        [
+          53.532449,
+          -113.538039
+        ],
+        [
+          53.532505,
+          -113.538058
+        ],
+        [
+          53.532574,
+          -113.53808
+        ],
+        [
+          53.5327,
+          -113.538136
+        ],
+        [
+          53.532777,
+          -113.53818
+        ],
+        [
+          53.532833,
+          -113.538218
+        ],
+        [
+          53.532943,
+          -113.538291
+        ],
+        [
+          53.533006,
+          -113.538331
+        ],
+        [
+          53.53308,
+          -113.538394
+        ],
+        [
+          53.533173,
+          -113.538496
+        ],
+        [
+          53.533279,
+          -113.538625
+        ],
+        [
+          53.533369,
+          -113.538744
+        ],
+        [
+          53.533471,
+          -113.538884
+        ],
+        [
+          53.533574,
+          -113.539042
+        ],
+        [
+          53.533678,
+          -113.53919
+        ],
+        [
+          53.533753,
+          -113.539295
+        ],
+        [
+          53.533812,
+          -113.539375
+        ],
+        [
+          53.533851,
+          -113.539424
+        ],
+        [
+          53.533925,
+          -113.539511
+        ],
+        [
+          53.534002,
+          -113.539593
+        ],
+        [
+          53.534085,
+          -113.539672
+        ],
+        [
+          53.534156,
+          -113.539727
+        ],
+        [
+          53.534257,
+          -113.539791
+        ],
+        [
+          53.534314,
+          -113.539822
+        ],
+        [
+          53.534421,
+          -113.539872
+        ]
+      ],
+      "extract_role": "cross_road"
+    }
+  ],
+  "excluded": [
+    {
+      "osm_way": 160418782,
+      "reason": "unnamed, cycleway, width tag 1.5 m, which is not a published width. Not the deck. Horizontal length 31.4 m."
+    },
+    {
+      "osm_way": 201157172,
+      "reason": "unnamed, cycleway, width tag 1.5 m, which is not a published width. Not the deck. Horizontal length 51.9 m."
+    },
+    {
+      "osm_way": 106605061,
+      "reason": "unnamed, secondary_link, 1 lanes, one-way. Not the deck. Horizontal length 87.4 m."
+    },
+    {
+      "osm_way": 106605106,
+      "reason": "unnamed, tertiary_link, 1 lanes, one-way. Not the deck. Horizontal length 77.9 m."
+    },
+    {
+      "osm_way": 471833421,
+      "reason": "unnamed, secondary_link, 1 lanes, one-way. Not the deck. Horizontal length 46.0 m."
+    },
+    {
+      "osm_way": 471833423,
+      "reason": "Emily Murphy Park Road NW, tertiary, 2 lanes, one-way. Not the deck. Horizontal length 66.0 m."
+    },
+    {
+      "osm_way": 473737051,
+      "reason": "Emily Murphy Park Road NW, tertiary, 2 lanes, one-way. Not the deck. Horizontal length 24.9 m."
+    },
+    {
+      "osm_way": 473737053,
+      "reason": "unnamed, secondary_link, 1 lanes, one-way. Not the deck. Horizontal length 13.9 m."
+    },
+    {
+      "osm_way": 1102766307,
+      "reason": "Emily Murphy Park Road NW, tertiary, 2 lanes, one-way. Not the deck. Horizontal length 176.0 m."
+    }
+  ],
+  "dimensions": {
+    "structural_type": "Grade separation. Alberta's row prints GS 3 for the Mayfair bridge. The 2018-2020 work was a single-season rehabilitation, not a replacement.",
+    "city_names": [
+      "Emily Murphy Park Bridge over Groat Road",
+      "Emily Murphy Park Road Bridge over Groat Road",
+      "Mayfair Bridge"
+    ],
+    "alberta_file": "76535",
+    "alberta_row_name": "MAYFAIR BRG",
+    "year_built_alberta": 1966,
+    "rehabilitation_year": 2018,
+    "span_count_printed_on_alberta_row": 3,
+    "span_lengths_m": null,
+    "published_length_m": null,
+    "deck_elevation_asl_m": null,
+    "clearance_over_groat_road_m": null,
+    "deck_width_m": null,
+    "lane_width_m": null,
+    "lanes_per_mapped_road_way": 2,
+    "posted_speed_kmh": 50,
+    "osm_cycleway_width_tag": "1.5 m",
+    "osm_maxheight_on_groat_road_under": "5.3"
+  }
+}

@@ -1,0 +1,1218 @@
+{
+  "code": "G117",
+  "name": "102 Avenue at Groat Road",
+  "centre": [
+    53.543,
+    -113.5403
+  ],
+  "crs": "EPSG:4326",
+  "coordinate_order": "[lat, lon]",
+  "geometry_source": "docs/edmonton-bridges/bridge-geometry.json",
+  "geometry_retrieved": "2026-10-14",
+  "plan_length_note": "plan_length_m is the horizontal length of that OSM way, WGS84 haversine with radius 6378137 m, rounded to one decimal. It is not a climb and not a structural length. An approach plan_length_m stops at the far node stored in the extract. That node is not a surveyed grade point. The 111.9 m road centreline is not the 83 m main span, not the 113 m length in the design paper, and not the roughly 100 m in ENR. The Victoria Park span is not in this file.",
+  "dropped_note": "This is 102 Avenue over Groat Road, Alberta file B408, opened in 2016. It is not the Groat Road bridge over Victoria Park Road. That span is at the north end of the river bridge. No separate bridge object for it is in this extract, and no sixth folder was written. River-span lengths, the river path width, and the river-pier notes are not copied. The 4.2 m girder depth in ENR is this bridge's girder end depth. It is not the river bridge's 4.2 m path.",
+  "decks": [
+    {
+      "osm_way": 25601853,
+      "part": "road_deck",
+      "which": "102 Avenue NW, four lanes, asphalt, layer 1, 50 km/h. No oneway tag. Node order is west to east. The width tag is 13.6. No published source found states 13.6 m. The tag is not a deck width and not a deck elevation. A live read on 14 October 2026 also has hgv=no. That tag is not a clearance and not a deck elevation. This centreline is longer than the 83 m main span in the design paper and close to the paper's 113 m length. Those are different extents. Use the line for the plan shape.",
+      "plan_length_m": 111.9,
+      "tags": {
+        "bridge": "yes",
+        "highway": "secondary",
+        "lanes": "4",
+        "layer": "1",
+        "maxspeed": "50",
+        "name": "102 Avenue NW",
+        "surface": "asphalt",
+        "width": "13.6"
+      },
+      "nodes": [
+        [
+          53.543012,
+          -113.541177
+        ],
+        [
+          53.543009,
+          -113.539485
+        ]
+      ]
+    },
+    {
+      "osm_way": 114503872,
+      "part": "sidewalk",
+      "which": "Footway on the bridge, foot designated, layer 1. No surface tag. It lies north of the road centreline. A mapped sidewalk, not a published width.",
+      "plan_length_m": 120.9,
+      "tags": {
+        "bridge": "yes",
+        "foot": "designated",
+        "highway": "footway",
+        "layer": "1"
+      },
+      "nodes": [
+        [
+          53.543132,
+          -113.541154
+        ],
+        [
+          53.543119,
+          -113.539326
+        ]
+      ]
+    },
+    {
+      "osm_way": 114503875,
+      "part": "sidewalk",
+      "which": "Footway on the bridge, layer 1. No foot tag and no surface tag. It lies south of the road centreline.",
+      "plan_length_m": 112.1,
+      "tags": {
+        "bridge": "yes",
+        "highway": "footway",
+        "layer": "1"
+      },
+      "nodes": [
+        [
+          53.542932,
+          -113.54118
+        ],
+        [
+          53.542929,
+          -113.540694
+        ],
+        [
+          53.542924,
+          -113.539485
+        ]
+      ]
+    },
+    {
+      "osm_way": 1230468990,
+      "part": "bike_lane",
+      "which": "Protected bike lane, name 102 Avenue NW Protected Bike Lane, surface asphalt. No layer tag in the extract. It lies north of the road centreline and south of the north footway. The September 2016 photographs show a bike lane separated from traffic by a concrete barrier.",
+      "plan_length_m": 111.7,
+      "tags": {
+        "bridge": "yes",
+        "highway": "cycleway",
+        "name": "102 Avenue NW Protected Bike Lane",
+        "surface": "asphalt"
+      },
+      "nodes": [
+        [
+          53.543099,
+          -113.541183
+        ],
+        [
+          53.543096,
+          -113.539494
+        ]
+      ]
+    }
+  ],
+  "approaches": [
+    {
+      "osm_way": 504698254,
+      "part": "approach_road",
+      "which": "102 Avenue NW, secondary, 4 lanes, width tag 15, which is not a published width. The far node is not a surveyed grade point.",
+      "plan_length_m": 12.9,
+      "tags": {
+        "highway": "secondary",
+        "lanes": "4",
+        "maxspeed": "50",
+        "name": "102 Avenue NW",
+        "surface": "asphalt",
+        "width": "15"
+      },
+      "nodes": [
+        [
+          53.543013,
+          -113.541372
+        ],
+        [
+          53.543012,
+          -113.541177
+        ]
+      ],
+      "extract_role": "approach"
+    },
+    {
+      "osm_way": 1230468991,
+      "part": "bike_approach",
+      "which": "102 Avenue NW Protected Bike Lane, cycleway. The far node is not a surveyed grade point.",
+      "plan_length_m": 12.7,
+      "tags": {
+        "highway": "cycleway",
+        "name": "102 Avenue NW Protected Bike Lane",
+        "surface": "asphalt"
+      },
+      "nodes": [
+        [
+          53.54312,
+          -113.541371
+        ],
+        [
+          53.543099,
+          -113.541183
+        ]
+      ],
+      "extract_role": "approach"
+    },
+    {
+      "osm_way": 1230468992,
+      "part": "bike_approach",
+      "which": "102 Avenue NW Protected Bike Lane, cycleway. The far node is not a surveyed grade point.",
+      "plan_length_m": 1810.1,
+      "tags": {
+        "highway": "cycleway",
+        "name": "102 Avenue NW Protected Bike Lane",
+        "surface": "asphalt"
+      },
+      "nodes": [
+        [
+          53.543096,
+          -113.539494
+        ],
+        [
+          53.543096,
+          -113.539218
+        ],
+        [
+          53.543098,
+          -113.539046
+        ],
+        [
+          53.543105,
+          -113.538557
+        ],
+        [
+          53.543109,
+          -113.537779
+        ],
+        [
+          53.543109,
+          -113.537662
+        ],
+        [
+          53.543109,
+          -113.537578
+        ],
+        [
+          53.543107,
+          -113.536789
+        ],
+        [
+          53.543107,
+          -113.536203
+        ],
+        [
+          53.543103,
+          -113.536119
+        ],
+        [
+          53.543097,
+          -113.535927
+        ],
+        [
+          53.543088,
+          -113.535748
+        ],
+        [
+          53.543085,
+          -113.535697
+        ],
+        [
+          53.543085,
+          -113.535014
+        ],
+        [
+          53.543084,
+          -113.534122
+        ],
+        [
+          53.543083,
+          -113.533312
+        ],
+        [
+          53.543093,
+          -113.533231
+        ],
+        [
+          53.543105,
+          -113.533089
+        ],
+        [
+          53.543108,
+          -113.532789
+        ],
+        [
+          53.54309,
+          -113.532658
+        ],
+        [
+          53.543092,
+          -113.532357
+        ],
+        [
+          53.543086,
+          -113.532251
+        ],
+        [
+          53.543087,
+          -113.531091
+        ],
+        [
+          53.543087,
+          -113.53104
+        ],
+        [
+          53.543079,
+          -113.530918
+        ],
+        [
+          53.543072,
+          -113.530783
+        ],
+        [
+          53.543063,
+          -113.53064
+        ],
+        [
+          53.543063,
+          -113.53061
+        ],
+        [
+          53.543061,
+          -113.529735
+        ],
+        [
+          53.54306,
+          -113.528797
+        ],
+        [
+          53.54306,
+          -113.528665
+        ],
+        [
+          53.54306,
+          -113.528542
+        ],
+        [
+          53.543062,
+          -113.527751
+        ],
+        [
+          53.54306,
+          -113.526971
+        ],
+        [
+          53.54306,
+          -113.526822
+        ],
+        [
+          53.54306,
+          -113.526695
+        ],
+        [
+          53.543058,
+          -113.525915
+        ],
+        [
+          53.543057,
+          -113.525168
+        ],
+        [
+          53.543057,
+          -113.525133
+        ],
+        [
+          53.543056,
+          -113.524991
+        ],
+        [
+          53.543056,
+          -113.524861
+        ],
+        [
+          53.543056,
+          -113.524822
+        ],
+        [
+          53.543057,
+          -113.523306
+        ],
+        [
+          53.543057,
+          -113.523277
+        ],
+        [
+          53.543056,
+          -113.523139
+        ],
+        [
+          53.543055,
+          -113.523028
+        ],
+        [
+          53.543055,
+          -113.523011
+        ],
+        [
+          53.543058,
+          -113.522233
+        ],
+        [
+          53.543056,
+          -113.521485
+        ],
+        [
+          53.543057,
+          -113.521441
+        ],
+        [
+          53.543058,
+          -113.521302
+        ],
+        [
+          53.543058,
+          -113.521188
+        ],
+        [
+          53.543057,
+          -113.521142
+        ],
+        [
+          53.543057,
+          -113.520726
+        ],
+        [
+          53.543058,
+          -113.520394
+        ],
+        [
+          53.543058,
+          -113.519602
+        ],
+        [
+          53.543058,
+          -113.519466
+        ],
+        [
+          53.543058,
+          -113.51935
+        ],
+        [
+          53.543057,
+          -113.518554
+        ],
+        [
+          53.543054,
+          -113.517802
+        ],
+        [
+          53.543054,
+          -113.517763
+        ],
+        [
+          53.543054,
+          -113.517634
+        ],
+        [
+          53.543054,
+          -113.517508
+        ],
+        [
+          53.543054,
+          -113.517442
+        ],
+        [
+          53.543055,
+          -113.51672
+        ],
+        [
+          53.543055,
+          -113.515926
+        ],
+        [
+          53.543055,
+          -113.515795
+        ],
+        [
+          53.543055,
+          -113.515673
+        ],
+        [
+          53.543054,
+          -113.514888
+        ],
+        [
+          53.543054,
+          -113.514083
+        ],
+        [
+          53.543054,
+          -113.51393
+        ],
+        [
+          53.543054,
+          -113.513835
+        ],
+        [
+          53.543054,
+          -113.513016
+        ],
+        [
+          53.543056,
+          -113.512305
+        ],
+        [
+          53.543045,
+          -113.51226
+        ],
+        [
+          53.54302,
+          -113.512153
+        ]
+      ],
+      "extract_role": "approach"
+    },
+    {
+      "osm_way": 1278086768,
+      "part": "approach_road",
+      "which": "102 Avenue NW, secondary, 4 lanes, width tag 14, which is not a published width. The far node is not a surveyed grade point.",
+      "plan_length_m": 10.7,
+      "tags": {
+        "highway": "secondary",
+        "lanes": "4",
+        "maxspeed": "50",
+        "name": "102 Avenue NW",
+        "surface": "asphalt",
+        "width": "14"
+      },
+      "nodes": [
+        [
+          53.543009,
+          -113.539485
+        ],
+        [
+          53.543008,
+          -113.539324
+        ]
+      ],
+      "extract_role": "approach"
+    },
+    {
+      "osm_way": 37749243,
+      "part": "under_groat_road",
+      "which": "Groat Road NW, secondary, 2 lanes, one-way. The road under the deck. It is not an approach and not a climb. Groat Road under 102 Avenue. The way continues well past this bridge. It is not the climb on 102 Avenue.",
+      "plan_length_m": 1124.7,
+      "tags": {
+        "highway": "secondary",
+        "lanes": "2",
+        "maxspeed": "50",
+        "name": "Groat Road NW",
+        "oneway": "yes",
+        "surface": "asphalt"
+      },
+      "nodes": [
+        [
+          53.540048,
+          -113.538247
+        ],
+        [
+          53.540112,
+          -113.538392
+        ],
+        [
+          53.540145,
+          -113.538491
+        ],
+        [
+          53.540178,
+          -113.538597
+        ],
+        [
+          53.540235,
+          -113.538813
+        ],
+        [
+          53.540264,
+          -113.538921
+        ],
+        [
+          53.540485,
+          -113.539972
+        ],
+        [
+          53.540549,
+          -113.540218
+        ],
+        [
+          53.540669,
+          -113.540532
+        ],
+        [
+          53.54075,
+          -113.540695
+        ],
+        [
+          53.540831,
+          -113.540811
+        ],
+        [
+          53.540916,
+          -113.540925
+        ],
+        [
+          53.540982,
+          -113.541005
+        ],
+        [
+          53.541056,
+          -113.541073
+        ],
+        [
+          53.541133,
+          -113.541132
+        ],
+        [
+          53.541228,
+          -113.541193
+        ],
+        [
+          53.541301,
+          -113.54123
+        ],
+        [
+          53.541388,
+          -113.541259
+        ],
+        [
+          53.541462,
+          -113.541275
+        ],
+        [
+          53.541541,
+          -113.541288
+        ],
+        [
+          53.541636,
+          -113.541287
+        ],
+        [
+          53.541733,
+          -113.541274
+        ],
+        [
+          53.541787,
+          -113.541262
+        ],
+        [
+          53.541848,
+          -113.541239
+        ],
+        [
+          53.541908,
+          -113.54121
+        ],
+        [
+          53.54197,
+          -113.541186
+        ],
+        [
+          53.542028,
+          -113.541152
+        ],
+        [
+          53.542095,
+          -113.541096
+        ],
+        [
+          53.542153,
+          -113.541049
+        ],
+        [
+          53.542226,
+          -113.54097
+        ],
+        [
+          53.542491,
+          -113.540662
+        ],
+        [
+          53.542553,
+          -113.540592
+        ],
+        [
+          53.542612,
+          -113.540527
+        ],
+        [
+          53.542674,
+          -113.540468
+        ],
+        [
+          53.54274,
+          -113.540413
+        ],
+        [
+          53.542828,
+          -113.540356
+        ],
+        [
+          53.542876,
+          -113.540332
+        ],
+        [
+          53.543039,
+          -113.540288
+        ],
+        [
+          53.543148,
+          -113.54028
+        ],
+        [
+          53.54352,
+          -113.540311
+        ],
+        [
+          53.543663,
+          -113.540337
+        ],
+        [
+          53.543796,
+          -113.540384
+        ],
+        [
+          53.543931,
+          -113.540462
+        ],
+        [
+          53.544053,
+          -113.540557
+        ],
+        [
+          53.544175,
+          -113.540685
+        ],
+        [
+          53.544286,
+          -113.54083
+        ],
+        [
+          53.544375,
+          -113.540961
+        ],
+        [
+          53.544467,
+          -113.541158
+        ],
+        [
+          53.544555,
+          -113.541383
+        ],
+        [
+          53.544606,
+          -113.541529
+        ],
+        [
+          53.544659,
+          -113.541684
+        ],
+        [
+          53.544715,
+          -113.541839
+        ],
+        [
+          53.544777,
+          -113.541991
+        ],
+        [
+          53.544851,
+          -113.542117
+        ],
+        [
+          53.544916,
+          -113.542212
+        ],
+        [
+          53.544986,
+          -113.542292
+        ],
+        [
+          53.545058,
+          -113.542354
+        ],
+        [
+          53.545141,
+          -113.542405
+        ],
+        [
+          53.545233,
+          -113.542454
+        ],
+        [
+          53.545527,
+          -113.542597
+        ],
+        [
+          53.545601,
+          -113.542653
+        ],
+        [
+          53.545666,
+          -113.542712
+        ],
+        [
+          53.545732,
+          -113.542783
+        ],
+        [
+          53.545791,
+          -113.542856
+        ],
+        [
+          53.545845,
+          -113.542937
+        ],
+        [
+          53.545902,
+          -113.543052
+        ],
+        [
+          53.545935,
+          -113.543132
+        ],
+        [
+          53.545988,
+          -113.54328
+        ],
+        [
+          53.54606,
+          -113.543535
+        ],
+        [
+          53.546154,
+          -113.54389
+        ],
+        [
+          53.546192,
+          -113.544013
+        ],
+        [
+          53.546234,
+          -113.544122
+        ],
+        [
+          53.546278,
+          -113.544206
+        ],
+        [
+          53.54632,
+          -113.544279
+        ],
+        [
+          53.546391,
+          -113.544382
+        ],
+        [
+          53.546453,
+          -113.54445
+        ],
+        [
+          53.546524,
+          -113.54452
+        ],
+        [
+          53.546615,
+          -113.54458
+        ],
+        [
+          53.546702,
+          -113.544627
+        ],
+        [
+          53.546918,
+          -113.544744
+        ],
+        [
+          53.546983,
+          -113.544781
+        ],
+        [
+          53.547041,
+          -113.544816
+        ],
+        [
+          53.547124,
+          -113.544887
+        ],
+        [
+          53.547186,
+          -113.544949
+        ],
+        [
+          53.547711,
+          -113.545593
+        ]
+      ],
+      "extract_role": "cross_road"
+    },
+    {
+      "osm_way": 484577623,
+      "part": "under_groat_road",
+      "which": "Groat Road NW, secondary, 2 lanes, one-way. The road under the deck. It is not an approach and not a climb. Groat Road under 102 Avenue. The way continues well past this bridge. It is not the climb on 102 Avenue.",
+      "plan_length_m": 756.8,
+      "tags": {
+        "highway": "secondary",
+        "lanes": "2",
+        "maxspeed": "50",
+        "name": "Groat Road NW",
+        "oneway": "yes",
+        "surface": "asphalt"
+      },
+      "nodes": [
+        [
+          53.546183,
+          -113.54421
+        ],
+        [
+          53.546131,
+          -113.544094
+        ],
+        [
+          53.546092,
+          -113.543957
+        ],
+        [
+          53.545929,
+          -113.543356
+        ],
+        [
+          53.545896,
+          -113.543261
+        ],
+        [
+          53.545862,
+          -113.543173
+        ],
+        [
+          53.545824,
+          -113.543095
+        ],
+        [
+          53.545777,
+          -113.543008
+        ],
+        [
+          53.545703,
+          -113.542908
+        ],
+        [
+          53.545631,
+          -113.542824
+        ],
+        [
+          53.545558,
+          -113.542762
+        ],
+        [
+          53.54549,
+          -113.542711
+        ],
+        [
+          53.5454,
+          -113.542665
+        ],
+        [
+          53.545178,
+          -113.542558
+        ],
+        [
+          53.5451,
+          -113.542518
+        ],
+        [
+          53.54503,
+          -113.542467
+        ],
+        [
+          53.54496,
+          -113.542404
+        ],
+        [
+          53.544894,
+          -113.54234
+        ],
+        [
+          53.544826,
+          -113.542243
+        ],
+        [
+          53.544769,
+          -113.542154
+        ],
+        [
+          53.544708,
+          -113.542041
+        ],
+        [
+          53.544635,
+          -113.541866
+        ],
+        [
+          53.544565,
+          -113.54166
+        ],
+        [
+          53.544506,
+          -113.541489
+        ],
+        [
+          53.544443,
+          -113.541324
+        ],
+        [
+          53.544397,
+          -113.541203
+        ],
+        [
+          53.544334,
+          -113.541082
+        ],
+        [
+          53.544271,
+          -113.540969
+        ],
+        [
+          53.544179,
+          -113.540853
+        ],
+        [
+          53.54409,
+          -113.540754
+        ],
+        [
+          53.543995,
+          -113.540648
+        ],
+        [
+          53.543883,
+          -113.54056
+        ],
+        [
+          53.543778,
+          -113.540506
+        ],
+        [
+          53.543677,
+          -113.540465
+        ],
+        [
+          53.543561,
+          -113.540442
+        ],
+        [
+          53.543447,
+          -113.54043
+        ],
+        [
+          53.543263,
+          -113.54041
+        ],
+        [
+          53.543138,
+          -113.540404
+        ],
+        [
+          53.542918,
+          -113.540441
+        ],
+        [
+          53.542859,
+          -113.540469
+        ],
+        [
+          53.542768,
+          -113.540526
+        ],
+        [
+          53.542681,
+          -113.5406
+        ],
+        [
+          53.542592,
+          -113.540699
+        ],
+        [
+          53.54243,
+          -113.540877
+        ],
+        [
+          53.542159,
+          -113.541175
+        ],
+        [
+          53.542062,
+          -113.541256
+        ],
+        [
+          53.541982,
+          -113.54131
+        ],
+        [
+          53.541889,
+          -113.541348
+        ],
+        [
+          53.541814,
+          -113.541379
+        ],
+        [
+          53.541722,
+          -113.541394
+        ],
+        [
+          53.541634,
+          -113.54141
+        ],
+        [
+          53.541554,
+          -113.541415
+        ],
+        [
+          53.541481,
+          -113.541404
+        ],
+        [
+          53.541407,
+          -113.541389
+        ],
+        [
+          53.541358,
+          -113.541371
+        ],
+        [
+          53.541295,
+          -113.54135
+        ],
+        [
+          53.541227,
+          -113.541318
+        ],
+        [
+          53.541173,
+          -113.541289
+        ],
+        [
+          53.541122,
+          -113.541254
+        ],
+        [
+          53.541072,
+          -113.541218
+        ],
+        [
+          53.541016,
+          -113.541173
+        ],
+        [
+          53.540958,
+          -113.541121
+        ],
+        [
+          53.540891,
+          -113.541054
+        ],
+        [
+          53.540845,
+          -113.540996
+        ],
+        [
+          53.540804,
+          -113.540939
+        ],
+        [
+          53.540756,
+          -113.540865
+        ],
+        [
+          53.5407,
+          -113.540781
+        ],
+        [
+          53.540657,
+          -113.540701
+        ]
+      ],
+      "extract_role": "cross_road"
+    }
+  ],
+  "excluded": [
+    {
+      "osm_way": 114503873,
+      "reason": "unnamed, footway. Not the deck. Horizontal length 23.0 m."
+    },
+    {
+      "osm_way": 114503874,
+      "reason": "unnamed, footway. Not the deck. Horizontal length 6.9 m."
+    },
+    {
+      "osm_way": 845134791,
+      "reason": "unnamed, footway. Not the deck. Horizontal length 50.2 m."
+    },
+    {
+      "osm_way": 1115783313,
+      "reason": "unnamed, footway. Not the deck. Horizontal length 18.5 m."
+    },
+    {
+      "osm_way": 25454665,
+      "reason": "Clifton Place NW, residential. Not the deck. Horizontal length 191.4 m."
+    },
+    {
+      "osm_way": 31678485,
+      "reason": "Connaught Drive NW, residential, 2 lanes. Not the deck. Horizontal length 681.5 m."
+    },
+    {
+      "osm_way": 31688490,
+      "reason": "Connaught Drive NW, residential, 1 lanes, one-way. Not the deck. Horizontal length 61.2 m."
+    },
+    {
+      "osm_way": 504698252,
+      "reason": "Connaught Drive NW, residential, 2 lanes. Not the deck. Horizontal length 11.9 m."
+    },
+    {
+      "osm_way": 504698253,
+      "reason": "102 Avenue NW, secondary, 4 lanes, width tag 15, which is not a published width. Not the deck. Horizontal length 41.0 m."
+    },
+    {
+      "osm_way": 1278086769,
+      "reason": "102 Avenue NW, secondary, 4 lanes, width tag 14, which is not a published width. Not the deck. Horizontal length 69.5 m."
+    }
+  ],
+  "dimensions": {
+    "structural_type": "Single-span steel haunched girder. Integral concrete abutments. The design paper calls the main span steel and the abutments integral.",
+    "alberta_file": "B408",
+    "year_opened": 2016,
+    "replaced_structure": "1910 steel trestle, described as 104 years old",
+    "span_count": 1,
+    "main_span_m_design_paper": 83,
+    "main_span_m_alberta_row_prints": 83.0,
+    "alberta_row_unassigned_printed_numbers": [
+      83.3,
+      18.2,
+      68.3
+    ],
+    "alberta_row_unassigned_note": "The TIMS PDF interleaves columns. These three numbers are printed on the B408 row and were not assigned to a length or a height. The 83.0 printed beside the year matches the design paper's 83 m main span.",
+    "total_length_m_design_paper": 113,
+    "abutment_length_m_design_paper": 15.6,
+    "span_m_enr_roughly": 100,
+    "girder_depth_at_ends_m_enr_roughly": 4.2,
+    "ravine_depth_m_design_paper": 22,
+    "ravine_depth_is_not_deck_elevation": true,
+    "deck_elevation_asl_m": null,
+    "clearance_over_groat_road_m": null,
+    "published_width_m": null,
+    "osm_width_tag": "13.6",
+    "lanes": 4,
+    "posted_speed_kmh": 50
+  }
+}

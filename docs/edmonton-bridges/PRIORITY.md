@@ -2,7 +2,7 @@
 
 Last updated: 2026-10-14. Handoff checklist for `scenery-edmonton-bridges`. Work the empty boxes from the top. A later session should not re-rank from scratch; the scores below are the reason for the order. An empty box is unbuilt. Nothing in this package has been modeled yet.
 
-This file covers every structure in `bridges.md`, `freeway-bridges.md`, and `lrt.md`, plus the bridges that exist only as crosses on `edmonton-bridges-map.png` (the Yellowhead row beside CYXD, and the Mill Creek trestle). Codes match `draw-map.py`. Centres are the inventory centres, not abutment surveys. Deck geometry for the plotted road and river bridges is already in `bridge-geometry.json`. LRT centreline geometry is in `lrt-tracks.json`.
+This file covers every structure in `bridges.md`, `freeway-bridges.md`, and `lrt.md`, plus the bridges that exist only as crosses on `edmonton-bridges-map.png` (the Yellowhead row beside CYXD, and the Mill Creek trestle). Codes match `draw-map.py`. A number is used once, whatever the letter. Bridge codes use 1–136. Above-ground stops are P137–P189 and at-grade track sections are K190–K253, both listed in `lrt.md`. B254 is the Muttart Conservatory. B255 is the Fairmont Hotel Macdonald. F256 is the 100 Street funicular. V257 is the Edmonton Queen. N258 is the Grierson Hill Bridge, N259 is Rossdale Road over McDougall Hill, and N260 is the Low Level south roadworks. An Alberta bridge file number such as B065 is not one of these codes. Centres are the inventory centres, not abutment surveys. Deck geometry for the plotted road and river bridges is already in `bridge-geometry.json`. LRT centreline geometry is in `lrt-tracks.json`.
 
 The package is the present-day city. Do not rebuild a demolished span. The historic CYXD airport is a separate package; these bridges are what a flight in the current sim sees around it.
 
@@ -58,11 +58,11 @@ One scene. Runway 34 looks straight down this valley. Runway 30 looks up the eas
 
 - [ ] **R11 Walterdale**. 53.529, -113.502. Look 5, Where 5. Tied arch, two 56 m arches, no piers in the river. About 0.8 km east of the runway 34 centerline, 4.1 km out. Custom. This is the 2017 structure. The 1913 truss was demolished in 2017; do not model it.
 
-- [ ] **R14 Tawatinâ**, including the elevated guideway south of the river. 53.5401, -113.4772. Look 5, Where 5. Extradosed concrete box, pylons 24–30 m above the deck, pedestrian deck hung underneath. About 0.4 km off the runway 30 centerline, 4.0 km out. The mapped bridge ways continue south to about 53.5374, over 98 Avenue and down to the Muttart ramp (about 470 m per track from 53.5416). That south run is part of this box, not a second bridge. Custom. **Todo:** the Muttart stop (53.53621, -113.48000) sits at the bottom of this ramp. Consider building that station with this bridge rather than leaving it for the later station pass.
+- [ ] **R14 Tawatinâ**, including the elevated guideway south of the river. 53.5401, -113.4772. Look 5, Where 5. Extradosed concrete box, pylons 24–30 m above the deck, pedestrian deck hung underneath. About 0.4 km off the runway 30 centerline, 4.0 km out. The mapped bridge ways continue south to about 53.5374, over 98 Avenue and down to the Muttart ramp (about 470 m per track from 53.5416). That south run is part of this box, not a second bridge. Custom. The Muttart stop, P152 (53.53621, -113.48000), is the platform slab and low canopy at the bottom of this ramp. Build it with the bridge, and build B254, the Muttart Conservatory, with the stop. The pyramids and the support greenhouses are B254. They are the landmark in this picture. The briefs are in `reference/P152-muttart/` and `reference/P152-muttart/B254-conservatory/`. On the south bank between this bridge and the Low Level, the Edmonton Queen is docked at Rafter's Landing. The code is V257. The brief is in `reference/V257-river-queen/`.
 
 - [ ] **R15 Dawson**. 53.549, -113.467. Look 5, Where 4. Truss. About 0.8 km off the runway 30 centerline, 3.7 km out. Custom. Not the same truss as the High Level; do not reuse that model.
 
-- [ ] **R13 Low Level** and **R12 James MacDonald**, one task. 53.538, -113.487 and 53.536, -113.488. Look 4 and 3, Where 4. Two Low Level spans side by side (1900 and 1948) plus the 1971 girder. About 1.0–1.2 km off the runway 30 centerline. Do all three decks. One span alone reads as a mistake.
+- [ ] **R13 Low Level** and **R12 James MacDonald**, one task. 53.538, -113.487 and 53.536, -113.488. Look 4 and 3, Where 4. Two Low Level spans side by side (1900 and 1948) plus the 1971 girder. About 1.0–1.2 km off the runway 30 centerline. Do all three decks. One span alone reads as a mistake. With the north end, include the Grierson Hill Bridge (also the Grierson/McDougall Overpass), Grierson Hill Road over McDougall Hill Road, centre 53.538564, -113.488789. It is not a Low Level deck. The code is N258. The brief is in `reference/N258-grierson/`. On the same north bank, include the 100 Street funicular, with the Frederick G. Todd Lookout and the pedestrian bridge over Grierson Hill Road. The mapped footbridge centre is 53.539305, -113.487472. The code is F256. The brief is in `reference/F256-funicular/`. Above that funicular, include B255, the Fairmont Hotel Macdonald. The published spelling is Macdonald. Outline centre 53.540305, -113.489500. The brief is in `reference/B255-hotel-macdonald/`. Include the Rossdale Road Bridge over McDougall Hill Road, also called the Rossdale/McDougall Overpass. The 2013 news name is Rossdale Road Bridge over MacDougall Drive. Way 37120045, centre 53.537724, -113.493132. The code is N259. The brief is in `reference/N259-rossdale-mcdougall/`. On the south bank, the roadworks are N260. Omit the Scona Road Bridge (B065), Scona Road over Connors Road, centre 53.533941, -113.483610. It sits on the wooded slope. Model the 98 Avenue spans at the valley floor with this south end. Eastbound is City bridge B126. The brief is in `reference/N260-scona-connors/`. On the south bank between this bridge and the Tawatinâ, include the Edmonton Queen docked at Rafter's Landing, mapped pier centre 53.5395342, -113.4818826. The code is V257. The brief is in `reference/V257-river-queen/`.
 
 ## 2. Landmarks on a VFR line
 
@@ -118,7 +118,7 @@ East from the field, toward Bridges and then on to Bremner. H50 and Y79 are alre
 
 Shared girders are fine here, except where the line says custom. Several of these were plotted as crosses. They outrank the remaining diamonds because they sit on a CYXD final or they finish a tier 2 scene.
 
-- [ ] **R8 Groat** and the ravine decks north and south of it, one task. Groat Bridge 53.537, -113.539 (Look 3, Where 4, about 1.7 km off the runway 34 centerline). The daytime south helicopter route passes Hawrelak Park and the University Hospital, so this stack is on that route. On the runway 04 short final, 1.2–2.0 km off the centerline at 2.5–3 km: **G116 Hawrelak access** (53.5322, -113.5383), **G117 102 Avenue** (53.5430, -113.5403), **Z125 Wellington** (53.5431, -113.5481), **T133 Stony Plain Road** (53.5478, -113.5458), **G119 107 Avenue** (53.5510, -113.5498). G117, Z125, G118, G119, and G116 were left off the freeway list. **G118 is the old Stony Plain Road span, demolished in 2023. Do not model it.** T133 is the replacement: a single span of at least 46 m, no piers, road and Valley Line together, still under construction. Model the finished T133.
+- [ ] **R8 Groat** and the ravine decks north and south of it, one task. Groat Bridge 53.537, -113.539 (Look 3, Where 4, about 1.7 km off the runway 34 centerline). The daytime south helicopter route passes Hawrelak Park and the University Hospital, so this stack is on that route. On the runway 04 short final, 1.2–2.0 km off the centerline at 2.5–3 km: **G116 Hawrelak access** (53.5322, -113.5383), **G117 102 Avenue** (53.5430, -113.5403), **Z125 Wellington** (53.5431, -113.5481), **T133 Stony Plain Road** (53.5478, -113.5458), **G119 107 Avenue** (53.5510, -113.5498). G117, Z125, G118, G119, and G116 were left off the freeway list. **G118 is the old Stony Plain Road span, demolished in 2023. Do not model it.** T133 is the replacement: a single span of at least 46 m, no piers, road and Valley Line together, still under construction. Model the finished T133. The river-span brief is in `reference/R8-groat/`. The ravine briefs are in `reference/G116-hawrelak/`, `reference/G117-102-avenue/`, `reference/Z125-wellington/`, `reference/T133-stony-plain/`, and `reference/G119-107-avenue/`.
 
 - [ ] **R16 Capilano** and the decks on the same road. Capilano 53.556, -113.439 (Look 3, Where 3, about 2.6 km off the runway 30 centerline). Pulled up from the cross list: **C120 106 Avenue** (53.5493, -113.4387, the south approach), **C121 Ada Boulevard** (53.5602, -113.4427), **C122 112 Avenue** (53.5629, -113.4465), **C123 Grant Moellmann** (53.5754, -113.4530). Moellmann is the long span over the rail yard just south of the Yellowhead, about 2.3 km off the runway 22 final at 3.3 km. Give Moellmann its own length. The others can be the shared girder.
 
@@ -271,42 +271,42 @@ The order is how close the platform sits to a CYXD final. Kingsway and NAIT are 
 
 ### On a guideway already in this list
 
-- [ ] **Davies** — with T127. Do not open a second task.
-- [ ] **West Edmonton Mall** and **Misericordia** — with T131.
+- [ ] **P157 Davies** — with T127. Do not open a second task.
+- [ ] **P163 West Edmonton Mall** and **P164 Misericordia** — with T131.
 
 ### Open, at grade, near CYXD
 
-NAIT / Blatchford Market and Blatchford Gate are inside the CYXD airport polygon. They are in the do-not-model section.
+NAIT / Blatchford Market (P147) and Blatchford Gate (P148) are inside the CYXD airport polygon. They are in the do-not-model section.
 
-- [ ] **Kingsway / Royal Alex**. 53.55803, -113.50147. About 0.2 km off the runway 30 centerline, 1.4 km south of the threshold. South of the airport polygon.
-- [ ] **Coliseum**. 53.57068, -113.45838. Beside T130.
-- [ ] **Stadium**. 53.55995, -113.47071.
+- [ ] **P146 Kingsway / Royal Alex**. 53.55803, -113.50147. About 0.2 km off the runway 30 centerline, 1.4 km south of the threshold. South of the airport polygon.
+- [ ] **P139 Coliseum**. 53.57068, -113.45838. On T130.
+- [ ] **P140 Stadium**. 53.55995, -113.47071.
 
 ### Open, at grade, on the runway 30 side of downtown
 
-These are the street stops a runway 30 arrival flies past. Muttart is the bottom of the R14 ramp. The R14 box has a todo to consider building that station with the bridge.
+These are the street stops a runway 30 arrival flies past. P152 is the platform at the bottom of the R14 ramp, and B254 sits with that stop. Build both with the bridge. The briefs are in `reference/P152-muttart/` and `reference/P152-muttart/B254-conservatory/`.
 
-- [ ] **102 Street**. 53.54317, -113.49524.
-- [ ] **Churchill**. 53.54377, -113.48904. Valley Line stop is at street level. Capital and Metro platforms are underground. One surface stop.
-- [ ] **Quarters**. 53.54440, -113.48405.
-- [ ] **Muttart**. 53.53621, -113.48000. At grade, at the bottom of the south ramp off R14. See the R14 todo: this stop may belong in the bridge project.
+- [ ] **P149 102 Street**. 53.54317, -113.49524.
+- [ ] **P150 Churchill**. 53.54377, -113.48904. Valley Line stop is at street level. Capital and Metro platforms are underground. One surface stop.
+- [ ] **P151 Quarters**. 53.54440, -113.48405.
+- [ ] **P152 Muttart**. 53.53621, -113.48000. At grade, at the bottom of the south ramp off R14. Side platforms and a low canopy, plus B254 beside the stop. Build both with the R14 box. Briefs: `reference/P152-muttart/` and `reference/P152-muttart/B254-conservatory/`.
 
 ### Open, at grade, the rest
 
-- [ ] **Clareview**. 53.60177, -113.41142. The yard west of the Kathleen Andrews Transit Garage is the only thing here that reads from the air, and it is track, not a station building.
-- [ ] **Belvedere**. 53.58805, -113.43348.
-- [ ] **Health Sciences / Jubilee**. 53.52006, -113.52589.
-- [ ] **McKernan / Belgravia**. 53.51308, -113.52619.
-- [ ] **South Campus / Fort Edmonton Park**. 53.50287, -113.52842.
-- [ ] **Southgate**. 53.48576, -113.51678. Just north of T129.
-- [ ] **Century Park**. 53.45731, -113.51637.
-- [ ] **Strathearn**. 53.53171, -113.46231.
-- [ ] **Holyrood**. 53.52751, -113.45740.
-- [ ] **Bonnie Doon**. 53.51981, -113.45538.
-- [ ] **Avonmore**. 53.51046, -113.45508. North of T127.
-- [ ] **Millbourne / Woodvale**. 53.47469, -113.43896. South of T128.
-- [ ] **Grey Nuns**. 53.46243, -113.43451.
-- [ ] **Mill Woods**. 53.45839, -113.43097.
+- [ ] **P137 Clareview**. 53.60177, -113.41142. The yard west of the Kathleen Andrews Transit Garage is the only thing here that reads from the air, and it is track, not a station building.
+- [ ] **P138 Belvedere**. 53.58805, -113.43348.
+- [ ] **P141 Health Sciences / Jubilee**. 53.52006, -113.52589.
+- [ ] **P142 McKernan / Belgravia**. 53.51308, -113.52619.
+- [ ] **P143 South Campus / Fort Edmonton Park**. 53.50287, -113.52842.
+- [ ] **P144 Southgate**. 53.48576, -113.51678. Just north of T129.
+- [ ] **P145 Century Park**. 53.45731, -113.51637.
+- [ ] **P153 Strathearn**. 53.53171, -113.46231.
+- [ ] **P154 Holyrood**. 53.52751, -113.45740.
+- [ ] **P155 Bonnie Doon**. 53.51981, -113.45538.
+- [ ] **P156 Avonmore**. 53.51046, -113.45508. North of T127.
+- [ ] **P158 Millbourne / Woodvale**. 53.47469, -113.43896. South of T128.
+- [ ] **P159 Grey Nuns**. 53.46243, -113.43451.
+- [ ] **P160 Mill Woods**. 53.45839, -113.43097.
 
 Underground, and not a scenery object: Central, Bay/Enterprise Square, Corona, Government Centre, University, and MacEwan. Churchill's Capital and Metro platforms are in that set.
 
@@ -314,29 +314,29 @@ Underground, and not a scenery object: Central, Bay/Enterprise Square, Corona, G
 
 Valley Line West and Capital Line South phase 1. No platform until the guideways in tier 2 exist. Centres are estimated on the mapped centreline.
 
-- [ ] **Lewis Farms**. 53.5228, -113.6679. West of T132.
-- [ ] **Aldergrove / Belmead**. 53.5213, -113.648.
-- [ ] **Meadowlark**. 53.5198, -113.5965.
-- [ ] **Glenwood / Sherwood**. 53.528, -113.591.
-- [ ] **Jasper Place**. 53.5412, -113.5902.
-- [ ] **Stony Plain Road / 149 Street**. 53.5413, -113.5799.
-- [ ] **Grovenor / 142 Street**. 53.5432, -113.5641.
-- [ ] **Glenora**. 53.5468, -113.5495.
-- [ ] **124 Street**. 53.5463, -113.5311.
-- [ ] **Brewery / 120 Street**. 53.5462, -113.523.
-- [ ] **The Yards / 116 Street**. 53.5462, -113.514.
-- [ ] **MacEwan Arts / 112 Street**. 53.5462, -113.5064.
-- [ ] **NorQuest**. 53.5430, -113.4991.
-- [ ] **Alex Decoteau**. 53.5431, -113.497.
-- [ ] **Twin Brooks**. 53.4468, -113.5167.
-- [ ] **Heritage Valley North**. 53.42512, -113.54559. End of Capital Line South phase 1.
+- [ ] **P161 Lewis Farms**. 53.5228, -113.6679. West of T132.
+- [ ] **P162 Aldergrove / Belmead**. 53.5213, -113.648.
+- [ ] **P165 Meadowlark**. 53.5198, -113.5965.
+- [ ] **P166 Glenwood / Sherwood**. 53.528, -113.591.
+- [ ] **P167 Jasper Place**. 53.5412, -113.5902.
+- [ ] **P168 Stony Plain Road / 149 Street**. 53.5413, -113.5799.
+- [ ] **P169 Grovenor / 142 Street**. 53.5432, -113.5641.
+- [ ] **P170 Glenora**. 53.5468, -113.5495.
+- [ ] **P171 124 Street**. 53.5463, -113.5311.
+- [ ] **P172 Brewery / 120 Street**. 53.5462, -113.523.
+- [ ] **P173 The Yards / 116 Street**. 53.5462, -113.514.
+- [ ] **P174 MacEwan Arts / 112 Street**. 53.5462, -113.5064.
+- [ ] **P175 NorQuest**. 53.5430, -113.4991.
+- [ ] **P176 Alex Decoteau**. 53.5431, -113.497.
+- [ ] **P177 Twin Brooks**. 53.4468, -113.5167.
+- [ ] **P178 Heritage Valley North**. 53.42512, -113.54559. End of Capital Line South phase 1.
 - [ ] **Llew Lawrence maintenance facility**. South of T135. Yard, not a station. Leave it until T135 exists.
 
 ## 8. Do not model
 
 These were scored and rejected. They are not boxes. A later session should not pull one back up without a new fact (funding, a built span, or a photo that shows the trestle reading from the air).
 
-- **NAIT / Blatchford Market** (53.56695, -113.50909) and **Blatchford Gate** (53.57695, -113.51041). Both centres fall inside the `CYXD Airport Area` polygon. Placing them would sit on the airport package. The airport package owns that ground, including a canopy.
+- **P147 NAIT / Blatchford Market** (53.56695, -113.50909) and **P148 Blatchford Gate** (53.57695, -113.51041). Both centres fall inside the `CYXD Airport Area` polygon. Placing them would sit on the airport package. The airport package owns that ground, including a canopy.
 - **T136 Walker Bridge**. Estimated 53.586, -113.515. Design only, unfunded in 2026. The centre is north of the airport polygon, so the footprint rule is not what keeps it off. If it is funded it jumps to section 2: it would sit about 0.2 km off the runway 16 centerline, 1 km north, over the Yellowhead and the CN Walker Yard. Until then there is no span, pier count, or clearance to build.
 - **G118**, the old Stony Plain Road bridge. Demolished 2023. T133 replaces it.
 - The **1913 Walterdale truss**. Demolished 2017. R11 replaces it.
@@ -345,8 +345,8 @@ These were scored and rejected. They are not boxes. A later session should not p
 - **Capital Line Northeast** (Clareview to Gorman). No viaduct. Unfunded.
 - **Capital Line South phase 2** (Heritage Valley North to Desrochers). The grade separation at Ellerslie Road has not been chosen. No bridge was found.
 - **Anything past Desrochers toward CYEG.** A City Plan test reused two stop names. It did not produce a corridor or a structure.
-- **Metro Line Northwest** stations (132 Avenue, 137 Avenue, 145 Avenue, Castle Downs, 127 Street, 137 Street, Campbell Road). Street level, preliminary design only. The only elevated structure on that line is T136.
-- **Gorman**. 53.6218, -113.3704, estimated. Unfunded. No viaduct.
+- **Metro Line Northwest** stations (P183 132 Avenue, P184 137 Avenue, P185 145 Avenue, P186 Castle Downs, P187 127 Street, P188 137 Street, P189 Campbell Road). Street level, preliminary design only. The only elevated structure on that line is T136.
+- **P182 Gorman**. 53.6218, -113.3704, estimated. Unfunded. No viaduct.
 - The proposed way south of Mill Woods in `lrt-tracks.json`. Not one of the four extensions. Not drawn.
 - **Z124 Mill Creek trestle**. Plotted at 53.512, -113.470. It is in the ravine. From pattern altitude it sits in the trees. It does not outrank a bridge that reads against the sky or the river. It is not S104. Ravine bridges were left as a separate set; do not grow that set from this file.
 - Crossovers, sidings, and yards (Clareview / Kathleen Andrews, Valley Line shops, tunnel storage, Gerry Wright operations facility, Lewis Farms storage) as scenery of their own. The Clareview yard is the one exception worth a look, and only after Clareview's station box is actually open.

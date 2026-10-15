@@ -1,0 +1,276 @@
+{
+  "code": "N258",
+  "name": "Grierson Hill Bridge",
+  "name_note": "CBC's article body and the 2012 City project title say Grierson Hill Bridge. The City's 2012 contract line says GRIERSON/MCDOUGALL OVERPASS. The Edmonton Sun, Alberco, the CBC headline, and OpenStreetMap bridge:name say Grierson Bridge. That tag was added 13 June 2017. It is not only a mapper's invention. No R code is assigned.",
+  "centre": [
+    53.538564,
+    -113.488789
+  ],
+  "centre_note": "Midpoint of the two nodes of way 106711211 as stored in bridge-geometry.json. The live coordinates of those nodes, read 2026-10-14, have the same midpoint at this precision.",
+  "crs": "EPSG:4326",
+  "coordinate_order": "[lat, lon]",
+  "geometry_source": "docs/edmonton-bridges/bridge-geometry.json",
+  "geometry_retrieved": "2026-10-14",
+  "plan_length_note": "plan_length_m is the horizontal length of that way's stored nodes, WGS84 haversine with radius 6378137 m, rounded to one decimal. Ways taken from bridge-geometry.json match the live OpenStreetMap node counts on 2026-10-14. Way 106711211 is 59.0 m on the stored nodes and 59.1 m on the live coordinates of the same two nodes. Those were not averaged. Neither is a published structure length. An approach plan_length_m is not the climb to grade. Way 697598868 is not in bridge-geometry.json. Its nodes and its length were read from the OpenStreetMap API on 2026-10-14. No elevations are stored.",
+  "dropped_note": "The Low Level truss decks, ways 31882107 and 22916473, are not this span. They stay in the R13 geometry. Way 1271848915 is an unnamed beam bridge on the north hillside, 120.0 m from this midpoint to the outline centroid. Its cycleway is way 533867748. The outline crosses Grierson Hill Road way 106711201. It does not cross way 106711211. That footbridge was not copied. Way 106711206 is Grierson Hill Road, one lane, 253.4 m, from the upper junction to McDougall Hill. It does not use this deck. Ways 106711221 and 106711225 are the Low Level cloverleaf links. They stay in the R13 geometry. The MacDonald Drive pedestrian underpass is the other structure in the 2012 project title. It is not in the extract.",
+  "decks": [
+    {
+      "osm_way": 106711211,
+      "part": "road_deck",
+      "which": "Grierson Hill Road NW on the overpass. Two lanes, two-way, asphalt, 50 km/h, layer 1. bridge:name tag Grierson Bridge. Node order is from the northeast, up the hill, to the southwest, toward Rossdale. This centreline is 59.0 m on these nodes. The live coordinates of the same nodes are 59.1 m. No published structure length was found. The way has no maxheight tag and no width tag. It crosses McDougall Hill Road. The Sun says that road is beneath the bridge. The maxheight tags 5.2 and 5.0 are on the McDougall Hill ways, not on this way. They are not a deck elevation.",
+      "plan_length_m": 59.0,
+      "plan_length_live_nodes_m": 59.1,
+      "tags": {
+        "bridge": "yes",
+        "bridge:name": "Grierson Bridge",
+        "highway": "tertiary",
+        "lanes": "2",
+        "layer": "1",
+        "maxspeed": "50",
+        "name": "Grierson Hill Road NW",
+        "oneway": "no",
+        "surface": "asphalt"
+      },
+      "nodes": [
+        [
+          53.538771,
+          -113.48851
+        ],
+        [
+          53.538357,
+          -113.489068
+        ]
+      ]
+    }
+  ],
+  "approaches": [
+    {
+      "osm_way": 106711201,
+      "part": "northeast_road",
+      "which": "Grierson Hill Road NW from the upper junction down to the northeast end of the deck. Two lanes, two-way. Node order is toward the bridge. The far node is the junction with Grierson Hill NW, with the one-lane way 106711206, and with the Low Level ramp 106711221. It is not a surveyed grade point. The hillside footbridge outline crosses this way. It does not cross the deck.",
+      "plan_length_m": 158.4,
+      "tags": {
+        "highway": "tertiary",
+        "lanes": "2",
+        "maxspeed": "50",
+        "name": "Grierson Hill Road NW",
+        "oneway": "no",
+        "surface": "asphalt"
+      },
+      "nodes": [
+        [
+          53.539882,
+          -113.487015
+        ],
+        [
+          53.539738,
+          -113.487208
+        ],
+        [
+          53.539303,
+          -113.487793
+        ],
+        [
+          53.538771,
+          -113.48851
+        ]
+      ],
+      "extract_role": "approach"
+    },
+    {
+      "osm_way": 697598868,
+      "part": "northeast_road",
+      "which": "Grierson Hill NW, the next way uphill from the far node of way 106711201. Three lanes. The name is not Grierson Hill Road. Not in bridge-geometry.json. Read from the OpenStreetMap API on 2026-10-14. The far node is way 451264639, not a surveyed grade point. Way 451264639 is 59.0 m, way 1281336532 is 47.1 m, and way 451264638 continues. Those three were not copied.",
+      "plan_length_m": 70.4,
+      "source": "OpenStreetMap API, way 697598868, 2026-10-14. Not in bridge-geometry.json.",
+      "tags": {
+        "highway": "tertiary",
+        "lanes": "3",
+        "lanes:backward": "2",
+        "lanes:forward": "1",
+        "maxspeed": "50",
+        "name": "Grierson Hill NW",
+        "oneway": "no",
+        "sidewalk:left": "separate",
+        "sidewalk:right": "no",
+        "surface": "asphalt"
+      },
+      "nodes": [
+        [
+          53.5403724,
+          -113.4863442
+        ],
+        [
+          53.5398816,
+          -113.4870146
+        ]
+      ]
+    },
+    {
+      "osm_way": 106711229,
+      "part": "southwest_road",
+      "which": "Grierson Hill Road NW off the southwest end of the deck, to the split. Two lanes, two-way, sidewalk tagged no, foot tagged no. The bridge way has no sidewalk tag. This tag was not treated as a sidewalk on the deck. The far node is the split with way 151895211 and with cloverleaf way 106711225. It is not a surveyed grade point.",
+      "plan_length_m": 29.4,
+      "tags": {
+        "foot": "no",
+        "highway": "tertiary",
+        "lanes": "2",
+        "maxspeed": "50",
+        "name": "Grierson Hill Road NW",
+        "oneway": "no",
+        "sidewalk": "no",
+        "surface": "asphalt"
+      },
+      "nodes": [
+        [
+          53.538357,
+          -113.489068
+        ],
+        [
+          53.538154,
+          -113.489353
+        ]
+      ],
+      "extract_role": "approach"
+    },
+    {
+      "osm_way": 151895211,
+      "part": "southwest_road",
+      "which": "Grierson Hill Road NW from Rossdale Road NW to the split at way 106711229. One lane, one-way. Node order is toward the bridge, so the one-way is northeast onto the span. The far node, 53.537415, -113.492093, is shared with Rossdale Road NW ways 113653301 and 302605387. It is the intersection. It is not a surveyed grade point. The extract calls this way a cross road because it does not share a node with the bridge way. It is the same road, through way 106711229.",
+      "plan_length_m": 203.8,
+      "tags": {
+        "highway": "tertiary",
+        "lanes": "1",
+        "maxspeed": "50",
+        "name": "Grierson Hill Road NW",
+        "oneway": "yes",
+        "surface": "asphalt"
+      },
+      "nodes": [
+        [
+          53.537415,
+          -113.492093
+        ],
+        [
+          53.537496,
+          -113.491771
+        ],
+        [
+          53.537557,
+          -113.491514
+        ],
+        [
+          53.537591,
+          -113.491354
+        ],
+        [
+          53.537606,
+          -113.491276
+        ],
+        [
+          53.537638,
+          -113.491112
+        ],
+        [
+          53.537697,
+          -113.490771
+        ],
+        [
+          53.537738,
+          -113.490473
+        ],
+        [
+          53.537764,
+          -113.490287
+        ],
+        [
+          53.53779,
+          -113.490147
+        ],
+        [
+          53.537844,
+          -113.489929
+        ],
+        [
+          53.537903,
+          -113.489729
+        ],
+        [
+          53.537968,
+          -113.489582
+        ],
+        [
+          53.538055,
+          -113.489459
+        ],
+        [
+          53.538154,
+          -113.489353
+        ]
+      ],
+      "extract_role": "cross_road"
+    }
+  ],
+  "excluded": [
+    {
+      "osm_way": 31882107,
+      "reason": "1900 Low Level northbound deck. Not this span. It stays in the R13 geometry."
+    },
+    {
+      "osm_way": 22916473,
+      "reason": "1948/1949 Low Level southbound deck. Not this span. It stays in the R13 geometry."
+    },
+    {
+      "osm_way": 1271848915,
+      "reason": "Unnamed beam bridge on the north hillside. Centroid 120.0 m from this midpoint. It crosses Grierson Hill Road way 106711201, not this deck. The 15 December 2017 photograph shows that footbridge over the hill road. Its geometry was not copied."
+    },
+    {
+      "osm_way": 106711206,
+      "reason": "Grierson Hill Road NW, one lane, 253.4 m, from the upper junction to McDougall Hill Road. It does not use way 106711211."
+    },
+    {
+      "osm_way": 106711221,
+      "reason": "One-lane ramp from the Low Level north end up to the upper junction. Already in the R13 geometry. Not this deck."
+    },
+    {
+      "osm_way": 106711225,
+      "reason": "Cloverleaf from the southwest split to McDougall Hill. Already in the R13 geometry. Not this deck."
+    }
+  ],
+  "dimensions": {
+    "structural_type": "Road overpass. 2012 work: deck demolished and replaced, pier-column repairs, paving, new guardrail. Girder, slab, or beam is not published for this span.",
+    "crosses": "McDougall Hill Road",
+    "year_built": null,
+    "road_embankment_completed": 1961,
+    "road_paved": 1963,
+    "deck_replaced": 2012,
+    "span_count": null,
+    "plan_length_stored_nodes_m": 59.0,
+    "plan_length_live_nodes_m": 59.1,
+    "published_structure_length_m": null,
+    "width_m": null,
+    "lane_width_m": null,
+    "lanes": 2,
+    "oneway": false,
+    "surface": "asphalt",
+    "pier_count": null,
+    "pier_height_m": null,
+    "pier_type": "pier columns; the Sun says pillars. No count is published.",
+    "abutment_form": null,
+    "deck_thickness_m": null,
+    "deck_elevation_asl_m": null,
+    "soffit_elevation_asl_m": null,
+    "vertical_datum": null,
+    "clearance_under_deck_m": null,
+    "osm_maxheight_on_this_way": null,
+    "osm_width_on_this_way": null,
+    "osm_maxheight_is_deck_elevation": false,
+    "crossfall": null,
+    "longitudinal_grade": null,
+    "northeast_approach_gradient": null,
+    "northeast_approach_meets_grade": null,
+    "southwest_approach_gradient": null,
+    "southwest_approach_meets_grade": null,
+    "posted_speed_kmh_osm_tag": 50
+  }
+}

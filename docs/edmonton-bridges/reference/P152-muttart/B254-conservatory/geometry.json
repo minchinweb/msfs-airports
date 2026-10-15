@@ -1,0 +1,759 @@
+{
+  "code": "B254",
+  "name": "Muttart Conservatory",
+  "centre": [
+    53.5354324,
+    -113.4783154
+  ],
+  "crs": "EPSG:4326",
+  "coordinate_order": "[lat, lon]",
+  "geometry_source": "OpenStreetMap API, relation 17644228 full, and the map extract for the building:part ways, read 2026-10-14",
+  "geometry_retrieved": "2026-10-14",
+  "plan_length_note": "plan_length_m is a horizontal WGS84 length, haversine, sphere radius 6378137 m, one decimal. On a ring it is the perimeter of that ring. edge_m, where present, is each mapped side of that ring in node order, the same length. The named pyramid rings are not four-sided squares. A mapped side is not a published base side. map_distance_to_stop_m is the horizontal distance from the stop node 53.53621, -113.48000 to the nearest point on that ring. It is not a clearance. The centre of this file is the area-weighted centre of the four outer rings of relation 17644228. The areas used for that centre are not stored. They are not the published floor areas. No elevations are stored. OpenStreetMap height tags are copied under tags. They are not a surveyed height.",
+  "reference_point": {
+    "name": "Muttart stop",
+    "part": "stop_node",
+    "which": "The stop node in lrt-tracks.json, and the centre in the Muttart stop geometry. The conservatory is placed against this node. A map_distance_to_stop_m is a horizontal map distance. It is not a clearance.",
+    "lat": 53.53621,
+    "lon": -113.48000
+  },
+  "complex": {
+    "osm_relation": 17644228,
+    "part": "complex",
+    "which": "One multipolygon tagged name=Muttart Conservatory and building=greenhouse. Four outer rings. No inner rings. This is the named complex. It is not four pyramid footprints. The pyramid footprints are the separate building:part ways.",
+    "map_distance_to_stop_m": 28.4,
+    "source": "OpenStreetMap API, relation 17644228 full, read 2026-10-14.",
+    "tags": {
+      "access": "yes",
+      "addr:city": "Edmonton",
+      "addr:housenumber": "9626",
+      "addr:postcode": "T6C 4L8",
+      "addr:province": "ab",
+      "addr:street": "96A Street NW",
+      "building": "greenhouse",
+      "fee": "yes",
+      "garden:type": "botanical",
+      "leisure": "garden",
+      "name": "Muttart Conservatory",
+      "opening_hours": "10:00-17:00; Th 10:00-21:00",
+      "operator": "City of Edmonton",
+      "operator:type": "government",
+      "type": "multipolygon",
+      "website": "https://www.edmonton.ca/attractions_events/muttart-conservatory",
+      "wikidata": "Q6944087",
+      "wikipedia": "en:Muttart Conservatory"
+    },
+    "rings": [
+      {
+        "osm_way": 1287216689,
+        "role": "outer",
+        "part": "east_ring",
+        "which": "Closed ring. Eastern outer member of relation 17644228. The way is tagged leisure=garden. The relation is tagged building=greenhouse. This ring contains the main entrance. It is not a pyramid footprint. plan_length_m is the perimeter. Node order follows the way, and the first node is repeated at the end.",
+        "plan_length_m": 411.1,
+        "centre": [
+          53.535221,
+          -113.4772726
+        ],
+        "map_distance_to_stop_m": 171.8,
+        "tags": {
+          "garden:type": "botanical",
+          "leisure": "garden"
+        },
+        "nodes": [
+          [
+            53.5355285,
+            -113.4775937
+          ],
+          [
+            53.5355722,
+            -113.4775186
+          ],
+          [
+            53.5357115,
+            -113.4772804
+          ],
+          [
+            53.5355281,
+            -113.4769771
+          ],
+          [
+            53.5354678,
+            -113.4770805
+          ],
+          [
+            53.5354610,
+            -113.4770668
+          ],
+          [
+            53.5354051,
+            -113.4769722
+          ],
+          [
+            53.5353434,
+            -113.4768686
+          ],
+          [
+            53.5353262,
+            -113.4768369
+          ],
+          [
+            53.5353515,
+            -113.4767946
+          ],
+          [
+            53.5352106,
+            -113.4765552
+          ],
+          [
+            53.5351213,
+            -113.4767036
+          ],
+          [
+            53.5350673,
+            -113.4767941
+          ],
+          [
+            53.5351622,
+            -113.4769553
+          ],
+          [
+            53.5350210,
+            -113.4771947
+          ],
+          [
+            53.5348963,
+            -113.4769837
+          ],
+          [
+            53.5348564,
+            -113.4770496
+          ],
+          [
+            53.5347143,
+            -113.4772881
+          ],
+          [
+            53.5348988,
+            -113.4776002
+          ],
+          [
+            53.5350250,
+            -113.4773890
+          ],
+          [
+            53.5351623,
+            -113.4776172
+          ],
+          [
+            53.5350697,
+            -113.4777734
+          ],
+          [
+            53.5352143,
+            -113.4780164
+          ],
+          [
+            53.5353036,
+            -113.4778659
+          ],
+          [
+            53.5353593,
+            -113.4777720
+          ],
+          [
+            53.5352645,
+            -113.4776128
+          ],
+          [
+            53.5352954,
+            -113.4775602
+          ],
+          [
+            53.5354006,
+            -113.4773822
+          ],
+          [
+            53.5354810,
+            -113.4775148
+          ],
+          [
+            53.5355285,
+            -113.4775937
+          ]
+        ]
+      },
+      {
+        "osm_way": 1287216690,
+        "role": "outer",
+        "part": "west_ring",
+        "which": "Closed ring. Western outer member of relation 17644228. The way is tagged building=greenhouse. This is the ring nearest the stop node. It is not a pyramid footprint, and it is not named as a pyramid. plan_length_m is the perimeter. Node order follows the way, and the first node is repeated at the end.",
+        "plan_length_m": 442.5,
+        "centre": [
+          53.5355531,
+          -113.4788799
+        ],
+        "map_distance_to_stop_m": 28.4,
+        "tags": {
+          "building": "greenhouse"
+        },
+        "nodes": [
+          [
+            53.5360430,
+            -113.4791689
+          ],
+          [
+            53.5357588,
+            -113.4786891
+          ],
+          [
+            53.5358072,
+            -113.4786080
+          ],
+          [
+            53.5358153,
+            -113.4786217
+          ],
+          [
+            53.5358905,
+            -113.4784955
+          ],
+          [
+            53.5357234,
+            -113.4782135
+          ],
+          [
+            53.5356923,
+            -113.4782656
+          ],
+          [
+            53.5354966,
+            -113.4779354
+          ],
+          [
+            53.5351893,
+            -113.4784510
+          ],
+          [
+            53.5350667,
+            -113.4782441
+          ],
+          [
+            53.5349197,
+            -113.4784907
+          ],
+          [
+            53.5357296,
+            -113.4798574
+          ],
+          [
+            53.5358671,
+            -113.4796267
+          ],
+          [
+            53.5359686,
+            -113.4797979
+          ],
+          [
+            53.5360672,
+            -113.4796325
+          ],
+          [
+            53.5359388,
+            -113.4794157
+          ],
+          [
+            53.5359822,
+            -113.4793428
+          ],
+          [
+            53.5359608,
+            -113.4793067
+          ],
+          [
+            53.5360430,
+            -113.4791689
+          ]
+        ]
+      },
+      {
+        "osm_way": 322972875,
+        "role": "outer",
+        "part": "small_ring_south",
+        "which": "Closed ring. Outer member of relation 17644228. The way has no tags. It sits just north of the other untagged ring, at the south side of the western ring. It is not a display pyramid. A pyramid name was not assigned. plan_length_m is the perimeter.",
+        "plan_length_m": 25.7,
+        "centre": [
+          53.5350961,
+          -113.4781486
+        ],
+        "map_distance_to_stop_m": 170.4,
+        "tags": {},
+        "nodes": [
+          [
+            53.5351362,
+            -113.4781647
+          ],
+          [
+            53.5351159,
+            -113.4780879
+          ],
+          [
+            53.5350560,
+            -113.4781325
+          ],
+          [
+            53.5350764,
+            -113.4782094
+          ],
+          [
+            53.5351362,
+            -113.4781647
+          ]
+        ]
+      },
+      {
+        "osm_way": 322972340,
+        "role": "outer",
+        "part": "small_ring_south",
+        "which": "Closed ring. Outer member of relation 17644228. The way has no tags. It sits south of the western ring. It is not a display pyramid. A pyramid name was not assigned. plan_length_m is the perimeter.",
+        "plan_length_m": 32.6,
+        "centre": [
+          53.5348538,
+          -113.4781861
+        ],
+        "map_distance_to_stop_m": 187.7,
+        "tags": {},
+        "nodes": [
+          [
+            53.5348274,
+            -113.4782624
+          ],
+          [
+            53.5349056,
+            -113.4782016
+          ],
+          [
+            53.5348802,
+            -113.4781098
+          ],
+          [
+            53.5348020,
+            -113.4781706
+          ],
+          [
+            53.5348274,
+            -113.4782624
+          ]
+        ]
+      }
+    ]
+  },
+  "entrance": {
+    "osm_node": 1940805166,
+    "part": "main_entrance",
+    "which": "Tagged entrance=main, door=sliding, wheelchair=yes. It lies on the eastern ring and on the grass-roof part. East side of the pyramid group.",
+    "lat": 53.5354051,
+    "lon": -113.4769722
+  },
+  "pyramids": [
+    {
+      "osm_way": 714340898,
+      "part": "tropical",
+      "which": "Name is the OpenStreetMap name tag. It was not assigned from size. Of the four named parts, this centre is the northern one. The height tag is 24 and the roof:height tag is 20. Those tags were not treated as a surveyed height, and they were not subtracted to make a wall height. The ring is not a four-sided square. plan_length_m is the perimeter. edge_m is each mapped side, in node order. A mapped side is not a published base side.",
+      "plan_length_m": 115.4,
+      "edge_m": [
+        28.6,
+        9.6,
+        10.3,
+        9.2,
+        8.7,
+        12.5,
+        7.4,
+        7.0,
+        22.1
+      ],
+      "centre": [
+        53.5355282,
+        -113.4772852
+      ],
+      "map_distance_to_stop_m": 176.4,
+      "source": "OpenStreetMap API, way 714340898, read 2026-10-14. Not a member of relation 17644228.",
+      "tags": {
+        "building:material": "glass",
+        "building:part": "yes",
+        "height": "24",
+        "name": "Tropical Pyramid",
+        "roof:height": "20",
+        "roof:shape": "pyramidal"
+      },
+      "nodes": [
+        [
+          53.5357114,
+          -113.4772802
+        ],
+        [
+          53.5355280,
+          -113.4769769
+        ],
+        [
+          53.5354677,
+          -113.4770803
+        ],
+        [
+          53.5354028,
+          -113.4771914
+        ],
+        [
+          53.5353451,
+          -113.4772902
+        ],
+        [
+          53.5354005,
+          -113.4773820
+        ],
+        [
+          53.5354809,
+          -113.4775146
+        ],
+        [
+          53.5355284,
+          -113.4775935
+        ],
+        [
+          53.5355722,
+          -113.4775186
+        ],
+        [
+          53.5357114,
+          -113.4772802
+        ]
+      ],
+      "name": "Tropical Pyramid",
+      "name_source": "OpenStreetMap name tag on this way."
+    },
+    {
+      "osm_way": 714340901,
+      "part": "temperate",
+      "which": "Name is the OpenStreetMap name tag. It was not assigned from size. Of the four named parts, this centre is the southern one. Edify calls the temperate pyramid southern. The tag and that sentence agree. The height tag is 24 and the roof:height tag is 20. Those tags were not treated as a surveyed height, and they were not subtracted to make a wall height. The ring is not a four-sided square. plan_length_m is the perimeter. edge_m is each mapped side, in node order. A mapped side is not a published base side.",
+      "plan_length_m": 115.4,
+      "edge_m": [
+        9.4,
+        19.7,
+        6.2,
+        22.3,
+        29.1,
+        19.8,
+        8.7
+      ],
+      "centre": [
+        53.5348974,
+        -113.4772917
+      ],
+      "map_distance_to_stop_m": 215.7,
+      "source": "OpenStreetMap API, way 714340901, read 2026-10-14. Not a member of relation 17644228.",
+      "tags": {
+        "building:material": "glass",
+        "building:part": "yes",
+        "height": "24",
+        "name": "Temperate Pyramid",
+        "roof:height": "20",
+        "roof:shape": "pyramidal"
+      },
+      "nodes": [
+        [
+          53.5350806,
+          -113.4772956
+        ],
+        [
+          53.5350209,
+          -113.4771945
+        ],
+        [
+          53.5348962,
+          -113.4769835
+        ],
+        [
+          53.5348564,
+          -113.4770496
+        ],
+        [
+          53.5347142,
+          -113.4772879
+        ],
+        [
+          53.5348987,
+          -113.4776000
+        ],
+        [
+          53.5350249,
+          -113.4773888
+        ],
+        [
+          53.5350806,
+          -113.4772956
+        ]
+      ],
+      "name": "Temperate Pyramid",
+      "name_source": "OpenStreetMap name tag on this way."
+    },
+    {
+      "osm_way": 714340899,
+      "part": "arid",
+      "which": "Name is the OpenStreetMap name tag. It was not assigned from size. Of the four named parts, this centre is the eastern one. The height tag is 18 and the roof:height tag is 14. Those tags were not treated as a surveyed height, and they were not subtracted to make a wall height. The ring is not a four-sided square. plan_length_m is the perimeter. edge_m is each mapped side, in node order. A mapped side is not a published base side.",
+      "plan_length_m": 89.5,
+      "edge_m": [
+        22.3,
+        14.0,
+        8.5,
+        15.0,
+        7.3,
+        7.8,
+        10.7,
+        4.0
+      ],
+      "centre": [
+        53.5352093,
+        -113.4767941
+      ],
+      "map_distance_to_stop_m": 225.7,
+      "source": "OpenStreetMap API, way 714340899, read 2026-10-14. Not a member of relation 17644228.",
+      "tags": {
+        "building:material": "glass",
+        "building:part": "yes",
+        "height": "18",
+        "name": "Arid Pyramid",
+        "roof:height": "14",
+        "roof:shape": "pyramidal"
+      },
+      "nodes": [
+        [
+          53.5353514,
+          -113.4767944
+        ],
+        [
+          53.5352105,
+          -113.4765550
+        ],
+        [
+          53.5351213,
+          -113.4767036
+        ],
+        [
+          53.5350672,
+          -113.4767939
+        ],
+        [
+          53.5351621,
+          -113.4769551
+        ],
+        [
+          53.5352081,
+          -113.4770333
+        ],
+        [
+          53.5352579,
+          -113.4769503
+        ],
+        [
+          53.5353261,
+          -113.4768367
+        ],
+        [
+          53.5353514,
+          -113.4767944
+        ]
+      ],
+      "name": "Arid Pyramid",
+      "name_source": "OpenStreetMap name tag on this way."
+    },
+    {
+      "osm_way": 714340900,
+      "part": "feature",
+      "which": "Name is the OpenStreetMap name tag. It was not assigned from size. Of the four named parts, this centre is the western one. Edify calls the feature pyramid west-side. The tag and that sentence agree. The height tag is 18 and the roof:height tag is 14. Those tags were not treated as a surveyed height, and they were not subtracted to make a wall height. The ring is not a four-sided square. plan_length_m is the perimeter. edge_m is each mapped side, in node order. A mapped side is not a published base side.",
+      "plan_length_m": 91.2,
+      "edge_m": [
+        14.9,
+        7.8,
+        8.2,
+        14.6,
+        22.8,
+        14.1,
+        8.8
+      ],
+      "centre": [
+        53.5352144,
+        -113.4777726
+      ],
+      "map_distance_to_stop_m": 171.8,
+      "source": "OpenStreetMap API, way 714340900, read 2026-10-14. Not a member of relation 17644228.",
+      "tags": {
+        "building:material": "glass",
+        "building:part": "yes",
+        "height": "18",
+        "name": "Feature Pyramid",
+        "roof:height": "14",
+        "roof:shape": "pyramidal"
+      },
+      "nodes": [
+        [
+          53.5353592,
+          -113.4777718
+        ],
+        [
+          53.5352644,
+          -113.4776126
+        ],
+        [
+          53.5352146,
+          -113.4775289
+        ],
+        [
+          53.5351622,
+          -113.4776170
+        ],
+        [
+          53.5350696,
+          -113.4777732
+        ],
+        [
+          53.5352142,
+          -113.4780162
+        ],
+        [
+          53.5353036,
+          -113.4778659
+        ],
+        [
+          53.5353592,
+          -113.4777718
+        ]
+      ],
+      "name": "Feature Pyramid",
+      "name_source": "OpenStreetMap name tag on this way."
+    }
+  ],
+  "unnamed_parts": [
+    {
+      "osm_way": 714340902,
+      "part": "centre_glass_part",
+      "which": "No name tag. building:part, building:material=glass, roof:shape=pyramidal, height tag 4. The centre sits between the four named parts. Wikipedia describes a fifth minor skylight pyramid over the central foyer. This way was not renamed from that sentence. The height tag was not treated as a surveyed height. plan_length_m is the perimeter. edge_m is each mapped side. Those sides are not a published base.",
+      "plan_length_m": 22.6,
+      "edge_m": [
+        5.5,
+        5.8,
+        5.5,
+        5.8
+      ],
+      "centre": [
+        53.5352114,
+        -113.4772875
+      ],
+      "map_distance_to_stop_m": 207.7,
+      "source": "OpenStreetMap API, way 714340902, read 2026-10-14. Not a member of relation 17644228.",
+      "tags": {
+        "building:material": "glass",
+        "building:part": "yes",
+        "height": "4",
+        "roof:shape": "pyramidal"
+      },
+      "nodes": [
+        [
+          53.5352114,
+          -113.4773478
+        ],
+        [
+          53.5352472,
+          -113.4772902
+        ],
+        [
+          53.5352114,
+          -113.4772271
+        ],
+        [
+          53.5351755,
+          -113.4772848
+        ],
+        [
+          53.5352114,
+          -113.4773478
+        ]
+      ]
+    },
+    {
+      "osm_way": 714340904,
+      "part": "grass_roof_part",
+      "which": "No name tag. building:part, building:material=grass, roof:type=flat. Not a pyramid. The main entrance node lies on this ring. plan_length_m is the perimeter. It was not given a pyramid name.",
+      "plan_length_m": 66.2,
+      "edge_m": [
+        1.2,
+        8.8,
+        9.7,
+        2.8,
+        10.7,
+        22.7,
+        10.3
+      ],
+      "centre": [
+        53.5353634,
+        -113.4770143
+      ],
+      "map_distance_to_stop_m": 206.4,
+      "source": "OpenStreetMap API, way 714340904, read 2026-10-14. Not a member of relation 17644228.",
+      "tags": {
+        "building:material": "grass",
+        "building:part": "yes",
+        "roof:type": "flat"
+      },
+      "nodes": [
+        [
+          53.5354677,
+          -113.4770803
+        ],
+        [
+          53.5354609,
+          -113.4770666
+        ],
+        [
+          53.5354051,
+          -113.4769722
+        ],
+        [
+          53.5353433,
+          -113.4768684
+        ],
+        [
+          53.5353261,
+          -113.4768367
+        ],
+        [
+          53.5352579,
+          -113.4769503
+        ],
+        [
+          53.5354028,
+          -113.4771914
+        ],
+        [
+          53.5354677,
+          -113.4770803
+        ]
+      ]
+    }
+  ],
+  "excluded": [
+    {
+      "osm_way": 1218687631,
+      "reason": "building=service, operator Edmonton Transit Service, power=substation, substation=traction. It is west of the conservatory, near the stop. It is not a member of relation 17644228. It is not a pyramid."
+    },
+    {
+      "osm_way": 1218687630,
+      "reason": "building=yes, no name. Not a member of relation 17644228. Not stored as a pyramid."
+    }
+  ],
+  "dimensions": {
+    "base_side_m": null,
+    "apex_coordinates": null,
+    "ground_elevation_m": null,
+    "vertical_datum": null,
+    "glass_grid_spacing_m": null
+  }
+}

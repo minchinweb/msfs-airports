@@ -1,0 +1,317 @@
+{
+  "code": "Z125",
+  "name": "Wellington Bridge",
+  "centre": [
+    53.5431,
+    -113.5481
+  ],
+  "crs": "EPSG:4326",
+  "coordinate_order": "[lat, lon]",
+  "geometry_source": "docs/edmonton-bridges/bridge-geometry.json",
+  "geometry_retrieved": "2026-10-14",
+  "plan_length_note": "plan_length_m is the horizontal length of that OSM way, WGS84 haversine with radius 6378137 m, rounded to one decimal. It is not a climb and not a structural length. An approach plan_length_m stops at the far node stored in the extract. That node is not a surveyed grade point. The mapped road centreline is not a published span length. The 23.78 m figure is an April 2024 preliminary out-to-out width, marked not for construction. It is not a plan_length_m.",
+  "dropped_note": "This is 102 Avenue across Ramsey Ravine, between Churchill Crescent and Wellington Crescent. It is not G117, and it is not the river span. The City also calls the ravine Ramsey Ravine. Alberta's row says Wellington Ravine. The project list says Groat Ravine. River-span lengths, the river path width, and the river-pier notes are not copied. The 4.2 m shared-use path in the 2023 City update is this bridge's proposal. It is not the river bridge's east path.",
+  "decks": [
+    {
+      "osm_way": 37749246,
+      "part": "road_deck",
+      "which": "102 Avenue NW, tagged highway=construction, four lanes, layer 1, 50 km/h, width tag 12.4. Node order is west to east. The width tag is not a published width. A live read on 14 October 2026 also has access=private and construction=secondary. The bridge is closed for replacement. This line is the mapped centreline during construction. It is not a published span length of the 1932 arch or of the clear-span girder.",
+      "plan_length_m": 72.3,
+      "tags": {
+        "bridge": "yes",
+        "highway": "construction",
+        "lanes": "4",
+        "layer": "1",
+        "maxspeed": "50",
+        "name": "102 Avenue NW",
+        "width": "12.4"
+      },
+      "nodes": [
+        [
+          53.543048,
+          -113.548582
+        ],
+        [
+          53.543047,
+          -113.547489
+        ]
+      ]
+    },
+    {
+      "osm_way": 842281120,
+      "part": "north_shared_path",
+      "which": "102 Avenue NW MUP, tagged highway=construction, foot and bicycle designated, surface concrete, layer 1. North of the road centreline. The finished design has a shared pathway on the north side. This way is the mapped path during construction.",
+      "plan_length_m": 73.0,
+      "tags": {
+        "bicycle": "designated",
+        "bridge": "yes",
+        "foot": "designated",
+        "highway": "construction",
+        "layer": "1",
+        "name": "102 Avenue NW MUP",
+        "surface": "concrete"
+      },
+      "nodes": [
+        [
+          53.543112,
+          -113.548514
+        ],
+        [
+          53.543109,
+          -113.547411
+        ]
+      ]
+    },
+    {
+      "osm_way": 845134789,
+      "part": "south_construction_way",
+      "which": "Bridge-tagged construction way, layer 1. No name, no lanes, no width. It lies south of the road centreline. A mapped line, not a published sidewalk width.",
+      "plan_length_m": 68.7,
+      "tags": {
+        "bridge": "yes",
+        "highway": "construction",
+        "layer": "1"
+      },
+      "nodes": [
+        [
+          53.542981,
+          -113.548527
+        ],
+        [
+          53.542978,
+          -113.547801
+        ],
+        [
+          53.542978,
+          -113.547488
+        ]
+      ]
+    },
+    {
+      "osm_way": 1227946189,
+      "part": "outline",
+      "which": "Closed ring named Wellington Bridge, layer 1. No bridge:structure tag. plan_length_m is the perimeter. It is not a span length. Edge lengths are mapped. They were not matched to a published width. The April 2024 out-to-out width of 23.78 m is a preliminary drawing, marked not for construction.",
+      "plan_length_m": 174.2,
+      "tags": {
+        "bridge": "yes",
+        "layer": "1",
+        "man_made": "bridge",
+        "name": "Wellington Bridge"
+      },
+      "nodes": [
+        [
+          53.543118,
+          -113.548575
+        ],
+        [
+          53.543121,
+          -113.547509
+        ],
+        [
+          53.542972,
+          -113.547508
+        ],
+        [
+          53.542969,
+          -113.548574
+        ],
+        [
+          53.543118,
+          -113.548575
+        ]
+      ]
+    }
+  ],
+  "approaches": [
+    {
+      "osm_way": 37749245,
+      "part": "approach",
+      "which": "102 Avenue NW, construction, 4 lanes, width tag 14, which is not a published width. The far node is not a surveyed grade point.",
+      "plan_length_m": 9.1,
+      "tags": {
+        "highway": "construction",
+        "lanes": "4",
+        "maxspeed": "50",
+        "name": "102 Avenue NW",
+        "width": "14"
+      },
+      "nodes": [
+        [
+          53.54305,
+          -113.548719
+        ],
+        [
+          53.543048,
+          -113.548582
+        ]
+      ],
+      "extract_role": "approach"
+    },
+    {
+      "osm_way": 759487867,
+      "part": "approach",
+      "which": "102 Avenue NW MUP, construction. The far node is not a surveyed grade point.",
+      "plan_length_m": 11.1,
+      "tags": {
+        "highway": "construction",
+        "name": "102 Avenue NW MUP",
+        "surface": "concrete"
+      },
+      "nodes": [
+        [
+          53.543141,
+          -113.548668
+        ],
+        [
+          53.54314,
+          -113.548606
+        ],
+        [
+          53.543122,
+          -113.548568
+        ],
+        [
+          53.543112,
+          -113.548514
+        ]
+      ],
+      "extract_role": "approach"
+    },
+    {
+      "osm_way": 842281119,
+      "part": "approach",
+      "which": "102 Avenue NW MUP, construction. The far node is not a surveyed grade point.",
+      "plan_length_m": 9.4,
+      "tags": {
+        "highway": "construction",
+        "name": "102 Avenue NW MUP",
+        "surface": "concrete"
+      },
+      "nodes": [
+        [
+          53.543109,
+          -113.547411
+        ],
+        [
+          53.543152,
+          -113.547289
+        ]
+      ],
+      "extract_role": "approach"
+    },
+    {
+      "osm_way": 1462636302,
+      "part": "approach",
+      "which": "102 Avenue NW, construction, 4 lanes, width tag 15, which is not a published width. The far node is not a surveyed grade point.",
+      "plan_length_m": 113.3,
+      "tags": {
+        "bicycle": "designated",
+        "highway": "construction",
+        "lanes": "4",
+        "maxspeed": "50",
+        "name": "102 Avenue NW",
+        "surface": "asphalt",
+        "width": "15"
+      },
+      "nodes": [
+        [
+          53.543047,
+          -113.547489
+        ],
+        [
+          53.543047,
+          -113.54736
+        ],
+        [
+          53.543047,
+          -113.547207
+        ],
+        [
+          53.543046,
+          -113.54663
+        ],
+        [
+          53.543048,
+          -113.545885
+        ],
+        [
+          53.543048,
+          -113.545776
+        ]
+      ],
+      "extract_role": "approach"
+    }
+  ],
+  "excluded": [
+    {
+      "osm_way": 845134788,
+      "reason": "unnamed, footway. Not the deck. Horizontal length 286.5 m. Not the ravine climb."
+    },
+    {
+      "osm_way": 1272118425,
+      "reason": "unnamed, footway. Not the deck. Horizontal length 16.1 m. Not the ravine climb."
+    },
+    {
+      "osm_way": 31682091,
+      "reason": "Wellington Crescent NW, residential, 2 lanes. Not the deck. Horizontal length 496.9 m. Not the ravine climb."
+    },
+    {
+      "osm_way": 31686175,
+      "reason": "Churchill Crescent NW, residential, 2 lanes. Not the deck. Horizontal length 163.6 m. Not the ravine climb."
+    },
+    {
+      "osm_way": 37749244,
+      "reason": "unnamed, construction. Not the deck. Horizontal length 29.8 m. Not the ravine climb."
+    },
+    {
+      "osm_way": 595968652,
+      "reason": "Churchill Crescent NW, residential, 2 lanes. Not the deck. Horizontal length 10.7 m. Not the ravine climb."
+    },
+    {
+      "osm_way": 697653317,
+      "reason": "102 Avenue NW, construction, 4 lanes, width tag 15.2, which is not a published width. Not the deck. Horizontal length 106.6 m. Not the ravine climb."
+    },
+    {
+      "osm_way": 1171904999,
+      "reason": "unnamed, construction. Not the deck. Horizontal length 631.4 m. Not the ravine climb."
+    },
+    {
+      "osm_way": 1491678579,
+      "reason": "102 Avenue NW MUP, construction. Not the deck. Horizontal length 92.7 m. Not the ravine climb."
+    },
+    {
+      "osm_way": 1491678582,
+      "reason": "102 Avenue NW MUP, construction. Not the deck. Horizontal length 14.1 m. Not the ravine climb."
+    }
+  ],
+  "dimensions": {
+    "existing_type": "Three-span concrete arch, City year 1932, sidewalk on each side, four lanes. Shoring since 2014.",
+    "existing_year_city": 1932,
+    "existing_year_alberta_row": 1910,
+    "alberta_file": "B003",
+    "drawing_title_number": "B499",
+    "alberta_row_prints": "RV 3",
+    "finished_type": "Clear-span girder. Piers eliminated. Steel and concrete, including a NU2400 option, were both still in the bid set. No public award naming the built option was found.",
+    "finished_span_count": 1,
+    "existing_span_count": 3,
+    "published_span_length_m": null,
+    "out_to_out_width_m_april_2024_preliminary": 23.78,
+    "out_to_out_width_status": "April 2024 drawing, marked not for construction. The August 2024 girder change said the permanent footprint should be reduced. A revised width was not found.",
+    "shared_use_path_north_m_2023_update": 4.2,
+    "sidewalk_south_m_2023_update": 2.8,
+    "width_2023_update_status": "Printed in the 2023 update, when the recommended type was a concrete arch. The March 2026 page describes the girder and does not restate these widths.",
+    "crossfall_april_2024_drawing": "2.5 percent on the bridge deck, then 4.0 percent, then a parabolic crown. Drawing marked not for construction.",
+    "right_of_way_m": 30.6,
+    "deck_elevation_asl_m": null,
+    "clearance_to_ravine_m": null,
+    "osm_width_tag": "12.4",
+    "lanes_existing": 4,
+    "posted_speed_kmh": 50,
+    "outline_edge_lengths_m": [
+      70.5,
+      16.6,
+      70.5,
+      16.6
+    ]
+  }
+}

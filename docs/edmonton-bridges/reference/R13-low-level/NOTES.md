@@ -70,9 +70,9 @@ Southbound span, the west deck. Way 1433098757 is McDougall Hill Road NW onto th
 
 Northbound span, the east deck. Way 22942137 is a short Connors Road way off the truss, tagged two lanes, 10.2 m. Way 303665641 is McDougall Hill Road NW from there: tagged two lanes, `maxheight` tag 5.0, 127.4 m. Node order is away from the bridge.
 
-Way 106711221, 180.2 m, is a one-lane ramp from that north end up toward Grierson Hill. Way 106711225, 102.7 m, is the cloverleaf between McDougall Hill and Grierson Hill. Grierson Hill Road, and the span OpenStreetMap calls Grierson Bridge (way 106711211), are a separate structure on the north bank, west of this abutment. They are not in `geometry.json`.
+Way 106711221, 180.2 m, is a one-lane ramp from that north end up toward Grierson Hill. Way 106711225, 102.7 m, is the cloverleaf between McDougall Hill and Grierson Hill. The span at the bottom of the hill is the Grierson Hill Bridge, also called the Grierson/McDougall Overpass. OpenStreetMap tags it Grierson Bridge (way 106711211). It carries Grierson Hill Road over McDougall Hill Road. It is its own bridge and belongs in this scene. The brief is in `../N258-grierson/`. Its geometry is not in this file. The 100 Street funicular, with the Frederick G. Todd Lookout and the pedestrian bridge over Grierson Hill Road, is on this same bank. The code is F256. The brief is in `../F256-funicular/`. The Rossdale Road Bridge, way 37120045, carries Rossdale Road over McDougall Hill Road farther west. The code is N259. The brief is in `../N259-rossdale-mcdougall/`.
 
-**South.** The mapped road is Connors Road. The City also names Scona Road at this end.
+**South.** The mapped road is Connors Road. The City also names Scona Road at this end. The Scona Road Bridge (B065) carries Scona Road over Connors Road on the wooded slope, centre 53.533941, -113.483610. Omit that span. The concrete overpass that reads beyond the south end of the truss is 98 Avenue at the valley floor. Eastbound is City bridge B126. Those south-bank roadworks are N260. The brief is in `../N260-scona-connors/`.
 
 Southbound span. Way 1433098760 leaves the deck: tagged one lane, 76.9 m. Node order is away from the bridge. 99A Street NW meets this way.
 
