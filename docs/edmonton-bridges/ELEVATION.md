@@ -27,3 +27,7 @@ River surface = the commonest flat DTM height in the clip's lowest 6 m. It is on
 | T133-stony-plain | 616.82 (yes) | 665.73 | 48.91 | road_deck |
 | V257-river-queen | 613.66 (yes) | 614.40 | 0.74 | pier |
 | Z125-wellington | 637.95 (NO) | 664.35 | 26.40 (meaningless) | road_deck |
+
+**Built after the survey, so these rows are not the finished structure:** R14 Tawatina (the 2018 LiDAR predates the bridge; its row is not a deck), P152 (the stop was built on the ground read here), F256 (finished 2018), and T133 and Z125 (the rows show the old bridges that were replaced). See `reference/<site>/OPEN-QUESTIONS.md` and `BLOCKERS.md` section 2.
+
+Measurements derived from the same clips (structure run lengths, rise above the ground under each deck, raised widths, roof heights, ground profiles) are in `MEASUREMENTS.md`.

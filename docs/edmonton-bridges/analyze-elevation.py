@@ -74,4 +74,5 @@ for name, e in res.items():
     for d in e["decks"]:
         rd.append(f"| {d['part']} | {d['samples']} | {d['dsm_p10']:.2f} | {d['dsm_median']:.2f} | {d['dsm_p90']:.2f} | {d['median_above_water_m']:.2f}{'' if ok else ' (vs a non-river value)'} |")
     open(os.path.join(HERE, "reference", name, "elevation", "README.md"), "w").write("\n".join(rd) + "\n")
+lines += ["", "**Built after the survey, so these rows are not the finished structure:** R14 Tawatina (the 2018 LiDAR predates the bridge; its row is not a deck), P152 (the stop was built on the ground read here), F256 (finished 2018), and T133 and Z125 (the rows show the old bridges that were replaced). See `reference/<site>/OPEN-QUESTIONS.md` and `BLOCKERS.md` section 2.", "", "Measurements derived from the same clips (structure run lengths, rise above the ground under each deck, raised widths, roof heights, ground profiles) are in `MEASUREMENTS.md`."]
 open(os.path.join(HERE, "ELEVATION.md"), "w").write("\n".join(lines) + "\n")
