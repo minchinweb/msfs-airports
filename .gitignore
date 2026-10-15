@@ -4,3 +4,4 @@ _build/*
 
 # Edmonton bridges: LiDAR clips, regenerate with docs/edmonton-bridges/fetch-site-data.py
 docs/edmonton-bridges/reference/**/elevation/*.tif
+docs/edmonton-bridges/reference/**/aerial/*.jpg

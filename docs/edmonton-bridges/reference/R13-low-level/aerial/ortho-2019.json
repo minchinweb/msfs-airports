@@ -1,0 +1,12 @@
+{
+ "source": "City of Edmonton Imagery_Public/2019_RGB_Pictometry ImageServer",
+ "crs": "EPSG:3776 (NAD83(CSRS) / 3TM 114)",
+ "pixel_m": 0.2,
+ "width": 3397,
+ "height": 3295,
+ "xmin": 33668.4,
+ "xmax": 34348.0,
+ "ymin": 5933694.600000001,
+ "ymax": 5934353.600000001,
+ "note": "north up; world file semantics: pixel (c,r) -> x=xmin+(c+0.5)*pixel_m, y=ymax-(r+0.5)*pixel_m"
+}
