@@ -74,7 +74,7 @@ The first four boxes are named fixes on the Edmonton VFR terminal chart. Then th
 
 - [x] **R6 Quesnell**. 53.507, -113.567. Look 4, Where 5. The VFR checkpoint **Quesnell Bridge** (VCQSN, N53° 30.25′ W113° 34.00′). Whitemud Drive, eight lanes. About 3.4 km off the runway 34 long final at 6.6 km. Wide deck, not a truss. With it, place **W85 Fox Drive (Campbell Bridge)**, 53.5032, -113.5610, the creek span beside it. W85 was left off the freeway list.
 
-- [ ] **Y79 Bremner Cloverleaf**. 53.5702, -113.2461. Look 3, Where 5. Highway 16 / Highway 21. The VFR checkpoint **Bremner Cloverleaf** (VCBCL, N53° 34.30′ W113° 14.70′). It was on the cross list. The loops are the landmark, so this is not a diamond speck. Model the cloverleaf.
+- [x] **Y79 Bremner Cloverleaf**. 53.5702, -113.2461. Look 3, Where 5. Highway 16 / Highway 21. The VFR checkpoint **Bremner Cloverleaf** (VCBCL, N53° 34.30′ W113° 14.70′). It was on the cross list. The loops are the landmark, so this is not a diamond speck. Model the cloverleaf.
 
 - [ ] **H52 Sherwood Park Cloverleaf**. 53.513, -113.344. Look 3, Where 5. Sherwood Park Freeway / Henday. The VFR checkpoint **Sherwood Park Cloverleaf** (VCSWP, N53° 31.00′ W113° 20.50′). The freeway's own bridges through the interchange. Model the interchange, not a single girder.
 

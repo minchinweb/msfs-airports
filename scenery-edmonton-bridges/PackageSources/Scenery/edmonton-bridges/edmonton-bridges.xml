@@ -89,5 +89,9 @@
 	<SceneryObject lat="53.50313509" lon="-113.56087711" alt="618.300" pitch="0.000000" bank="0.000000" heading="0.000000" imageComplexity="VERY_SPARSE" altitudeIsAgl="FALSE" snapToGround="FALSE" snapToNormal="FALSE">
 		<LibraryObject name="{BD5AD88E-08A8-5EDE-90A1-043BDBECC17F}" scale="1.000000"/>
 	</SceneryObject>
+	<!-- Y79 Bremner Cloverleaf (br_y79_bremner) -->
+	<SceneryObject lat="53.57020000" lon="-113.24610000" alt="670.000" pitch="0.000000" bank="0.000000" heading="0.000000" imageComplexity="VERY_SPARSE" altitudeIsAgl="FALSE" snapToGround="FALSE" snapToNormal="FALSE">
+		<LibraryObject name="{91ADF963-3CB7-5FE7-A434-D23257466072}" scale="1.000000"/>
+	</SceneryObject>
 	<!-- END bridges -->
 </FSData>

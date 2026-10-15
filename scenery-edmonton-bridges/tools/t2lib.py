@@ -82,7 +82,7 @@ def outline_t(folder, outline_way, fr, ax):
 
 
 def girder_deck(m, ax, s0, s1, y_fn, tlo, thi, ground, sup=(), n_girders=5, depth=3.0, slab=0.3, inner=+1, sidewalk=0,
-                sidewalk_w=2.0, carriage=11.1, left_sign=+1, lamp_step=36.0, lamps_outer=True, pier_kind=None):
+                sidewalk_w=2.0, carriage=11.1, left_sign=+1, lamp_step=36.0, lamps_outer=True, pier_kind=None, girder_sw=None):
     """Plate-girder highway deck between s0 and s1 on abutments.
 
     tlo..thi: lateral extent of the deck.  inner: side (+1 / -1 in t) facing the other carriageway (concrete parapet there);
@@ -90,18 +90,19 @@ def girder_deck(m, ax, s0, s1, y_fn, tlo, thi, ground, sup=(), n_girders=5, dept
     left_sign: side of travel's left edge (yellow edge line); carriage: carriageway width centred on t = 0.
     """
     L = s1 - s0
+    gsw = DGREY if girder_sw is None else girder_sw
     # slab, asphalt top, concrete edges and underside
     ribbon(m, ax, s0, s1, tlo, thi, lambda s: y_fn(s) - slab, y_fn, CONC, step=12.0, sw_top=ASPHALT, sw_bot=CONCD)
     # girders
     tg = [tlo + 1.6 + i * (thi - tlo - 3.2) / (n_girders - 1) for i in range(n_girders)]
     for t in tg:
-        ribbon(m, ax, s0, s1, t - 0.1, t + 0.1, lambda s: y_fn(s) - slab - depth, lambda s: y_fn(s) - slab, DGREY, step=12.0, caps=True)
-        ribbon(m, ax, s0, s1, t - 0.4, t + 0.4, lambda s: y_fn(s) - slab - depth - 0.12, lambda s: y_fn(s) - slab - depth, DGREY, step=12.0)
+        ribbon(m, ax, s0, s1, t - 0.1, t + 0.1, lambda s: y_fn(s) - slab - depth, lambda s: y_fn(s) - slab, gsw, step=12.0, caps=True)
+        ribbon(m, ax, s0, s1, t - 0.4, t + 0.4, lambda s: y_fn(s) - slab - depth - 0.12, lambda s: y_fn(s) - slab - depth, gsw, step=12.0)
     k = max(1, int(round(L / 7.5)))
     for i in range(k + 1):
         s = s0 + L * i / k
         y = y_fn(s) - slab - depth * 0.5
-        beam(m, ax.p3(s, tg[0], y), ax.p3(s, tg[-1], y), depth * 0.55, 0.12, DGREY)
+        beam(m, ax.p3(s, tg[0], y), ax.p3(s, tg[-1], y), depth * 0.55, 0.12, gsw)
     # edge fascia (visible side face of the deck)
     for t, sg in ((tlo, -1), (thi, 1)):
         ribbon(m, ax, s0, s1, t - 0.05 if sg < 0 else t - 0.2, t + 0.2 if sg < 0 else t + 0.05, lambda s: y_fn(s) - slab - 0.55, y_fn, CONC, step=12.0)

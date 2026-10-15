@@ -1,0 +1,1501 @@
+{
+ "code": "Y79",
+ "name": "Bremner Cloverleaf",
+ "centre": [
+  53.5702,
+  -113.2461
+ ],
+ "crs": "EPSG:4326",
+ "coordinate_order": "[lat, lon]",
+ "geometry_source": "docs/edmonton-bridges/bridge-geometry.json",
+ "geometry_retrieved": "2026-10-14",
+ "plan_length_note": "plan_length_m is the horizontal length of that OSM way, WGS84 haversine with radius 6378137 m, rounded to one decimal. These ways match the live OpenStreetMap node counts on 2026-10-14, so the stored polylines are the complete ways. An approach plan_length_m is still not the climb to grade. The 86.2 m and 91.0 m overpass centrelines are not the inspection span totals 74.2 m (N-1) and 77.3 m (S-6). They were not averaged.",
+ "dropped_note": "The two Highway 21 overpasses and the two motorway_link ramps that share a node with them are kept. Highway 21 approaches in the extract are kept. Yellowhead ways 61014013 (2,120.1 m) and 1099451495 (1,212.5 m) pass under these overpasses; they are complete OSM carriageways that run west toward Y78 (Clover Bar Road, 53.570, -113.271) and east toward Y80 (Highway 16 / 824). They were dropped so the clip stays on this cloverleaf. Other OSM loops and outer ramps at this interchange do not share a node with the bridge=yes ways and are not in this object; they are named in NOTES still-missing, not invented here. H50, Y78, Y80, and L113 ways are different codes. Alberta sign structures ZE, ZS, ZN, and ZW under file 75760 are not decks. File 73615 is the CNR Bremner underpass on a local road, not this interchange.",
+ "decks": [
+  {
+   "osm_way": 32829979,
+   "part": "east_overpass",
+   "which": "Highway 21 on the east carriageway over Highway 16. Three lanes, one-way, primary, ref 21, layer 1, 80 km/h, asphalt. Node order is south to north, so the one-way is northbound. Alberta file 75760 N-1, year 1967, FC, three spans. This centreline is 86.2 m. That is not the inspection span total 74.2 m.",
+   "plan_length_m": 86.2,
+   "tags": {
+    "bridge": "yes",
+    "highway": "primary",
+    "lanes": "3",
+    "layer": "1",
+    "maxspeed": "80",
+    "name": "Highway 21",
+    "oneway": "yes",
+    "ref": "21",
+    "surface": "asphalt"
+   },
+   "nodes": [
+    [
+     53.569807,
+     -113.24613
+    ],
+    [
+     53.570581,
+     -113.246074
+    ]
+   ]
+  },
+  {
+   "osm_way": 153737445,
+   "part": "west_overpass",
+   "which": "Highway 21 on the west carriageway over Highway 16. Three lanes, one-way, primary, ref 21, layer 1, 80 km/h, asphalt. Node order is north to south, so the one-way is southbound. Alberta file 75760 S-6, year 2008, WG, two spans. This centreline is 91.0 m. That is not the inspection span total 77.3 m. The 2009 Sherwood Park News called this the second overpass for southbound traffic.",
+   "plan_length_m": 91.0,
+   "tags": {
+    "bridge": "yes",
+    "highway": "primary",
+    "lanes": "3",
+    "layer": "1",
+    "maxspeed": "80",
+    "name": "Highway 21",
+    "oneway": "yes",
+    "ref": "21",
+    "surface": "asphalt"
+   },
+   "nodes": [
+    [
+     53.570639,
+     -113.246551
+    ],
+    [
+     53.569822,
+     -113.246603
+    ]
+   ]
+  }
+ ],
+ "approaches": [
+  {
+   "osm_way": 32831204,
+   "part": "north_west_road",
+   "which": "Highway 21 onto the north end of the west overpass. Two lanes, one-way, 80 km/h. Node order runs toward the deck. The far node is not a surveyed grade point.",
+   "plan_length_m": 837.2,
+   "tags": {
+    "highway": "primary",
+    "lanes": "2",
+    "maxspeed": "80",
+    "name": "Highway 21",
+    "oneway": "yes",
+    "ref": "21"
+   },
+   "nodes": [
+    [
+     53.57815,
+     -113.246005
+    ],
+    [
+     53.577665,
+     -113.246007
+    ],
+    [
+     53.577146,
+     -113.246011
+    ],
+    [
+     53.576286,
+     -113.246017
+    ],
+    [
+     53.575908,
+     -113.246028
+    ],
+    [
+     53.575758,
+     -113.246028
+    ],
+    [
+     53.573224,
+     -113.246333
+    ],
+    [
+     53.571923,
+     -113.246468
+    ],
+    [
+     53.571376,
+     -113.246504
+    ],
+    [
+     53.571051,
+     -113.246524
+    ],
+    [
+     53.570639,
+     -113.246551
+    ]
+   ],
+   "extract_role": "approach"
+  },
+  {
+   "osm_way": 1278901804,
+   "part": "north_east_stub",
+   "which": "Highway 21 leaving the north end of the east overpass, 9.9 m, three lanes, one-way, 80 km/h. It meets way 32830235. The far node is not a surveyed grade point.",
+   "plan_length_m": 9.9,
+   "tags": {
+    "highway": "primary",
+    "lanes": "3",
+    "maxspeed": "80",
+    "name": "Highway 21",
+    "oneway": "yes",
+    "ref": "21",
+    "surface": "asphalt"
+   },
+   "nodes": [
+    [
+     53.570581,
+     -113.246074
+    ],
+    [
+     53.57067,
+     -113.24607
+    ]
+   ],
+   "extract_role": "approach"
+  },
+  {
+   "osm_way": 32830235,
+   "part": "north_east_road",
+   "which": "Highway 21 continuing north from way 1278901804. Two lanes, one-way, 80 km/h. The extract role is cross_road because this way does not share a node with a bridge=yes way. It is the same road. The far node is not a surveyed grade point.",
+   "plan_length_m": 84.9,
+   "tags": {
+    "highway": "primary",
+    "lanes": "2",
+    "maxspeed": "80",
+    "name": "Highway 21",
+    "oneway": "yes",
+    "ref": "21",
+    "surface": "asphalt"
+   },
+   "nodes": [
+    [
+     53.57067,
+     -113.24607
+    ],
+    [
+     53.571432,
+     -113.246023
+    ]
+   ],
+   "extract_role": "cross_road"
+  },
+  {
+   "osm_way": 1278901805,
+   "part": "south_east_stub",
+   "which": "Highway 21 onto the south end of the east overpass, 6.1 m, three lanes, one-way, 80 km/h. It meets way 1259559956. The far node is not a surveyed grade point.",
+   "plan_length_m": 6.1,
+   "tags": {
+    "highway": "primary",
+    "lanes": "3",
+    "maxspeed": "80",
+    "name": "Highway 21",
+    "oneway": "yes",
+    "ref": "21",
+    "surface": "asphalt"
+   },
+   "nodes": [
+    [
+     53.569752,
+     -113.246132
+    ],
+    [
+     53.569807,
+     -113.24613
+    ]
+   ],
+   "extract_role": "approach"
+  },
+  {
+   "osm_way": 1259559956,
+   "part": "south_east_road",
+   "which": "Highway 21 onto the south end of the east overpass. Two lanes, one-way, 80 km/h. The extract role is cross_road because this way does not share a node with a bridge=yes way. It is the same road. Node order runs toward the deck. The far node is not a surveyed grade point.",
+   "plan_length_m": 123.3,
+   "tags": {
+    "highway": "primary",
+    "lanes": "2",
+    "maxspeed": "80",
+    "name": "Highway 21",
+    "oneway": "yes",
+    "ref": "21",
+    "surface": "asphalt"
+   },
+   "nodes": [
+    [
+     53.568645,
+     -113.246212
+    ],
+    [
+     53.569752,
+     -113.246132
+    ]
+   ],
+   "extract_role": "cross_road"
+  },
+  {
+   "osm_way": 1281358648,
+   "part": "south_west_road",
+   "which": "Highway 21 leaving the south end of the west overpass. Three lanes, one-way, 80 km/h. Node order runs away from the deck. The far node is not a surveyed grade point.",
+   "plan_length_m": 97.5,
+   "tags": {
+    "highway": "primary",
+    "lanes": "3",
+    "maxspeed": "80",
+    "name": "Highway 21",
+    "oneway": "yes",
+    "ref": "21",
+    "surface": "asphalt"
+   },
+   "nodes": [
+    [
+     53.569822,
+     -113.246603
+    ],
+    [
+     53.568974,
+     -113.246655
+    ],
+    [
+     53.568947,
+     -113.246657
+    ]
+   ],
+   "extract_role": "approach"
+  },
+  {
+   "osm_way": 32834983,
+   "part": "northeast_loop",
+   "which": "Motorway link, one lane, destination Edmonton, destination:ref 16 West. The northeast loop from Highway 21 northbound off the east overpass onto Highway 16 westbound. The extract role is cross_road. This is a cloverleaf loop at this interchange. It is not tagged bridge=yes. The far node meets dropped Yellowhead way 61014013.",
+   "plan_length_m": 312.6,
+   "tags": {
+    "destination": "Edmonton",
+    "destination:ref": "16 West",
+    "highway": "motorway_link",
+    "lanes": "1",
+    "oneway": "yes",
+    "surface": "asphalt"
+   },
+   "nodes": [
+    [
+     53.57067,
+     -113.24607
+    ],
+    [
+     53.570924,
+     -113.245883
+    ],
+    [
+     53.571027,
+     -113.245821
+    ],
+    [
+     53.571089,
+     -113.245762
+    ],
+    [
+     53.57113,
+     -113.245697
+    ],
+    [
+     53.571168,
+     -113.245632
+    ],
+    [
+     53.571199,
+     -113.245565
+    ],
+    [
+     53.571221,
+     -113.24549
+    ],
+    [
+     53.571241,
+     -113.245405
+    ],
+    [
+     53.571256,
+     -113.245304
+    ],
+    [
+     53.571262,
+     -113.245209
+    ],
+    [
+     53.571263,
+     -113.245122
+    ],
+    [
+     53.571254,
+     -113.245033
+    ],
+    [
+     53.571242,
+     -113.244942
+    ],
+    [
+     53.571219,
+     -113.244848
+    ],
+    [
+     53.571193,
+     -113.244753
+    ],
+    [
+     53.571162,
+     -113.244657
+    ],
+    [
+     53.571118,
+     -113.244551
+    ],
+    [
+     53.571052,
+     -113.244444
+    ],
+    [
+     53.570985,
+     -113.244359
+    ],
+    [
+     53.570917,
+     -113.244311
+    ],
+    [
+     53.570831,
+     -113.244287
+    ],
+    [
+     53.570773,
+     -113.244288
+    ],
+    [
+     53.570707,
+     -113.244312
+    ],
+    [
+     53.570656,
+     -113.244338
+    ],
+    [
+     53.570608,
+     -113.24438
+    ],
+    [
+     53.570558,
+     -113.244439
+    ],
+    [
+     53.570513,
+     -113.244512
+    ],
+    [
+     53.570465,
+     -113.244601
+    ],
+    [
+     53.570432,
+     -113.244716
+    ],
+    [
+     53.570408,
+     -113.244829
+    ],
+    [
+     53.570384,
+     -113.245014
+    ],
+    [
+     53.570368,
+     -113.245694
+    ],
+    [
+     53.570305,
+     -113.245855
+    ]
+   ],
+   "extract_role": "cross_road"
+  },
+  {
+   "osm_way": 32835223,
+   "part": "southeast_loop",
+   "which": "Motorway link, one lane, destination Fort Saskatchewan, destination:ref 21 North. The southeast loop from Highway 16 eastbound onto Highway 21 northbound. The extract role is cross_road. This is a cloverleaf loop at this interchange. It is not tagged bridge=yes. The first node sits on dropped Yellowhead way 1099451495.",
+   "plan_length_m": 449.0,
+   "tags": {
+    "destination": "Fort Saskatchewan",
+    "destination:ref": "21 North",
+    "highway": "motorway_link",
+    "lanes": "1",
+    "oneway": "yes",
+    "surface": "asphalt"
+   },
+   "nodes": [
+    [
+     53.570003,
+     -113.247708
+    ],
+    [
+     53.56995,
+     -113.245475
+    ],
+    [
+     53.569942,
+     -113.245138
+    ],
+    [
+     53.56992,
+     -113.244903
+    ],
+    [
+     53.569882,
+     -113.244733
+    ],
+    [
+     53.569829,
+     -113.244573
+    ],
+    [
+     53.569769,
+     -113.244448
+    ],
+    [
+     53.569699,
+     -113.24436
+    ],
+    [
+     53.569603,
+     -113.244315
+    ],
+    [
+     53.569538,
+     -113.24431
+    ],
+    [
+     53.569476,
+     -113.24432
+    ],
+    [
+     53.569418,
+     -113.244352
+    ],
+    [
+     53.569367,
+     -113.244383
+    ],
+    [
+     53.569312,
+     -113.244423
+    ],
+    [
+     53.569255,
+     -113.244495
+    ],
+    [
+     53.569209,
+     -113.244574
+    ],
+    [
+     53.56916,
+     -113.244678
+    ],
+    [
+     53.569124,
+     -113.244788
+    ],
+    [
+     53.569086,
+     -113.244918
+    ],
+    [
+     53.569071,
+     -113.245042
+    ],
+    [
+     53.569061,
+     -113.245181
+    ],
+    [
+     53.569054,
+     -113.245305
+    ],
+    [
+     53.569059,
+     -113.24542
+    ],
+    [
+     53.56907,
+     -113.245505
+    ],
+    [
+     53.569091,
+     -113.245627
+    ],
+    [
+     53.569124,
+     -113.245719
+    ],
+    [
+     53.569177,
+     -113.245811
+    ],
+    [
+     53.56924,
+     -113.245893
+    ],
+    [
+     53.569337,
+     -113.245969
+    ],
+    [
+     53.569443,
+     -113.246009
+    ],
+    [
+     53.569642,
+     -113.246034
+    ],
+    [
+     53.569752,
+     -113.246132
+    ]
+   ],
+   "extract_role": "cross_road"
+  }
+ ],
+ "excluded": [
+  {
+   "osm_way": 61014013,
+   "reason": "Yellowhead Highway eastbound through this interchange and well past it, 2,120.1 m, two lanes, 110 km/h, maxheight tag 5.3. Complete OSM way from about -113.234 to -113.266. It runs west toward Y78. Dropped so the clip stays on this cloverleaf. The 5.3 tag is a mapper tag; Alberta's vertical-clearances table states 5.3 m east and west under Hwy. 21 at Bremner."
+  },
+  {
+   "osm_way": 1099451495,
+   "reason": "Yellowhead Highway westbound through this interchange and east past it, 1,212.5 m, two lanes, 110 km/h, maxheight tag 5.2. Complete OSM way from about -113.248 to -113.229. It runs east toward Y80. Dropped so the clip stays on this cloverleaf. The 5.2 tag is a mapper tag. It is not Alberta's 5.3 m at this overpass, and it is not the CNR-at-Bremner 5.2 m west figure."
+  }
+ ],
+ "dimensions": {
+  "structural_type": "Two separate Highway 21 overpasses over Highway 16, plus cloverleaf loops. N-1 (east, northbound): Alberta FC girder, three spans. S-6 (west, southbound): Alberta WG weathering-steel girder, two spans. 2011-13 provincial note: girder repair. Not a truss. Not a single girder line for the whole interchange.",
+  "alberta_file": "75760",
+  "n1_year_built": 1967,
+  "n1_span_type_code": "FC",
+  "n1_span_count": 3,
+  "n1_span_lengths_m_inspection_2013": [
+   29,
+   16.2,
+   29
+  ],
+  "n1_inventory_nom_length_m": 74.2,
+  "n1_girder_count_inspection_2013": 15,
+  "n1_clear_roadway_m_inspection_2013": 14.2,
+  "n1_skew_deg_rhf_inspection_2013": 2,
+  "n1_pier_type": "PIER-COLUMN",
+  "n1_column_count_inspection_2013": 8,
+  "s6_year_built": 2008,
+  "s6_span_type_code": "WG",
+  "s6_span_count": 2,
+  "s6_span_lengths_m_inspection_2013": [
+   38.65,
+   38.65
+  ],
+  "s6_inventory_nom_length_m": 77.3,
+  "s6_clear_roadway_m_inspection_2013": 16.6,
+  "s6_roadway_width_m_inspection_2013": 17.2,
+  "s6_skew_deg_rhf_inspection_2013": 2,
+  "s6_pier_type": "PIER-COLUMN",
+  "s6_steel": "weathering steel",
+  "s6_wearing_acp_mm_inspection_2013": 90,
+  "osm_east_overpass_m": 86.2,
+  "osm_west_overpass_m": 91.0,
+  "clearance_under_hwy21_m_alberta_table": 5.3,
+  "n1_required_clearance_posting_m_inspection_2013": 5.3,
+  "s6_required_clearance_posting_m_inspection_2013": 5.5,
+  "s6_posted_eb_clearance_m_inspection_2013": 5.3,
+  "osm_maxheight_tag_m_yellowhead_eb": 5.3,
+  "osm_maxheight_tag_m_yellowhead_wb": 5.2,
+  "osm_maxheight_is_deck_elevation": false,
+  "sidewalk": false,
+  "posted_speed_kmh_hwy21_osm_tag": 80,
+  "posted_speed_kmh_hwy16_osm_tag": 110,
+  "hwy16_exit": 406,
+  "deck_elevation_asl_m": null,
+  "soffit_elevation_asl_m": null,
+  "girder_depth_m": null,
+  "lane_width_m": null,
+  "crossfall": null,
+  "longitudinal_grade": null,
+  "north_approach_gradient": null,
+  "north_approach_elevation_change_m": null,
+  "north_approach_meets_grade": null,
+  "south_approach_gradient": null,
+  "south_approach_elevation_change_m": null,
+  "south_approach_meets_grade": null
+ },
+ "ramps_added_2026_10_15": {
+  "source": "Overpass API read of box 53.5675,-113.2505,53.5730,-113.2415 on 2026-10-15 (ODbL). Complete OSM ways. Plan geometry only; no elevations, widths are not tagged.",
+  "ways": [
+   {
+    "osm_way": 32830192,
+    "part": "ramp_se_out_16e",
+    "tags": {
+     "highway": "motorway_link",
+     "lanes": "1",
+     "oneway": "yes",
+     "destination": "Lloydminster",
+     "destination:ref": "16 East"
+    },
+    "nodes": [
+     [
+      53.5693632,
+      -113.2426136
+     ],
+     [
+      53.5694752,
+      -113.2422196
+     ],
+     [
+      53.5695429,
+      -113.24196
+     ],
+     [
+      53.5696198,
+      -113.2416542
+     ],
+     [
+      53.5696597,
+      -113.2414536
+     ],
+     [
+      53.5697445,
+      -113.2410251
+     ],
+     [
+      53.5697895,
+      -113.2407309
+     ],
+     [
+      53.5698331,
+      -113.2403777
+     ],
+     [
+      53.569854,
+      -113.2401919
+     ],
+     [
+      53.5698717,
+      -113.2399474
+     ],
+     [
+      53.5699012,
+      -113.2395893
+     ],
+     [
+      53.5699147,
+      -113.2387816
+     ],
+     [
+      53.5699352,
+      -113.2374313
+     ],
+     [
+      53.5699934,
+      -113.2306605
+     ],
+     [
+      53.5700494,
+      -113.2293667
+     ]
+    ]
+   },
+   {
+    "osm_way": 32834795,
+    "part": "ramp_sw_16e_to_21s",
+    "tags": {
+     "highway": "motorway_link",
+     "lanes": "1",
+     "oneway": "yes",
+     "destination": "Sherwood Park;Camrose",
+     "destination:ref": "21 South"
+    },
+    "nodes": [
+     [
+      53.570008,
+      -113.2542072
+     ],
+     [
+      53.5699562,
+      -113.2530054
+     ],
+     [
+      53.5698889,
+      -113.2498269
+     ],
+     [
+      53.5698717,
+      -113.2494557
+     ],
+     [
+      53.5698365,
+      -113.2490951
+     ],
+     [
+      53.569789,
+      -113.2488376
+     ],
+     [
+      53.569728,
+      -113.2485672
+     ],
+     [
+      53.5696529,
+      -113.2483151
+     ],
+     [
+      53.5695792,
+      -113.2481232
+     ],
+     [
+      53.5695101,
+      -113.2479694
+     ],
+     [
+      53.569435,
+      -113.2478175
+     ],
+     [
+      53.5693622,
+      -113.2476906
+     ],
+     [
+      53.5692813,
+      -113.2475709
+     ],
+     [
+      53.5692009,
+      -113.2474633
+     ],
+     [
+      53.5691296,
+      -113.2473728
+     ],
+     [
+      53.5690214,
+      -113.2472674
+     ],
+     [
+      53.5689324,
+      -113.2471834
+     ],
+     [
+      53.5688344,
+      -113.2471054
+     ],
+     [
+      53.5687484,
+      -113.2470517
+     ],
+     [
+      53.5686302,
+      -113.2469944
+     ],
+     [
+      53.5684784,
+      -113.2469354
+     ],
+     [
+      53.568308,
+      -113.2468974
+     ],
+     [
+      53.5680886,
+      -113.2468778
+     ],
+     [
+      53.5677548,
+      -113.2468749
+     ],
+     [
+      53.5672822,
+      -113.2468805
+     ],
+     [
+      53.5669202,
+      -113.2468053
+     ]
+    ]
+   },
+   {
+    "osm_way": 91930051,
+    "part": "ramp_ne_a",
+    "tags": {
+     "highway": "motorway_link",
+     "oneway": "yes",
+     "destination": "Sherwood Park;Camrose",
+     "destination:ref": "21 South"
+    },
+    "nodes": [
+     [
+      53.5712543,
+      -113.2440947
+     ],
+     [
+      53.5713489,
+      -113.2444772
+     ],
+     [
+      53.5714386,
+      -113.2447941
+     ],
+     [
+      53.5714689,
+      -113.2449647
+     ],
+     [
+      53.5714919,
+      -113.2451036
+     ],
+     [
+      53.5714882,
+      -113.2452451
+     ],
+     [
+      53.5714784,
+      -113.2454074
+     ],
+     [
+      53.5714587,
+      -113.245641
+     ],
+     [
+      53.5714323,
+      -113.2460231
+     ]
+    ]
+   },
+   {
+    "osm_way": 91930054,
+    "part": "ramp_sw_stub",
+    "tags": {
+     "highway": "motorway_link",
+     "lanes": "1",
+     "oneway": "yes",
+     "destination": "Lloydminster",
+     "destination:ref": "16 East"
+    },
+    "nodes": [
+     [
+      53.5689465,
+      -113.2466565
+     ],
+     [
+      53.568837,
+      -113.2465767
+     ],
+     [
+      53.5687871,
+      -113.2465558
+     ],
+     [
+      53.5687396,
+      -113.2465128
+     ],
+     [
+      53.5686982,
+      -113.2464423
+     ],
+     [
+      53.5686713,
+      -113.2463546
+     ],
+     [
+      53.5686449,
+      -113.2462125
+     ]
+    ]
+   },
+   {
+    "osm_way": 153737435,
+    "part": "ramp_nw_21s_to_16w",
+    "tags": {
+     "highway": "motorway_link",
+     "lanes": "1",
+     "oneway": "yes",
+     "destination": "Edmonton",
+     "destination:ref": "16 West"
+    },
+    "nodes": [
+     [
+      53.5757579,
+      -113.2460278
+     ],
+     [
+      53.575739,
+      -113.2461168
+     ],
+     [
+      53.5736567,
+      -113.2465101
+     ],
+     [
+      53.573442,
+      -113.2465555
+     ],
+     [
+      53.5731775,
+      -113.2466109
+     ],
+     [
+      53.5728059,
+      -113.2466866
+     ],
+     [
+      53.5725772,
+      -113.2467318
+     ],
+     [
+      53.5723198,
+      -113.2467924
+     ],
+     [
+      53.5722517,
+      -113.2468154
+     ],
+     [
+      53.5721037,
+      -113.2468674
+     ],
+     [
+      53.5719723,
+      -113.2469362
+     ],
+     [
+      53.5718072,
+      -113.2470259
+     ],
+     [
+      53.5716364,
+      -113.2471577
+     ],
+     [
+      53.5714817,
+      -113.2472951
+     ],
+     [
+      53.5713501,
+      -113.2474266
+     ],
+     [
+      53.5712345,
+      -113.2475746
+     ],
+     [
+      53.5711397,
+      -113.2477027
+     ],
+     [
+      53.5710614,
+      -113.2478278
+     ],
+     [
+      53.5709786,
+      -113.2479702
+     ],
+     [
+      53.5708921,
+      -113.2481404
+     ],
+     [
+      53.5708165,
+      -113.2483151
+     ],
+     [
+      53.5707114,
+      -113.2485945
+     ],
+     [
+      53.5706467,
+      -113.2487788
+     ],
+     [
+      53.5705725,
+      -113.2490298
+     ],
+     [
+      53.5705066,
+      -113.2493007
+     ],
+     [
+      53.5704676,
+      -113.2495456
+     ],
+     [
+      53.5704324,
+      -113.2498197
+     ],
+     [
+      53.5703987,
+      -113.2501567
+     ],
+     [
+      53.5703801,
+      -113.250438
+     ],
+     [
+      53.5703539,
+      -113.2509107
+     ],
+     [
+      53.5703414,
+      -113.2515046
+     ],
+     [
+      53.5703332,
+      -113.2520879
+     ],
+     [
+      53.5702804,
+      -113.2522257
+     ]
+    ]
+   },
+   {
+    "osm_way": 153737436,
+    "part": "ramp_16w_to_ne",
+    "tags": {
+     "highway": "motorway_link",
+     "lanes": "1",
+     "oneway": "yes",
+     "destination": "Fort Saskatchewan;Sherwood Park;Camrose",
+     "destination:ref": "21"
+    },
+    "nodes": [
+     [
+      53.5703246,
+      -113.2342958
+     ],
+     [
+      53.5703852,
+      -113.2355418
+     ],
+     [
+      53.5704578,
+      -113.2394197
+     ],
+     [
+      53.5704695,
+      -113.2399876
+     ],
+     [
+      53.5704822,
+      -113.2404101
+     ],
+     [
+      53.5705036,
+      -113.2407041
+     ],
+     [
+      53.5705324,
+      -113.2410277
+     ],
+     [
+      53.5705664,
+      -113.2413282
+     ],
+     [
+      53.5705985,
+      -113.2415725
+     ],
+     [
+      53.5706294,
+      -113.2417794
+     ],
+     [
+      53.5706953,
+      -113.2421271
+     ],
+     [
+      53.5707895,
+      -113.2425583
+     ],
+     [
+      53.5708615,
+      -113.2428495
+     ],
+     [
+      53.5709394,
+      -113.2431131
+     ],
+     [
+      53.5710332,
+      -113.2434031
+     ],
+     [
+      53.5711483,
+      -113.2437635
+     ],
+     [
+      53.5712543,
+      -113.2440947
+     ]
+    ]
+   },
+   {
+    "osm_way": 1259559954,
+    "part": "north_east_road_2",
+    "tags": {
+     "highway": "primary",
+     "lanes": "2",
+     "oneway": "yes",
+     "name": "Highway 21",
+     "ref": "21"
+    },
+    "nodes": [
+     [
+      53.5714323,
+      -113.2460231
+     ],
+     [
+      53.5723483,
+      -113.2459577
+     ],
+     [
+      53.5730462,
+      -113.2458777
+     ],
+     [
+      53.574904,
+      -113.2456061
+     ],
+     [
+      53.5755116,
+      -113.2455518
+     ],
+     [
+      53.5759397,
+      -113.2455374
+     ],
+     [
+      53.5763708,
+      -113.2455294
+     ],
+     [
+      53.5772296,
+      -113.2455281
+     ]
+    ]
+   },
+   {
+    "osm_way": 1259559955,
+    "part": "ramp_nw_stub",
+    "tags": {
+     "highway": "motorway_link",
+     "oneway": "yes"
+    },
+    "nodes": [
+     [
+      53.5714323,
+      -113.2460231
+     ],
+     [
+      53.5713996,
+      -113.2461761
+     ],
+     [
+      53.5713808,
+      -113.2462406
+     ],
+     [
+      53.5713553,
+      -113.2462907
+     ],
+     [
+      53.5713264,
+      -113.2463308
+     ],
+     [
+      53.5712804,
+      -113.2463715
+     ],
+     [
+      53.5710512,
+      -113.2465238
+     ]
+    ]
+   },
+   {
+    "osm_way": 1259559957,
+    "part": "ramp_se_21n_to_16e_a",
+    "tags": {
+     "highway": "motorway_link",
+     "lanes": "1",
+     "oneway": "yes",
+     "destination": "Lloydminster",
+     "destination:ref": "16 East"
+    },
+    "nodes": [
+     [
+      53.5686449,
+      -113.2462125
+     ],
+     [
+      53.56863,
+      -113.2459886
+     ],
+     [
+      53.5686325,
+      -113.2457512
+     ],
+     [
+      53.5686392,
+      -113.2455693
+     ],
+     [
+      53.5686532,
+      -113.2454028
+     ],
+     [
+      53.5686893,
+      -113.2450848
+     ],
+     [
+      53.5687354,
+      -113.2448035
+     ],
+     [
+      53.5687863,
+      -113.244567
+     ],
+     [
+      53.5688526,
+      -113.2443439
+     ],
+     [
+      53.5690523,
+      -113.2436787
+     ],
+     [
+      53.569168,
+      -113.2432267
+     ]
+    ]
+   },
+   {
+    "osm_way": 1259559962,
+    "part": "ramp_21n_to_16e_b",
+    "tags": {
+     "highway": "motorway_link",
+     "lanes": "1",
+     "oneway": "yes",
+     "destination": "Lloydminster",
+     "destination:ref": "16 East"
+    },
+    "nodes": [
+     [
+      53.5656311,
+      -113.246619
+     ],
+     [
+      53.5660007,
+      -113.2464681
+     ],
+     [
+      53.5666718,
+      -113.2462498
+     ],
+     [
+      53.5672266,
+      -113.24611
+     ],
+     [
+      53.5675649,
+      -113.2460471
+     ],
+     [
+      53.5676797,
+      -113.2459947
+     ],
+     [
+      53.5677812,
+      -113.2459598
+     ],
+     [
+      53.5678914,
+      -113.2458971
+     ],
+     [
+      53.5679894,
+      -113.2458206
+     ],
+     [
+      53.568113,
+      -113.2457057
+     ],
+     [
+      53.5682216,
+      -113.2455836
+     ],
+     [
+      53.5683148,
+      -113.2454599
+     ],
+     [
+      53.5683651,
+      -113.2453705
+     ],
+     [
+      53.5684597,
+      -113.2452055
+     ],
+     [
+      53.5685532,
+      -113.2450257
+     ],
+     [
+      53.5686535,
+      -113.2447244
+     ],
+     [
+      53.5688172,
+      -113.2442267
+     ],
+     [
+      53.5690166,
+      -113.2436367
+     ],
+     [
+      53.569168,
+      -113.2432267
+     ],
+     [
+      53.5692755,
+      -113.2428961
+     ],
+     [
+      53.5693632,
+      -113.2426136
+     ]
+    ]
+   },
+   {
+    "osm_way": 1264725793,
+    "part": "ramp_ne_b",
+    "tags": {
+     "highway": "motorway_link",
+     "lanes": "1",
+     "oneway": "yes",
+     "destination": "Fort Saskatchewan"
+    },
+    "nodes": [
+     [
+      53.5712543,
+      -113.2440947
+     ],
+     [
+      53.5713879,
+      -113.2444609
+     ],
+     [
+      53.5714828,
+      -113.2446487
+     ],
+     [
+      53.5715297,
+      -113.2447445
+     ],
+     [
+      53.5716968,
+      -113.245048
+     ],
+     [
+      53.5718774,
+      -113.2452502
+     ],
+     [
+      53.5720554,
+      -113.2454301
+     ],
+     [
+      53.5723192,
+      -113.2456113
+     ],
+     [
+      53.5724474,
+      -113.24566
+     ],
+     [
+      53.5725022,
+      -113.2456768
+     ],
+     [
+      53.5725522,
+      -113.2456899
+     ],
+     [
+      53.5730462,
+      -113.2458777
+     ]
+    ]
+   },
+   {
+    "osm_way": 1278901802,
+    "part": "south_east_road_2",
+    "tags": {
+     "highway": "primary",
+     "lanes": "2",
+     "oneway": "yes",
+     "name": "Highway 21",
+     "ref": "21"
+    },
+    "nodes": [
+     [
+      53.5656311,
+      -113.246619
+     ],
+     [
+      53.5666922,
+      -113.2464838
+     ],
+     [
+      53.5672202,
+      -113.2464036
+     ],
+     [
+      53.5680713,
+      -113.2462764
+     ],
+     [
+      53.5683421,
+      -113.246246
+     ],
+     [
+      53.5686449,
+      -113.2462125
+     ]
+    ]
+   },
+   {
+    "osm_way": 1281358649,
+    "part": "south_west_road_2",
+    "tags": {
+     "highway": "primary",
+     "lanes": "2",
+     "oneway": "yes",
+     "name": "Highway 21",
+     "ref": "21"
+    },
+    "nodes": [
+     [
+      53.5689465,
+      -113.2466565
+     ],
+     [
+      53.567753,
+      -113.2467267
+     ],
+     [
+      53.5669202,
+      -113.2468053
+     ]
+    ]
+   }
+  ]
+ }
+}

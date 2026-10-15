@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ModelInfo guid="{91ADF963-3CB7-5FE7-A434-D23257466072}" version="1.1">
+	<LODS>
+		<LOD minSize="0" ModelFile="br_y79_bremner.gltf"/>
+	</LODS>
+</ModelInfo>
