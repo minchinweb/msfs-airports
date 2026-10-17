@@ -1,0 +1,56 @@
+# CYXD Shell hangar / Aerocentre - reference photos
+
+Saved 2026-10-17. All by jasonwoodhead23 (Flickr "woodhead"), 1024 px "b" size, album https://flickr.com/photos/woodhead/albums/72157638132998873 . Licence not checked per photo (his Commons uploads are CC BY 2.0).
+
+| File | Source | Notes |
+|---|---|---|
+| `flickr_woodhead_11094180505.jpg` | https://flickr.com/photos/woodhead/11094180505/ | Winter, landside, looking along the front of the building with the red "9" sign (**Hangar 9**, with its "30 min parking" sign; it is the front-right building, *not* the Shell hangar). Far end of the lane: a two-storey blue-grey flat-roofed block on stilts/open ground floor (a drive-through bay under the upper floor, car parked in it), glazed upper band, small sign, antenna on the roof; the control tower is at far left. This block is the landside office end of the Shell/Aerocentre complex (same block as in the demolition photos below). |
+| `flickr_woodhead_14669344410.jpg` | https://flickr.com/photos/woodhead/14669344410/ | Demolition, landside, from the north-west end. Left: the two-storey blue-grey block with glazed upper band; centre: a long one-storey wing of grey ribbed cladding with a flat roof (landside offices opened up, insulation visible, yellow trim posts between sections); behind and right: the tall hangar, pale cream ribbed cladding, low-pitched roof with a red eave line, rising clearly higher than the wing. |
+| `flickr_woodhead_14669349810.jpg` | https://flickr.com/photos/woodhead/14669349810/ | Demolition, landside, from the car park a little further back. Shows the whole run: two-storey office block (left, ground floor recessed behind piers, "Aerocentre"-style sign band), a slightly lower two-storey block stepping back, the long single-storey wing with a roller door, then the tall cream hangar. |
+| (`../hangar18-photos/flickr_woodhead_11094403683.jpg`) | https://flickr.com/photos/woodhead/11094403683/ | Already saved. Airside, from the Flying Club (Hangar 18) balcony: tower with its low annex, the Shell hangar behind it (blue-grey ribbed lower part, cream upper hangar with the second Shell pecten and the red STARS sign at its right end), fuel truck, small aircraft parked on the apron between the club and the tower. |
+
+## Other photos of this complex (already saved elsewhere, reviewed 2026-10-17)
+In `../tower-photos/` (all show the Aerocentre / Shell hangar as well as the tower):
+
+| File | What it adds |
+|---|---|
+| `Edmonton_City_Centre_Airport__4846273897_.jpg` (2010) | **Best airside front elevation.** From the left: Shell hangar (three striped sliding leaves, open bay, sign column with the Shell sign, grey roller shutter in a yellow frame, sectional door), then the Aerocentre. The two fronts stand on the same ground line, so the Aerocentre front is roughly flush with the hangar front. The Aerocentre front is **five bays**: navy piers, an upper ribbon of dark windows, a cream-grey infill band, a fully glazed ground floor. The **second bay from the left is inset at an angle** for the front door (recessed dark ground floor, cream angled panel carrying the AEROCENTRE logo). Flat roof with a thin navy parapet, a rooftop antenna mast. |
+| `Edmonton_City_Centre_Airport__4846891790_.jpg` (2010) | Aerocentre from the airside NW corner with the tower: the leftmost (SE-end) bay and the angled entrance panel with the logo, the cream infill band and navy fascia, the low grey annex and the fenced yard between the Aerocentre and the tower. |
+| `flickr_33836413.jpg` (c.2011, low oblique from the airside) | **Best photo of the pair as built from above**: Shell hangar at left with the Shell sign on its NW end, the Aerocentre in front of the NW end of the hangar, the annex and tower to the right. Flat Aerocentre roof with a box-out (projecting block) at its SE end next to the hangar. |
+| `EDMONTON_MUNI__11094390123_.jpg`, `EDMONTON_MUNI_AIRPORT__11142509345_.jpg`, `EDMONTON_MUNI_AIR_PORT__11142546856_.jpg` | Landside of the Aerocentre: the ground floor stands open under the upper floor at the NW end (drive-through, yellow 2.4 m clearance sign), upper floor glazed in a ribbon, an "AEROCENTRE" sign band on the face. The tower annex with its corrugated side screen stands beside it; the first-hangar green door wall is behind the tower. |
+| `EDMONTON_MUNI__11094193805_.jpg`, `EDMONTON_MUNI__11094305354_.jpg` | From the Flying Club balcony: the Aerocentre as a long flat-roofed block with a ribbon of windows, the taller cream hangar behind it with a thin **yellow** eave line in some lights (red in others), rising clear above the Aerocentre. Trainers and the fuel truck stand where the apron meets the tower annex. |
+| `Edmonton_muni_airport__11165253083_.jpg` (2012) | Close front of the Shell hangar (already used for the model). |
+| `Edmonton_muni_airport__11165250793_.jpg`, `woody_2.jpg`, `wherezjeff.jpg`, `jetphotos-5873800-kresanek.jpg`, tower close-ups, `EDMONTON_MUNI__11094252276_.jpg` | Tower detail; this complex appears only at the edge. 11094252276 is Hangar 15 (landside), not part of this complex. |
+
+## Footprint evidence (aerial)
+No top-down source was stored in the repo, so I rebuilt one: Esri World Imagery Wayback **2014-02-20** (release 10, z17, about 0.7 m/px, the only zoom served for that date; same source as `../hangar-footprints.md`), resampled into the tower frame (x right = bearing 228, z forward = bearing 138, origin = OSM tower centre, 10 m grid) with the **current model rectangles** overlaid: Aerocentre red, Shell hangar magenta, Hangar 15 green. Saved as small crops (measuring reference only, Esri/Maxar copyright, do not redistribute):
+- `../footprints/shell-aerocentre-2014-tower-frame.png` (whole area) and `../footprints/shell-aerocentre-2014-zoom.png` (Aerocentre + hangar, 10 px per m, grid every 10 m, z = 20 on the top line, x = -5 at the left edge).
+- Overpass for the OSM 2016 outlines was down on 2026-10-17 (500 / 504 / SSL error), so the OSM outlines of the Aerocentre and the Shell hangar are **not** fetched yet. Retry with `[date:"2016-01-01T00:00:00Z"]` and `way(around:170,53.568140,-113.518516)[building]` and compare.
+
+What the 2014 roofs show (tower frame, metres, +/-4 m: the imagery is off-nadir, so tall roofs are displaced a few metres, and shadows run west):
+- **Hangar 15 and the Aerocentre fit** the current rectangles well (Aerocentre roof about x -2 to 20, z 27 to 62; model x 3 to 19, z 25 to 65).
+- **Shell hangar roof**: pale block x about 10 to 50, z about 58 to 104, with a bright south eave edge near z 102-106. The model has it at x 8 to 53, z 65 to 120, i.e. **about 10-15 m too far SE**. The real hangar's NW end meets the Aerocentre's SE end at about z 58-62 (the model touches them at z 65).
+- **Lower block north of the hangar**: a pale roof at x about 20 to 50, z about 48 to 58, with shadow bands at its north edge (z 44-48) and along the hangar's NW wall (z 55-58): lower than the hangar, between it and the open apron. Not in the model.
+- **Landside wing**: a roof strip x about 50 to 69, z about 47 to 100, a different roof tone with a dotted edge (vents or gutters). It is the "long one-storey wing" of the demolition photos. Not in the model.
+- The aerial puts the Aerocentre's west edge (x about -2) about 12 m ahead of the hangar's west wall (x about 10), but the ground-level front photos show the two fronts on nearly the same line. Unresolved: check the hangar front line in the sim against `Edmonton_City_Centre_Airport__4846273897_.jpg` before moving anything.
+
+## Consolidated modelling notes (for `aerocentre()` / `shell_hangar()` in `gen_buildings.py`; not yet applied)
+**Aerocentre (Hangar 16, "Aerospace building")** - `aerocentre()` has six equal bays; the building has **five**:
+- **Five bays** on the airside front, counted from the left (SE end, next to the Shell hangar). The bay widths are not equal in the photos (measure from `4846273897`; the end bays look narrower). **The second bay from the left is inset at an angle**: the front door is recessed, the ground floor behind the angled panel is dark, and the cream panel carries the AEROCENTRE logo (black lettering, red swoosh on the A).
+- A box-out (projecting block) at the left (SE) end next to the hangar (from `open-questions.md` and the `flickr_33836413` aerial).
+- Navy-grey ribbed upper cladding, navy piers, cream-grey infill band, navy lower fascia, full-height glazed ground floor; flat roof with a thin parapet; a rooftop antenna (V-shaped yagi) over the NW part. 8-8.5 m to the roof.
+- NW end: the ground floor is open as a drive-through under the upper floor (clearance sign 2.4 m).
+- Landside face: upper ribbon glazing and an AEROCENTRE sign band. Long axis along tower-frame z (bearing 138), front facing -x (bearing 48).
+
+**Shell hangar** (cream ribbed metal; model 55 x 45 x 9.4 m):
+- Heights (scaled on a pickup and a box truck, +/-1 m): eave/parapet 9-10 m; door opening about 8.5 m; the hangar rises about 1-2 m above the Aerocentre.
+- Front, from the NW end (Aerocentre side): the sign column (Shell pecten on a white board) over a grey roller shutter in a yellow frame and a sectional door with a row of small windows; the **open bay** next to it; then **three striped sliding leaves** (red and yellow stripe with an aircraft silhouette on the leftmost, a row of windows at the base of each leaf); blank wall at the SE end. This matches the model; leave the front as it is.
+- Colours: cream ribbed metal, red eave trim (yellow in some lights), white door leaves. The interior through the open bay is dark with a clerestory strip across the back wall.
+- NW end wall: second Shell sign (high, near the corner); a red STARS sign on the lower block at the hangar's NW end (`../hangar18-photos/flickr_woodhead_11094403683.jpg`).
+- **Not modelled**: the lower north block (x 20-50, z 48-58, two storeys, blue-grey ribbed cladding, glazed ribbon) and the landside **one-storey wing** (x 50-69, z 47-100, 4.5-5 m, grey ribbed cladding with yellow trim posts, a white roller door near the NW end, landside offices behind glazed bays), plus a second two-storey blue-grey block stepping back at the landside end (`flickr_woodhead_14669349810.jpg`).
+- **Position**: move the hangar about 10-15 m toward the tower (centre z about 74 instead of 92.5, x about 30) and re-check its size (about 40 m in x and 46 m in z from the 2014 roof, against 45 x 55 modelled).
+
+## Open
+- OSM 2016 outlines (Overpass was down); they would settle the footprints to a few metres.
+- Aerocentre bay widths, the box-out size, and whether the landside drive-through is really at the NW end.
+- Whether the real hangar front is flush with the Aerocentre front (see above).

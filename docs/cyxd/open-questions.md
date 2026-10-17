@@ -20,7 +20,7 @@ Kept here so it can be queried later. Dated 2026-10-13. This file and `reference
 ## Not built or not applied yet
 
 1. Hangar 15: adjust the face to the west line-up photo (`west-lineup-photos/flickr_woodhead_13858722704.jpg`).
-2. Hangar 16 (Aerospace building): match the front to `tower-photos/flickr_33836413.jpg`. The front has five bands, one indented for the front doors, and a box-out on the left next to the Shell hangar.
+2. Hangar 16 (Aerospace building): match the front to `tower-photos/flickr_33836413.jpg`. The front has five bands, one indented for the front doors, and a box-out on the left next to the Shell hangar. Details, the 2014 footprint check and what is missing (lower north block, landside wing, Shell hangar about 10-15 m too far SE) are in `hangar16-photos/SOURCES.md`.
 3. Wind sock: move it to the position seen in the PWA 737 video (YouTube q5-woik2XsQ; Reddit 1ffvw4j). Watch the same videos for building layout and the taxi sign style.
 4. A static Pacific Western 737 on the apron.
 5. Hangar 14 static displays: the aircraft mounted in front of the museum and the displays on its east side. Bomarc and searchlight photos are in `hangar14-photos/`.
