@@ -18,6 +18,9 @@ Saved in `hangar39-photos/` (8 photos, notes in its SOURCES.md): Flickr woodhead
 - Saved: `hangar11-photos/flickr_woodhead_11094833594.jpg` (high view over Hangar 11 and the long two-storey building north of it).
 - Link only: CBC (edmonton-hangar-11-1.4799808), Facebook photos (3) and group post, National Trust endangered places page.
 
+## University of Alberta Libraries items (archive.org, saved 2026-10-17)
+Saved in `ualberta-archive-photos/` (notes in its SOURCES.md): https://archive.org/details/PC013720 (Administration Building aerial postcard, 1948-88), https://archive.org/details/PC013987 (Municipal Airport postcard; metadata says 1929 but the hangars are 1938+), https://archive.org/details/WCWdb_2534 (1937 general plan, amended 1943, PDF).
+
 ## Historical photo, building and year unknown
 - Saved: `historical-unknown-photos/flickr_woodysworld1_11394759225.jpg`: black-and-white view from a stucco pier across the airfield: biplanes (CF-CBN / CF-CBX) and three
   monoplanes parked on grass; in the distance a three-storey block with a barrel-vault hangar at its right. 1930s (aircraft markings), probably the first-hangar area seen from the
