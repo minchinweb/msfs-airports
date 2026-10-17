@@ -230,6 +230,8 @@ Reference photos and article notes in `hangar11-photos/` (see its SOURCES.md). B
 ## First hangar, c.1929-31 (not built yet; the 1938 landmark is a merge)
 Photos and the list of changes are in `first-hangar-photos/SOURCES.md`. Main finding: `cyxd_hangar_1938_landmark` merges the first hangar's tower and wing with the 1938 barrel-vault hangar; they should be two models.
 
+University of Alberta archive.org items (2026-10-17, `ualberta-archive-photos/`): postcard PC013987 shows the 1938 hangar (barrel vault, brick tower at each end) nearest the terminal, plus a larger second barrel-vault hangar NW of it with a long pale two-storey wing and a brick tower; the second hangar is not identified. Neither is Hangar 11 / Northwest Industries (east side). The postcard's "1929" date is wrong (1938 or later). PC013720 is a clear view of the Administration Building and drive; WCWdb_2534.pdf is the 1937 plan (amended 1943): its SW-NE strip is labelled N 57 deg 30' E (true), which agrees with our 04/22 heading of 57.78; position not checked. Details in the folder's SOURCES.md.
+
 - Hangars 6/7: added an oblique NAIT-parkade photo ("RCMP hangar", looking NW) to `hangar6-7-photos/` with colours of Hangars 7 (steel-blue), 6 (white) and 5 (bronze/charcoal glazed).
 
 ## Hangars 39 and 38 (not built yet)
