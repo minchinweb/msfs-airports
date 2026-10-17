@@ -1,0 +1,7 @@
+<osm version="0.6" generator="openstreetmap-cgimap 2.1.0" copyright="OpenStreetMap and contributors" license="http://opendatacommons.org/licenses/odbl/1-0/">
+<!-- way history as supplied by the user 2026-10-17 (OSM API /way/15822817/history); user names omitted -->
+<way id="15822817" visible="true" version="1" changeset="239199" timestamp="2007-12-10T01:25:44Z"><nd ref="159012860"/><nd ref="159012863"/><nd ref="159012868"/><nd ref="159012873"/><nd ref="159012876"/><nd ref="159012884"/><nd ref="159012891"/><nd ref="159012898"/><nd ref="159012860"/><tag k="building" v="yes"/><tag k="created_by" v="JOSM"/></way>
+<way id="15822817" visible="true" version="3" changeset="12304908" timestamp="2012-07-19T02:18:53Z"><nd ref="159012860"/><nd ref="159012863"/><nd ref="159012868"/><nd ref="159012873"/><nd ref="159012876"/><nd ref="159012884"/><nd ref="159012891"/><nd ref="159012898"/><nd ref="159012860"/><tag k="building" v="yes"/></way>
+<way id="15822817" visible="true" version="4" changeset="13251465" timestamp="2012-09-25T19:42:17Z"><nd ref="159012860"/><nd ref="159012863"/><nd ref="159012868"/><nd ref="159012873"/><nd ref="159012876"/><nd ref="159012884"/><nd ref="159012891"/><nd ref="159012898"/><nd ref="159012860"/><tag k="building" v="yes"/><tag k="name" v="16"/></way>
+<way id="15822817" visible="false" version="5" changeset="28487832" timestamp="2015-01-29T15:39:21Z"/>
+</osm>
