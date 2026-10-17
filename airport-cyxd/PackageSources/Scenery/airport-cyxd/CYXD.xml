@@ -982,11 +982,11 @@
 		<LibraryObject name="{45098D4E-B072-5AC7-A2E4-41C005C2F78F}" scale="1.000000"/>
 	</SceneryObject>
 	<!-- Aerocentre (two-storey blue-grey FBO building) -->
-	<SceneryObject lat="53.56777346" lon="-113.51818420" alt="0.00000000000000" pitch="0.000000" bank="0.000000" heading="48" imageComplexity="VERY_SPARSE" altitudeIsAgl="TRUE" snapToGround="TRUE" snapToNormal="FALSE">
+	<SceneryObject lat="53.56779819" lon="-113.51816062" alt="0.00000000000000" pitch="0.000000" bank="0.000000" heading="48" imageComplexity="VERY_SPARSE" altitudeIsAgl="TRUE" snapToGround="TRUE" snapToNormal="FALSE">
 		<LibraryObject name="{5959ED62-CB25-50D2-B119-45E28A32838F}" scale="1.000000"/>
 	</SceneryObject>
-	<!-- Shell Aerocentre hangar -->
-	<SceneryObject lat="53.56733868" lon="-113.51792286" alt="0.00000000000000" pitch="0.000000" bank="0.000000" heading="48" imageComplexity="VERY_SPARSE" altitudeIsAgl="TRUE" snapToGround="TRUE" snapToNormal="FALSE">
+	<!-- Shell hangar with north block and landside wing -->
+	<SceneryObject lat="53.56738978" lon="-113.51813238" alt="0.00000000000000" pitch="0.000000" bank="0.000000" heading="48" imageComplexity="VERY_SPARSE" altitudeIsAgl="TRUE" snapToGround="TRUE" snapToNormal="FALSE">
 		<LibraryObject name="{97E21819-83B8-5126-86C5-81C245263A03}" scale="1.000000"/>
 	</SceneryObject>
 	<!-- Hangar 15 (Centennial Flight Centre) -->
@@ -1192,22 +1192,22 @@
 		<Attribute name="ExcludeMSBuildings" guid="{F78A3074-8AD5-4B8B-92C4-C1C948BB7AA5}" type="UINT8" value="1"/>
 		<Attribute name="ExcludeTIN" guid="{18B58CBF-AE02-4A19-8AA9-3809E8E73400}" type="UINT8" value="1"/>
 		<Attribute name="ExclusionFlags" guid="{4CACC252-E6DC-419A-B20C-16EC601DF70E}" type="UINT32" value="3"/>
-		<Vertex lat="53.56786297382170" lon="-113.51860435147833"/>
-		<Vertex lat="53.56751546005439" lon="-113.51807851210202"/>
-		<Vertex lat="53.56768394617829" lon="-113.51776404852166"/>
-		<Vertex lat="53.56803145994560" lon="-113.51828988789796"/>
+		<Vertex lat="53.56786898614150" lon="-113.51859312086697"/>
+		<Vertex lat="53.56753483828832" lon="-113.51808750608204"/>
+		<Vertex lat="53.56772739385850" lon="-113.51772811913304"/>
+		<Vertex lat="53.56806154171168" lon="-113.51823373391797"/>
 	</Polygon>
-	<Polygon version="0.4.0" displayName="No generated buildings: Shell Aerocentre hangar" parentGroupID="6" altitude="667.68023681640625">
-		<Attribute name="UniqueGUID" guid="{359C73E8-06BE-4FB2-ABCB-EC942F7761D0}" type="GUID" value="{B10BCE44-0AC3-5DED-B302-54C60DAA007A}"/>
+	<Polygon version="0.4.0" displayName="No generated buildings: Shell hangar with north block and landside wing" parentGroupID="6" altitude="667.68023681640625">
+		<Attribute name="UniqueGUID" guid="{359C73E8-06BE-4FB2-ABCB-EC942F7761D0}" type="GUID" value="{A3FDB395-4B05-53FB-9CC4-19A67D0C7E41}"/>
 		<Attribute name="ExcludeDetectedBuildings" guid="{5C1A2387-1F07-47DF-A569-962CF6258E55}" type="UINT8" value="1"/>
 		<Attribute name="ExcludeOSMBuildings" guid="{F3C2635D-9F2F-458F-8663-90B3837BED09}" type="UINT8" value="1"/>
 		<Attribute name="ExcludeMSBuildings" guid="{F78A3074-8AD5-4B8B-92C4-C1C948BB7AA5}" type="UINT8" value="1"/>
 		<Attribute name="ExcludeTIN" guid="{18B58CBF-AE02-4A19-8AA9-3809E8E73400}" type="UINT8" value="1"/>
 		<Attribute name="ExclusionFlags" guid="{4CACC252-E6DC-419A-B20C-16EC601DF70E}" type="UINT32" value="3"/>
-		<Vertex lat="53.56739106425695" lon="-113.51858170090735"/>
-		<Vertex lat="53.56694330613368" lon="-113.51790417709556"/>
-		<Vertex lat="53.56728629574305" lon="-113.51726401909265"/>
-		<Vertex lat="53.56773405386632" lon="-113.51794154290444"/>
+		<Vertex lat="53.56740104111921" lon="-113.51890185150921"/>
+		<Vertex lat="53.56693323412475" lon="-113.51819399081033"/>
+		<Vertex lat="53.56737851888079" lon="-113.51736290849078"/>
+		<Vertex lat="53.56784632587524" lon="-113.51807076918966"/>
 	</Polygon>
 	<Polygon version="0.4.0" displayName="No generated buildings: Hangar 15 (Centennial Flight Centre)" parentGroupID="6" altitude="667.68023681640625">
 		<Attribute name="UniqueGUID" guid="{359C73E8-06BE-4FB2-ABCB-EC942F7761D0}" type="GUID" value="{70075E4C-A72E-5488-BFB9-ED972CE27B5E}"/>

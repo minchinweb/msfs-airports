@@ -36,7 +36,7 @@ What the 2014 roofs show (tower frame, metres, +/-4 m: the imagery is off-nadir,
 - **Landside wing**: a roof strip x about 50 to 69, z about 47 to 100, a different roof tone with a dotted edge (vents or gutters). It is the "long one-storey wing" of the demolition photos. Not in the model.
 - The aerial puts the Aerocentre's west edge (x about -2) about 12 m ahead of the hangar's west wall (x about 10), but the ground-level front photos show the two fronts on nearly the same line. Unresolved: check the hangar front line in the sim against `Edmonton_City_Centre_Airport__4846273897_.jpg` before moving anything.
 
-## Consolidated modelling notes (for `aerocentre()` / `shell_hangar()` in `gen_buildings.py`; not yet applied)
+## Consolidated modelling notes (applied 2026-10-17 in `aerocentre()` / `shell_hangar()`; see STATUS.md, "Hangar 16 rebuild")
 **Aerocentre (Hangar 16, "Aerospace building")** - `aerocentre()` has six equal bays; the building has **five**:
 - **Five bays** on the airside front, counted from the left (SE end, next to the Shell hangar). The bay widths are not equal in the photos (measure from `4846273897`; the end bays look narrower). **The second bay from the left is inset at an angle**: the front door is recessed, the ground floor behind the angled panel is dark, and the cream panel carries the AEROCENTRE logo (black lettering, red swoosh on the A).
 - A box-out (projecting block) at the left (SE) end next to the hangar (from `open-questions.md` and the `flickr_33836413` aerial).
