@@ -83,3 +83,8 @@ Hangar 15 in the background: 6615792. Hangars 4, 5, 6, 7, 8 in the background: 6
 - Ingenium CAVM-05641: "claims to be taken in Edmonton; confirm" (link only, not fetched).
 - Videos: YouTube q5-woik2XsQ and Reddit 1ffvw4j (PWA 737 taking off from CYXD): note the building layout, taxiway sign style and the wind sock position (we should move ours to match); static 737 wanted. **Not applied.**
 - Ingenium CAVM-17996: Trans-Canada Air Lines logo, 1938 (not in Edmonton; the airline did serve Edmonton).
+
+## Runway 04/22 (03/21) closure research (2026-10-14)
+Findings in `runway-04-22-closure.md`. Sources used there:
+- Saved: `rcaf-on-track-1978-edmonton-muni-1.jpg` (text page) and `-2.jpg` (plan), rcaf.info On-Track-1978-Edmonton-Muni; `rcaf-manual-of-aerodromes-edmonton-p90.jpg`; `charts/procedures-2010/2008-CFS-CYXD-B230-B231.pdf` and `CFS_AD_E-ivao.pdf`; `aerials/Edmonton_City_Centre_Airport.jpg` (6 Jun 2012).
+- Link only: Edmonton Office of the City Auditor, City Centre Airport audit 2003 (edmonton.ca 03079_City_Centre_Airport.pdf; source for the 1995 plan's "two runways"); Tingley historical impact assessment 2009 (webdocs.edmonton.ca 2009DCM032-Att6.pdf); City news releases on the 2013 closure (news-archive-487808-72f8.pdf, news-archive-513911-d314.pdf); Environment Council of Alberta noise hearings 1982 (nonoise.org roll12doc53.pdf); E-Z Air v Edmonton, 2018 ABLCB 7; pwareunion.com/interesting.htm (rename dates 1963, 1975); ASN YXD history page.

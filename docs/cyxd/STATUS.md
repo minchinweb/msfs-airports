@@ -34,7 +34,7 @@ Last updated: 2026-10-08. Branch: `agents/claude/1` (worktree). Package: `airpor
 Our runway 04 is heading 63.0 deg true, centre (53.57487, -113.51968), 1372 m. roscohead's is heading 57.78 deg, centre (53.57521, -113.51896), 1372 m. The overlay in `layout-compare.png` shows ours rotated about 5 deg relative to his, while 12 and 16 line up closely. Questions for the user:
 - What is the source of the 63 deg figure (a chart, imagery, a measurement)? "04" implies roughly 40 deg magnetic; with ~17 deg E variation that is ~57 deg true, which matches roscohead (57.8), not 63. Was 63 meant to be a magnetic-vs-true mix-up, or a deliberate historical alignment?
 - Our `RunwayStart` headings are 61.2 / 241.2, which disagree with the runway's own heading of 63.0. Which one is right?
-- Is the 04/22 pavement visible in any historical imagery to settle position, and does the user want it to match the real 1990s footprint or roscohead's?
+- Is the 04/22 pavement visible in any historical imagery to settle position, and does the user want it to match the real 1990s footprint or roscohead's? (Partly answered: position was settled from the 1944 photo, see "Runway 04 realigned". The strip is already absent from the 6 June 2012 aerial, `aerials/Edmonton_City_Centre_Airport.jpg`; when it stopped operating is in `runway-04-22-closure.md`.)
 - Our 04 has most markings off (`threshold`, `edges`, `touchdown`, `precision` FALSE) and no approach lights; his has threshold/edge markings. Intentional (closed/abandoned runway)?
 
 ## How we might integrate the other CYXD design (roscohead)
@@ -81,7 +81,8 @@ Source: https://www.airports-worldwide.com/canada/alberta/edmonton_city_centre_a
 - Added second ATIS 114.9 MHz.
 - Added NDB 34 Z earlier (ZXD, circling-only in reality).
 - Historical (~1942, RCAF/DoT, variation 25 deg E) runway designations: 04/22 = 3/21 (4,500 ft), 12/30 = 11/29 (5,700 ft per the page), 16/34 = 15/33 (5,700 ft). MSFS numbers runways from heading and magvar, so these cannot be set in the file; they are for signage/chart notes only.
-- Closures per the page: 16/34 closed 2010-08-03 (page also says October 2010); 12/30 closed 2013-11-30.
+- Closures per the page: 16/34 closed 2010-08-03 (page also says October 2010); 12/30 closed 2013-11-30. City of Edmonton releases confirm both: 16/34 by NOTAM on 3 August 2010 (the first phase of the 2009 council decision, so "October 2010" is a later wording of the same event), 12/30 at 23:59 on 30 November 2013. Neither is 04/22; see `runway-04-22-closure.md`.
+- Number of the 04/22 pavement over time (from `runway-04-22-closure.md`): 3/21 c.1942 (var 25 E), 03/21 in 1978 (var 23 E). The 20 Nov 2008 CFS prints var 17 E, which gives about 41 deg magnetic for our 57.78 deg true, i.e. 04. No CFS or directory found that publishes "04/22"; the 2008 CFS and AOPA 2007/08 list only 12/30 and 16/34.
 - The page says "no ILS" (late-life state), but PilotNav lists ILS or NDB 34 and the DME IXD is 032X (= 109.5 MHz), so ILS 34 stays.
 
 ### Navaid positions checked against OurAirports (2026-10-09)
@@ -145,16 +146,19 @@ Source: CASB occurrence report 84-H40006 (Wapiti Aviation PA-31-350 C-GXUC, 19 O
 
 ## 1978 aerodrome sketch (On Track, 1978)
 Source: https://rcaf.info/wp-content/uploads/2023/02/On-Track-1978-Edmonton-Muni-2.jpg, saved as `docs/cyxd/rcaf-on-track-1978-edmonton-muni-2.jpg` (aerial photo plus plan; elev 2200, var 23E, right-hand circuits Rwys 21, 29, 34, all runways 200 ft wide, "XD" NDB 3.8 nm on bearing 167).
-- Runway lengths: 16/34 5700 ft asphalt, 11/29 5868 ft concrete, 03/21 4451 ft concrete. Runway 03 shown closed at the west end beside taxiway W/Z.
+- Runway lengths: 16/34 5700 ft asphalt, 11/29 5868 ft concrete, 03/21 4451 ft concrete. Runway 03 shown "Closed" at the west end beside taxiway W/Z: that is the stub before the displaced threshold, not a closed runway (both directions still publish landing distances; `runway-04-22-closure.md`).
 - "All thresholds displaced" table (landing distance in ft): 03 3814, 11 5068, 16 5190, 21 4319, 29 4681, 34 5160. Displacement = length - landing: 03 637 ft (194.1 m), 21 132 ft (40.2 m), 11 800, 29 1187, 16 510, 34 540. The 11/29/16/34 values match the displaced thresholds already in CYXD.xml. The take-off column (21, 29, 34, 03, 11, 16) is paired row by row with the landing column; its numbers are not given separately.
 - Added `OffsetThreshold` to runway 04/22 (04 = 194.1 m, 22 = 40.2 m); it had none. Uncompiled, unverified in sim. Runway 04/22 `Markings threshold` set TRUE so the threshold bars show at the displaced thresholds (other 04/22 markings unchanged). Our pavement is 1372 m (4501 ft) against 4451 ft here; length not changed.
 - Taxiways on the sketch: A (west side and south apron), B (east side), C (north apron), plus W, Z, T, Y, X-style stubs; aprons I-V (I south-west, II east, III north, IV west, V north-centre). Not compared in detail with CYXD.xml taxi names.
 - The top half of the same image is an oblique aerial photo of the field (c.1978, source credit not shown). Use it as a reference for historical building placement (hangars, terminal and apron buildings, car parks, surrounding streets as they stood in the late 1970s), alongside the 1944 aerial and the City Archives photos. The sketch below it shows only a few building footprints. Not yet used to place or move any building; the photo is oblique, so measure against runway positions rather than scaling directly.
 - Symbols: V in a circle at the 16 end = VASIS; VA in a circle at the 11 and 29 ends = abbreviated VASIS (AVASIS), a one-bar type. Reading from period CFS legends, not confirmed against this source. We model all of them as PAPI4 (no VASIS in MSFS); the sketch shows none at 21, 03, 34.
+- Closure of the whole 03/21 strip (the pavement this project calls 04/22): researched 2026-10-14, written up in `runway-04-22-closure.md`. Still an operating runway in this 1978 guide. Out of the operating inventory before Edmonton Airports' 1995 plan, which budgeted overlays of the two remaining runways. No exact day found. Not the 2010 or 2013 closures. To close the gap (1979-1994), a dated CFS or air photo is needed; also in `open-questions.md`.
 
 ## Sources used for reference material (all in docs/cyxd/)
 - `edmonton-transmitter-site-radiocom.jpg`: radiocom.ca Edmonton Radio article, photo 4.
 - `rcaf-manual-of-aerodromes-edmonton-p90.jpg`: RCAF Manual of Aerodromes p.90 (URL above).
+- `rcaf-on-track-1978-edmonton-muni-1.jpg`: text page of the 1978 On Track entry (landing distances, circuits, noise rules). `rcaf-on-track-1978-edmonton-muni-2.jpg` is the plan (1978 section above). `rcaf-on-track-1978-page1.jpg` is a separate page.
+- `runway-04-22-closure.md`: when runway 04/22 stopped operating (research note, 2026-10-14).
 - Earlier sources (pilotnav, OurAirports, airports-worldwide, AOPA, VTA chart, articles/) are noted in the sections above.
 - `tsb-a04w0200-king-air-edmonton-2004.pdf`, `tsb-a04w0200-loc-bc-dme-16-figure.png`: TSB report A04W0200 (see LOC(BC) DME RWY 16 section).
 

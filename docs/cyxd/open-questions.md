@@ -30,6 +30,10 @@ Kept here so it can be queried later. Dated 2026-10-13. This file and `reference
 9. Trans-Canada Air Lines 1938 logo (Ingenium CAVM-17996) for any TCA livery or sign work.
 10. Search `Category:Hangars at Edmonton City Centre Airport` on Commons for more photos.
 
+## Research gaps
+
+- **When did runway 04/22 (03/21) stop operating?** Only bounded: still operating in the 1978 On Track guide, gone from the operating set by Edmonton Airports' 1995 plan, and absent from the 6 June 2012 aerial. No NOTAM or council minute found. A dated CFS or air photo from 1979-1994 would settle it. Detail and what was searched: `runway-04-22-closure.md`. Matters for how the 04/22 markings, lights and displaced thresholds are modelled (STATUS.md, "Open questions: Runway 04 alignment").
+
 ## Unverified
 
 - None of the ten new hangars has been viewed in the sim. The package builds clean (exit 0, empty `_RPTErrors.xml`). Restart the sim and check them.
