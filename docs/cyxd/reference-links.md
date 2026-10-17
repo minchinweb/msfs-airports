@@ -21,6 +21,9 @@ Saved in `hangar39-photos/` (8 photos, notes in its SOURCES.md): Flickr woodhead
 ## University of Alberta Libraries items (archive.org, saved 2026-10-17)
 Saved in `ualberta-archive-photos/` (notes in its SOURCES.md): https://archive.org/details/PC013720 (Administration Building aerial postcard, 1948-88), https://archive.org/details/PC013987 (Municipal Airport postcard; metadata says 1929 but the hangars are 1938+), https://archive.org/details/WCWdb_2534 (1937 general plan, amended 1943, PDF).
 
+## Shell hangar landside and demolition (saved 2026-10-17)
+Saved in `shell-hangar-photos/` (notes in its SOURCES.md): flickr woodhead 11094180505 (landside, winter; front-right building is Hangar 9, not the Shell hangar), 14669344410 and 14669349810 (demolition, landside: layout and heights). 11094403683 (airside from the club balcony) was already in `hangar18-photos/`.
+
 ## Historical photo, building and year unknown
 - Saved: `historical-unknown-photos/flickr_woodysworld1_11394759225.jpg`: black-and-white view from a stucco pier across the airfield: biplanes (CF-CBN / CF-CBX) and three
   monoplanes parked on grass; in the distance a three-storey block with a barrel-vault hangar at its right. 1930s (aircraft markings), probably the first-hangar area seen from the
