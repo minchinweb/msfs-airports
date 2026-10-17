@@ -81,7 +81,7 @@
   {
    "bufferView": 0,
    "componentType": 5126,
-   "count": 724,
+   "count": 841,
    "type": "VEC3",
    "min": [
     -19.35,
@@ -97,19 +97,19 @@
   {
    "bufferView": 1,
    "componentType": 5126,
-   "count": 724,
+   "count": 841,
    "type": "VEC3"
   },
   {
    "bufferView": 2,
    "componentType": 5126,
-   "count": 724,
+   "count": 841,
    "type": "VEC2"
   },
   {
    "bufferView": 3,
    "componentType": 5123,
-   "count": 1086,
+   "count": 1263,
    "type": "SCALAR"
   }
  ],
@@ -117,28 +117,28 @@
   {
    "buffer": 0,
    "byteOffset": 0,
-   "byteLength": 8688
+   "byteLength": 10092
   },
   {
    "buffer": 0,
-   "byteOffset": 8688,
-   "byteLength": 8688
+   "byteOffset": 10092,
+   "byteLength": 10092
   },
   {
    "buffer": 0,
-   "byteOffset": 17376,
-   "byteLength": 5792
+   "byteOffset": 20184,
+   "byteLength": 6728
   },
   {
    "buffer": 0,
-   "byteOffset": 23168,
-   "byteLength": 2172
+   "byteOffset": 26912,
+   "byteLength": 2526
   }
  ],
  "buffers": [
   {
    "uri": "cyxd_aerocentre.bin",
-   "byteLength": 25340
+   "byteLength": 29440
   }
  ]
 }

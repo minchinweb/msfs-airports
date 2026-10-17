@@ -261,3 +261,10 @@ Source: `docs/cyxd/procedures-2010.md` and the plate screenshots in `docs/cyxd/c
 - New `shell_logo()` / `shell_sign()`: pecten of a red outline, seven scalloped yellow lobes and a stem, on a white board with a dark rim; a second sign sits high on the hangar's NW end wall. Open bay and the three striped leaves kept.
 - Judgement calls: hangar front offset 8 m (aerial and OSM say ~11, the ground photos say flush; the earlier model used 5); hangar south end z 108 (2014 roof ~104, OSM trace 116); Aerocentre z 25-63 (roof 27-62, OSM 44-75). Check against `tower-photos/Edmonton_City_Centre_Airport__4846273897_.jpg` in the sim. Not built: the box-out at the Aerocentre's SE end, the second stepped-back two-storey block, the red STARS sign, the AEROCENTRE lettering (only a bar and swoosh stand in for it).
 - Built with `build.bat cyxd -window` (exit 0, `_RPTErrors.xml` empty).
+
+### Hangar 16 fixes after the first in-sim look (2026-10-17, generated, **not built**: the sim was running)
+- Front offset (8 m) confirmed good in the sim.
+- Aerocentre: ribbon windows and ground glazing now continue round the SE end wall (the 8 m clear of the hangar), per `Edmonton_City_Centre_Airport__4846273897_.jpg`. The landside NW corner of the upper floor is cut at **45 degrees** (5.5 m legs) over the open drive-through, with a three-pane ribbon on the diagonal face (`flickr_woodhead_14669349810.jpg`; OSM has no diagonal); navy columns now carry the overhang **down to the ground** (the first pier started 0.5 m up). The mid-height navy band no longer shares a plane with the cream spandrel (z-fighting): it stands 5 cm proud.
+- Shell sign: the pecten is now a texture (`tools/assets/shell_sign.png`, written to `modelLib/texture/cyxd_shell.png`) traced from the SVG `docs/cyxd/hangar16-photos/shell-pecten-reference.svg` by `tools/make_shell_sign.py`; `Mesh.poly` takes `tex=` / `uvs=`. Two sign boards: the hangar front column and the NW end wall.
+- STARS: red bar (8 x 0.6 m) high on the landside wing's NW end wall (lettering not added).
+- To see it: close the sim and run `build.bat cyxd -window`, or rebuild from DevMode, then restart the sim.
