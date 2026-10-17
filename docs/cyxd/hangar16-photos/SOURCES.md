@@ -25,7 +25,9 @@ In `../tower-photos/` (all show the Aerocentre / Shell hangar as well as the tow
 ## Footprint evidence (aerial)
 No top-down source was stored in the repo, so I rebuilt one: Esri World Imagery Wayback **2014-02-20** (release 10, z17, about 0.7 m/px, the only zoom served for that date; same source as `../hangar-footprints.md`), resampled into the tower frame (x right = bearing 228, z forward = bearing 138, origin = OSM tower centre, 10 m grid) with the **current model rectangles** overlaid: Aerocentre red, Shell hangar magenta, Hangar 15 green. Saved as small crops (measuring reference only, Esri/Maxar copyright, do not redistribute):
 - `../footprints/shell-aerocentre-2014-tower-frame.png` (whole area) and `../footprints/shell-aerocentre-2014-zoom.png` (Aerocentre + hangar, 10 px per m, grid every 10 m, z = 20 on the top line, x = -5 at the left edge).
-- Overpass for the OSM 2016 outlines was down on 2026-10-17 (500 / 504 / SSL error), so the OSM outlines of the Aerocentre and the Shell hangar are **not** fetched yet. Retry with `[date:"2016-01-01T00:00:00Z"]` and `way(around:170,53.568140,-113.518516)[building]` and compare.
+- **OSM** (Overpass, retrieved 2026-10-17; `curl` failed the TLS handshake here but Python `urllib` to `overpass-api.de` worked). At 2016-01-01 OSM had **no** outline for the Aerocentre or the Shell hangar (only Hangar 15, way 325232647, which matches our Hangar 15 placement). At 2014-01-01 there is one way, **15822817, `building=yes`, `name=16`** (added 2012-09-25, probably traced from Bing and later deleted), saved as `osm-way-15822817-as-of-2014-01-01.json` and drawn in blue on `../footprints/shell-aerocentre-2014-osm-way-overlay.png`. It is one coarse L-shaped polygon covering the whole complex; the name "16" matches the "16" roundel on the hangar. 2012, 2018 and 2020 queries timed out (502/504), so those dates were not checked.
+- Way 15822817 corners in the tower frame (x, z): (67, 58), (17.5, 59), (17, 44), (-5.5, 44.5), (-5, 75), (6, 75), (6.5, 116), (68, 114.5). Read as: Aerocentre part x -5 to 17.5, z 44 to 75; hangar plus landside wing x 6 to 68, z 58 to 116.
+- It agrees with the 2014 roofs on the **hangar plus wing extent in x (6-68 vs 10-69) and the north edge (z 58)**. It disagrees by about 10 m at the south end (z 116 vs a roof edge near 104) and by about 13 m on the Aerocentre's position in z (44-75 vs roof 27-62). The trace is coarse, so I would trust the 2014 roofs and the photos, and use the OSM way only as a check on the overall envelope (about 62 m in x by 57 m in z for hangar plus wing).
 
 What the 2014 roofs show (tower frame, metres, +/-4 m: the imagery is off-nadir, so tall roofs are displaced a few metres, and shadows run west):
 - **Hangar 15 and the Aerocentre fit** the current rectangles well (Aerocentre roof about x -2 to 20, z 27 to 62; model x 3 to 19, z 25 to 65).
@@ -51,6 +53,6 @@ What the 2014 roofs show (tower frame, metres, +/-4 m: the imagery is off-nadir,
 - **Position**: move the hangar about 10-15 m toward the tower (centre z about 74 instead of 92.5, x about 30) and re-check its size (about 40 m in x and 46 m in z from the 2014 roof, against 45 x 55 modelled).
 
 ## Open
-- OSM 2016 outlines (Overpass was down); they would settle the footprints to a few metres.
+- The Aerocentre position in z: roofs say z 27-62, the coarse 2012 OSM trace says 44-75. Check in the sim against the airside photos.
 - Aerocentre bay widths, the box-out size, and whether the landside drive-through is really at the NW end.
 - Whether the real hangar front is flush with the Aerocentre front (see above).
