@@ -1,5 +1,6 @@
 """Rasterise the Shell pecten (first two paths of docs/cyxd/hangar16-photos/shell-pecten-reference.svg) onto a white sign board
--> tools/assets/shell_sign.png (1024 x 882, the 3.6 x 3.1 m board).  Run once; gen_buildings.py copies the PNG into modelLib.
+-> tools/assets/shell_sign.png (1024 x 1024, a power of two as the texture compiler needs; it is stretched onto the
+3.6 x 3.1 m board, so the logo is pre-squashed to look right).  Run once; gen_buildings.py copies the PNG into modelLib.
     python -I airport-cyxd/tools/make_shell_sign.py"""
 import re
 from pathlib import Path
@@ -8,7 +9,8 @@ from PIL import Image, ImageDraw
 HERE = Path(__file__).resolve().parent
 SVG = HERE.parents[1] / "docs/cyxd/hangar16-photos/shell-pecten-reference.svg"
 OUT = HERE / "assets/shell_sign.png"
-W, H, SS = 1024, 882, 4
+W, H, SS = 1024, 1024, 4
+ASPECT = 3.6 / 3.1  # board width / height in metres
 
 
 def path_points(d, steps=12):
@@ -57,10 +59,11 @@ def main():
     yel = next(path_points(d) for d, f in paths if f.lower() == "#f6d330")
     xs, ys = [p[0] for p in red], [p[1] for p in red]
     x0, x1, y0, y1 = min(xs), max(xs), min(ys), max(ys)
-    s = 0.60 * W * SS / (x1 - x0)
-    ox = W * SS / 2 - (x0 + x1) / 2 * s
-    oy = H * SS / 2 - (y0 + y1) / 2 * s
-    tr = lambda pts: [(x * s + ox, y * s + oy) for x, y in pts]
+    sx = 0.60 * W * SS / (x1 - x0)
+    sy = sx * ASPECT
+    ox = W * SS / 2 - (x0 + x1) / 2 * sx
+    oy = H * SS / 2 - (y0 + y1) / 2 * sy
+    tr = lambda pts: [(x * sx + ox, y * sy + oy) for x, y in pts]
     im = Image.new("RGB", (W * SS, H * SS), (244, 244, 240))
     dr = ImageDraw.Draw(im)
     rim = 22 * SS
