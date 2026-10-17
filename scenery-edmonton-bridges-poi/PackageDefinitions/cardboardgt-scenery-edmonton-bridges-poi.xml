@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="utf-8"?>
+<AssetPackage ReleaseNotes="PackageDefinitions\cardboardgt-scenery-edmonton-bridges-poi\ReleaseNotes.xml" Version="0.1.0">
+	<ItemSettings>
+		<ContentType>SCENERY</ContentType>
+		<Title>Edmonton Bridges POI Markers</Title>
+		<Manufacturer/>
+		<Creator>Cardboard_GT</Creator>
+	</ItemSettings>
+	<Flags>
+		<VisibleInStore>false</VisibleInStore>
+		<CanBeReferenced>false</CanBeReferenced>
+	</Flags>
+	<PackageOrderHint>CUSTOM_WORLD_SCENERY</PackageOrderHint>
+	<AssetGroups>
+		<AssetGroup Name="ContentInfo">
+			<Type Version="0">ContentInfo</Type>
+			<Flags>
+				<FSXCompatibility>false</FSXCompatibility>
+			</Flags>
+			<AssetDir>PackageDefinitions\cardboardgt-scenery-edmonton-bridges-poi\ContentInfo\</AssetDir>
+			<OutputDir>ContentInfo\cardboardgt-scenery-edmonton-bridges-poi\</OutputDir>
+		</AssetGroup>
+		<AssetGroup Name="edmonton-bridges-poi">
+			<Type Version="0">BGL</Type>
+			<Flags>
+				<FSXCompatibility>false</FSXCompatibility>
+			</Flags>
+			<AssetDir>PackageSources\Scenery\edmonton-bridges-poi\</AssetDir>
+			<OutputDir>Scenery\cardboardgt\edmonton-bridges-poi\</OutputDir>
+		</AssetGroup>
+	</AssetGroups>
+</AssetPackage>
