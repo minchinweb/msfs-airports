@@ -766,7 +766,7 @@ def shell_sign(m, cx, cy, cz, n, bw, bh):
 
 def shell_hangar():
     """Hangar 16 shell group as measured on the 2014 Google Earth aerial (docs/cyxd/aerials/google-earth-hangar16-201407.jpg,
-    scale bar 8.94 m) and the 2012 street view: the cream ribbed-metal Shell hangar (45 x 39 x 9.4 m, flat roof with a red
+    scale bar 8.94 m) and the 2012 street view: the cream ribbed-metal Shell hangar (45 x 39 x 11.2 m, flat roof with a red
     parapet trim), the two-storey blue-grey NORTH wing (8 m) against the Aerocentre's back wall and the lower one-storey WEST wing
     (4.8 m) on the landside with its red STARS band wrapped round the north corner.  Frame (before the final mirror): origin =
     centre of the group (tower frame x 36.75, z 87.5), +Z = airside (bearing 48), +X = bearing 138 (SE).  Hangar front, from the NW
@@ -774,7 +774,7 @@ def shell_hangar():
     roundel at the SE end (+X).  Landside (-Z) wall: roundel by the NW corner, Shell sign toward the SE end.  Mirrored at the end."""
     m = Mesh(textured=True)
     x0, x1, z0, z1 = -15.5, 29.5, -9.25, 29.75
-    H = 9.4
+    H = 11.2  # steps of about 3.2 m: west wing 4.8, north wing 8.0, hangar 11.2 (flickr_woodhead_14669349810)
     cxc = x0 + 2.2  # sign column centre
     m.box(x0, x1, 0, H, z0, z1, CREAM)  # flat roof (2012 Street View)
     for zf in (z1, z0):
