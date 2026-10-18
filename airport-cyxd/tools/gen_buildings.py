@@ -161,6 +161,8 @@ class Mesh:
         if sum(n[i] * (cen[i] - centre[i]) for i in range(3)) < 0:
             pts = pts[::-1]
             n = [-x for x in n]
+            if uvs is not None:
+                uvs = uvs[::-1]  # keep each texture coordinate on its own corner (the sign texture was upside down)
         ln = math.sqrt(sum(x * x for x in n)) or 1.0
         n = [x / ln for x in n]
         base = len(self.pos)
@@ -764,8 +766,8 @@ def shell_sign(m, cx, cy, cz, n, bw, bh):
 
 def shell_hangar():
     """Hangar 16 shell group as measured on the 2014 Google Earth aerial (docs/cyxd/aerials/google-earth-hangar16-201407.jpg,
-    scale bar 8.94 m) and the 2012 street view: the cream ribbed-metal Shell hangar (45 x 39 x 9.4 m, low gable roof with red
-    eave trim), the two-storey blue-grey NORTH wing (8 m) against the Aerocentre's back wall and the lower one-storey WEST wing
+    scale bar 8.94 m) and the 2012 street view: the cream ribbed-metal Shell hangar (45 x 39 x 9.4 m, flat roof with a red
+    parapet trim), the two-storey blue-grey NORTH wing (8 m) against the Aerocentre's back wall and the lower one-storey WEST wing
     (4.8 m) on the landside with its red STARS band wrapped round the north corner.  Frame (before the final mirror): origin =
     centre of the group (tower frame x 36.75, z 87.5), +Z = airside (bearing 48), +X = bearing 138 (SE).  Hangar front, from the NW
     end (-X): sign column / grey roller shutter / sectional door, open bay, three striped door leaves, blank wall with the "16"
@@ -774,11 +776,13 @@ def shell_hangar():
     x0, x1, z0, z1 = -15.5, 29.5, -9.25, 29.75
     H = 9.4
     cxc = x0 + 2.2  # sign column centre
-    m.box(x0, x1, 0, H, z0, z1, CREAM, top=False)
-    m.gable(x0, x1, H, 2.0, z0, z1, along_z=False, sw_roof=METAL, sw_wall=CREAM)
+    m.box(x0, x1, 0, H, z0, z1, CREAM)  # flat roof (2012 Street View)
     for zf in (z1, z0):
         a, b = (zf, zf + 0.14) if zf > 0 else (zf - 0.14, zf)
         m.box(x0 - 0.1, x1 + 0.1, H - 0.5, H + 0.1, a, b, RED)
+    for xf in (x0, x1):
+        a, b = (xf, xf + 0.14) if xf > 0 else (xf - 0.14, xf)
+        m.box(a, b, H - 0.5, H + 0.1, z0 - 0.1, z1 + 0.1, RED)
     zp = z1 + 0.25
     # NW end column: sectional door (white), grey roller shutter in a yellow frame, Shell sign above
     m.box(cxc - 1.9, cxc + 1.9, 0, 3.0, z1, z1 + 0.2, PANEL)
@@ -804,6 +808,19 @@ def shell_hangar():
     # landside (-Z) wall: blue roundel at the NW corner, Shell sign toward the SE end
     number_disc(m, x0 + 3.0, 7.4, z0, (0, -1), 1.0, "16")
     shell_sign(m, x1 - 5.0, 7.5, z0 - 0.2, (0, -1), 2.6, 2.24)
+    # landside window band (Street View 2012): two rows of grey glazing with yellow frames between the roundel and the sign
+    wb0, wb1 = x0 + 6.0, x1 - 9.0
+    nwin = int((wb1 - wb0) // 3.4)
+    for r_, yy in enumerate((5.8, 7.3)):
+        for i in range(nwin):
+            m.window((0, 0, -1), (wb0 + i * (wb1 - wb0) / nwin + 0.15, yy, z0), (1, 0, 0), (wb1 - wb0) / nwin - 0.3, 1.2, off=0.1)
+    for yy in (5.6, 7.1, 8.6):
+        m.box(wb0, wb1, yy, yy + 0.12, z0 - 0.14, z0, YELLOW)
+    # SE (south) end wall: ribbon of windows high on the wall, above the vertical door seams
+    for i in range(6):
+        m.window((1, 0, 0), (x1, 7.4, z0 + 2.0 + i * 5.9), (0, 0, 1), 4.4, 1.0, off=0.1)
+    for i in range(1, 7):
+        m.box(x1, x1 + 0.06, 0.0, 7.0, z0 + i * (z1 - z0) / 7 - 0.05, z0 + i * (z1 - z0) / 7 + 0.05, DGREY)
     # NORTH wing: two-storey (8 m) blue-grey block, tower-frame x 16.5-46, z 58-72, against the Aerocentre's back wall
     nb0, nb1, nz0, nz1 = -29.5, x0, z0, 20.25
     m.box(nb0, nb1, 0.0, 8.0, nz0, nz1, SLATE, top=False)
