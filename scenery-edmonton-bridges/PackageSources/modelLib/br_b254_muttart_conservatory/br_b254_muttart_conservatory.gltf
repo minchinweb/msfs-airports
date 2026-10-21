@@ -9,7 +9,8 @@
   }
  },
  "extensionsUsed": [
-  "ASOBO_normal_map_convention"
+  "ASOBO_normal_map_convention",
+  "ASOBO_tags"
  ],
  "scene": 0,
  "scenes": [
@@ -51,6 +52,14 @@
     },
     "metallicFactor": 0.0,
     "roughnessFactor": 0.9
+   },
+   "extensions": {
+    "ASOBO_tags": {
+     "tags": [
+      "Collision",
+      "Road"
+     ]
+    }
    }
   }
  ],
@@ -75,35 +84,35 @@
   {
    "bufferView": 0,
    "componentType": 5126,
-   "count": 3664,
+   "count": 544,
    "type": "VEC3",
    "min": [
-    -46.642002425596,
+    52.2540753849709,
     -6.850000000000023,
-    -53.10803508112982
+    -30.35605076722132
    ],
    "max": [
     167.64419384042276,
-    17.60545800636792,
+    1.2499999999999774,
     92.80227050968261
    ]
   },
   {
    "bufferView": 1,
    "componentType": 5126,
-   "count": 3664,
+   "count": 544,
    "type": "VEC3"
   },
   {
    "bufferView": 2,
    "componentType": 5126,
-   "count": 3664,
+   "count": 544,
    "type": "VEC2"
   },
   {
    "bufferView": 3,
    "componentType": 5123,
-   "count": 5448,
+   "count": 792,
    "type": "SCALAR"
   }
  ],
@@ -111,28 +120,28 @@
   {
    "buffer": 0,
    "byteOffset": 0,
-   "byteLength": 43968
+   "byteLength": 6528
   },
   {
    "buffer": 0,
-   "byteOffset": 43968,
-   "byteLength": 43968
+   "byteOffset": 6528,
+   "byteLength": 6528
   },
   {
    "buffer": 0,
-   "byteOffset": 87936,
-   "byteLength": 29312
+   "byteOffset": 13056,
+   "byteLength": 4352
   },
   {
    "buffer": 0,
-   "byteOffset": 117248,
-   "byteLength": 10896
+   "byteOffset": 17408,
+   "byteLength": 1584
   }
  ],
  "buffers": [
   {
    "uri": "br_b254_muttart_conservatory.bin",
-   "byteLength": 128144
+   "byteLength": 18992
   }
  ]
 }

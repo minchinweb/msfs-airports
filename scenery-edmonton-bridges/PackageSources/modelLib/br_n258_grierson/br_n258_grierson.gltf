@@ -9,7 +9,8 @@
   }
  },
  "extensionsUsed": [
-  "ASOBO_normal_map_convention"
+  "ASOBO_normal_map_convention",
+  "ASOBO_tags"
  ],
  "scene": 0,
  "scenes": [
@@ -51,6 +52,14 @@
     },
     "metallicFactor": 0.0,
     "roughnessFactor": 0.9
+   },
+   "extensions": {
+    "ASOBO_tags": {
+     "tags": [
+      "Collision",
+      "Road"
+     ]
+    }
    }
   }
  ],
@@ -75,35 +84,35 @@
   {
    "bufferView": 0,
    "componentType": 5126,
-   "count": 556,
+   "count": 976,
    "type": "VEC3",
    "min": [
-    -15.685608251420742,
+    -80.25412273599608,
     6.389999999999942,
-    -19.769576743921313
+    -46.75843748387408
    ],
    "max": [
-    17.632460357297024,
+    44.078566177062015,
     27.1798040226399,
-    17.344785478214483
+    97.57360142771715
    ]
   },
   {
    "bufferView": 1,
    "componentType": 5126,
-   "count": 556,
+   "count": 976,
    "type": "VEC3"
   },
   {
    "bufferView": 2,
    "componentType": 5126,
-   "count": 556,
+   "count": 976,
    "type": "VEC2"
   },
   {
    "bufferView": 3,
    "componentType": 5123,
-   "count": 864,
+   "count": 1494,
    "type": "SCALAR"
   }
  ],
@@ -111,28 +120,28 @@
   {
    "buffer": 0,
    "byteOffset": 0,
-   "byteLength": 6672
+   "byteLength": 11712
   },
   {
    "buffer": 0,
-   "byteOffset": 6672,
-   "byteLength": 6672
+   "byteOffset": 11712,
+   "byteLength": 11712
   },
   {
    "buffer": 0,
-   "byteOffset": 13344,
-   "byteLength": 4448
+   "byteOffset": 23424,
+   "byteLength": 7808
   },
   {
    "buffer": 0,
-   "byteOffset": 17792,
-   "byteLength": 1728
+   "byteOffset": 31232,
+   "byteLength": 2988
   }
  ],
  "buffers": [
   {
    "uri": "br_n258_grierson.bin",
-   "byteLength": 19520
+   "byteLength": 34220
   }
  ]
 }

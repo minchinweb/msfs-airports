@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ModelInfo guid="{64ABE91D-8069-57BD-806A-6B137D95EEC8}" version="1.1">
+	<LODS>
+		<LOD minSize="0" ModelFile="br_k209_valley_line_track.gltf"/>
+	</LODS>
+</ModelInfo>

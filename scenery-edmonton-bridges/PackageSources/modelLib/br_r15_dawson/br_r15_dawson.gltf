@@ -9,7 +9,8 @@
   }
  },
  "extensionsUsed": [
-  "ASOBO_normal_map_convention"
+  "ASOBO_normal_map_convention",
+  "ASOBO_tags"
  ],
  "scene": 0,
  "scenes": [
@@ -51,6 +52,14 @@
     },
     "metallicFactor": 0.0,
     "roughnessFactor": 0.9
+   },
+   "extensions": {
+    "ASOBO_tags": {
+     "tags": [
+      "Collision",
+      "Road"
+     ]
+    }
    }
   }
  ],
@@ -75,35 +84,35 @@
   {
    "bufferView": 0,
    "componentType": 5126,
-   "count": 23768,
+   "count": 24020,
    "type": "VEC3",
    "min": [
-    -115.63191714768301,
+    -172.2785363443646,
     -6.0,
-    -50.561695397900934
+    -91.20571075763294
    ],
    "max": [
-    114.60405948620227,
+    138.60215951699155,
     29.449877490750843,
-    50.9581906286285
+    71.19879702097474
    ]
   },
   {
    "bufferView": 1,
    "componentType": 5126,
-   "count": 23768,
+   "count": 24020,
    "type": "VEC3"
   },
   {
    "bufferView": 2,
    "componentType": 5126,
-   "count": 23768,
+   "count": 24020,
    "type": "VEC2"
   },
   {
    "bufferView": 3,
    "componentType": 5123,
-   "count": 35676,
+   "count": 36054,
    "type": "SCALAR"
   }
  ],
@@ -111,28 +120,28 @@
   {
    "buffer": 0,
    "byteOffset": 0,
-   "byteLength": 285216
+   "byteLength": 288240
   },
   {
    "buffer": 0,
-   "byteOffset": 285216,
-   "byteLength": 285216
+   "byteOffset": 288240,
+   "byteLength": 288240
   },
   {
    "buffer": 0,
-   "byteOffset": 570432,
-   "byteLength": 190144
+   "byteOffset": 576480,
+   "byteLength": 192160
   },
   {
    "buffer": 0,
-   "byteOffset": 760576,
-   "byteLength": 71352
+   "byteOffset": 768640,
+   "byteLength": 72108
   }
  ],
  "buffers": [
   {
    "uri": "br_r15_dawson.bin",
-   "byteLength": 831928
+   "byteLength": 840748
   }
  ]
 }

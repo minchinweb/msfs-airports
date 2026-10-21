@@ -9,7 +9,8 @@
   }
  },
  "extensionsUsed": [
-  "ASOBO_normal_map_convention"
+  "ASOBO_normal_map_convention",
+  "ASOBO_tags"
  ],
  "scene": 0,
  "scenes": [
@@ -51,6 +52,14 @@
     },
     "metallicFactor": 0.0,
     "roughnessFactor": 0.9
+   },
+   "extensions": {
+    "ASOBO_tags": {
+     "tags": [
+      "Collision",
+      "Road"
+     ]
+    }
    }
   }
  ],
@@ -75,7 +84,7 @@
   {
    "bufferView": 0,
    "componentType": 5126,
-   "count": 3332,
+   "count": 4328,
    "type": "VEC3",
    "min": [
     -127.83840100508766,
@@ -83,27 +92,27 @@
     -294.8340917970621
    ],
    "max": [
-    36.72871834394914,
+    96.65922038082726,
     29.585897045895795,
-    14.4986396169258
+    30.050511657715262
    ]
   },
   {
    "bufferView": 1,
    "componentType": 5126,
-   "count": 3332,
+   "count": 4328,
    "type": "VEC3"
   },
   {
    "bufferView": 2,
    "componentType": 5126,
-   "count": 3332,
+   "count": 4328,
    "type": "VEC2"
   },
   {
    "bufferView": 3,
    "componentType": 5123,
-   "count": 5088,
+   "count": 6582,
    "type": "SCALAR"
   }
  ],
@@ -111,28 +120,28 @@
   {
    "buffer": 0,
    "byteOffset": 0,
-   "byteLength": 39984
+   "byteLength": 51936
   },
   {
    "buffer": 0,
-   "byteOffset": 39984,
-   "byteLength": 39984
+   "byteOffset": 51936,
+   "byteLength": 51936
   },
   {
    "buffer": 0,
-   "byteOffset": 79968,
-   "byteLength": 26656
+   "byteOffset": 103872,
+   "byteLength": 34624
   },
   {
    "buffer": 0,
-   "byteOffset": 106624,
-   "byteLength": 10176
+   "byteOffset": 138496,
+   "byteLength": 13164
   }
  ],
  "buffers": [
   {
    "uri": "br_n260_scona_connors.bin",
-   "byteLength": 116800
+   "byteLength": 151660
   }
  ]
 }

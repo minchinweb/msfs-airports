@@ -36,8 +36,8 @@ def _no_holes(pieces):
     return out
 
 
-def footprints(res):
-    """[[(lat, lon), ...], ...] for a build() result; coordinates are the mesh's (e, n) turned into lat/lon with the site frame."""
+def pieces(res):
+    """Shapely polygons (site-frame metres, east / north), hole-free, grown by MARGIN: the plan union of every mesh triangle."""
     from shapely.geometry import Polygon
     from shapely.ops import unary_union
     tris = []
@@ -52,34 +52,58 @@ def footprints(res):
         return []
     # grow each triangle a little before the union so edge-sharing triangles fuse without needles from float noise
     geom = unary_union([t.buffer(0.05) for t in tris]).buffer(MARGIN, join_style=2)
-    pieces = _no_holes(list(geom.geoms) if geom.geom_type == "MultiPolygon" else [geom])
-    out = []
-    for g in pieces:
-        if g.area < MIN_AREA:
-            continue
-        ring = Polygon(g.exterior)
-        tol = SIMPLIFY
+    return [g for g in _no_holes(list(geom.geoms) if geom.geom_type == "MultiPolygon" else [geom]) if g.area >= MIN_AREA]
+
+
+def ring_ll(g, frame):
+    """[(lat, lon), ...] counter-clockwise ring of a shapely polygon, simplified to at most MAX_VERTS vertices."""
+    from shapely.geometry import Polygon
+    ring = Polygon(g.exterior)
+    tol = SIMPLIFY
+    s = ring.simplify(tol)
+    while len(s.exterior.coords) - 1 > MAX_VERTS:
+        tol *= 1.5
         s = ring.simplify(tol)
-        while len(s.exterior.coords) - 1 > MAX_VERTS:
-            tol *= 1.5
-            s = ring.simplify(tol)
-        pts = list(s.exterior.coords)[:-1]
-        if not s.exterior.is_ccw:    # counter-clockwise, like the CYXD polygons
-            pts.reverse()
-        out.append([res["frame"].ll(e, n) for e, n in pts])
-    return out
+    pts = list(s.exterior.coords)[:-1]
+    if not s.exterior.is_ccw:    # counter-clockwise, like the CYXD polygons
+        pts.reverse()
+    return [frame.ll(e, n) for e, n in pts]
 
 
-def polygon_xml(title, alt, verts, key):
+def footprints(res):
+    """[[(lat, lon), ...], ...] for a build() result; coordinates are the mesh's (e, n) turned into lat/lon with the site frame."""
+    return [ring_ll(g, res["frame"]) for g in pieces(res)]
+
+
+def polygon_xml(title, alt, verts, key, kind="exclude"):
+    """kind: "exclude" removes buildings, photogrammetry, trees (VegetationDensity 0, as in 2FA2.xml) and rocks inside the polygon;
+    "flatten" does that and also levels the terrain to `alt` (FlattenMode, the 2FA2 / CYXD attribute set); "grass" paints the ground
+    with the CYXD "Grass over construction" material, to hide the aerial imagery of paths and roads under a deck."""
     guid = "{" + str(uuid.uuid5(NS, key)).upper() + "}"
-    a = '\t\t<Attribute name="%s" guid="{%s}" type="%s" value="%s"/>'
-    lines = ['\t<Polygon version="0.4.0" displayName="%s" parentGroupID="6" altitude="%.3f">' % (title.replace('"', "'")[:70], alt),
-             a % ("UniqueGUID", "359C73E8-06BE-4FB2-ABCB-EC942F7761D0", "GUID", guid),
-             a % ("ExcludeDetectedBuildings", "5C1A2387-1F07-47DF-A569-962CF6258E55", "UINT8", "1"),
-             a % ("ExcludeOSMBuildings", "F3C2635D-9F2F-458F-8663-90B3837BED09", "UINT8", "1"),
-             a % ("ExcludeMSBuildings", "F78A3074-8AD5-4B8B-92C4-C1C948BB7AA5", "UINT8", "1"),
-             a % ("ExcludeTIN", "18B58CBF-AE02-4A19-8AA9-3809E8E73400", "UINT8", "1"),
-             a % ("ExclusionFlags", "4CACC252-E6DC-419A-B20C-16EC601DF70E", "UINT32", "3")]
-    lines += ['\t\t<Vertex lat="%.8f" lon="%.8f"/>' % v for v in verts]
-    lines.append("\t</Polygon>")
+    a = '		<Attribute name="%s" guid="{%s}" type="%s" value="%s"/>'
+    lines = ['	<Polygon version="0.4.0" displayName="%s" parentGroupID="6" altitude="%.3f">' % (title.replace('"', "'")[:70], alt),
+             a % ("UniqueGUID", "359C73E8-06BE-4FB2-ABCB-EC942F7761D0", "GUID", guid)]
+    if kind == "flatten":
+        lines += [a % ("FlattenMode", "065E9D4D-6984-4D2A-91FD-3C33C4F53B22", "UINT8", "1")]
+    lines += [a % ("ExcludeDetectedBuildings", "5C1A2387-1F07-47DF-A569-962CF6258E55", "UINT8", "1"),
+              a % ("ExcludeOSMBuildings", "F3C2635D-9F2F-458F-8663-90B3837BED09", "UINT8", "1"),
+              a % ("ExcludeMSBuildings", "F78A3074-8AD5-4B8B-92C4-C1C948BB7AA5", "UINT8", "1")]
+    if kind == "grass":
+        lines += [a % ("MaterialGUID", "CD28EFD0-D3F0-43B6-9F88-4E4707344A04", "GUID", "{B8D6CC1D-DEA9-4A20-8BB6-123149776A7C}")]
+    else:
+        lines += [a % ("VegetationScale", "6A043F59-E6F2-4117-A2E4-D510E7317C29", "UINT32", "0"),
+                  a % ("VegetationDensity", "41EFF715-C392-4B31-A457-50A504353A90", "UINT32", "0")]
+    lines += [a % ("ExcludeTIN", "18B58CBF-AE02-4A19-8AA9-3809E8E73400", "UINT8", "1")]
+    if kind == "grass":
+        lines += [a % ("Layer", "9E2B4C3E-7D84-453F-9DCC-B6498FF46703", "UINT32", "-50"),
+                  a % ("ExclusionFlags", "4CACC252-E6DC-419A-B20C-16EC601DF70E", "UINT32", "3")]
+    else:
+        lines += [a % ("ExclusionFlags", "4CACC252-E6DC-419A-B20C-16EC601DF70E", "UINT32", "7"),
+                  a % ("ExcludeRocks", "F104723A-D6D1-4B2E-9B44-ACCD8AB372DC", "UINT8", "1")]
+    if kind == "flatten":
+        lines += [a % ("PreciseTerraforming", "4D2A51D4-91AC-412F-833E-212CC10E5FBC", "UINT8", "1"),
+                  a % ("AffectRocks", "F60DBBC7-DE6F-4FEA-BE7E-AFB1D73D57E7", "UINT8", "1"),
+                  a % ("ForceElevation", "9460843D-964B-4E45-AC49-634856FB6E1C", "UINT8", "1")]
+    lines += ['		<Vertex lat="%.8f" lon="%.8f"/>' % tuple(v) for v in verts]
+    lines.append("	</Polygon>")
     return "\n".join(lines)

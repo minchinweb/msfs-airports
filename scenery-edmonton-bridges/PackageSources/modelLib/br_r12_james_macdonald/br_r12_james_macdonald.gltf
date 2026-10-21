@@ -9,7 +9,8 @@
   }
  },
  "extensionsUsed": [
-  "ASOBO_normal_map_convention"
+  "ASOBO_normal_map_convention",
+  "ASOBO_tags"
  ],
  "scene": 0,
  "scenes": [
@@ -51,6 +52,14 @@
     },
     "metallicFactor": 0.0,
     "roughnessFactor": 0.9
+   },
+   "extensions": {
+    "ASOBO_tags": {
+     "tags": [
+      "Collision",
+      "Road"
+     ]
+    }
    }
   }
  ],
@@ -75,7 +84,7 @@
   {
    "bufferView": 0,
    "componentType": 5126,
-   "count": 23408,
+   "count": 25616,
    "type": "VEC3",
    "min": [
     -190.6433504070054,
@@ -91,19 +100,19 @@
   {
    "bufferView": 1,
    "componentType": 5126,
-   "count": 23408,
+   "count": 25616,
    "type": "VEC3"
   },
   {
    "bufferView": 2,
    "componentType": 5126,
-   "count": 23408,
+   "count": 25616,
    "type": "VEC2"
   },
   {
    "bufferView": 3,
    "componentType": 5123,
-   "count": 35112,
+   "count": 38424,
    "type": "SCALAR"
   }
  ],
@@ -111,28 +120,28 @@
   {
    "buffer": 0,
    "byteOffset": 0,
-   "byteLength": 280896
+   "byteLength": 307392
   },
   {
    "buffer": 0,
-   "byteOffset": 280896,
-   "byteLength": 280896
+   "byteOffset": 307392,
+   "byteLength": 307392
   },
   {
    "buffer": 0,
-   "byteOffset": 561792,
-   "byteLength": 187264
+   "byteOffset": 614784,
+   "byteLength": 204928
   },
   {
    "buffer": 0,
-   "byteOffset": 749056,
-   "byteLength": 70224
+   "byteOffset": 819712,
+   "byteLength": 76848
   }
  ],
  "buffers": [
   {
    "uri": "br_r12_james_macdonald.bin",
-   "byteLength": 819280
+   "byteLength": 896560
   }
  ]
 }

@@ -7,6 +7,7 @@ brackets outside the trusses; steel-blue paint.  Truss depth, pier height and pl
 """
 import math
 from bridgelib import *
+import approach
 
 CODE, TITLE = "R15", "Dawson Bridge"
 RIVER = 612.83
@@ -58,5 +59,7 @@ def build():
     # abutments
     for s, sg in ((sup[0], -1), (sup[-1], 1)):
         ribbon(m, ax, s - 2.0 if sg < 0 else s - 1.0, s + 1.0 if sg < 0 else s + 2.0, -8.0, 8.0, -3.0, YB - 0.7, CONC)
-    # lamps on the approach
+    # west end: the road carries on to meet the 2018 ground (the deck is well above it there); the east end is near grade already
+    approach.approach(m, fr, F, 22916476, ax, sup[0], -1, DECK, 9.4, RIVER, maxlen=150.0)
+    approach.approach(m, fr, F, 22916476, ax, sup[-1], 1, DECK, 9.4, RIVER, maxlen=70.0)
     return dict(code=CODE, title=TITLE, lat0=lat0, lon0=lon0, alt=RIVER, parts=[("br_r15_dawson", m)], frame=fr, axis=ax)

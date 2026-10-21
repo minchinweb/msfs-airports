@@ -27,7 +27,7 @@ def carriage(m, fr, way):
         tc = sg * 5.35
         ribbon(m, ax, 0.0, L, tc - 0.2, tc + 0.2, DECK, DECK + 1.0, CONC, step=30.0)
         railing(m, ax, 0.0, L, tc, DECK + 1.0, h=0.5, post_step=2.5, sw_post=SAND, sw_rail=SAND, rails=1, step=30.0)
-    ribbon(m, ax, 0.0, L, -0.1, 0.1, DECK, DECK + 0.02, YELLOW, step=30.0)
+    lane_dashes(m, ax, 0.0, L, -5.15, 5.15, 3, DECK)    # one-way, three lanes: dashed white lines
     for p in piers:
         for tt in (-2.2, 2.2):
             e, nn = ax.en(p, tt)

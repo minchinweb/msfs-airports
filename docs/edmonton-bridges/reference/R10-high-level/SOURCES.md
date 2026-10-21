@@ -54,3 +54,7 @@ Not openly licensed, or no open licence found. URL only:
 - [ECAMP article](https://citymuseumedmonton.ca/2014/07/17/the-high-level-bridge-at-100/). Photos not marked open.
 - [Edmonton Radial Railway Society](https://www.edmontonstreetcars.ca/high-level-bridge5d312111). Photos not marked open.
 - *Edmonton Sun* (14 July 2016) and Global News (14 September 2016), the reports behind the 2.8 m and 2.3 m path widths. News copyright. Not opened and not downloaded.
+
+## Added 2026-10-19
+
+- `photos/national-trust-high-level-bridge.jpg` (2048 x 1365): "EPL Photo, High Level Bridge", from the National Trust for Canada page <https://nationaltrustcanada.ca/nt-endangered-places/high-level-bridge-edmonton>. Credit as printed there: EPL (Edmonton Public Library) photo. Licence not stated. Reference only; no measurement taken.

@@ -4,6 +4,7 @@ Widths are the LiDAR raised widths where a deck stands alone and an assumed 10 m
 not separated).  Each deck follows its OSM way and its measured raised run.
 """
 from bridgelib import *
+import approach
 
 CODE, TITLE = "N260", "Scona / Connors road bridges"
 RIVER = 613.66
@@ -25,4 +26,7 @@ def build():
         a, b, _ = run_info(SITE, way)
         slab_bridge(m, a_, a, b, w, deck_fit(F, way, RIVER, a, b), depth=1.7, parapet_h=0.95, rail_sw=RAILSTEEL,
                     piers=[(a + b) / 2] if b - a > 60 else [], lamps=[(a + 8, 1), (b - 8, 1)])
+        yf = deck_fit(F, way, RIVER, a, b)
+        for sign, s_edge in ((-1, a), (1, b)):       # carry each road on into the hill
+            approach.approach(m, fr, F, way, a_, s_edge, sign, yf(s_edge), w, RIVER, maxlen=70.0)
     return dict(code=CODE, title=TITLE, lat0=lat0, lon0=lon0, alt=RIVER, parts=[("br_n260_scona_connors", m)], frame=fr, axis=ax)

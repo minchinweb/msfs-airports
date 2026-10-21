@@ -9,7 +9,8 @@
   }
  },
  "extensionsUsed": [
-  "ASOBO_normal_map_convention"
+  "ASOBO_normal_map_convention",
+  "ASOBO_tags"
  ],
  "scene": 0,
  "scenes": [
@@ -51,6 +52,14 @@
     },
     "metallicFactor": 0.0,
     "roughnessFactor": 0.9
+   },
+   "extensions": {
+    "ASOBO_tags": {
+     "tags": [
+      "Collision",
+      "Road"
+     ]
+    }
    }
   }
  ],
@@ -75,7 +84,7 @@
   {
    "bufferView": 0,
    "componentType": 5126,
-   "count": 16944,
+   "count": 17776,
    "type": "VEC3",
    "min": [
     -74.15933392762611,
@@ -91,19 +100,19 @@
   {
    "bufferView": 1,
    "componentType": 5126,
-   "count": 16944,
+   "count": 17776,
    "type": "VEC3"
   },
   {
    "bufferView": 2,
    "componentType": 5126,
-   "count": 16944,
+   "count": 17776,
    "type": "VEC2"
   },
   {
    "bufferView": 3,
    "componentType": 5123,
-   "count": 25416,
+   "count": 26664,
    "type": "SCALAR"
   }
  ],
@@ -111,28 +120,28 @@
   {
    "buffer": 0,
    "byteOffset": 0,
-   "byteLength": 203328
+   "byteLength": 213312
   },
   {
    "buffer": 0,
-   "byteOffset": 203328,
-   "byteLength": 203328
+   "byteOffset": 213312,
+   "byteLength": 213312
   },
   {
    "buffer": 0,
-   "byteOffset": 406656,
-   "byteLength": 135552
+   "byteOffset": 426624,
+   "byteLength": 142208
   },
   {
    "buffer": 0,
-   "byteOffset": 542208,
-   "byteLength": 50832
+   "byteOffset": 568832,
+   "byteLength": 53328
   }
  ],
  "buffers": [
   {
    "uri": "br_r11_walterdale.bin",
-   "byteLength": 593040
+   "byteLength": 622160
   }
  ]
 }

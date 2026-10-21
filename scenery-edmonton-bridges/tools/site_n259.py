@@ -3,6 +3,7 @@ Street frame: three lanes, steel rail on tan concrete posts at both edges, no si
 the brief lists piers as open).
 """
 from bridgelib import *
+import approach
 
 CODE, TITLE = "N259", "Rossdale Road Bridge"
 RIVER = 613.74
@@ -20,4 +21,6 @@ def build():
     y = deck_fit(F, WAY, RIVER, a, b)
     m = BMesh()
     slab_bridge(m, ax, a, b, 13.0, y, depth=1.5, parapet_h=0.7, parapet_sw=SAND, rail_sw=RAILSTEEL)
+    for sign, s_edge in ((-1, a), (1, b)):       # carry the road on into the hill at both ends
+        approach.approach(m, fr, F, WAY, ax, s_edge, sign, y(s_edge), 13.0, RIVER)
     return dict(code=CODE, title=TITLE, lat0=lat0, lon0=lon0, alt=RIVER, parts=[("br_n259_rossdale", m)], frame=fr, axis=ax)

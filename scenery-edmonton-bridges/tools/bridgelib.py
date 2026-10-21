@@ -450,12 +450,14 @@ def save_chunks(m, name, prune=True):
         g = {
             "asset": {"version": "2.0", "generator": "scenery-edmonton-bridges/tools/bridgelib.py",
                       "extensions": {"ASOBO_normal_map_convention": {"tangent_space_convention": "DirectX"}}},
-            "extensionsUsed": ["ASOBO_normal_map_convention"],
+            "extensionsUsed": ["ASOBO_normal_map_convention", "ASOBO_tags"],
             "scene": 0, "scenes": [{"nodes": [0]}],
             "nodes": [{"mesh": 0, "name": nm}],
             "meshes": [{"name": nm, "primitives": [{"attributes": {"POSITION": 0, "NORMAL": 1, "TEXCOORD_0": 2}, "indices": 3, "mode": 4, "material": 0}]}],
+            # ASOBO_tags Collision + Road: the whole model is solid, so a plane can land on a deck and a vehicle can drive on it
             "materials": [{"name": "bridge_palette", "pbrMetallicRoughness": {
-                "baseColorTexture": {"index": 0}, "metallicFactor": 0.0, "roughnessFactor": 0.9}}],
+                "baseColorTexture": {"index": 0}, "metallicFactor": 0.0, "roughnessFactor": 0.9},
+                "extensions": {"ASOBO_tags": {"tags": ["Collision", "Road"]}}}],
             "textures": [{"sampler": 0, "source": 0}],
             "samplers": [{"magFilter": 9728, "minFilter": 9728}],
             "images": [{"uri": "bridge_palette.png"}],
@@ -633,6 +635,19 @@ def slab_bridge(m, ax, s0, s1, w, y_fn, depth=1.6, parapet_h=0.95, parapet_sw=No
         e, n = ax.en(s, side * (w / 2 + 0.3))
         de, dn = -ax.at(s)[3], ax.at(s)[2]
         lamp(m, e, n, y_fn(s), 9.5, 2.0, -side * de, -side * dn)
+
+
+def lane_dashes(m, ax, s0, s1, t_left, t_right, lanes, y, dash=3.0, gap=6.0, sw=None, half=0.08):
+    """Dashed white lane lines across a one-way carriageway spanning t_left..t_right (t_left < t_right) with `lanes` lanes:
+    lanes - 1 dashed lines at equal spacing.  y is the deck-top height (number or function of s)."""
+    sw = WHITE if sw is None else sw
+    f = _fn(y)
+    for j in range(1, lanes):
+        t = t_left + (t_right - t_left) * j / lanes
+        s = s0 + 1.0
+        while s + dash < s1:
+            ribbon(m, ax, s, s + dash, t - half, t + half, lambda q: f(q), lambda q: f(q) + 0.02, sw, caps=False)
+            s += dash + gap
 
 
 def triangulate(pts):

@@ -11,6 +11,7 @@ pale blue-green (no transparency yet).
 import math
 from bridgelib import *
 
+PYRAMIDS = False     # the four glass pyramids are switched off until the model is better; the support greenhouses stay
 CODE, TITLE = "B254", "Muttart Conservatory"
 RIVER = 627.9
 F = "P152-muttart/B254-conservatory"
@@ -68,7 +69,7 @@ def build():
     lon0 = sum(p[1] for p in pts) / 4
     fr = Frame(lat0, lon0)
     m = BMesh()
-    for name, la, lo, apex, h, side in PYR:
+    for name, la, lo, apex, h, side in (PYR if PYRAMIDS else []):
         e, n = fr.en(la, lo)
         pyramid(m, e, n, apex - G0, h, side)
     # west ring: six gabled glass houses along its long axis

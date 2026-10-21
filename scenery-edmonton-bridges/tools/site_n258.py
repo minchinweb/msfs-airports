@@ -3,6 +3,7 @@ LiDAR: raised run 14.0 to 48.2 m on the way, width 11.5 m, deck about 6 m above 
 (2 to 3 m) with W-beam guard rail stands at the roadside (street frame 5); one centre column assumed.  Light grey curved single-arm lamps.
 """
 from bridgelib import *
+import approach
 
 CODE, TITLE = "N258", "Grierson Hill Bridge"
 RIVER = 613.74
@@ -21,4 +22,6 @@ def build():
     m = BMesh()
     slab_bridge(m, ax, a, b, 11.5, y, depth=1.6, parapet_h=0.9, rail_sw=RAILSTEEL, piers=[(a + b) / 2], pier_w=2.6,
                 lamps=[(a + 6, 1), (b - 6, -1)])
+    for sign, s_edge in ((-1, a), (1, b)):       # carry the road on into the hill at both ends
+        approach.approach(m, fr, F, WAY, ax, s_edge, sign, y(s_edge), 11.5, RIVER)
     return dict(code=CODE, title=TITLE, lat0=lat0, lon0=lon0, alt=RIVER, parts=[("br_n258_grierson", m)], frame=fr, axis=ax)

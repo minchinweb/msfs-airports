@@ -30,7 +30,7 @@ def one(m, fr, way, reverse, sw_truss, sw_floor, outer):
     for a, b in zip(sup[:-1], sup[1:]):
         through_truss_span(m, ax, a, b, TT, YB, 7, lambda f: 9.0, kind="pratt", sw=sw_truss, sw_web=sw_truss, chord=(0.7, 0.8), web=(0.38, 0.45))
     ribbon(m, ax, 0.0, L, -TT - 0.1, TT + 0.1, DECK - 0.8, DECK, ASPHALT, step=40.0, sw_side=CONCD, sw_bot=sw_floor)
-    ribbon(m, ax, 0.0, L, -0.08, 0.08, DECK, DECK + 0.02, YELLOW, step=40.0)
+    lane_dashes(m, ax, 0.0, L, -TT + 0.45, TT - 0.45, 2, DECK)   # one-way, two lanes
     for sg in (-1, 1):                          # curbs 0.75 m with a steel W-beam rail on top
         tc = sg * (TT - 0.45)
         ribbon(m, ax, 0.0, L, tc - 0.25, tc + 0.25, DECK, DECK + 0.75, CONC, step=40.0)
@@ -56,6 +56,6 @@ def build():
     lat0, lon0 = fr0.ll(*mids[0])
     fr = Frame(lat0, lon0)
     m = BMesh()
-    ax = one(m, fr, 31882107, False, SEAGREEN, RUST, -1)     # 1900 span, east, northbound
-    one(m, fr, 22916473, True, RUST, RUST, 1)                # 1948 span, west, southbound
+    ax = one(m, fr, 31882107, False, SEAGREEN, SEAGREEN, -1)     # 1900 span, east, northbound
+    one(m, fr, 22916473, True, SEAGREEN, SEAGREEN, 1)               # 1948 span, west, southbound
     return dict(code=CODE, title=TITLE, lat0=lat0, lon0=lon0, alt=RIVER, parts=[("br_r13_low_level", m)], frame=fr, axis=ax)

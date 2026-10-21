@@ -43,6 +43,7 @@ def build():
     # deck: steel box-girder edge beams + orthotropic deck, asphalt, barriers
     ribbon(m, ax, S0, S1, -9.2, 9.2, DECK - 1.5, DECK, CONCD, step=30.0, sw_top=ASPHALT, sw_bot=RAILSTEEL, sw_side=RAILSTEEL)
     ribbon(m, ax, S0, S1, 5.6, 8.6, DECK, DECK + 0.12, CONC, step=30.0)                    # west footway
+    lane_dashes(m, ax, S0, S1, -8.7, 5.3, 3, DECK)                                          # three northbound lanes
     for tt in (-8.9, 5.5, 8.9):
         ribbon(m, ax, S0, S1, tt - 0.18, tt + 0.18, DECK, DECK + 0.95, CONC, step=30.0)
     railing(m, ax, S0, S1, 8.9, DECK + 0.95, h=0.6, post_step=3.0, sw_post=RAILSTEEL, rails=1, step=30.0)

@@ -20,7 +20,8 @@ def build():
     # funicular
     ft = fr.axis(find_way(F, 490235928))
     L = ft.L
-    yf = lambda s: TOP_Y - (TOP_Y - BOT_Y) * s / L
+    # lifted up to 1.2 m at the top: the upper part sat inside the sim's slope and trees (the exclusion polygon clears the trees)
+    yf = lambda s: TOP_Y - (TOP_Y - BOT_Y) * s / L + 1.2 * (1 - s / L)
     ribbon(m, ft, 0.0, L, -0.9, 0.9, lambda s: yf(s) - 0.7, lambda s: yf(s) - 0.1, DGREY, step=64.0)
     for t in (-0.6, 0.6):
         ribbon(m, ft, 0.0, L, t - 0.05, t + 0.05, lambda s: yf(s) - 0.1, lambda s: yf(s) + 0.05, RAILSTEEL, step=64.0)
@@ -31,9 +32,9 @@ def build():
     a, b = 24.0, 27.0                                    # glass cabin 3 m x 2.2 m on the slope
     beam(m, ft.p3(a, 0, yf(a) + 0.5), ft.p3(b, 0, yf(b) + 0.5), 2.2, 0.3, DGREY)
     beam(m, ft.p3(a, 0, yf(a) + 1.9), ft.p3(b, 0, yf(b) + 1.9), 2.1, 2.1, GLASSLT)
-    prism(m, [ft.en(-1, -4), ft.en(-1, 4), ft.en(9, 4), ft.en(9, -4)], TOP_Y + 2.9, TOP_Y + 3.2, DGREY)    # upper canopy
+    prism(m, [ft.en(-1, -4), ft.en(-1, 4), ft.en(9, 4), ft.en(9, -4)], TOP_Y + 4.1, TOP_Y + 4.4, DGREY)    # upper canopy
     for s, t in ((-0.7, -3.6), (-0.7, 3.6), (8.7, -3.6), (8.7, 3.6)):
-        beam(m, ft.p3(s, t, TOP_Y - 0.4), ft.p3(s, t, TOP_Y + 2.9), 0.2, 0.2, DGREY)
+        beam(m, ft.p3(s, t, TOP_Y + 0.8), ft.p3(s, t, TOP_Y + 4.1), 0.2, 0.2, DGREY)
     # urban stair: two mapped runs, falling with the hill
     s1, s2 = fr.axis(find_way(F, 533867743)), fr.axis(find_way(F, 1301170658))
     tot = s1.L + 3.9 + s2.L

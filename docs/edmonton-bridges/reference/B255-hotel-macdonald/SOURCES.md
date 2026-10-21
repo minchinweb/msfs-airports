@@ -50,3 +50,15 @@ Not openly licensed, or no open licence found. URL only:
 - [Alberta Register photograph, principal façades, March 2004](https://hermis.alberta.ca/ARHP/GetImageDetails.aspx?MediaID=127320&ObjectID=4664-0012). Credit: City of Edmonton, 2004. The entrance from 100 Street and Jasper Avenue. No open licence stated.
 - Fairmont story-page photographs. No open licence stated.
 - City archives sketches on the sketching-history page. No open licence stated.
+
+## Added 2026-10-19 (Ingenium, CN Images of Canada collection)
+
+Thumbnails only (about 450 px wide; the full-size files are behind a bot check). Permalinks: `https://collection.ingenium.ca/en/id/<id>/`. Rights field: CC BY-NC-ND on 56095-1, -5 and -6; not checked for 49814 and 40694. No height was read from any of them.
+
+| File | Ingenium id | Date | Note |
+|---|---|---|---|
+| `ingenium-40694.jpg` | 40694 | [1938?] | "Macdonald Hotel". Pre-1953 exterior, before the east wing. |
+| `ingenium-49814.jpg` | 49814 | unknown | b&w, Edmonton. |
+| `ingenium-56095-1.jpg` | 56095-1 | 1964 | Aerial view of Edmonton. |
+| `ingenium-56095-5.jpg` | 56095-5 | 1964 | Aerial view of Edmonton. |
+| `ingenium-56095-6.jpg` | 56095-6 | 1964 | Aerial view of Edmonton. |
