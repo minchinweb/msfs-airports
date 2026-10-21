@@ -44,6 +44,7 @@ Link only: JetPhotos 6026139, 11140, 9456702, 8413417, 11139; archive.org PC0139
 ## West line-up photo
 - Saved: `west-lineup-photos/flickr_woodhead_13858722704.jpg` (view from the NAIT parkade roof across the apron and fenced yard: control tower with the red cab, Edmonton Inn behind it,
   low hangars at left). Use for matching Hangar 15's face, the Flying Club and the buildings north of Hangar 18, and the position of 38 and 39. **Not yet applied** (see open-questions.md).
+  Also on the horizon in the same photo: the cement plant (VCCMT), as the silhouette reference for that landmark (open-questions.md, item 11). Photo by Flickr user woodhead (see the filename); licence not recorded here.
 
 ## Hangar 14 / Alberta Aviation Museum
 - Saved in `hangar14-photos/`: `Alberta_Aviation_Museum.jpg` (Commons, 2011-05-08, CC BY-SA 3.0, museum front: white siding band with "ALBERTA AVIATION MUSEUM", dark green lower wall

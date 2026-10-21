@@ -29,6 +29,7 @@ Kept here so it can be queried later. Dated 2026-10-13. This file and `reference
 8. Not to build (reference only): the old terminal building.
 9. Trans-Canada Air Lines 1938 logo (Ingenium CAVM-17996) for any TCA livery or sign work.
 10. Search `Category:Hangars at Edmonton City Centre Airport` on Commons for more photos.
+11. **Cement Plant** (the VFR checkpoint VCCMT, N53 35.00 W113 36.00, in `procedures-2010.md`), as a distant landmark building. About 5.7 km west-north-west of the control tower, so it is a skyline model, not an airfield building. The west line-up photo `west-lineup-photos/flickr_woodhead_13858722704.jpg` shows it on the horizon (the user's red box in the marked copy): a cluster of tall grey silos and kiln/preheater towers on the ridge, with a white dome at its left. Use the photo for the silhouette only; for the footprint and heights use aerials and LiDAR. Not built yet.
 
 ## Research gaps
 
