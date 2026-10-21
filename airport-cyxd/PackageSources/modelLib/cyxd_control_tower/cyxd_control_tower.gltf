@@ -38,6 +38,16 @@
      "indices": 3,
      "mode": 4,
      "material": 0
+    },
+    {
+     "attributes": {
+      "POSITION": 0,
+      "NORMAL": 1,
+      "TEXCOORD_0": 2
+     },
+     "indices": 4,
+     "mode": 4,
+     "material": 1
     }
    ]
   }
@@ -52,12 +62,26 @@
     "metallicFactor": 0.0,
     "roughnessFactor": 0.9
    }
+  },
+  {
+   "name": "cyxd_navcan",
+   "pbrMetallicRoughness": {
+    "baseColorTexture": {
+     "index": 1
+    },
+    "metallicFactor": 0.0,
+    "roughnessFactor": 0.9
+   }
   }
  ],
  "textures": [
   {
    "sampler": 0,
    "source": 0
+  },
+  {
+   "sampler": 1,
+   "source": 1
   }
  ],
  "samplers": [
@@ -75,13 +99,16 @@
  "images": [
   {
    "uri": "cyxd_palette.png"
+  },
+  {
+   "uri": "cyxd_navcan.png"
   }
  ],
  "accessors": [
   {
    "bufferView": 0,
    "componentType": 5126,
-   "count": 2848,
+   "count": 3964,
    "type": "VEC3",
    "min": [
     -16.849999999999998,
@@ -97,19 +124,25 @@
   {
    "bufferView": 1,
    "componentType": 5126,
-   "count": 2848,
+   "count": 3964,
    "type": "VEC3"
   },
   {
    "bufferView": 2,
    "componentType": 5126,
-   "count": 2848,
+   "count": 3964,
    "type": "VEC2"
   },
   {
    "bufferView": 3,
    "componentType": 5123,
-   "count": 4356,
+   "count": 5982,
+   "type": "SCALAR"
+  },
+  {
+   "bufferView": 4,
+   "componentType": 5123,
+   "count": 90,
    "type": "SCALAR"
   }
  ],
@@ -117,28 +150,33 @@
   {
    "buffer": 0,
    "byteOffset": 0,
-   "byteLength": 34176
+   "byteLength": 47568
   },
   {
    "buffer": 0,
-   "byteOffset": 34176,
-   "byteLength": 34176
+   "byteOffset": 47568,
+   "byteLength": 47568
   },
   {
    "buffer": 0,
-   "byteOffset": 68352,
-   "byteLength": 22784
+   "byteOffset": 95136,
+   "byteLength": 31712
   },
   {
    "buffer": 0,
-   "byteOffset": 91136,
-   "byteLength": 8712
+   "byteOffset": 126848,
+   "byteLength": 11964
+  },
+  {
+   "buffer": 0,
+   "byteOffset": 138812,
+   "byteLength": 180
   }
  ],
  "buffers": [
   {
    "uri": "cyxd_control_tower.bin",
-   "byteLength": 99848
+   "byteLength": 138992
   }
  ]
 }

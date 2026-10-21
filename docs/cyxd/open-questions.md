@@ -39,3 +39,8 @@ Kept here so it can be queried later. Dated 2026-10-13. This file and `reference
 
 - None of the ten new hangars has been viewed in the sim. The package builds clean (exit 0, empty `_RPTErrors.xml`). Restart the sim and check them.
 - Nothing from this work is committed.
+
+## Deferred (2026-10-21)
+
+- **Building south of Hangar 11** (the large grey building, `street-view-review.md`): still shows in the sim as the sim's own generated building. Put on deferral by the user; no exclusion or model yet.
+- **Hangar 39 in its Pacific Western Airlines era**: the search for period photos of its face found none (see `hangar39-pwa/README.md`); only the 2014 pale-blue scheme is documented, and the PWA link rests on the 2014 captions.

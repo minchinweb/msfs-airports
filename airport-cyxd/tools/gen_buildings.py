@@ -56,7 +56,7 @@ def write_palette(path):
 
 TEX_T = 1.28  # metres per texture tile (8 clapboards / 8 shingle rows)
 TEX_NAMES = ("siding", "shingle_red", "shingle_grey", "ribbed", "ribbed_blue", "ribbed_green", "ribbed_mustard", "ribbed_steel",
-             "ribbed_tan", "ribbed_white", "ribbed_yellow", "ribbed_teal", "brick", "shell")
+             "ribbed_tan", "ribbed_white", "ribbed_yellow", "ribbed_teal", "brick", "shell", "esso", "navcan", "lawoffice", "nwi")
 
 
 
@@ -144,6 +144,10 @@ def write_textures(folder):
     sign = Path(__file__).resolve().parent / "assets/shell_sign.png"
     (folder / "cyxd_shell.png").write_bytes(sign.read_bytes())
     (folder / "cyxd_shell.png.xml").write_text('<BitmapConfiguration>\n\t<BitmapSlot>MTL_BITMAP_DECAL0</BitmapSlot>\n</BitmapConfiguration>\n')
+    # Esso oval and NAV CANADA plaque: tools/make_signs.py
+    for nm in ("esso", "navcan", "lawoffice", "nwi"):
+        (folder / ("cyxd_%s.png" % nm)).write_bytes((Path(__file__).resolve().parent / ("assets/%s_sign.png" % nm)).read_bytes())
+        (folder / ("cyxd_%s.png.xml" % nm)).write_text('<BitmapConfiguration>\n\t<BitmapSlot>MTL_BITMAP_DECAL0</BitmapSlot>\n</BitmapConfiguration>\n')
 
 
 # mesh builder ------------------------------------------------------------------------------
@@ -579,12 +583,16 @@ def control_tower():
     m.window((0, 0, -1), (0.4, 0.0, -hz), (1, 0, 0), 1.1, 2.1)  # door
     number_disc(m, 0.0, 8.5, hz, (0, 1), 0.95, "17")
     number_disc(m, 0.0, 8.5, -hz, (0, -1), 0.95, "17")
-    # steel stair cage up the -X face
-    for z in (-1.5, 1.5):
-        for x in (-hx - 2.3, -hx - 0.05):
-            m.box(x - 0.07, x + 0.07, 0, top + 0.5, z - 0.07, z + 0.07, METAL)
-    for k in range(1, 8):
-        m.box(-hx - 2.3, -hx, k * FL - 0.05, k * FL + 0.05, -1.5, 1.5, METAL)
+    # steel ladder shaft up the -X face (Flickr 11094305354 / 11094396223: a narrow flat-plated grey column standing 1.3 m off the wall,
+    # dark ladder slot in its front, ending under the white top floor; not a landing-and-stair cage)
+    lh = 6 * FL + 1.2
+    m.box(-hx - 1.3, -hx, 0, lh, -0.7, -0.6, METAL)
+    m.box(-hx - 1.3, -hx, 0, lh, 0.6, 0.7, METAL)
+    m.box(-hx - 1.3, -hx - 1.2, 0, lh, -0.7, 0.7, METAL)
+    m.box(-hx - 1.4, -hx, lh, lh + 0.15, -0.8, 0.8, DGREY)
+    m.window((-1, 0, 0), (-hx - 1.3, 2.4, 0.15), (0, 0, -1), 0.3, lh - 2.4)  # ladder slot
+    for k in range(int((lh - 2.4) / 0.3)):
+        m.box(-hx - 1.15, -hx - 0.05, 2.5 + k * 0.3, 2.55 + k * 0.3, -0.5, 0.5, DGREY)  # rungs, visible through the slot
     # balcony slab and rail
     sl = ring(hx + 0.9, hz + 0.9, c + 0.3)
     frustum(m, sl, top, sl, top + 0.45, WHITE, top=True, bottom=True)
@@ -612,6 +620,7 @@ def control_tower():
         m.box(x0, x1, 1.0, h, z0, z1, GREY, top=False)
         m.box(x0 - 0.15, x1 + 0.15, h, h + 0.3, z0 - 0.15, z1 + 0.15, DGREY)
     m.window((1, 0, 0), (16.7, 0.0, 5.0), (0, 0, 1), 1.2, 2.1)  # entrance door
+    oval_sign(m, 16.7 + 0.1, 3.3, 9.0, (1, 0), 2.6, 1.15, "navcan")  # NAV CANADA plaque on the annex wall beside the door
     m.mirror_x()
     return m
 
@@ -766,6 +775,23 @@ def shell_sign(m, cx, cy, cz, n, bw, bh):
            tex="shell", uvs=[(0, 1), (1, 1), (1, 0), (0, 0)])
 
 
+def oval_sign(m, cx, cy, cz, n, bw, bh, tex):
+    """Elliptical sign (bw x bh) textured from tools/assets/<tex>_sign.png (see make_signs.py) on a wall with outward normal n."""
+    ux, uz = -n[1], n[0]
+    ring = [(0.5 * bw * math.cos(2 * math.pi * k / 32), 0.5 * bh * math.sin(2 * math.pi * k / 32)) for k in range(32)]
+    centre = (cx - n[0], cy, cz - n[1])
+    m.poly([(cx + ux * u, cy + v, cz + uz * u) for u, v in ring], WHITE, centre, tex=tex,
+           uvs=[(0.5 + u / bw, 0.5 - v / bh) for u, v in ring])
+
+
+def rect_sign(m, cx, cy, cz, n, bw, bh, tex, v0=0.0, v1=1.0):
+    """Rectangular sign board (bw x bh) using rows v0..v1 of tools/assets/<tex>_sign.png, on a wall with outward normal n."""
+    ux, uz = -n[1], n[0]
+    pt = lambda u, v: (cx + ux * u, cy + v, cz + uz * u)
+    m.poly([pt(-bw / 2, -bh / 2), pt(bw / 2, -bh / 2), pt(bw / 2, bh / 2), pt(-bw / 2, bh / 2)], WHITE, (cx - n[0], cy, cz - n[1]),
+           tex=tex, uvs=[(0, v1), (1, v1), (1, v0), (0, v0)])
+
+
 def shell_hangar():
     """Hangar 16 shell group as measured on the 2014 Google Earth aerial (docs/cyxd/aerials/google-earth-hangar16-201407.jpg,
     scale bar 8.94 m) and the 2012 street view: the cream ribbed-metal Shell hangar (45 x 39 x 11.2 m, flat roof with a red
@@ -871,7 +897,7 @@ def hangar15():
         m.window((0, 0, 1), (1.8 - i * 6.025 - 0.3, 2.3, z1 + 0.2), (-1, 0, 0), 5.4, 1.9)
     m.box(1.8, -22.3, 6.4, 6.55, z1, z1 + 0.28, DGREY)  # door header
     number_disc(m, 17.0, 5.2, z1, (0, 1), 0.9, "15")  # south end of the gable, hidden behind the museum in the 2014 aerial
-    number_disc(m, 0.0, 5.2, z0, (0, -1), 0.9, "15")  # north gable (the landside photo)
+    # no roundel on the landside (user, 2026-10-21): the north gable's "15" is removed
     for k in range(8):  # SW eave wall: office windows and two entrances with blue awnings
         m.window((1, 0, 0), (x1, 4.6, z0 + 4.0 + k * 6.2), (0, 0, 1), 1.5, 1.2)
     for zc in (-10.0, 10.0):

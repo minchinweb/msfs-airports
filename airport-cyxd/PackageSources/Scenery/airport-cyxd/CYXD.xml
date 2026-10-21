@@ -27,6 +27,18 @@
 		<Vertex lat="53.57019591023147" lon="-113.51492928397788"/>
 		<Vertex lat="53.57268804854911" lon="-113.51862854614176"/>
 	</Polygon>
+	<Polygon version="0.4.0" displayName="No buildings: Airport Road to runway 12/30" parentGroupID="6" altitude="667.68023681640625">
+		<Attribute name="UniqueGUID" guid="{359C73E8-06BE-4FB2-ABCB-EC942F7761D0}" type="GUID" value="{2C477FB8-C971-51F6-8453-101E855EE7ED}"/>
+		<Attribute name="ExcludeDetectedBuildings" guid="{5C1A2387-1F07-47DF-A569-962CF6258E55}" type="UINT8" value="1"/>
+		<Attribute name="ExcludeOSMBuildings" guid="{F3C2635D-9F2F-458F-8663-90B3837BED09}" type="UINT8" value="1"/>
+		<Attribute name="ExcludeMSBuildings" guid="{F78A3074-8AD5-4B8B-92C4-C1C948BB7AA5}" type="UINT8" value="1"/>
+		<Attribute name="ExcludeTIN" guid="{18B58CBF-AE02-4A19-8AA9-3809E8E73400}" type="UINT8" value="1"/>
+		<Attribute name="ExclusionFlags" guid="{4CACC252-E6DC-419A-B20C-16EC601DF70E}" type="UINT32" value="3"/>
+		<Vertex lat="53.57203116568085" lon="-113.52050944858672"/>
+		<Vertex lat="53.56830112626706" lon="-113.51489151555651"/>
+		<Vertex lat="53.56661882926625" lon="-113.51801680995501"/>
+		<Vertex lat="53.57034886868004" lon="-113.52363474298522"/>
+	</Polygon>
 	<Polygon version="0.4.0" displayName="Grass over construction 8" parentGroupID="6" groupIndex="7" altitude="667.36212158203125">
 		<Attribute name="UniqueGUID" guid="{359C73E8-06BE-4FB2-ABCB-EC942F7761D0}" type="GUID" value="{15C09CC5-FEF4-4B8A-A47A-C33F54332B22}"/>
 		<Attribute name="ExcludeDetectedBuildings" guid="{5C1A2387-1F07-47DF-A569-962CF6258E55}" type="UINT8" value="1"/>
@@ -651,18 +663,6 @@
 			<RunwayStart end="PRIMARY" lat="53.57795178464409" lon="-113.51284019431836" alt="668.42640000000006" heading="181.21699523925781"/>
 			<RunwayStart end="SECONDARY" lat="53.56638612703228" lon="-113.51281118882294" alt="664.76880000000006" heading="1.21697998046875"/>
 		</Runway>
-		<Jetway gateName="GATE" parkingNumber="3" suffix="NONE">
-			<!--SceneryObject name: Jetway_Link-->
-			<SceneryObject lat="53.56877625767441" lon="-113.51910175494534" alt="0.00000000000000" pitch="0.000000" bank="0.000000" heading="-43.157013" imageComplexity="VERY_SPARSE" altitudeIsAgl="TRUE" snapToGround="TRUE" snapToNormal="FALSE">
-				<LibraryObject name="{43D4E862-3C41-4E16-802C-75CF609A74C2}" scale="1.000000"/>
-			</SceneryObject>
-		</Jetway>
-		<Jetway gateName="GATE" parkingNumber="4" suffix="NONE">
-			<!--SceneryObject name: Jetway_Link-->
-			<SceneryObject lat="53.56890363837728" lon="-113.51941534062443" alt="0.00000000000000" pitch="0.000000" bank="0.000000" heading="139.246094" imageComplexity="VERY_SPARSE" altitudeIsAgl="TRUE" snapToGround="TRUE" snapToNormal="FALSE">
-				<LibraryObject name="{43D4E862-3C41-4E16-802C-75CF609A74C2}" scale="1.000000"/>
-			</SceneryObject>
-		</Jetway>
 		<Jetway gateName="GATE" parkingNumber="5" suffix="NONE">
 			<!--SceneryObject name: Jetway_Megalink-->
 			<SceneryObject lat="53.57013390752790" lon="-113.52132143083554" alt="0.00000000000000" pitch="0.000546" bank="-0.000546" heading="44.687923" imageComplexity="VERY_SPARSE" altitudeIsAgl="TRUE" snapToGround="TRUE" snapToNormal="FALSE">
@@ -1053,7 +1053,7 @@
 		<LibraryObject name="{C4C759FB-D852-5FB2-A244-C38AC5FCAECC}" scale="1.000000"/>
 	</SceneryObject>
 	<!-- Hangar 14 (Alberta Aviation Museum, OSM 230718920) -->
-	<SceneryObject lat="53.56571400" lon="-113.51713000" alt="0.00000000000000" pitch="0.000000" bank="0.000000" heading="90" imageComplexity="VERY_SPARSE" altitudeIsAgl="TRUE" snapToGround="TRUE" snapToNormal="FALSE">
+	<SceneryObject lat="53.56571400" lon="-113.51713000" alt="0.00000000000000" pitch="0.000000" bank="0.000000" heading="180" imageComplexity="VERY_SPARSE" altitudeIsAgl="TRUE" snapToGround="TRUE" snapToNormal="FALSE">
 		<LibraryObject name="{29B358ED-E096-5E29-A73B-86C051B06B22}" scale="1.000000"/>
 	</SceneryObject>
 	<!-- Hangar 18 (Edmonton Flying Club complex, traced from 2014 imagery) -->
@@ -1069,7 +1069,7 @@
 		<LibraryObject name="{3BE3060C-8E60-5E6B-B37F-53B50F50FD0B}" scale="1.000000"/>
 	</SceneryObject>
 	<!-- Hangar 40 (Canadian Helicopters, white roof of OSM 230718900) -->
-	<SceneryObject lat="53.57520500" lon="-113.52956500" alt="0.00000000000000" pitch="0.000000" bank="0.000000" heading="318" imageComplexity="VERY_SPARSE" altitudeIsAgl="TRUE" snapToGround="TRUE" snapToNormal="FALSE">
+	<SceneryObject lat="53.57493100" lon="-113.52859000" alt="0.00000000000000" pitch="0.000000" bank="0.000000" heading="228" imageComplexity="VERY_SPARSE" altitudeIsAgl="TRUE" snapToGround="TRUE" snapToNormal="FALSE">
 		<LibraryObject name="{5AF9C0C7-F582-55D5-98C8-01608ED24982}" scale="1.000000"/>
 	</SceneryObject>
 	<!-- Hangar 3 (pale-blue flat-roofed hangar, traced from the 2014 imagery) -->
@@ -1371,10 +1371,10 @@
 		<Attribute name="ExcludeMSBuildings" guid="{F78A3074-8AD5-4B8B-92C4-C1C948BB7AA5}" type="UINT8" value="1"/>
 		<Attribute name="ExcludeTIN" guid="{18B58CBF-AE02-4A19-8AA9-3809E8E73400}" type="UINT8" value="1"/>
 		<Attribute name="ExclusionFlags" guid="{4CACC252-E6DC-419A-B20C-16EC601DF70E}" type="UINT32" value="3"/>
+		<Vertex lat="53.56621759712230" lon="-113.51635321293637"/>
 		<Vertex lat="53.56621759712230" lon="-113.51790678706362"/>
 		<Vertex lat="53.56521040287770" lon="-113.51790678706362"/>
 		<Vertex lat="53.56521040287770" lon="-113.51635321293637"/>
-		<Vertex lat="53.56621759712230" lon="-113.51635321293637"/>
 	</Polygon>
 	<Polygon version="0.4.0" displayName="No generated buildings: Hangar 18 (Edmonton Flying Club complex, traced from 2014 im" parentGroupID="6" altitude="667.68023681640625">
 		<Attribute name="UniqueGUID" guid="{359C73E8-06BE-4FB2-ABCB-EC942F7761D0}" type="GUID" value="{5AD498EB-DF2F-5E29-B0C8-96F1D0A5A84A}"/>
@@ -1419,10 +1419,10 @@
 		<Attribute name="ExcludeMSBuildings" guid="{F78A3074-8AD5-4B8B-92C4-C1C948BB7AA5}" type="UINT8" value="1"/>
 		<Attribute name="ExcludeTIN" guid="{18B58CBF-AE02-4A19-8AA9-3809E8E73400}" type="UINT8" value="1"/>
 		<Attribute name="ExclusionFlags" guid="{4CACC252-E6DC-419A-B20C-16EC601DF70E}" type="UINT32" value="3"/>
-		<Vertex lat="53.57493093125512" lon="-113.52965869358349"/>
-		<Vertex lat="53.57523179933352" lon="-113.52909715147568"/>
-		<Vertex lat="53.57547906874488" lon="-113.52947130641653"/>
-		<Vertex lat="53.57517820066648" lon="-113.53003284852433"/>
+		<Vertex lat="53.57487524726242" lon="-113.52812942202765"/>
+		<Vertex lat="53.57520939511560" lon="-113.52863503681256"/>
+		<Vertex lat="53.57498675273758" lon="-113.52905057797234"/>
+		<Vertex lat="53.57465260488440" lon="-113.52854496318743"/>
 	</Polygon>
 	<Polygon version="0.4.0" displayName="No generated buildings: Hangar 3 (pale-blue flat-roofed hangar, traced from the 2014" parentGroupID="6" altitude="667.68023681640625">
 		<Attribute name="UniqueGUID" guid="{359C73E8-06BE-4FB2-ABCB-EC942F7761D0}" type="GUID" value="{137BB838-2F51-52EE-AA73-B210DBC3D4B2}"/>

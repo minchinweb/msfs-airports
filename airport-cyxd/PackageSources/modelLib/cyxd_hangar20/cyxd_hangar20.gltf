@@ -84,7 +84,7 @@
    }
   },
   {
-   "name": "cyxd_shingle_red",
+   "name": "cyxd_esso",
    "pbrMetallicRoughness": {
     "baseColorTexture": {
      "index": 2
@@ -128,19 +128,19 @@
    "uri": "cyxd_siding.png"
   },
   {
-   "uri": "cyxd_shingle_red.png"
+   "uri": "cyxd_esso.png"
   }
  ],
  "accessors": [
   {
    "bufferView": 0,
    "componentType": 5126,
-   "count": 653,
+   "count": 969,
    "type": "VEC3",
    "min": [
     -22.71,
     0,
-    -22.7
+    -22.71
    ],
    "max": [
     32.7,
@@ -151,19 +151,19 @@
   {
    "bufferView": 1,
    "componentType": 5126,
-   "count": 653,
+   "count": 969,
    "type": "VEC3"
   },
   {
    "bufferView": 2,
    "componentType": 5126,
-   "count": 653,
+   "count": 969,
    "type": "VEC2"
   },
   {
    "bufferView": 3,
    "componentType": 5123,
-   "count": 969,
+   "count": 1389,
    "type": "SCALAR"
   },
   {
@@ -175,7 +175,7 @@
   {
    "bufferView": 5,
    "componentType": 5123,
-   "count": 6,
+   "count": 90,
    "type": "SCALAR"
   }
  ],
@@ -183,38 +183,38 @@
   {
    "buffer": 0,
    "byteOffset": 0,
-   "byteLength": 7836
+   "byteLength": 11628
   },
   {
    "buffer": 0,
-   "byteOffset": 7836,
-   "byteLength": 7836
+   "byteOffset": 11628,
+   "byteLength": 11628
   },
   {
    "buffer": 0,
-   "byteOffset": 15672,
-   "byteLength": 5224
+   "byteOffset": 23256,
+   "byteLength": 7752
   },
   {
    "buffer": 0,
-   "byteOffset": 20896,
-   "byteLength": 1938
+   "byteOffset": 31008,
+   "byteLength": 2778
   },
   {
    "buffer": 0,
-   "byteOffset": 22836,
+   "byteOffset": 33788,
    "byteLength": 192
   },
   {
    "buffer": 0,
-   "byteOffset": 23028,
-   "byteLength": 12
+   "byteOffset": 33980,
+   "byteLength": 180
   }
  ],
  "buffers": [
   {
    "uri": "cyxd_hangar20.bin",
-   "byteLength": 23040
+   "byteLength": 34160
   }
  ]
 }

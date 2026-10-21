@@ -309,3 +309,19 @@ Source: `docs/cyxd/procedures-2010.md` and the plate screenshots in `docs/cyxd/c
 ### West-lineup photo review and ILS glideslope hut (2026-10-21)
 - Photo `west-lineup-photos/flickr_woodhead_13858722704.jpg` is taken from the NAIT parkade roof looking WSW across the airfield (1024 px, so only gross shapes). H15, H19 and H20 airside views checked against the user markup: **H15 wing** now has a pale blue-grey face with a central cluster of window bays and a porthole instead of dark slate doors; **H20** got a long ribbon window over the SE half of its NE (airside) wall and a big dark door (15 x 7.6 m) in the NW half; **H19** airside is a long low dark-brown/tan face with a red-brick block toward the SE end (left in the photo), roughly where the model has it but nearer the SE end than the model's centre block; not changed.
 - **ILS glideslope hut:** the small red-and-white checkerboard hut in the infield (user markup 2) sits at the 2014 aerial hut at 53.568983, -113.511000, 9 m north of the glideslope point already in `CYXD.xml` (53.568901, -113.511002). New model `cyxd_gs_hut`: 5.5 x 4.5 x 3 m, checks on all walls, door on the east face, a 9 m mast and antenna box 5.7 m north. Built OK, not seen in the sim.
+
+### User corrections round (2026-10-21, built OK, not viewed in the sim)
+- **Hangar 14**: main door bays moved to the south gable end (heading now 180, 90.8 x 100 m); museum entrance, glazing and canopy moved to the east wall.
+- **Hangar 15**: landside (north gable) "15" roundel removed; airside roundels stay.
+- **Tower (17)**: the sign the photos show is an oval NAV CANADA plaque on the annex wall by the entrance (`oval_sign`, texture `make_signs.py`); there is no roundel on the tower itself. The stair cage was replaced by a narrow flat-plated ladder shaft (photos 11094305354 / 11094396223); it is still on the NW face. Which face the ladder is on was not re-checked against the user's "north side".
+- **Exclusion**: new polygon "No buildings: Airport Road to runway 12/30" (rectangle in the 12/30 frame, 36-314 m SW of the centreline, -110..445 m along it; Airport Road is OSM way 15824250, 318 m from the centreline). Hand-written in `CYXD.xml` (not in the generated block).
+- **Jetways** 3 and 4 (in front of Hangar 18) deleted; the GATE 3 / 4 parking spots remain.
+- **Hangar 20**: Esso oval is now a texture (blue rim, white, red "Esso", `esso_sign.png`); airside "20" roundel above the big door.
+- **Hangars 38 / 39**: landside (back wall) roundels added to both; Hangar 39 also has an airside "39" on the set-back middle block.
+- **Hangar 40**: heading 318 -> 228 and moved to 53.574931, -113.528590, so it stands at right angles to Hangar 39 with its landside wall facing the car park behind 39 (about 66 m NW along, 72 m NE across from 39's centre; position is judged, not measured).
+- **Hangar 4**: ridge turned so the west door wall is the gable end (ridge E-W, rise 4.4 m over the 71 m width).
+- **Hangar 5**: offices moved to the south side; "5" roundel above them.
+- **Hangar 8**: landside windows (two rows plus doors) and LAW OFFICE / AVIATION signs (`lawoffice_sign.png`) on the end block.
+- **Hangar 11**: roof vents now sit on the barrel roof; NORTHWEST INDUSTRIES LTD. roof board and COMMERCIAL AIRCRAFT SERVICE lettering (1956 photo); fire escape moved to the landside (east) face.
+- Textures `esso`, `navcan`, `lawoffice`, `nwi` are produced by `tools/make_signs.py` and copied by `gen_buildings.py`.
+- Deferred: the building south of Hangar 11 (`open-questions.md`).

@@ -98,16 +98,16 @@ def roof_vents(m, pts, y, sw=DGREY):
 # Hangar 4 -----------------------------------------------------------------------------------
 def hangar4():
     """Pale-yellow ribbed hangar whose long wall faces the runway (west, heading 270; the user's call: it must not face north).  The wide
-    arched door opening, "4" roundel and Government of Alberta sign from the Wikimedia photo are on that front (+Z) wall; the roof ridge runs
-    along the footprint's long axis (N-S), so the gable ends are the north and south ends.  Brick block at the north end (viewer-left of
+    arched door opening, "4" roundel and Government of Alberta sign from the Wikimedia photo are on that front (+Z) wall; that wall is the gable end
+    (user, 2026-10-21): the ridge runs E-W back from the door wall.  Brick block at the north end (viewer-left of
     the front), orange-panelled neighbour at the south end.  OSM 325273554: 71 (N-S) x 33.5 m."""
     m = Mesh(textured=True)
-    W, D, wh, rise = 71.1, 33.5, 9.0, 3.4
+    W, D, wh, rise = 71.1, 33.5, 9.0, 4.4
     x0, x1, z0, z1 = -W / 2, W / 2, -D / 2, D / 2
     m.box(x0, x1, 0, wh, z0, z1, YELLOWR, top=False)
-    m.gable(x0, x1, wh, rise, z0, z1, along_z=False, sw_roof=METAL, sw_wall=YELLOWR)
-    for z in (z0 - 0.12, z1):
-        m.box(x0, x1, wh - 0.5, wh + 0.05, z, z + 0.12, RWHITE)
+    m.gable(x0, x1, wh, rise, z0, z1, along_z=True, sw_roof=METAL, sw_wall=YELLOWR)  # gable end = the west (door) wall (user, 2026-10-21)
+    for x in (x0 - 0.12, x1):
+        m.box(x, x + 0.12, wh - 0.5, wh + 0.05, z0, z1, RWHITE)
     a, hd, top, n = 14.0, 6.2, 8.4, 10
     cx = 6.0  # the opening is not centred: it sits towards the north (viewer-left) half of the wall
     pts = [(cx - a, 0, z1 + 0.06), (cx + a, 0, z1 + 0.06)] + [(cx + a * u, hd + (top - hd) * (1 - u * u), z1 + 0.06)
@@ -123,7 +123,7 @@ def hangar4():
     m.box(x1, x1 + 10.0, 0, 4.6, z1 - 16.0, z1, BRICKD)
     m.box(x0 - 8.0, x0, 0, 9.0, z1 - 22.0, z1 - 2.0, SALMON)
     rows_x(m, -1, x0 - 8.0, z1 - 21.0, z1 - 3.0, 4.2, 4, 2.0, 1.6)
-    roof_vents(m, [(-20, 0), (0, 0), (20, 0)], wh + rise)
+    roof_vents(m, [(0, -10), (0, 0), (0, 10)], wh + rise)
     m.mirror_x()
     return m
 
@@ -131,7 +131,7 @@ def hangar4():
 # Hangar 5 -----------------------------------------------------------------------------------
 def hangar5():
     """Tan ribbed hangar, cream upper band, white sliding doors on the west gable end (+Z, heading 270), two-storey bronze
-    curtain-wall office at the east (landside) end, "5" roundel high on the south wall.  OSM 325270299: 53.1 x 43.3 m."""
+    curtain-wall office block on the south side (user), "5" roundel high on the south wall above it.  OSM 325270299: 53.1 x 43.3 m."""
     m = Mesh(textured=True)
     W, D, wh, rise = 53.1, 43.3, 8.6, 3.2
     x0, x1, z0, z1 = -W / 2, W / 2, -D / 2, D / 2
@@ -145,14 +145,13 @@ def hangar5():
     leaves(m, z1, xs, 0, 7.5, RWHITE, post=GREEN)
     louvres(m, z1, xs, [(1.8, 3.4), (4.4, 6.0)])
     m.box(-22.4, 22.4, 7.5, 7.9, z1, z1 + 0.35, DGREY)
-    # landside office block, 30 x 12 m, two storeys of bronze glazing
-    m.box(-15.0, 15.0, 0, 7.8, z0 - 12.0, z0, BRONZE)
-    for y in (1.0, 4.4):
-        rows_z(m, -1, z0 - 12.0, -15.0, 15.0, y, 8, 2.5, 2.3)
-    m.box(-15.4, 15.4, 7.8, 8.2, z0 - 12.4, z0, DGREY)
-    m.box(-3.5, 3.5, 3.1, 3.4, z0 - 13.8, z0 - 12.0, DGREY)  # entrance canopy
-    m.box(15.0, 27.0, 0, 4.5, z0 - 8.0, z0, GREY)  # lower grey block towards the hangar's south side
-    number_disc(m, x0, 7.3, z0 + 7.0, (-1, 0), 0.95, "5")
+    # office block on the SOUTH side (-X; user, 2026-10-21), 30 x 12 m, two storeys of bronze glazing
+    m.box(x0 - 12.0, x0, 0, 6.4, -15.0, 15.0, BRONZE)
+    for y in (0.9, 4.0):
+        rows_x(m, -1, x0 - 12.0, -15.0, 15.0, y, 8, 2.5, 2.2)
+    m.box(x0 - 12.4, x0, 6.4, 6.7, -15.4, 15.4, DGREY)
+    m.box(x0 - 13.8, x0 - 12.0, 3.1, 3.4, -3.5, 3.5, DGREY)  # entrance canopy
+    number_disc(m, x0, 7.7, 0.0, (-1, 0), 0.85, "5")  # high on the south wall, above the offices
     roof_vents(m, [(0, -8), (0, 8), (10, 0)], wh + rise)
     m.mirror_x()
     return m
@@ -242,6 +241,14 @@ def hangar8():
     rows_x(m, 1, wx1 - 2, z0 + 4.5, z1 - 4.5, 6.8, 8, 2.2, 0.9)
     rows_x(m, -1, wx0 + 2, z0 + 4.5, z1 - 4.5, 6.8, 8, 2.2, 0.9)
     rows_z(m, 1, z1, wx0 + 4, wx1 - 4, 1.6, 4, 2.2, 2.6)
+    # landside (-Z, east, 109 St) office windows (Street View 2012, 109 St NW): a ground row and a ribbon of upper windows across the low wing,
+    # end block and hall, two doors, the LAW OFFICE / AVIATION signs on the end block
+    rows_z(m, -1, z0, wx0 + 1.5, hx1 - 1.5, 1.0, 16, 2.0, 1.6)
+    rows_z(m, -1, z0, wx0 + 1.5, hx1 - 1.5, 3.9, 14, 3.2, 1.7)
+    for dx in (-26.0, 12.0):
+        m.box(dx, dx + 1.2, 0, 2.2, z0 - 0.08, z0, DGREY)
+    rect_sign(m, -7.6, 8.3, z0 - 0.12, (0, -1), 7.6, 1.1, "lawoffice", 0.0, 0.5)
+    rect_sign(m, 2.4, 7.0, z0 - 0.12, (0, -1), 5.6, 0.8, "lawoffice", 0.5, 1.0)
     m.box(wx0 + 6.0, wx0 + 9.0, 0, 2.5, z1, z1 + 0.08, DGREY)
     roof_vents(m, [(15, -12), (15, 0), (15, 12)], 12.4)
     m.mirror_x()
@@ -413,10 +420,8 @@ def hangar20():
     m.box(3.0, 18.0, 0, 7.6, -a - 0.12, -a, DGREY)
     # Esso oval (white, blue rim, red lettering bar) on the lower tier's front wall
     ox, oy, oz = -6.0, 3.4, a + 8.0
-    ring = [(2.0 * math.cos(math.radians(20 * k)), 0.7 * math.sin(math.radians(20 * k))) for k in range(18)]
-    m.poly([(ox + u, oy + v, oz + 0.12) for u, v in ring], BLUE, (ox, oy, oz - 2))
-    m.poly([(ox + 0.85 * u, oy + 0.8 * v, oz + 0.15) for u, v in ring], WHITE, (ox, oy, oz - 2))
-    m.box(ox - 1.2, ox + 1.2, oy - 0.12, oy + 0.12, oz + 0.15, oz + 0.2, RED)
+    oval_sign(m, ox, oy, oz + 0.12, (0, 1), 4.6, 2.0, "esso")  # texture from tools/make_signs.py: blue-rimmed white oval, red "Esso"
+    number_disc(m, 10.5, 9.0, -a, (0, -1), 1.0, "20")  # airside roundel above the big door (user, 2026-10-21)
     number_disc(m, a, 8.6, a - 6.0, (1, 0), 1.2, "20")  # NW end wall of the upper tier (Street View photo 11)
     m.box(-4.0, 4.0, hu + 0.35, hu + 1.5, -6.0, 6.0, DGREY)  # plant on the roof
     m.mirror_x()
@@ -481,17 +486,24 @@ def hangar11():
         rows_x(m, -1, ax0, az0 + 1.5, az1 - 1.5, y, 3, 1.6, 1.5)
         rows_x(m, 1, ax1, az0 + 1.5, az1 - 1.5, y, 3, 1.6, 1.5)
     number_disc(m, -22.0, 8.6, az0, (0, -1), 1.0, "11")
-    m.box(-26.0, 4.0, 11.6, 14.4, az0 + 0.4, az0 + 0.6, WHITE)  # roof sign board
-    m.box(-25.0, 3.0, 12.9, 13.4, az0 + 0.2, az0 + 0.4, DARK)
-    m.box(-25.0, 3.0, 11.9, 12.4, az0 + 0.2, az0 + 0.4, DARK)
-    m.box(-9.0, -4.0, 11.6, 14.6, az0 + 6.0, az0 + 11.0, DGREY)  # control cab
+    # roof sign board and control cab stand on the annex roof (y 11.3); the roof vents and the cab were floating 0.3-0.9 m above it
+    m.box(-26.0, 4.0, 11.3, 14.4, az0 + 0.4, az0 + 0.6, WHITE)
+    rect_sign(m, -11.0, 12.85, az0 + 0.38, (0, -1), 28.0, 2.8, "nwi", 0.0, 0.5)  # NORTHWEST INDUSTRIES LTD. (1956 photo)
+    rect_sign(m, -11.0, 3.8, az0 - 0.1, (0, -1), 26.0, 1.5, "nwi", 0.5, 1.0)  # COMMERCIAL AIRCRAFT SERVICE on the second-floor band
+    m.box(-9.0, -4.0, 11.3, 14.6, az0 + 6.0, az0 + 11.0, DGREY)  # control cab
     m.box(-9.1, -3.9, 12.4, 13.9, az0 + 5.9, az0 + 11.1, GLASS)
     m.box(-9.4, -3.6, 14.6, 14.9, az0 + 5.6, az0 + 11.4, DGREY)
-    # fire escape on the west side: two landings and a ladder
-    m.box(ax0 - 1.6, ax0, 7.2, 7.35, az0 + 3.0, az0 + 5.0, DGREY)
-    m.box(ax0 - 1.6, ax0, 3.9, 4.05, az0 + 3.0, az0 + 5.0, DGREY)
-    m.box(ax0 - 0.12, ax0 - 0.05, 0, 11.0, az0 + 7.2, az0 + 7.3, DGREY)
-    m.box(ax0 - 0.12, ax0 - 0.05, 0, 11.0, az0 + 8.4, az0 + 8.5, DGREY)
+    # landside (east, 109 St) fire escape on the annex (11094273884): two white landings with green doors, a steel ladder and handrails
+    fz0 = az0 + 4.0
+    for ly in (3.9, 7.2):
+        m.box(ax1, ax1 + 1.7, ly, ly + 0.15, fz0, fz0 + 2.2, WHITE)
+        m.box(ax1 + 1.6, ax1 + 1.7, ly + 0.15, ly + 1.1, fz0, fz0 + 2.2, WHITE)  # rail along the outer edge
+        m.box(ax1, ax1 + 0.06, ly + 0.15, ly + 2.3, fz0 + 0.5, fz0 + 1.5, GREEN)  # door onto the landing
+    for rz in (fz0 + 0.3, fz0 + 0.9):
+        m.box(ax1 + 1.45, ax1 + 1.55, 0, 7.4, rz, rz + 0.06, DGREY)  # ladder rails
+    for k in range(24):
+        m.box(ax1 + 1.45, ax1 + 1.55, 0.3 + k * 0.3, 0.34 + k * 0.3, fz0 + 0.3, fz0 + 0.96, DGREY)  # rungs
+    m.box(ax1, ax1 + 0.06, 0, 2.2, az0 + 9.0, az0 + 10.0, GREEN)  # ground-floor door
     # east wing: two storeys, ribbon windows, taller stair tower at its south end
     m.box(26.0, 43.15, 0, 8.6, -20.0, z1, WHITE, top=True)
     m.box(25.8, 43.35, 8.6, 8.9, -20.2, z1 + 0.2, GREEN)
@@ -501,7 +513,8 @@ def hangar11():
     # west annex
     m.box(-43.15, bx0, 0, 6.0, -30.0, -4.0, WHITE)
     rows_x(m, -1, -43.15, -28.0, -6.0, 2.4, 5, 1.2, 1.5)
-    roof_vents(m, [(-12, -10), (-12, 6), (10, -10), (10, 6)], 13.8)
+    for vx, vz in ((-12, -10), (-12, 6), (10, -10), (10, 6)):  # sit on the barrel roof (was a flat 13.8 m, up to 0.9 m above it)
+        roof_vents(m, [(vx, vz)], arch(vx) - 0.15)
     m.mirror_x()
     return m
 
@@ -509,31 +522,34 @@ def hangar11():
 # Hangar 14 (Alberta Aviation Museum) ----------------------------------------------------------
 def hangar14():
     """Hangar 14 (BCATP 1941, Alberta Aviation Museum): white horizontal-siding upper band over a dark teal-green lower wall with
-    glazed panes, museum entrance with a teal canopy on the east front (+Z, heading 90), three apron door bays on the west side.
-    OSM 230718920: 100 (N-S) x 90.8 m."""
+    glazed panes.  The three big apron door bays are on the SOUTH gable end (+Z, heading 180, toward the road; user 2026-10-21), the
+    museum entrance with its teal canopy and glazed band on the east wall (-X).  OSM 230718920: 90.8 (E-W) x 100 (N-S) m."""
     m = Mesh(textured=True)
-    W, D, H = 100.0, 90.8, 8.8
+    W, D, H = 90.8, 100.0, 8.8
     x0, x1, z0, z1 = -W / 2, W / 2, -D / 2, D / 2
     m.box(x0, x1, 0, 4.4, z0, z1, TEAL, top=False)
     m.box(x0, x1, 4.4, H, z0, z1, WHITE, top=True)
     m.box(x0 - 0.2, x1 + 0.2, H, H + 0.5, z0 - 0.2, z1 + 0.2, TEAL)
     m.gable(x0, x1, H + 0.5, 2.6, z0, z1, along_z=True, sw_roof=LROOF, sw_wall=WHITE)
-    # east front: glazed band, sign bars, canopy, entrance
-    rows_z(m, 1, z1, x0 + 3, x1 - 3, 1.0, 14, 4.2, 2.9)
-    for a, b in ((-24, -8), (-4, 8), (12, 26)):
-        m.box(a, b, 5.9, 7.1, z1, z1 + 0.12, TEAL)
-    m.box(-26.0, -14.0, 3.5, 3.8, z1, z1 + 3.2, TEAL)  # entrance canopy
-    m.box(-25.5, -14.5, 3.8, 4.1, z1 + 3.0, z1 + 3.2, WHITE)
-    m.box(14.0, 26.0, 0, 3.0, z1, z1 + 0.15, DGREY)
-    for y in (0.9, 2.1):
-        rows_z(m, 1, z1 + 0.15, 14.5, 25.5, y, 4, 2.0, 0.9)
-    # west apron side: three door bays
-    xs = [x0 + 5 + 30.0 * i for i in range(4)]
-    m.box(xs[0], xs[-1], 0, 7.6, z0 - 0.05, z0, DARK)
-    leaves(m, z0, xs, 0, 7.4, TEAL, front=-1, post=DGREY)
+    # south gable end: three door bays
+    xs = [x0 + 4.9 + 27.0 * i for i in range(4)]
+    m.box(xs[0], xs[-1], 0, 7.6, z1, z1 + 0.05, DARK)
+    leaves(m, z1, xs, 0, 7.4, TEAL, front=1, post=DGREY)
     for a, b in zip(xs[:-1], xs[1:]):
-        rows_z(m, -1, z0 - 0.25, a + 2, b - 2, 4.6, 6, 3.4, 1.8)
-    roof_vents(m, [(-30, -20), (0, -20), (30, -20), (-30, 20), (0, 20), (30, 20)], H + 2.6)
+        rows_z(m, 1, z1 + 0.25, a + 2, b - 2, 4.6, 6, 3.4, 1.8)
+    # east wall (-X): glazed band, sign bars, canopy, entrance (was the "front" at heading 90; z = old x)
+    rows_x(m, -1, x0, z0 + 3, z1 - 3, 1.0, 14, 4.2, 2.9)
+    for a, b in ((-24, -8), (-4, 8), (12, 26)):
+        m.box(x0 - 0.12, x0, 5.9, 7.1, a, b, TEAL)
+    m.box(x0 - 3.2, x0, 3.5, 3.8, -26.0, -14.0, TEAL)  # entrance canopy
+    m.box(x0 - 3.2, x0 - 3.0, 3.8, 4.1, -25.5, -14.5, WHITE)
+    m.box(x0 - 0.15, x0, 0, 3.0, 14.0, 26.0, DGREY)
+    for y in (0.9, 2.1):
+        rows_x(m, -1, x0 - 0.15, 14.5, 25.5, y, 4, 2.0, 0.9)
+    # west wall (+X) and north end: plain glazed bands
+    rows_x(m, 1, x1, z0 + 3, z1 - 3, 1.0, 14, 4.2, 2.9)
+    rows_z(m, -1, z0, x0 + 3, x1 - 3, 1.0, 12, 4.2, 2.9)
+    roof_vents(m, [(-20, -30), (-20, 0), (-20, 30), (20, -30), (20, 0), (20, 30)], H + 2.6)
     m.mirror_x()
     return m
 
@@ -617,6 +633,7 @@ def hangar38():
     for sgn, xp in ((1, x1), (-1, x0)):  # tall narrow window banks along both long walls
         rows_x(m, sgn, xp, z0 + 4.0, z1 - 16.0, 3.5, 13, 0.9, 6.5)
     # long walls: plain, with a couple of doors
+    number_disc(m, 0.0, 10.7, z0, (0, -1), 1.4, "38")  # landside roundel on the back wall (user, 2026-10-21)
     for z in (-8.0, 14.0):
         m.box(x1, x1 + 0.1, 0, 2.2, z, z + 1.1, DGREY)
         m.box(x0 - 0.1, x0, 0, 2.2, z, z + 1.1, DGREY)
@@ -668,6 +685,8 @@ def hangar39():
         rows_x(m, sgn, xp, zb + 4.0, z1 - 6.0, 9.0, 8, 1.6, 1.1)
         rows_x(m, sgn, xp, z0 + 2.0, zb - 2.0, 5.0, 3, 1.6, 1.2)
     number_disc(m, x1, 11.2, z1 - 14.0, (1, 0), 1.4, "39")
+    number_disc(m, 0.0, 8.6, zm + 0.12, (0, 1), 1.4, "39")  # airside roundel on the set-back middle block above the roller door (user, 2026-10-21)
+    number_disc(m, x0 + bw / 2, 12.3, zb, (0, -1), 1.3, "39")  # landside roundel high on the back wall above the low wing
     roof_vents(m, [(-30, -10), (-30, 10), (-30, 28), (30, -10), (30, 10), (30, 28)], wh + rise)
     m.mirror_x()
     return m
@@ -682,11 +701,11 @@ HANGARS = [
     ("cyxd_hangar7", "Hangar 7 (steel blue, OSM 325271251)", hangar7, 53.571617, -113.508378, 270, 36.4, 39.3),
     ("cyxd_hangar8", "Hangar 8 (pale blue-grey with end block, OSM 325268698)", hangar8, 53.570358, -113.508293, 270, 66.3, 52.9),
     ("cyxd_hangar11", "Hangar 11 (USAAF T3 barrel vault with annexes, OSM 325268748)", hangar11, 53.569251, -113.508228, 0, 86.3, 64.0),
-    ("cyxd_hangar14", "Hangar 14 (Alberta Aviation Museum, OSM 230718920)", hangar14, 53.565714, -113.517130, 90, 100.0, 90.8),
+    ("cyxd_hangar14", "Hangar 14 (Alberta Aviation Museum, OSM 230718920)", hangar14, 53.565714, -113.517130, 180, 90.8, 100.0),
     ("cyxd_hangar18", "Hangar 18 (Edmonton Flying Club complex, traced from 2014 imagery)", hangar18, 53.568740, -113.519699, 48, 60.0, 43.0),
     ("cyxd_hangar38", "Hangar 38 (mustard yellow, OSM 230718902)", hangar38, 53.573308, -113.529714, 138, 68.8, 64.0),
     ("cyxd_hangar39", "Hangar 39 (pale-blue double hall, OSM 230718901, beside Hangar 38)", hangar39, 53.574052, -113.528731, 138, 107.0, 90.5),
-    ("cyxd_hangar40", "Hangar 40 (Canadian Helicopters, white roof of OSM 230718900)", hangar40, 53.575205, -113.529565, 318, 38.0, 25.0),
+    ("cyxd_hangar40", "Hangar 40 (Canadian Helicopters, white roof of OSM 230718900)", hangar40, 53.574931, -113.528590, 228, 38.0, 25.0),
     ("cyxd_hangar3", "Hangar 3 (pale-blue flat-roofed hangar, traced from the 2014 imagery)", hangar3, 53.574710, -113.508533, 90, 81.6, 25.7),
     ("cyxd_hangar3_annex", "Hangar 3 tan block annex (south end)", hangar3_annex, 53.574273, -113.508547, 90, 15.9, 13.2),
     ("cyxd_bluehangar", "Dark-blue gabled hangar north of Hangar 3 (5 109 St NW, OSM 325272095)", bluehangar, 53.575629, -113.508404, 180, 20.7, 24.6),

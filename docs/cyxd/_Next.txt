@@ -1,0 +1,10 @@
+Load the photos in `_unsorted photos` into reference for the hangers. Let me know if you can't recognize the hangers in the photos. These are all street level, taken from the landside. This covers hangers 3, 4, 5, 6, 7, 8, 11, 14 (the air museum), 15, 18, 19, 20, 21, the parking garage in front of 21, 37, 38, 39, 40, and a couple of other buildings.  Once the photos are loaded, review the hangers already built to see if they should be updated. Pay attention to window placement, door placement, rondel placement, orientation, and gable structure. Tell me if there is enough to build the three planes on pedestals in front of the air museum. Hanger 4 should face the runway, not "north". Make sure to confirm the footprint of the Edmonton Flying Club (Hanger 18). Hangers 38 and 39 are very tall, and should be placed side by side.
+
+Tell me which building have been built, and which are still outstanding.
+
+
+Building 21 appears to be the old terminal, the the shadow of four jetways can still be seen in aeriel photos. Set up jetways and airliner parking in game to match. Remove existing overlapping parking.
+
+
+
+
