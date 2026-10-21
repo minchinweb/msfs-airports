@@ -57,17 +57,17 @@ Link only: JetPhotos 6026139, 11140, 9456702, 8413417, 11139; archive.org PC0139
 
 ## General Aviation Centre, 77 Airport Road (west side)
 - Saved in `general-aviation-centre-photos/`: Commons EDMONTON_MUNI_(11094203585) and (11094283326), 2013-03-24, CC BY 2.0: two-storey red-brown brick building with a
-  round tan stair tower, "GENERAL AVIATION CENTRE" sign with a plane, glazed ground floor. Not built.
+  round tan stair tower, "GENERAL AVIATION CENTRE" sign with a plane, glazed ground floor. Built as Hangar 40 (2026-10-21).
 
 ## View from the Edmonton Flying Club (Hangar 18)
 - Saved in `hangar18-photos/`: flickr woodhead 11094403683, 14875905273 (the airside view from the club balcony: tower with its annex, the Shell hangar and the Aerocentre).
 
 ## North side of Hangar 9
-- Saved: `hangar9-photos/flickr_woodhead_11094719485.jpg` (long side wall of tall wire-glass steel-sash windows in a grid, a canopy at the top with a green fascia, big door at the left corner, parked cars).
+- Saved: `hangar8-photos/flickr_woodhead_11094719485.jpg` (moved from `hangar9-photos/`; it is Hangar 8) (long side wall of tall wire-glass steel-sash windows in a grid, a canopy at the top with a green fascia, big door at the left corner, parked cars).
 
 ## Shell hangar, Canadian Helicopters hangar
 - Shell hangar: flickr woodhead 11165253083 is already saved as `tower-photos/Edmonton_muni_airport__11165253083_.jpg`; JetPhotos 127275 is link only.
-- Canadian Helicopters hangar: saved `canadian-helicopters-photos/flickr_woodhead_13207130405.jpg` (two-storey red brick office wing with a glass-block entrance and a gabled canopy, next to a grey ribbed hangar wall). Not built.
+- Canadian Helicopters hangar: saved `hangar40-photos/flickr_woodhead_13207130405.jpg` (moved from `canadian-helicopters-photos/`; Hangar 40) (two-storey red brick office wing with a glass-block entrance and a gabled canopy, next to a grey ribbed hangar wall). Not built.
 
 ## JetPhotos (link only)
 Hangar 15 in the background: 6615792. Hangars 4, 5, 6, 7, 8 in the background: 6606461. Unknown building: 6615763, 5881108, 5881112, 532359, 11966.

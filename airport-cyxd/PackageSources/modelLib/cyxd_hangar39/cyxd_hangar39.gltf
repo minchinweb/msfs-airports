@@ -88,26 +88,6 @@
      "indices": 8,
      "mode": 4,
      "material": 5
-    },
-    {
-     "attributes": {
-      "POSITION": 0,
-      "NORMAL": 1,
-      "TEXCOORD_0": 2
-     },
-     "indices": 9,
-     "mode": 4,
-     "material": 6
-    },
-    {
-     "attributes": {
-      "POSITION": 0,
-      "NORMAL": 1,
-      "TEXCOORD_0": 2
-     },
-     "indices": 10,
-     "mode": 4,
-     "material": 7
     }
    ]
   }
@@ -154,7 +134,7 @@
    }
   },
   {
-   "name": "cyxd_ribbed_green",
+   "name": "cyxd_ribbed_tan",
    "pbrMetallicRoughness": {
     "baseColorTexture": {
      "index": 4
@@ -164,30 +144,10 @@
    }
   },
   {
-   "name": "cyxd_ribbed_steel",
-   "pbrMetallicRoughness": {
-    "baseColorTexture": {
-     "index": 5
-    },
-    "metallicFactor": 0.0,
-    "roughnessFactor": 0.9
-   }
-  },
-  {
-   "name": "cyxd_ribbed_tan",
-   "pbrMetallicRoughness": {
-    "baseColorTexture": {
-     "index": 6
-    },
-    "metallicFactor": 0.0,
-    "roughnessFactor": 0.9
-   }
-  },
-  {
    "name": "cyxd_ribbed_white",
    "pbrMetallicRoughness": {
     "baseColorTexture": {
-     "index": 7
+     "index": 5
     },
     "metallicFactor": 0.0,
     "roughnessFactor": 0.9
@@ -218,14 +178,6 @@
   {
    "sampler": 1,
    "source": 5
-  },
-  {
-   "sampler": 1,
-   "source": 6
-  },
-  {
-   "sampler": 1,
-   "source": 7
   }
  ],
  "samplers": [
@@ -254,12 +206,6 @@
    "uri": "cyxd_ribbed_blue.png"
   },
   {
-   "uri": "cyxd_ribbed_green.png"
-  },
-  {
-   "uri": "cyxd_ribbed_steel.png"
-  },
-  {
    "uri": "cyxd_ribbed_tan.png"
   },
   {
@@ -270,35 +216,35 @@
   {
    "bufferView": 0,
    "componentType": 5126,
-   "count": 1212,
+   "count": 1812,
    "type": "VEC3",
    "min": [
-    -28.0,
+    -53.71,
     0,
-    -49.8
+    -45.35
    ],
    "max": [
-    28.21,
-    15.3,
-    40.0
+    53.56,
+    17.9,
+    46.35
    ]
   },
   {
    "bufferView": 1,
    "componentType": 5126,
-   "count": 1212,
+   "count": 1812,
    "type": "VEC3"
   },
   {
    "bufferView": 2,
    "componentType": 5126,
-   "count": 1212,
+   "count": 1812,
    "type": "VEC2"
   },
   {
    "bufferView": 3,
    "componentType": 5123,
-   "count": 1122,
+   "count": 2022,
    "type": "SCALAR"
   },
   {
@@ -316,31 +262,19 @@
   {
    "bufferView": 6,
    "componentType": 5123,
-   "count": 84,
+   "count": 204,
    "type": "SCALAR"
   },
   {
    "bufferView": 7,
    "componentType": 5123,
-   "count": 240,
+   "count": 144,
    "type": "SCALAR"
   },
   {
    "bufferView": 8,
    "componentType": 5123,
-   "count": 24,
-   "type": "SCALAR"
-  },
-  {
-   "bufferView": 9,
-   "componentType": 5123,
-   "count": 96,
-   "type": "SCALAR"
-  },
-  {
-   "bufferView": 10,
-   "componentType": 5123,
-   "count": 216,
+   "count": 312,
    "type": "SCALAR"
   }
  ],
@@ -348,63 +282,53 @@
   {
    "buffer": 0,
    "byteOffset": 0,
-   "byteLength": 14544
+   "byteLength": 21744
   },
   {
    "buffer": 0,
-   "byteOffset": 14544,
-   "byteLength": 14544
+   "byteOffset": 21744,
+   "byteLength": 21744
   },
   {
    "buffer": 0,
-   "byteOffset": 29088,
-   "byteLength": 9696
+   "byteOffset": 43488,
+   "byteLength": 14496
   },
   {
    "buffer": 0,
-   "byteOffset": 38784,
-   "byteLength": 2244
+   "byteOffset": 57984,
+   "byteLength": 4044
   },
   {
    "buffer": 0,
-   "byteOffset": 41028,
+   "byteOffset": 62028,
    "byteLength": 96
   },
   {
    "buffer": 0,
-   "byteOffset": 41124,
+   "byteOffset": 62124,
    "byteLength": 24
   },
   {
    "buffer": 0,
-   "byteOffset": 41148,
-   "byteLength": 168
+   "byteOffset": 62148,
+   "byteLength": 408
   },
   {
    "buffer": 0,
-   "byteOffset": 41316,
-   "byteLength": 480
+   "byteOffset": 62556,
+   "byteLength": 288
   },
   {
    "buffer": 0,
-   "byteOffset": 41796,
-   "byteLength": 48
-  },
-  {
-   "buffer": 0,
-   "byteOffset": 41844,
-   "byteLength": 192
-  },
-  {
-   "buffer": 0,
-   "byteOffset": 42036,
-   "byteLength": 432
+   "byteOffset": 62844,
+   "byteLength": 624
   }
  ],
  "buffers": [
   {
    "uri": "cyxd_hangar39.bin",
-   "byteLength": 42468
+   "byteLength": 63468
   }
  ]
 }

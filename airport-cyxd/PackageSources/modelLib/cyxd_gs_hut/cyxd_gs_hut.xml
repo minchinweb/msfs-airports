@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ModelInfo guid="{085C7E1B-CC88-51A8-AEF7-C2E9FBFD278C}" version="1.1">
+	<LODS>
+		<LOD minSize="0" ModelFile="cyxd_gs_hut.gltf"/>
+	</LODS>
+</ModelInfo>

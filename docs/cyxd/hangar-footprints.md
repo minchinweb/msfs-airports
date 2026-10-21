@@ -1,6 +1,8 @@
-# CYXD hangars: footprints, method and open questions (2026-10-12)
+# CYXD hangars: footprints, method and open questions (2026-10-12, updated 2026-10-21)
 
-`airport-cyxd/tools/hangars.py` builds Hangars 4, 5, 6, 7, 8, 11, 14, 18, 38 and 39 (and a Hangar 9 model that is **not placed yet**).
+**Update 2026-10-21 (user corrections, see `street-view-review.md`):** Hangar 39 is the big pale-blue double hall (OSM 230718901, 107 x 90.5 m) next to Hangar 38, not OSM 230718900; that way holds Hangar 40 (Canadian Helicopters, white roof at its NW end). The "Hangar 9" photos are Hangar 8, so there is no Hangar 9 model or photo. Hangar 3 (81.6 x 25.7 m, traced from the 2014 imagery), the dark-blue hangar north of it (OSM 325272095) and Hangar 20 (the Esso building, traced) are now built. The table rows below are updated; the older reasoning notes further down are kept for the record.
+
+`airport-cyxd/tools/hangars.py` builds Hangars 3 (+ tan annex), 4, 5, 6, 7, 8, 11, 14, 18, 20, 38, 39, 40 and the dark-blue hangar north of Hangar 3.
 `gen_buildings.py` calls `hangars.place()`; run `python -I airport-cyxd/tools/gen_buildings.py` from the repo root to regenerate.
 
 ## Where the footprints come from
@@ -22,12 +24,16 @@
 | 6 | 325267780 | 53.572135, -113.508405 | 270 | 41.9 x 46.2 | medium-high (white roof, NW of the NAIT parkade) |
 | 7 | 325271251 | 53.571617, -113.508378 | 270 | 36.4 x 39.3 | medium-high (steel-blue roof, directly NW of the parkade) |
 | 8 | 325268698 | 53.570358, -113.508293 | 270 | 66.3 x 52.9 | medium (the parkade stands just NE of it, as in the "8" photos) |
-| 9 | none | - | - | est. 52 x 48 | **unknown, not placed** |
+| 3 | traced (OSM 325273617 is a short trace) | 53.574710, -113.508533 | 90 (E, landside) | 81.6 x 25.7 | high (roundel in photos 38-45); length from the 2014 imagery roof, OSM says 76 m |
+| - | 325272095 | 53.575629, -113.508404 | 180 (S) | 20.7 x 24.6 | the dark-blue gabled hangar at 5 109 St; no number visible; door end assumed to face south |
+| 9 | none | - | - | - | **no photo, no footprint** (the old "Hangar 9" photos are Hangar 8) |
+| 20 | not in OSM 2016 | 53.569788, -113.521578 | 228 (SW) | 45 x 45 upper tier + 8-10 m lower tier | the Esso building (user), measured on the 2014 imagery; 150 m SE of the old terminal |
 | 11 | 325268748 | 53.569251, -113.508228 | 0 (N) | 86.3 x 64.0 | high (same spot as the 1944 USAAF "T3" box; barrel-vault shadow on its north end; annexes) |
 | 14 | 230718920 | 53.565714, -113.517130 | 90 (E) | 100.0 x 90.8 | high (OSM "Hangar #14") |
 | 18 | traced | 53.568740, -113.519699 | 48 (NE) | 60 x 43 (+ rear wing) | medium (position from the 2014 imagery, 78 m NW of the tower) |
 | 38 | 230718902 | 53.573308, -113.529714 | 138 (SE) | 68.8 x 64.0 | medium (see below) |
-| 39 | 230718900 | 53.574982, -113.529363 | 138 (SE) | 56.0 x 79.0 | medium (12009 121 St NW is 2 m west of it) |
+| 39 | 230718901 | 53.574052, -113.528731 | 138 (SE) | 107.0 x 90.5 | medium-high: the pale-blue double hall, adjacent to the olive Hangar 38 in photo 26; Hangar 40 is at its NW (left) end in photo 28 |
+| 40 | 230718900 (white NW part) | 53.575205, -113.529565 | 318 (NW, to the car park) | 38 x 25 | high (the user; roundel, brick office and white block in photos 29-31); the blue-grey gabled hall at the SE end of that OSM way is not built |
 
 Old generic placements removed from the generator (`SKIP`): "Hangar 11", "Hangar 14", "USAAF hangar T1" (1944-photo box about 40 m north of Hangar 7) and
 "USAAF hangar T2" (a box on Hangar 8's spot). The three USAAF boxes land on the 2014 buildings that became Hangars 7, 8 and 11.

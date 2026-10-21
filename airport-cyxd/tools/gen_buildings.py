@@ -25,12 +25,14 @@ END = "<!-- END historic buildings -->"
 # palette swatches (u index) -----------------------------------------------------------------
 WALL, ROOF, METAL, DARK, BRICK, TRIM, RED, WHITE, GREY, SALMON, BLUE, YELLOW, GLASS, DGREY, CREAM, NAVY, PANEL, PBLUE, SLATE, DOORG = range(20)
 GREEN, MUSTARD, STEEL, TAN, BRONZE, RWHITE, TEAL, YELLOWR, BRICKD, MAUVE, PEACH, LROOF = range(20, 32)
+TANBLK, NAVYB, PBFLAT, BEIGE = range(32, 36)  # concrete-block tan, dark-blue siding, flat pale blue, Esso beige
 PALETTE = [(178, 172, 160), (70, 66, 64), (122, 130, 130), (38, 40, 46), (150, 88, 72), (204, 200, 190), (196, 52, 40), (236, 234, 230),
            (168, 175, 170), (214, 122, 104), (28, 86, 160), (244, 204, 40), (48, 66, 76), (96, 100, 104),
            (214, 208, 190), (46, 60, 84), (228, 224, 212),
            (150, 186, 214), (96, 118, 140), (196, 192, 182),
            (62, 104, 70), (190, 164, 66), (128, 164, 190), (186, 166, 134), (84, 70, 60), (232, 232, 228), (40, 92, 88),
-           (232, 220, 150), (150, 70, 56), (150, 122, 128), (204, 160, 130), (206, 210, 212)]
+           (232, 220, 150), (150, 70, 56), (150, 122, 128), (204, 160, 130), (206, 210, 212),
+           (178, 160, 118), (26, 52, 122), (146, 176, 210), (196, 184, 150)]
 SW = 16
 RIB_TEX = {CREAM: "ribbed", PBLUE: "ribbed_blue", GREEN: "ribbed_green", MUSTARD: "ribbed_mustard", STEEL: "ribbed_steel", TAN: "ribbed_tan",
            RWHITE: "ribbed_white", YELLOWR: "ribbed_yellow", TEAL: "ribbed_teal", BRICKD: "brick"}
@@ -888,10 +890,13 @@ def hangar15_wing():
     x0, x1, z0, z1 = -W / 2, W / 2, -D / 2, D / 2
     m.box(x0, x1, 0, H, z0, z1, PBLUE, top=False)
     m.box(x0 - 0.1, x1 + 0.1, H - 1.2, H + 0.3, z0 - 0.1, z1 + 0.1, PANEL)
-    m.box(x0, x1, 0, 4.8, z1, z1 + 0.2, SLATE)
-    for i in range(8):
-        m.window((0, 0, 1), (x0 + 0.4 + i * W / 8, 3.3, z1 + 0.2), (1, 0, 0), W / 8 - 0.8, 1.0)
-        m.box(x0 + i * W / 8 - 0.06, x0 + i * W / 8 + 0.06, 0, 4.8, z1 + 0.2, z1 + 0.25, DGREY)
+    # airside face as seen from the NAIT parkade roof (west-lineup photo, 2014): pale blue-grey wall, a central cluster of tall window
+    # bays with a porthole at its SE end, one more window near the NW end; no dark doors visible
+    for k in range(3):
+        for t in range(3):
+            m.window((0, 0, 1), (6.0 - k * 5.6 - 0.1, 0.9 + t * 1.5, z1), (-1, 0, 0), 4.4, 1.3)
+    m.window((0, 0, 1), (-19.0, 1.6, z1), (1, 0, 0), 2.2, 1.0)
+    m.box(7.6 - 0.45, 7.6 + 0.45, 2.4, 3.3, z1, z1 + 0.06, DARK)  # porthole (square stand-in)
     number_disc(m, 0.0, 5.35, z1 + 0.1, (0, 1), 0.65, "15")  # on the parapet band above the doors, facing the taxiway
     m.mirror_x()
     return m

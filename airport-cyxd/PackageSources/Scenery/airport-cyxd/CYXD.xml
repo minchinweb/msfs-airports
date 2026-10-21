@@ -1,5 +1,6 @@
 <?xml version="1.0"?>
 <FSData version="9.0">
+	<!-- old terminal stands (Building 21): four jetway stands from the 2014 stains; see docs/cyxd/building21-terminal-photos/SOURCES-streetview.md -->
 	<SceneryObject groupIndex="3" lat="53.56715478715844" lon="-113.51394313826188" alt="0.00000000000000" pitch="0.000000" bank="0.000000" heading="-179.999995" imageComplexity="VERY_SPARSE" altitudeIsAgl="TRUE" snapToGround="TRUE" snapToNormal="FALSE">
 		<Windsock poleHeight="4.572000" sockLength="2.743200" lighted="FALSE" containerTitle="Windsock"/>
 	</SceneryObject>
@@ -403,9 +404,12 @@
 		<TaxiwayParking parentGroupID="3" groupIndex="28" index="76" type="RAMP_GA_MEDIUM" lat="53.57353080835004" lon="-113.52821936369334" heading="330.165131" radius="12.000000" name="PARKING" number="12" suffix="NONE" numberMarking="FALSE" has3DMesh="TRUE" drawDirt="TRUE" numberBiasX="0.000000" numberBiasZ="0.000000" numberHeading="0.000000"/>
 		<TaxiwayParking parentGroupID="3" groupIndex="29" index="77" type="RAMP_GA_MEDIUM" lat="53.57326828275612" lon="-113.52867409019328" heading="318.761719" radius="12.000000" name="PARKING" number="11" suffix="NONE" numberMarking="FALSE" has3DMesh="TRUE" drawDirt="TRUE" numberBiasX="0.000000" numberBiasZ="0.000000" numberHeading="0.000000"/>
 		<TaxiwayParking parentGroupID="3" groupIndex="30" index="78" type="RAMP_GA_MEDIUM" lat="53.57302193823054" lon="-113.52914792417566" heading="307.268860" radius="12.000000" name="PARKING" number="10" suffix="NONE" numberMarking="FALSE" has3DMesh="TRUE" drawDirt="TRUE" numberBiasX="0.000000" numberBiasZ="0.000000" numberHeading="0.000000"/>
-		<TaxiwayParking parentGroupID="3" groupIndex="31" index="79" type="GATE_MEDIUM" lat="53.57197114817801" lon="-113.52423450186997" heading="148.263901" radius="24.951977" name="GATE" number="7" suffix="NONE" numberMarking="TRUE" has3DMesh="TRUE" drawDirt="TRUE" numberBiasX="0.000000" numberBiasZ="0.000000" numberHeading="0.000000"/>
+		<TaxiwayParking parentGroupID="3" groupIndex="31" index="79" type="GATE_SMALL" lat="53.57145054883701" lon="-113.52413985891459" heading="136.400000" radius="15.000000" name="GATE" number="7" suffix="NONE" numberMarking="TRUE" has3DMesh="TRUE" drawDirt="TRUE" passengerAccessType="JETWAY" numberBiasX="0.000000" numberBiasZ="0.000000" numberHeading="0.000000"/>
 		<TaxiwayParking parentGroupID="3" groupIndex="32" index="80" type="GATE_MEDIUM" lat="53.57167111245155" lon="-113.52505119844825" heading="146.464355" radius="22.000000" name="GATE" number="8" suffix="NONE" numberMarking="TRUE" has3DMesh="TRUE" drawDirt="TRUE" numberBiasX="0.000000" numberBiasZ="0.000000" numberHeading="0.000000"/>
 		<TaxiwayParking parentGroupID="3" groupIndex="33" index="81" type="GATE_MEDIUM" lat="53.57139634076817" lon="-113.52591600927434" heading="144.764450" radius="22.000000" name="GATE" number="9" suffix="NONE" numberMarking="TRUE" has3DMesh="TRUE" drawDirt="TRUE" numberBiasX="0.000000" numberBiasZ="0.000000" numberHeading="0.000000"/>
+		<TaxiwayParking parentGroupID="3" groupIndex="34" index="118" type="GATE_SMALL" lat="53.57160648280557" lon="-113.52262398950295" heading="231.500000" radius="15.000000" name="GATE" number="10" suffix="NONE" numberMarking="TRUE" has3DMesh="TRUE" drawDirt="TRUE" passengerAccessType="JETWAY" numberBiasX="0.000000" numberBiasZ="0.000000" numberHeading="0.000000"/>
+		<TaxiwayParking parentGroupID="3" groupIndex="35" index="119" type="GATE_SMALL" lat="53.57136095543358" lon="-113.52214443393071" heading="228.300000" radius="15.000000" name="GATE" number="11" suffix="NONE" numberMarking="TRUE" has3DMesh="TRUE" drawDirt="TRUE" passengerAccessType="JETWAY" numberBiasX="0.000000" numberBiasZ="0.000000" numberHeading="0.000000"/>
+		<TaxiwayParking parentGroupID="3" groupIndex="36" index="120" type="GATE_SMALL" lat="53.57111525446931" lon="-113.52192371126755" heading="262.000000" radius="15.000000" name="GATE" number="12" suffix="NONE" numberMarking="TRUE" has3DMesh="TRUE" drawDirt="TRUE" passengerAccessType="JETWAY" numberBiasX="0.000000" numberBiasZ="0.000000" numberHeading="0.000000"/>
 		<TaxiName index="0" name=""/>
 		<TaxiName index="1" name="A"/>
 		<TaxiName index="2" name="B"/>
@@ -448,6 +452,9 @@
 		<TaxiwayPath parentGroupID="4" groupIndex="45" type="PARKING" surface="{85D02B2B-08A1-452E-AB07-6D5AE7F52884}" centerLine="TRUE" start="85" end="79" width="30.000000" weightLimit="0" name="0" drawSurface="TRUE" drawDetail="TRUE" groundMerging="TRUE" excludeVegetationAround="TRUE" excludeVegetationInside="TRUE"/>
 		<TaxiwayPath parentGroupID="4" groupIndex="44" type="PARKING" surface="{85D02B2B-08A1-452E-AB07-6D5AE7F52884}" centerLine="TRUE" start="84" end="80" width="30.000000" weightLimit="0" name="0" drawSurface="TRUE" drawDetail="TRUE" groundMerging="TRUE" excludeVegetationAround="TRUE" excludeVegetationInside="TRUE"/>
 		<TaxiwayPath parentGroupID="4" groupIndex="39" type="PARKING" surface="{85D02B2B-08A1-452E-AB07-6D5AE7F52884}" centerLine="TRUE" start="83" end="81" width="30.000000" weightLimit="0" name="0" drawSurface="TRUE" drawDetail="TRUE" groundMerging="TRUE" excludeVegetationAround="TRUE" excludeVegetationInside="TRUE"/>
+		<TaxiwayPath parentGroupID="4" groupIndex="133" type="PARKING" surface="{85D02B2B-08A1-452E-AB07-6D5AE7F52884}" centerLine="FALSE" start="22" end="118" width="30.000000" weightLimit="0" name="0" drawSurface="FALSE" drawDetail="FALSE" groundMerging="TRUE" excludeVegetationAround="TRUE" excludeVegetationInside="TRUE"/>
+		<TaxiwayPath parentGroupID="4" groupIndex="134" type="PARKING" surface="{85D02B2B-08A1-452E-AB07-6D5AE7F52884}" centerLine="FALSE" start="22" end="119" width="30.000000" weightLimit="0" name="0" drawSurface="FALSE" drawDetail="FALSE" groundMerging="TRUE" excludeVegetationAround="TRUE" excludeVegetationInside="TRUE"/>
+		<TaxiwayPath parentGroupID="4" groupIndex="135" type="PARKING" surface="{85D02B2B-08A1-452E-AB07-6D5AE7F52884}" centerLine="FALSE" start="23" end="120" width="30.000000" weightLimit="0" name="0" drawSurface="FALSE" drawDetail="FALSE" groundMerging="TRUE" excludeVegetationAround="TRUE" excludeVegetationInside="TRUE"/>
 		<TaxiwayPath parentGroupID="4" groupIndex="127" type="TAXI" surface="{85D02B2B-08A1-452E-AB07-6D5AE7F52884}" centerLine="TRUE" start="22" end="23" width="30.000000" weightLimit="0" name="0" drawSurface="TRUE" drawDetail="TRUE" groundMerging="TRUE" excludeVegetationAround="TRUE" excludeVegetationInside="TRUE"/>
 		<TaxiwayPath parentGroupID="4" groupIndex="93" type="TAXI" surface="{85D02B2B-08A1-452E-AB07-6D5AE7F52884}" centerLine="TRUE" start="32" end="23" width="30.000000" weightLimit="0" name="0" drawSurface="TRUE" drawDetail="TRUE" groundMerging="TRUE" excludeVegetationAround="TRUE" excludeVegetationInside="TRUE"/>
 		<TaxiwayPath parentGroupID="4" groupIndex="94" type="TAXI" surface="{85D02B2B-08A1-452E-AB07-6D5AE7F52884}" centerLine="TRUE" start="34" end="37" width="60.000000" weightLimit="0" name="0" drawSurface="TRUE" drawDetail="TRUE" groundMerging="TRUE" excludeVegetationAround="TRUE" excludeVegetationInside="TRUE"/>
@@ -669,9 +676,9 @@
 			</SceneryObject>
 		</Jetway>
 		<Jetway gateName="GATE" parkingNumber="7" suffix="NONE">
-			<!--SceneryObject name: Jetway_Megalink-->
-			<SceneryObject lat="53.57168199305370" lon="-113.52412867006376" alt="0.00000000000000" pitch="0.000451" bank="-0.000451" heading="-143.792421" imageComplexity="VERY_SPARSE" altitudeIsAgl="TRUE" snapToGround="TRUE" snapToNormal="FALSE">
-				<LibraryObject name="{6D503EB6-F902-4249-951C-608989E705B6}" scale="0.990000"/>
+			<!--SceneryObject name: Jetway_Link-->
+			<SceneryObject lat="53.57128791591808" lon="-113.52387905208172" alt="0.00000000000000" pitch="0.000000" bank="0.000000" heading="136.400000" imageComplexity="VERY_SPARSE" altitudeIsAgl="TRUE" snapToGround="TRUE" snapToNormal="FALSE">
+				<LibraryObject name="{43D4E862-3C41-4E16-802C-75CF609A74C2}" scale="1.000000"/>
 			</SceneryObject>
 		</Jetway>
 		<Jetway gateName="GATE" parkingNumber="8" suffix="NONE">
@@ -684,6 +691,24 @@
 			<!--SceneryObject name: Jetway_Microlink-->
 			<SceneryObject lat="53.57111794781932" lon="-113.52598302393831" alt="0.00000000000000" pitch="0.000000" bank="0.000000" heading="144.764450" imageComplexity="VERY_SPARSE" altitudeIsAgl="TRUE" snapToGround="TRUE" snapToNormal="FALSE">
 				<LibraryObject name="{DD5801B6-DFAF-4B88-BC77-CFD13C542C9A}" scale="1.000000"/>
+			</SceneryObject>
+		</Jetway>
+		<Jetway gateName="GATE" parkingNumber="10" suffix="NONE">
+			<!--SceneryObject name: Jetway_Link-->
+			<SceneryObject lat="53.57146667984190" lon="-113.52291996364785" alt="0.00000000000000" pitch="0.000000" bank="0.000000" heading="231.500000" imageComplexity="VERY_SPARSE" altitudeIsAgl="TRUE" snapToGround="TRUE" snapToNormal="FALSE">
+				<LibraryObject name="{43D4E862-3C41-4E16-802C-75CF609A74C2}" scale="1.000000"/>
+			</SceneryObject>
+		</Jetway>
+		<Jetway gateName="GATE" parkingNumber="11" suffix="NONE">
+			<!--SceneryObject name: Jetway_Link-->
+			<SceneryObject lat="53.57121155946820" lon="-113.52242680461087" alt="0.00000000000000" pitch="0.000000" bank="0.000000" heading="228.300000" imageComplexity="VERY_SPARSE" altitudeIsAgl="TRUE" snapToGround="TRUE" snapToNormal="FALSE">
+				<LibraryObject name="{43D4E862-3C41-4E16-802C-75CF609A74C2}" scale="1.000000"/>
+			</SceneryObject>
+		</Jetway>
+		<Jetway gateName="GATE" parkingNumber="12" suffix="NONE">
+			<!--SceneryObject name: Jetway_Link-->
+			<SceneryObject lat="53.57108399928135" lon="-113.52229822019940" alt="0.00000000000000" pitch="0.000000" bank="0.000000" heading="262.000000" imageComplexity="VERY_SPARSE" altitudeIsAgl="TRUE" snapToGround="TRUE" snapToNormal="FALSE">
+				<LibraryObject name="{43D4E862-3C41-4E16-802C-75CF609A74C2}" scale="1.000000"/>
 			</SceneryObject>
 		</Jetway>
 		<Aprons>
@@ -716,6 +741,12 @@
 				<Vertex lat="53.57838579211868" lon="-113.52105200266257"/>
 				<Vertex lat="53.57992100030240" lon="-113.52105202656344"/>
 				<Vertex lat="53.57992100011037" lon="-113.51969862987464"/>
+			</Apron>
+			<Apron parentGroupID="3" groupIndex="5" surface="{85D02B2B-08A1-452E-AB07-6D5AE7F52884}" drawSurface="TRUE" drawDetail="TRUE" localUV="TRUE" stretchUV="TRUE" flipUV="FALSE" priority="1" tiling="25.000000" heading="2.652900" falloff="0.100000" opacity="255" groundMerging="TRUE" excludeVegetationAround="TRUE" excludeVegetationInside="TRUE" isRectangle="TRUE">
+				<Vertex lat="53.57158565409534" lon="-113.52302649316186"/>
+				<Vertex lat="53.57087180857470" lon="-113.52238731607778"/>
+				<Vertex lat="53.57116702066053" lon="-113.52145233598817"/>
+				<Vertex lat="53.57188086618117" lon="-113.52209151307225"/>
 			</Apron>
 		</Aprons>
 		<PaintedElements/>
@@ -997,8 +1028,8 @@
 	<SceneryObject lat="53.56698272" lon="-113.51681992" alt="0.00000000000000" pitch="0.000000" bank="0.000000" heading="48" imageComplexity="VERY_SPARSE" altitudeIsAgl="TRUE" snapToGround="TRUE" snapToNormal="FALSE">
 		<LibraryObject name="{4815EE49-59F2-5E02-817D-6AE3A5B19043}" scale="1.000000"/>
 	</SceneryObject>
-	<!-- Hangar 4 (yellow, arched door, OSM 325273554) -->
-	<SceneryObject lat="53.57345700" lon="-113.50843000" alt="0.00000000000000" pitch="0.000000" bank="0.000000" heading="0" imageComplexity="VERY_SPARSE" altitudeIsAgl="TRUE" snapToGround="TRUE" snapToNormal="FALSE">
+	<!-- Hangar 4 (yellow, arched door, faces the runway, OSM 325273554) -->
+	<SceneryObject lat="53.57345700" lon="-113.50843000" alt="0.00000000000000" pitch="0.000000" bank="0.000000" heading="270" imageComplexity="VERY_SPARSE" altitudeIsAgl="TRUE" snapToGround="TRUE" snapToNormal="FALSE">
 		<LibraryObject name="{F3C53FAB-B7DA-5284-9370-83D8E023CC64}" scale="1.000000"/>
 	</SceneryObject>
 	<!-- Hangar 5 (tan, bronze office, OSM 325270299) -->
@@ -1033,9 +1064,37 @@
 	<SceneryObject lat="53.57330800" lon="-113.52971400" alt="0.00000000000000" pitch="0.000000" bank="0.000000" heading="138" imageComplexity="VERY_SPARSE" altitudeIsAgl="TRUE" snapToGround="TRUE" snapToNormal="FALSE">
 		<LibraryObject name="{F21D551C-71C3-53D7-8F4C-7A93119A0E59}" scale="1.000000"/>
 	</SceneryObject>
-	<!-- Hangar 39 (old PWA hangar, OSM 230718900) -->
-	<SceneryObject lat="53.57498200" lon="-113.52936300" alt="0.00000000000000" pitch="0.000000" bank="0.000000" heading="138" imageComplexity="VERY_SPARSE" altitudeIsAgl="TRUE" snapToGround="TRUE" snapToNormal="FALSE">
+	<!-- Hangar 39 (pale-blue double hall, OSM 230718901, beside Hangar 38) -->
+	<SceneryObject lat="53.57405200" lon="-113.52873100" alt="0.00000000000000" pitch="0.000000" bank="0.000000" heading="138" imageComplexity="VERY_SPARSE" altitudeIsAgl="TRUE" snapToGround="TRUE" snapToNormal="FALSE">
 		<LibraryObject name="{3BE3060C-8E60-5E6B-B37F-53B50F50FD0B}" scale="1.000000"/>
+	</SceneryObject>
+	<!-- Hangar 40 (Canadian Helicopters, white roof of OSM 230718900) -->
+	<SceneryObject lat="53.57520500" lon="-113.52956500" alt="0.00000000000000" pitch="0.000000" bank="0.000000" heading="318" imageComplexity="VERY_SPARSE" altitudeIsAgl="TRUE" snapToGround="TRUE" snapToNormal="FALSE">
+		<LibraryObject name="{5AF9C0C7-F582-55D5-98C8-01608ED24982}" scale="1.000000"/>
+	</SceneryObject>
+	<!-- Hangar 3 (pale-blue flat-roofed hangar, traced from the 2014 imagery) -->
+	<SceneryObject lat="53.57471000" lon="-113.50853300" alt="0.00000000000000" pitch="0.000000" bank="0.000000" heading="90" imageComplexity="VERY_SPARSE" altitudeIsAgl="TRUE" snapToGround="TRUE" snapToNormal="FALSE">
+		<LibraryObject name="{479FF4D0-1BB7-5420-BA36-38F85A85C25F}" scale="1.000000"/>
+	</SceneryObject>
+	<!-- Hangar 3 tan block annex (south end) -->
+	<SceneryObject lat="53.57427300" lon="-113.50854700" alt="0.00000000000000" pitch="0.000000" bank="0.000000" heading="90" imageComplexity="VERY_SPARSE" altitudeIsAgl="TRUE" snapToGround="TRUE" snapToNormal="FALSE">
+		<LibraryObject name="{7635A678-D432-577A-93A5-A4E73D32F767}" scale="1.000000"/>
+	</SceneryObject>
+	<!-- Dark-blue gabled hangar north of Hangar 3 (5 109 St NW, OSM 325272095) -->
+	<SceneryObject lat="53.57562900" lon="-113.50840400" alt="0.00000000000000" pitch="0.000000" bank="0.000000" heading="180" imageComplexity="VERY_SPARSE" altitudeIsAgl="TRUE" snapToGround="TRUE" snapToNormal="FALSE">
+		<LibraryObject name="{D1DDA3BF-59AD-5E35-AFF0-465A1358AB34}" scale="1.000000"/>
+	</SceneryObject>
+	<!-- Hangar 19 (low tan wings with a brick centre, 62-69 Airport Rd; traced from the 2014 imagery) -->
+	<SceneryObject lat="53.56915800" lon="-113.52058200" alt="0.00000000000000" pitch="0.000000" bank="0.000000" heading="232" imageComplexity="VERY_SPARSE" altitudeIsAgl="TRUE" snapToGround="TRUE" snapToNormal="FALSE">
+		<LibraryObject name="{770F7EA9-E5C1-548B-B60E-A22FF0E709BB}" scale="1.000000"/>
+	</SceneryObject>
+	<!-- ILS glideslope hut with checkerboard paint (infield, 16/34 runway side; west-lineup photo) -->
+	<SceneryObject lat="53.56898300" lon="-113.51100000" alt="0.00000000000000" pitch="0.000000" bank="0.000000" heading="0" imageComplexity="VERY_SPARSE" altitudeIsAgl="TRUE" snapToGround="TRUE" snapToNormal="FALSE">
+		<LibraryObject name="{085C7E1B-CC88-51A8-AEF7-C2E9FBFD278C}" scale="1.000000"/>
+	</SceneryObject>
+	<!-- Hangar 20 (Esso building, 83 Airport Rd NW; traced from the 2014 imagery) -->
+	<SceneryObject lat="53.56978800" lon="-113.52157800" alt="0.00000000000000" pitch="0.000000" bank="0.000000" heading="228" imageComplexity="VERY_SPARSE" altitudeIsAgl="TRUE" snapToGround="TRUE" snapToNormal="FALSE">
+		<LibraryObject name="{AFF6355C-1769-52FF-8E53-4E640F470A4E}" scale="1.000000"/>
 	</SceneryObject>
 	<!-- XD NDB station (Street View 2009): fenced lot, mast, shed -->
 	<SceneryObject lat="53.6436004638671900" lon="-113.5130004882812500" alt="0.00000000000000" pitch="0.000000" bank="0.000000" heading="0" imageComplexity="VERY_SPARSE" altitudeIsAgl="TRUE" snapToGround="TRUE" snapToNormal="FALSE">
@@ -1233,17 +1292,17 @@
 		<Vertex lat="53.56683355876135" lon="-113.51632476521377"/>
 		<Vertex lat="53.56729134132021" lon="-113.51701745746909"/>
 	</Polygon>
-	<Polygon version="0.4.0" displayName="No generated buildings: Hangar 4 (yellow, arched door, OSM 325273554)" parentGroupID="6" altitude="667.68023681640625">
-		<Attribute name="UniqueGUID" guid="{359C73E8-06BE-4FB2-ABCB-EC942F7761D0}" type="GUID" value="{58507B51-9BA0-51F3-BDE3-E45E43041EBA}"/>
+	<Polygon version="0.4.0" displayName="No generated buildings: Hangar 4 (yellow, arched door, faces the runway, OSM 3252735" parentGroupID="6" altitude="667.68023681640625">
+		<Attribute name="UniqueGUID" guid="{359C73E8-06BE-4FB2-ABCB-EC942F7761D0}" type="GUID" value="{1CF21384-C775-5F95-BC88-7C4EF8075FDA}"/>
 		<Attribute name="ExcludeDetectedBuildings" guid="{5C1A2387-1F07-47DF-A569-962CF6258E55}" type="UINT8" value="1"/>
 		<Attribute name="ExcludeOSMBuildings" guid="{F3C2635D-9F2F-458F-8663-90B3837BED09}" type="UINT8" value="1"/>
 		<Attribute name="ExcludeMSBuildings" guid="{F78A3074-8AD5-4B8B-92C4-C1C948BB7AA5}" type="UINT8" value="1"/>
 		<Attribute name="ExcludeTIN" guid="{18B58CBF-AE02-4A19-8AA9-3809E8E73400}" type="UINT8" value="1"/>
 		<Attribute name="ExclusionFlags" guid="{4CACC252-E6DC-419A-B20C-16EC601DF70E}" type="UINT32" value="3"/>
-		<Vertex lat="53.57308334892086" lon="-113.50877381139490"/>
 		<Vertex lat="53.57308334892086" lon="-113.50808618860511"/>
 		<Vertex lat="53.57383065107913" lon="-113.50808618860511"/>
 		<Vertex lat="53.57383065107913" lon="-113.50877381139490"/>
+		<Vertex lat="53.57308334892086" lon="-113.50877381139490"/>
 	</Polygon>
 	<Polygon version="0.4.0" displayName="No generated buildings: Hangar 5 (tan, bronze office, OSM 325270299)" parentGroupID="6" altitude="667.68023681640625">
 		<Attribute name="UniqueGUID" guid="{359C73E8-06BE-4FB2-ABCB-EC942F7761D0}" type="GUID" value="{B3738D66-7B77-5590-B7F2-8A7067670AD5}"/>
@@ -1341,17 +1400,101 @@
 		<Vertex lat="53.57281094622423" lon="-113.52978345878657"/>
 		<Vertex lat="53.57329714903892" lon="-113.52887600674035"/>
 	</Polygon>
-	<Polygon version="0.4.0" displayName="No generated buildings: Hangar 39 (old PWA hangar, OSM 230718900)" parentGroupID="6" altitude="667.68023681640625">
-		<Attribute name="UniqueGUID" guid="{359C73E8-06BE-4FB2-ABCB-EC942F7761D0}" type="GUID" value="{8E2DAFAF-B184-5618-BB7E-C1249535C70F}"/>
+	<Polygon version="0.4.0" displayName="No generated buildings: Hangar 39 (pale-blue double hall, OSM 230718901, beside Hang" parentGroupID="6" altitude="667.68023681640625">
+		<Attribute name="UniqueGUID" guid="{359C73E8-06BE-4FB2-ABCB-EC942F7761D0}" type="GUID" value="{C98FAA37-444C-5619-B5C4-C5C8DB0BD018}"/>
 		<Attribute name="ExcludeDetectedBuildings" guid="{5C1A2387-1F07-47DF-A569-962CF6258E55}" type="UINT8" value="1"/>
 		<Attribute name="ExcludeOSMBuildings" guid="{F3C2635D-9F2F-458F-8663-90B3837BED09}" type="UINT8" value="1"/>
 		<Attribute name="ExcludeMSBuildings" guid="{F78A3074-8AD5-4B8B-92C4-C1C948BB7AA5}" type="UINT8" value="1"/>
 		<Attribute name="ExcludeTIN" guid="{18B58CBF-AE02-4A19-8AA9-3809E8E73400}" type="UINT8" value="1"/>
 		<Attribute name="ExclusionFlags" guid="{4CACC252-E6DC-419A-B20C-16EC601DF70E}" type="UINT32" value="3"/>
-		<Vertex lat="53.57549066483971" lon="-113.52944126082096"/>
-		<Vertex lat="53.57508148425308" lon="-113.53020495808759"/>
-		<Vertex lat="53.57447333516029" lon="-113.52928473917905"/>
-		<Vertex lat="53.57488251574691" lon="-113.52852104191241"/>
+		<Vertex lat="53.57475253456280" lon="-113.52858102004623"/>
+		<Vertex lat="53.57403646853622" lon="-113.52991749026283"/>
+		<Vertex lat="53.57335146543720" lon="-113.52888097995375"/>
+		<Vertex lat="53.57406753146378" lon="-113.52754450973715"/>
+	</Polygon>
+	<Polygon version="0.4.0" displayName="No generated buildings: Hangar 40 (Canadian Helicopters, white roof of OSM 230718900" parentGroupID="6" altitude="667.68023681640625">
+		<Attribute name="UniqueGUID" guid="{359C73E8-06BE-4FB2-ABCB-EC942F7761D0}" type="GUID" value="{EA6717A0-B70F-56F5-B781-9E2666C9D331}"/>
+		<Attribute name="ExcludeDetectedBuildings" guid="{5C1A2387-1F07-47DF-A569-962CF6258E55}" type="UINT8" value="1"/>
+		<Attribute name="ExcludeOSMBuildings" guid="{F3C2635D-9F2F-458F-8663-90B3837BED09}" type="UINT8" value="1"/>
+		<Attribute name="ExcludeMSBuildings" guid="{F78A3074-8AD5-4B8B-92C4-C1C948BB7AA5}" type="UINT8" value="1"/>
+		<Attribute name="ExcludeTIN" guid="{18B58CBF-AE02-4A19-8AA9-3809E8E73400}" type="UINT8" value="1"/>
+		<Attribute name="ExclusionFlags" guid="{4CACC252-E6DC-419A-B20C-16EC601DF70E}" type="UINT32" value="3"/>
+		<Vertex lat="53.57493093125512" lon="-113.52965869358349"/>
+		<Vertex lat="53.57523179933352" lon="-113.52909715147568"/>
+		<Vertex lat="53.57547906874488" lon="-113.52947130641653"/>
+		<Vertex lat="53.57517820066648" lon="-113.53003284852433"/>
+	</Polygon>
+	<Polygon version="0.4.0" displayName="No generated buildings: Hangar 3 (pale-blue flat-roofed hangar, traced from the 2014" parentGroupID="6" altitude="667.68023681640625">
+		<Attribute name="UniqueGUID" guid="{359C73E8-06BE-4FB2-ABCB-EC942F7761D0}" type="GUID" value="{137BB838-2F51-52EE-AA73-B210DBC3D4B2}"/>
+		<Attribute name="ExcludeDetectedBuildings" guid="{5C1A2387-1F07-47DF-A569-962CF6258E55}" type="UINT8" value="1"/>
+		<Attribute name="ExcludeOSMBuildings" guid="{F3C2635D-9F2F-458F-8663-90B3837BED09}" type="UINT8" value="1"/>
+		<Attribute name="ExcludeMSBuildings" guid="{F78A3074-8AD5-4B8B-92C4-C1C948BB7AA5}" type="UINT8" value="1"/>
+		<Attribute name="ExcludeTIN" guid="{18B58CBF-AE02-4A19-8AA9-3809E8E73400}" type="UINT8" value="1"/>
+		<Attribute name="ExclusionFlags" guid="{4CACC252-E6DC-419A-B20C-16EC601DF70E}" type="UINT32" value="3"/>
+		<Vertex lat="53.57513086330935" lon="-113.50881787229862"/>
+		<Vertex lat="53.57428913669065" lon="-113.50881787229862"/>
+		<Vertex lat="53.57428913669065" lon="-113.50824812770138"/>
+		<Vertex lat="53.57513086330935" lon="-113.50824812770138"/>
+	</Polygon>
+	<Polygon version="0.4.0" displayName="No generated buildings: Hangar 3 tan block annex (south end)" parentGroupID="6" altitude="667.68023681640625">
+		<Attribute name="UniqueGUID" guid="{359C73E8-06BE-4FB2-ABCB-EC942F7761D0}" type="GUID" value="{2182B210-D72F-5431-9256-5A86D741F680}"/>
+		<Attribute name="ExcludeDetectedBuildings" guid="{5C1A2387-1F07-47DF-A569-962CF6258E55}" type="UINT8" value="1"/>
+		<Attribute name="ExcludeOSMBuildings" guid="{F3C2635D-9F2F-458F-8663-90B3837BED09}" type="UINT8" value="1"/>
+		<Attribute name="ExcludeMSBuildings" guid="{F78A3074-8AD5-4B8B-92C4-C1C948BB7AA5}" type="UINT8" value="1"/>
+		<Attribute name="ExcludeTIN" guid="{18B58CBF-AE02-4A19-8AA9-3809E8E73400}" type="UINT8" value="1"/>
+		<Attribute name="ExclusionFlags" guid="{4CACC252-E6DC-419A-B20C-16EC601DF70E}" type="UINT32" value="3"/>
+		<Vertex lat="53.57439844964028" lon="-113.50873741861871"/>
+		<Vertex lat="53.57414755035971" lon="-113.50873741861871"/>
+		<Vertex lat="53.57414755035971" lon="-113.50835658138128"/>
+		<Vertex lat="53.57439844964028" lon="-113.50835658138128"/>
+	</Polygon>
+	<Polygon version="0.4.0" displayName="No generated buildings: Dark-blue gabled hangar north of Hangar 3 (5 109 St NW, OSM " parentGroupID="6" altitude="667.68023681640625">
+		<Attribute name="UniqueGUID" guid="{359C73E8-06BE-4FB2-ABCB-EC942F7761D0}" type="GUID" value="{359C26B8-34F7-56EE-A2C1-1E64E37922FB}"/>
+		<Attribute name="ExcludeDetectedBuildings" guid="{5C1A2387-1F07-47DF-A569-962CF6258E55}" type="UINT8" value="1"/>
+		<Attribute name="ExcludeOSMBuildings" guid="{F3C2635D-9F2F-458F-8663-90B3837BED09}" type="UINT8" value="1"/>
+		<Attribute name="ExcludeMSBuildings" guid="{F78A3074-8AD5-4B8B-92C4-C1C948BB7AA5}" type="UINT8" value="1"/>
+		<Attribute name="ExcludeTIN" guid="{18B58CBF-AE02-4A19-8AA9-3809E8E73400}" type="UINT8" value="1"/>
+		<Attribute name="ExclusionFlags" guid="{4CACC252-E6DC-419A-B20C-16EC601DF70E}" type="UINT32" value="3"/>
+		<Vertex lat="53.57579356834533" lon="-113.50815690917334"/>
+		<Vertex lat="53.57579356834533" lon="-113.50865109082666"/>
+		<Vertex lat="53.57546443165467" lon="-113.50865109082666"/>
+		<Vertex lat="53.57546443165467" lon="-113.50815690917334"/>
+	</Polygon>
+	<Polygon version="0.4.0" displayName="No generated buildings: Hangar 19 (low tan wings with a brick centre, 62-69 Airport " parentGroupID="6" altitude="667.68023681640625">
+		<Attribute name="UniqueGUID" guid="{359C73E8-06BE-4FB2-ABCB-EC942F7761D0}" type="GUID" value="{9BB244FA-1613-5FD9-B94E-F4F29FA3A591}"/>
+		<Attribute name="ExcludeDetectedBuildings" guid="{5C1A2387-1F07-47DF-A569-962CF6258E55}" type="UINT8" value="1"/>
+		<Attribute name="ExcludeOSMBuildings" guid="{F3C2635D-9F2F-458F-8663-90B3837BED09}" type="UINT8" value="1"/>
+		<Attribute name="ExcludeMSBuildings" guid="{F78A3074-8AD5-4B8B-92C4-C1C948BB7AA5}" type="UINT8" value="1"/>
+		<Attribute name="ExcludeTIN" guid="{18B58CBF-AE02-4A19-8AA9-3809E8E73400}" type="UINT8" value="1"/>
+		<Attribute name="ExclusionFlags" guid="{4CACC252-E6DC-419A-B20C-16EC601DF70E}" type="UINT32" value="3"/>
+		<Vertex lat="53.56899867127905" lon="-113.51997965471892"/>
+		<Vertex lat="53.56954432620736" lon="-113.52069608109946"/>
+		<Vertex lat="53.56931732872095" lon="-113.52118434528109"/>
+		<Vertex lat="53.56877167379265" lon="-113.52046791890055"/>
+	</Polygon>
+	<Polygon version="0.4.0" displayName="No generated buildings: ILS glideslope hut with checkerboard paint (infield, 16/34 r" parentGroupID="6" altitude="667.68023681640625">
+		<Attribute name="UniqueGUID" guid="{359C73E8-06BE-4FB2-ABCB-EC942F7761D0}" type="GUID" value="{A473A4CC-94FC-5628-BF4B-A20EDB2B2F63}"/>
+		<Attribute name="ExcludeDetectedBuildings" guid="{5C1A2387-1F07-47DF-A569-962CF6258E55}" type="UINT8" value="1"/>
+		<Attribute name="ExcludeOSMBuildings" guid="{F3C2635D-9F2F-458F-8663-90B3837BED09}" type="UINT8" value="1"/>
+		<Attribute name="ExcludeMSBuildings" guid="{F78A3074-8AD5-4B8B-92C4-C1C948BB7AA5}" type="UINT8" value="1"/>
+		<Attribute name="ExcludeTIN" guid="{18B58CBF-AE02-4A19-8AA9-3809E8E73400}" type="UINT8" value="1"/>
+		<Attribute name="ExclusionFlags" guid="{4CACC252-E6DC-419A-B20C-16EC601DF70E}" type="UINT32" value="3"/>
+		<Vertex lat="53.56886609352518" lon="-113.51115112588786"/>
+		<Vertex lat="53.56886609352518" lon="-113.51084887411213"/>
+		<Vertex lat="53.56909990647483" lon="-113.51084887411213"/>
+		<Vertex lat="53.56909990647483" lon="-113.51115112588786"/>
+	</Polygon>
+	<Polygon version="0.4.0" displayName="No generated buildings: Hangar 20 (Esso building, 83 Airport Rd NW; traced from the " parentGroupID="6" altitude="667.68023681640625">
+		<Attribute name="UniqueGUID" guid="{359C73E8-06BE-4FB2-ABCB-EC942F7761D0}" type="GUID" value="{D01DF17D-E6A1-5CF5-B8D9-82E8362176D2}"/>
+		<Attribute name="ExcludeDetectedBuildings" guid="{5C1A2387-1F07-47DF-A569-962CF6258E55}" type="UINT8" value="1"/>
+		<Attribute name="ExcludeOSMBuildings" guid="{F3C2635D-9F2F-458F-8663-90B3837BED09}" type="UINT8" value="1"/>
+		<Attribute name="ExcludeMSBuildings" guid="{F78A3074-8AD5-4B8B-92C4-C1C948BB7AA5}" type="UINT8" value="1"/>
+		<Attribute name="ExcludeTIN" guid="{18B58CBF-AE02-4A19-8AA9-3809E8E73400}" type="UINT8" value="1"/>
+		<Attribute name="ExclusionFlags" guid="{4CACC252-E6DC-419A-B20C-16EC601DF70E}" type="UINT32" value="3"/>
+		<Vertex lat="53.56975133824353" lon="-113.52081076558370"/>
+		<Vertex lat="53.57024587706623" lon="-113.52155907546538"/>
+		<Vertex lat="53.56982466175648" lon="-113.52234523441631"/>
+		<Vertex lat="53.56933012293377" lon="-113.52159692453463"/>
 	</Polygon>
 	<Polygon version="0.4.0" displayName="No generated buildings: Mitchell Garage bus barns (OSM depot way 645478395)" parentGroupID="6" altitude="667.68023681640625">
 		<Attribute name="UniqueGUID" guid="{359C73E8-06BE-4FB2-ABCB-EC942F7761D0}" type="GUID" value="{320179F4-72C7-5A0E-A000-458BA00FE8C4}"/>
