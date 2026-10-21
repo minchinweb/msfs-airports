@@ -75,8 +75,29 @@ def nwi():
     return im
 
 
+def efc():
+    """Top half: dark fascia lettering EDMONTON FLYING CLUB (14 x 0.8 m); bottom half: the landside entrance board, white with red
+    lettering on two lines (4.4 x 1.7 m).  Hangar 18 (Flickr 11094398653, the 2013 Street View, the airside video)."""
+    im = Image.new("RGB", (1024, 1024), (60, 52, 50))
+    w = 2800
+    h = int(w / (14 / 0.8))
+    b = Image.new("RGB", (w, h), (74, 64, 60))
+    text_fit(ImageDraw.Draw(b), "EDMONTON FLYING CLUB", "arialbd.ttf", (w * 0.05, h * 0.15, w * 0.95, h * 0.85), (236, 232, 224))
+    im.paste(b.resize((1024, 512), Image.LANCZOS), (0, 0))
+    w = 1760
+    h = int(w / (4.4 / 1.7))
+    b = Image.new("RGB", (w, h), (244, 244, 240))
+    d = ImageDraw.Draw(b)
+    d.rectangle((0, 0, w - 1, h - 1), outline=(150, 40, 40), width=int(h * 0.05))
+    text_fit(d, "EDMONTON", "arialbd.ttf", (w * 0.1, h * 0.12, w * 0.9, h * 0.47), (200, 36, 40))
+    text_fit(d, "FLYING CLUB", "arialbd.ttf", (w * 0.1, h * 0.52, w * 0.9, h * 0.88), (200, 36, 40))
+    im.paste(b.resize((1024, 512), Image.LANCZOS), (0, 512))
+    return im
+
+
 if __name__ == "__main__":
     esso().save(HERE / "assets/esso_sign.png")
     navcan().save(HERE / "assets/navcan_sign.png")
     lawoffice().save(HERE / "assets/lawoffice_sign.png")
     nwi().save(HERE / "assets/nwi_sign.png")
+    efc().save(HERE / "assets/efc_sign.png")

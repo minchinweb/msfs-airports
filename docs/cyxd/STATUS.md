@@ -325,3 +325,8 @@ Source: `docs/cyxd/procedures-2010.md` and the plate screenshots in `docs/cyxd/c
 - **Hangar 11**: roof vents now sit on the barrel roof; NORTHWEST INDUSTRIES LTD. roof board and COMMERCIAL AIRCRAFT SERVICE lettering (1956 photo); fire escape moved to the landside (east) face.
 - Textures `esso`, `navcan`, `lawoffice`, `nwi` are produced by `tools/make_signs.py` and copied by `gen_buildings.py`.
 - Deferred: the building south of Hangar 11 (`open-questions.md`).
+
+### Hangar 18 rebuilt as three blocks (2026-10-21, built OK, not viewed in the sim)
+- `hangar18()` now has three stacked blocks (road to apron): C landside club block (white pilastered wall with window slots on Airport Rd, entrance with the FLYING CLUB board, glazed club room at the SE end with a roof overhang, viewing deck over a lower block, fascia lettering, "18" roundel), B middle block (teal base, striped upper wall, cream pier with door), A airside block (olive hangar with two white leaves on its SE face, pier, white wing with swoosh and "18"). Footprint 70 x 84 m, centre 53.568558, -113.519833, heading 48. Measurement and video notes: `hangar18-photos/SOURCES.md`, overlay `footprints/hangar18-three-blocks.png`.
+- Uncertain: the aerial shows no clear roof for C (placed 13 m deep on the road side of B, from the street views); the hangar doors now face SE (toward the tower), as in the video, not NE as before.
+- New texture `efc` (`make_signs.py`).

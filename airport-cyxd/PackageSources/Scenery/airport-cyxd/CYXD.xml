@@ -1057,7 +1057,7 @@
 		<LibraryObject name="{29B358ED-E096-5E29-A73B-86C051B06B22}" scale="1.000000"/>
 	</SceneryObject>
 	<!-- Hangar 18 (Edmonton Flying Club complex, traced from 2014 imagery) -->
-	<SceneryObject lat="53.56874000" lon="-113.51969900" alt="0.00000000000000" pitch="0.000000" bank="0.000000" heading="48" imageComplexity="VERY_SPARSE" altitudeIsAgl="TRUE" snapToGround="TRUE" snapToNormal="FALSE">
+	<SceneryObject lat="53.56855800" lon="-113.51983300" alt="0.00000000000000" pitch="0.000000" bank="0.000000" heading="48" imageComplexity="VERY_SPARSE" altitudeIsAgl="TRUE" snapToGround="TRUE" snapToNormal="FALSE">
 		<LibraryObject name="{0096CDE1-498E-5CD1-A3D2-6CA0D48403B6}" scale="1.000000"/>
 	</SceneryObject>
 	<!-- Hangar 38 (mustard yellow, OSM 230718902) -->
@@ -1383,10 +1383,10 @@
 		<Attribute name="ExcludeMSBuildings" guid="{F78A3074-8AD5-4B8B-92C4-C1C948BB7AA5}" type="UINT8" value="1"/>
 		<Attribute name="ExcludeTIN" guid="{18B58CBF-AE02-4A19-8AA9-3809E8E73400}" type="UINT8" value="1"/>
 		<Attribute name="ExclusionFlags" guid="{4CACC252-E6DC-419A-B20C-16EC601DF70E}" type="UINT32" value="3"/>
-		<Vertex lat="53.56881510901117" lon="-113.52037189080444"/>
-		<Vertex lat="53.56833393610259" lon="-113.51964380551416"/>
-		<Vertex lat="53.56866489098883" lon="-113.51902610919556"/>
-		<Vertex lat="53.56914606389741" lon="-113.51975419448584"/>
+		<Vertex lat="53.56854316788435" lon="-113.52078668454713"/>
+		<Vertex lat="53.56799516540513" lon="-113.51995747629988"/>
+		<Vertex lat="53.56857283211566" lon="-113.51887931545288"/>
+		<Vertex lat="53.56912083459488" lon="-113.51970852370013"/>
 	</Polygon>
 	<Polygon version="0.4.0" displayName="No generated buildings: Hangar 38 (mustard yellow, OSM 230718902)" parentGroupID="6" altitude="667.68023681640625">
 		<Attribute name="UniqueGUID" guid="{359C73E8-06BE-4FB2-ABCB-EC942F7761D0}" type="GUID" value="{2E5E96E8-F73E-582B-9E08-266CC3512B8C}"/>

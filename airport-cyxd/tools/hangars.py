@@ -556,53 +556,93 @@ def hangar14():
 
 # Hangar 18 (Edmonton Flying Club) -----------------------------------------------------------
 def hangar18():
-    """Edmonton Flying Club complex, heading 48 (front = NE / airside): two-storey club building with a glazed upper floor and
-    balcony at the SE end (+X, next to the tower), the green hangar with two white sliding leaves, a white wing with the "18" roundel and
-    a green / red-orange swoosh at the NW end, and a lower rear wing with a green base and a striped upper wall."""
+    """Edmonton Flying Club complex, rebuilt (user, 2026-10-21) as THREE BLOCKS stacked from the road to the apron, like wings stuck together.
+    Frame (before the shift and mirror): +Z = bearing 48 (NE, away from Airport Rd), +X = bearing 138 (SE, toward the tower); the shift at
+    the end puts the origin at the centre of the whole 70 x 84 m footprint.  Footprints are from the 2014 Wayback aerial (about 0.7 m / px,
+    docs/cyxd/footprints/hangar18-three-blocks.png): shadows and lit wall edges give A and B well, C is the least certain.
+      C  landside club block, x -20..44, z -62..-49 (13 m deep, the narrowest): long white pilastered wall on Airport Rd with dark window
+         slots, the FLYING CLUB entrance, a taller glazed club room at the SE end with a roof overhang and a viewing deck over the
+         lower ground floor, looking toward the tower; the "18" roundel on the landside wall (Flickr 11094398653, Street View 31 / 50 Airport Rd).
+      B  middle block, x -12..40, z -49..-17: teal base with small windows under a striped (cream / mauve / tan / grey) upper wall, a cream
+         block pier with a door at its NE end (Flickr 11094307134).
+      A  airside block, x -26..27, z -17..22: the olive-green hangar (two white leaves on the SE face, black band above) then a cream
+         pier with a door and the long white wing with the swoosh and the "18" at its NE corner (airside video, 11165054745)."""
     m = Mesh(textured=True)
-    z0, z1 = -21.5, 21.5
-    # club building: x 10..30
-    m.box(10.0, 30.0, 0, 3.8, z0, z1, PANEL, top=False)
-    rows_z(m, 1, z1, 11.5, 28.5, 0.9, 5, 2.4, 2.4)
-    m.box(11.0, 29.0, 3.8, 7.4, z0 + 1.0, z1 - 2.0, DGREY)
-    rows_z(m, 1, z1 - 2.0, 12.0, 28.0, 4.5, 6, 2.4, 2.0)
-    m.box(9.0, 31.0, 7.4, 8.3, z0 - 0.5, z1 + 2.6, NAVY)  # deep roof fascia
-    m.box(13.0, 27.0, 7.5, 8.15, z1 + 2.6, z1 + 2.68, RWHITE)  # EDMONTON FLYING CLUB sign strip
-    for i in range(7):
-        m.box(11.5 + i * 2.6, 11.7 + i * 2.6, 3.8, 5.0, z1 - 0.1, z1 + 2.5, CREAM)  # balcony posts
-    m.box(11.0, 29.0, 4.9, 5.1, z1 + 2.4, z1 + 2.55, CREAM)
-    m.box(11.0, 29.0, 3.7, 3.9, z1, z1 + 2.6, GREY)  # balcony slab
-    # landside (-Z) face, Street View 31 Airport Rd (2012): white pilasters, club sign, blue "18" roundel upper right
-    for i in range(8):
-        m.box(10.5 + i * 2.6, 11.1 + i * 2.6, 0, 7.4, z0 - 0.25, z0, RWHITE)
-    m.box(13.0, 23.0, 5.0, 6.0, z0 - 0.3, z0 - 0.25, RWHITE)
-    m.box(13.5, 22.5, 5.35, 5.65, z0 - 0.33, z0 - 0.3, RED)
-    number_disc(m, 27.0, 6.2, z0 - 0.25, (0, -1), 0.95, "18")
-    # green hangar: x -15..10
-    m.box(-15.0, 10.0, 0, 7.6, z0, z1, GREEN, top=False)
-    m.gable(-15.0, 10.0, 7.6, 2.0, z0, z1, along_z=True, sw_roof=METAL, sw_wall=GREEN)
-    m.box(-12.0, 8.0, 0, 6.6, z1, z1 + 0.05, DARK)
-    xs = [-11.0, -1.0, 9.0 - 0.0]
-    leaves(m, z1, xs, 0, 6.2, RWHITE, post=DGREY)
-    louvres(m, z1, xs, [(4.6, 5.4)], sw=DGREY)
-    m.box(-12.0, 9.0, 6.2, 6.6, z1, z1 + 0.28, DARK)
-    # white wing with swoosh: x -30..-17
-    m.box(-30.0, -17.0, 0, 9.6, z0, z1, RWHITE, top=True)
-    m.box(-30.0, -17.0, 3.0, 3.5, z1, z1 + 0.06, GREEN)
-    m.box(-30.0, -17.0, 3.7, 4.1, z1, z1 + 0.06, SALMON)
-    number_disc(m, -20.0, 8.2, z1, (0, 1), 0.95, "18")
-    m.box(-17.0, -15.0, 0, 8.4, z0, z1, CREAM)  # block pier between wing and hangar
-    m.box(-17.0, -15.0, 0, 2.2, z1, z1 + 0.06, DARK)
-    # rear wing: x 2..37, z -52..-21.5; green base with windows, striped upper wall
-    m.box(2.0, 37.0, 0, 4.4, -52.0, z0, GREEN, top=False)
+    # ---- A: airside block -------------------------------------------------------------------
+    ax0, ax1, az0, az1, zp = -26.0, 27.0, -17.0, 22.0, 1.5
+    m.box(ax0, ax1, 0, 8.6, az0, zp - 1.5, GREEN, top=False)  # olive hangar z -17..0
+    m.box(ax0 - 0.1, ax1 + 0.1, 8.6, 8.9, az0, zp - 1.5, DGREY)
+    m.box(ax0, ax1 + 0.1, 0, 8.6, zp - 1.5, zp, CREAM)  # block pier between the hangar and the wing (z 0..1.5)
+    m.box(ax0, ax1, 0, 9.6, zp, az1, RWHITE, top=False)  # white wing z 1.5..22
+    m.box(ax0 - 0.1, ax1 + 0.1, 9.6, 9.9, zp, az1 + 0.1, DGREY)
+    xd = ax1 + 0.04
+    m.box(xd, xd + 0.08, 0, 6.4, -14.5, -2.5, DARK)  # door opening
+    for z0_ in (-14.5, -8.5):
+        m.box(xd + 0.08, xd + 0.28, 0, 6.2, z0_ + 0.05, z0_ + 5.95, RWHITE)  # two sliding leaves
+        for k in range(3):
+            m.window((1, 0, 0), (xd + 0.28, 4.7, z0_ + 0.5 + k * 1.8), (0, 0, 1), 1.3, 0.5)  # small windows near the top of each leaf
+    m.box(xd + 0.08, xd + 0.4, 6.2, 6.8, -15.0, -2.0, DARK)  # black band over the doors
+    m.window((1, 0, 0), (ax1 + 0.1, 0.0, -1.1), (0, 0, 1), 0.9, 2.1)  # pier personnel door
+    # swoosh on the white wing's SE face: grey-blue band with a thin red line, curving up toward the SW end
+    for y0, y1, sw in ((5.6, 6.2, STEEL), (5.2, 5.4, RED)):
+        m.box(ax1, ax1 + 0.05, y0, y1, 6.0, 20.0, sw)
+        m.poly([(ax1 + 0.05, y0, 6.0), (ax1 + 0.05, y1, 6.0), (ax1 + 0.05, y1 + 2.4, 3.2), (ax1 + 0.05, y0 + 2.4, 3.2)], sw, (ax1 - 5, y0, 5.0))
+    number_disc(m, ax1, 8.0, 20.4, (1, 0), 0.95, "18")  # NE corner of the SE face
+    # ---- B: middle block --------------------------------------------------------------------
+    bx0, bx1, bz0, bz1 = -12.0, 40.0, -49.0, -17.0
+    m.box(bx0, bx1, 0, 4.6, bz0, bz1, TEAL, top=False)
+    m.box(bx0, bx1, 4.6, 9.6, bz0, bz1, CREAM, top=True)
     cols = [CREAM, MAUVE, TAN, GREY]
-    m.box(2.0, 37.0, 4.4, 9.6, -52.0, z0, CREAM, top=True)
-    stripes(m, 2.0, 37.0, 4.4, 9.6, z0, 1, cols, axis="x")
-    stripes(m, 2.0, 37.0, 4.4, 9.6, -52.0, -1, cols, axis="x")
-    stripes(m, -52.0, z0, 4.4, 9.6, 37.0, 1, cols, axis="z")
-    stripes(m, -52.0, z0, 4.4, 9.6, 2.0, -1, cols, axis="z")
-    rows_x(m, 1, 37.0, -50.0, z0 - 2.0, 1.4, 7, 1.7, 1.4)
-    rows_x(m, -1, 2.0, -50.0, z0 - 2.0, 1.4, 7, 1.7, 1.4)
+    stripes(m, bz0, bz1 - 6.0, 4.6, 9.6, bx1, 1, cols, axis="z")
+    stripes(m, bz0, bz1, 4.6, 9.6, bx0, -1, cols, axis="z")
+    m.box(bx0 - 0.1, bx1 + 0.1, 9.6, 9.9, bz0 - 0.1, bz1 + 0.1, DGREY)
+    rows_x(m, 1, bx1, bz0 + 1.0, bz1 - 8.0, 1.6, 7, 1.6, 0.9)  # small windows along the teal base
+    rows_x(m, -1, bx0, bz0 + 3.0, bz1 - 3.0, 1.6, 7, 1.6, 0.9)
+    m.box(bx1, bx1 + 0.12, 4.0, 4.2, bz0, bz1 - 6.0, DGREY)  # eave line between base and stripes
+    m.box(bx1 - 12.0, bx1 + 0.1, 0, 8.4, bz1 - 6.0, bz1, CREAM)  # cream block pier at the NE end, x 28..40
+    m.window((1, 0, 0), (bx1 + 0.1, 0.0, bz1 - 4.5), (0, 0, 1), 0.9, 2.1)  # its personnel door
+    m.box(bx1 + 0.1, bx1 + 0.16, 3.5, 4.8, bz1 - 3.5, bz1 - 1.3, BLUE)  # small blue sign
+    roof_vents(m, [(0, -40), (15, -30), (28, -44)], 9.9)
+    # ---- C: landside club block -------------------------------------------------------------
+    cx0, cx1, cz0, cz1 = -20.0, 44.0, -62.0, -49.0
+    wing1 = 28.0  # long wing x -20..28 (two storeys, 6.8 m); club room x 28..40 (8.0 m); ground-floor block to x 44 under the deck
+    m.box(cx0, wing1, 0, 6.8, cz0, cz1, RWHITE, top=False)
+    m.box(cx0 - 0.1, wing1, 6.8, 7.6, cz0 - 0.1, cz1, BEIGE)  # tan corrugated fascia
+    m.box(wing1, 40.0, 0, 8.0, cz0, cz1, RWHITE, top=False)
+    m.box(wing1 - 0.1, 43.0, 8.0, 8.9, cz0 - 1.5, cz1 + 0.1, BEIGE)  # roof overhang over the deck, beige fascia
+    # landside (SW, -Z) wall: pilasters with dark window slots (two storeys), entrance with canopy
+    for k in range(13):
+        xk = -17.0 + k * 3.7
+        if 8.0 < xk < 20.0 or xk > 25.0:
+            continue
+        m.window((0, 0, -1), (xk, 0.9, cz0), (1, 0, 0), 1.1, 5.4)
+    m.box(13.0, 17.4, 0, 2.3, cz0 - 0.05, cz0, DGREY)  # entrance doors
+    m.box(12.4, 18.0, 2.5, 2.75, cz0 - 1.6, cz0, WHITE)  # canopy
+    m.box(18.2, 20.2, 0, 3.0, cz0 - 0.08, cz0, BLUE)  # mural panels beside the door
+    m.box(10.2, 12.2, 0, 3.0, cz0 - 0.08, cz0, PANEL)
+    rect_sign(m, 15.2, 4.6, cz0 - 0.1, (0, -1), 4.4, 1.7, "efc", 0.5, 1.0)  # EDMONTON FLYING CLUB board over the entrance
+    m.box(-9.6, -7.8, 0, 2.2, cz0 - 0.1, cz0, DGREY)  # CAFETERIA door, far end of the wall
+    m.box(-9.9, -7.5, 2.4, 3.0, cz0 - 0.1, cz0, RED)
+    number_disc(m, 28.7, 6.6, cz0, (0, -1), 0.95, "18")  # landside roundel above the yellow louvre panel
+    m.box(28.0, 30.2, 2.2, 5.0, cz0 - 0.1, cz0, YELLOW)
+    # club room (x 28..40): glazed upper floor on the SE face and the SW face
+    rows_x(m, 1, 40.0, cz0 + 1.0, cz1 - 1.0, 4.4, 6, 1.7, 2.8)
+    rows_z(m, -1, cz0, wing1 + 3.0, 39.0, 4.4, 3, 2.6, 2.8)
+    m.box(40.0, 44.0, 0, 3.4, cz0, cz1, RWHITE)  # lower ground-floor block under the deck
+    rows_x(m, 1, 44.0, cz0 + 1.5, cz1 - 1.5, 1.2, 3, 2.2, 1.4)
+    # viewing deck: slab, white railing, over the lower block, facing the tower
+    m.box(40.0, 44.0, 3.4, 3.8, cz0, cz1, GREY)
+    for z in [cz0 + 0.2 + 0.8 * k for k in range(int((cz1 - cz0) / 0.8))]:
+        m.box(43.8, 43.9, 3.8, 4.8, z, z + 0.06, CREAM)
+    m.box(43.75, 43.95, 4.75, 4.85, cz0, cz1, CREAM)
+    for x in (41.0, 42.5):
+        m.box(x, x + 0.06, 3.8, 4.8, cz0, cz0 + 0.06, CREAM)
+        m.box(x, x + 0.06, 3.8, 4.8, cz1 - 0.06, cz1, CREAM)
+    m.box(40.0, 40.12, 7.0, 7.7, cz0, cz1, DGREY)  # fascia the lettering sits on
+    rect_sign(m, 40.14, 7.35, -55.5, (1, 0), 12.0, 0.7, "efc", 0.0, 0.5)  # EDMONTON FLYING CLUB on the club-room fascia, facing the tower
+    roof_vents(m, [(-5, -55), (10, -55)], 7.6)
+    # shift the origin to the middle of the whole footprint (x -26..44, z -62..22)
+    m.pos = [(x - 9.0, y, z + 20.0) for x, y, z in m.pos]
     m.mirror_x()
     return m
 
@@ -702,7 +742,7 @@ HANGARS = [
     ("cyxd_hangar8", "Hangar 8 (pale blue-grey with end block, OSM 325268698)", hangar8, 53.570358, -113.508293, 270, 66.3, 52.9),
     ("cyxd_hangar11", "Hangar 11 (USAAF T3 barrel vault with annexes, OSM 325268748)", hangar11, 53.569251, -113.508228, 0, 86.3, 64.0),
     ("cyxd_hangar14", "Hangar 14 (Alberta Aviation Museum, OSM 230718920)", hangar14, 53.565714, -113.517130, 180, 90.8, 100.0),
-    ("cyxd_hangar18", "Hangar 18 (Edmonton Flying Club complex, traced from 2014 imagery)", hangar18, 53.568740, -113.519699, 48, 60.0, 43.0),
+    ("cyxd_hangar18", "Hangar 18 (Edmonton Flying Club complex, traced from 2014 imagery)", hangar18, 53.568558, -113.519833, 48, 70.0, 84.0),
     ("cyxd_hangar38", "Hangar 38 (mustard yellow, OSM 230718902)", hangar38, 53.573308, -113.529714, 138, 68.8, 64.0),
     ("cyxd_hangar39", "Hangar 39 (pale-blue double hall, OSM 230718901, beside Hangar 38)", hangar39, 53.574052, -113.528731, 138, 107.0, 90.5),
     ("cyxd_hangar40", "Hangar 40 (Canadian Helicopters, white roof of OSM 230718900)", hangar40, 53.574931, -113.528590, 228, 38.0, 25.0),
