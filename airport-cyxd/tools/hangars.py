@@ -108,9 +108,10 @@ def roof_vents(m, pts, y, sw=DGREY):
 # Hangar 4 -----------------------------------------------------------------------------------
 def hangar4():
     """Pale-yellow ribbed hangar whose long wall faces the runway (west, heading 270; the user's call: it must not face north).  The wide
-    arched door opening, "4" roundel and Government of Alberta sign from the Wikimedia photo are on that front (+Z) wall; that wall is the gable end
+    arched door opening, "4" roundel and Government of Alberta sign from the Wikimedia photo are on that front (+Z) wall, which has two doors
+    (dark open one north, white closed one south, orange bay between; 1989 archive photo EA-207-425); that wall is the gable end
     (user, 2026-10-21): the ridge runs E-W back from the door wall.  Brick block at the north end (viewer-left of
-    the front), orange-panelled neighbour at the south end.  OSM 325273554: 71 (N-S) x 33.5 m."""
+    the front).  OSM 325273554: 71 (N-S) x 33.5 m."""
     m = Mesh(textured=True)
     W, D, wh, rise = 71.1, 33.5, 9.0, 4.4
     x0, x1, z0, z1 = -W / 2, W / 2, -D / 2, D / 2
@@ -118,21 +119,34 @@ def hangar4():
     m.gable(x0, x1, wh, rise, z0, z1, along_z=True, sw_roof=METAL, sw_wall=YELLOWR)  # gable end = the west (door) wall (user, 2026-10-21)
     for x in (x0 - 0.12, x1):
         m.box(x, x + 0.12, wh - 0.5, wh + 0.05, z0, z1, RWHITE)
-    a, hd, top, n = 14.0, 6.2, 8.4, 10
-    cx = 6.0  # the opening is not centred: it sits towards the north (viewer-left) half of the wall
-    pts = [(cx - a, 0, z1 + 0.06), (cx + a, 0, z1 + 0.06)] + [(cx + a * u, hd + (top - hd) * (1 - u * u), z1 + 0.06)
-                                                              for u in [1 - 2 * k / n for k in range(n + 1)]]
-    m.poly(pts, DARK, (cx, 3, z1 - 4))
-    for sx in (cx - a - 0.45, cx + a):
+    a, hd, top, n = 14.5, 6.2, 8.4, 10
+    zf = z1 + 0.06
+
+    def arch_poly(cx, a, sw):
+        pts = [(cx - a, 0, zf), (cx + a, 0, zf)] + [(cx + a * u, hd + (top - hd) * (1 - u * u), zf)
+                                                    for u in [1 - 2 * k / n for k in range(n + 1)]]
+        m.poly(pts, sw, (cx, 3, z1 - 4))
+    # two doors on the runway wall (1989 City of Edmonton archive photo EA-207-425): a dark open one at the north (viewer-left) end,
+    # a white closed one at the south end, with a two-storey orange-panelled bay between them
+    cn, an = 17.5, a  # north door, x 3..32
+    cs, as_ = -17.25, 12.75  # south door, x -30..-4.5
+    arch_poly(cn, an, DARK)
+    arch_poly(cs, as_, RWHITE)
+    for sx in (cn - an - 0.45, cn + an):
         m.box(sx, sx + 0.45, 0, hd, z1, z1 + 0.14, RWHITE)
-    rx = cx - a - 4.0
-    m.box(rx - 1.1, rx + 1.1, 5.5, 7.8, z1, z1 + 0.12, RWHITE)  # white board behind the roundel, right of the opening
-    number_disc(m, rx, 6.65, z1 + 0.12, (0, 1), 0.9, "4")
-    m.box(cx + 2.0, cx + 6.6, 8.5, 8.95, z1, z1 + 0.1, RWHITE)  # Government of Alberta sign, over the arch's shoulder
-    m.box(cx + 2.2, cx + 3.0, 8.6, 8.85, z1 + 0.1, z1 + 0.13, BLUE)
+    for sx in (cs - as_ - 0.45, cs + as_):
+        m.box(sx, sx + 0.45, 0, hd, z1, z1 + 0.14, DGREY)
+    for k in range(1, 5):  # panel joints on the closed door
+        jx = cs - as_ + 2 * as_ * k / 5
+        m.box(jx - 0.06, jx + 0.06, 0.2, 7.0, zf, zf + 0.04, DGREY)
+    m.box(-4.5, 3.0, 0, wh, z1, z1 + 0.3, SALMON)  # orange bay between the doors
+    for y in (1.2, 5.0):
+        m.window((0, 0, 1), (-1.75, y, z1 + 0.3), (1, 0, 0), 2.0, 1.6)
+    rx = (-4.5 + 3.0) / 2
+    number_disc(m, rx, 7.3, z1 + 0.3, (0, 1), 0.9, "4")
+    m.box(cn - 6.0, cn - 1.4, 8.5, 8.95, z1, z1 + 0.1, RWHITE)  # Government of Alberta sign, over the arch's shoulder
+    m.box(cn - 5.8, cn - 5.0, 8.6, 8.85, z1 + 0.1, z1 + 0.13, BLUE)
     m.box(x1, x1 + 10.0, 0, 4.6, z1 - 16.0, z1, BRICKD)
-    m.box(x0 - 8.0, x0, 0, 9.0, z1 - 22.0, z1 - 2.0, SALMON)
-    rows_x(m, -1, x0 - 8.0, z1 - 21.0, z1 - 3.0, 4.2, 4, 2.0, 1.6)
     roof_vents(m, [(0, -10), (0, 0), (0, 10)], wh + rise)
     m.mirror_x()
     return m
