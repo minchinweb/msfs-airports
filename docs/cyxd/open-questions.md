@@ -44,3 +44,6 @@ Kept here so it can be queried later. Dated 2026-10-13. This file and `reference
 
 - **Building south of Hangar 11** (the large grey building, `street-view-review.md`): still shows in the sim as the sim's own generated building. Put on deferral by the user; no exclusion or model yet.
 - **Hangar 39 in its Pacific Western Airlines era**: the search for period photos of its face found none (see `hangar39-pwa/README.md`); only the 2014 pale-blue scheme is documented, and the PWA link rests on the 2014 captions.
+
+## Where did the 1930s first hangar stand? (2026-10-21, not known)
+Map of the two candidate zones: `footprints/first-hangar-candidates.png` (2017 imagery, the built 1938 hangar in red). Evidence: EA-10-1044 shows the first hangar beside the 1938 hangar, the first hangar's tower and wing on the side facing it; the PC013987 postcard shows a second, larger barrel-vault hangar with a pale two-storey wing and a tower NW of the 1938 hangar (zone B); the 1937 plan (amended 1943) shows only one hangar by the circular drive ("No. 3", concrete apron). No measurement exists. Needs a georeferenced 1930s-40s aerial or the 1937 plan scaled against Kingsway.
