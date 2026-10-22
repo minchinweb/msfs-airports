@@ -1255,13 +1255,14 @@ def garage22():
     surface (the lowest lands on the ground), with nose-in stall stripes along the back wall.
     Vehicle entrance: ground level at the left-most (-Z, SW) quarter of the front (MS-1270.213.3), with a gate island, two ticket posts, booms
     and yellow bollards.  Side boards: ground-level board over a block plinth along both long sides (Street View 15).  "22" roundel on the NE
-    (land side) face of the stair tower.  Footprint about 100 x 72 m (2017 Wayback)."""
+    (land side) face of the NW stair tower and on the NE face of a second, angled stair tower near the east end of the front.  The slope starts FLAT (7.6 m) behind the front.  Footprint about 100 x 72 m (2017 Wayback)."""
     m = fmesh()
     x0, x1, z0, z1 = -50.0, 50.0, -36.0, 36.0
     GH, SL, GC = 3.2, 0.5, 3.5  # level height, slab thickness, ground-floor clearance under the lowest slab
     BW = 18.0  # half width of the bay
     RL, LAND = 44.0, 10.0  # ramp length, landing length
     YG = 0.08  # landing level on the ground
+    FLAT = 7.6  # flat deck in front of the slope (about 25 ft behind the SE stair tower, MS-1270.213.3)
     SET_BAY, SET_RIGHT = 6.0, 12.0  # front setbacks of the bay half and of the right (east) quarter
     decks = [(4.0, x1), (7.2, 40.0), (10.4, 30.0)]
 
@@ -1305,11 +1306,13 @@ def garage22():
         m.box(x0, 46.0, 0, 0.9, zi, zo, TANBLK)
         m.box(x0, 46.0, 0.9, GC, zi - (0.05 if s < 0 else 0), zo + (0.05 if s > 0 else 0), BRONZE)
     for k, (yd, X) in enumerate(decks):
-        XT = X - SET_BAY  # top of the ramp (deck level)
-        XB = XT - RL  # foot of the ramp
+        XF = X - SET_BAY  # front of the bay half
+        XB = XF - RL  # foot of the ramp (same as before, so the landings still meet the deck below)
+        XT = XF - FLAT  # top of the ramp (deck level): a flat strip of deck in front of it
         xw = XB - LAND  # back wall of the bay
         yl = YG if k == 0 else yd - GH  # landing level (the next deck, or the ground)
-        slope = (yd - yl) / RL
+        slope = (yd - yl) / (XT - XB)
+        flat_slab(XT, XF, -BW, BW, yd)
         XR = X - SET_RIGHT  # front of the right (east) quarter
         # U-shaped deck, open to the front: flat slabs along both sides (stepped front) and across the NW end
         flat_slab(x0, X, z0, -BW, yd)
@@ -1319,7 +1322,6 @@ def garage22():
         ye = yl + 0.02
         m.poly([(XT, yd, -BW), (XB, ye, -BW), (XB, ye, BW), (XT, yd, BW)], DGREY, (XT, yd - 5.0, 0.0))  # ramp surface
         m.poly([(XT, yd - SL, -BW), (XB, ye - 0.03, -BW), (XB, ye - 0.03, BW), (XT, yd - SL, BW)], DGREY, (XT, yd + 5.0, 0.0))  # underside
-        m.poly([(XT, yd - SL, -BW), (XT, yd, -BW), (XT, yd, BW), (XT, yd - SL, BW)], TAN, (XT - 1.0, yd, 0.0))  # front end of the ramp slab
         # back wall of the bay and edge beams down both sides of the ramp and landing
         m.box(xw - 0.3, xw, yl, yd - SL, -BW, BW, TAN)
         xs = XT - SL / slope
@@ -1358,6 +1360,10 @@ def garage22():
     m.box(-52.0, -50.0, 11.4, 13.0, 20.0, 27.0, CREAM)
     number_disc(m, -45.5, 12.7, 30.0, (0, 1), 1.4, "22")
     m.box(-40.0, -37.0, 10.4, 13.4, -3.0, 3.0, DGREY)  # roof lift housing
+    # second stair tower near the east (+Z) end of the front on the top deck: an angled (wedge) tower, high at the back, with a "22" roundel on its
+    # NE face, away from the garage toward the terminal (MS-1270.213.3, Street View 14/16)
+    prism_z([(9.0, 10.4), (17.0, 10.4), (17.0, 12.6), (9.0, 15.2)], 24.0, 34.0, TAN)
+    number_disc(m, 13.0, 12.2, 34.0, (0, 1), 1.3, "22")
     m.mirror_x()
     return m
 
