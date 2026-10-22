@@ -1080,6 +1080,26 @@
 	<SceneryObject lat="53.56978800" lon="-113.52157800" alt="0.00000000000000" pitch="0.000000" bank="0.000000" heading="228" imageComplexity="VERY_SPARSE" altitudeIsAgl="TRUE" snapToGround="TRUE" snapToNormal="FALSE">
 		<LibraryObject name="{AFF6355C-1769-52FF-8E53-4E640F470A4E}" scale="1.000000"/>
 	</SceneryObject>
+	<!-- Alberta Aviation Museum: black roadside sign with logo, LED panel and History Takes Flight board (Street View) -->
+	<SceneryObject lat="53.56514295" lon="-113.51794719" alt="0.00000000000000" pitch="0.000000" bank="0.000000" heading="0" imageComplexity="VERY_SPARSE" altitudeIsAgl="TRUE" snapToGround="TRUE" snapToNormal="FALSE">
+		<LibraryObject name="{4BA9D044-D2DB-53AF-B81F-13CE9370C612}" scale="1.000000"/>
+	</SceneryObject>
+	<!-- Alberta Aviation Museum: CIM-10B Bomarc 60447 on its pedestal (OSM node) -->
+	<SceneryObject lat="53.56511720" lon="-113.51781050" alt="0.00000000000000" pitch="0.000000" bank="0.000000" heading="0" imageComplexity="VERY_SPARSE" altitudeIsAgl="TRUE" snapToGround="TRUE" snapToNormal="FALSE">
+		<LibraryObject name="{DAD9ABC1-9B82-5E7A-8C1E-E34B93FAF4CC}" scale="1.000000"/>
+	</SceneryObject>
+	<!-- Alberta Aviation Museum: Noorduyn Norseman CF-HPY on a green pylon (OSM node) -->
+	<SceneryObject lat="53.56490300" lon="-113.51733570" alt="0.00000000000000" pitch="0.000000" bank="0.000000" heading="0" imageComplexity="VERY_SPARSE" altitudeIsAgl="TRUE" snapToGround="TRUE" snapToNormal="FALSE">
+		<LibraryObject name="{70E745B8-99CF-5638-9155-F312B62EAAB6}" scale="1.000000"/>
+	</SceneryObject>
+	<!-- Alberta Aviation Museum: memorial with three flagpoles (OSM node) -->
+	<SceneryObject lat="53.56468070" lon="-113.51687570" alt="0.00000000000000" pitch="0.000000" bank="0.000000" heading="0" imageComplexity="VERY_SPARSE" altitudeIsAgl="TRUE" snapToGround="TRUE" snapToNormal="FALSE">
+		<LibraryObject name="{8672C347-9C66-5744-9A8A-A85684C0E3CE}" scale="1.000000"/>
+	</SceneryObject>
+	<!-- Alberta Aviation Museum: CF-101B Voodoo 101060 on a blue pole (OSM node) -->
+	<SceneryObject lat="53.56455970" lon="-113.51637680" alt="0.00000000000000" pitch="0.000000" bank="0.000000" heading="0" imageComplexity="VERY_SPARSE" altitudeIsAgl="TRUE" snapToGround="TRUE" snapToNormal="FALSE">
+		<LibraryObject name="{C707B252-58CB-5F6B-BA25-A992E9D71E13}" scale="1.000000"/>
+	</SceneryObject>
 	<!-- XD NDB station (Street View 2009): fenced lot, mast, shed -->
 	<SceneryObject lat="53.6436004638671900" lon="-113.5130004882812500" alt="0.00000000000000" pitch="0.000000" bank="0.000000" heading="0" imageComplexity="VERY_SPARSE" altitudeIsAgl="TRUE" snapToGround="TRUE" snapToNormal="FALSE">
 		<LibraryObject name="{B108732F-0107-557F-8CBA-69C85AEA4A8E}" scale="1.000000"/>

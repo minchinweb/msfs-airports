@@ -51,6 +51,78 @@ def louvres(m, zplane, xs, rows, front=1, sw=DGREY, off=0.3):
             m.poly([(a + 0.7, y0, z), (b - 0.7, y0, z), (b - 0.7, y1, z), (a + 0.7, y1, z)], sw, (a, y0, z - front))
 
 
+def pane_x(m, sgn, xplane, zc, y0, w, h, cols=2, rows=2, fw=0.08, sw=TEAL, depth=0.1):
+    """Framed window on a wall with outward normal (sgn, 0, 0): dark glass, a frame of width fw and cols x rows panes (zc = centre along z)."""
+    xa, xb = (xplane + 0.05, xplane + 0.05 + depth) if sgn > 0 else (xplane - 0.05 - depth, xplane - 0.05)
+    za, zb = zc - w / 2, zc + w / 2
+    m.window((sgn, 0, 0), (xplane, y0, za), (0, 0, 1), w, h)
+    for z in (za, zb - fw):
+        m.box(xa, xb, y0, y0 + h, z, z + fw, sw)
+    for y in (y0, y0 + h - fw):
+        m.box(xa, xb, y, y + fw, za, zb, sw)
+    for i in range(1, cols):
+        z = za + w * i / cols
+        m.box(xa, xb, y0, y0 + h, z - fw / 2, z + fw / 2, sw)
+    for j in range(1, rows):
+        y = y0 + h * j / rows
+        m.box(xa, xb, y - fw / 2, y + fw / 2, za, zb, sw)
+
+
+def pane_z(m, sgn, zplane, xc, y0, w, h, cols=2, rows=2, fw=0.08, sw=TEAL, depth=0.1):
+    """Same as pane_x on a wall with outward normal (0, 0, sgn); xc = centre along x."""
+    za, zb = (zplane + 0.05, zplane + 0.05 + depth) if sgn > 0 else (zplane - 0.05 - depth, zplane - 0.05)
+    xa, xb = xc - w / 2, xc + w / 2
+    m.window((0, 0, sgn), (xa, y0, zplane), (1, 0, 0), w, h)
+    for x in (xa, xb - fw):
+        m.box(x, x + fw, y0, y0 + h, za, zb, sw)
+    for y in (y0, y0 + h - fw):
+        m.box(xa, xb, y, y + fw, za, zb, sw)
+    for i in range(1, cols):
+        x = xa + w * i / cols
+        m.box(x - fw / 2, x + fw / 2, y0, y0 + h, za, zb, sw)
+    for j in range(1, rows):
+        y = y0 + h * j / rows
+        m.box(xa, xb, y - fw / 2, y + fw / 2, za, zb, sw)
+
+
+def door_x(m, sgn, xplane, zc, w, h, leaf=TEAL, frame=WHITE, y0=0.0):
+    """Door on a wall with outward normal (sgn, 0, 0): white frame, leaf with two rails and a small glazed light."""
+    xa, xb = (xplane, xplane + 0.12) if sgn > 0 else (xplane - 0.12, xplane)
+    xo = (xplane + 0.1, xplane + 0.16) if sgn > 0 else (xplane - 0.16, xplane - 0.1)
+    za, zb = zc - w / 2, zc + w / 2
+    m.box(xa, xb, y0, y0 + h + 0.15, za - 0.1, zb + 0.1, frame)
+    m.box(xo[0], xo[1], y0, y0 + h, za, zb, leaf)
+    for y in (y0 + 0.3, y0 + h * 0.55):
+        m.box(xo[0], xo[1] + 0.03, y, y + 0.07, za, zb, DGREY)
+    m.window((sgn, 0, 0), (xo[1] if sgn > 0 else xo[0], y0 + h * 0.62, za + w * 0.2), (0, 0, 1), w * 0.6, h * 0.28, off=0.0)
+
+
+def door_z(m, sgn, zplane, xc, w, h, leaf=TEAL, frame=WHITE):
+    """Door on a wall with outward normal (0, 0, sgn); see door_x."""
+    za, zb = (zplane, zplane + 0.12) if sgn > 0 else (zplane - 0.12, zplane)
+    zo = (zplane + 0.1, zplane + 0.16) if sgn > 0 else (zplane - 0.16, zplane - 0.1)
+    xa, xb = xc - w / 2, xc + w / 2
+    m.box(xa - 0.1, xb + 0.1, 0, h + 0.15, za, zb, frame)
+    m.box(xa, xb, 0, h, zo[0], zo[1], leaf)
+    for y in (0.3, h * 0.55):
+        m.box(xa, xb, y, y + 0.07, zo[0], zo[1] + 0.03, DGREY)
+    m.window((0, 0, sgn), (xa + w * 0.2, h * 0.62, zo[1] if sgn > 0 else zo[0]), (1, 0, 0), w * 0.6, h * 0.28, off=0.0)
+
+
+def win_x(m, sgn, xplane, zc, y0, w, h):
+    """Double-hung window on a clapboard wall with outward normal (sgn, 0, 0): white frame, dark glass, meeting rail and a projecting sill."""
+    pane_x(m, sgn, xplane, zc, y0, w, h, cols=1, rows=2, fw=0.1, sw=WHITE)
+    xa, xb = sorted((xplane, xplane + 0.22 * sgn))
+    m.box(xa, xb, y0 - 0.1, y0, zc - w / 2 - 0.1, zc + w / 2 + 0.1, WHITE)
+
+
+def win_z(m, sgn, zplane, xc, y0, w, h):
+    """Same as win_x on a wall with outward normal (0, 0, sgn); xc = centre along x."""
+    pane_z(m, sgn, zplane, xc, y0, w, h, cols=2, rows=2, fw=0.1, sw=WHITE)
+    za, zb = sorted((zplane, zplane + 0.22 * sgn))
+    m.box(xc - w / 2 - 0.1, xc + w / 2 + 0.1, y0 - 0.1, y0, za, zb, WHITE)
+
+
 def barrel(m, x0, x1, z0, z1, spring, rise, wall_sw, roof_sw, n=14):
     """Barrel-vault hall along Z: straight walls to `spring`, circular-arc roof, arched end caps.  Returns the arch height function."""
     W = x1 - x0
@@ -570,16 +642,26 @@ def hangar11():
         if 9.8 + 1.3 < arch(x) - 0.4:
             m.window((0, 0, 1), (x - 0.7, 9.8, z1), (1, 0, 0), 1.4, 1.3)
     m.box(-24.4, 24.4, 8.0, 8.35, z1, z1 + 0.3, DGREY)
-    # south annex: three storeys
-    ax0, ax1, az0, az1 = -29.0, 7.0, -46.0, z0
+    # south annex: three storeys across the whole south end, flush with the landside (+X) wall so the long wing's wall runs on from its corner
+    # (photos 11094273884, h11-annex-63..66).  Wall relief: corner boards, belt courses at the floor lines, framed double-hung windows with sills.
+    ax0, ax1, az0, az1 = -29.0, 43.15, -46.0, z0
     m.box(ax0, ax1, 0, 11.2, az0, az1, WHITE, top=False)
     m.box(ax0 - 0.2, ax1 + 0.2, 11.2, 11.6, az0 - 0.2, az1, GREEN)
     m.box(ax0, ax1, 11.2, 11.3, az0, az1, DGREY)
+    for y in (4.7, 8.0):
+        m.box(ax0, ax1 + 0.1, y - 1.5, y - 1.3, az0 - 0.1, az1, WHITE)  # belt course
+        m.box(ax0 - 0.1, ax1, y - 1.5, y - 1.3, az0 - 0.1, az1, WHITE)
+    for x in (ax0 - 0.1, ax1 - 0.1):                                     # corner boards
+        m.box(x, x + 0.25, 0, 11.2, az0 - 0.1, az0 + 0.2, WHITE)
     for y in (1.4, 4.7, 8.0):
-        rows_z(m, -1, az0, ax0 + 1.5, ax1 - 1.5, y, 9, 1.6, 1.5)
-        rows_x(m, -1, ax0, az0 + 1.5, az1 - 1.5, y, 3, 1.6, 1.5)
-        rows_x(m, 1, ax1, az0 + 1.5, az1 - 1.5, y, 3, 1.6, 1.5)
-    number_disc(m, -22.0, 8.6, az0, (0, -1), 1.0, "11")
+        for x in [ax0 + 2.5 + 3.4 * k for k in range(20)]:
+            if x < ax1 - 4.0 and not (y > 7.0 and abs(x - 37.0) < 2.8):
+                win_z(m, -1, az0, x, y, 1.6, 1.5)
+        for i in range(5):                                               # landside face of the annex (beside the fire escape)
+            win_x(m, 1, ax1, az0 + 4.2 + 1.9 * i, y, 1.0, 1.5)
+        for i in range(3):
+            win_x(m, -1, ax0, az0 + 3.0 + 4.0 * i, y, 1.6, 1.5)
+    number_disc(m, 37.0, 8.6, az0, (0, -1), 1.0, "11")
     # roof sign board and control cab stand on the annex roof (y 11.3); the roof vents and the cab were floating 0.3-0.9 m above it
     m.box(-26.0, 4.0, 11.3, 14.4, az0 + 0.4, az0 + 0.6, WHITE)
     rect_sign(m, -11.0, 12.85, az0 + 0.38, (0, -1), 28.0, 2.8, "nwi", 0.0, 0.5)  # NORTHWEST INDUSTRIES LTD. (1956 photo)
@@ -587,23 +669,46 @@ def hangar11():
     m.box(-9.0, -4.0, 11.3, 14.6, az0 + 6.0, az0 + 11.0, DGREY)  # control cab
     m.box(-9.1, -3.9, 12.4, 13.9, az0 + 5.9, az0 + 11.1, GLASS)
     m.box(-9.4, -3.6, 14.6, 14.9, az0 + 5.6, az0 + 11.4, DGREY)
-    # landside (east, 109 St) fire escape on the annex (11094273884): two white landings with green doors, a steel ladder and handrails
-    fz0 = az0 + 4.0
-    for ly in (3.9, 7.2):
-        m.box(ax1, ax1 + 1.7, ly, ly + 0.15, fz0, fz0 + 2.2, WHITE)
-        m.box(ax1 + 1.6, ax1 + 1.7, ly + 0.15, ly + 1.1, fz0, fz0 + 2.2, WHITE)  # rail along the outer edge
-        m.box(ax1, ax1 + 0.06, ly + 0.15, ly + 2.3, fz0 + 0.5, fz0 + 1.5, GREEN)  # door onto the landing
-    for rz in (fz0 + 0.3, fz0 + 0.9):
-        m.box(ax1 + 1.45, ax1 + 1.55, 0, 7.4, rz, rz + 0.06, DGREY)  # ladder rails
-    for k in range(24):
-        m.box(ax1 + 1.45, ax1 + 1.55, 0.3 + k * 0.3, 0.34 + k * 0.3, fz0 + 0.3, fz0 + 0.96, DGREY)  # rungs
-    m.box(ax1, ax1 + 0.06, 0, 2.2, az0 + 9.0, az0 + 10.0, GREEN)  # ground-floor door
-    # east wing: two storeys, ribbon windows, taller stair tower at its south end
-    m.box(26.0, 43.15, 0, 8.6, -20.0, z1, WHITE, top=True)
-    m.box(25.8, 43.35, 8.6, 8.9, -20.2, z1 + 0.2, GREEN)
-    for y in (1.4, 5.0):
-        rows_x(m, 1, 43.15, -18.0, z1 - 2.0, y, 10, 1.5, 1.8)
-    m.box(36.0, 43.15, 8.9, 13.5, -20.0, -9.0, WHITE)
+    # landside (109 St) fire escape, one only (11094273884): a steel ladder up the south face beside the corner, two white landings with
+    # green doors on the landside face next to it, stringers down from each landing, and the ladder carried 1 m above the roof
+    lx = ax1 - 1.0
+    for rx in (lx - 0.27, lx + 0.27):
+        m.box(rx - 0.03, rx + 0.03, 0, 12.6, az0 - 0.32, az0 - 0.26, DGREY)  # ladder rails
+    for k in range(40):
+        m.box(lx - 0.27, lx + 0.27, 0.3 + k * 0.3, 0.34 + k * 0.3, az0 - 0.3, az0 - 0.27, DGREY)  # rungs
+    for y in (0.5, 4.0, 7.5, 11.0):
+        for rx in (lx - 0.27, lx + 0.27):
+            m.box(rx - 0.04, rx + 0.04, y, y + 0.1, az0 - 0.3, az0 - 0.03, DGREY)  # wall brackets
+    for ly in (3.5, 6.8):
+        m.box(ax1, ax1 + 1.7, ly, ly + 0.15, az0 + 0.1, az0 + 2.3, WHITE)           # landing deck
+        m.box(ax1 + 1.6, ax1 + 1.7, ly + 0.15, ly + 1.1, az0 + 0.1, az0 + 2.3, WHITE)  # rails
+        m.box(ax1, ax1 + 1.7, ly + 0.15, ly + 1.1, az0 + 2.2, az0 + 2.3, WHITE)
+        m.box(ax1, ax1 + 1.7, ly + 0.95, ly + 1.1, az0 + 0.1, az0 + 0.2, WHITE)     # top rail toward the ladder
+        door_x(m, 1, ax1, az0 + 1.2, 0.9, 2.1, leaf=GREEN, y0=ly + 0.15)
+        m.box(ax1 + 0.05, ax1 + 0.15, ly - 0.7, ly, az0 + 0.3, az0 + 2.1, WHITE)    # underside bracket
+    door_x(m, 1, ax1, az0 + 3.0, 0.9, 2.1, leaf=WHITE)                              # ground door under the escape
+    for zc in (az0 + 11.2, az0 + 12.0):                                              # U-HAUL double doors
+        door_x(m, 1, ax1, zc, 0.8, 2.2, leaf=GREEN)
+    # low one-storey block in front of the long wall (h11-annex-65/66): ten big windows and a door under a green-trimmed roof
+    bz0, bz1 = z0 + 1.0, -8.0
+    m.box(ax1, ax1 + 3.5, 0, 4.0, bz0, bz1, WHITE, top=True)
+    m.box(ax1 - 0.1, ax1 + 3.7, 4.0, 4.25, bz0 - 0.2, bz1 + 0.2, GREEN)
+    m.box(ax1, ax1 + 3.55, 3.55, 3.65, bz0 - 0.05, bz1 + 0.05, WHITE)                 # belt course
+    for k in range(10):
+        win_x(m, 1, ax1 + 3.5, bz0 + 2.6 + 2.0 * k, 1.2, 1.4, 1.9)
+    door_x(m, 1, ax1 + 3.5, bz0 + 1.2, 0.9, 2.1, leaf=WHITE)
+    # east (landside) wing: two storeys, 27 framed double-hung windows per floor on the 2.3 m pitch counted from photos 63/64, belt course,
+    # corner boards, the ground row under the low block left out
+    m.box(26.0, 43.15, 0, 8.6, z0, z1, WHITE, top=True)
+    m.box(25.8, 43.35, 8.6, 8.9, z0 - 0.2, z1 + 0.2, GREEN)
+    m.box(26.0, 43.25, 3.3, 3.5, z0, z1, WHITE)                                      # belt course between the floors
+    for k in range(27):
+        zc = z0 + 2.2 + 2.3 * k
+        win_x(m, 1, 43.15, zc, 5.0, 1.0, 1.7)
+        if zc > bz1 + 1.0:
+            win_x(m, 1, 43.15, zc, 1.4, 1.0, 1.7)
+    for z in (z0, z1 - 0.25):
+        m.box(43.0, 43.25, 0, 8.6, z, z + 0.25, WHITE)
     # west annex
     m.box(-43.15, bx0, 0, 6.0, -30.0, -4.0, WHITE)
     rows_x(m, -1, -43.15, -28.0, -6.0, 2.4, 5, 1.2, 1.5)
@@ -615,34 +720,121 @@ def hangar11():
 
 # Hangar 14 (Alberta Aviation Museum) ----------------------------------------------------------
 def hangar14():
-    """Hangar 14 (BCATP 1941, Alberta Aviation Museum): white horizontal-siding upper band over a dark teal-green lower wall with
-    glazed panes.  The three big apron door bays are on the SOUTH gable end (+Z, heading 180, toward the road; user 2026-10-21), the
-    museum entrance with its teal canopy and glazed band on the east wall (-X).  OSM 230718920: 90.8 (E-W) x 100 (N-S) m."""
+    """Hangar 14 (BCATP 1941, Alberta Aviation Museum), reworked from the 2011 Commons photo (Alberta_Aviation_Museum.jpg), the 2012-2024
+    Street View frames, the 2026-10-21 frontage set and the 2014 aerial (tower-photos/EDMONTON_MUNI_AIRPORT__15439598181_.jpg).
+    OSM 230718920: 90.8 (E-W) x 100 (N-S) m; front = the SOUTH gable (+Z, heading 180, facing Kingsway and the Bomarc).
+    Windows counted from photos.  A perspective fit of the 2012 Street View frame (h14-kingsway-81) puts the west wall's 18 upper windows on an
+    even 5.1 m pitch, the first 7.8 m north of the south corner (fit residual under 0.1 %).  The aerial gives the east wall the same 18 bays
+    from 7.2 m; its porch block covers the three at 59-78 m, so 15 show.  Both long walls: tall four-pane upper windows over a row of small
+    ones (2.85 m pitch west, 2.55 m east).
+    South face from the west end (viewer-left, +X): the end of the two-storey white clapboard west wing (10 m wide, 7.2 m); then the hall
+    front under a white band with the dark-green ALBERTA AVIATION MUSEUM lettering and a V wing mark either side (aerial crop): glazed door
+    bay (10-23.5 m), solid green bay with four small windows, glazed bay with the teal awning, white pilaster (48-50), glazed lobby with the
+    entrance doors and small canopy (70 m), a second pilaster (78-79.5), glazed bay, white corner post.  West wall: lean-to ledge, doors at 14
+    and 45 m, a one-storey block at 47-67 m with two doors.  East wall: low lean-to (3.4 m high, 3.5 m deep) and a porch block at 59-78 m."""
     m = Mesh(textured=True)
     W, D, H = 90.8, 100.0, 8.8
+    WING, WH = 10.0, 7.2
     x0, x1, z0, z1 = -W / 2, W / 2, -D / 2, D / 2
-    m.box(x0, x1, 0, 4.4, z0, z1, TEAL, top=False)
-    m.box(x0, x1, 4.4, H, z0, z1, WHITE, top=True)
-    m.box(x0 - 0.2, x1 + 0.2, H, H + 0.5, z0 - 0.2, z1 + 0.2, TEAL)
-    m.gable(x0, x1, H + 0.5, 2.6, z0, z1, along_z=True, sw_roof=LROOF, sw_wall=WHITE)
-    # south gable end: three door bays
-    xs = [x0 + 4.9 + 27.0 * i for i in range(4)]
-    m.box(xs[0], xs[-1], 0, 7.6, z1, z1 + 0.05, DARK)
-    leaves(m, z1, xs, 0, 7.4, TEAL, front=1, post=DGREY)
-    for a, b in zip(xs[:-1], xs[1:]):
-        rows_z(m, 1, z1 + 0.25, a + 2, b - 2, 4.6, 6, 3.4, 1.8)
-    # east wall (-X): glazed band, sign bars, canopy, entrance (was the "front" at heading 90; z = old x)
-    rows_x(m, -1, x0, z0 + 3, z1 - 3, 1.0, 14, 4.2, 2.9)
-    for a, b in ((-24, -8), (-4, 8), (12, 26)):
-        m.box(x0 - 0.12, x0, 5.9, 7.1, a, b, TEAL)
-    m.box(x0 - 3.2, x0, 3.5, 3.8, -26.0, -14.0, TEAL)  # entrance canopy
-    m.box(x0 - 3.2, x0 - 3.0, 3.8, 4.1, -25.5, -14.5, WHITE)
-    m.box(x0 - 0.15, x0, 0, 3.0, 14.0, 26.0, DGREY)
-    for y in (0.9, 2.1):
-        rows_x(m, -1, x0 - 0.15, 14.5, 25.5, y, 4, 2.0, 0.9)
-    # west wall (+X) and north end: plain glazed bands
-    rows_x(m, 1, x1, z0 + 3, z1 - 3, 1.0, 14, 4.2, 2.9)
-    rows_z(m, -1, z0, x0 + 3, x1 - 3, 1.0, 12, 4.2, 2.9)
+    xm = x1 - WING                       # west edge of the hall
+    U = lambda u: x1 - u                 # x of a point u metres in from the west end
+    Z = lambda t: z1 - t                 # z of a point t metres north of the south corner
+    m.box(x0, xm, 0, 4.4, z0, z1, TEAL, top=False)
+    m.box(x0, xm, 4.4, H, z0, z1, WHITE, top=True)
+    m.box(x0 - 0.2, xm, H, H + 0.5, z0 - 0.2, z1 + 0.3, TEAL)
+    m.gable(x0, xm, H + 0.5, 2.6, z0, z1, along_z=True, sw_roof=LROOF, sw_wall=WHITE)
+    # west wing: white clapboard, flat roof, projects 0.6 m beyond the door face
+    zw = z1 + 0.6
+    m.box(xm, x1, 0, WH, z0, zw, WHITE, top=True)
+    m.box(xm, x1 + 0.2, WH, WH + 0.3, z0 - 0.2, zw + 0.2, TEAL)
+    for k in range(18):                                              # 18 tall upper windows, 2 x 2 panes (photos 79-81)
+        pane_x(m, 1, x1, Z(7.8 + 5.1 * k), 3.9, 1.7, 2.8)
+    LOW = [t for t in (7.9 + 2.85 * j for j in range(33)) if t < 98 and not (12.2 < t < 16.0 or 43.3 < t < 46.2 or 46.0 < t < 68.5)]
+    for t in LOW:                                                    # small lower windows
+        pane_x(m, 1, x1, Z(t), 1.1, 1.0, 1.1)
+    m.box(x1, x1 + 0.9, 3.4, 3.55, z0, Z(68.5), WHITE)               # lean-to ledge between the storeys
+    m.box(x1, x1 + 0.9, 3.4, 3.55, Z(46.0), z1, WHITE)
+    door_x(m, 1, x1, Z(14.1), 1.0, 2.1)
+    door_x(m, 1, x1, Z(44.7), 1.0, 2.1, leaf=DGREY)
+    m.box(x1, x1 + 3.0, 0, 3.7, Z(67.0), Z(47.0), WHITE)             # one-storey block against the wall (photo 81)
+    m.box(x1 - 0.1, x1 + 3.2, 3.7, 3.95, Z(67.2), Z(46.8), TEAL)
+    door_x(m, 1, x1 + 3.0, Z(52.8), 1.0, 2.1)
+    door_x(m, 1, x1 + 3.0, Z(61.1), 1.0, 2.1)
+    pane_x(m, 1, x1 + 3.0, Z(57.0), 1.1, 1.0, 1.1)
+    # wing end (south face): two tall upper windows, door and small window below
+    for xc in (x1 - 2.8, x1 - 7.2):
+        pane_z(m, 1, zw, xc, 3.9, 1.7, 2.8)
+    door_z(m, 1, zw, x1 - 2.2, 1.0, 2.1)
+    pane_z(m, 1, zw, x1 - 6.2, 1.1, 1.0, 1.1)
+
+    # south face of the hall
+    def solid(ua, ub, wins=False):
+        xa, xb = U(ub), U(ua)
+        m.box(xa, xb, 0, 5.5, z1, z1 + 0.12, TEAL)
+        n = max(1, int(round((xb - xa) / 3.4)))
+        for k in range(1, n):
+            m.box(xa + (xb - xa) * k / n - 0.04, xa + (xb - xa) * k / n + 0.04, 0, 5.5, z1 + 0.12, z1 + 0.15, DGREY)
+        if wins:
+            for k in range(4):
+                pane_z(m, 1, z1 + 0.12, xa + (xb - xa) * (k + 1) / 5, 1.4, 1.1, 0.55, cols=2, rows=1, fw=0.06)
+
+    def glazed(ua, ub, sill=2.2, pitch=1.15):
+        xa, xb = U(ub), U(ua)
+        m.box(xa, xb, 0, sill, z1, z1 + 0.12, TEAL)
+        m.box(xa, xb, sill, 5.5, z1, z1 + 0.05, DARK)
+        n = max(2, int(round((xb - xa) / pitch)))
+        for i in range(n + 1):
+            x = xa + (xb - xa) * i / n
+            m.box(x - 0.05, x + 0.05, sill, 5.5, z1, z1 + 0.14, TEAL)
+        y = sill
+        while y < 5.5:
+            m.box(xa, xb, y - 0.04, y + 0.04, z1, z1 + 0.14, TEAL)
+            y += 0.8
+        m.box(xa, xb, 5.42, 5.55, z1, z1 + 0.16, TEAL)
+
+    glazed(10.0, 23.5)
+    solid(23.5, 37.0, wins=True)
+    glazed(37.0, 48.0)
+    m.box(U(50.0), U(48.0), 0, H, z1, z1 + 0.25, WHITE)             # pilaster under the lettering
+    glazed(50.0, 78.0, sill=1.1, pitch=2.5)                         # lobby glazing (2014 aerial)
+    m.box(U(79.5), U(78.0), 0, H, z1, z1 + 0.25, WHITE)             # second pilaster
+    glazed(79.5, 88.4, sill=1.1, pitch=2.5)
+    xa, xb = U(71.8), U(68.6)                                       # glass entrance doors in the lobby: frame, centre post, push bars
+    m.box(xa, xb, 0.0, 2.6, z1 + 0.04, z1 + 0.2, DARK)
+    for x in (xa, (xa + xb) / 2 - 0.05, xb - 0.1):
+        m.box(x, x + 0.1, 0.0, 2.7, z1 + 0.04, z1 + 0.24, WHITE)
+    for y in (0.0, 2.6):
+        m.box(xa, xb, y, y + 0.1, z1 + 0.04, z1 + 0.24, WHITE)
+    for x in ((xa + xb) / 2 - 0.35, (xa + xb) / 2 + 0.25):
+        m.box(x, x + 0.1, 0.9, 1.1, z1 + 0.2, z1 + 0.3, DGREY)
+    m.box(U(72.6), U(67.8), 2.85, 3.0, z1, z1 + 1.3, TEAL)          # small canopy over them
+    m.box(x0, x0 + 1.2, 0, H, z1, z1 + 0.2, WHITE)                  # corner post
+    m.box(x0, xm, 5.5, 5.6, z1, z1 + 0.3, TEAL)                     # door header
+    # teal awning over the door in the third glazed bay (Commons photo; aerial)
+    ac, aw, ad = U(40.0), 3.6, 1.9
+    q = lambda x, y, z: (x, y, z)
+    m.poly([q(ac - aw, 3.9, z1), q(ac + aw, 3.9, z1), q(ac + aw, 3.15, z1 + ad), q(ac - aw, 3.15, z1 + ad)], TEAL, (ac, 0, z1 + 1))
+    m.poly([q(ac - aw, 3.5, z1 + 0.1), q(ac + aw, 3.5, z1 + 0.1), q(ac + aw, 3.0, z1 + ad - 0.1), q(ac - aw, 3.0, z1 + ad - 0.1)], DARK, (ac, 6, z1 + 1))
+    m.poly([q(ac - aw, 3.9, z1), q(ac - aw, 3.15, z1 + ad), q(ac - aw, 3.0, z1 + ad)], TEAL, (ac, 3, z1 + 1))
+    m.poly([q(ac + aw, 3.9, z1), q(ac + aw, 3.0, z1 + ad), q(ac + aw, 3.15, z1 + ad)], TEAL, (ac, 3, z1 + 1))
+    rect_sign(m, U(48.8), 7.1, z1 + 0.06, (0, 1), 36.0, 1.4, "museum", 0.0, 0.5)   # ALBERTA AVIATION MUSEUM with the two V marks
+    # east wall (-X): 15 tall upper windows (18 bays from 7.2 m at 5.1 m; the porch block hides k = 11-13), a low lean-to with small windows
+    for k in list(range(0, 11)) + list(range(14, 18)):
+        pane_x(m, -1, x0, Z(7.2 + 5.1 * k), 4.6, 1.7, 2.8)
+    m.box(x0 - 3.5, x0, 0, 3.4, z0, z1, WHITE, top=True)             # lean-to, full length from the south face
+    m.box(x0 - 3.7, x0, 3.4, 3.65, z0 - 0.2, z1 + 0.2, TEAL)
+    LOWE = [t for t in (6.0 + 2.55 * j for j in range(38)) if t < 98 and not (56.0 < t < 80.0)]
+    for t in LOWE:
+        pane_x(m, -1, x0 - 3.5, Z(t), 1.3, 1.0, 1.1)
+    door_z(m, 1, z1, x0 - 1.0, 1.0, 2.1)                              # lean-to south end: door and window
+    pane_z(m, 1, z1, x0 - 2.6, 1.3, 1.0, 1.1)
+    m.box(x0 - 3.5, x0, 3.65, 7.2, Z(78.0), Z(59.0), WHITE)          # porch block at 59-78 m
+    m.box(x0 - 3.7, x0, 7.2, 7.45, Z(78.2), Z(58.8), TEAL)
+    door_x(m, -1, x0 - 3.5, Z(68.5), 1.0, 2.1)
+    for t in (62.5, 74.0):
+        pane_x(m, -1, x0 - 3.5, Z(t), 1.3, 1.0, 1.1)
+    for xc in [x0 + 3 + 6.7 * i for i in range(11)]:                  # north end: tall upper windows
+        pane_z(m, -1, z0, xc, 4.6, 1.7, 2.8)
     roof_vents(m, [(-20, -30), (-20, 0), (-20, 30), (20, -30), (20, 0), (20, 30)], H + 2.6)
     m.mirror_x()
     return m
@@ -1073,6 +1265,10 @@ def place(out, excl, modellib, footprint):
         guid = fn().save(modellib / name, name)
         out.append((title, "%.8f" % lat, "%.8f" % lon, "%g" % hdg, guid))
         excl.append((title, footprint("%.8f" % lat, "%.8f" % lon, "%g" % hdg, -W / 2 - MARGIN, W / 2 + MARGIN, -D / 2 - MARGIN, D / 2 + MARGIN)))
+    # Alberta Aviation Museum frontage (Bomarc, Norseman, memorial, Voodoo): origins are the OSM nodes, no exclusions needed
+    import display_aircraft
+    for name, title, fn, lat, lon in display_aircraft.DISPLAY:
+        out.append((title, "%.8f" % lat, "%.8f" % lon, "0", fn().save(modellib / name, name)))
     # a generated building stood off the SE end of the old terminal (user, 2026-10-21, sim screenshot): clear the surroundings of the SE end and the
     # landside beside it (terminal frame, +Z = bearing 51, +X = bearing 141)
     excl.append(("Old terminal: SE end and landside surroundings", footprint("53.57094000", "-113.52317800", "51", -20.0, 150.0, -95.0, -18.0)))

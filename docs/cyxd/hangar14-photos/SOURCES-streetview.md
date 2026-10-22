@@ -13,3 +13,7 @@ Screenshots from Google Street View (copyright Google; reference only, do not re
 | h14-kingsway-79-streetview-201906.png | 11416 Kingsway NW | 2019-06 | Hangar 14 long Kingsway side: white siding, regular window grid, big arched glazed doors at the end (80) | Screenshot 2026-10-17 202054.png | 79 |
 | h14-kingsway-80-streetview-201207.png | 11416 Kingsway NW | 2012-07 | Hangar 14 long Kingsway side: white siding, regular window grid, big arched glazed doors at the end (80) | Screenshot 2026-10-17 202111.png | 80 |
 | h14-kingsway-81-streetview-201207.png | 11436 Kingsway NW | 2012-07 | Hangar 14 long Kingsway side: white siding, regular window grid, big arched glazed doors at the end (80) | Screenshot 2026-10-17 202130.png | 81 |
+
+## Frontage set, added 2026-10-21 (`frontage/`)
+Fourteen more Street View screenshots (Kingsway NW, May 2023, Jun 2024 and Oct 2022; original names kept): the Bomarc 60447 (pedestal, rail, roundels, flag on the fins), the Norseman CF-HPY (cream-yellow, mint cowl and wingtips, silver floats, green C-shaped pylon, green cut-out fir trees), the Voodoo 101060 (side, three-quarter and underside, blue C-shaped pole) and the memorial (stone block with plaque on a round pad, three flagpoles). There are three display aircraft, not four: the "white jet" in photo 78 is the Voodoo seen past the Norseman. Order from the north: AIR MUSEUM sign, Bomarc, Norseman, memorial, Voodoo.
+Models: `airport-cyxd/tools/display_aircraft.py`, placed at the OSM nodes (`historic=aircraft` / `monument`).

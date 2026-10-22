@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ModelInfo guid="{70E745B8-99CF-5638-9155-F312B62EAAB6}" version="1.1">
+	<LODS>
+		<LOD minSize="0" ModelFile="cyxd_h14_norseman.gltf"/>
+	</LODS>
+</ModelInfo>

@@ -110,6 +110,40 @@ def goa():
     return b.resize((1024, 1024), Image.LANCZOS)
 
 
+def museum():
+    """Top half: ALBERTA AVIATION MUSEUM in dark green serif capitals on the white band over the doors (36 x 1.4 m with the V marks; the 2011 Commons photo and
+    Street View 210410 / 210439); bottom half: the black two-post roadside sign (1.9 x 2.8 m face) with the club logo oval, the LED panel and the
+    "History Takes Flight!" board (Street View 210439, 210533, 210605).  Each half is drawn at its true aspect and squashed into 1024 x 512."""
+    im = Image.new("RGB", (1024, 1024), (238, 238, 234))
+    w = 3600
+    h = int(w / (36 / 1.4))
+    b = Image.new("RGB", (w, h), (238, 238, 234))
+    d = ImageDraw.Draw(b)
+    text_fit(d, "ALBERTA   AVIATION   MUSEUM", "georgiab.ttf", (w * 0.1667, h * 0.12, w * 0.8333, h * 0.88), (34, 74, 58))
+    for cx in (w * 0.5 - w * 0.467, w * 0.5 + w * 0.467):                       # the small "V" wing marks either side of the lettering
+        d.polygon([(cx - h * 0.28, h * 0.2), (cx - h * 0.1, h * 0.2), (cx, h * 0.62), (cx + h * 0.1, h * 0.2), (cx + h * 0.28, h * 0.2),
+                   (cx + h * 0.07, h * 0.82), (cx - h * 0.07, h * 0.82)], fill=(34, 74, 58))
+    im.paste(b.resize((1024, 512), Image.LANCZOS), (0, 0))
+    w, h = 760, 1120
+    b = Image.new("RGB", (w, h), (22, 22, 24))
+    d = ImageDraw.Draw(b)
+    d.ellipse((w * 0.06, h * 0.05, w * 0.94, h * 0.37), fill=(236, 236, 232))                    # logo oval: white rim, blue sky, red aircraft
+    d.ellipse((w * 0.1, h * 0.08, w * 0.9, h * 0.34), fill=(36, 78, 160))
+    d.ellipse((w * 0.2, h * 0.15, w * 0.8, h * 0.27), fill=(120, 170, 220))
+    d.polygon([(w * 0.28, h * 0.22), (w * 0.62, h * 0.19), (w * 0.74, h * 0.2), (w * 0.62, h * 0.225)], fill=(200, 40, 40))
+    d.line([(w * 0.42, h * 0.17), (w * 0.5, h * 0.21)], fill=(200, 40, 40), width=8)
+    text_fit(d, "ALBERTA AVIATION MUSEUM", "georgiab.ttf", (w * 0.22, h * 0.095, w * 0.78, h * 0.135), (236, 236, 232))
+    text_fit(d, "EDMONTON", "georgiab.ttf", (w * 0.3, h * 0.295, w * 0.7, h * 0.33), (236, 236, 232))
+    d.rectangle((w * 0.07, h * 0.43, w * 0.93, h * 0.7), fill=(16, 16, 20), outline=(90, 90, 96), width=6)   # LED panel
+    cols = [(240, 90, 60), (250, 210, 60), (90, 200, 120), (80, 160, 240), (200, 100, 220)]
+    for k, txt in enumerate(("Volunteers", "Needed", "APPLY ONLINE")):
+        text_fit(d, txt, "arialbd.ttf", (w * 0.12, h * (0.45 + 0.08 * k), w * 0.88, h * (0.51 + 0.08 * k)), cols[k])
+    d.rectangle((w * 0.07, h * 0.74, w * 0.93, h * 0.89), fill=(176, 178, 184), outline=(90, 90, 96), width=6)  # board
+    text_fit(d, "History Takes flight!", "ariali.ttf", (w * 0.12, h * 0.77, w * 0.88, h * 0.86), (40, 40, 48))
+    im.paste(b.resize((1024, 512), Image.LANCZOS), (0, 512))
+    return im
+
+
 if __name__ == "__main__":
     esso().save(HERE / "assets/esso_sign.png")
     navcan().save(HERE / "assets/navcan_sign.png")
@@ -117,3 +151,4 @@ if __name__ == "__main__":
     nwi().save(HERE / "assets/nwi_sign.png")
     efc().save(HERE / "assets/efc_sign.png")
     goa().save(HERE / "assets/goa_sign.png")
+    museum().save(HERE / "assets/museum_sign.png")

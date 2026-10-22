@@ -23,7 +23,7 @@ Kept here so it can be queried later. Dated 2026-10-13. This file and `reference
 2. Hangar 16 rebuilt 2026-10-17 (five-bay Aerocentre with the angled entrance, repositioned Shell hangar, north block, landside wing, new Shell pecten); still to check in the sim: the front offset between the Aerocentre and the hangar, and the SE-end box-out (not built). See `hangar16-photos/SOURCES.md`.
 3. Wind sock: move it to the position seen in the PWA 737 video (YouTube q5-woik2XsQ; Reddit 1ffvw4j). Watch the same videos for building layout and the taxi sign style.
 4. A static Pacific Western 737 on the apron.
-5. Hangar 14 static displays: the aircraft mounted in front of the museum and the displays on its east side. Bomarc and searchlight photos are in `hangar14-photos/`.
+5. Hangar 14 static displays: Bomarc, Norseman, memorial and Voodoo in front of the museum are modelled (`tools/display_aircraft.py`; not yet built or seen in the sim). Still open: the black AIR MUSEUM sign, the searchlight, and the displays on the east side and airside (CF-100, HS.125, Silver Star: OSM nodes near 53.5657, -113.5163).
 6. Split `cyxd_hangar_1938_landmark` into the 1930s first hangar and the 1938 hangar (`first-hangar-photos/SOURCES.md`). For the 1938 hangar's door and door-window textures use the Fort Edmonton Park replica wedding photos (link in `reference-links.md`).
 7. General Aviation Centre (77 Airport Road, west side), Canadian Helicopters hangar, and the large red-roofed complex at the north-west. Photos are saved.
 8. Not to build (reference only): the old terminal building.

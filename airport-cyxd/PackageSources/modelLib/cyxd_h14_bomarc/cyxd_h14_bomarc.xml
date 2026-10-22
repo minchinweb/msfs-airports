@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ModelInfo guid="{DAD9ABC1-9B82-5E7A-8C1E-E34B93FAF4CC}" version="1.1">
+	<LODS>
+		<LOD minSize="0" ModelFile="cyxd_h14_bomarc.gltf"/>
+	</LODS>
+</ModelInfo>

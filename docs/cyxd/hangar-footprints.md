@@ -60,7 +60,7 @@ Old generic placements removed from the generator (`SKIP`): "Hangar 11", "Hangar
 - 7: steel-blue hall, wide white two-tier door, "7" roundel beside it, slate-blue annex with awning.
 - 8: STEEL hall with a full-width glazed door wall, taller end block with "8", low wing with roof clerestory.
 - 11: white barrel vault (seven peach leaves), the 1950s three-storey clapboard annex with control cab, big roof sign and "11" roundel, fire escape, two-storey east wing.
-- 14: museum front (white siding over teal base, glazed band, sign bars, teal canopy), three apron door bays on the west side. Static displays (Bomarc, aircraft on poles) are not built.
+- 14 (reworked 2026-10-21): the front is the SOUTH gable: two-storey white clapboard west wing, glazed and solid green door bays under a white band with the ALBERTA AVIATION MUSEUM lettering, teal awning, white pilaster, glazed lobby to the east corner. East wall (2014 aerial): tall upper windows over a low lean-to. Frontage displays (Bomarc, Norseman, memorial, Voodoo, black sign) are separate models, see `tools/display_aircraft.py`.
 - 18: Flying Club building (glazed upper floor, balcony, fascia), green hangar with two white leaves, white wing with swoosh and "18", striped rear wing.
 - 38: mustard ribbed hall, two door panels with cream trim, "38" roundel with canopy.
 - 39: pale-blue main bay (tall leaves) plus lower bay, louvre panels, green guide posts, "39" on the side wall, two-storey rear wing.
