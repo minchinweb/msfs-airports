@@ -1049,6 +1049,39 @@ def hangar15_wing():
     return m
 
 
+def beacon_tower():
+    """Aerodrome beacon tower (RCAF-sketch beacon, size and colours are estimates): four-legged lattice tower with red/white bands,
+    a rail platform and a glazed lamp house. The sim's <Beacon> object supplies the rotating night light at the same spot."""
+    m = Mesh()
+    h, base, top = 15.0, 1.6, 0.6
+    for k, (sx, sz) in enumerate(((-1, -1), (1, -1), (1, 1), (-1, 1))):
+        y, i = 0.0, 0
+        while y < h:
+            y1 = min(y + 3.0, h)
+            r0, r1 = base + (top - base) * y / h, base + (top - base) * y1 / h
+            ring0 = [(sx * r0 + dx, sz * r0 + dz) for dx, dz in ((-0.07, -0.07), (0.07, -0.07), (0.07, 0.07), (-0.07, 0.07))]
+            ring1 = [(sx * r1 + dx, sz * r1 + dz) for dx, dz in ((-0.07, -0.07), (0.07, -0.07), (0.07, 0.07), (-0.07, 0.07))]
+            frustum(m, ring0, y, ring1, y1, RED if i % 2 == 0 else WHITE)
+            y, i = y1, i + 1
+    for y in (3.0, 6.0, 9.0, 12.0):  # horizontal braces and X braces between legs
+        r = base + (top - base) * y / h
+        sq = [(-r, -r), (r, -r), (r, r), (-r, r)]
+        for j in range(4):
+            obox(m, sq[j], sq[(j + 1) % 4], y - 0.04, y + 0.04, 0.03, METAL)
+        r0 = base + (top - base) * (y - 3.0) / h
+        for j in range(4):
+            a = ((-r0, -r0), (r0, -r0), (r0, r0), (-r0, r0))[j]
+            b = sq[(j + 1) % 4]
+            obox(m, a, b, y - 3.0, y - 2.9, 0.025, METAL)
+    m.box(-0.8, 0.8, h, h + 0.15, -0.8, 0.8, DGREY)  # platform
+    rail_ring(m, [(-0.8, -0.8), (0.8, -0.8), (0.8, 0.8), (-0.8, 0.8)], h + 1.1, METAL)
+    frustum(m, ring(0.45, 0.45, 0.15), h + 0.15, ring(0.45, 0.45, 0.15), h + 0.55, DARK, top=False)  # lamp base
+    frustum(m, ring(0.4, 0.4, 0.14), h + 0.55, ring(0.4, 0.4, 0.14), h + 1.25, GLASS, top=True)  # glazed lamp house
+    frustum(m, ring(0.5, 0.5, 0.17), h + 1.25, ring(0.1, 0.1, 0.03), h + 1.6, RED, top=True)  # cap
+    m.mirror_x()
+    return m
+
+
 def wind_tee():
     """Wind tee. Returns (post, head): the head (crossbar at +Z) is a separate node that swings about the post (Y axis)."""
     post, head = Mesh(), Mesh()
@@ -1144,16 +1177,16 @@ def save_wind_tee(folder, name):
 # placement tweaks -------------------------------------------------------------------------
 # Headings snapped parallel to the nearest runway/taxiway (the 1944-photo headings were ~6-10 deg off).
 HEADINGS = [("hangar 11", 0.0), ("usaaf hangar t1", 0.0), ("usaaf hangar t2", 0.0),
-            ("bcatp hangar row", 138.0), ("1938 arched hangar", 57.78), ("administration building", -3.6),
-            ("north hangar complex", -1.0), ("north complex", -1.0)]
+            ("bcatp hangar row", 138.0), ("1938 arched hangar", 57.78), ("administration building", -3.6)]
 # (east, north) metre shifts to clear taxiways (north complex vs taxiway III; row A vs taxiway X)
-SHIFTS = [("north hangar complex: bay 1", (0, -20)), ("north hangar complex: bay 2", (0, -20)),
-          ("north complex: shop", (0, -25)), ("north complex: annex", (0, 10)), ("bcatp hangar row a", (-3.7, -1.5)),
+SHIFTS = [("bcatp hangar row a", (-3.7, -1.5)),
           ("1938 arched hangar", (27.0, 37.0))]  # re-registered on the 1944 aerial from the Kingsway / 118 Ave junction (docs/cyxd/footprints/first-hangar-candidates.png)
 # T4 stays as the sim's own generated building; hotels wait until the tower/wing split is known
 # row C: the Aerocentre and the Shell hangar stand there
-SKIP = ("edmonton inn", "chateau louis", "usaaf hangar t4", "bcatp hangar row b", "bcatp hangar row c", "bcatp hangar row a",
-        "hangar 11", "hangar 14", "usaaf hangar t1", "usaaf hangar t2", "administration building")  # the last four: replaced by hangars.py models  # row B: the c.1972 control tower stands here
+SKIP = ("north hangar complex", "north complex",  # the six 1944 boxes: replaced by hangars.py (north_main etc.) at the OSM-corrected position
+        "edmonton inn", "chateau louis", "usaaf hangar t4", "bcatp hangar row b", "bcatp hangar row c", "bcatp hangar row a",
+        "administration building",  # 1940s-50s admin building: the replacement terminal (Hangar 21) is used instead (user, 2026-10-21)
+        "hangar 11", "hangar 14", "usaaf hangar t1", "usaaf hangar t2")  # the last four: replaced by hangars.py models  # row B: the c.1972 control tower stands here
 KX, KY = 66170.0, 111200.0
 EXCL_MARGIN = 6.0
 DEPOT = [(53.57242, -113.58734), (53.57065, -113.58740), (53.57054, -113.58747), (53.57062, -113.58890),
@@ -1312,9 +1345,12 @@ def main():
         name = "cyxd_ndb_" + ident.lower()
         out.append(("%s NDB station (Street View 2009): fenced lot, mast, shed" % ident, lat, lon, "0", fn().save(MODELLIB / name, name)))
     # RCAF/DoT aerodrome sketch (c.1942): wind tee and beacon west of the 04 threshold, clear of all taxiways/aprons
-    name = "cyxd_wind_tee"
-    out.append(("Wind tee (RCAF Manual of Aerodromes, Edmonton p.90)", "53.573710", "-113.528688", "0",
-                save_wind_tee(MODELLIB / name, name)))
+    # wind tee commented out (user, 2026-10-21): it falls within the Hangar 39 footprint; re-enable once a clear spot is found
+    # name = "cyxd_wind_tee"
+    # out.append(("Wind tee (RCAF Manual of Aerodromes, Edmonton p.90)", "53.573710", "-113.528688", "0",
+    #             save_wind_tee(MODELLIB / name, name)))
+    out.append(("Aerodrome beacon tower (model; size estimated)", "53.572005", "-113.529643", "0",
+                beacon_tower().save(MODELLIB / "cyxd_beacon_tower", "cyxd_beacon_tower")))
     out.append(("Aerodrome beacon (RCAF Manual of Aerodromes, Edmonton p.90)", "53.572005", "-113.529643", "0", None))
     nl_src = None
     lines = [f"	{BEGIN}"]

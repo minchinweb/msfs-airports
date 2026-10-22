@@ -1,0 +1,296 @@
+{
+ "asset": {
+  "version": "2.0",
+  "generator": "airport-cyxd/tools/gen_buildings.py",
+  "extensions": {
+   "ASOBO_normal_map_convention": {
+    "tangent_space_convention": "DirectX"
+   }
+  }
+ },
+ "extensionsUsed": [
+  "ASOBO_normal_map_convention"
+ ],
+ "scene": 0,
+ "scenes": [
+  {
+   "nodes": [
+    0
+   ]
+  }
+ ],
+ "nodes": [
+  {
+   "mesh": 0,
+   "name": "cyxd_north_bay3"
+  }
+ ],
+ "meshes": [
+  {
+   "name": "cyxd_north_bay3",
+   "primitives": [
+    {
+     "attributes": {
+      "POSITION": 0,
+      "NORMAL": 1,
+      "TEXCOORD_0": 2
+     },
+     "indices": 3,
+     "mode": 4,
+     "material": 0
+    },
+    {
+     "attributes": {
+      "POSITION": 0,
+      "NORMAL": 1,
+      "TEXCOORD_0": 2
+     },
+     "indices": 4,
+     "mode": 4,
+     "material": 1
+    },
+    {
+     "attributes": {
+      "POSITION": 0,
+      "NORMAL": 1,
+      "TEXCOORD_0": 2
+     },
+     "indices": 5,
+     "mode": 4,
+     "material": 2
+    },
+    {
+     "attributes": {
+      "POSITION": 0,
+      "NORMAL": 1,
+      "TEXCOORD_0": 2
+     },
+     "indices": 6,
+     "mode": 4,
+     "material": 3
+    },
+    {
+     "attributes": {
+      "POSITION": 0,
+      "NORMAL": 1,
+      "TEXCOORD_0": 2
+     },
+     "indices": 7,
+     "mode": 4,
+     "material": 4
+    }
+   ]
+  }
+ ],
+ "materials": [
+  {
+   "name": "cyxd_flat",
+   "pbrMetallicRoughness": {
+    "baseColorTexture": {
+     "index": 0
+    },
+    "metallicFactor": 0.0,
+    "roughnessFactor": 0.9
+   }
+  },
+  {
+   "name": "cyxd_siding",
+   "pbrMetallicRoughness": {
+    "baseColorTexture": {
+     "index": 1
+    },
+    "metallicFactor": 0.0,
+    "roughnessFactor": 0.9
+   }
+  },
+  {
+   "name": "cyxd_shingle_grey",
+   "pbrMetallicRoughness": {
+    "baseColorTexture": {
+     "index": 2
+    },
+    "metallicFactor": 0.0,
+    "roughnessFactor": 0.9
+   }
+  },
+  {
+   "name": "cyxd_ribbed",
+   "pbrMetallicRoughness": {
+    "baseColorTexture": {
+     "index": 3
+    },
+    "metallicFactor": 0.0,
+    "roughnessFactor": 0.9
+   }
+  },
+  {
+   "name": "cyxd_ribbed_teal",
+   "pbrMetallicRoughness": {
+    "baseColorTexture": {
+     "index": 4
+    },
+    "metallicFactor": 0.0,
+    "roughnessFactor": 0.9
+   }
+  }
+ ],
+ "textures": [
+  {
+   "sampler": 0,
+   "source": 0
+  },
+  {
+   "sampler": 1,
+   "source": 1
+  },
+  {
+   "sampler": 1,
+   "source": 2
+  },
+  {
+   "sampler": 1,
+   "source": 3
+  },
+  {
+   "sampler": 1,
+   "source": 4
+  }
+ ],
+ "samplers": [
+  {
+   "magFilter": 9728,
+   "minFilter": 9728
+  },
+  {
+   "magFilter": 9729,
+   "minFilter": 9987,
+   "wrapS": 10497,
+   "wrapT": 10497
+  }
+ ],
+ "images": [
+  {
+   "uri": "cyxd_palette.png"
+  },
+  {
+   "uri": "cyxd_siding.png"
+  },
+  {
+   "uri": "cyxd_shingle_grey.png"
+  },
+  {
+   "uri": "cyxd_ribbed.png"
+  },
+  {
+   "uri": "cyxd_ribbed_teal.png"
+  }
+ ],
+ "accessors": [
+  {
+   "bufferView": 0,
+   "componentType": 5126,
+   "count": 3138,
+   "type": "VEC3",
+   "min": [
+    -35.3,
+    0,
+    -26.8
+   ],
+   "max": [
+    35.3,
+    16.0,
+    26.92
+   ]
+  },
+  {
+   "bufferView": 1,
+   "componentType": 5126,
+   "count": 3138,
+   "type": "VEC3"
+  },
+  {
+   "bufferView": 2,
+   "componentType": 5126,
+   "count": 3138,
+   "type": "VEC2"
+  },
+  {
+   "bufferView": 3,
+   "componentType": 5123,
+   "count": 4272,
+   "type": "SCALAR"
+  },
+  {
+   "bufferView": 4,
+   "componentType": 5123,
+   "count": 48,
+   "type": "SCALAR"
+  },
+  {
+   "bufferView": 5,
+   "componentType": 5123,
+   "count": 330,
+   "type": "SCALAR"
+  },
+  {
+   "bufferView": 6,
+   "componentType": 5123,
+   "count": 30,
+   "type": "SCALAR"
+  },
+  {
+   "bufferView": 7,
+   "componentType": 5123,
+   "count": 24,
+   "type": "SCALAR"
+  }
+ ],
+ "bufferViews": [
+  {
+   "buffer": 0,
+   "byteOffset": 0,
+   "byteLength": 37656
+  },
+  {
+   "buffer": 0,
+   "byteOffset": 37656,
+   "byteLength": 37656
+  },
+  {
+   "buffer": 0,
+   "byteOffset": 75312,
+   "byteLength": 25104
+  },
+  {
+   "buffer": 0,
+   "byteOffset": 100416,
+   "byteLength": 8544
+  },
+  {
+   "buffer": 0,
+   "byteOffset": 108960,
+   "byteLength": 96
+  },
+  {
+   "buffer": 0,
+   "byteOffset": 109056,
+   "byteLength": 660
+  },
+  {
+   "buffer": 0,
+   "byteOffset": 109716,
+   "byteLength": 60
+  },
+  {
+   "buffer": 0,
+   "byteOffset": 109776,
+   "byteLength": 48
+  }
+ ],
+ "buffers": [
+  {
+   "uri": "cyxd_north_bay3.bin",
+   "byteLength": 109824
+  }
+ ]
+}

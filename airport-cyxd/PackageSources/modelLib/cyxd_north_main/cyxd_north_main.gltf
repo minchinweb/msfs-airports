@@ -1,0 +1,334 @@
+{
+ "asset": {
+  "version": "2.0",
+  "generator": "airport-cyxd/tools/gen_buildings.py",
+  "extensions": {
+   "ASOBO_normal_map_convention": {
+    "tangent_space_convention": "DirectX"
+   }
+  }
+ },
+ "extensionsUsed": [
+  "ASOBO_normal_map_convention"
+ ],
+ "scene": 0,
+ "scenes": [
+  {
+   "nodes": [
+    0
+   ]
+  }
+ ],
+ "nodes": [
+  {
+   "mesh": 0,
+   "name": "cyxd_north_main"
+  }
+ ],
+ "meshes": [
+  {
+   "name": "cyxd_north_main",
+   "primitives": [
+    {
+     "attributes": {
+      "POSITION": 0,
+      "NORMAL": 1,
+      "TEXCOORD_0": 2
+     },
+     "indices": 3,
+     "mode": 4,
+     "material": 0
+    },
+    {
+     "attributes": {
+      "POSITION": 0,
+      "NORMAL": 1,
+      "TEXCOORD_0": 2
+     },
+     "indices": 4,
+     "mode": 4,
+     "material": 1
+    },
+    {
+     "attributes": {
+      "POSITION": 0,
+      "NORMAL": 1,
+      "TEXCOORD_0": 2
+     },
+     "indices": 5,
+     "mode": 4,
+     "material": 2
+    },
+    {
+     "attributes": {
+      "POSITION": 0,
+      "NORMAL": 1,
+      "TEXCOORD_0": 2
+     },
+     "indices": 6,
+     "mode": 4,
+     "material": 3
+    },
+    {
+     "attributes": {
+      "POSITION": 0,
+      "NORMAL": 1,
+      "TEXCOORD_0": 2
+     },
+     "indices": 7,
+     "mode": 4,
+     "material": 4
+    },
+    {
+     "attributes": {
+      "POSITION": 0,
+      "NORMAL": 1,
+      "TEXCOORD_0": 2
+     },
+     "indices": 8,
+     "mode": 4,
+     "material": 5
+    }
+   ]
+  }
+ ],
+ "materials": [
+  {
+   "name": "cyxd_flat",
+   "pbrMetallicRoughness": {
+    "baseColorTexture": {
+     "index": 0
+    },
+    "metallicFactor": 0.0,
+    "roughnessFactor": 0.9
+   }
+  },
+  {
+   "name": "cyxd_siding",
+   "pbrMetallicRoughness": {
+    "baseColorTexture": {
+     "index": 1
+    },
+    "metallicFactor": 0.0,
+    "roughnessFactor": 0.9
+   }
+  },
+  {
+   "name": "cyxd_shingle_red",
+   "pbrMetallicRoughness": {
+    "baseColorTexture": {
+     "index": 2
+    },
+    "metallicFactor": 0.0,
+    "roughnessFactor": 0.9
+   }
+  },
+  {
+   "name": "cyxd_shingle_grey",
+   "pbrMetallicRoughness": {
+    "baseColorTexture": {
+     "index": 3
+    },
+    "metallicFactor": 0.0,
+    "roughnessFactor": 0.9
+   }
+  },
+  {
+   "name": "cyxd_ribbed",
+   "pbrMetallicRoughness": {
+    "baseColorTexture": {
+     "index": 4
+    },
+    "metallicFactor": 0.0,
+    "roughnessFactor": 0.9
+   }
+  },
+  {
+   "name": "cyxd_ribbed_teal",
+   "pbrMetallicRoughness": {
+    "baseColorTexture": {
+     "index": 5
+    },
+    "metallicFactor": 0.0,
+    "roughnessFactor": 0.9
+   }
+  }
+ ],
+ "textures": [
+  {
+   "sampler": 0,
+   "source": 0
+  },
+  {
+   "sampler": 1,
+   "source": 1
+  },
+  {
+   "sampler": 1,
+   "source": 2
+  },
+  {
+   "sampler": 1,
+   "source": 3
+  },
+  {
+   "sampler": 1,
+   "source": 4
+  },
+  {
+   "sampler": 1,
+   "source": 5
+  }
+ ],
+ "samplers": [
+  {
+   "magFilter": 9728,
+   "minFilter": 9728
+  },
+  {
+   "magFilter": 9729,
+   "minFilter": 9987,
+   "wrapS": 10497,
+   "wrapT": 10497
+  }
+ ],
+ "images": [
+  {
+   "uri": "cyxd_palette.png"
+  },
+  {
+   "uri": "cyxd_siding.png"
+  },
+  {
+   "uri": "cyxd_shingle_red.png"
+  },
+  {
+   "uri": "cyxd_shingle_grey.png"
+  },
+  {
+   "uri": "cyxd_ribbed.png"
+  },
+  {
+   "uri": "cyxd_ribbed_teal.png"
+  }
+ ],
+ "accessors": [
+  {
+   "bufferView": 0,
+   "componentType": 5126,
+   "count": 18300,
+   "type": "VEC3",
+   "min": [
+    -85.89999999999999,
+    0,
+    -47.4
+   ],
+   "max": [
+    85.89999999999999,
+    12.5,
+    47.42
+   ]
+  },
+  {
+   "bufferView": 1,
+   "componentType": 5126,
+   "count": 18300,
+   "type": "VEC3"
+  },
+  {
+   "bufferView": 2,
+   "componentType": 5126,
+   "count": 18300,
+   "type": "VEC2"
+  },
+  {
+   "bufferView": 3,
+   "componentType": 5123,
+   "count": 25092,
+   "type": "SCALAR"
+  },
+  {
+   "bufferView": 4,
+   "componentType": 5123,
+   "count": 576,
+   "type": "SCALAR"
+  },
+  {
+   "bufferView": 5,
+   "componentType": 5123,
+   "count": 60,
+   "type": "SCALAR"
+  },
+  {
+   "bufferView": 6,
+   "componentType": 5123,
+   "count": 1344,
+   "type": "SCALAR"
+  },
+  {
+   "bufferView": 7,
+   "componentType": 5123,
+   "count": 108,
+   "type": "SCALAR"
+  },
+  {
+   "bufferView": 8,
+   "componentType": 5123,
+   "count": 240,
+   "type": "SCALAR"
+  }
+ ],
+ "bufferViews": [
+  {
+   "buffer": 0,
+   "byteOffset": 0,
+   "byteLength": 219600
+  },
+  {
+   "buffer": 0,
+   "byteOffset": 219600,
+   "byteLength": 219600
+  },
+  {
+   "buffer": 0,
+   "byteOffset": 439200,
+   "byteLength": 146400
+  },
+  {
+   "buffer": 0,
+   "byteOffset": 585600,
+   "byteLength": 50184
+  },
+  {
+   "buffer": 0,
+   "byteOffset": 635784,
+   "byteLength": 1152
+  },
+  {
+   "buffer": 0,
+   "byteOffset": 636936,
+   "byteLength": 120
+  },
+  {
+   "buffer": 0,
+   "byteOffset": 637056,
+   "byteLength": 2688
+  },
+  {
+   "buffer": 0,
+   "byteOffset": 639744,
+   "byteLength": 216
+  },
+  {
+   "buffer": 0,
+   "byteOffset": 639960,
+   "byteLength": 480
+  }
+ ],
+ "buffers": [
+  {
+   "uri": "cyxd_north_main.bin",
+   "byteLength": 640440
+  }
+ ]
+}

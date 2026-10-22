@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ModelInfo guid="{7E781E9C-C44E-53D7-B85A-57E2996B8E75}" version="1.1">
+	<LODS>
+		<LOD minSize="0" ModelFile="cyxd_north_annex.gltf"/>
+	</LODS>
+</ModelInfo>
