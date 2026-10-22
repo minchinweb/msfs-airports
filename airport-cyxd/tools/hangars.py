@@ -533,9 +533,11 @@ def hangar3():
     xs, hs, hn = -28.0, 8.2, 6.4
     m.box(xs, x1, 0, hs, z0, z1, PBFLAT)
     m.box(x0, xs, 0, hn, z0, z1, PBFLAT)
-    parapet(m, xs, x1, z0 - 0.1, z1 + 0.1, hs - 0.6, hs + 0.45, 0.5, NAVY)
-    parapet(m, x0, xs, z0 - 0.1, z1 + 0.1, hn - 0.6, hn + 0.45, 0.5, NAVY)
-    m.box(xs - 0.1, xs + 0.1, hn + 0.4, hs + 0.4, z0 - 0.05, z1 + 0.05, NAVY)  # was flush with the parapets' outer faces and z-fought
+    # the end boxes of the fascia stood exactly on the end walls' planes (x = x0, x1, xs) and z-fought (user, repeatedly): the outer ends now
+    # overshoot the wall by 6 cm; at the step both fascias are buried 4 cm inside the step cap, which is wider than they are (+-15 cm in x, 15 cm out in z)
+    parapet(m, xs + 0.04, x1 + 0.06, z0 - 0.1, z1 + 0.1, hs - 0.6, hs + 0.45, 0.5, NAVY)
+    parapet(m, x0 - 0.06, xs + 0.04, z0 - 0.1, z1 + 0.1, hn - 0.6, hn + 0.45, 0.5, NAVY)
+    m.box(xs - 0.15, xs + 0.15, hn + 0.4, hs + 0.4, z0 - 0.15, z1 + 0.15, NAVY)
     m.box(xs, x1, hs - 1.1, hs - 0.9, z1, z1 + 0.1, RED)  # red line under the fascia on the landside wall
     m.box(x0, xs, hn - 1.1, hn - 0.9, z1, z1 + 0.1, RED)
     m.box(x1, x1 + 0.1, hs - 1.1, hs - 0.9, z0, z1, RED)

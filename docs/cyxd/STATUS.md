@@ -396,6 +396,7 @@ Offline check renders used a throwaway software rasteriser (scratchpad, not comm
 - **Hangar 5 office:** curtain wall (`curtain()` in `hangars.py`): three bronze panes and a dark spandrel with thin dark mullions standing 18 cm proud, on the south end, airside and landside faces (Wikimedia 11094269004, Street View 50). Landside: a low dark-grey annex at the north end with a man door and two round vents (Street View 48/49), plus a man door near the south end.
 - **Window depth (all `hangars.py` models):** `Mesh.window` can add a projecting grey surround and a deeper sill (`Mesh.frame`, set by `fmesh()`); skipped past 48 000 vertices. New palette swatch `GLASSB` (index 36).
 - **Hangar 4:** the eave trim now stops at the orange bay (front faces were coplanar), the bay is 10 cm taller, the airside roundel moved down off the trim; landside "4" roundel and two man doors (Street View 46/47).
+- **Hangar 3 (z-fighting on the navy end bars, again):** the fascia's end boxes sat exactly on the end walls' planes (x = +-40.8 and the step at x = 28). They now overshoot the walls by 6 cm, and at the step both fascias are buried inside a wider (+-15 cm) navy cap. Checked with a pairwise coplanar-overlap script: no same-direction coplanar overlaps left on the end walls.
 - **Hangar 3:** the step wall between the two parapet heights stood flush with the parapets' outer faces (coplanar); now 5 cm inside.
 - **Dark-blue hangar (north of Hangar 3):** the roller door sits behind projecting jambs and a header, with ribs and a bottom rail.
 
