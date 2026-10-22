@@ -189,12 +189,12 @@
   {
    "bufferView": 0,
    "componentType": 5126,
-   "count": 1018,
+   "count": 2398,
    "type": "VEC3",
    "min": [
-    -18.32,
+    -21.9,
     0,
-    -29.049999999999997
+    -20.75
    ],
    "max": [
     18.32,
@@ -205,31 +205,31 @@
   {
    "bufferView": 1,
    "componentType": 5126,
-   "count": 1018,
+   "count": 2398,
    "type": "VEC3"
   },
   {
    "bufferView": 2,
    "componentType": 5126,
-   "count": 1018,
+   "count": 2398,
    "type": "VEC2"
   },
   {
    "bufferView": 3,
    "componentType": 5123,
-   "count": 1284,
+   "count": 2910,
    "type": "SCALAR"
   },
   {
    "bufferView": 4,
    "componentType": 5123,
-   "count": 96,
+   "count": 168,
    "type": "SCALAR"
   },
   {
    "bufferView": 5,
    "componentType": 5123,
-   "count": 30,
+   "count": 138,
    "type": "SCALAR"
   },
   {
@@ -241,7 +241,7 @@
   {
    "bufferView": 7,
    "componentType": 5123,
-   "count": 144,
+   "count": 408,
    "type": "SCALAR"
   }
  ],
@@ -249,48 +249,48 @@
   {
    "buffer": 0,
    "byteOffset": 0,
-   "byteLength": 12216
+   "byteLength": 28776
   },
   {
    "buffer": 0,
-   "byteOffset": 12216,
-   "byteLength": 12216
+   "byteOffset": 28776,
+   "byteLength": 28776
   },
   {
    "buffer": 0,
-   "byteOffset": 24432,
-   "byteLength": 8144
+   "byteOffset": 57552,
+   "byteLength": 19184
   },
   {
    "buffer": 0,
-   "byteOffset": 32576,
-   "byteLength": 2568
+   "byteOffset": 76736,
+   "byteLength": 5820
   },
   {
    "buffer": 0,
-   "byteOffset": 35144,
-   "byteLength": 192
+   "byteOffset": 82556,
+   "byteLength": 336
   },
   {
    "buffer": 0,
-   "byteOffset": 35336,
+   "byteOffset": 82892,
+   "byteLength": 276
+  },
+  {
+   "buffer": 0,
+   "byteOffset": 83168,
    "byteLength": 60
   },
   {
    "buffer": 0,
-   "byteOffset": 35396,
-   "byteLength": 60
-  },
-  {
-   "buffer": 0,
-   "byteOffset": 35456,
-   "byteLength": 288
+   "byteOffset": 83228,
+   "byteLength": 816
   }
  ],
  "buffers": [
   {
    "uri": "cyxd_hangar7.bin",
-   "byteLength": 35744
+   "byteLength": 84044
   }
  ]
 }

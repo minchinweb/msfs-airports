@@ -1245,35 +1245,41 @@ def hangar21():
 
 def garage22():
     """Terminal parking garage ("22" roundel), an OPEN parkade (user, 2026-10-21: it is open in real life, give it a ground deck and leave the sides open).
-    Levels stepping down toward the SE end (decks at 10.4 / 7.2 / 4.0 m, reaching x 30 / 40 / 50); every deck is a concrete slab with a 1.1 m brown
-    cladding band on its rim, and between the band and the slab above is an open slot with the precast columns standing in it (Street View 15-18).
-    Mk 5 (user, 2026-10-21): (1) only perimeter columns (clear spans inside); (2) the decks are not flat: the aerial (terminal21-2017-overlay.png)
-    shows a central bay starting about 45 % of the way along from the NW end that dips toward the SE, so every deck is a U (flat sides and NW end)
-    round a ramp slab that descends at about 7 % to the level below (the lowest to the ground, where it is the vehicle entrance with a gate, island
-    and yellow bollards as in Street View 16/17); (3) the long brown cladding boards along the side (Street View 15): a ground-level board over a block plinth was missing, now on both long sides.
-    Footprint from the 2017 Wayback zoom-19 imagery: about 100 x 72 m, +Z = bearing 58 (NE, toward the terminal), +X = bearing 148."""
+    Frame (before the final mirror): +X = bearing 148 = the FRONT, toward Airport Rd, +Z = bearing 58 (NE, toward the terminal), -X = the back / NW end.
+    Three decks (10.4 / 7.2 / 4.0 m) over an open ground level; perimeter columns only (clear spans inside).
+    Front: each tier is set back from the one below (decks reach x 30 / 40 / 50) and the front face steps back in quarters along z toward +Z (east, toward
+    the terminal): the left quarter (-Z, SW, nearest the entrance) reaches the full extent, the bay half 6 m less, the right quarter 12 m less
+    (estimated from MS-1270.213.3 and Street View 14/16; the 2017 aerial overlay shows the strips ending progressively sooner toward the terminal).
+    Each deck is a U open to the front: flat sides and flat NW (back) end round a central bay (36 m wide) whose floor slopes DOWN TOWARD THE BACK
+    (MS-1270.213.3), 44 m long (one level), to a flat landing / turning zone 10 m long against a back wall; the landing is the next deck's flat
+    surface (the lowest lands on the ground), with nose-in stall stripes along the back wall.
+    Vehicle entrance: ground level at the left-most (-Z, SW) quarter of the front (MS-1270.213.3), with a gate island, two ticket posts, booms
+    and yellow bollards.  Side boards: ground-level board over a block plinth along both long sides (Street View 15).  "22" roundel on the NE
+    (land side) face of the stair tower.  Footprint about 100 x 72 m (2017 Wayback)."""
     m = fmesh()
     x0, x1, z0, z1 = -50.0, 50.0, -36.0, 36.0
     GH, SL, GC = 3.2, 0.5, 3.5  # level height, slab thickness, ground-floor clearance under the lowest slab
-    BW, XA = 18.0, -14.0  # half width of the dipping bay, x where the dip starts (same for every deck, so the ramps are parallel)
-    SLOPE = GH / 44.0
-    YG = 0.08  # ramp foot at the ground
+    BW = 18.0  # half width of the bay
+    RL, LAND = 44.0, 10.0  # ramp length, landing length
+    YG = 0.08  # landing level on the ground
+    SET_BAY, SET_RIGHT = 6.0, 12.0  # front setbacks of the bay half and of the right (east) quarter
     decks = [(4.0, x1), (7.2, 40.0), (10.4, 30.0)]
 
-    def ramp_y(yd, x):
-        return yd - SLOPE * (x - XA)
-
-    def columns(xa, xb, ya, yb):
-        """Perimeter columns only (clear spans inside); none in the dipping bay's mouth."""
-        nx, nz = max(1, round((xb - xa) / 8.3)), 8
+    def columns(xb, ya, yb):
+        """Perimeter columns only (clear spans inside); none across the bay mouth or in the entrance quarter of the ground floor."""
+        nx, nz = max(1, round((xb - x0) / 8.3)), 8
         for i in range(nx + 1):
-            x = xa + 0.4 + i * (xb - xa - 0.8) / nx
+            x = x0 + 0.4 + i * (xb - x0 - 0.8) / nx
             for j in range(nz + 1):
                 if not (j in (0, nz) or i in (0, nx)):
                     continue
                 z = z0 + 0.4 + j * (z1 - z0 - 0.8) / nz
-                if abs(z) < BW + 0.5 and x > XA:
+                if i and abs(z) < BW + 0.5:
                     continue
+                if z > BW and x > xb - SET_RIGHT - 0.5:
+                    continue
+                if ya < 0.5 and i == nx and z < -BW:
+                    continue  # the entrance
                 m.box(x - 0.4, x + 0.4, ya, yb, z - 0.4, z + 0.4, CREAM)
                 if j in (0, nz) and yb - ya > 2.0:  # the corbelled column heads on the outer faces
                     m.box(x - 0.6, x + 0.6, yb - 0.5, yb, z - 0.5 if j == 0 else z - 0.4, z + 0.4 if j == 0 else z + 0.5, TAN)
@@ -1293,58 +1299,65 @@ def garage22():
         m.poly([(xa, yd - SL, za), (xb, yd - SL, za), (xb, yd - SL, zb), (xa, yd - SL, zb)], DGREY, (0.0, yd + 5.0, 0.0))  # underside
 
     m.poly([(x0, 0.03, z0), (x1, 0.03, z0), (x1, 0.03, z1), (x0, 0.03, z1)], DGREY, (0.0, -5.0, 0.0))  # the ground deck
-    columns(x0, x1 - 4.0, 0.03, GC)  # the lowest tier cantilevers 4 m past the ground-floor columns (Street View 14)
+    columns(x1 - 4.0, 0.03, GC)  # the lowest tier cantilevers 4 m past the ground-floor columns (Street View 14)
     for zz, s in ((z0, -1), (z1, 1)):  # ground-level side board (Street View 15): block plinth, brown ribbed board up to the first slab
-        zi, zo = (zz, zz + 0.3 * s) if s > 0 else (zz - 0.3, zz)
-        m.box(x0, 46.0, 0, 0.9, min(zi, zo), max(zi, zo), TANBLK)
-        m.box(x0, 46.0, 0.9, GC, min(zi, zo) - (0.05 if s < 0 else 0), max(zi, zo) + (0.05 if s > 0 else 0), BRONZE)
+        zi, zo = (zz, zz + 0.3) if s > 0 else (zz - 0.3, zz)
+        m.box(x0, 46.0, 0, 0.9, zi, zo, TANBLK)
+        m.box(x0, 46.0, 0.9, GC, zi - (0.05 if s < 0 else 0), zo + (0.05 if s > 0 else 0), BRONZE)
     for k, (yd, X) in enumerate(decks):
-        # U-shaped deck: flat slabs along both sides and across the NW end, the centre bay is a ramp down to the level below
+        XT = X - SET_BAY  # top of the ramp (deck level)
+        XB = XT - RL  # foot of the ramp
+        xw = XB - LAND  # back wall of the bay
+        yl = YG if k == 0 else yd - GH  # landing level (the next deck, or the ground)
+        slope = (yd - yl) / RL
+        XR = X - SET_RIGHT  # front of the right (east) quarter
+        # U-shaped deck, open to the front: flat slabs along both sides (stepped front) and across the NW end
         flat_slab(x0, X, z0, -BW, yd)
-        flat_slab(x0, X, BW, z1, yd)
-        flat_slab(x0, XA, -BW, BW, yd)
-        xe = min(X, XA + (yd - YG) / SLOPE) if k == 0 else X  # the lowest ramp ends where it meets the ground
-        ye = max(ramp_y(yd, xe), YG)
-        te = SL if k else 0.04
-        m.poly([(XA, yd, -BW), (xe, ye, -BW), (xe, ye, BW), (XA, yd, BW)], DGREY, (XA, yd - 5.0, 0.0))  # ramp surface
-        m.poly([(XA, yd - SL, -BW), (xe, ye - te, -BW), (xe, ye - te, BW), (XA, yd - SL, BW)], DGREY, (XA, yd + 5.0, 0.0))  # ramp underside
-        m.poly([(xe, ye, -BW), (xe, ye, BW), (xe, ye - te, BW), (xe, ye - te, -BW)], TAN, (xe - 1.0, ye, 0.0))  # ramp end
-        # deep edge beams under the side slabs, down to the ramp (the dark walls along the bay in the aerial)
-        xs = XA + SL / SLOPE
-        prof = [(xs, yd - SL), (X, yd - SL)]
-        if k == 0:
-            prof += [(X, YG), (xe, YG)]
-        else:
-            prof += [(X, ye)]
+        flat_slab(x0, XR, BW, z1, yd)
+        flat_slab(x0, xw, -BW, BW, yd)
+        # the ramp slopes down toward the back
+        ye = yl + 0.02
+        m.poly([(XT, yd, -BW), (XB, ye, -BW), (XB, ye, BW), (XT, yd, BW)], DGREY, (XT, yd - 5.0, 0.0))  # ramp surface
+        m.poly([(XT, yd - SL, -BW), (XB, ye - 0.03, -BW), (XB, ye - 0.03, BW), (XT, yd - SL, BW)], DGREY, (XT, yd + 5.0, 0.0))  # underside
+        m.poly([(XT, yd - SL, -BW), (XT, yd, -BW), (XT, yd, BW), (XT, yd - SL, BW)], TAN, (XT - 1.0, yd, 0.0))  # front end of the ramp slab
+        # back wall of the bay and edge beams down both sides of the ramp and landing
+        m.box(xw - 0.3, xw, yl, yd - SL, -BW, BW, TAN)
+        xs = XT - SL / slope
+        prof = [(xs, yd - SL), (xw, yd - SL), (xw, yl), (XB, yl)]
         for za, zb in ((BW, BW + 0.3), (-BW - 0.3, -BW)):
             prism_z(prof, za, zb, TAN)
-        # brown cladding band on the rim (open at the SE end of the bay) and a rail along the bay's top edge
+        # nose-in stall stripes on the landing against the back wall
+        for i in range(-6, 7):
+            zs = i * 2.7
+            m.poly([(xw + 0.4, yl + 0.03, zs - 0.06), (xw + 5.4, yl + 0.03, zs - 0.06), (xw + 5.4, yl + 0.03, zs + 0.06), (xw + 0.4, yl + 0.03, zs + 0.06)],
+                   WHITE, (xw, yl - 5.0, zs))
+        # brown cladding band on the rim, stepped front, and rails along the bay's top edges
         m.box(x0 - 0.1, X + 0.1, yd, yd + 1.1, z0 - 0.1, z0 + 0.2, BRONZE)
-        m.box(x0 - 0.1, X + 0.1, yd, yd + 1.1, z1 - 0.2, z1 + 0.1, BRONZE)
+        m.box(x0 - 0.1, XR + 0.1, yd, yd + 1.1, z1 - 0.2, z1 + 0.1, BRONZE)
         m.box(x0 - 0.1, x0 + 0.2, yd, yd + 1.1, z0 + 0.2, z1 - 0.2, BRONZE)
-        m.box(X - 0.2, X + 0.1, yd, yd + 1.1, z0 + 0.2, -BW, BRONZE)
-        m.box(X - 0.2, X + 0.1, yd, yd + 1.1, BW, z1 - 0.2, BRONZE)
-        m.box(XA, X, yd, yd + 0.9, BW, BW + 0.25, TAN)
-        m.box(XA, X, yd, yd + 0.9, -BW - 0.25, -BW, TAN)
+        m.box(X - 0.2, X + 0.1, yd, yd + 1.1, z0 + 0.2, -BW, BRONZE)  # left-quarter front
+        m.box(XR - 0.2, XR + 0.1, yd, yd + 1.1, BW, z1 - 0.2, BRONZE)  # right-quarter front
+        m.box(xw, X, yd, yd + 0.9, -BW - 0.25, -BW, TAN)
+        m.box(xw, XR, yd, yd + 0.9, BW, BW + 0.25, TAN)
         if k + 1 < len(decks):
-            columns(x0, min(X, decks[k + 1][1]) - 3.0, yd, yd + GH - SL)  # each tier overhangs the one below
-    # entrance at the SE end (Street View 16/17): the lowest ramp meets the ground between the edge beams; a gate island with two ticket posts,
-    # a short barrier boom over each lane and yellow bollards, just outside the mouth
-    m.box(50.5, 56.0, 0, 0.2, -0.9, 0.9, TAN)
+            columns(min(X, decks[k + 1][1]) - 3.0, yd, yd + GH - SL)  # each tier overhangs the one below
+    # vehicle entrance at ground level in the left-most (-Z) quarter of the front (MS-1270.213.3): a gate island with two ticket posts, a short barrier
+    # boom over each lane and yellow bollards, just outside the opening under the lowest tier
+    ze = -27.0
+    m.box(50.5, 56.0, 0, 0.2, ze - 0.9, ze + 0.9, TAN)
     for xp in (52.0, 54.0):
-        m.box(xp - 0.2, xp + 0.2, 0.2, 1.5, -0.35, 0.35, DGREY)
+        m.box(xp - 0.2, xp + 0.2, 0.2, 1.5, ze - 0.35, ze + 0.35, DGREY)
     for zb0, zb1 in ((0.9, 3.0), (3.0, 5.0), (5.0, 7.0), (-3.0, -0.9), (-5.0, -3.0), (-7.0, -5.0)):
         stripe = RED if (int(abs(zb0)) // 2) % 2 == 0 else WHITE
-        m.box(52.0, 52.12, 1.1, 1.22, zb0, zb1, stripe)
+        m.box(52.0, 52.12, 1.1, 1.22, ze + zb0, ze + zb1, stripe)
     for xb_, zb_ in ((50.8, -0.7), (50.8, 0.7), (55.6, -0.7), (55.6, 0.7), (52.0, -7.4), (52.0, 7.4)):
-        m.box(xb_ - 0.2, xb_ + 0.2, 0, 1.0, zb_ - 0.2, zb_ + 0.2, YELLOW)
-    # stair tower at the NW end (angled wall in the photos) with the "22" roundel on its NE face
-    # and the lift housing on the roof
+        m.box(xb_ - 0.2, xb_ + 0.2, 0, 1.0, ze + zb_ - 0.2, ze + zb_ + 0.2, YELLOW)
+    # stair tower at the NW end (angled wall in the photos) with the "22" roundel on its NE (land side) face, and the lift housing on the roof
     m.box(-49.5, -41.5, 10.4, 15.0, 22.0, 30.0, TAN)
     m.box(-49.7, -41.3, 15.0, 15.3, 21.8, 30.2, DGREY)
     m.box(-52.0, -50.0, 11.4, 13.0, 20.0, 27.0, CREAM)
     number_disc(m, -45.5, 12.7, 30.0, (0, 1), 1.4, "22")
-    m.box(-24.0, -21.0, 10.4, 13.4, -3.0, 3.0, DGREY)  # roof lift housing (in the aerial it stands on the flat part, before the dip)
+    m.box(-40.0, -37.0, 10.4, 13.4, -3.0, 3.0, DGREY)  # roof lift housing
     m.mirror_x()
     return m
 
