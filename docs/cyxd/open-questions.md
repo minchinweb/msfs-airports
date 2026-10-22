@@ -30,6 +30,7 @@ Reviewed 2026-10-22. Current state is in `STATUS.md`; links are in `reference-li
 11. **Cement Plant** (the VFR checkpoint VCCMT, N53 35.00 W113 36.00, in `procedures-2010.md`), as a distant landmark. About 5.7 km west-north-west of the tower, so a skyline model, not an airfield building. The west line-up photo shows it on the horizon (silhouette only; use aerials and LiDAR for footprint and heights).
 12. The hotels (Edmonton Inn, Chateau Louis) are not modelled; the Chateau Nova hotel is 2005, out of era but present in OSM.
 13. **Flashing red obstruction lights** (added 2026-10-22) on the downtown Edmonton buildings near the approach paths and on the nearby NAIT buildings. Not started: pick the buildings under or beside the approaches (from LiDAR or OSM heights), then place flashing red beacons on their roofs.
+14. **Review parking places and jetways** (added 2026-10-22): check every parking spot (`TaxiwayParking`) and jetway against what the SDK expects (parking type, name/number, heading, radius, and for jetways the matching gate parking and the `Jetway` and `Handle` setup). Not started.
 
 ## Research gaps
 
