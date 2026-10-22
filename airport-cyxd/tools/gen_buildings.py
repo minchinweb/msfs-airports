@@ -25,14 +25,14 @@ END = "<!-- END historic buildings -->"
 # palette swatches (u index) -----------------------------------------------------------------
 WALL, ROOF, METAL, DARK, BRICK, TRIM, RED, WHITE, GREY, SALMON, BLUE, YELLOW, GLASS, DGREY, CREAM, NAVY, PANEL, PBLUE, SLATE, DOORG = range(20)
 GREEN, MUSTARD, STEEL, TAN, BRONZE, RWHITE, TEAL, YELLOWR, BRICKD, MAUVE, PEACH, LROOF = range(20, 32)
-TANBLK, NAVYB, PBFLAT, BEIGE = range(32, 36)  # concrete-block tan, dark-blue siding, flat pale blue, Esso beige
+TANBLK, NAVYB, PBFLAT, BEIGE, GLASSB = range(32, 37)  # concrete-block tan, dark-blue siding, flat pale blue, Esso beige
 PALETTE = [(178, 172, 160), (70, 66, 64), (122, 130, 130), (38, 40, 46), (150, 88, 72), (204, 200, 190), (196, 52, 40), (236, 234, 230),
            (168, 175, 170), (214, 122, 104), (28, 86, 160), (244, 204, 40), (48, 66, 76), (96, 100, 104),
            (214, 208, 190), (46, 60, 84), (228, 224, 212),
            (150, 186, 214), (96, 118, 140), (196, 192, 182),
            (62, 104, 70), (190, 164, 66), (128, 164, 190), (186, 166, 134), (84, 70, 60), (232, 232, 228), (40, 92, 88),
            (232, 220, 150), (150, 70, 56), (150, 122, 128), (204, 160, 130), (206, 210, 212),
-           (178, 160, 118), (26, 52, 122), (146, 176, 210), (196, 184, 150)]
+           (178, 160, 118), (26, 52, 122), (146, 176, 210), (196, 184, 150), (118, 104, 94)]
 SW = 16
 RIB_TEX = {CREAM: "ribbed", PBLUE: "ribbed_blue", GREEN: "ribbed_green", MUSTARD: "ribbed_mustard", STEEL: "ribbed_steel", TAN: "ribbed_tan",
            RWHITE: "ribbed_white", YELLOWR: "ribbed_yellow", TEAL: "ribbed_teal", BRICKD: "brick"}
@@ -156,13 +156,18 @@ class Mesh:
         self.pos, self.nrm, self.uv, self.idx = [], [], [], []
         self.tri_mat = []  # material key per triangle ("flat" = palette swatch, else a TEX_NAMES entry)
         self.textured = textured
+        self.frame = None  # swatch for a projecting window frame + sill (None = flat quads); hangars.py turns it on so windows read as set in the wall
 
     def poly(self, pts, sw, centre, tex=None, uvs=None):
         """Planar convex polygon, wound/flipped so the normal points away from `centre`."""
-        a, b, c = pts[0], pts[1], pts[2]
-        u = [b[i] - a[i] for i in range(3)]
-        v = [c[i] - a[i] for i in range(3)]
-        n = [u[1] * v[2] - u[2] * v[1], u[2] * v[0] - u[0] * v[2], u[0] * v[1] - u[1] * v[0]]
+        # Newell's method: a polygon whose first points repeat (an arch cap starting on the wall line) has a zero cross product
+        # of its first three points, which left a zero normal and an unchecked winding (the end walls vanished in the sim)
+        n = [0.0, 0.0, 0.0]
+        for i, p in enumerate(pts):
+            q = pts[(i + 1) % len(pts)]
+            n[0] += (p[1] - q[1]) * (p[2] + q[2])
+            n[1] += (p[2] - q[2]) * (p[0] + q[0])
+            n[2] += (p[0] - q[0]) * (p[1] + q[1])
         cen = [sum(p[i] for p in pts) / len(pts) for i in range(3)]
         if sum(n[i] * (cen[i] - centre[i]) for i in range(3)) < 0:
             pts = pts[::-1]
@@ -231,8 +236,9 @@ class Mesh:
             self.poly([P(x0, y0, z0), P(x0, y0, z1), P(x0, yr, zm)], sw_wall, (c[0] + 1, y0 - 1, zm))
             self.poly([P(x1, y0, z0), P(x1, y0, z1), P(x1, yr, zm)], sw_wall, (c[0] - 1, y0 - 1, zm))
 
-    def window(self, face, origin, u_axis, w, h, off=0.06):
-        """Dark window quad lying on a wall: origin = lower-left corner on the wall, face = outward normal."""
+    def window(self, face, origin, u_axis, w, h, off=0.06, frame=None):
+        """Dark window quad lying on a wall: origin = lower-left corner on the wall, face = outward normal.  With a frame swatch (argument
+        or self.frame) the pane gets a projecting surround and a deeper sill, so it reads as recessed instead of painted on."""
         o = [origin[i] + face[i] * off for i in range(3)]
         up = (0, 1, 0)
         p = [tuple(o[i] for i in range(3)),
@@ -241,6 +247,23 @@ class Mesh:
              tuple(o[i] + up[i] * h for i in range(3))]
         centre = tuple(p[0][i] - face[i] for i in range(3))
         self.poly(p, DARK, centre)
+        fr = self.frame if frame is None else frame
+        if fr is None or len(self.pos) > 48000 or w < 0.5 or h < 0.5:
+            return
+        b, d, sd = 0.09, 0.16, 0.26  # frame width, projection from the wall, sill projection
+
+        def piece(u0, u1, y0, y1, dn):
+            xs, zs = [], []
+            for uu in (u0, u1):
+                xs.append(origin[0] + u_axis[0] * uu + face[0] * dn)
+                zs.append(origin[2] + u_axis[2] * uu + face[2] * dn)
+            xs.append(origin[0] + u_axis[0] * u0 + face[0] * (off - 0.02))
+            zs.append(origin[2] + u_axis[2] * u0 + face[2] * (off - 0.02))
+            self.box(min(xs), max(xs), origin[1] + y0, origin[1] + y1, min(zs), max(zs), fr, top=True)
+        piece(-b, w + b, h, h + b, d)  # head
+        piece(-b - 0.04, w + b + 0.04, -b, 0.0, sd)  # sill
+        piece(-b, 0.0, 0.0, h, d)  # jambs
+        piece(w, w + b, 0.0, h, d)
 
     def mirror_x(self):
         """Flip east-west: the sim places model +X to the west of the object heading, so site models built in
@@ -1093,6 +1116,25 @@ def exclusion_xml(title, corners, nl):
     return nl.join(lines) + nl
 
 
+def veg_xml(title, corners, nl):
+    """Exclusion polygon that also removes trees (VegetationScale / Density 0 and ExclusionFlags 7, as in the bridges package)."""
+    guid = "{" + str(uuid.uuid5(NS, "veg " + title)).upper() + "}"
+    a = ('		<Attribute name="%s" guid="{%s}" type="%s" value="%s"/>')
+    lines = ['	<Polygon version="0.4.0" displayName="No trees: %s" parentGroupID="6" altitude="667.68023681640625">' % title.replace('"', "'")[:60],
+             a % ("UniqueGUID", "359C73E8-06BE-4FB2-ABCB-EC942F7761D0", "GUID", guid),
+             a % ("ExcludeDetectedBuildings", "5C1A2387-1F07-47DF-A569-962CF6258E55", "UINT8", "1"),
+             a % ("ExcludeOSMBuildings", "F3C2635D-9F2F-458F-8663-90B3837BED09", "UINT8", "1"),
+             a % ("ExcludeMSBuildings", "F78A3074-8AD5-4B8B-92C4-C1C948BB7AA5", "UINT8", "1"),
+             a % ("VegetationScale", "6A043F59-E6F2-4117-A2E4-D510E7317C29", "UINT32", "0"),
+             a % ("VegetationDensity", "41EFF715-C392-4B31-A457-50A504353A90", "UINT32", "0"),
+             a % ("ExcludeTIN", "18B58CBF-AE02-4A19-8AA9-3809E8E73400", "UINT8", "1"),
+             a % ("ExclusionFlags", "4CACC252-E6DC-419A-B20C-16EC601DF70E", "UINT32", "7"),
+             a % ("ExcludeRocks", "F104723A-D6D1-4B2E-9B44-ACCD8AB372DC", "UINT8", "1")]
+    lines += ['		<Vertex lat="%.14f" lon="%.14f"/>' % c for c in corners]
+    lines.append("	</Polygon>")
+    return nl.join(lines) + nl
+
+
 def grass_xml(title, verts):
     """Grass ground-cover polygon (same material/layer as the 'Grass over construction' polygons) to hide the aerial photo."""
     guid = "{" + str(uuid.uuid5(NS, "grass " + title)).upper() + "}"
@@ -1212,7 +1254,10 @@ def main():
     lines.insert(2, excl_rect_xml(ex))
     lines.insert(3, "	<!-- control tower: remove sim-placed objects around it -->")
     lines.insert(4, excl_rect_xml(tower_ex))
-    block = chr(10).join(lines) + chr(10) + "".join(exclusion_xml(t, c, chr(10)) for t, c in excl) + grass_xml("Grass: transmitter site (hides aerial photo)", DEPOT) + chr(9) + END + chr(10)
+    for k, (rt, rc) in enumerate(hangars.OBJECT_RECTS):
+        lines.insert(5 + 2 * k, "	<!-- %s -->" % rt)
+        lines.insert(6 + 2 * k, excl_rect_xml(rc))
+    block = chr(10).join(lines) + chr(10) + "".join(exclusion_xml(t, c, chr(10)) for t, c in excl) + "".join(veg_xml(t, c, chr(10)) for t, c in hangars.VEG_EXCL) + grass_xml("Grass: transmitter site (hides aerial photo)", DEPOT) + chr(9) + END + chr(10)
     block = block.replace(chr(10), nl)
     if BEGIN in xml:
         xml = re.sub(re.escape(chr(9) + BEGIN) + r".*?" + re.escape(END) + r"[" + chr(92) + "r]?" + chr(10), lambda _m: block, xml, flags=re.S)
