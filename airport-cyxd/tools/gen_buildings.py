@@ -851,6 +851,57 @@ def rect_sign(m, cx, cy, cz, n, bw, bh, tex, v0=0.0, v1=1.0):
            tex=tex, uvs=[(0, v1), (1, v1), (1, v0), (0, v0)])
 
 
+def stars_lettering(m, x_right, y0, z, n, H):
+    """White "STARS" (heavy upright sans capitals, wide, cap height H) right-aligned at x_right on a vertical wall whose outward normal is
+    n = (nx, nz).  Each glyph is a set of stroked centre-lines drawn as convex quads with round joints (custom polygons: the
+    seven-segment numerals of number_disc cannot make letters).  Reading direction as number_disc: u = (-nz, nx)."""
+    ux, uz = -n[1], n[0]
+    t = 0.21 * H  # stroke weight (heavy)
+    W = 0.80 * H
+    gap = 0.15 * H
+    total = 5 * W + 4 * gap
+    h2 = t / 2
+    off = 0.03
+
+    def pt(u, v):
+        return (x_right + ux * (u - total) + n[0] * off, y0 + v, z + uz * (u - total) + n[1] * off)
+    centre = (x_right - n[0], y0 + H / 2, z - n[1])
+
+    def stroke(path):
+        for (a, b), (c, d) in zip(path, path[1:]):
+            dx, dy = c - a, d - b
+            ln = math.hypot(dx, dy)
+            nx_, ny_ = -dy / ln * h2, dx / ln * h2
+            m.poly([pt(a + nx_, b + ny_), pt(c + nx_, d + ny_), pt(c - nx_, d - ny_), pt(a - nx_, b - ny_)], WHITE, centre)
+        for a, b in path[1:-1]:  # round joints
+            m.poly([pt(a + h2 * math.cos(k * math.pi / 4), b + h2 * math.sin(k * math.pi / 4)) for k in range(8)], WHITE, centre)
+
+    def rect(u0, u1, v0, v1):
+        m.poly([pt(u0, v0), pt(u1, v0), pt(u1, v1), pt(u0, v1)], WHITE, centre)
+
+    def S(o):
+        e = h2
+        stroke([(o + W - e, H * 0.74), (o + W * 0.72, H - e), (o + W * 0.28, H - e), (o + e, H * 0.74), (o + e, H * 0.64),
+                (o + W * 0.30, H * 0.5), (o + W * 0.70, H * 0.5), (o + W - e, H * 0.36), (o + W - e, H * 0.26),
+                (o + W * 0.72, e), (o + W * 0.28, e), (o + e, H * 0.26)])
+
+    def T(o):
+        rect(o, o + W, H - t, H)
+        rect(o + W / 2 - t * 0.55, o + W / 2 + t * 0.55, 0, H - t + 0.001)
+
+    def A(o):
+        stroke([(o + h2 * 0.9, 0.0), (o + W / 2, H - h2), (o + W - h2 * 0.9, 0.0)])
+        rect(o + W * 0.24, o + W * 0.76, H * 0.22, H * 0.22 + t * 0.8)
+
+    def R(o):
+        rect(o, o + t, 0, H)
+        stroke([(o + h2, H - h2), (o + W * 0.62, H - h2), (o + W - h2, H * 0.78), (o + W - h2, H * 0.62), (o + W * 0.62, H * 0.45), (o + h2, H * 0.45)])
+        stroke([(o + W * 0.42, H * 0.45), (o + W - h2, 0.0)])
+
+    for i, g in enumerate((S, T, A, R, S)):
+        g(i * (W + gap))
+
+
 def shell_hangar():
     """Hangar 16 shell group as measured on the 2014 Google Earth aerial (docs/cyxd/aerials/google-earth-hangar16-201407.jpg,
     scale bar 8.94 m) and the 2012 street view: the cream ribbed-metal Shell hangar (45 x 39 x 11.2 m, flat roof with a red
@@ -923,7 +974,9 @@ def shell_hangar():
     # red STARS band wrapped round the north corner: along the landside face and round the north end wall
     m.box(w0 - 0.14, w0 + 15.0, 3.4, 4.5, wz0 - 0.14, wz0, RED)
     m.box(w0 - 0.14, w0, 3.4, 4.5, wz0 - 0.14, wz0 + 9.0, RED)
-    m.box(w0 + 11.5, w0 + 14.7, 3.5, 4.4, wz0 - 0.15, wz0 - 0.14, WHITE)  # lettering panel at the SE end of the band
+    # "STARS" in white heavy sans capitals at the SE end of the band (Street View 2012: upright, bold, wide, no star graphic)
+    stars_lettering(m, w0 + 14.4, 3.63, wz0 - 0.14, (0, -1), 0.62)
+    m.keepout(w0 + 11.3, w0 + 14.6, 3.65, 4.3, wz0 - 0.5, wz0 + 0.3)  # no window or frame may reach the lettering
     # glazing runs just round the STARS corner: landside face from 2 m past the corner for 26 m, and two panes on the end wall
     for i in range(9):
         m.window((0, 0, -1), (w0 + 2.0 + i * 3.0, 0.9, wz0), (1, 0, 0), 2.6, 2.3, off=0.12)
