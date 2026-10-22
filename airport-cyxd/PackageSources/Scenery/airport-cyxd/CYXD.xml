@@ -950,10 +950,6 @@
 	<SceneryObject lat="53.56988" lon="-113.52510" alt="0.00000000000000" pitch="0.000000" bank="0.000000" heading="57.78" imageComplexity="VERY_SPARSE" altitudeIsAgl="TRUE" snapToGround="TRUE" snapToNormal="FALSE">
 		<LibraryObject name="{0DDC62DE-900D-5F4C-B5BA-EFE16E11800D}" scale="1.000000"/>
 	</SceneryObject>
-	<!-- Administration Building (1940s-50s style), faces the circular drive -->
-	<SceneryObject lat="53.57041" lon="-113.52269" alt="0.00000000000000" pitch="0.000000" bank="0.000000" heading="-3.6" imageComplexity="VERY_SPARSE" altitudeIsAgl="TRUE" snapToGround="TRUE" snapToNormal="FALSE">
-		<LibraryObject name="{85FF42F2-F138-5792-A4A8-5E8A165033FE}" scale="1.000000"/>
-	</SceneryObject>
 	<!-- North hangar complex: bay 1 (1944 photo) -->
 	<SceneryObject lat="53.57762" lon="-113.52196" alt="0.00000000000000" pitch="0.000000" bank="0.000000" heading="-1" imageComplexity="VERY_SPARSE" altitudeIsAgl="TRUE" snapToGround="TRUE" snapToNormal="FALSE">
 		<LibraryObject name="{D125B159-10CF-522F-8DD4-166A6B7A4F19}" scale="1.000000"/>
@@ -1129,18 +1125,6 @@
 		<Vertex lat="53.56945664500543" lon="-113.52515180107859"/>
 		<Vertex lat="53.56972706658286" lon="-113.52443070691568"/>
 		<Vertex lat="53.57028244894538" lon="-113.52501891196803"/>
-	</Polygon>
-	<Polygon version="0.4.0" displayName="No generated buildings: Administration Building (1940s-50s style), faces the circula" parentGroupID="6" altitude="667.68023681640625">
-		<Attribute name="UniqueGUID" guid="{359C73E8-06BE-4FB2-ABCB-EC942F7761D0}" type="GUID" value="{195ED077-894F-541E-B106-4375599444BF}"/>
-		<Attribute name="ExcludeDetectedBuildings" guid="{5C1A2387-1F07-47DF-A569-962CF6258E55}" type="UINT8" value="1"/>
-		<Attribute name="ExcludeOSMBuildings" guid="{F3C2635D-9F2F-458F-8663-90B3837BED09}" type="UINT8" value="1"/>
-		<Attribute name="ExcludeMSBuildings" guid="{F78A3074-8AD5-4B8B-92C4-C1C948BB7AA5}" type="UINT8" value="1"/>
-		<Attribute name="ExcludeTIN" guid="{18B58CBF-AE02-4A19-8AA9-3809E8E73400}" type="UINT8" value="1"/>
-		<Attribute name="ExclusionFlags" guid="{4CACC252-E6DC-419A-B20C-16EC601DF70E}" type="UINT32" value="3"/>
-		<Vertex lat="53.57024889448058" lon="-113.52314238295706"/>
-		<Vertex lat="53.57028390358319" lon="-113.52220725136930"/>
-		<Vertex lat="53.57057110551943" lon="-113.52223761704293"/>
-		<Vertex lat="53.57053609641682" lon="-113.52317274863070"/>
 	</Polygon>
 	<Polygon version="0.4.0" displayName="No generated buildings: North hangar complex: bay 1 (1944 photo)" parentGroupID="6" altitude="667.68023681640625">
 		<Attribute name="UniqueGUID" guid="{359C73E8-06BE-4FB2-ABCB-EC942F7761D0}" type="GUID" value="{30876A4F-DFCB-5893-9240-F9F2EBBF96F5}"/>
@@ -1594,6 +1578,21 @@
 		<Vertex lat="53.57489249452483" lon="-113.52846384405531"/>
 		<Vertex lat="53.57406220669982" lon="-113.52737376463432"/>
 		<Vertex lat="53.57329182427496" lon="-113.52870526163751"/>
+	</Polygon>
+	<Polygon version="0.4.0" displayName="No trees: Between the parking garage and the old terminal" parentGroupID="6" altitude="667.68023681640625">
+		<Attribute name="UniqueGUID" guid="{359C73E8-06BE-4FB2-ABCB-EC942F7761D0}" type="GUID" value="{315FF8F4-E8F4-5330-81E7-5E71CEA6F2A0}"/>
+		<Attribute name="ExcludeDetectedBuildings" guid="{5C1A2387-1F07-47DF-A569-962CF6258E55}" type="UINT8" value="1"/>
+		<Attribute name="ExcludeOSMBuildings" guid="{F3C2635D-9F2F-458F-8663-90B3837BED09}" type="UINT8" value="1"/>
+		<Attribute name="ExcludeMSBuildings" guid="{F78A3074-8AD5-4B8B-92C4-C1C948BB7AA5}" type="UINT8" value="1"/>
+		<Attribute name="VegetationScale" guid="{6A043F59-E6F2-4117-A2E4-D510E7317C29}" type="UINT32" value="0"/>
+		<Attribute name="VegetationDensity" guid="{41EFF715-C392-4B31-A457-50A504353A90}" type="UINT32" value="0"/>
+		<Attribute name="ExcludeTIN" guid="{18B58CBF-AE02-4A19-8AA9-3809E8E73400}" type="UINT8" value="1"/>
+		<Attribute name="ExclusionFlags" guid="{4CACC252-E6DC-419A-B20C-16EC601DF70E}" type="UINT32" value="7"/>
+		<Attribute name="ExcludeRocks" guid="{F104723A-D6D1-4B2E-9B44-ACCD8AB372DC}" type="UINT8" value="1"/>
+		<Vertex lat="53.57100844328635" lon="-113.52447681023233"/>
+		<Vertex lat="53.56989024765836" lon="-113.52295510458676"/>
+		<Vertex lat="53.57011662189974" lon="-113.52248531709306"/>
+		<Vertex lat="53.57123481752774" lon="-113.52400702273863"/>
 	</Polygon>
 	<Polygon version="0.4.0" displayName="Grass: transmitter site (hides aerial photo)" parentGroupID="6" altitude="667.68023681640625">
 		<Attribute name="UniqueGUID" guid="{359C73E8-06BE-4FB2-ABCB-EC942F7761D0}" type="GUID" value="{A5A8F26E-7925-5100-A802-65B33B75FDC9}"/>

@@ -1220,38 +1220,102 @@ def hangar21():
 def garage22():
     """Terminal parking garage ("22" roundel), an OPEN parkade (user, 2026-10-21: it is open in real life, give it a ground deck and leave the sides open).
     Levels stepping down toward the SE end (decks at 10.4 / 7.2 / 4.0 m, reaching x 30 / 40 / 50); every deck is a concrete slab with a 1.1 m brown
-    cladding band on its rim, and between the band and the slab above is an open slot with the precast columns standing in it (Street View 15-18);
-    the ground floor has a paved deck and the same column grid, open on all sides.  Footprint from the 2017 Wayback zoom-19 imagery: about 100 x 72 m,
-    +Z = bearing 58 (NE, toward the terminal), +X = bearing 148.  The earlier sunken "dish" on the top deck (archive photo MS-1270.213.3) was dropped."""
+    cladding band on its rim, and between the band and the slab above is an open slot with the precast columns standing in it (Street View 15-18).
+    Mk 5 (user, 2026-10-21): (1) only perimeter columns (clear spans inside); (2) the decks are not flat: the aerial (terminal21-2017-overlay.png)
+    shows a central bay starting about 45 % of the way along from the NW end that dips toward the SE, so every deck is a U (flat sides and NW end)
+    round a ramp slab that descends at about 7 % to the level below (the lowest to the ground, where it is the vehicle entrance with a gate, island
+    and yellow bollards as in Street View 16/17); (3) a second "22" board on the stair tower's long (SE) side.
+    Footprint from the 2017 Wayback zoom-19 imagery: about 100 x 72 m, +Z = bearing 58 (NE, toward the terminal), +X = bearing 148."""
     m = fmesh()
     x0, x1, z0, z1 = -50.0, 50.0, -36.0, 36.0
     GH, SL, GC = 3.2, 0.5, 3.5  # level height, slab thickness, ground-floor clearance under the lowest slab
+    BW, XA = 15.0, -14.0  # half width of the dipping bay, x where the dip starts (same for every deck, so the ramps are parallel)
+    SLOPE = GH / 44.0
+    YG = 0.08  # ramp foot at the ground
     decks = [(4.0, x1), (7.2, 40.0), (10.4, 30.0)]
 
+    def ramp_y(yd, x):
+        return yd - SLOPE * (x - XA)
+
     def columns(xa, xb, ya, yb):
+        """Perimeter columns only (clear spans inside); none in the dipping bay's mouth."""
         nx, nz = max(1, round((xb - xa) / 8.3)), 8
         for i in range(nx + 1):
             x = xa + 0.4 + i * (xb - xa - 0.8) / nx
             for j in range(nz + 1):
+                if not (j in (0, nz) or i in (0, nx)):
+                    continue
                 z = z0 + 0.4 + j * (z1 - z0 - 0.8) / nz
+                if abs(z) < BW + 0.5 and x > XA:
+                    continue
                 m.box(x - 0.4, x + 0.4, ya, yb, z - 0.4, z + 0.4, CREAM)
                 if j in (0, nz) and yb - ya > 2.0:  # the corbelled column heads on the outer faces
                     m.box(x - 0.6, x + 0.6, yb - 0.5, yb, z - 0.5 if j == 0 else z - 0.4, z + 0.4 if j == 0 else z + 0.5, TAN)
+
+    def prism_z(prof, za, zb, sw):
+        """Convex xy profile extruded between z = za and zb."""
+        c = (sum(p[0] for p in prof) / len(prof), sum(p[1] for p in prof) / len(prof), (za + zb) / 2)
+        m.poly([(x, y, za) for x, y in prof], sw, c)
+        m.poly([(x, y, zb) for x, y in prof], sw, c)
+        for i in range(len(prof)):
+            (xa, ya), (xb, yb) = prof[i], prof[(i + 1) % len(prof)]
+            m.poly([(xa, ya, za), (xb, yb, za), (xb, yb, zb), (xa, ya, zb)], sw, c)
+
+    def flat_slab(xa, xb, za, zb, yd):
+        m.box(xa, xb, yd - SL, yd, za, zb, TAN, top=False)
+        m.poly([(xa, yd, za), (xb, yd, za), (xb, yd, zb), (xa, yd, zb)], DGREY, (0.0, yd - 5.0, 0.0))  # deck surface
+        m.poly([(xa, yd - SL, za), (xb, yd - SL, za), (xb, yd - SL, zb), (xa, yd - SL, zb)], DGREY, (0.0, yd + 5.0, 0.0))  # underside
+
     m.poly([(x0, 0.03, z0), (x1, 0.03, z0), (x1, 0.03, z1), (x0, 0.03, z1)], DGREY, (0.0, -5.0, 0.0))  # the ground deck
     columns(x0, x1, 0.03, GC)
     for k, (yd, X) in enumerate(decks):
-        m.box(x0, X, yd - SL, yd, z0, z1, TAN, top=False)  # slab with its concrete edge showing
-        m.poly([(x0, yd, z0), (X, yd, z0), (X, yd, z1), (x0, yd, z1)], DGREY, (0.0, yd - 5.0, 0.0))  # deck surface
-        m.poly([(x0, yd - SL, z0), (X, yd - SL, z0), (X, yd - SL, z1), (x0, yd - SL, z1)], DGREY, (0.0, yd + 5.0, 0.0))  # underside
-        parapet(m, x0 - 0.1, X + 0.1, z0 - 0.1, z1 + 0.1, yd, yd + 1.1, 0.3, BRONZE)  # brown horizontal cladding on the rim
+        # U-shaped deck: flat slabs along both sides and across the NW end, the centre bay is a ramp down to the level below
+        flat_slab(x0, X, z0, -BW, yd)
+        flat_slab(x0, X, BW, z1, yd)
+        flat_slab(x0, XA, -BW, BW, yd)
+        xe = min(X, XA + (yd - YG) / SLOPE) if k == 0 else X  # the lowest ramp ends where it meets the ground
+        ye = max(ramp_y(yd, xe), YG)
+        te = SL if k else 0.04
+        m.poly([(XA, yd, -BW), (xe, ye, -BW), (xe, ye, BW), (XA, yd, BW)], DGREY, (XA, yd - 5.0, 0.0))  # ramp surface
+        m.poly([(XA, yd - SL, -BW), (xe, ye - te, -BW), (xe, ye - te, BW), (XA, yd - SL, BW)], DGREY, (XA, yd + 5.0, 0.0))  # ramp underside
+        m.poly([(xe, ye, -BW), (xe, ye, BW), (xe, ye - te, BW), (xe, ye - te, -BW)], TAN, (xe - 1.0, ye, 0.0))  # ramp end
+        # deep edge beams under the side slabs, down to the ramp (the dark walls along the bay in the aerial)
+        xs = XA + SL / SLOPE
+        prof = [(xs, yd - SL), (X, yd - SL)]
+        if k == 0:
+            prof += [(X, YG), (xe, YG)]
+        else:
+            prof += [(X, ye)]
+        for za, zb in ((BW, BW + 0.3), (-BW - 0.3, -BW)):
+            prism_z(prof, za, zb, TAN)
+        # brown cladding band on the rim (open at the SE end of the bay) and a rail along the bay's top edge
+        m.box(x0 - 0.1, X + 0.1, yd, yd + 1.1, z0 - 0.1, z0 + 0.2, BRONZE)
+        m.box(x0 - 0.1, X + 0.1, yd, yd + 1.1, z1 - 0.2, z1 + 0.1, BRONZE)
+        m.box(x0 - 0.1, x0 + 0.2, yd, yd + 1.1, z0 + 0.2, z1 - 0.2, BRONZE)
+        m.box(X - 0.2, X + 0.1, yd, yd + 1.1, z0 + 0.2, -BW, BRONZE)
+        m.box(X - 0.2, X + 0.1, yd, yd + 1.1, BW, z1 - 0.2, BRONZE)
+        m.box(XA, X, yd, yd + 0.9, BW, BW + 0.25, TAN)
+        m.box(XA, X, yd, yd + 0.9, -BW - 0.25, -BW, TAN)
         if k + 1 < len(decks):
             columns(x0, min(X, decks[k + 1][1]), yd, yd + GH - SL)
-    # stair tower at the NW end (angled wall in the photos) with the "22" roundel on its NE face, and the lift housing on the roof
+    # entrance at the SE end (Street View 16/17): the lowest ramp meets the ground between the edge beams; a gate island with two ticket posts,
+    # a short barrier boom over each lane and yellow bollards, just outside the mouth
+    m.box(50.5, 56.0, 0, 0.2, -0.9, 0.9, TAN)
+    for xp in (52.0, 54.0):
+        m.box(xp - 0.2, xp + 0.2, 0.2, 1.5, -0.35, 0.35, DGREY)
+    for zb0, zb1 in ((0.9, 3.0), (3.0, 5.0), (5.0, 7.0), (-3.0, -0.9), (-5.0, -3.0), (-7.0, -5.0)):
+        stripe = RED if (int(abs(zb0)) // 2) % 2 == 0 else WHITE
+        m.box(52.0, 52.12, 1.1, 1.22, zb0, zb1, stripe)
+    for xb_, zb_ in ((50.8, -0.7), (50.8, 0.7), (55.6, -0.7), (55.6, 0.7), (52.0, -7.4), (52.0, 7.4)):
+        m.box(xb_ - 0.2, xb_ + 0.2, 0, 1.0, zb_ - 0.2, zb_ + 0.2, YELLOW)
+    # stair tower at the NW end (angled wall in the photos) with the "22" roundel on its NE face and a second one on its SE (long-side) face,
+    # and the lift housing on the roof
     m.box(-49.5, -41.5, 10.4, 15.0, 22.0, 30.0, TAN)
     m.box(-49.7, -41.3, 15.0, 15.3, 21.8, 30.2, DGREY)
     m.box(-52.0, -50.0, 11.4, 13.0, 20.0, 27.0, CREAM)
     number_disc(m, -45.5, 12.7, 30.0, (0, 1), 1.4, "22")
-    m.box(0.0, 3.0, 11.5, 14.5, -3.0, 3.0, DGREY)  # roof lift housing
+    number_disc(m, -41.5, 12.7, 26.0, (1, 0), 1.4, "22")
+    m.box(-24.0, -21.0, 10.4, 13.4, -3.0, 3.0, DGREY)  # roof lift housing (in the aerial it stands on the flat part, before the dip)
     m.mirror_x()
     return m
 
@@ -1378,6 +1442,8 @@ def place(out, excl, modellib, footprint):
         if name in ("cyxd_hangar38", "cyxd_hangar39", "cyxd_hangar40"):
             pts += footprint("%.8f" % lat, "%.8f" % lon, "%g" % hdg, -W / 2 - 14.0, W / 2 + 14.0, -D / 2 - 14.0, D / 2 + 14.0)
     VEG_EXCL.append(("Hangars 38, 39 and 40 and the ground between them", _hull(pts)))
+    # trees in the strip between the garage and the terminal's landside (user, 2026-10-21; the conifer rows in the 2017 aerial), terminal frame
+    VEG_EXCL.append(("Between the parking garage and the old terminal", footprint("53.57094000", "-113.52317800", "51", -60.0, 100.0, -62.0, -22.0)))
 
 
 OBJECT_RECTS = []  # (title, corners): ExclusionRectangle for base-scenery objects, written by gen_buildings.main()

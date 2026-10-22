@@ -68,6 +68,16 @@
      "indices": 6,
      "mode": 4,
      "material": 3
+    },
+    {
+     "attributes": {
+      "POSITION": 0,
+      "NORMAL": 1,
+      "TEXCOORD_0": 2
+     },
+     "indices": 7,
+     "mode": 4,
+     "material": 4
     }
    ]
   }
@@ -94,7 +104,7 @@
    }
   },
   {
-   "name": "cyxd_ribbed",
+   "name": "cyxd_shingle_red",
    "pbrMetallicRoughness": {
     "baseColorTexture": {
      "index": 2
@@ -104,10 +114,20 @@
    }
   },
   {
-   "name": "cyxd_ribbed_tan",
+   "name": "cyxd_ribbed",
    "pbrMetallicRoughness": {
     "baseColorTexture": {
      "index": 3
+    },
+    "metallicFactor": 0.0,
+    "roughnessFactor": 0.9
+   }
+  },
+  {
+   "name": "cyxd_ribbed_tan",
+   "pbrMetallicRoughness": {
+    "baseColorTexture": {
+     "index": 4
     },
     "metallicFactor": 0.0,
     "roughnessFactor": 0.9
@@ -130,6 +150,10 @@
   {
    "sampler": 1,
    "source": 3
+  },
+  {
+   "sampler": 1,
+   "source": 4
   }
  ],
  "samplers": [
@@ -152,6 +176,9 @@
    "uri": "cyxd_siding.png"
   },
   {
+   "uri": "cyxd_shingle_red.png"
+  },
+  {
    "uri": "cyxd_ribbed.png"
   },
   {
@@ -162,11 +189,11 @@
   {
    "bufferView": 0,
    "componentType": 5126,
-   "count": 8636,
+   "count": 5356,
    "type": "VEC3",
    "min": [
-    -50.2,
-    0.03,
+    -56.0,
+    0,
     -36.1
    ],
    "max": [
@@ -178,37 +205,43 @@
   {
    "bufferView": 1,
    "componentType": 5126,
-   "count": 8636,
+   "count": 5356,
    "type": "VEC3"
   },
   {
    "bufferView": 2,
    "componentType": 5126,
-   "count": 8636,
+   "count": 5356,
    "type": "VEC2"
   },
   {
    "bufferView": 3,
    "componentType": 5123,
-   "count": 3312,
+   "count": 3114,
    "type": "SCALAR"
   },
   {
    "bufferView": 4,
    "componentType": 5123,
-   "count": 48,
+   "count": 168,
    "type": "SCALAR"
   },
   {
    "bufferView": 5,
    "componentType": 5123,
-   "count": 7800,
+   "count": 18,
    "type": "SCALAR"
   },
   {
    "bufferView": 6,
    "componentType": 5123,
-   "count": 1824,
+   "count": 2544,
+   "type": "SCALAR"
+  },
+  {
+   "bufferView": 7,
+   "componentType": 5123,
+   "count": 2238,
    "type": "SCALAR"
   }
  ],
@@ -216,43 +249,48 @@
   {
    "buffer": 0,
    "byteOffset": 0,
-   "byteLength": 103632
+   "byteLength": 64272
   },
   {
    "buffer": 0,
-   "byteOffset": 103632,
-   "byteLength": 103632
+   "byteOffset": 64272,
+   "byteLength": 64272
   },
   {
    "buffer": 0,
-   "byteOffset": 207264,
-   "byteLength": 69088
+   "byteOffset": 128544,
+   "byteLength": 42848
   },
   {
    "buffer": 0,
-   "byteOffset": 276352,
-   "byteLength": 6624
+   "byteOffset": 171392,
+   "byteLength": 6228
   },
   {
    "buffer": 0,
-   "byteOffset": 282976,
-   "byteLength": 96
+   "byteOffset": 177620,
+   "byteLength": 336
   },
   {
    "buffer": 0,
-   "byteOffset": 283072,
-   "byteLength": 15600
+   "byteOffset": 177956,
+   "byteLength": 36
   },
   {
    "buffer": 0,
-   "byteOffset": 298672,
-   "byteLength": 3648
+   "byteOffset": 177992,
+   "byteLength": 5088
+  },
+  {
+   "buffer": 0,
+   "byteOffset": 183080,
+   "byteLength": 4476
   }
  ],
  "buffers": [
   {
    "uri": "cyxd_garage22.bin",
-   "byteLength": 302320
+   "byteLength": 187556
   }
  ]
 }
