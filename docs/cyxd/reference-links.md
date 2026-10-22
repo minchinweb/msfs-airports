@@ -58,7 +58,7 @@ Link only: JetPhotos 6026139, 11140, 9456702, 8413417, 11139; archive.org PC0139
 
 ## General Aviation Centre, 77 Airport Road (west side)
 - Saved in `general-aviation-centre-photos/`: Commons EDMONTON_MUNI_(11094203585) and (11094283326), 2013-03-24, CC BY 2.0: two-storey red-brown brick building with a
-  round tan stair tower, "GENERAL AVIATION CENTRE" sign with a plane, glazed ground floor. Built as Hangar 40 (2026-10-21).
+  round tan stair tower, "GENERAL AVIATION CENTRE" sign with a plane, glazed ground floor. Most likely Hangar 19 (62-69 Airport Rd on the Street View photos; 77 falls between 69 and the Esso building at 83); the model has no "GENERAL AVIATION CENTRE" sign yet. Not Hangar 40, which is Canadian Helicopters (12039 / 12043 121 St NW).
 
 ## View from the Edmonton Flying Club (Hangar 18)
 - Saved in `hangar18-photos/`: flickr woodhead 11094403683, 14875905273 (the airside view from the club balcony: tower with its annex, the Shell hangar and the Aerocentre).
