@@ -95,9 +95,25 @@ def efc():
     return im
 
 
+def goa():
+    """Government of Alberta sign on Hangar 4 (4.6 x 0.55 m): white board, blue "Alberta" logo box at the left, GOVERNMENT OF ALBERTA in
+    grey capitals (docs/cyxd/hangar4-photos/Edmonton_City_Centre_Airport__4846283523_.jpg).  Stretched over the whole square."""
+    w = 2760
+    h = int(w / (4.6 / 0.55))
+    b = Image.new("RGB", (w, h), (246, 246, 244))
+    d = ImageDraw.Draw(b)
+    d.rectangle((0, 0, w - 1, h - 1), outline=(120, 124, 130), width=int(h * 0.04))
+    lw = int(w * 0.17)
+    d.rectangle((0, 0, lw, h - 1), fill=(34, 62, 150))
+    text_fit(d, "Alberta", "ariali.ttf", (lw * 0.08, h * 0.2, lw * 0.92, h * 0.8), (255, 255, 255))
+    text_fit(d, "GOVERNMENT OF ALBERTA", "arial.ttf", (lw + w * 0.03, h * 0.18, w * 0.97, h * 0.82), (50, 54, 60))
+    return b.resize((1024, 1024), Image.LANCZOS)
+
+
 if __name__ == "__main__":
     esso().save(HERE / "assets/esso_sign.png")
     navcan().save(HERE / "assets/navcan_sign.png")
     lawoffice().save(HERE / "assets/lawoffice_sign.png")
     nwi().save(HERE / "assets/nwi_sign.png")
     efc().save(HERE / "assets/efc_sign.png")
+    goa().save(HERE / "assets/goa_sign.png")

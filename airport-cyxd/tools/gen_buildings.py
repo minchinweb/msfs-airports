@@ -56,7 +56,7 @@ def write_palette(path):
 
 TEX_T = 1.28  # metres per texture tile (8 clapboards / 8 shingle rows)
 TEX_NAMES = ("siding", "shingle_red", "shingle_grey", "ribbed", "ribbed_blue", "ribbed_green", "ribbed_mustard", "ribbed_steel",
-             "ribbed_tan", "ribbed_white", "ribbed_yellow", "ribbed_teal", "brick", "shell", "esso", "navcan", "lawoffice", "nwi", "efc")
+             "ribbed_tan", "ribbed_white", "ribbed_yellow", "ribbed_teal", "brick", "shell", "esso", "navcan", "lawoffice", "nwi", "efc", "goa")
 
 
 
@@ -145,7 +145,7 @@ def write_textures(folder):
     (folder / "cyxd_shell.png").write_bytes(sign.read_bytes())
     (folder / "cyxd_shell.png.xml").write_text('<BitmapConfiguration>\n\t<BitmapSlot>MTL_BITMAP_DECAL0</BitmapSlot>\n</BitmapConfiguration>\n')
     # Esso oval and NAV CANADA plaque: tools/make_signs.py
-    for nm in ("esso", "navcan", "lawoffice", "nwi", "efc"):
+    for nm in ("esso", "navcan", "lawoffice", "nwi", "efc", "goa"):
         (folder / ("cyxd_%s.png" % nm)).write_bytes((Path(__file__).resolve().parent / ("assets/%s_sign.png" % nm)).read_bytes())
         (folder / ("cyxd_%s.png.xml" % nm)).write_text('<BitmapConfiguration>\n\t<BitmapSlot>MTL_BITMAP_DECAL0</BitmapSlot>\n</BitmapConfiguration>\n')
 
@@ -908,7 +908,8 @@ def hangar15():
         m.window((0, 0, 1), (1.8 - i * 6.025 - 0.3, 2.3, z1 + 0.2), (-1, 0, 0), 5.4, 1.9)
     m.box(1.8, -22.3, 6.4, 6.55, z1, z1 + 0.28, DGREY)  # door header
     number_disc(m, 17.0, 5.2, z1, (0, 1), 0.9, "15")  # south end of the gable, hidden behind the museum in the 2014 aerial
-    # no roundel on the landside (user, 2026-10-21): the north gable's "15" is removed
+    # landside roundel (user, 2026-10-21; Street View h15-01): high on the SW eave wall (the road side) toward its NW end, above the first windows
+    number_disc(m, x1, 6.5, z0 + 11.0, (1, 0), 0.7, "15")
     for k in range(8):  # SW eave wall: office windows and two entrances with blue awnings
         m.window((1, 0, 0), (x1, 4.6, z0 + 4.0 + k * 6.2), (0, 0, 1), 1.5, 1.2)
     for zc in (-10.0, 10.0):
