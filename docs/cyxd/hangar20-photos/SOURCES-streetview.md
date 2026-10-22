@@ -1,6 +1,6 @@
 # Hangar 20 (the Esso / Imperial Oil building) - Street View photos, 2026-10-21
 
-The user identified Hangar 20 as the Esso building (the "20" roundel is on the upper tier's end wall in photo 11). Copied from `other-buildings-photos/`; screenshots from Google Street View (copyright Google; reference only, do not redistribute). Photo numbers are the 0-81 indices in `street-view-review.md`.
+The user identified Hangar 20 as the Esso building (the "20" roundel is on the upper tier's end wall in photo 11). Screenshots from Google Street View (copyright Google; reference only, do not redistribute). Photo numbers are the 0-81 indices in `street-view-review.md`.
 
 | File | Address | Date | What it shows |
 |---|---|---|---|

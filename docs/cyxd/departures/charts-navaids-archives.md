@@ -15,6 +15,7 @@ Nav Canada NAVAID Modernization lists **Edmonton (XD) NDB** for later decommissi
 ## Airways
 
 - **Amber 2:** Edmonton–north (Staging Route / Yukon / Alaska). Documented in use from Municipal and Namao in the 1950s.
+- **Alpha 7** and **Bravo 3** (1984): named in the CASB occurrence report 84-H40006 ([`casb-84-h40006-wapiti-402-alpha7-1984.pdf`](casb-84-h40006-wapiti-402-alpha7-1984.pdf), Wapiti Aviation PA-31-350 C-GXUC, 19 Oct 1984). Wapiti 402 left Edmonton Municipal at 19:10 local, IFR for Peace River via **Alpha 7**, runway 34, **Municipal One** departure, radar-vectored climb to 8,000 ft, abeam the Swan Hills NDB when it asked to descend to High Prairie (MEA 7,000 ft on that stretch of the airway). So Alpha 7 runs north-west from Edmonton towards Swan Hills and Peace River, and the Municipal One departure was still in use in 1984. Pages 1-6 were read (the report is in French and English; the annex A route figure was not checked). Bravo 3 is from the user's reading of the report and has not been checked against the text here.
 - Later **Victor** low-altitude structure replaced ranges; first-fix after a radar/on-course departure would be whatever was on the flight plan (e.g. toward YEG, YYC, YMM, YQU). No published “first fix always X” for CYXD.
 
 ## Archival catalogues (plates not digitized in this pass)

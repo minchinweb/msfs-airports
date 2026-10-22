@@ -10,8 +10,8 @@ That is not the 3 August 2010 closure of runway 16/34, and not the 30 November 2
 
 | Date | Published name | Length | Source |
 |---|---|---|---|
-| c.1942 | 3/21 | 4,500 x 200 ft, hard | RCAF / Department of Transport aerodrome list. Local scan `rcaf-manual-of-aerodromes-edmonton-p90.jpg`. Also the table on the [Edmonton City Centre Airport](https://en.wikipedia.org/wiki/Edmonton_City_Centre_(Blatchford_Field)_Airport) page, citing the Pilots Handbook of Aerodromes, Vol. 2, p. 90. Variation 25° E, elevation 2,185 ft. |
-| 1978 | 03/21 | 4,451 ft concrete, 200 ft wide | *On Track…the Pilot's Air Travel Guide*, first annual edition, 1978. Plan saved as `rcaf-on-track-1978-edmonton-muni-2.jpg` ([source](https://rcaf.info/wp-content/uploads/2023/02/On-Track-1978-Edmonton-Muni-2.jpg)). Companion text page saved as `rcaf-on-track-1978-edmonton-muni-1.jpg`. Variation 23° E, elevation 2,200 ft. |
+| c.1942 | 3/21 | 4,500 x 200 ft, hard | RCAF / Department of Transport aerodrome list. Local scan `departures/rcaf-manual-of-aerodromes-edmonton-p90.jpg`. Also the table on the [Edmonton City Centre Airport](https://en.wikipedia.org/wiki/Edmonton_City_Centre_(Blatchford_Field)_Airport) page, citing the Pilots Handbook of Aerodromes, Vol. 2, p. 90. Variation 25° E, elevation 2,185 ft. |
+| 1978 | 03/21 | 4,451 ft concrete, 200 ft wide | *On Track…the Pilot's Air Travel Guide*, first annual edition, 1978. Plan saved as `departures/rcaf-on-track-1978-edmonton-muni-2.jpg` ([source](https://rcaf.info/wp-content/uploads/2023/02/On-Track-1978-Edmonton-Muni-2.jpg)). Companion text page saved as `departures/rcaf-on-track-1978-edmonton-muni-1.jpg`. Variation 23° E, elevation 2,200 ft. |
 
 The scenery heading is 57.78° true. Magnetic heading is that true heading minus easterly variation, and the runway number is the magnetic heading rounded to the nearest 10°.
 

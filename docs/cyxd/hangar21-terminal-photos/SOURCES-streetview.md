@@ -10,3 +10,9 @@ Screenshots from Google Street View (copyright Google; reference only, do not re
 | terminal-garage-16-streetview-201206.png | 145 Airport Rd NW | 2012-06 | Terminal complex from Airport Rd: three-deck garage on columns with an angled stair tower (16), the long low terminal with garage behind (17, 18) | Screenshot 2026-10-17 195757.png | 16 |
 | terminal-garage-17-streetview-201206.png | 145 Airport Rd NW | 2012-06 | Terminal complex from Airport Rd: three-deck garage on columns with an angled stair tower (16), the long low terminal with garage behind (17, 18) | Screenshot 2026-10-17 195814.png | 17 |
 | terminal-garage-18-streetview-201206.png | 131 Airport Rd NW | 2012-06 | Terminal complex from Airport Rd: three-deck garage on columns with an angled stair tower (16), the long low terminal with garage behind (17, 18) | Screenshot 2026-10-17 195836.png | 18 |
+
+## City of Edmonton Archives photos (2013-09-10)
+
+`city-edmonton-archives-2013-09-10-MS-1270.213.1.jpg` (SE end of the old terminal with the "21" roundels and glazed lounge) and `...MS-1270.213.3.jpg` (terminal and parking garage from above). Moved here from `City of Edmonton Archive photos/2013-09-10/`.
+
+`city-edmonton-archives-1980-ET-28-399.jpg` (City of Edmonton Archives, 1980): the old terminal and the brick Building 21 from the air. Moved here from `City of Edmonton Archive photos/1980/`.

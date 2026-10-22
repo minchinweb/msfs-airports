@@ -30,3 +30,15 @@ So the main tower and the 30 x 13 m wing in our landmark model belong to the fir
 6. **Lights and windsock:** add floodlights on gooseneck poles and a windsock mast on the ridge.
 7. **Era:** a pre-1931 building; check from the 1944 aerial and later photos when it was removed before deciding whether to keep it in the 1940-1985 scenery.
 8. **Open questions:** the 1933 Wiley Post photo shows the tower at the far end of the wing from the hangar, which does not match the 1931 front views; it may be a later change or a different view, so check it before fixing the wing's side. Orientation (mirror) of the existing landmark was never checked in-sim.
+
+## City of Edmonton Archives photos (added 2026-10-22)
+Moved from `City of Edmonton Archive photos/`; the date is in the file name, the archive ID after it. Reference only; do not redistribute.
+- `city-edmonton-archives-1930-EA-10-1044.jpg`: this hangar with its tower at the left, the later arched hangar between two towers at the right.
+- `city-edmonton-archives-1932-EA-160-1688.jpg`: front of the arched hangar and tower from the field.
+- `city-edmonton-archives-1933-EA-160-1441.jpg`: aerial; the hangar and tower beside the road at the edge of the field.
+- `city-edmonton-archives-1935-EA-10-2770.jpg`: night view with floodlights, tower and wing at the right.
+- `city-edmonton-archives-1937-EA-160-1331.jpg` and `-1332.jpg`: tower, wing and hangar front.
+- `city-edmonton-archives-1939-06-02-EA-160-1798.jpg`: a crowd and an airliner in front of the hangar and tower.
+
+## Moved from `historical-unknown-photos/` (2026-10-22)
+- `flickr_woodysworld1_11394759225.jpg` (Flickr, woodysworld1778; licence not checked): view across the apron from a stucco pier, probably this hangar's tower. Biplanes CF-CBN / CF-CBX / CF-BDW and three Lockheed 10-type airliners (so 1937 or later). In the distance, a two-storey wing with a white arched hangar front at its right end, possibly the 1938 hangar (`../hangar1938-photos/`); not confirmed.

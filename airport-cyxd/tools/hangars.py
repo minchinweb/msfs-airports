@@ -841,7 +841,7 @@ def hangar11():
 # Hangar 14 (Alberta Aviation Museum) ----------------------------------------------------------
 def hangar14():
     """Hangar 14 (BCATP 1941, Alberta Aviation Museum), reworked from the 2011 Commons photo (Alberta_Aviation_Museum.jpg), the 2012-2024
-    Street View frames, the 2026-10-21 frontage set and the 2014 aerial (tower-photos/EDMONTON_MUNI_AIRPORT__15439598181_.jpg).
+    Street View frames, the 2026-10-21 frontage set and the 2014 aerial (hangar17-tower-photos/EDMONTON_MUNI_AIRPORT__15439598181_.jpg).
     OSM 230718920: 90.8 (E-W) x 100 (N-S) m; front = the SOUTH gable (+Z, heading 180, facing Kingsway and the Bomarc).
     Windows counted from photos.  A perspective fit of the 2012 Street View frame (h14-kingsway-81) puts the west wall's 18 upper windows on an
     even 5.1 m pitch, the first 7.8 m north of the south corner (fit residual under 0.1 %).  The aerial gives the east wall the same 18 bays

@@ -134,7 +134,7 @@ def main():
         add("PARKING", t, r, pos, float(h))
 
     # --- the scrabble of club Cessnas between the tower and the Flying Club (Hangar 18): photos `hangar18-photos/flickr_woodhead_11094403683.jpg`
-    # (from the club balcony: three high-wing singles at odd angles on the open apron, a fuel truck beyond) and `tower-photos/woody_2.jpg`
+    # (from the club balcony: three high-wing singles at odd angles on the open apron, a fuel truck beyond) and `hangar17-tower-photos/woody_2.jpg`
     for pos, h in (((126, -452), 250.0), ((146, -470), 20.0), ((108, -472), 305.0), ((148, -432), 160.0), ((96, -492), 75.0)):
         add("PARKING", "RAMP_GA_SMALL", 8.0, pos, h)
     # --- tucked away in the gap between Hangar 15's SE gable and Hangar 14's north wall (nose west, tail toward the N-S taxiway); the museum keeps 12 m

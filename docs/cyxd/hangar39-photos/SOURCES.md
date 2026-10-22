@@ -28,5 +28,5 @@ Orientation, per the photo captions and the user: Hangar 39's main (door) face l
 
 ## Notes for the model
 - Door/gable orientation and the exact footprints must be checked against OSM, the 1944 aerial and the 1980s photos; these photos are from 2014.
-- Era: the building dates and the end of use of the PWA hangar were not checked. PWA hangars would fit the 1960s-80s part of the scenery's range; confirm from the 1980 archive photos (`City of Edmonton Archive photos/1980`, `1980 ca`) before placing it.
+- Era: the building dates and the end of use of the PWA hangar were not checked. PWA hangars would fit the 1960s-80s part of the scenery's range; confirm from the 1980 archive photos (`aerials/city-edmonton-archives-1980ca-ET-28-895.jpg` and `-906.jpg`, `hangar21-terminal-photos/city-edmonton-archives-1980-ET-28-399.jpg`) before placing it.
 - Colours: Hangar 39 pale blue + white + mid-blue; Hangar 38 mustard yellow; both carry the same blue numbered discs used at the end of the airport's life.

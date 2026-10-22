@@ -19,13 +19,13 @@ Saved in `hangar39-photos/` (8 photos, notes in its SOURCES.md): Flickr woodhead
 - Link only: CBC (edmonton-hangar-11-1.4799808), Facebook photos (3) and group post, National Trust endangered places page.
 
 ## University of Alberta Libraries items (archive.org, saved 2026-10-17)
-Saved in `ualberta-archive-photos/` (notes in its SOURCES.md): https://archive.org/details/PC013720 (Administration Building aerial postcard, 1948-88), https://archive.org/details/PC013987 (Municipal Airport postcard; metadata says 1929 but the hangars are 1938+), https://archive.org/details/WCWdb_2534 (1937 general plan, amended 1943, PDF).
+Saved in `administration-building-photos/` and `aerials/` (notes in their SOURCES files): https://archive.org/details/PC013720 (Administration Building aerial postcard, 1948-88), https://archive.org/details/PC013987 (Municipal Airport postcard; metadata says 1929 but the hangars are 1938+), https://archive.org/details/WCWdb_2534 (1937 general plan, amended 1943, PDF).
 
 ## Shell hangar landside and demolition (saved 2026-10-17)
 Saved in `hangar16-photos/` (notes in its SOURCES.md, with a consolidated model checklist and a 2014 footprint check): flickr woodhead 11094180505 (landside, winter; front-right building is Hangar 9, not the Shell hangar), 14669344410 and 14669349810 (demolition, landside: layout and heights). 11094403683 (airside from the club balcony) was already in `hangar18-photos/`.
 
 ## Historical photo, building and year unknown
-- Saved: `historical-unknown-photos/flickr_woodysworld1_11394759225.jpg`: black-and-white view from a stucco pier across the airfield: biplanes (CF-CBN / CF-CBX) and three
+- Saved: `hangar1930-photos/flickr_woodysworld1_11394759225.jpg`: black-and-white view from a stucco pier across the airfield: biplanes (CF-CBN / CF-CBX) and three
   monoplanes parked on grass; in the distance a three-storey block with a barrel-vault hangar at its right. 1930s (aircraft markings), probably the first-hangar area seen from the
   control tower roof; unconfirmed.
 
@@ -34,7 +34,7 @@ Saved in `aerials/`:
 - `City_Centre_Airport_11246894493_.jpg`: Commons, 2012-08-10, CC BY-SA 2.0, oblique from the north-east looking south over the field to downtown; the red-roofed NW complex is at lower centre.
 - `Edmonton_City_Centre_Airport.jpg`: Commons, 2012-06-06, CC BY-SA 3.0, green spring oblique of the airfield and the buildings around it.
 - `Edmonton_-_City_Centre_Municipal_-_Blatchford_Field_YXD_-_CYXD_AN1479402.jpg`: Commons, 8 Feb 2009, GFDL 1.2, high winter oblique over the snow-covered field and the surrounding neighbourhoods.
-- `EDMONTON_MUNI_AIRPORT_15256173388_.jpg`, `..._15419709556_.jpg`: Commons, 2014-10-02, CC BY 2.0 (Hangar 14 / museum area from a distance; the first is also in `tower-photos/`).
+- `EDMONTON_MUNI_AIRPORT_15256173388_.jpg`, `..._15419709556_.jpg`: Commons, 2014-10-02, CC BY 2.0 (Hangar 14 / museum area from a distance; the first is also in `hangar17-tower-photos/`).
 - `Edmonton_muni_airport_15442443422_.jpg`: Commons, Commons date 2000-01-01 (placeholder, probably autumn 2014), CC BY 2.0, distant view over the rail yards with a white arch-roofed hangar at the field edge.
 - `flickr_woodysworld1_11394875115.jpg`, `flickr_woodysworld1_11394993953.jpg`: woodysworld1778 prints of 1940s oblique aerials (three-runway layout with the 04/22 runway; WWII era, exact year unknown).
 - Esri World Imagery Wayback 2014-02-20 and 2017-05-03 tiles (used for the footprints; not stored, see `hangar-footprints.md`).
@@ -67,7 +67,7 @@ Link only: JetPhotos 6026139, 11140, 9456702, 8413417, 11139; archive.org PC0139
 - Saved: `hangar8-photos/flickr_woodhead_11094719485.jpg` (moved from `hangar9-photos/`; it is Hangar 8) (long side wall of tall wire-glass steel-sash windows in a grid, a canopy at the top with a green fascia, big door at the left corner, parked cars).
 
 ## Shell hangar, Canadian Helicopters hangar
-- Shell hangar: flickr woodhead 11165253083 is already saved as `tower-photos/Edmonton_muni_airport__11165253083_.jpg`; JetPhotos 127275 is link only.
+- Shell hangar: flickr woodhead 11165253083 is already saved as `hangar17-tower-photos/Edmonton_muni_airport__11165253083_.jpg`; JetPhotos 127275 is link only.
 - Canadian Helicopters hangar: saved `hangar40-photos/flickr_woodhead_13207130405.jpg` (moved from `canadian-helicopters-photos/`; Hangar 40) (two-storey red brick office wing with a glass-block entrance and a gabled canopy, next to a grey ribbed hangar wall). Not built.
 
 ## JetPhotos (link only)
@@ -75,11 +75,11 @@ Hangar 15 in the background: 6615792. Hangars 4, 5, 6, 7, 8 in the background: 6
 
 ## The "1938 hangar" and Fort Edmonton Park replica
 - Link only: Ingenium CAVM-17473, CAVM-07178, CAVM-11046; wedding photos at jenniferbergmanweddings.com (note the doors and the door windows, for textures).
-- See `first-hangar-photos/SOURCES.md` for the finding that `cyxd_hangar_1938_landmark` merges the 1930s first hangar's tower and wing with the 1938 hangar.
+- See `hangar1930-photos/SOURCES.md` for the finding that `cyxd_hangar_1938_landmark` merges the 1930s first hangar's tower and wing with the 1938 hangar.
 
 ## Other items
 - Category https://commons.wikimedia.org/wiki/Category:Hangars_at_Edmonton_City_Centre_Airport: not searched yet.
-- Hangar 16 (the Aerospace building): match its front to flickr 33836413@N06/6187479293 (already saved as `tower-photos/flickr_33836413.jpg`): five bands, one indented for the front doors, plus a box-out on the left next to the Shell hangar. **Not applied.**
+- Hangar 16 (the Aerospace building): match its front to flickr 33836413@N06/6187479293 (already saved as `hangar17-tower-photos/flickr_33836413.jpg`): five bands, one indented for the front doors, plus a box-out on the left next to the Shell hangar. **Not applied.**
 - Old terminal building (reference only, will not be built): world.hey.com/grantgibson, 1000aircraftphotos.com postcards.
 - Ingenium CAVM-05641: "claims to be taken in Edmonton; confirm" (link only, not fetched).
 - Videos: YouTube q5-woik2XsQ and Reddit 1ffvw4j (PWA 737 taking off from CYXD): note the building layout, taxiway sign style and the wind sock position (we should move ours to match); static 737 wanted. **Not applied.**
@@ -87,5 +87,5 @@ Hangar 15 in the background: 6615792. Hangars 4, 5, 6, 7, 8 in the background: 6
 
 ## Runway 04/22 (03/21) closure research (2026-10-14)
 Findings in `runway-04-22-closure.md`. Sources used there:
-- Saved: `rcaf-on-track-1978-edmonton-muni-1.jpg` (text page) and `-2.jpg` (plan), rcaf.info On-Track-1978-Edmonton-Muni; `rcaf-manual-of-aerodromes-edmonton-p90.jpg`; `charts/procedures-2010/2008-CFS-CYXD-B230-B231.pdf` and `CFS_AD_E-ivao.pdf`; `aerials/Edmonton_City_Centre_Airport.jpg` (6 Jun 2012).
+- Saved: `departures/rcaf-on-track-1978-edmonton-muni-1.jpg` (text page) and `-2.jpg` (plan), rcaf.info On-Track-1978-Edmonton-Muni; `departures/rcaf-manual-of-aerodromes-edmonton-p90.jpg`; `charts/procedures-2010/2008-CFS-CYXD-B230-B231.pdf` and `CFS_AD_E-ivao.pdf`; `aerials/Edmonton_City_Centre_Airport.jpg` (6 Jun 2012).
 - Link only: Edmonton Office of the City Auditor, City Centre Airport audit 2003 (edmonton.ca 03079_City_Centre_Airport.pdf; source for the 1995 plan's "two runways"); Tingley historical impact assessment 2009 (webdocs.edmonton.ca 2009DCM032-Att6.pdf); City news releases on the 2013 closure (news-archive-487808-72f8.pdf, news-archive-513911-d314.pdf); Environment Council of Alberta noise hearings 1982 (nonoise.org roll12doc53.pdf); E-Z Air v Edmonton, 2018 ABLCB 7; pwareunion.com/interesting.htm (rename dates 1963, 1975); ASN YXD history page.

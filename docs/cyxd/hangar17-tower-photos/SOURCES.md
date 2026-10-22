@@ -1,4 +1,4 @@
-# CYXD control tower (post-c.1972) - reference photos
+# Hangar 17 (the control tower, post-c.1972) - reference photos
 
 Downloaded 2026-10-10 for modelling the Edmonton City Centre / Municipal control tower (the "Blatchford Control Tower"). Wikimedia files are 1600 px thumbnails; Flickr files are the 1024 px "b" size. Photos are third-party works kept here as modelling reference only; check each licence before redistributing.
 
@@ -34,3 +34,6 @@ Also the Commons category https://commons.wikimedia.org/wiki/Category:Airport_to
 ## OSM (queried 2026-10-10)
 - Way 182921011: `building=tower`, `service=aircraft_control`, concrete; footprint about 11.3 x 10.3 m, axis bearing ~138 deg true, centre 53.568140, -113.518516.
 - Way 325232689: "Blatchford Control Tower", historic building, 273 m2 incl. the annex (about 22 x 19 m, long axis 50 deg).
+
+## City of Edmonton Archives (reference only; do not redistribute)
+- `city-edmonton-archives-1990-07-17-EA-207-461.jpg` (17 Jul 1990): the control tower (Hangar 17) shrouded in scaffolding, with a low building with a white door at the left and an "11440" address sign at the right.

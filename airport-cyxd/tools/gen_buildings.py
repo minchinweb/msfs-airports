@@ -393,7 +393,7 @@ def tower(m, cx, cz, sx, sz, h, floors, front=(0, 0, 1)):
 def hangar_1938():
     """1938 barrel-vault hangar between two brick towers (City Archives EA-160-398 / 402 / 466, 1930 EA-10-1044, postcard PC013987, the
     Fort Edmonton Park replica).  Reworked 2026-10-21: the office wing and the stucco first-hangar details that the first version merged in
-    belong to the 1930s first hangar (first-hangar-photos/SOURCES.md) and are gone.
+    belong to the 1930s first hangar (hangar1930-photos/SOURCES.md) and are gone.
 
     Local frame: +Z = front (doors, heading direction), +X = right of the front as seen from the front.  Hangar centred at the origin; the
     tall stepped tower stands flush with the front at its right end, the shorter wider tower at its left end (EA-160-402).  Mirrored once at
@@ -705,7 +705,7 @@ def aerocentre():
     with the AEROCENTRE sign board on the -X side, dark glass on the +X side) under the overhanging upper floor.  The -X end is a
     drive-through; over its landside end the upper floor carries a triangular "horn" (6.2 x 6.9 m right triangle, 45-degree
     diagonal face with windows) on navy columns that reach the ground.
-    Photos: tower-photos 4846273897 / 4846891790 / 11094390123, hangar16-photos 14669349810, aerials/google-earth-hangar16-201407*."""
+    Photos: hangar17-tower-photos 4846273897 / 4846891790 / 11094390123, hangar16-photos 14669349810, aerials/google-earth-hangar16-201407*."""
     m = Mesh()
     x0, x1, z0, z1 = -14.0, 14.0, -10.25, 10.25
     H, FL, PH = 8.4, 3.9, 0.7

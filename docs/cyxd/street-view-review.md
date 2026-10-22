@@ -15,20 +15,20 @@
 | `hangar6-7-photos/` | 54-56 | Hangar 7 ("7" roundel, window awnings, crest sign) | high |
 | `hangar8-photos/` | 57, 59-61 | Hangar 8 ("8" roundel on the tall end block, LAW OFFICE AVIATION sign) | high |
 | `hangar11-photos/` | 58, 62-67 | Hangar 11 barrel vault and its white clapboard annex | high |
-| `other-buildings-photos/` | 68-70 | Large grey flat-topped metal building south of Hangar 11 (11520 109 St) | **unidentified** (Hangar 12 or 13?) |
-| `other-buildings-photos/` | 71, 72 | Tan brick building "11630-109 St" | **unidentified** |
+| `south-of-hangar11-photos/` | 68-70 | Large grey flat-topped metal building south of Hangar 11 (11520 109 St) | **unidentified** (Hangar 12 or 13?) |
+| `south-of-hangar11-photos/` | 71, 72 | Tan brick building "11630-109 St" | **unidentified** |
 | `hangar14-photos/` | 73-78 | Aircraft and a Bomarc on pedestals along Kingsway | high |
 | `hangar14-photos/` | 79-81 | Hangar 14 (museum) long Kingsway side | high |
 | `hangar15-photos/` | 0, 1 | Hangar 15 ("15" roundel) and the teal Hangar 16 | high |
 | `hangar18-photos/` | 2-6 | Edmonton Flying Club ("18" roundel, club sign) | high for 2-4; 5, 6 are the north end of the group, not identified further |
-| `building21-terminal-photos/` | 13, 14 | Old terminal, now Amiskwaciy Academy (1003 / 1012 Airport Rd) | high |
-| `building21-terminal-photos/` | 15 | Parking garage (8603 Flying Club Rd) | high |
-| `building21-terminal-photos/` | 16-18 | Terminal and garage from Airport Rd | medium |
+| `hangar21-terminal-photos/` | 13, 14 | Old terminal, now Amiskwaciy Academy (1003 / 1012 Airport Rd) | high |
+| `hangar21-terminal-photos/` | 15 | Parking garage (8603 Flying Club Rd) | high |
+| `hangar21-terminal-photos/` | 16-18 | Terminal and garage from Airport Rd | medium |
 | `hangar38-photos/` | 19-21 | Olive-mustard building with a roundel on the end wall | **Hangar 38** (user, 2026-10-21; was guessed to be 37) |
 | `hangar38-photos/` | 22-25 | Hangar 38 ("38" roundel) | high |
 | `hangar39-photos/` | 26-28 | Hangar 39 (pale blue, tall) | high that it is the blue hangar; no roundel in these views |
 | `hangar40-photos/` | 29-32 | Hangar 40 ("40" roundel, white with brick office) | high |
-| `other-buildings-photos/` | 7-12 | Low brown/tan commercial buildings and the Esso building on Airport Rd | not hangars |
+| `hangar19-photos/` (8), `hangar20-photos/` (7, 9-12) | 7-12 | Hangar 19 landside (8) and the Esso building on Airport Rd | Hangar 19 (8, user); Esso building is Hangar 20 |
 
 **Could not recognise (as of 10-18):** Hangar 19 (no photo shows a legible 19; Hangar 20 is the Esso building, see above), the dark-blue hangar north of Hangar 3 (built unnumbered), the large grey building south of Hangar 11, and the tan brick building near 11630 109 St. "Hangar 21" is the old terminal (see below).
 

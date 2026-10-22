@@ -10,7 +10,7 @@ Saved 2026-10-17. All by jasonwoodhead23 (Flickr "woodhead"), 1024 px "b" size, 
 | (`../hangar18-photos/flickr_woodhead_11094403683.jpg`) | https://flickr.com/photos/woodhead/11094403683/ | Already saved. Airside, from the Flying Club (Hangar 18) balcony: tower with its low annex, the Shell hangar behind it (blue-grey ribbed lower part, cream upper hangar with the second Shell pecten and the red STARS sign at its right end), fuel truck, small aircraft parked on the apron between the club and the tower. |
 
 ## Other photos of this complex (already saved elsewhere, reviewed 2026-10-17)
-In `../tower-photos/` (all show the Aerocentre / Shell hangar as well as the tower):
+In `../hangar17-tower-photos/` (all show the Aerocentre / Shell hangar as well as the tower):
 
 | File | What it adds |
 |---|---|
