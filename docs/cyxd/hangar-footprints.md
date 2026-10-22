@@ -14,7 +14,7 @@
   rotated rectangle of its 2016 OSM way (centre, long-axis bearing, size). Present-day OSM has only Hangar 14; the rest were removed after demolition.
 - **Hangar 18** is in neither: it was traced by hand from the 2014 imagery (`footprints/hangar18-tower-frame.jpg`, 10 m grid, tower frame rotated to heading 48).
 - Pictures: `footprints/east-line.jpg` (Hangars 4 to 11), `footprints/west-38-39.jpg`, `footprints/north-west-complex.jpg` (the large red-roofed complex,
-  not built).
+  built 2026-10-21 as `north_main` with four neighbours, see STATUS.md).
 
 ## Table
 | Hangar | OSM way (2016) | Centre lat, lon | Heading (front) | Front x depth (m) | Confidence in which building it is |

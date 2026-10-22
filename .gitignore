@@ -12,3 +12,4 @@ docs/edmonton-bridges/reference/**/aerial/*.jpg
 __pycache__/
 *.xml.user
 *.py[cod]
+.serena/
