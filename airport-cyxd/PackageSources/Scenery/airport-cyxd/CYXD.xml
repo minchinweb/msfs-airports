@@ -1338,9 +1338,61 @@
 	<SceneryObject lat="53.57562900" lon="-113.50840400" alt="0.00000000000000" pitch="0.000000" bank="0.000000" heading="180" imageComplexity="VERY_SPARSE" altitudeIsAgl="TRUE" snapToGround="TRUE" snapToNormal="FALSE">
 		<LibraryObject name="{D1DDA3BF-59AD-5E35-AFF0-465A1358AB34}" scale="1.000000"/>
 	</SceneryObject>
-	<!-- Hangar 19 (low tan wings with a brick centre, 62-69 Airport Rd; traced from the 2014 imagery) -->
-	<SceneryObject lat="53.56915800" lon="-113.52058200" alt="0.00000000000000" pitch="0.000000" bank="0.000000" heading="232" imageComplexity="VERY_SPARSE" altitudeIsAgl="TRUE" snapToGround="TRUE" snapToNormal="FALSE">
+	<!-- Hangar 19 (General Aviation Centre, 77 Airport Rd: brick block, courtyard, stucco wings, round NW entrance; 2014 imagery) -->
+	<SceneryObject lat="53.56920400" lon="-113.52064300" alt="0.00000000000000" pitch="0.000000" bank="0.000000" heading="232" imageComplexity="VERY_SPARSE" altitudeIsAgl="TRUE" snapToGround="TRUE" snapToNormal="FALSE">
 		<LibraryObject name="{770F7EA9-E5C1-548B-B60E-A22FF0E709BB}" scale="1.000000"/>
+	</SceneryObject>
+	<!-- Tree by Hangar 19 (stock MSFS tree) -->
+	<SceneryObject lat="53.56924873" lon="-113.52081680" alt="0.00000000000000" pitch="0.000000" bank="0.000000" heading="0" imageComplexity="VERY_SPARSE" altitudeIsAgl="TRUE" snapToGround="TRUE" snapToNormal="FALSE">
+		<LibraryObject name="{5269E5F0-4CB5-4E81-828A-61169D850DF4}" scale="1.000000"/>
+	</SceneryObject>
+	<!-- Tree by Hangar 19 (stock MSFS tree) -->
+	<SceneryObject lat="53.56915539" lon="-113.52072301" alt="0.00000000000000" pitch="0.000000" bank="0.000000" heading="137" imageComplexity="VERY_SPARSE" altitudeIsAgl="TRUE" snapToGround="TRUE" snapToNormal="FALSE">
+		<LibraryObject name="{70080A01-E271-45DC-9F70-3488BA9DDA6C}" scale="1.000000"/>
+	</SceneryObject>
+	<!-- Tree by Hangar 19 (stock MSFS tree) -->
+	<SceneryObject lat="53.56918562" lon="-113.52082982" alt="0.00000000000000" pitch="0.000000" bank="0.000000" heading="274" imageComplexity="VERY_SPARSE" altitudeIsAgl="TRUE" snapToGround="TRUE" snapToNormal="FALSE">
+		<LibraryObject name="{191FAD7E-E94C-40A3-ADC0-902A5A1F3CB7}" scale="1.000000"/>
+	</SceneryObject>
+	<!-- Tree by Hangar 19 (stock MSFS tree) -->
+	<SceneryObject lat="53.56923323" lon="-113.52091151" alt="0.00000000000000" pitch="0.000000" bank="0.000000" heading="51" imageComplexity="VERY_SPARSE" altitudeIsAgl="TRUE" snapToGround="TRUE" snapToNormal="FALSE">
+		<LibraryObject name="{81D19B30-F45D-47CB-9787-2BEF376C64CA}" scale="1.000000"/>
+	</SceneryObject>
+	<!-- Tree by Hangar 19 (stock MSFS tree) -->
+	<SceneryObject lat="53.56937097" lon="-113.52113072" alt="0.00000000000000" pitch="0.000000" bank="0.000000" heading="188" imageComplexity="VERY_SPARSE" altitudeIsAgl="TRUE" snapToGround="TRUE" snapToNormal="FALSE">
+		<LibraryObject name="{5269E5F0-4CB5-4E81-828A-61169D850DF4}" scale="1.000000"/>
+	</SceneryObject>
+	<!-- Tree by Hangar 19 (stock MSFS tree) -->
+	<SceneryObject lat="53.56915051" lon="-113.52113853" alt="0.00000000000000" pitch="0.000000" bank="0.000000" heading="325" imageComplexity="VERY_SPARSE" altitudeIsAgl="TRUE" snapToGround="TRUE" snapToNormal="FALSE">
+		<LibraryObject name="{4A576EEF-CFA0-47DB-91F9-526718AE5950}" scale="1.000000"/>
+	</SceneryObject>
+	<!-- Tree by Hangar 19 (stock MSFS tree) -->
+	<SceneryObject lat="53.56912925" lon="-113.52111062" alt="0.00000000000000" pitch="0.000000" bank="0.000000" heading="102" imageComplexity="VERY_SPARSE" altitudeIsAgl="TRUE" snapToGround="TRUE" snapToNormal="FALSE">
+		<LibraryObject name="{2C5B485B-06A8-4E8E-B86D-23711DB64A8D}" scale="1.000000"/>
+	</SceneryObject>
+	<!-- Tree by Hangar 19 (stock MSFS tree) -->
+	<SceneryObject lat="53.56911295" lon="-113.52108922" alt="0.00000000000000" pitch="0.000000" bank="0.000000" heading="239" imageComplexity="VERY_SPARSE" altitudeIsAgl="TRUE" snapToGround="TRUE" snapToNormal="FALSE">
+		<LibraryObject name="{191FAD7E-E94C-40A3-ADC0-902A5A1F3CB7}" scale="1.000000"/>
+	</SceneryObject>
+	<!-- Tree by Hangar 19 (stock MSFS tree) -->
+	<SceneryObject lat="53.56909169" lon="-113.52106130" alt="0.00000000000000" pitch="0.000000" bank="0.000000" heading="16" imageComplexity="VERY_SPARSE" altitudeIsAgl="TRUE" snapToGround="TRUE" snapToNormal="FALSE">
+		<LibraryObject name="{81D19B30-F45D-47CB-9787-2BEF376C64CA}" scale="1.000000"/>
+	</SceneryObject>
+	<!-- Tree by Hangar 19 (stock MSFS tree) -->
+	<SceneryObject lat="53.56903926" lon="-113.52099245" alt="0.00000000000000" pitch="0.000000" bank="0.000000" heading="153" imageComplexity="VERY_SPARSE" altitudeIsAgl="TRUE" snapToGround="TRUE" snapToNormal="FALSE">
+		<LibraryObject name="{70080A01-E271-45DC-9F70-3488BA9DDA6C}" scale="1.000000"/>
+	</SceneryObject>
+	<!-- Tree by Hangar 19 (stock MSFS tree) -->
+	<SceneryObject lat="53.56893296" lon="-113.52085289" alt="0.00000000000000" pitch="0.000000" bank="0.000000" heading="290" imageComplexity="VERY_SPARSE" altitudeIsAgl="TRUE" snapToGround="TRUE" snapToNormal="FALSE">
+		<LibraryObject name="{4A576EEF-CFA0-47DB-91F9-526718AE5950}" scale="1.000000"/>
+	</SceneryObject>
+	<!-- Tree by Hangar 19 (stock MSFS tree) -->
+	<SceneryObject lat="53.56889753" lon="-113.52080637" alt="0.00000000000000" pitch="0.000000" bank="0.000000" heading="67" imageComplexity="VERY_SPARSE" altitudeIsAgl="TRUE" snapToGround="TRUE" snapToNormal="FALSE">
+		<LibraryObject name="{5269E5F0-4CB5-4E81-828A-61169D850DF4}" scale="1.000000"/>
+	</SceneryObject>
+	<!-- Tree by Hangar 19 (stock MSFS tree) -->
+	<SceneryObject lat="53.56887414" lon="-113.52077566" alt="0.00000000000000" pitch="0.000000" bank="0.000000" heading="204" imageComplexity="VERY_SPARSE" altitudeIsAgl="TRUE" snapToGround="TRUE" snapToNormal="FALSE">
+		<LibraryObject name="{2C5B485B-06A8-4E8E-B86D-23711DB64A8D}" scale="1.000000"/>
 	</SceneryObject>
 	<!-- ILS glideslope hut with checkerboard paint (infield, 16/34 runway side; west-lineup photo) -->
 	<SceneryObject lat="53.56898300" lon="-113.51100000" alt="0.00000000000000" pitch="0.000000" bank="0.000000" heading="0" imageComplexity="VERY_SPARSE" altitudeIsAgl="TRUE" snapToGround="TRUE" snapToNormal="FALSE">
@@ -1694,17 +1746,17 @@
 		<Vertex lat="53.57546443165467" lon="-113.50865109082666"/>
 		<Vertex lat="53.57546443165467" lon="-113.50815690917334"/>
 	</Polygon>
-	<Polygon version="0.4.0" displayName="No generated buildings: Hangar 19 (low tan wings with a brick centre, 62-69 Airport " parentGroupID="6" altitude="667.68023681640625">
-		<Attribute name="UniqueGUID" guid="{359C73E8-06BE-4FB2-ABCB-EC942F7761D0}" type="GUID" value="{9BB244FA-1613-5FD9-B94E-F4F29FA3A591}"/>
+	<Polygon version="0.4.0" displayName="No generated buildings: Hangar 19 (General Aviation Centre, 77 Airport Rd: brick blo" parentGroupID="6" altitude="667.68023681640625">
+		<Attribute name="UniqueGUID" guid="{359C73E8-06BE-4FB2-ABCB-EC942F7761D0}" type="GUID" value="{A44E906D-0D96-5281-8C61-AD80428C931E}"/>
 		<Attribute name="ExcludeDetectedBuildings" guid="{5C1A2387-1F07-47DF-A569-962CF6258E55}" type="UINT8" value="1"/>
 		<Attribute name="ExcludeOSMBuildings" guid="{F3C2635D-9F2F-458F-8663-90B3837BED09}" type="UINT8" value="1"/>
 		<Attribute name="ExcludeMSBuildings" guid="{F78A3074-8AD5-4B8B-92C4-C1C948BB7AA5}" type="UINT8" value="1"/>
 		<Attribute name="ExcludeTIN" guid="{18B58CBF-AE02-4A19-8AA9-3809E8E73400}" type="UINT8" value="1"/>
 		<Attribute name="ExclusionFlags" guid="{4CACC252-E6DC-419A-B20C-16EC601DF70E}" type="UINT32" value="3"/>
-		<Vertex lat="53.56899867127905" lon="-113.51997965471892"/>
-		<Vertex lat="53.56954432620736" lon="-113.52069608109946"/>
-		<Vertex lat="53.56931732872095" lon="-113.52118434528109"/>
-		<Vertex lat="53.56877167379265" lon="-113.52046791890055"/>
+		<Vertex lat="53.56898565500256" lon="-113.51993440112749"/>
+		<Vertex lat="53.56966595205603" lon="-113.52082760804348"/>
+		<Vertex lat="53.56942234499744" lon="-113.52135159887253"/>
+		<Vertex lat="53.56874204794397" lon="-113.52045839195654"/>
 	</Polygon>
 	<Polygon version="0.4.0" displayName="No generated buildings: ILS glideslope hut with checkerboard paint (infield, 16/34 r" parentGroupID="6" altitude="667.68023681640625">
 		<Attribute name="UniqueGUID" guid="{359C73E8-06BE-4FB2-ABCB-EC942F7761D0}" type="GUID" value="{A473A4CC-94FC-5628-BF4B-A20EDB2B2F63}"/>

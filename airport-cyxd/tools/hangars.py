@@ -606,33 +606,188 @@ def bluehangar():
     return m
 
 
+def _circ(cx, cz, r, n=24, a0=0.0, a1=360.0):
+    """Points (x, z) on a circle (or an arc a0..a1 in degrees, measured from +x toward +z; the full circle leaves out the repeat)."""
+    k = n if a1 - a0 >= 360.0 else n + 1
+    return [(cx + r * math.cos(math.radians(a0 + (a1 - a0) * i / n)), cz + r * math.sin(math.radians(a0 + (a1 - a0) * i / n))) for i in range(k)]
+
+
+def _xy_slab(m, pts, z0, z1, sw):
+    """A convex outline in the (x, y) plane extruded along z from z0 to z1 (a raised parapet, an arched gable)."""
+    c = (sum(p[0] for p in pts) / len(pts), sum(p[1] for p in pts) / len(pts), (z0 + z1) / 2)
+    for z in (z0, z1):
+        m.poly([(x, y, z) for x, y in pts], sw, c)
+    for (xa, ya), (xb, yb) in zip(pts, pts[1:] + pts[:1]):
+        m.poly([(xa, ya, z0), (xb, yb, z0), (xb, yb, z1), (xa, ya, z1)], sw, c)
+
+
 def hangar19():
-    """Hangar 19 (user, 2026-10-21: the low brown/tan building beside the Esso building, Street View photos 06-09 and 62-69 Airport Rd NW; the
-    General Aviation Centre, 77 Airport Rd: confirmed 2026-10-22 from docs/cyxd/hangar19-photos): two low tan/cream wings with glazed shop fronts either side of a taller two-storey brick centre with a stair
-    tower.  Footprint about 65 x 29 m, long axis along bearing 142, measured on the 2014 imagery (not in OSM).  Heading 232 (front faces SW to
-    Airport Rd); +x is the NW wing."""
+    """Hangar 19 = the General Aviation Centre, 77 Airport Rd (user, 2026-10-21; Commons EDMONTON_MUNI_(11094203585) and (11094283326), Street
+    View 07-08 (2012), the airside end of the Hangar 18 video woodys_11395521785).  Rebuilt 2026-10-22 from the Esri Wayback 2014 imagery
+    (zoom 17, 0.71 m/px, measuring only), which shows an 83 x 32 m plan, not the old symmetric 65 x 29 m box with a brick centre:
+    - a two-storey red-brown brick block over the NW half and the whole airside depth (the roof casts a long shadow; 9.1 m to the parapet),
+      with an open landscaped courtyard in front of it (trees in the aerial and the Commons photo).  On the courtyard face: a glazed ground
+      floor, upper windows, a pinkish-tan stucco drum porch with a grey band and a railing on top, and above it a raised arched brick parapet
+      carrying the arched GENERAL AVIATION CENTRE board (blue airliner).  A taller round brick stair tower on glazing at the courtyard's SE
+      back corner (Street View 08) and a glazed slot at its NW corner; a blue "19" roundel high at the brick block's NW end (Street View 07/08);
+    - a one-storey stucco wing on each side of the courtyard: the SE wing (two roof sections) has shop fronts with white mullions, a darker
+      taupe fascia band with stepped raised panels and fascia signs (Street View 08); the NW wing ends in a D-shaped pavilion 25 m across
+      (the round end in the aerial), the "77 Airport Rd." entrance: a curved stucco fascia over recessed glazing between two red columns;
+    - airside (video): brick above a stucco ground floor on the SE part, an upper window band and a grey glazed panel.
+    The landside "19" roundel was already on the model; the airside one (user, 2026-10-21) stays on the brick block.  Heading 232 (front faces SW
+    to Airport Rd); origin at the plan centre; +x = NW."""
     m = fmesh()
-    L, D = 65.0, 29.0
-    x0, x1, z0, z1 = -L / 2, L / 2, -D / 2, D / 2
-    cx0, cx1 = -8.0, 8.0
-    for wx0, wx1 in ((x0, cx0), (cx1, x1)):  # low wings
-        m.box(wx0, wx1, 0, 4.4, z0, z1, BEIGE)
-        parapet(m, wx0 - 0.1, wx1 + 0.1, z0 - 0.1, z1 + 0.1, 4.0, 4.8, 0.4, TANBLK)
-        n = int((wx1 - wx0) // 6.0)
-        gap = ((wx1 - wx0) - 2.0 - n * 4.0) / n
-        for i in range(n):  # glazed shop-front bays
-            m.window((0, 0, 1), (wx0 + 1.0 + gap / 2 + i * (4.0 + gap), 0.5, z1), (1, 0, 0), 4.0, 2.8)
-        m.window((0, 0, -1), (wx0 + 2.0, 1.6, z0), (1, 0, 0), wx1 - wx0 - 4.0, 1.4)
-    m.box(cx0, cx1, 0, 8.6, z0, z1, BRICKD)  # brick centre
-    parapet(m, cx0 - 0.1, cx1 + 0.1, z0 - 0.1, z1 + 0.1, 8.2, 9.0, 0.4, TANBLK)
-    rows_z(m, 1, z1, cx0 + 1.5, cx1 - 1.5, 5.2, 3, 3.0, 2.0)
-    m.window((0, 0, 1), (-1.4, 0.0, z1), (1, 0, 0), 2.8, 2.6)  # entrance
-    m.box(-2.2, 2.2, 3.0, 3.4, z1, z1 + 1.6, TANBLK)  # entrance canopy
-    number_disc(m, 0.0, 5.9, z0, (0, -1), 0.95, "19")  # airside roundel on the brick centre (user, 2026-10-21)
-    m.box(-3.0, 3.0, 8.8, 11.0, z1 - 8.0, z1 - 2.0, BRICKD)  # taller stair tower
-    m.box(-3.2, 3.2, 11.0, 11.35, z1 - 8.2, z1 - 1.8, TANBLK)
+    hb = 9.1  # brick parapet top
+    bx0, bx1, bz0, bz1 = -6.5, 27.5, -16.0, -1.5  # brick block; its front (bz1) is the courtyard's back wall
+    m.box(bx0, bx1, 0, hb - 0.5, bz0, bz1, BRICKD)
+    parapet(m, bx0, bx1, bz0, bz1, hb - 0.5, hb, 0.35, BRICKD)
+    parapet(m, bx0 - 0.08, bx1 + 0.08, bz0 - 0.08, bz1 + 0.08, hb, hb + 0.1, 0.5, CREAM)  # coping
+    # courtyard face: storefront glazing and doors on the ground floor, two upper window groups and a small window over the porch
+    for xc, w, n in ((0.0, 3.8, 3), (10.4, 5.8, 4)):
+        pane_z(m, 1, bz1, xc, 0.05, w, 2.45, cols=n, rows=1, sw=BRONZE)
+        pane_z(m, 1, bz1, xc, 5.1, w, 1.65, cols=n, rows=1, sw=BRONZE)
+    pane_z(m, 1, bz1, 5.0, 5.6, 1.3, 1.6, cols=1, rows=1, sw=BRONZE)
+    # drum porch (5.6 m across), grey band, railing
+    dr = _circ(5.0, bz1 + 1.0, 2.8)
+    frustum(m, dr, 0.0, dr, 2.3, STUCCO)
+    db = _circ(5.0, bz1 + 1.0, 2.84)
+    frustum(m, db, 2.3, db, 2.8, DGREY)
+    frustum(m, dr, 2.8, dr, 5.3, STUCCO)
+    dc = _circ(5.0, bz1 + 1.0, 2.9)
+    frustum(m, dc, 5.3, dc, 5.45, CREAM, top=True, bottom=True)
+    rail_ring(m, _circ(5.0, bz1 + 1.0, 2.75, 16), 5.45 + 1.0, WHITE)
+    # raised arched parapet and the arched GENERAL AVIATION CENTRE board (tex "gac", top half)
+    arch = [(5.0 - 3.05, hb - 0.5), (5.0 + 3.05, hb - 0.5)] + [(5.0 + 3.05 * math.cos(math.radians(180 * k / 12)),
+                                                                hb + 0.25 + 0.65 * math.sin(math.radians(180 * k / 12))) for k in range(13)]
+    sb, st, sa, c = 7.8, 9.25, 9.7, 2.85
+    R = (c * c + (sa - st) ** 2) / (2 * (sa - st))
+    t0 = math.asin(c / R)
+    outline = [(-c, sb), (c, sb)] + [(R * math.sin(t0 * (1 - 2 * k / 12)), sa - R + R * math.cos(t0 * (1 - 2 * k / 12))) for k in range(13)]
+    # the same board on the airside wall (user, 2026-10-22: the arch over the roof in the Hangar 18 video is a second board, not the back of this one)
+    for zw, s in ((bz1, 1), (bz0, -1)):
+        _xy_slab(m, arch, zw - 0.35 * s, zw, BRICKD)
+        zs = zw + 0.12 * s
+        m.poly([(5.0 + u, y, zs) for u, y in outline], WHITE, (5.0, 8.5, zs - s), tex="gac",
+               uvs=[(0.5 - s * u / (2 * c), 0.5 * (sa - y) / (sa - sb)) for u, y in outline])
+        m.box(5.0 - c - 0.1, 5.0 + c + 0.1, sb - 0.1, sb, min(zw, zs), max(zw, zs), DGREY)  # board edge under the sign
+    # stair tower at the courtyard's SE back corner: glazed shaft, brick drum rising above the parapet
+    st_ = _circ(-4.6, bz1 + 0.2, 2.5)
+    frustum(m, st_, 0.0, st_, 7.2, SLATE)
+    for y in (2.4, 4.8):
+        sb_ = _circ(-4.6, bz1 + 0.2, 2.53)
+        frustum(m, sb_, y, sb_, y + 0.15, DGREY)
+    frustum(m, st_, 7.2, st_, hb + 1.0, BRICKD, top=True)
+    frustum(m, _circ(-4.6, bz1 + 0.2, 2.6), hb + 1.0, _circ(-4.6, bz1 + 0.2, 2.6), hb + 1.1, CREAM, top=True)
+    # glazed slot at the courtyard's NW back corner
+    m.box(13.6, 15.5, 0, hb - 0.6, bz1, bz1 + 0.9, SLATE)
+    m.box(13.5, 15.5, hb - 0.6, hb - 0.4, bz1, bz1 + 1.0, DGREY)
+    number_disc(m, 24.6, 7.3, bz1, (0, 1), 0.8, "19")  # landside roundel high at the NW end, above the NW wing (Street View 07/08)
+    # airside: stucco ground floor on the SE part, upper window band, grey glazed panel, doors; airside roundel
+    m.box(bx0, 12.0, 0, 4.0, bz0 - 0.1, bz0, STUCCO)
+    m.box(bx0, 12.0, 4.0, 4.15, bz0 - 0.18, bz0, CREAM)
+    m.window((0, 0, -1), (-5.5, 5.3, bz0), (1, 0, 0), 15.0, 1.3)
+    m.box(12.6, 20.4, 4.6, 7.0, bz0 - 0.12, bz0, SLATE)
+    rows_z(m, -1, bz0 - 0.1, -5.0, 11.0, 1.2, 3, 2.4, 1.6)
+    rows_z(m, -1, bz0, 20.8, 27.0, 5.3, 2, 2.0, 1.3)
+    door_z(m, -1, bz0, 15.0, 1.0, 2.2, leaf=DGREY)
+    door_z(m, -1, bz0, 24.0, 1.8, 2.4, leaf=DGREY)
+    number_disc(m, 16.5, 8.0, bz0, (0, -1), 0.8, "19")
+    rows_x(m, -1, bx0, -14.5, -5.0, 5.6, 3, 2.0, 1.3)  # SE end above the SE wing
+    rows_x(m, 1, bx1, -15.5, -12.3, 5.6, 1, 2.0, 1.3)  # NW end, behind the pavilion
+    for x0, x1, z0, z1 in ((0.0, 4.0, -12.0, -9.0), (16.0, 19.0, -10.0, -7.0), (22.0, 24.0, -14.0, -12.0)):  # roof plant
+        m.box(x0, x1, hb - 0.5, hb + 0.7, z0, z1, GREY)
+
+    def low_wing(x0, x1, z0, z1):
+        """One-storey stucco block: walls to 3.4 m, a taupe fascia band to 4.9 m, flat roof at 4.6 m."""
+        m.box(x0, x1, 0, 3.4, z0, z1, STUCCO, top=False)
+        parapet(m, x0 - 0.15, x1 + 0.15, z0 - 0.15, z1 + 0.15, 3.4, 4.9, 0.4, TAUPE)
+        m.poly([(x0, 4.6, z0), (x1, 4.6, z0), (x1, 4.6, z1), (x0, 4.6, z1)], GREY, ((x0 + x1) / 2, 0.0, (z0 + z1) / 2))
+    # SE wing (two roof sections, the outer one 1.5 m further forward)
+    low_wing(-24.5, bx0, -15.0, 14.0)
+    low_wing(-41.5, -24.5, -15.0, 15.5)
+    for xc in (-9.6, -14.0, -19.6):
+        pane_z(m, 1, 14.0, xc, 0.15, 3.4, 2.9, cols=3, rows=2, sw=WHITE)
+    for xc in (-28.0, -32.6, -38.0):
+        pane_z(m, 1, 15.5, xc, 0.15, 3.4, 2.9, cols=3, rows=2, sw=WHITE)
+    door_z(m, 1, 14.0, -22.6, 1.0, 2.3, leaf=DGREY)
+    door_z(m, 1, 15.5, -35.3, 1.0, 2.3, leaf=DGREY)
+    for x, zf in ((-21.0, 14.0), (-39.3, 15.5)):  # stepped raised fascia panels
+        m.box(x - 2.2, x + 2.2, 4.9, 5.45, zf - 0.6, zf + 0.35, TAUPE)
+        m.box(x - 1.4, x + 1.4, 5.45, 6.0, zf - 0.6, zf + 0.35, TAUPE)
+    m.box(-15.2, -10.8, 3.75, 4.55, 14.15, 14.25, DGREY)  # fascia signs
+    m.box(-34.8, -29.8, 3.75, 4.55, 15.65, 15.75, WHITE)
+    rows_z(m, -1, -15.0, -40.0, -8.0, 1.2, 4, 2.0, 1.4)
+    door_z(m, -1, -15.0, -25.5, 1.0, 2.2, leaf=DGREY)
+    rows_x(m, -1, -41.5, -12.0, 13.0, 1.0, 3, 2.4, 1.6)
+    rows_x(m, 1, bx0, 1.0, 12.5, 0.9, 2, 2.4, 2.0)  # into the courtyard
+    m.box(-36.0, -33.0, 4.6, 5.6, -8.0, -5.0, GREY)
+    # NW wing between the courtyard and the pavilion
+    low_wing(15.5, 29.5, bz1, 15.5)
+    m.box(27.5, 29.5, 0, 4.9, -12.0, bz1, STUCCO)
+    pane_z(m, 1, 15.5, 24.6, 0.3, 5.6, 2.9, cols=6, rows=3, sw=BRONZE)
+    door_z(m, 1, 15.5, 18.4, 1.0, 2.3, leaf=DGREY)
+    rows_x(m, -1, 15.5, 1.0, 13.5, 0.9, 2, 2.4, 2.0)  # into the courtyard
+    # D-shaped entrance pavilion, 6 m high: curved fascia over recessed glazing between two red columns, facing NW toward the car park
+    pc, pz, pr, hd, ae, hw = 29.5, 0.5, 12.5, 6.0, 30.0, 16.0
+    arc = _circ(pc, pz, pr, 24, -90.0, 90.0)
+    m.poly([(x, hd, z) for x, z in arc], GREY, (pc + 5.0, 0.0, pz))
+    m.poly([(pc, 0.0, pz - pr), (pc, 0.0, pz + pr), (pc, hd, pz + pr), (pc, hd, pz - pr)], STUCCO, (pc + 1.0, hd / 2, pz))  # back (chord) wall
+    for (xa, za), (xb, zb) in zip(arc, arc[1:]):
+        a = math.degrees(math.atan2((za + zb) / 2 - pz, (xa + xb) / 2 - pc))
+        y0 = 3.7 if abs(a - ae) < hw else 0.0
+        m.poly([(xa, y0, za), (xb, y0, zb), (xb, hd, zb), (xa, hd, za)], STUCCO, (pc, hd / 2, pz))
+    ring_ = _circ(pc, pz, pr + 0.08, 24, -90.0, 90.0)
+    for (xa, za), (xb, zb) in zip(ring_, ring_[1:]):
+        m.poly([(xa, hd, za), (xb, hd, zb), (xb, hd + 0.15, zb), (xa, hd + 0.15, za)], CREAM, (pc, hd / 2, pz))
+    m.poly([(x, hd + 0.15, z) for x, z in ring_], CREAM, (pc + 5.0, 0.0, pz))
+    inner = _circ(pc, pz, pr - 1.6, 8, ae - hw, ae + hw)
+    outer = _circ(pc, pz, pr, 8, ae - hw, ae + hw)
+    for (xa, za), (xb, zb) in zip(inner, inner[1:]):
+        m.poly([(xa, 0.0, za), (xb, 0.0, zb), (xb, 3.7, zb), (xa, 3.7, za)], GLASS, (pc, 1.8, pz))
+    for i in range(8):
+        m.poly([(inner[i][0], 3.7, inner[i][1]), (inner[i + 1][0], 3.7, inner[i + 1][1]), (outer[i + 1][0], 3.7, outer[i + 1][1]),
+                (outer[i][0], 3.7, outer[i][1])], CREAM, (pc + (pr - 0.8) * math.cos(math.radians(ae)), 9.0, pz + (pr - 0.8) * math.sin(math.radians(ae))))
+    for i, a in ((0, ae - hw - 8.0), (8, ae + hw + 8.0)):  # side returns of the recess, facing into it
+        m.poly([(inner[i][0], 0.0, inner[i][1]), (outer[i][0], 0.0, outer[i][1]), (outer[i][0], 3.7, outer[i][1]), (inner[i][0], 3.7, inner[i][1])],
+               STUCCO, (pc + (pr - 0.8) * math.cos(math.radians(a)), 1.8, pz + (pr - 0.8) * math.sin(math.radians(a))))
+    for k in range(1, 8):  # mullions in the recessed glazing
+        x, z = inner[k]
+        m.box(x - 0.05, x + 0.05, 0.0, 3.7, z - 0.05, z + 0.05, BRONZE)
+    for a in (ae - 10.0, ae + 10.0):  # red columns
+        col = _circ(pc + (pr - 0.5) * math.cos(math.radians(a)), pz + (pr - 0.5) * math.sin(math.radians(a)), 0.35, 12)
+        frustum(m, col, 0.0, col, 3.7, RED)
+    ang = math.radians(ae)
+    rect_sign(m, pc + (pr + 0.2) * math.cos(ang), 4.85, pz + (pr + 0.2) * math.sin(ang), (math.cos(ang), math.sin(ang)), 4.0, 0.56, "gac", 0.5, 1.0)
+    band = _circ(pc, pz, pr + 0.04, 8, ae + hw, 90.0)
+    for (xa, za), (xb, zb) in zip(band, band[1:]):  # grey band right of the entrance (Commons 11094283326)
+        m.poly([(xa, 3.0, za), (xb, 3.0, zb), (xb, 3.45, zb), (xa, 3.45, za)], DGREY, (pc, 3.2, pz))
+    # brick stub wall off the pavilion's NW side with an Esso oval, then a chain-link gate to the Esso building (Street View 2012, 802 Airport Rd;
+    # user, 2026-10-22: the faded oval is shown in its proper colours, as on Hangar 20).  Hangar 20's SE wall is about x 58 in this frame.
+    wz, wx0, wx1 = -6.0, 39.8, 47.0
+    m.box(wx0, wx1, 0, 3.4, wz - 0.4, wz, BRICKD)
+    m.box(wx0, wx1 + 0.1, 3.4, 3.52, wz - 0.48, wz + 0.08, CREAM)
+    m.box(wx1 - 0.5, wx1 + 0.1, 0, 3.4, wz - 0.45, wz + 0.05, STUCCO)  # pale end pier
+    oval_sign(m, 44.0, 2.1, wz + 0.12, (0, 1), 2.8, 1.25, "esso")
+    for x in (47.4, 51.7, 56.0):  # gate posts
+        m.box(x - 0.06, x + 0.06, 0, 2.2, wz - 0.26, wz - 0.14, GREY)
+    for y in (0.15, 2.0):  # gate rails
+        m.box(47.4, 56.0, y, y + 0.06, wz - 0.23, wz - 0.17, GREY)
     m.mirror_x()
     return m
+
+
+# stock MSFS 2024 trees (fs24-asobo-modellib-vegetation, GUIDs read from its bglindex; sizes not checked in the sim yet)
+POPULUS = ("{5269E5F0-4CB5-4E81-828A-61169D850DF4}", "{70080A01-E271-45DC-9F70-3488BA9DDA6C}")
+BETULA = ("{191FAD7E-E94C-40A3-ADC0-902A5A1F3CB7}", "{81D19B30-F45D-47CB-9787-2BEF376C64CA}", "{4A576EEF-CFA0-47DB-91F9-526718AE5950}",
+          "{2C5B485B-06A8-4E8E-B86D-23711DB64A8D}")
+# trees round Hangar 19 in its model frame (x NW, z toward Airport Rd), from the crowns in the 2014 aerial (x = -(X + 6.5), z = -Y on the
+# measuring grid), the Commons courtyard photo (11094203585: a big deciduous tree each side of the drum) and Street View (07, 08 and 802 Airport Rd)
+H19_TREES = [
+    (11.0, 6.0, POPULUS[0]), (-1.0, 7.5, POPULUS[1]), (6.0, 11.0, BETULA[0]), (13.5, 12.0, BETULA[1]),  # courtyard
+    (34.5, 14.0, POPULUS[0]),  # big tree in front of the round entrance
+    (15.5, 29.5, BETULA[2]), (12.5, 29.5, BETULA[3]), (10.2, 29.5, BETULA[0]), (7.2, 29.5, BETULA[1]),  # along Airport Rd
+    (-0.2, 29.5, POPULUS[1]), (-15.2, 29.5, BETULA[2]), (-20.2, 29.5, POPULUS[0]), (-23.5, 29.5, BETULA[3]),
+]
 
 
 def gs_hut():
@@ -1812,7 +1967,8 @@ HANGARS = [
     ("cyxd_hangar3", "Hangar 3 (pale-blue flat-roofed hangar, traced from the 2014 imagery)", hangar3, 53.574710, -113.508533, 90, 81.6, 25.7),
     ("cyxd_hangar3_annex", "Hangar 3 tan block annex (south end)", hangar3_annex, 53.574273, -113.508547, 90, 15.9, 13.2),
     ("cyxd_bluehangar", "Dark-blue gabled hangar north of Hangar 3 (5 109 St NW, OSM 325272095)", bluehangar, 53.575629, -113.508404, 180, 20.7, 24.6),
-    ("cyxd_hangar19", "Hangar 19 (low tan wings with a brick centre, 62-69 Airport Rd; traced from the 2014 imagery)", hangar19, 53.569158, -113.520582, 232, 65.0, 29.0),
+    # centre moved 6.5 m toward bearing 322 (2026-10-22): the 2014 plan runs from the SE wing's end to the apex of the round NW pavilion
+    ("cyxd_hangar19", "Hangar 19 (General Aviation Centre, 77 Airport Rd: brick block, courtyard, stucco wings, round NW entrance; 2014 imagery)", hangar19, 53.569204, -113.520643, 232, 84.0, 32.0),
     ("cyxd_gs_hut", "ILS glideslope hut with checkerboard paint (infield, 16/34 runway side; west-lineup photo)", gs_hut, 53.568983, -113.511000, 0, 8.0, 14.0),
     ("cyxd_north_main", "North hangar complex: two sawtooth repair bays with a gap (1944 depot, extent of OSM 325242997)", north_main, 53.578927, -113.522382, 180.19, 171.0, 94.0),
     ("cyxd_north_shop", "North hangar complex: shop/office (OSM 325241183)", north_shop, 53.579157, -113.524574, 180.13, 48.25, 29.0),
@@ -1830,6 +1986,10 @@ def place(out, excl, modellib, footprint):
         guid = fn().save(modellib / name, name)
         out.append((title, "%.8f" % lat, "%.8f" % lon, "%g" % hdg, guid))
         excl.append((title, footprint("%.8f" % lat, "%.8f" % lon, "%g" % hdg, -W / 2 - MARGIN, W / 2 + MARGIN, -D / 2 - MARGIN, D / 2 + MARGIN)))
+        if name == "cyxd_hangar19":
+            for k, (x, z, guid) in enumerate(H19_TREES):
+                la, lo = footprint("%.8f" % lat, "%.8f" % lon, "%g" % hdg, x, x, z, z)[0]
+                out.append(("Tree by Hangar 19 (stock MSFS tree)", "%.8f" % la, "%.8f" % lo, "%d" % (k * 137 % 360), guid))
     # Alberta Aviation Museum frontage (Bomarc, Norseman, memorial, Voodoo): origins are the OSM nodes, no exclusions needed
     import display_aircraft
     for name, title, fn, lat, lon in display_aircraft.DISPLAY:

@@ -68,6 +68,36 @@
      "indices": 6,
      "mode": 4,
      "material": 3
+    },
+    {
+     "attributes": {
+      "POSITION": 0,
+      "NORMAL": 1,
+      "TEXCOORD_0": 2
+     },
+     "indices": 7,
+     "mode": 4,
+     "material": 4
+    },
+    {
+     "attributes": {
+      "POSITION": 0,
+      "NORMAL": 1,
+      "TEXCOORD_0": 2
+     },
+     "indices": 8,
+     "mode": 4,
+     "material": 5
+    },
+    {
+     "attributes": {
+      "POSITION": 0,
+      "NORMAL": 1,
+      "TEXCOORD_0": 2
+     },
+     "indices": 9,
+     "mode": 4,
+     "material": 6
     }
    ]
   }
@@ -104,10 +134,40 @@
    }
   },
   {
-   "name": "cyxd_brick",
+   "name": "cyxd_ribbed",
    "pbrMetallicRoughness": {
     "baseColorTexture": {
      "index": 3
+    },
+    "metallicFactor": 0.0,
+    "roughnessFactor": 0.9
+   }
+  },
+  {
+   "name": "cyxd_brick",
+   "pbrMetallicRoughness": {
+    "baseColorTexture": {
+     "index": 4
+    },
+    "metallicFactor": 0.0,
+    "roughnessFactor": 0.9
+   }
+  },
+  {
+   "name": "cyxd_esso",
+   "pbrMetallicRoughness": {
+    "baseColorTexture": {
+     "index": 5
+    },
+    "metallicFactor": 0.0,
+    "roughnessFactor": 0.9
+   }
+  },
+  {
+   "name": "cyxd_gac",
+   "pbrMetallicRoughness": {
+    "baseColorTexture": {
+     "index": 6
     },
     "metallicFactor": 0.0,
     "roughnessFactor": 0.9
@@ -130,6 +190,18 @@
   {
    "sampler": 1,
    "source": 3
+  },
+  {
+   "sampler": 1,
+   "source": 4
+  },
+  {
+   "sampler": 1,
+   "source": 5
+  },
+  {
+   "sampler": 1,
+   "source": 6
   }
  ],
  "samplers": [
@@ -155,60 +227,87 @@
    "uri": "cyxd_shingle_grey.png"
   },
   {
+   "uri": "cyxd_ribbed.png"
+  },
+  {
    "uri": "cyxd_brick.png"
+  },
+  {
+   "uri": "cyxd_esso.png"
+  },
+  {
+   "uri": "cyxd_gac.png"
   }
  ],
  "accessors": [
   {
    "bufferView": 0,
    "componentType": 5126,
-   "count": 2096,
+   "count": 10508,
    "type": "VEC3",
    "min": [
-    -32.6,
-    -0.09,
-    -14.74
+    -56.06,
+    -0.039999999999999994,
+    -16.4
    ],
    "max": [
-    32.6,
-    11.35,
-    16.1
+    41.74,
+    10.2,
+    15.9
    ]
   },
   {
    "bufferView": 1,
    "componentType": 5126,
-   "count": 2096,
+   "count": 10508,
    "type": "VEC3"
   },
   {
    "bufferView": 2,
    "componentType": 5126,
-   "count": 2096,
+   "count": 10508,
    "type": "VEC2"
   },
   {
    "bufferView": 3,
    "componentType": 5123,
-   "count": 2910,
+   "count": 12036,
    "type": "SCALAR"
   },
   {
    "bufferView": 4,
    "componentType": 5123,
-   "count": 48,
+   "count": 2424,
    "type": "SCALAR"
   },
   {
    "bufferView": 5,
    "componentType": 5123,
-   "count": 168,
+   "count": 468,
    "type": "SCALAR"
   },
   {
    "bufferView": 6,
    "componentType": 5123,
-   "count": 48,
+   "count": 576,
+   "type": "SCALAR"
+  },
+  {
+   "bufferView": 7,
+   "componentType": 5123,
+   "count": 468,
+   "type": "SCALAR"
+  },
+  {
+   "bufferView": 8,
+   "componentType": 5123,
+   "count": 90,
+   "type": "SCALAR"
+  },
+  {
+   "bufferView": 9,
+   "componentType": 5123,
+   "count": 84,
    "type": "SCALAR"
   }
  ],
@@ -216,43 +315,58 @@
   {
    "buffer": 0,
    "byteOffset": 0,
-   "byteLength": 25152
+   "byteLength": 126096
   },
   {
    "buffer": 0,
-   "byteOffset": 25152,
-   "byteLength": 25152
+   "byteOffset": 126096,
+   "byteLength": 126096
   },
   {
    "buffer": 0,
-   "byteOffset": 50304,
-   "byteLength": 16768
+   "byteOffset": 252192,
+   "byteLength": 84064
   },
   {
    "buffer": 0,
-   "byteOffset": 67072,
-   "byteLength": 5820
+   "byteOffset": 336256,
+   "byteLength": 24072
   },
   {
    "buffer": 0,
-   "byteOffset": 72892,
-   "byteLength": 96
+   "byteOffset": 360328,
+   "byteLength": 4848
   },
   {
    "buffer": 0,
-   "byteOffset": 72988,
-   "byteLength": 336
+   "byteOffset": 365176,
+   "byteLength": 936
   },
   {
    "buffer": 0,
-   "byteOffset": 73324,
-   "byteLength": 96
+   "byteOffset": 366112,
+   "byteLength": 1152
+  },
+  {
+   "buffer": 0,
+   "byteOffset": 367264,
+   "byteLength": 936
+  },
+  {
+   "buffer": 0,
+   "byteOffset": 368200,
+   "byteLength": 180
+  },
+  {
+   "buffer": 0,
+   "byteOffset": 368380,
+   "byteLength": 168
   }
  ],
  "buffers": [
   {
    "uri": "cyxd_hangar19.bin",
-   "byteLength": 73420
+   "byteLength": 368548
   }
  ]
 }

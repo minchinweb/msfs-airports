@@ -27,6 +27,7 @@ WALL, ROOF, METAL, DARK, BRICK, TRIM, RED, WHITE, GREY, SALMON, BLUE, YELLOW, GL
 GREEN, MUSTARD, STEEL, TAN, BRONZE, RWHITE, TEAL, YELLOWR, BRICKD, MAUVE, PEACH, LROOF = range(20, 32)
 TANBLK, NAVYB, PBFLAT, BEIGE, GLASSB = range(32, 37)  # concrete-block tan, dark-blue siding, flat pale blue, Esso beige, dark glass blue
 MINT, ACGREY = range(37, 39)  # mint green (Norseman cowl, wingtips), light airframe grey (Voodoo)
+STUCCO, TAUPE = range(39, 41)  # pinkish-tan stucco and its darker fascia band (Hangar 19, the General Aviation Centre)
 PALETTE = [(178, 172, 160), (70, 66, 64), (122, 130, 130), (38, 40, 46), (150, 88, 72), (204, 200, 190), (196, 52, 40), (236, 234, 230),
            (168, 175, 170), (214, 122, 104), (28, 86, 160), (244, 204, 40), (48, 66, 76), (96, 100, 104),
            (214, 208, 190), (46, 60, 84), (228, 224, 212),
@@ -34,7 +35,7 @@ PALETTE = [(178, 172, 160), (70, 66, 64), (122, 130, 130), (38, 40, 46), (150, 8
            (62, 104, 70), (190, 164, 66), (128, 164, 190), (186, 166, 134), (84, 70, 60), (232, 232, 228), (40, 92, 88),
            (232, 220, 150), (150, 70, 56), (150, 122, 128), (204, 160, 130), (206, 210, 212),
            (178, 160, 118), (26, 52, 122), (146, 176, 210), (196, 184, 150), (118, 104, 94),
-           (132, 200, 164), (156, 160, 156)]
+           (132, 200, 164), (156, 160, 156), (190, 152, 140), (150, 128, 118)]
 SW = 16
 RIB_TEX = {CREAM: "ribbed", PBLUE: "ribbed_blue", GREEN: "ribbed_green", MUSTARD: "ribbed_mustard", STEEL: "ribbed_steel", TAN: "ribbed_tan",
            RWHITE: "ribbed_white", YELLOWR: "ribbed_yellow", TEAL: "ribbed_teal", BRICKD: "brick"}
@@ -58,7 +59,7 @@ def write_palette(path):
 
 TEX_T = 1.28  # metres per texture tile (8 clapboards / 8 shingle rows)
 TEX_NAMES = ("siding", "shingle_red", "shingle_grey", "ribbed", "ribbed_blue", "ribbed_green", "ribbed_mustard", "ribbed_steel",
-             "ribbed_tan", "ribbed_white", "ribbed_yellow", "ribbed_teal", "brick", "shell", "esso", "navcan", "lawoffice", "nwi", "efc", "goa", "museum")
+             "ribbed_tan", "ribbed_white", "ribbed_yellow", "ribbed_teal", "brick", "shell", "esso", "navcan", "lawoffice", "nwi", "efc", "goa", "museum", "gac")
 
 
 
@@ -147,7 +148,7 @@ def write_textures(folder):
     (folder / "cyxd_shell.png").write_bytes(sign.read_bytes())
     (folder / "cyxd_shell.png.xml").write_text('<BitmapConfiguration>\n\t<BitmapSlot>MTL_BITMAP_DECAL0</BitmapSlot>\n</BitmapConfiguration>\n')
     # Esso oval and NAV CANADA plaque: tools/make_signs.py
-    for nm in ("esso", "navcan", "lawoffice", "nwi", "efc", "goa", "museum"):
+    for nm in ("esso", "navcan", "lawoffice", "nwi", "efc", "goa", "museum", "gac"):
         (folder / ("cyxd_%s.png" % nm)).write_bytes((Path(__file__).resolve().parent / ("assets/%s_sign.png" % nm)).read_bytes())
         (folder / ("cyxd_%s.png.xml" % nm)).write_text('<BitmapConfiguration>\n\t<BitmapSlot>MTL_BITMAP_DECAL0</BitmapSlot>\n</BitmapConfiguration>\n')
 

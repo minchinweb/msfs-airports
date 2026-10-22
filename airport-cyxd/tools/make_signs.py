@@ -194,6 +194,38 @@ def museum():
     return im
 
 
+def gac():
+    """Top half: the arched GENERAL AVIATION CENTRE board over the drum porch of Hangar 19 (5.7 x 2.0 m to the top of the arch; black, a blue
+    twin-engine airliner among pale clouds, yellow capitals; Commons EDMONTON_MUNI_(11094203585)); the model cuts the arch out of the
+    rectangle.  Bottom half: "77 Airport Rd." in brushed-steel letters on the stucco fascia of the curved entrance (5.0 x 0.7 m;
+    Commons EDMONTON_MUNI_(11094283326)).  Each half is drawn at its true aspect and squashed into 1024 x 512."""
+    im = Image.new("RGB", (1024, 1024), (190, 152, 140))
+    w = 2280
+    h = int(w / (5.7 / 2.0))
+    b = Image.new("RGB", (w, h), (18, 18, 22))
+    d = ImageDraw.Draw(b)
+    for cx, cy, s, col in ((0.16, 0.5, 1.0, (236, 240, 244)), (0.24, 0.55, 0.8, (120, 170, 220)), (0.82, 0.52, 1.0, (236, 240, 244)),
+                           (0.74, 0.56, 0.8, (120, 170, 220)), (0.33, 0.42, 0.6, (120, 170, 220))):  # clouds
+        for dx, dy, r in ((-0.05, 0.03, 0.05), (0.0, 0.0, 0.07), (0.05, 0.03, 0.05)):
+            rr = r * s * h
+            d.ellipse(((cx + dx * s) * w - rr, (cy + dy * s) * h - rr, (cx + dx * s) * w + rr, (cy + dy * s) * h + rr), fill=col)
+    blue, dark = (70, 140, 215), (30, 70, 130)
+    d.polygon([(w * 0.30, h * 0.47), (w * 0.62, h * 0.30), (w * 0.70, h * 0.29), (w * 0.66, h * 0.36), (w * 0.36, h * 0.52)], fill=blue)  # fuselage
+    d.polygon([(w * 0.41, h * 0.14), (w * 0.46, h * 0.14), (w * 0.56, h * 0.64), (w * 0.50, h * 0.66)], fill=blue)  # wing
+    d.polygon([(w * 0.62, h * 0.31), (w * 0.69, h * 0.12), (w * 0.72, h * 0.13), (w * 0.70, h * 0.30)], fill=blue)  # fin
+    for ex, ey in ((0.44, 0.27), (0.51, 0.52)):  # engines
+        d.ellipse((w * (ex - 0.025), h * (ey - 0.06), w * (ex + 0.025), h * (ey + 0.06)), fill=dark)
+    text_fit(d, "GENERAL AVIATION CENTRE", "ariblk.ttf", (w * 0.05, h * 0.7, w * 0.95, h * 0.93), (240, 196, 40))
+    im.paste(b.resize((1024, 512), Image.LANCZOS), (0, 0))
+    w = 2400
+    h = int(w / (5.0 / 0.7))
+    b = Image.new("RGB", (w, h), (190, 152, 140))
+    d = ImageDraw.Draw(b)
+    text_fit(d, "77  Airport  Rd.", "arial.ttf", (w * 0.08, h * 0.12, w * 0.92, h * 0.88), (214, 214, 210))
+    im.paste(b.resize((1024, 512), Image.LANCZOS), (0, 512))
+    return im
+
+
 if __name__ == "__main__":
     esso().save(HERE / "assets/esso_sign.png")
     navcan().save(HERE / "assets/navcan_sign.png")
@@ -202,3 +234,4 @@ if __name__ == "__main__":
     efc().save(HERE / "assets/efc_sign.png")
     goa().save(HERE / "assets/goa_sign.png")
     museum().save(HERE / "assets/museum_sign.png")
+    gac().save(HERE / "assets/gac_sign.png")
