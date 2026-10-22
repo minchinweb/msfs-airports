@@ -6,8 +6,8 @@ Added 2026-10-22. Hangar 19 is the General Aviation Centre (confirmed by compari
 |---|---|---|
 | `EDMONTON_MUNI_11094203585_.jpg` | Wikimedia Commons, 2013-03-24, CC BY 2.0 | Landside front: two-storey red-brown brick, a round tan stair tower with a grey band in the middle, an arched sign "GENERAL AVIATION CENTRE" with a blue airliner above the centre, glazed ground floor with glass doors |
 | `EDMONTON_MUNI_11094283326_.jpg` | Wikimedia Commons, 2013-03-24, CC BY 2.0 | The same complex, pink-tan stucco curved entrance with red columns, "77 Airport Rd." in steel letters, "PASSENGER LOUNGE" arrow sign at the left |
-| `airport-rd-north-07-streetview-201206.png` | Google Street View, 62 Airport Rd NW, 2012-06 (copy; original in `other-buildings-photos/`) | Esso building at the left, the brick building with the tower behind the sign pylon, low commercial wing to its right |
-| `h19-landside-08-streetview-201206.png` | Google Street View, 63 Airport Rd NW, 2012-06 (copy) | Brick building with a tower in the centre, a low tan strip with glazed shop fronts to its right; Esso building at the far left |
+| `airport-rd-north-07-streetview-201206.png` | Google Street View, 62 Airport Rd NW, 2012-06 | Esso building at the left, the brick building with the tower behind the sign pylon, low commercial wing to its right |
+| `h19-landside-08-streetview-201206.png` | Google Street View, 63 Airport Rd NW, 2012-06 | Brick building with a tower in the centre, a low tan strip with glazed shop fronts to its right; Esso building at the far left |
 
 Street View is copyright Google (reference only, do not redistribute); the Street View photos are also listed in `SOURCES-streetview.md`. The address in a Street View header is the nearest address to the camera.
 

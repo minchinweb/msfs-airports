@@ -27,7 +27,7 @@ User corrections (2026-10-21) are already applied below: the old `canadian-helic
 | `hangar38-photos/` | 19-25 | Hangar 38 (olive-mustard, "38" roundel) | high |
 | `hangar39-photos/` | 26-28 | Hangar 39 (pale blue, tall) | high that it is the blue hangar; no roundel in these views |
 | `hangar40-photos/` | 29-32 | Hangar 40 ("40" roundel, white with brick office) | high |
-| `hangar19-photos/` (8), `hangar20-photos/` (7, 9-12) | 7-12 | Hangar 19 landside (8) and the Esso building (Hangar 20) on Airport Rd | per the user |
+| `hangar19-photos/` (7, 8), `hangar20-photos/` (9-12) | 7-12 | Hangar 19 landside, i.e. the General Aviation Centre at 77 Airport Rd (7, 8), and the Esso building (Hangar 20) on Airport Rd (9-12) | per the user |
 
 ## Still unidentified
 The large grey flat-topped building south of Hangar 11 (deferred, see `open-questions.md`) and the tan brick building at 11630 109 St. Hangar 9 has no photo.
