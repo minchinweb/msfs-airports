@@ -663,34 +663,10 @@
 			<RunwayStart end="PRIMARY" lat="53.57795178464409" lon="-113.51284019431836" alt="668.42640000000006" heading="181.21699523925781"/>
 			<RunwayStart end="SECONDARY" lat="53.56638612703228" lon="-113.51281118882294" alt="664.76880000000006" heading="1.21697998046875"/>
 		</Runway>
-		<Jetway gateName="GATE" parkingNumber="5" suffix="NONE">
-			<!--SceneryObject name: Jetway_Megalink-->
-			<SceneryObject lat="53.57013390752790" lon="-113.52132143083554" alt="0.00000000000000" pitch="0.000546" bank="-0.000546" heading="44.687923" imageComplexity="VERY_SPARSE" altitudeIsAgl="TRUE" snapToGround="TRUE" snapToNormal="FALSE">
-				<LibraryObject name="{6D503EB6-F902-4249-951C-608989E705B6}" scale="1.000000"/>
-			</SceneryObject>
-		</Jetway>
-		<Jetway gateName="GATE" parkingNumber="6" suffix="NONE">
-			<!--SceneryObject name: Jetway_Megalink-->
-			<SceneryObject lat="53.57038013088501" lon="-113.52161817567922" alt="0.00000000000000" pitch="0.001161" bank="-0.001161" heading="18.973186" imageComplexity="VERY_SPARSE" altitudeIsAgl="TRUE" snapToGround="TRUE" snapToNormal="FALSE">
-				<LibraryObject name="{6D503EB6-F902-4249-951C-608989E705B6}" scale="1.000000"/>
-			</SceneryObject>
-		</Jetway>
 		<Jetway gateName="GATE" parkingNumber="7" suffix="NONE">
 			<!--SceneryObject name: Jetway_Link-->
 			<SceneryObject lat="53.57128791591808" lon="-113.52387905208172" alt="0.00000000000000" pitch="0.000000" bank="0.000000" heading="136.400000" imageComplexity="VERY_SPARSE" altitudeIsAgl="TRUE" snapToGround="TRUE" snapToNormal="FALSE">
 				<LibraryObject name="{43D4E862-3C41-4E16-802C-75CF609A74C2}" scale="1.000000"/>
-			</SceneryObject>
-		</Jetway>
-		<Jetway gateName="GATE" parkingNumber="8" suffix="NONE">
-			<!--SceneryObject name: Jetway_Megalink-->
-			<SceneryObject lat="53.57141338726974" lon="-113.52459215180403" alt="0.00000000000000" pitch="0.000000" bank="0.000000" heading="146.464355" imageComplexity="VERY_SPARSE" altitudeIsAgl="TRUE" snapToGround="TRUE" snapToNormal="FALSE">
-				<LibraryObject name="{6D503EB6-F902-4249-951C-608989E705B6}" scale="1.000000"/>
-			</SceneryObject>
-		</Jetway>
-		<Jetway gateName="GATE" parkingNumber="9" suffix="NONE">
-			<!--SceneryObject name: Jetway_Microlink-->
-			<SceneryObject lat="53.57111794781932" lon="-113.52598302393831" alt="0.00000000000000" pitch="0.000000" bank="0.000000" heading="144.764450" imageComplexity="VERY_SPARSE" altitudeIsAgl="TRUE" snapToGround="TRUE" snapToNormal="FALSE">
-				<LibraryObject name="{DD5801B6-DFAF-4B88-BC77-CFD13C542C9A}" scale="1.000000"/>
 			</SceneryObject>
 		</Jetway>
 		<Jetway gateName="GATE" parkingNumber="10" suffix="NONE">
