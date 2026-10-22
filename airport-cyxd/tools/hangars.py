@@ -1228,9 +1228,9 @@ def hangar21():
     for z in (-40.0, -31.0, -24.0, -12.0):  # window slots along both sides
         m.window((1, 0, 0), (-34.0, 5.8, z), (0, 0, 1), 3.5, 1.1)
         m.window((-1, 0, 0), (-41.0, 5.8, z), (0, 0, 1), 3.5, 1.1)
-    # gate annexes: the jetway roots stand at the face of the building (see CYXD.xml, gates 7, 10, 11, 12); each gets a small boarding bay with a
+    # gate annexes: the jetway roots stand at the face of the building (see CYXD.xml / gen_parking.py: GATE 1 on the NW end wall, GATES 2-4 on the NE face); each gets a small boarding bay with a
     # door where the bridge docks (user, 2026-10-21: the jetways did not attach to the building).  Authored x = footprint x - 5, z = footprint z - 17.5.
-    for xc in (-39.7, -7.0, 25.0):
+    for xc in (-41.0, 0.0, 41.0):  # gates 2-4 at 41 m pitch (s = 45 / 86 / 127 m from the NW corner, gen_parking.py NE_GATES_S; xc = s - 86)
         m.box(xc - 2.6, xc + 2.6, 0, 4.6, 13.0, 17.4, CREAM, top=False)
         m.box(xc - 2.8, xc + 2.8, 4.6, 4.9, 12.9, 17.5, DGREY)
         m.window((0, 0, 1), (xc - 1.0, 0.0, 17.4), (1, 0, 0), 2.0, 2.7)
@@ -1455,6 +1455,158 @@ def hangar_second():
     return m
 
 
+# North hangar complex (1944 repair depot; old Aircraft Repair Ltd / Northwest Industries) -------------------------------------
+# Replaces the six generic "North ..." boxes of docs/cyxd/historic-buildings-genericbuilding.xml (SKIP in gen_buildings.py).  Those sat about
+# 140 m too far south-east (the 1944 photo's georeference was off at that distance); the whole set was moved by (-68 m E, +122 m N) and the
+# main block, shop and annex snapped to the 2016 OSM outlines (main 325242997, shop 325241183, annex 325243177).  Bay 3 and the narrow
+# outbuilding take the common offset only (both gone by 2016) and were nudged a few metres clear of the north apron (see STATUS.md).
+def north_main():
+    """Main repair hangar, outer extent OSM way 325242997 (2016): 171 x 94 m, long front facing south (heading 180.19).  Two separate bays as in
+    the 1944 photo (the 2014 blue-grey centre strip is dropped): bay 1 (west) 85 m, a 6 m open gap (GUESS: it looks 5-10 m in the 1944 crop),
+    bay 2 (east) 80 m.  Each bay has five red saw-tooth bays (ridges run E-W, glazed risers face north; pitch 16.2 m, rise 3 m: GUESSED, the 2014
+    plan crop shows ~5 teeth of ~17 m), flat grey margins, its own end walls on the gap, a dark north band (north-west-complex.jpg, ~4.2 px/m).
+    Walls cream corrugated, eaves 9.5 m.  Three sliding doors per bay on the south face (GUESS), windows elsewhere.
+    Built in image coordinates (E from the west end, S from the south front) and converted to the model frame (+X = west, +Z = south)."""
+    m = fmesh()
+    L, D = 171.0, 94.0
+    hx, hz = L / 2, D / 2
+    EV, RISE = 9.5, 3.0
+    BAYS = ((0.0, 85.0, 10.0, 77.0), (91.0, 171.0, 94.0, 161.0))  # E range of the bay, E range of its saw-teeth
+
+    def X(e):
+        return hx - e
+
+    def Z(s):
+        return hz - s
+
+    def flat(e0, e1, s0, s1, y, sw):
+        m.poly([(X(e0), y, Z(s0)), (X(e1), y, Z(s0)), (X(e1), y, Z(s1)), (X(e0), y, Z(s1))], sw, (X((e0 + e1) / 2), y - 5, Z((s0 + s1) / 2)))
+    S0, P, NB = 2.0, 16.2, 5
+    S1 = S0 + P * NB  # 83.0
+    zf = hz
+    for b0, b1, e0, e1 in BAYS:
+        m.box(X(b1), X(b0), 0, EV, -hz, hz, CREAM, top=False)
+        flat(b0, e0, S0, S1, EV, GREY)
+        flat(e1, b1, S0, S1, EV, GREY)
+        flat(b0, b1, 0, S0, EV, GREY)
+        flat(b0, b1, S1, D, EV, GREY)
+        em = (e0 + e1) / 2
+        for k in range(NB):
+            s0 = S0 + k * P
+            s1 = s0 + P
+            sm = (s0 + s1) / 2
+            m.poly([(X(e0), EV, Z(s0)), (X(e1), EV, Z(s0)), (X(e1), EV + RISE, Z(s1)), (X(e0), EV + RISE, Z(s1))], RED, (X(em), EV - 5, Z(sm)))
+            zr = Z(s1)  # glazed riser facing north (-Z)
+            m.poly([(X(e0), EV, zr), (X(e1), EV, zr), (X(e1), EV + RISE, zr), (X(e0), EV + RISE, zr)], GLASS, (X(em), EV + 1, zr + 5))
+            n = int((e1 - e0) / 3.4)
+            for i in range(n + 1):
+                xm = X(e0 + (e1 - e0) * i / n)
+                m.box(xm - 0.07, xm + 0.07, EV, EV + RISE, zr - 0.12, zr, DGREY)
+            m.box(X(e1), X(e0), EV + RISE - 0.2, EV + RISE, zr - 0.18, zr + 0.1, DGREY)  # head flashing
+            for e in (e0, e1):  # end wedges above the flat margins
+                m.poly([(X(e), EV, Z(s0)), (X(e), EV, Z(s1)), (X(e), EV + RISE, Z(s1))], CREAM, (X(em), EV + 1, Z(sm)))
+        parapet(m, X(b1), X(b0), -hz, hz, EV, EV + 0.7, 0.3, TRIM)
+        m.box(X(b1), X(b0), EV, EV + 1.8, -hz, -hz + 2.5, DGREY)  # darker north band (the plan crop shows a dark strip along the north edge)
+        # south (apron) face: three sliding doors 22 x 7.5 m, personnel doors between them, clerestory windows above
+        w = b1 - b0
+        dcs = [b0 + 16.0, b0 + w / 2, b1 - 16.0]
+        for ec in dcs:
+            xc = X(ec)
+            xs = [xc - 11 + 5.5 * i for i in range(5)]
+            m.box(xc - 11, xc + 11, 0, 7.5, zf, zf + 0.1, DARK)
+            leaves(m, zf + 0.1, xs, 0, 7.3, DOORG, front=1, post=DGREY)
+            m.box(xc - 11.3, xc + 11.3, 7.5, 7.8, zf, zf + 0.25, TRIM)  # header
+            rows_z(m, 1, zf, xc - 11, xc + 11, 8.1, 6, 2.2, 1.0)
+        for ea, eb in zip(dcs[:-1], dcs[1:]):
+            door_z(m, 1, zf, X((ea + eb) / 2), 1.1, 2.3)
+        # north face: window band and doors (GUESSED)
+        rows_z(m, -1, -hz, X(b1) + 4.0, X(b0) - 4.0, 5.2, int(w / 5.3), 1.6, 1.4)
+        for ec in (b0 + 0.25 * w, b0 + 0.75 * w):
+            door_z(m, -1, -hz, X(ec), 1.2, 2.4)
+    # end walls: outer ends and the gap faces
+    for sgn, e in ((1, 0.0), (-1, 85.0), (1, 91.0), (-1, 171.0)):
+        rows_x(m, sgn, X(e), -40.0, 40.0, 4.5, 8, 2.0, 1.4)
+    door_x(m, 1, X(0.0), -40.0, 1.2, 2.4)
+    door_x(m, -1, X(171.0), -40.0, 1.2, 2.4)
+    roof_vents(m, [(X(e), Z(s)) for e, s in ((5, 20), (5, 45), (5, 70), (80, 25), (80, 60), (92.5, 25), (92.5, 60), (166, 20), (166, 45), (166, 70),
+                                              (40, 88), (130, 88))], EV)
+    m.mirror_x()
+    return m
+
+
+def north_shop():
+    """Shop / office west of the main block (OSM 325241183 centre and axis; 48 x 29 m from the 1944 photo, 7 m, flat roof), front south.
+    Everything but size and height is a guess."""
+    m = fmesh()
+    W, D, H = 48.25, 29.0, 7.0
+    x0, x1, z0, z1 = -W / 2, W / 2, -D / 2, D / 2
+    m.box(x0, x1, 0, H, z0, z1, WALL, top=False)
+    m.box(x0 - 0.2, x1 + 0.2, H, H + 0.3, z0 - 0.2, z1 + 0.2, DGREY)
+    parapet(m, x0 - 0.2, x1 + 0.2, z0 - 0.2, z1 + 0.2, H + 0.3, H + 0.8, 0.25, TRIM)
+    for z, sgn in ((z1, 1), (z0, -1)):
+        rows_z(m, sgn, z, x0 + 2, x1 - 2, 1.7, 11, 1.6, 1.6)
+        rows_z(m, sgn, z, x0 + 2, x1 - 2, 4.4, 11, 1.6, 1.6)
+    door_z(m, 1, z1, 0.0, 1.8, 2.4)
+    m.box(-2.4, 2.4, 2.9, 3.1, z1, z1 + 1.6, DGREY)  # entrance canopy
+    for sgn, xp in ((1, x1), (-1, x0)):
+        rows_x(m, sgn, xp, -11.0, 11.0, 1.7, 4, 1.6, 1.6)
+        rows_x(m, sgn, xp, -11.0, 11.0, 4.4, 4, 1.6, 1.6)
+    m.mirror_x()
+    return m
+
+
+def north_annex():
+    """Annex north of the main block (OSM 325243177 centre and axis; 44 x 44 m, 8 m eaves, 3 m ridge along the front-back axis from the 1944
+    photo).  Cladding, doors and windows guessed."""
+    m = fmesh()
+    W, D, H = 44.0, 44.0, 8.0
+    x0, x1, z0, z1 = -W / 2, W / 2, -D / 2, D / 2
+    m.box(x0, x1, 0, H, z0, z1, CREAM, top=False)
+    m.gable(x0 - 0.3, x1 + 0.3, H, 3.0, z0 - 0.3, z1 + 0.3, along_z=True, sw_roof=ROOF, sw_wall=CREAM)
+    m.box(-5.0, 5.0, 0, 5.5, z1, z1 + 0.1, DARK)  # roller door (south face)
+    leaves(m, z1 + 0.1, [-5.0, 0.0, 5.0], 0, 5.3, DOORG, front=1, post=DGREY)
+    door_z(m, 1, z1, -12.0, 1.1, 2.3)
+    rows_z(m, 1, z1, x0 + 3, x1 - 3, 6.0, 6, 1.6, 1.0)
+    rows_z(m, -1, z0, x0 + 3, x1 - 3, 4.0, 8, 1.8, 1.4)
+    for sgn, xp in ((1, x1), (-1, x0)):
+        rows_x(m, sgn, xp, z0 + 3, z1 - 3, 4.0, 7, 1.8, 1.4)
+    m.mirror_x()
+    return m
+
+
+def north_bay3():
+    """East bay, separate (1944 photo; gone by 2016): 70 x 53 m, 12 m walls, 4 m gabled steel roof, gable end (doors) facing south."""
+    m = fmesh()
+    W, D, H = 70.0, 53.0, 12.0
+    x0, x1, z0, z1 = -W / 2, W / 2, -D / 2, D / 2
+    m.box(x0, x1, 0, H, z0, z1, CREAM, top=False)
+    m.gable(x0 - 0.3, x1 + 0.3, H, 4.0, z0 - 0.3, z1 + 0.3, along_z=True, sw_roof=METAL, sw_wall=CREAM)
+    m.box(-23.0, 23.0, 0, 9.5, z1, z1 + 0.1, DARK)  # one wide opening, four leaves (GUESS)
+    leaves(m, z1 + 0.1, [-23.0 + 11.5 * i for i in range(5)], 0, 9.3, DOORG, front=1, post=DGREY)
+    m.box(-23.4, 23.4, 9.5, 9.8, z1, z1 + 0.25, TRIM)
+    door_z(m, 1, z1, -28.0, 1.1, 2.3)
+    for sgn, xp in ((1, x1), (-1, x0)):
+        rows_x(m, sgn, xp, z0 + 4, z1 - 4, 6.5, 8, 2.2, 1.6)
+    rows_z(m, -1, z0, x0 + 6, x1 - 6, 6.5, 10, 2.0, 1.6)
+    m.mirror_x()
+    return m
+
+
+def north_outbuilding():
+    """Narrow outbuilding at the north edge (1944 photo; 18 x 40 m, 6 m walls, 2 m gabled roof along its length), roller door at the south end."""
+    m = fmesh()
+    W, D, H = 18.0, 40.0, 6.0
+    x0, x1, z0, z1 = -W / 2, W / 2, -D / 2, D / 2
+    m.box(x0, x1, 0, H, z0, z1, CREAM, top=False)
+    m.gable(x0 - 0.3, x1 + 0.3, H, 2.0, z0 - 0.3, z1 + 0.3, along_z=True, sw_roof=METAL, sw_wall=CREAM)
+    m.box(-3.0, 3.0, 0, 4.4, z1, z1 + 0.1, DARK)
+    leaves(m, z1 + 0.1, [-3.0, 0.0, 3.0], 0, 4.2, DOORG, front=1, post=DGREY)
+    for sgn, xp in ((1, x1), (-1, x0)):
+        rows_x(m, sgn, xp, z0 + 4, z1 - 4, 2.6, 5, 1.4, 1.1)
+    m.mirror_x()
+    return m
+
+
 # placement ----------------------------------------------------------------------------------
 # name -> (title, builder, lat, lon, heading, footprint W (across front), D (depth), extra exclusion margin)
 HANGARS = [
@@ -1477,6 +1629,11 @@ HANGARS = [
     ("cyxd_bluehangar", "Dark-blue gabled hangar north of Hangar 3 (5 109 St NW, OSM 325272095)", bluehangar, 53.575629, -113.508404, 180, 20.7, 24.6),
     ("cyxd_hangar19", "Hangar 19 (low tan wings with a brick centre, 62-69 Airport Rd; traced from the 2014 imagery)", hangar19, 53.569158, -113.520582, 232, 65.0, 29.0),
     ("cyxd_gs_hut", "ILS glideslope hut with checkerboard paint (infield, 16/34 runway side; west-lineup photo)", gs_hut, 53.568983, -113.511000, 0, 8.0, 14.0),
+    ("cyxd_north_main", "North hangar complex: two sawtooth repair bays with a gap (1944 depot, extent of OSM 325242997)", north_main, 53.578927, -113.522382, 180.19, 171.0, 94.0),
+    ("cyxd_north_shop", "North hangar complex: shop/office (OSM 325241183)", north_shop, 53.579157, -113.524574, 180.13, 48.25, 29.0),
+    ("cyxd_north_annex", "North hangar complex: annex (OSM 325243177)", north_annex, 53.579643, -113.523192, 180.39, 44.0, 44.0),
+    ("cyxd_north_bay3", "North hangar complex: east bay 3 (1944 photo, gone by 2016)", north_bay3, 53.578727, -113.519032, 180, 70.0, 53.0),
+    ("cyxd_north_outbuilding", "North hangar complex: narrow outbuilding (1944 photo)", north_outbuilding, 53.580156, -113.521028, 180, 18.0, 40.0),
     ("cyxd_hangar20", "Hangar 20 (Esso building, 83 Airport Rd NW; traced from the 2014 imagery)", hangar20, 53.569788, -113.521578, 228, 62.0, 58.0),
 ]
 MARGIN = 6.0
