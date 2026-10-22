@@ -1,6 +1,6 @@
 # CYXD reference links (collected 2026-10-12)
 
-Index of every link the user collected (the old `_Next Steps.txt` scratch file, now retired), grouped by subject. Open questions and the to-do list are in `open-questions.md`. "Saved" = image copied into `docs/cyxd/...` (see the folder's SOURCES.md or this
+Index of every link the user collected (from the retired `_Next Steps.txt` scratch file), grouped by subject. Open questions and the to-do list are in `open-questions.md`. "Saved" = image copied into `docs/cyxd/...` (see the folder's SOURCES.md or this
 page for credit). "Link only" = not fetched; the reason is given. JetPhotos, Facebook, Instagram, YouTube, Reddit and the Ingenium and city of Edmonton
 sites do not serve images or text to scripts (blocked, login or script-rendered), so those stay as links; open them yourself.
 
@@ -43,7 +43,7 @@ Link only: JetPhotos 6026139, 11140, 9456702, 8413417, 11139; archive.org PC0139
 
 ## West line-up photo
 - Saved: `west-lineup-photos/flickr_woodhead_13858722704.jpg` (view from the NAIT parkade roof across the apron and fenced yard: control tower with the red cab, Edmonton Inn behind it,
-  low hangars at left). Use for matching Hangar 15's face, the Flying Club and the buildings north of Hangar 18, and the position of 38 and 39. **Not yet applied** (see open-questions.md).
+  low hangars at left). Use for matching Hangar 15's face, the Flying Club and the buildings north of Hangar 18, and the position of 38 and 39. Partly applied (Hangar 15 wing, 19 and 20 airside); Hangar 15's face is still open (open-questions.md).
   Also on the horizon in the same photo: the cement plant (VCCMT), as the silhouette reference for that landmark (open-questions.md, item 11). Photo by Flickr user woodhead (see the filename); licence not recorded here.
 
 ## Hangar 14 / Alberta Aviation Museum
@@ -51,7 +51,7 @@ Link only: JetPhotos 6026139, 11140, 9456702, 8413417, 11139; archive.org PC0139
   with glazed panes, green canopy), `Bomarc_Missile_at_the_Alberta_Aviation_Museum.jpg` (Commons, 2013-07-13, CC BY-SA 3.0, Bomarc on its stand), `Searchlight_at_the_Alberta_Aviation_Museum.jpg` (2013-07-13).
 - Link only: edmonton.ca pages and drone photo (the city site returns 502 to scripts), JetPhotos 6607107, 5984642, 11140, Instagram, Skies Magazine (2 articles), historicplaces.ca (3443, 2985),
   hermis.alberta.ca, CTV video, gohistoric, CBC 1.7011326, Hangar14Listing.pdf.
-- Wanted later: the static aircraft in front of the museum and the displays on the east side (not built).
+- Frontage displays in front of the museum are built; the east-side and airside displays are not (open-questions.md).
 
 ## Western GMC (Hangar 6?)
 - Link only (edmonton.ca returns 502): WesternGMCAdvertisement-1600.jpg and AircraftParkedByHangar-GMCTrucks-ca1960sor70s-1600.jpg.
@@ -63,12 +63,12 @@ Link only: JetPhotos 6026139, 11140, 9456702, 8413417, 11139; archive.org PC0139
 ## View from the Edmonton Flying Club (Hangar 18)
 - Saved in `hangar18-photos/`: flickr woodhead 11094403683, 14875905273 (the airside view from the club balcony: tower with its annex, the Shell hangar and the Aerocentre).
 
-## North side of Hangar 9
-- Saved: `hangar8-photos/flickr_woodhead_11094719485.jpg` (moved from `hangar9-photos/`; it is Hangar 8) (long side wall of tall wire-glass steel-sash windows in a grid, a canopy at the top with a green fascia, big door at the left corner, parked cars).
+## North side of Hangar 8 (formerly filed as Hangar 9)
+- Saved: `hangar8-photos/flickr_woodhead_11094719485.jpg` (long side wall of tall wire-glass steel-sash windows in a grid, a canopy at the top with a green fascia, big door at the left corner, parked cars).
 
 ## Shell hangar, Canadian Helicopters hangar
 - Shell hangar: flickr woodhead 11165253083 is already saved as `hangar17-tower-photos/Edmonton_muni_airport__11165253083_.jpg`; JetPhotos 127275 is link only.
-- Canadian Helicopters hangar: saved `hangar40-photos/flickr_woodhead_13207130405.jpg` (moved from `canadian-helicopters-photos/`; Hangar 40) (two-storey red brick office wing with a glass-block entrance and a gabled canopy, next to a grey ribbed hangar wall). Not built.
+- Canadian Helicopters hangar: saved `hangar40-photos/flickr_woodhead_13207130405.jpg` (Hangar 40; two-storey red brick office wing with a glass-block entrance and a gabled canopy, next to a grey ribbed hangar wall). Built as Hangar 40.
 
 ## JetPhotos (link only)
 Hangar 15 in the background: 6615792. Hangars 4, 5, 6, 7, 8 in the background: 6606461. Unknown building: 6615763, 5881108, 5881112, 532359, 11966.
@@ -79,10 +79,10 @@ Hangar 15 in the background: 6615792. Hangars 4, 5, 6, 7, 8 in the background: 6
 
 ## Other items
 - Category https://commons.wikimedia.org/wiki/Category:Hangars_at_Edmonton_City_Centre_Airport: not searched yet.
-- Hangar 16 (the Aerospace building): match its front to flickr 33836413@N06/6187479293 (already saved as `hangar17-tower-photos/flickr_33836413.jpg`): five bands, one indented for the front doors, plus a box-out on the left next to the Shell hangar. **Not applied.**
-- Old terminal building (reference only, will not be built): world.hey.com/grantgibson, 1000aircraftphotos.com postcards.
+- Hangar 16 (the Aerospace building): front matched to flickr 33836413@N06/6187479293 (saved as `hangar17-tower-photos/flickr_33836413.jpg`): five bands with an indented entrance, built; the box-out on the left next to the Shell hangar is not.
+- Old terminal (built as Hangar 21 in its 2012-2019 form; the earlier 1950s building is reference only): world.hey.com/grantgibson, 1000aircraftphotos.com postcards.
 - Ingenium CAVM-05641: "claims to be taken in Edmonton; confirm" (link only, not fetched).
-- Videos: YouTube q5-woik2XsQ and Reddit 1ffvw4j (PWA 737 taking off from CYXD): note the building layout, taxiway sign style and the wind sock position (we should move ours to match); static 737 wanted. **Not applied.**
+- Videos: YouTube q5-woik2XsQ and Reddit 1ffvw4j (PWA 737 taking off from CYXD): note the building layout, taxiway sign style and the wind sock position (we should move ours to match); static 737 wanted. Not applied.
 - Ingenium CAVM-17996: Trans-Canada Air Lines logo, 1938 (not in Edmonton; the airline did serve Edmonton).
 
 ## Runway 04/22 (03/21) closure research (2026-10-14)
