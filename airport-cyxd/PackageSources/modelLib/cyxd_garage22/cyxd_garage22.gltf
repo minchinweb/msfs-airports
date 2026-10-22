@@ -189,7 +189,7 @@
   {
    "bufferView": 0,
    "componentType": 5126,
-   "count": 5120,
+   "count": 6092,
    "type": "VEC3",
    "min": [
     -56.0,
@@ -205,19 +205,19 @@
   {
    "bufferView": 1,
    "componentType": 5126,
-   "count": 5120,
+   "count": 6092,
    "type": "VEC3"
   },
   {
    "bufferView": 2,
    "componentType": 5126,
-   "count": 5120,
+   "count": 6092,
    "type": "VEC2"
   },
   {
    "bufferView": 3,
    "componentType": 5123,
-   "count": 3366,
+   "count": 4032,
    "type": "SCALAR"
   },
   {
@@ -235,13 +235,13 @@
   {
    "bufferView": 6,
    "componentType": 5123,
-   "count": 2040,
+   "count": 2376,
    "type": "SCALAR"
   },
   {
    "bufferView": 7,
    "componentType": 5123,
-   "count": 2148,
+   "count": 2604,
    "type": "SCALAR"
   }
  ],
@@ -249,48 +249,48 @@
   {
    "buffer": 0,
    "byteOffset": 0,
-   "byteLength": 61440
+   "byteLength": 73104
   },
   {
    "buffer": 0,
-   "byteOffset": 61440,
-   "byteLength": 61440
+   "byteOffset": 73104,
+   "byteLength": 73104
   },
   {
    "buffer": 0,
-   "byteOffset": 122880,
-   "byteLength": 40960
+   "byteOffset": 146208,
+   "byteLength": 48736
   },
   {
    "buffer": 0,
-   "byteOffset": 163840,
-   "byteLength": 6732
+   "byteOffset": 194944,
+   "byteLength": 8064
   },
   {
    "buffer": 0,
-   "byteOffset": 170572,
+   "byteOffset": 203008,
    "byteLength": 336
   },
   {
    "buffer": 0,
-   "byteOffset": 170908,
+   "byteOffset": 203344,
    "byteLength": 36
   },
   {
    "buffer": 0,
-   "byteOffset": 170944,
-   "byteLength": 4080
+   "byteOffset": 203380,
+   "byteLength": 4752
   },
   {
    "buffer": 0,
-   "byteOffset": 175024,
-   "byteLength": 4296
+   "byteOffset": 208132,
+   "byteLength": 5208
   }
  ],
  "buffers": [
   {
    "uri": "cyxd_garage22.bin",
-   "byteLength": 179320
+   "byteLength": 213340
   }
  ]
 }
