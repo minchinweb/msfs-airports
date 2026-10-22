@@ -1322,13 +1322,13 @@ def garage22():
 
 # Second hangar by Kingsway ("orange", 1930s-1982) --------------------------------------------
 # Proper position: centre 53.56945, -113.52610 (about +-50 m, placed on the 1944 aerial from the 118 Ave / Kingsway junction; docs/cyxd/open-questions.md),
-# heading 57.78 (front to the NE apron), footprint now 76 x 52 m (was 70 x 44; EA-207-440, 1990).  At that spot the exclusion polygon (footprint + 6 m) also removes the Chateau Nova Hotel
+# heading 57.78 (front to the NE apron), footprint 70 x 44 m.  At that spot the exclusion polygon (footprint + 6 m) also removes the Chateau Nova Hotel
 # (OSM way 230718905, 109 x 88 m, its NE corner reaches into the footprint).  To keep the hotel the whole model is moved ORANGE_SHIFT_NE_M metres toward
-# the apron (18 m since the 2026-10-21 enlargement: the back edge stays where it was, the front grows), which also puts the exclusion 3 m short of Blue (the 1938 hangar).  To bring it back to its proper position set ORANGE_SHIFT_NE_M = 0.0
-# (and accept losing the hotel, or rebuild the hotel as a model).  The size is now 76 x 52 m (photo EA-207-440); at shift 0 the back edge would
-# be 8 m further SW, so lower the shift to 10 if the hotel is gone.
+# the apron, which also puts the exclusion 3 m short of Blue (the 1938 hangar).  To bring it back to its proper position set ORANGE_SHIFT_NE_M = 0.0
+# (and accept losing the hotel, or rebuild the hotel as a model).  The size itself is the proper 70 x 44 m; for the larger 1944-aerial reading
+# (about 70 x 55 m) raise D in the HANGARS row and the z extents in hangar_second(), and move the shift up by half the difference.
 ORANGE_LAT, ORANGE_LON, ORANGE_HDG = 53.56945, -113.52610, 57.78
-ORANGE_SHIFT_NE_M = 18.0
+ORANGE_SHIFT_NE_M = 14.0
 
 
 def _orange_pos():
@@ -1337,45 +1337,38 @@ def _orange_pos():
 
 
 def hangar_second():
-    """The second barrel-vault hangar beside Kingsway, still standing in 1990 (user's "orange"; postcard PC013987 far hangar, City Archives ET-28-900 of 1982,
-    EA-207-440 of 1990 = Hudson General, the 1944 aerial).  Massing only: a pale two-storey flat-roofed wing with ribbon windows and a red band at the left,
-    brick towers flush with the front at the ends of the barrel-vault hall, the hall with a dark roof and a big door opening under its arched front, a low
-    service block behind the wing.
-    Frame: +Z = front (NE, apron), +X = right of the front; footprint x -38..38, z -26..26.  Details of the wing and the towers are guesses.
-    Size from EA-207-440 (2026-10-21): the blue front wall of the 1990 hall is about 12 window bays wide and the pickups and sedan on the road give a ground-plane
-    scale of 14-25 px/m at the wall, so the hall front is 50-75 m wide, its eaves 7-12 m and its apex 13-24 m.  Taken: span 53 m, eaves 10 m, apex 18.5 m
-    (the first model was 38 m, 7 m and 12.5 m and read as small beside the photo)."""
+    """The second barrel-vault hangar beside Kingsway, still standing in 1982 (user's "orange"; postcard PC013987 far hangar, City Archives ET-28-900 of 1982,
+    the 1944 aerial).  Massing only: a pale two-storey flat-roofed wing with ribbon windows and a red band at the left, brick towers flush with the front at
+    the ends of the barrel-vault hall, the hall with a dark roof and a big door opening under its arched front, a low service block behind the wing.
+    Frame: +Z = front (NE, apron), +X = right of the front; footprint x -35..35, z -22..22.  Details of the wing and the towers are guesses."""
     m = fmesh()
-    zf, zb = 26.0, -26.0
-    # wing x -38..-26: pale cream, two storeys, flat roof, red band under the parapet
-    wx0, wx1, wh = -38.0, -26.0, 8.8
-    m.box(wx0, wx1, 0, wh, -4.0, zf, CREAM, top=False)
-    m.box(wx0 - 0.2, wx1 + 0.2, wh, wh + 0.4, -4.2, zf + 0.2, DGREY)
-    m.box(wx0, wx1, wh - 1.4, wh - 0.9, zf, zf + 0.1, RED)
-    for y in (1.6, 4.9):
-        rows_z(m, 1, zf, wx0, wx1, y, 3, 2.4, 1.8)
-        rows_x(m, -1, wx0, -2.0, zf - 1.0, y, 4, 2.4, 1.8)
-    m.box(-33.0, -31.0, 0, 2.4, zf, zf + 0.1, DARK)  # entrance
-    m.box(wx0, wx1, 0, 5.0, zb, -4.0, CREAM, top=True)  # low service block behind the wing
-    # barrel-vault hall x -21..32 (span 53), z -26..26: eaves 10 m, apex 18.5 m
-    xh0, xh1, wall, rise = -21.0, 32.0, 10.0, 8.5
+    zf, zb = 22.0, -22.0
+    # wing x -35..-15: pale cream, two storeys, flat roof, red band under the parapet
+    m.box(-35.0, -15.0, 0, 7.4, -4.0, zf, CREAM, top=False)
+    m.box(-35.2, -14.8, 7.4, 7.8, -4.2, zf + 0.2, DGREY)
+    m.box(-35.0, -15.0, 6.2, 6.7, zf, zf + 0.1, RED)
+    for y in (1.4, 4.0):
+        rows_z(m, 1, zf, -35.0, -15.0, y, 5, 2.4, 1.5)
+        rows_x(m, -1, -35.0, -2.0, zf - 1.0, y, 4, 2.4, 1.5)
+    m.box(-28.0, -26.0, 0, 2.3, zf, zf + 0.1, DARK)  # entrance
+    m.box(-35.0, -15.0, 0, 4.4, zb, -4.0, CREAM, top=True)  # low service block behind the wing
+    # barrel-vault hall x -9..29 (span 38), z -22..22
+    xh0, xh1, wall, rise = -9.0, 29.0, 7.0, 5.5
     m.box(xh0, xh1, 0, wall, zb, zf, CREAM, top=False)
-    n = 20
+    n = 16
     prof = [(-math.cos(math.pi * i / n) * (xh1 - xh0) / 2 + (xh0 + xh1) / 2, wall + math.sin(math.pi * i / n) * rise) for i in range(n + 1)]
     for i in range(n):
         (xa, ya), (xb, yb) = prof[i], prof[i + 1]
         m.poly([(xa, ya, zb), (xb, yb, zb), (xb, yb, zf), (xa, ya, zf)], METAL, (0, wall - 3, 0))
     for z in (zf, zb):
         m.poly([(xh0, wall, z)] + [(x, y, z) for x, y in prof] + [(xh1, wall, z)], CREAM, (0, wall, 0))
-    m.box(xh0 + 3.0, xh1 - 3.0, 0, 9.0, zf, zf + 0.1, DARK)  # door opening
-    nl = 6
-    dw = (xh1 - xh0 - 6.0) / nl
-    for k in range(nl):
-        m.box(xh0 + 3.1 + k * dw, xh0 + 3.0 + (k + 1) * dw - 0.1, 0, 8.8, zf + 0.1, zf + 0.3, DOORG)
-    window_row(m, xh0 + 8.0, xh1 - 8.0, wall + 1.0, zf, 7, 1.4, 1.2, (0, 0, 1), "x")
+    m.box(-6.0, 26.0, 0, 6.6, zf, zf + 0.1, DARK)  # door opening
+    for k in range(4):
+        m.box(-5.9 + k * 8.0, 1.9 + k * 8.0, 0, 6.4, zf + 0.1, zf + 0.3, DOORG)
+    window_row(m, xh0 + 0.5, xh1 - 0.5, 7.4, zf, 9, 1.4, 1.2, (0, 0, 1), "x")
     for sgn in (-1, 1):
-        for i in range(8):
-            m.window((sgn, 0, 0), (xh0 if sgn < 0 else xh1, 3.0, zb + 4 + i * 6.0), (0, 0, 1), 3.0, 4.5)
+        for i in range(6):
+            m.window((sgn, 0, 0), (xh0 if sgn < 0 else xh1, 3.2, zb + 4 + i * 6.5), (0, 0, 1), 3.0, 1.6)
 
     def brick_tower(x0, x1, h, floors):
         z0 = zf - (x1 - x0)
@@ -1385,8 +1378,8 @@ def hangar_second():
             y = 1.6 + f * (h - 3.0) / floors
             m.window((0, 0, 1), (x0 + 1.0, y, zf), (1, 0, 0), x1 - x0 - 2.0, 1.8)
             m.window((0, 0, -1), (x0 + 1.0, y, z0), (1, 0, 0), x1 - x0 - 2.0, 1.8)
-    brick_tower(-26.0, -21.0, 14.5, 3)
-    brick_tower(32.0, 38.0, 17.0, 4)
+    brick_tower(-15.0, -9.0, 13.0, 3)
+    brick_tower(29.0, 35.0, 15.0, 4)
     m.mirror_x()
     return m
 
@@ -1407,7 +1400,7 @@ HANGARS = [
     ("cyxd_hangar40", "Hangar 40 (Canadian Helicopters, white roof of OSM 230718900)", hangar40, 53.575004, -113.529385, 228, 72.0, 46.0),
     ("cyxd_hangar21", "Hangar 21 (old terminal, OSM 230718907; traced from the 2017 imagery)", hangar21, 53.570940, -113.523178, 51, 162.0, 70.0),
     ("cyxd_garage22", "Terminal parking garage (22; traced from the 2017 imagery)", garage22, 53.570567, -113.524067, 58, 100.0, 72.0),
-    ("cyxd_hangar_second", "Second hangar by Kingsway (1930s-1982; barrel vault, pale wing, brick towers)", hangar_second, *_orange_pos(), ORANGE_HDG, 76.0, 52.0),
+    ("cyxd_hangar_second", "Second hangar by Kingsway (1930s-1982; barrel vault, pale wing, brick towers)", hangar_second, *_orange_pos(), ORANGE_HDG, 70.0, 44.0),
     ("cyxd_hangar3", "Hangar 3 (pale-blue flat-roofed hangar, traced from the 2014 imagery)", hangar3, 53.574710, -113.508533, 90, 81.6, 25.7),
     ("cyxd_hangar3_annex", "Hangar 3 tan block annex (south end)", hangar3_annex, 53.574273, -113.508547, 90, 15.9, 13.2),
     ("cyxd_bluehangar", "Dark-blue gabled hangar north of Hangar 3 (5 109 St NW, OSM 325272095)", bluehangar, 53.575629, -113.508404, 180, 20.7, 24.6),

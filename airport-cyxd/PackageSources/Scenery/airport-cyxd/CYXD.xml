@@ -1051,7 +1051,7 @@
 		<LibraryObject name="{9A6AA281-EF8A-5225-9ABE-984619C7262E}" scale="1.000000"/>
 	</SceneryObject>
 	<!-- Second hangar by Kingsway (1930s-1982; barrel vault, pale wing, brick towers) -->
-	<SceneryObject lat="53.56953630" lon="-113.52586986" alt="0.00000000000000" pitch="0.000000" bank="0.000000" heading="57.78" imageComplexity="VERY_SPARSE" altitudeIsAgl="TRUE" snapToGround="TRUE" snapToNormal="FALSE">
+	<SceneryObject lat="53.56951713" lon="-113.52592100" alt="0.00000000000000" pitch="0.000000" bank="0.000000" heading="57.78" imageComplexity="VERY_SPARSE" altitudeIsAgl="TRUE" snapToGround="TRUE" snapToNormal="FALSE">
 		<LibraryObject name="{94EB3876-FA6C-5B8E-A15E-DDBDDD820061}" scale="1.000000"/>
 	</SceneryObject>
 	<!-- Hangar 3 (pale-blue flat-roofed hangar, traced from the 2014 imagery) -->
@@ -1433,10 +1433,10 @@
 		<Attribute name="ExcludeMSBuildings" guid="{F78A3074-8AD5-4B8B-92C4-C1C948BB7AA5}" type="UINT8" value="1"/>
 		<Attribute name="ExcludeTIN" guid="{18B58CBF-AE02-4A19-8AA9-3809E8E73400}" type="UINT8" value="1"/>
 		<Attribute name="ExclusionFlags" guid="{4CACC252-E6DC-419A-B20C-16EC601DF70E}" type="UINT32" value="3"/>
-		<Vertex lat="53.56971762033081" lon="-113.52663352599205"/>
-		<Vertex lat="53.56904811830474" lon="-113.52592445688785"/>
-		<Vertex lat="53.56935497966919" lon="-113.52510619400795"/>
-		<Vertex lat="53.57002448169526" lon="-113.52581526311215"/>
+		<Vertex lat="53.56969480523338" lon="-113.52660935175167"/>
+		<Vertex lat="53.56907095107272" lon="-113.52594862826822"/>
+		<Vertex lat="53.56933945476662" lon="-113.52523264824832"/>
+		<Vertex lat="53.56996330892728" lon="-113.52589337173177"/>
 	</Polygon>
 	<Polygon version="0.4.0" displayName="No generated buildings: Hangar 3 (pale-blue flat-roofed hangar, traced from the 2014" parentGroupID="6" altitude="667.68023681640625">
 		<Attribute name="UniqueGUID" guid="{359C73E8-06BE-4FB2-ABCB-EC942F7761D0}" type="GUID" value="{137BB838-2F51-52EE-AA73-B210DBC3D4B2}"/>
