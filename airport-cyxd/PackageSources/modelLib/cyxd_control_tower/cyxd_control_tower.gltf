@@ -108,7 +108,7 @@
   {
    "bufferView": 0,
    "componentType": 5126,
-   "count": 3964,
+   "count": 5144,
    "type": "VEC3",
    "min": [
     -16.849999999999998,
@@ -124,19 +124,19 @@
   {
    "bufferView": 1,
    "componentType": 5126,
-   "count": 3964,
+   "count": 5144,
    "type": "VEC3"
   },
   {
    "bufferView": 2,
    "componentType": 5126,
-   "count": 3964,
+   "count": 5144,
    "type": "VEC2"
   },
   {
    "bufferView": 3,
    "componentType": 5123,
-   "count": 5982,
+   "count": 7752,
    "type": "SCALAR"
   },
   {
@@ -150,33 +150,33 @@
   {
    "buffer": 0,
    "byteOffset": 0,
-   "byteLength": 47568
+   "byteLength": 61728
   },
   {
    "buffer": 0,
-   "byteOffset": 47568,
-   "byteLength": 47568
+   "byteOffset": 61728,
+   "byteLength": 61728
   },
   {
    "buffer": 0,
-   "byteOffset": 95136,
-   "byteLength": 31712
+   "byteOffset": 123456,
+   "byteLength": 41152
   },
   {
    "buffer": 0,
-   "byteOffset": 126848,
-   "byteLength": 11964
+   "byteOffset": 164608,
+   "byteLength": 15504
   },
   {
    "buffer": 0,
-   "byteOffset": 138812,
+   "byteOffset": 180112,
    "byteLength": 180
   }
  ],
  "buffers": [
   {
    "uri": "cyxd_control_tower.bin",
-   "byteLength": 138992
+   "byteLength": 180292
   }
  ]
 }

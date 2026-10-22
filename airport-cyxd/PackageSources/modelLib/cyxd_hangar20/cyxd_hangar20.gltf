@@ -58,6 +58,16 @@
      "indices": 5,
      "mode": 4,
      "material": 2
+    },
+    {
+     "attributes": {
+      "POSITION": 0,
+      "NORMAL": 1,
+      "TEXCOORD_0": 2
+     },
+     "indices": 6,
+     "mode": 4,
+     "material": 3
     }
    ]
   }
@@ -84,10 +94,20 @@
    }
   },
   {
-   "name": "cyxd_esso",
+   "name": "cyxd_shingle_grey",
    "pbrMetallicRoughness": {
     "baseColorTexture": {
      "index": 2
+    },
+    "metallicFactor": 0.0,
+    "roughnessFactor": 0.9
+   }
+  },
+  {
+   "name": "cyxd_esso",
+   "pbrMetallicRoughness": {
+    "baseColorTexture": {
+     "index": 3
     },
     "metallicFactor": 0.0,
     "roughnessFactor": 0.9
@@ -106,6 +126,10 @@
   {
    "sampler": 1,
    "source": 2
+  },
+  {
+   "sampler": 1,
+   "source": 3
   }
  ],
  "samplers": [
@@ -128,6 +152,9 @@
    "uri": "cyxd_siding.png"
   },
   {
+   "uri": "cyxd_shingle_grey.png"
+  },
+  {
    "uri": "cyxd_esso.png"
   }
  ],
@@ -135,35 +162,35 @@
   {
    "bufferView": 0,
    "componentType": 5126,
-   "count": 2009,
+   "count": 2269,
    "type": "VEC3",
    "min": [
-    -22.76,
+    -22.74,
     0,
-    -22.76
+    -22.74
    ],
    "max": [
-    32.76,
+    32.74,
     12.0,
-    30.76
+    30.74
    ]
   },
   {
    "bufferView": 1,
    "componentType": 5126,
-   "count": 2009,
+   "count": 2269,
    "type": "VEC3"
   },
   {
    "bufferView": 2,
    "componentType": 5126,
-   "count": 2009,
+   "count": 2269,
    "type": "VEC2"
   },
   {
    "bufferView": 3,
    "componentType": 5123,
-   "count": 2949,
+   "count": 3183,
    "type": "SCALAR"
   },
   {
@@ -175,6 +202,12 @@
   {
    "bufferView": 5,
    "componentType": 5123,
+   "count": 156,
+   "type": "SCALAR"
+  },
+  {
+   "bufferView": 6,
+   "componentType": 5123,
    "count": 90,
    "type": "SCALAR"
   }
@@ -183,38 +216,43 @@
   {
    "buffer": 0,
    "byteOffset": 0,
-   "byteLength": 24108
+   "byteLength": 27228
   },
   {
    "buffer": 0,
-   "byteOffset": 24108,
-   "byteLength": 24108
+   "byteOffset": 27228,
+   "byteLength": 27228
   },
   {
    "buffer": 0,
-   "byteOffset": 48216,
-   "byteLength": 16072
+   "byteOffset": 54456,
+   "byteLength": 18152
   },
   {
    "buffer": 0,
-   "byteOffset": 64288,
-   "byteLength": 5898
+   "byteOffset": 72608,
+   "byteLength": 6366
   },
   {
    "buffer": 0,
-   "byteOffset": 70188,
+   "byteOffset": 78976,
    "byteLength": 192
   },
   {
    "buffer": 0,
-   "byteOffset": 70380,
+   "byteOffset": 79168,
+   "byteLength": 312
+  },
+  {
+   "buffer": 0,
+   "byteOffset": 79480,
    "byteLength": 180
   }
  ],
  "buffers": [
   {
    "uri": "cyxd_hangar20.bin",
-   "byteLength": 70560
+   "byteLength": 79660
   }
  ]
 }

@@ -351,10 +351,10 @@
   {
    "bufferView": 0,
    "componentType": 5126,
-   "count": 6208,
+   "count": 7068,
    "type": "VEC3",
    "min": [
-    -44.26,
+    -44.24,
     -0.09,
     -43.6
    ],
@@ -367,19 +367,19 @@
   {
    "bufferView": 1,
    "componentType": 5126,
-   "count": 6208,
+   "count": 7068,
    "type": "VEC3"
   },
   {
    "bufferView": 2,
    "componentType": 5126,
-   "count": 6208,
+   "count": 7068,
    "type": "VEC2"
   },
   {
    "bufferView": 3,
    "componentType": 5123,
-   "count": 7968,
+   "count": 8742,
    "type": "SCALAR"
   },
   {
@@ -397,7 +397,7 @@
   {
    "bufferView": 6,
    "componentType": 5123,
-   "count": 12,
+   "count": 528,
    "type": "SCALAR"
   },
   {
@@ -447,78 +447,78 @@
   {
    "buffer": 0,
    "byteOffset": 0,
-   "byteLength": 74496
+   "byteLength": 84816
   },
   {
    "buffer": 0,
-   "byteOffset": 74496,
-   "byteLength": 74496
+   "byteOffset": 84816,
+   "byteLength": 84816
   },
   {
    "buffer": 0,
-   "byteOffset": 148992,
-   "byteLength": 49664
+   "byteOffset": 169632,
+   "byteLength": 56544
   },
   {
    "buffer": 0,
-   "byteOffset": 198656,
-   "byteLength": 15936
+   "byteOffset": 226176,
+   "byteLength": 17484
   },
   {
    "buffer": 0,
-   "byteOffset": 214592,
+   "byteOffset": 243660,
    "byteLength": 336
   },
   {
    "buffer": 0,
-   "byteOffset": 214928,
+   "byteOffset": 243996,
    "byteLength": 24
   },
   {
    "buffer": 0,
-   "byteOffset": 214952,
-   "byteLength": 24
+   "byteOffset": 244020,
+   "byteLength": 1056
   },
   {
    "buffer": 0,
-   "byteOffset": 214976,
+   "byteOffset": 245076,
    "byteLength": 1584
   },
   {
    "buffer": 0,
-   "byteOffset": 216560,
+   "byteOffset": 246660,
    "byteLength": 48
   },
   {
    "buffer": 0,
-   "byteOffset": 216608,
+   "byteOffset": 246708,
    "byteLength": 60
   },
   {
    "buffer": 0,
-   "byteOffset": 216668,
+   "byteOffset": 246768,
    "byteLength": 432
   },
   {
    "buffer": 0,
-   "byteOffset": 217100,
+   "byteOffset": 247200,
    "byteLength": 288
   },
   {
    "buffer": 0,
-   "byteOffset": 217388,
+   "byteOffset": 247488,
    "byteLength": 48
   },
   {
    "buffer": 0,
-   "byteOffset": 217436,
+   "byteOffset": 247536,
    "byteLength": 24
   }
  ],
  "buffers": [
   {
    "uri": "cyxd_hangar18.bin",
-   "byteLength": 217460
+   "byteLength": 247560
   }
  ]
 }

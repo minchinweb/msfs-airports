@@ -162,7 +162,7 @@
   {
    "bufferView": 0,
    "componentType": 5126,
-   "count": 9214,
+   "count": 9234,
    "type": "VEC3",
    "min": [
     -51.06,
@@ -178,19 +178,19 @@
   {
    "bufferView": 1,
    "componentType": 5126,
-   "count": 9214,
+   "count": 9234,
    "type": "VEC3"
   },
   {
    "bufferView": 2,
    "componentType": 5126,
-   "count": 9214,
+   "count": 9234,
    "type": "VEC2"
   },
   {
    "bufferView": 3,
    "componentType": 5123,
-   "count": 13650,
+   "count": 13668,
    "type": "SCALAR"
   },
   {
@@ -208,7 +208,7 @@
   {
    "bufferView": 6,
    "componentType": 5123,
-   "count": 12,
+   "count": 24,
    "type": "SCALAR"
   }
  ],
@@ -216,43 +216,43 @@
   {
    "buffer": 0,
    "byteOffset": 0,
-   "byteLength": 110568
+   "byteLength": 110808
   },
   {
    "buffer": 0,
-   "byteOffset": 110568,
-   "byteLength": 110568
+   "byteOffset": 110808,
+   "byteLength": 110808
   },
   {
    "buffer": 0,
-   "byteOffset": 221136,
-   "byteLength": 73712
+   "byteOffset": 221616,
+   "byteLength": 73872
   },
   {
    "buffer": 0,
-   "byteOffset": 294848,
-   "byteLength": 27300
+   "byteOffset": 295488,
+   "byteLength": 27336
   },
   {
    "buffer": 0,
-   "byteOffset": 322148,
+   "byteOffset": 322824,
    "byteLength": 300
   },
   {
    "buffer": 0,
-   "byteOffset": 322448,
+   "byteOffset": 323124,
    "byteLength": 12
   },
   {
    "buffer": 0,
-   "byteOffset": 322460,
-   "byteLength": 24
+   "byteOffset": 323136,
+   "byteLength": 48
   }
  ],
  "buffers": [
   {
    "uri": "cyxd_ndb_xd.bin",
-   "byteLength": 322484
+   "byteLength": 323184
   }
  ]
 }

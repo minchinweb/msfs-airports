@@ -158,6 +158,7 @@ class Mesh:
         self.pos, self.nrm, self.uv, self.idx = [], [], [], []
         self.tri_mat = []  # material key per triangle ("flat" = palette swatch, else a TEX_NAMES entry)
         self.textured = textured
+        self.keepouts = []  # boxes where windows are not drawn, see keepout()
         self.frame = None  # swatch for a projecting window frame + sill (None = flat quads); hangars.py turns it on so windows read as set in the wall
 
     def poly(self, pts, sw, centre, tex=None, uvs=None):
@@ -238,29 +239,51 @@ class Mesh:
             self.poly([P(x0, y0, z0), P(x0, y0, z1), P(x0, yr, zm)], sw_wall, (c[0] + 1, y0 - 1, zm))
             self.poly([P(x1, y0, z0), P(x1, y0, z1), P(x1, yr, zm)], sw_wall, (c[0] - 1, y0 - 1, zm))
 
+    def keepout(self, x0, x1, y0, y1, z0, z1):
+        """Exclusion box (model frame, before mirror_x): any window/frame whose bounding box touches it is skipped.  Use it where a sign,
+        roundel or door sits on a wall that a window row would otherwise cross, e.g. m.keepout(x - 3, x + 3, 5, 9, z - 1, z + 1)."""
+        self.keepouts.append((x0, x1, y0, y1, z0, z1))
+
+    def blocked(self, x0, x1, y0, y1, z0, z1):
+        return any(x0 < k[1] and x1 > k[0] and y0 < k[3] and y1 > k[2] and z0 < k[5] and z1 > k[4] for k in self.keepouts)
+
     def window(self, face, origin, u_axis, w, h, off=0.06, frame=None):
-        """Dark window quad lying on a wall: origin = lower-left corner on the wall, face = outward normal.  With a frame swatch (argument
-        or self.frame) the pane gets a projecting surround and a deeper sill, so it reads as recessed instead of painted on."""
-        o = [origin[i] + face[i] * off for i in range(3)]
-        up = (0, 1, 0)
-        p = [tuple(o[i] for i in range(3)),
-             tuple(o[i] + u_axis[i] * w for i in range(3)),
-             tuple(o[i] + u_axis[i] * w + up[i] * h for i in range(3)),
-             tuple(o[i] + up[i] * h for i in range(3))]
-        centre = tuple(p[0][i] - face[i] for i in range(3))
-        self.poly(p, DARK, centre)
+        """Dark window on a wall: origin = lower-left corner on the wall, face = outward normal.  The glass is the front face of a closed
+        dark backing box sunk into the wall, so nothing can be seen through the opening; the surround and sill are embedded in the wall
+        (no standoff gap, so no floating frame or odd shadows).  Skipped if inside a keepout box (see keepout)."""
         fr = self.frame if frame is None else frame
+        ext = 0.4 if fr is not None else 0.1
+        ca = [origin[i] + u_axis[i] * w for i in range(3)]
+        if self.keepouts and self.blocked(
+                min(origin[0], ca[0]) - ext + min(face[0], 0) * ext, max(origin[0], ca[0]) + ext + max(face[0], 0) * ext, origin[1] - ext, origin[1] + h + ext,
+                min(origin[2], ca[2]) - ext + min(face[2], 0) * ext, max(origin[2], ca[2]) + ext + max(face[2], 0) * ext):
+            return
+        gl = min(off, 0.03)  # glass plane: a hair off the wall, below the frame's projection
+        up = (0, 1, 0)
+
+        def corner(du, dv, dn):
+            return tuple(origin[i] + u_axis[i] * du + up[i] * dv + face[i] * dn for i in range(3))
+        # backing box: sunk 0.1 into the wall, glass face at gl
+        c = corner(w / 2, h / 2, -0.05)
+        self.poly([corner(0, 0, gl), corner(w, 0, gl), corner(w, h, gl), corner(0, h, gl)], DARK, c)
+        for pts in ([corner(0, 0, -0.1), corner(w, 0, -0.1), corner(w, 0, gl), corner(0, 0, gl)],
+                    [corner(0, h, -0.1), corner(w, h, -0.1), corner(w, h, gl), corner(0, h, gl)],
+                    [corner(0, 0, -0.1), corner(0, h, -0.1), corner(0, h, gl), corner(0, 0, gl)],
+                    [corner(w, 0, -0.1), corner(w, h, -0.1), corner(w, h, gl), corner(w, 0, gl)],
+                    [corner(0, 0, -0.1), corner(w, 0, -0.1), corner(w, h, -0.1), corner(0, h, -0.1)]):
+            self.poly(pts, DARK, c)  # reveal and back; normals point away from the centre, i.e. into the room-side of the opening
         if fr is None or len(self.pos) > 48000 or w < 0.5 or h < 0.5:
             return
-        b, d, sd = 0.09, 0.16, 0.26  # frame width, projection from the wall, sill projection
+        b, d, sd = 0.09, 0.14, 0.24  # frame width, projection from the wall, sill projection
+        emb = -0.06  # frame boxes start inside the wall, so they meet it with no gap
 
         def piece(u0, u1, y0, y1, dn):
             xs, zs = [], []
             for uu in (u0, u1):
                 xs.append(origin[0] + u_axis[0] * uu + face[0] * dn)
                 zs.append(origin[2] + u_axis[2] * uu + face[2] * dn)
-            xs.append(origin[0] + u_axis[0] * u0 + face[0] * (off - 0.02))
-            zs.append(origin[2] + u_axis[2] * u0 + face[2] * (off - 0.02))
+            xs.append(origin[0] + u_axis[0] * u0 + face[0] * emb)
+            zs.append(origin[2] + u_axis[2] * u0 + face[2] * emb)
             self.box(min(xs), max(xs), origin[1] + y0, origin[1] + y1, min(zs), max(zs), fr, top=True)
         piece(-b, w + b, h, h + b, d)  # head
         piece(-b - 0.04, w + b + 0.04, -b, 0.0, sd)  # sill

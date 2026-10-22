@@ -60,8 +60,10 @@ def louvres(m, zplane, xs, rows, front=1, sw=DGREY, off=0.3):
 
 def pane_x(m, sgn, xplane, zc, y0, w, h, cols=2, rows=2, fw=0.08, sw=TEAL, depth=0.1):
     """Framed window on a wall with outward normal (sgn, 0, 0): dark glass, a frame of width fw and cols x rows panes (zc = centre along z)."""
-    xa, xb = (xplane + 0.05, xplane + 0.05 + depth) if sgn > 0 else (xplane - 0.05 - depth, xplane - 0.05)
+    xa, xb = (xplane - 0.05, xplane + depth) if sgn > 0 else (xplane - depth, xplane + 0.05)
     za, zb = zc - w / 2, zc + w / 2
+    if m.blocked(xplane - 0.5, xplane + 0.5, y0 - 0.2, y0 + h + 0.2, za - 0.2, zb + 0.2):
+        return
     m.window((sgn, 0, 0), (xplane, y0, za), (0, 0, 1), w, h)
     for z in (za, zb - fw):
         m.box(xa, xb, y0, y0 + h, z, z + fw, sw)
@@ -77,8 +79,10 @@ def pane_x(m, sgn, xplane, zc, y0, w, h, cols=2, rows=2, fw=0.08, sw=TEAL, depth
 
 def pane_z(m, sgn, zplane, xc, y0, w, h, cols=2, rows=2, fw=0.08, sw=TEAL, depth=0.1):
     """Same as pane_x on a wall with outward normal (0, 0, sgn); xc = centre along x."""
-    za, zb = (zplane + 0.05, zplane + 0.05 + depth) if sgn > 0 else (zplane - 0.05 - depth, zplane - 0.05)
+    za, zb = (zplane - 0.05, zplane + depth) if sgn > 0 else (zplane - depth, zplane + 0.05)
     xa, xb = xc - w / 2, xc + w / 2
+    if m.blocked(xa - 0.2, xb + 0.2, y0 - 0.2, y0 + h + 0.2, zplane - 0.5, zplane + 0.5):
+        return
     m.window((0, 0, sgn), (xa, y0, zplane), (1, 0, 0), w, h)
     for x in (xa, xb - fw):
         m.box(x, x + fw, y0, y0 + h, za, zb, sw)

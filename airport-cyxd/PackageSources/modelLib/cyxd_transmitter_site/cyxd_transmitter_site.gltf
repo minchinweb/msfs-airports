@@ -58,6 +58,16 @@
      "indices": 5,
      "mode": 4,
      "material": 2
+    },
+    {
+     "attributes": {
+      "POSITION": 0,
+      "NORMAL": 1,
+      "TEXCOORD_0": 2
+     },
+     "indices": 6,
+     "mode": 4,
+     "material": 3
     }
    ]
   }
@@ -92,6 +102,16 @@
     "metallicFactor": 0.0,
     "roughnessFactor": 0.9
    }
+  },
+  {
+   "name": "cyxd_shingle_grey",
+   "pbrMetallicRoughness": {
+    "baseColorTexture": {
+     "index": 3
+    },
+    "metallicFactor": 0.0,
+    "roughnessFactor": 0.9
+   }
   }
  ],
  "textures": [
@@ -106,6 +126,10 @@
   {
    "sampler": 1,
    "source": 2
+  },
+  {
+   "sampler": 1,
+   "source": 3
   }
  ],
  "samplers": [
@@ -129,13 +153,16 @@
   },
   {
    "uri": "cyxd_shingle_red.png"
+  },
+  {
+   "uri": "cyxd_shingle_grey.png"
   }
  ],
  "accessors": [
   {
    "bufferView": 0,
    "componentType": 5126,
-   "count": 1568,
+   "count": 1848,
    "type": "VEC3",
    "min": [
     -58.45,
@@ -151,19 +178,19 @@
   {
    "bufferView": 1,
    "componentType": 5126,
-   "count": 1568,
+   "count": 1848,
    "type": "VEC3"
   },
   {
    "bufferView": 2,
    "componentType": 5126,
-   "count": 1568,
+   "count": 1848,
    "type": "VEC2"
   },
   {
    "bufferView": 3,
    "componentType": 5123,
-   "count": 1248,
+   "count": 1500,
    "type": "SCALAR"
   },
   {
@@ -177,44 +204,55 @@
    "componentType": 5123,
    "count": 54,
    "type": "SCALAR"
+  },
+  {
+   "bufferView": 6,
+   "componentType": 5123,
+   "count": 168,
+   "type": "SCALAR"
   }
  ],
  "bufferViews": [
   {
    "buffer": 0,
    "byteOffset": 0,
-   "byteLength": 18816
+   "byteLength": 22176
   },
   {
    "buffer": 0,
-   "byteOffset": 18816,
-   "byteLength": 18816
+   "byteOffset": 22176,
+   "byteLength": 22176
   },
   {
    "buffer": 0,
-   "byteOffset": 37632,
-   "byteLength": 12544
+   "byteOffset": 44352,
+   "byteLength": 14784
   },
   {
    "buffer": 0,
-   "byteOffset": 50176,
-   "byteLength": 2496
+   "byteOffset": 59136,
+   "byteLength": 3000
   },
   {
    "buffer": 0,
-   "byteOffset": 52672,
+   "byteOffset": 62136,
    "byteLength": 2088
   },
   {
    "buffer": 0,
-   "byteOffset": 54760,
+   "byteOffset": 64224,
    "byteLength": 108
+  },
+  {
+   "buffer": 0,
+   "byteOffset": 64332,
+   "byteLength": 336
   }
  ],
  "buffers": [
   {
    "uri": "cyxd_transmitter_site.bin",
-   "byteLength": 54868
+   "byteLength": 64668
   }
  ]
 }

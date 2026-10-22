@@ -58,6 +58,16 @@
      "indices": 5,
      "mode": 4,
      "material": 2
+    },
+    {
+     "attributes": {
+      "POSITION": 0,
+      "NORMAL": 1,
+      "TEXCOORD_0": 2
+     },
+     "indices": 6,
+     "mode": 4,
+     "material": 3
     }
    ]
   }
@@ -92,6 +102,16 @@
     "metallicFactor": 0.0,
     "roughnessFactor": 0.9
    }
+  },
+  {
+   "name": "cyxd_shingle_grey",
+   "pbrMetallicRoughness": {
+    "baseColorTexture": {
+     "index": 3
+    },
+    "metallicFactor": 0.0,
+    "roughnessFactor": 0.9
+   }
   }
  ],
  "textures": [
@@ -106,6 +126,10 @@
   {
    "sampler": 1,
    "source": 2
+  },
+  {
+   "sampler": 1,
+   "source": 3
   }
  ],
  "samplers": [
@@ -129,13 +153,16 @@
   },
   {
    "uri": "cyxd_shingle_red.png"
+  },
+  {
+   "uri": "cyxd_shingle_grey.png"
   }
  ],
  "accessors": [
   {
    "bufferView": 0,
    "componentType": 5126,
-   "count": 5366,
+   "count": 5386,
    "type": "VEC3",
    "min": [
     -38.06,
@@ -151,19 +178,19 @@
   {
    "bufferView": 1,
    "componentType": 5126,
-   "count": 5366,
+   "count": 5386,
    "type": "VEC3"
   },
   {
    "bufferView": 2,
    "componentType": 5126,
-   "count": 5366,
+   "count": 5386,
    "type": "VEC2"
   },
   {
    "bufferView": 3,
    "componentType": 5123,
-   "count": 7848,
+   "count": 7866,
    "type": "SCALAR"
   },
   {
@@ -177,44 +204,55 @@
    "componentType": 5123,
    "count": 24,
    "type": "SCALAR"
+  },
+  {
+   "bufferView": 6,
+   "componentType": 5123,
+   "count": 12,
+   "type": "SCALAR"
   }
  ],
  "bufferViews": [
   {
    "buffer": 0,
    "byteOffset": 0,
-   "byteLength": 64392
+   "byteLength": 64632
   },
   {
    "buffer": 0,
-   "byteOffset": 64392,
-   "byteLength": 64392
+   "byteOffset": 64632,
+   "byteLength": 64632
   },
   {
    "buffer": 0,
-   "byteOffset": 128784,
-   "byteLength": 42928
+   "byteOffset": 129264,
+   "byteLength": 43088
   },
   {
    "buffer": 0,
-   "byteOffset": 171712,
-   "byteLength": 15696
+   "byteOffset": 172352,
+   "byteLength": 15732
   },
   {
    "buffer": 0,
-   "byteOffset": 187408,
+   "byteOffset": 188084,
    "byteLength": 348
   },
   {
    "buffer": 0,
-   "byteOffset": 187756,
+   "byteOffset": 188432,
    "byteLength": 48
+  },
+  {
+   "buffer": 0,
+   "byteOffset": 188480,
+   "byteLength": 24
   }
  ],
  "buffers": [
   {
    "uri": "cyxd_ndb_zxd.bin",
-   "byteLength": 187804
+   "byteLength": 188504
   }
  ]
 }
