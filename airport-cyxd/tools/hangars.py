@@ -128,7 +128,7 @@ def hangar4():
         m.poly(pts, sw, (cx, 3, z1 - 4))
     # two doors on the runway wall (1989 City of Edmonton archive photo EA-207-425): a dark open one at the north (viewer-left) end,
     # a white closed one at the south end, with a two-storey orange-panelled bay between them
-    cn, an = 17.5, a  # north door, x 3..32
+    cn, an = 18.5, 13.5  # north door, x 5..32 (a 1.5 m yellow strip, as in the 2010 photo, separates it from the orange bay)
     cs, as_ = -17.25, 12.75  # south door, x -30..-4.5
     arch_poly(cn, an, DARK)
     arch_poly(cs, as_, RWHITE)
@@ -142,10 +142,11 @@ def hangar4():
     m.box(-4.5, 3.0, 0, wh, z1, z1 + 0.3, SALMON)  # orange bay between the doors
     for y in (1.2, 5.0):
         m.window((0, 0, 1), (-1.75, y, z1 + 0.3), (1, 0, 0), 2.0, 1.6)
-    rx = (-4.5 + 3.0) / 2
-    number_disc(m, rx, 7.3, z1 + 0.3, (0, 1), 0.9, "4")
-    m.box(cn - 6.0, cn - 1.4, 8.5, 8.95, z1, z1 + 0.1, RWHITE)  # Government of Alberta sign, over the arch's shoulder
-    m.box(cn - 5.8, cn - 5.0, 8.6, 8.85, z1 + 0.1, z1 + 0.13, BLUE)
+    rx = 5.8  # the "4" roundel sits on the yellow wall above the door's south shoulder, next to the orange bay (2010 photo)
+    m.box(rx - 1.1, rx + 1.1, 7.0, 9.4, z1, z1 + 0.12, RWHITE)
+    number_disc(m, rx, 8.2, z1 + 0.12, (0, 1), 0.9, "4")
+    m.box(cn + an - 6.0, cn + an - 1.4, 7.9, 8.45, z1, z1 + 0.1, RWHITE)  # Government of Alberta sign over the north shoulder (viewer-left)
+    m.box(cn + an - 2.5, cn + an - 1.5, 7.95, 8.4, z1 + 0.1, z1 + 0.13, BLUE)  # Alberta logo at its north end
     m.box(x1, x1 + 10.0, 0, 4.6, z1 - 16.0, z1, BRICKD)
     roof_vents(m, [(0, -10), (0, 0), (0, 10)], wh + rise)
     m.mirror_x()
@@ -169,12 +170,15 @@ def hangar5():
     leaves(m, z1, xs, 0, 7.5, RWHITE, post=GREEN)
     louvres(m, z1, xs, [(1.8, 3.4), (4.4, 6.0)])
     m.box(-22.4, 22.4, 7.5, 7.9, z1, z1 + 0.35, DGREY)
-    # office block on the SOUTH side (-X; user, 2026-10-21), 30 x 12 m, two storeys of bronze glazing
-    m.box(x0 - 12.0, x0, 0, 6.4, -15.0, 15.0, BRONZE)
-    for y in (0.9, 4.0):
-        rows_x(m, -1, x0 - 12.0, -15.0, 15.0, y, 8, 2.5, 2.2)
-    m.box(x0 - 12.4, x0, 6.4, 6.7, -15.4, 15.4, DGREY)
-    m.box(x0 - 13.8, x0 - 12.0, 3.1, 3.4, -3.5, 3.5, DGREY)  # entrance canopy
+    # office block on the SOUTH side (-X; user, 2026-10-21), flush with the west (runway) wall, 22 m along it x 30 m deep, two storeys of
+    # bronze glazing (the 1989 archive photo EA-207-425 shows it running a good way along the apron face, nearly to Hangar 6)
+    ox, oz0 = x0 - 22.0, z1 - 30.0
+    m.box(ox, x0, 0, 7.6, oz0, z1, BRONZE)
+    for y in (0.9, 4.3):
+        rows_x(m, -1, ox, oz0 + 1.0, z1 - 1.0, y, 8, 2.5, 2.4)
+        rows_z(m, 1, z1, ox + 1.0, x0 - 1.0, y, 6, 2.5, 2.4)
+    m.box(ox - 0.4, x0, 7.6, 7.9, oz0 - 0.4, z1 + 0.4, DGREY)
+    m.box(ox - 1.8, ox, 3.1, 3.4, oz0 + 11.0, oz0 + 19.0, DGREY)  # entrance canopy
     number_disc(m, x0, 7.7, 0.0, (-1, 0), 0.85, "5")  # high on the south wall, above the offices
     roof_vents(m, [(0, -8), (0, 8), (10, 0)], wh + rise)
     m.mirror_x()
