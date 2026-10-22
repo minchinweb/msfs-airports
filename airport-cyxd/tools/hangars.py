@@ -470,14 +470,16 @@ def hangar8():
     # with a window and a door and three small windows above it
     number_disc(m, -4.5, 9.4, z0, (0, -1), 0.95, "8")
     m.window((0, 0, -1), (-5.0, 3.3, z0), (1, 0, 0), 1.1, 2.1)
-    for wxx, ww, wh_, wy in ((-9.2, 2.2, 1.9, 1.1), (-12.2, 1.9, 1.9, 1.1), (-19.4, 3.6, 1.7, 1.3), (-21.2, 1.1, 2.0, 0.1), (-24.2, 1.9, 1.9, 1.1)):
+    for wxx, ww, wh_, wy in ((-9.9, 2.2, 1.9, 1.1), (-12.2, 1.9, 1.9, 1.1), (-19.4, 3.6, 1.7, 1.3), (-21.2, 1.1, 2.0, 0.1), (-24.2, 1.9, 1.9, 1.1)):
         m.window((0, 0, -1), (wxx, wy, z0), (1, 0, 0), ww, wh_)
     m.box(-14.4, -13.2, 0, 2.2, z0 - 0.08, z0, DGREY)
     rows_z(m, -1, z0, -25.8, -7.4, 4.2, 8, 2.0, 2.2)
     # wall profile: plinth, navy band under the ribbon, downpipes, a corner pilaster on the slab, a skirt at the far end
-    m.box(-26.0, hx0, 0, 0.45, z0 - 0.06, z0, DGREY)
+    xs_ = [-25.9, -21.4, -19.9, -14.6, -13.0, hx0]  # plinth cut around the glass door (-21.2) and the door (-14.4..-13.2), clear of both
+    for a_, b_ in ((xs_[0], xs_[1]), (xs_[2], xs_[3]), (xs_[4], xs_[5])):
+        m.box(a_, b_, 0, 0.45, z0 - 0.06, z0, DGREY)
     m.box(-25.8, -7.0, 3.95, 4.07, z0 - 0.06, z0, NAVY)
-    for dpx in (-25.95, -7.45, -2.6):
+    for dpx in (-25.85, -7.45, -2.6):
         m.box(dpx, dpx + 0.16, 0, hA if dpx < -7.0 else hs, z0 - 0.12, z0, GREY)
     m.box(-7.0, -6.8, 0, hs, z0 - 0.1, z0, GREY)  # slab edge pilaster
     m.box(wx0, -26.0, 0, 3.6, z0 - 1.6, z0, STEEL)  # one-storey skirt
