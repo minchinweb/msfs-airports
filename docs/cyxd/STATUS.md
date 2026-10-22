@@ -385,3 +385,7 @@ Offline check renders used a throwaway software rasteriser (scratchpad, not comm
 - **Hangar 4:** the eave trim now stops at the orange bay (front faces were coplanar), the bay is 10 cm taller, the airside roundel moved down off the trim; landside "4" roundel and two man doors (Street View 46/47).
 - **Hangar 3:** the step wall between the two parapet heights stood flush with the parapets' outer faces (coplanar); now 5 cm inside.
 - **Dark-blue hangar (north of Hangar 3):** the roller door sits behind projecting jambs and a header, with ribs and a bottom rail.
+
+### Hangar 8 landside, second pass (2026-10-21)
+- Wing now steps down (Street View 59): 8.6 m part by the block (ground row, first-floor ribbon of six big panes starting on the block, roof clerestory with glazing on three sides), then a 6.2 m part at the far end with smaller windows. Ground row is a few windows and doors, not a continuous row; the tall narrow window moved from the hall onto the block under the roundel.
+- Signs resized and moved from the photo: LAW OFFICE 5.0 x 0.85 m across the block/wing joint at y 7.8, AVIATION 4.4 x 0.6 m a step lower and further along; thin widely spaced regular-weight capitals (`arial.ttf`, via `painted_text`) on pale boards with a dark edge and a backing board. The wing is only 21 m long in the footprint, so the tiers are compressed against the photo.

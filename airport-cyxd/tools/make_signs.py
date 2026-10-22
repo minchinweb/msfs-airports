@@ -93,15 +93,19 @@ def navcan(w=2000, h=900):
 
 
 def lawoffice():
-    """Top half: LAW OFFICE board (7.6 x 1.1 m); bottom half: AVIATION board (5.6 x 0.8 m); each stretched over half the square."""
+    """Top half: LAW OFFICE board (5.0 x 0.85 m); bottom half: AVIATION board (4.4 x 0.6 m); each stretched over half the square.
+    Street View 59 (2012): thin, widely spaced regular-weight capitals on a pale board with a dark edge line, AVIATION in a lighter grey."""
     im = Image.new("RGB", (1024, 1024), (236, 236, 232))
-    for k, (txt, aspect) in enumerate((("LAW OFFICE", 7.6 / 1.1), ("AVIATION", 5.6 / 0.8))):
+    for k, (txt, aspect, bg, edge, ink, track) in enumerate((
+            ("LAW OFFICE", 5.0 / 0.85, (234, 234, 228), (64, 68, 72), (44, 46, 50), 0.16),
+            ("AVIATION", 4.4 / 0.6, (226, 228, 226), (110, 114, 118), (86, 90, 94), 0.30))):
         w = 2000
         h = int(w / aspect)
-        b = Image.new("RGB", (w, h), (238, 238, 234))
+        b = Image.new("RGB", (w, h), bg)
         d = ImageDraw.Draw(b)
-        d.rectangle((0, 0, w - 1, h - 1), outline=(90, 94, 96), width=int(h * 0.06))
-        text_fit(d, txt, "arialbd.ttf", (w * 0.05, h * 0.2, w * 0.95, h * 0.8), (52, 56, 58))
+        d.rectangle((0, 0, w - 1, h - 1), outline=edge, width=max(3, int(h * 0.05)))
+        d.rectangle((int(h * 0.09), int(h * 0.09), w - 1 - int(h * 0.09), h - 1 - int(h * 0.09)), outline=tuple(int(c * 0.5 + bg[0] * 0.5) for c in edge), width=2)
+        painted_text(b, txt, "arial.ttf", (w * 0.05, h * 0.16, w * 0.95, h * 0.84), ink, seed=31 + k, track=track, wobble=0.0, bold=0.0)
         im.paste(b.resize((1024, 512), Image.LANCZOS), (0, 512 * k))
     return im
 
