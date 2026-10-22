@@ -607,8 +607,8 @@ def bluehangar():
 
 
 def hangar19():
-    """Hangar 19 (user, 2026-10-21: the low brown/tan building beside the Esso building, Street View photos 06-09 and 62-69 Airport Rd NW; possibly the
-    General Aviation Centre): two low tan/cream wings with glazed shop fronts either side of a taller two-storey brick centre with a stair
+    """Hangar 19 (user, 2026-10-21: the low brown/tan building beside the Esso building, Street View photos 06-09 and 62-69 Airport Rd NW; the
+    General Aviation Centre, 77 Airport Rd: confirmed 2026-10-22 from docs/cyxd/hangar19-photos): two low tan/cream wings with glazed shop fronts either side of a taller two-storey brick centre with a stair
     tower.  Footprint about 65 x 29 m, long axis along bearing 142, measured on the 2014 imagery (not in OSM).  Heading 232 (front faces SW to
     Airport Rd); +x is the NW wing."""
     m = fmesh()

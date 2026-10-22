@@ -56,9 +56,9 @@ Link only: JetPhotos 6026139, 11140, 9456702, 8413417, 11139; archive.org PC0139
 ## Western GMC (Hangar 6?)
 - Link only (edmonton.ca returns 502): WesternGMCAdvertisement-1600.jpg and AircraftParkedByHangar-GMCTrucks-ca1960sor70s-1600.jpg.
 
-## General Aviation Centre, 77 Airport Road (west side)
-- Saved in `general-aviation-centre-photos/`: Commons EDMONTON_MUNI_(11094203585) and (11094283326), 2013-03-24, CC BY 2.0: two-storey red-brown brick building with a
-  round tan stair tower, "GENERAL AVIATION CENTRE" sign with a plane, glazed ground floor. Most likely Hangar 19 (62-69 Airport Rd on the Street View photos; 77 falls between 69 and the Esso building at 83); the model has no "GENERAL AVIATION CENTRE" sign yet. Not Hangar 40, which is Canadian Helicopters (12039 / 12043 121 St NW).
+## General Aviation Centre, 77 Airport Road = Hangar 19
+- Saved in `hangar19-photos/` (see its `SOURCES.md`): Commons EDMONTON_MUNI_(11094203585) and (11094283326), 2013-03-24, CC BY 2.0: two-storey red-brown brick building with a
+  round tan stair tower, "GENERAL AVIATION CENTRE" sign with a plane, glazed ground floor. Confirmed as Hangar 19 (2026-10-22): Street View photos 07 and 08 show the same brick building with a tower beside the Esso building, and 77 falls between 69 and 83 on Airport Rd. The model has no "GENERAL AVIATION CENTRE" sign yet. Not Hangar 40, which is Canadian Helicopters.
 
 ## View from the Edmonton Flying Club (Hangar 18)
 - Saved in `hangar18-photos/`: flickr woodhead 11094403683, 14875905273 (the airside view from the club balcony: tower with its annex, the Shell hangar and the Aerocentre).
