@@ -343,51 +343,62 @@ def tower(m, cx, cz, sx, sz, h, floors, front=(0, 0, 1)):
 
 
 def hangar_1938():
-    """1938 arched hangar + main tower + small tower + office wing (EA-160-398/402/466/1331/1332, 1944 aerial).
+    """1938 barrel-vault hangar between two brick towers (City Archives EA-160-398 / 402 / 466, 1930 EA-10-1044, postcard PC013987, the
+    Fort Edmonton Park replica).  Reworked 2026-10-21: the office wing and the stucco first-hangar details that the first version merged in
+    belong to the 1930s first hangar (first-hangar-photos/SOURCES.md) and are gone.
 
-    Local frame: +Z = front (doors / landmark face, heading direction), +X = right of the front as seen from the front.
-    Hangar centred at the origin; tower and wing sit to its right along the front, small tower to its left.
+    Local frame: +Z = front (doors, heading direction), +X = right of the front as seen from the front.  Hangar centred at the origin; the
+    tall stepped tower stands flush with the front at its right end, the shorter wider tower at its left end (EA-160-402).  Mirrored once at
+    the end like the other site models.
     """
-    m = Mesh()
+    m = Mesh(textured=True)
     span, length, wall, rise = 42.0, 44.0, 7.0, 6.0
     xh0, xh1, zf, zb = -span / 2, span / 2, length / 2, -length / 2
-    # walls
-    m.box(xh0, xh1, 0, wall, zb, zf, METAL, top=False)
-    # barrel vault
-    n = 14
-    prof = []
-    for i in range(n + 1):
-        a = math.pi * i / n
-        prof.append((math.cos(a) * span / 2, wall + math.sin(a) * rise))
-    prof = prof[::-1]  # left to right
-    cen = (0, wall, 0)
-    for i in range(n):
+    m.box(xh0, xh1, 0, wall, zb, zf, STEEL, top=False)  # corrugated steel walls
+    n = 16
+    prof = [(-math.cos(math.pi * i / n) * span / 2, wall + math.sin(math.pi * i / n) * rise) for i in range(n + 1)]
+    for i in range(n):  # barrel vault, dark corrugated roof
         (xa, ya), (xb, yb) = prof[i], prof[i + 1]
         m.poly([(xa, ya, zb), (xb, yb, zb), (xb, yb, zf), (xa, ya, zf)], METAL, (0, wall - 3, 0))
-    # end arches (front and back)
-    for z, sw in ((zf, METAL), (zb, METAL)):
-        m.poly([(xh0, wall, z)] + [(x, y, z) for x, y in prof] + [(xh1, wall, z)], sw, (0, wall, 0))
-    # big front doors (open, dark) and side windows
-    m.poly([(-16, 0.0, zf + 0.08), (16, 0.0, zf + 0.08), (16, 7.0, zf + 0.08), (-16, 7.0, zf + 0.08)], DARK, (0, 3, 0))
-    m.poly([(-16, 7.0, zf + 0.08), (16, 7.0, zf + 0.08), (11, 11.0, zf + 0.08), (-11, 11.0, zf + 0.08)], DARK, (0, 5, 0))
+    for z in (zf, zb):  # end arches
+        m.poly([(xh0, wall, z)] + [(x, y, z) for x, y in prof] + [(xh1, wall, z)], STEEL, (0, wall, 0))
+    # front: tall glazed band either side of the door opening, and the door opening with four timber leaves carrying small panes (replica)
+    zd = zf + 0.08
+    m.poly([(-12, 0.0, zd), (12, 0.0, zd), (12, 7.0, zd), (-12, 7.0, zd)], DARK, (0, 3, 0))
+    m.poly([(-12, 7.0, zd), (12, 7.0, zd), (9, 10.5, zd), (-9, 10.5, zd)], DARK, (0, 5, 0))  # the arch above the door
+    for k in range(4):
+        x0 = -12.0 + k * 6.0
+        m.box(x0 + 0.08, x0 + 5.92, 0, 6.8, zf + 0.08, zf + 0.35, DOORG)  # door leaf
+        for r in range(3):
+            for c in range(2):
+                m.window((0, 0, 1), (x0 + 0.7 + c * 2.6, 3.4 + r * 1.1, zf + 0.35), (1, 0, 0), 1.8, 0.8)  # door-leaf panes
     for sgn in (-1, 1):
+        xa, xb = (12.4, xh1 - 0.6) if sgn > 0 else (xh0 + 0.6, -12.4)
+        window_row(m, xa, xb, 2.2, zf, 3, 1.5, 3.6, (0, 0, 1), "x")  # tall front windows beside the doors
+    for sgn in (-1, 1):  # side windows
         for i in range(6):
-            z = zb + 4 + i * 6.5
-            m.window((sgn, 0, 0), (sgn * (span / 2), 3.2, z), (0, 0, 1), 3.0, 1.6)
-    # main tower, flush with front face, right of hangar
-    tw, td, th = 11.0, 11.0, 22.0
-    tcx, tcz = xh1 + tw / 2, zf - td / 2
-    tower(m, tcx, tcz, tw, td, th, 5)
-    # office wing continues to the right, two storeys, hip-ish gable roof along X
-    ww, wd, wh = 30.0, 13.0, 8.0
-    wcx, wcz = tcx + tw / 2 + ww / 2, zf - wd / 2 - 1.0
-    m.box(wcx - ww / 2, wcx + ww / 2, 0, wh, wcz - wd / 2, wcz + wd / 2, WALL, top=False)
-    m.gable(wcx - ww / 2, wcx + ww / 2, wh, 3.5, wcz - wd / 2, wcz + wd / 2, along_z=False, sw_roof=ROOF, sw_wall=WALL)
-    for y in (1.2, 4.6):
-        window_row(m, wcx - ww / 2, wcx + ww / 2, y, wcz + wd / 2, 6, 1.4, 1.6, (0, 0, 1), "x")
-        window_row(m, wcx - ww / 2, wcx + ww / 2, y, wcz - wd / 2, 6, 1.4, 1.6, (0, 0, -1), "x")
-    # small tower at the left end of the hangar front
-    tower(m, xh0 - 3.0, zf - 3.0 - 1.0, 6.0, 6.0, 14.0, 3)
+            m.window((sgn, 0, 0), (sgn * span / 2, 3.2, zb + 4 + i * 6.5), (0, 0, 1), 3.0, 1.6)
+
+    def brick_tower(x0, x1, h, floors, stepped):
+        z0, z1 = zf - (x1 - x0), zf
+        m.box(x0, x1, 0, h, z0, z1, BRICKD, top=False)
+        m.box(x0 - 0.2, x1 + 0.2, h, h + 0.5, z0 - 0.2, z1 + 0.2, CREAM)  # concrete cap
+        if stepped:  # the tall tower finishes in a narrower stepped crown
+            m.box(x0 + 1.2, x1 - 1.2, h + 0.5, h + 3.0, z0 + 1.2, z1 - 1.2, BRICKD)
+            m.box(x0 + 1.0, x1 - 1.0, h + 3.0, h + 3.4, z0 + 1.0, z1 - 1.0, CREAM)
+        for f in range(floors):
+            y = 1.6 + f * (h - 3.0) / floors
+            wd = (x1 - x0 - 3.0) / 2
+            for c in range(2):
+                xa = x0 + 1.0 + c * (wd + 1.0)
+                m.window((0, 0, 1), (xa, y, z1), (1, 0, 0), wd, 2.0)
+                m.window((0, 0, -1), (xa, y, z0), (1, 0, 0), wd, 2.0)
+            m.window((1, 0, 0), (x1, y, (z0 + z1) / 2 - 0.9), (0, 0, 1), 1.8, 2.0)
+            m.window((-1, 0, 0), (x0, y, (z0 + z1) / 2 - 0.9), (0, 0, 1), 1.8, 2.0)
+        m.box((x0 + x1) / 2 - 1.3, (x0 + x1) / 2 + 1.3, 0, 2.6, z1, z1 + 0.1, DARK)  # ground-floor door
+    brick_tower(xh1, xh1 + 10.0, 20.0, 5, True)   # main tower, right, flush with the front
+    brick_tower(xh0 - 8.0, xh0, 13.5, 3, False)   # shorter tower, left
+    m.mirror_x()
     return m
 
 
@@ -1036,7 +1047,7 @@ KX, KY = 66170.0, 111200.0
 EXCL_MARGIN = 6.0
 DEPOT = [(53.57242, -113.58734), (53.57065, -113.58740), (53.57054, -113.58747), (53.57062, -113.58890),
          (53.57062, -113.58973), (53.57078, -113.59018), (53.57243, -113.59019)]
-LANDMARK_BOX = (-27.4, 62.0, -22.0, 22.4)  # local x0, x1, z0, z1 of the landmark model
+LANDMARK_BOX = (-29.0, 32.0, -22.0, 22.4)  # local x0, x1, z0, z1 of the landmark model
 
 
 def lookup(table, low):
