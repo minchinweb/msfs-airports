@@ -1001,6 +1001,11 @@ def hangar18():
     m.box(wing1, 40.0, 0, 8.0, cz0, cz1, RWHITE, top=False)
     m.box(wing1 - 0.1, 43.0, 8.0, 8.9, cz0 - 1.5, cz1 + 0.1, BEIGE)  # roof overhang over the deck, beige fascia
     # landside (SW, -Z) wall: pilasters with dark window slots (two storeys), entrance with canopy
+    m.keepout(13.0, 17.4, 4.6, 6.3, cz0 - 0.5, cz0 + 0.1)  # EDMONTON FLYING CLUB board over the entrance
+    m.keepout(cx0 + 3.0, cx0 + 5.0, 5.2, 7.2, cz0 - 0.5, cz0 + 0.1)  # "18" roundel at the NW end of the landside wall
+    m.keepout(-9.9, -7.5, 0.0, 3.0, cz0 - 0.5, cz0 + 0.1)  # CAFETERIA door and its red sign
+    m.keepout(10.2, 20.2, 0.0, 3.0, cz0 - 0.5, cz0 + 0.1)  # mural panels and entrance
+    m.keepout(28.0, 30.2, 2.2, 5.0, cz0 - 0.5, cz0 + 0.1)  # yellow shuttered panel
     for k in range(13):
         xk = -17.0 + k * 3.7
         if 8.0 < xk < 20.0 or xk > 25.0:
@@ -1017,8 +1022,8 @@ def hangar18():
     number_disc(m, cx0, 6.2, (cz0 + cz1) / 2, (-1, 0), 0.95, "18")  # and on the wing's north (NW end) wall
     m.box(28.0, 30.2, 2.2, 5.0, cz0 - 0.1, cz0, YELLOW)
     # club room (x 28..40): glazed upper floor on the SE face and the SW face
-    rows_x(m, 1, 40.0, cz0 + 1.0, cz1 - 1.0, 4.4, 6, 1.7, 2.8)
-    rows_z(m, -1, cz0, wing1 + 3.0, 39.0, 4.4, 3, 2.6, 2.8)
+    rows_x(m, 1, 40.0, cz0 + 1.0, cz1 - 1.0, 4.2, 6, 1.7, 2.4)  # top at 6.6 m: clear of the fascia lettering at 7.0..7.7
+    rows_z(m, -1, cz0, wing1 + 3.0, 39.0, 4.2, 3, 2.6, 2.4)
     m.box(40.0, 44.0, 0, 3.4, cz0, cz1, RWHITE)  # lower ground-floor block under the deck
     rows_x(m, 1, 44.0, cz0 + 1.5, cz1 - 1.5, 1.2, 3, 2.2, 1.4)
     # viewing deck: slab, white railing, over the lower block, facing the tower
@@ -1026,9 +1031,10 @@ def hangar18():
     for z in [cz0 + 0.2 + 0.8 * k for k in range(int((cz1 - cz0) / 0.8))]:
         m.box(43.8, 43.9, 3.8, 4.8, z, z + 0.06, CREAM)
     m.box(43.75, 43.95, 4.75, 4.85, cz0, cz1, CREAM)
-    for x in (41.0, 42.5):
-        m.box(x, x + 0.06, 3.8, 4.8, cz0, cz0 + 0.06, CREAM)
-        m.box(x, x + 0.06, 3.8, 4.8, cz1 - 0.06, cz1, CREAM)
+    for zc, z_in in ((cz0, cz0), (cz1 - 0.06, cz1 - 0.06)):  # the two short ends: same balusters and top rail
+        for x in [40.2 + 0.8 * k for k in range(5)]:
+            m.box(x, x + 0.06, 3.8, 4.8, zc, zc + 0.06, CREAM)
+        m.box(40.0, 44.0, 4.75, 4.85, zc - 0.07, zc + 0.13, CREAM)
     m.box(40.0, 40.12, 7.0, 7.7, cz0, cz1, DGREY)  # fascia the lettering sits on
     rect_sign(m, 40.14, 7.35, -55.5, (1, 0), 12.0, 0.7, "efc", 0.0, 0.5)  # EDMONTON FLYING CLUB on the club-room fascia, facing the tower
     roof_vents(m, [(-5, -55), (10, -55)], 7.6)
