@@ -1248,8 +1248,8 @@ def garage22():
     Frame (before the final mirror): +X = bearing 148 = the FRONT, toward Airport Rd, +Z = bearing 58 (NE, toward the terminal = east), -X = the back / NW end.
     Three decks (10.4 / 7.2 / 4.0 m) over an open ground level; clear spans inside, posts only on the perimeter.
     Front (MS-1270.213.3): each tier is set back from the one below (decks reach x 30 / 40 / 50) and the front is FOUR segments across (z quarters,
-    west to east), each set back 5 m more than the one before (0 / 5 / 10 / 15 m, estimated).  Five posts stand at the corners of the segments on every
-    level (counted in the photo), and the brown rim board runs unbroken round the whole front, including the step returns.
+    west to east), each set back 5 m more than the one before (0 / 5 / 10 / 15 m, estimated).  A post stands at every corner of the stepped front (8) on every
+    level, and the brown rim board runs unbroken round the whole front, including the step returns.
     Each deck is a U open to the front: flat sides and flat NW end round a central bay (36 m wide) whose floor slopes DOWN TOWARD THE BACK, from a
     slope start line 7.6 m (25 ft) behind the bay's most receded front segment (so the flat strip is wider on the west half), to a 10 m flat landing
     against a back wall; the landing is the next deck's flat surface (the lowest lands on the ground), with nose-in stall stripes.
@@ -1272,20 +1272,22 @@ def garage22():
         if head and yb - ya > 2.0:  # corbelled head
             m.box(x - 0.6, x + 0.6, yb - 0.5, yb, z - 0.6, z + 0.6, TAN)
 
-    def columns(xf, ya, yb, entrance=False):
-        """Posts for one level whose slab above has its front at xf (west segment): long-side rows, the NW end, and five front posts at the segment corners."""
-        xl, xr = xf - 3.0, xf - SETS[3] - 3.0
-        for xe, z in ((xl, z0 + 0.4), (xr, z1 - 0.4)):
+    def columns(xf, ov, ya, yb):
+        """Posts for one level under a slab whose west segment reaches xf (the slab overhangs the posts by ov): the long-side rows, the NW end, and a post
+        at EVERY corner of the stepped front, outer and inner (8), each 0.9 m inside the slab edge."""
+        XFp = [xf - s - ov - 0.9 for s in SETS]
+        corners = [(XFp[0], z0 + 0.9)]
+        for b in (1, 2, 3):
+            corners += [(XFp[b - 1], ZB[b] - 0.9), (XFp[b], ZB[b] + 0.9)]
+        corners.append((XFp[3], z1 - 0.9))
+        for xe, z in ((XFp[0], z0 + 0.9), (XFp[3], z1 - 0.9)):
             n = max(1, round((xe - x0) / 8.3))
-            for i in range(n + 1):
+            for i in range(n):  # the last post of each row is the front corner post
                 column(x0 + 0.4 + i * (xe - x0 - 0.4) / n, z, ya, yb)
         for j in range(1, 8):  # NW end
             column(x0 + 0.4, z0 + 0.4 + j * (z1 - z0 - 0.8) / 8, ya, yb, False)
-        fx = (xl, xf - SETS[1] - 1.5, xf - SETS[2] - 1.5, xf - SETS[3] - 1.5, xr)
-        for q in range(5):
-            if entrance and q == 1:
-                continue  # leave the vehicle entrance open at the west end
-            column(fx[q], z0 + 0.4 if q == 0 else z1 - 0.4 if q == 4 else ZB[q], ya, yb)
+        for x, z in corners:
+            column(x, z, ya, yb)
 
     def prism_z(prof, za, zb, sw):
         """Convex xy profile extruded between z = za and zb."""
@@ -1311,7 +1313,7 @@ def garage22():
         m.poly([(xa, yd - SL, za), (xb, yd - SL, za), (xb, yd - SL, zb), (xa, yd - SL, zb)], DGREY, (0.0, yd + 5.0, 0.0))  # underside
 
     m.poly([(x0, 0.03, z0), (x1, 0.03, z0), (x1, 0.03, z1), (x0, 0.03, z1)], DGREY, (0.0, -5.0, 0.0))  # the ground deck
-    columns(x1 - 4.0 + 3.0, 0.03, GC, entrance=True)  # the lowest tier cantilevers past the ground-floor posts (Street View 14)
+    columns(x1, 4.0, 0.03, GC)  # the lowest tier cantilevers past the ground-floor posts (Street View 14)
     for zz, s in ((z0, -1), (z1, 1)):  # ground-level side board (Street View 15): block plinth, brown ribbed board up to the first slab
         zi, zo = (zz, zz + 0.3) if s > 0 else (zz - 0.3, zz)
         m.box(x0, 46.0, 0, 0.9, zi, zo, TANBLK)
@@ -1357,7 +1359,7 @@ def garage22():
         m.box(xw, XF[0], yd, yd + 0.9, -BW - 0.25, -BW - 0.15, TAN)  # rails along the bay's top edges
         m.box(xw, XF[3], yd, yd + 0.9, BW + 0.15, BW + 0.25, TAN)
         if k + 1 < len(decks):
-            columns(decks[k + 1][1] - 3.0 + 3.0, yd, yd + GH - SL)  # posts under the tier above, which overhangs this one
+            columns(decks[k + 1][1], 3.0, yd, yd + GH - SL)  # posts under the tier above, which overhangs this one
     # vehicle entrance at ground level at the west (-Z) end of the front (MS-1270.213.3): a gate island with two ticket posts, a short barrier boom
     # over each lane and yellow bollards, just outside the opening under the lowest tier
     ze = -27.0
