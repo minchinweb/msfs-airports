@@ -363,43 +363,56 @@ def hangar8():
     m.box(hx1, hx1 + 0.9, 8.3, 8.8, dz0 - 0.4, dz1 + 0.4, GREEN)  # header / canopy fascia with its green trim line
     m.poly([(hx1, 9.6, dz0 - 0.4), (hx1, 9.6, dz1 + 0.4), (hx1 + 2.6, 8.8, dz1 + 0.4), (hx1 + 2.6, 8.8, dz0 - 0.4)], METAL, (hx1, 3, 0))  # lean-to
     m.box(hx1 + 2.55, hx1 + 2.65, 8.5, 8.9, dz0 - 0.4, dz1 + 0.4, GREEN)
-    # taller end block with the roundel, then the wing
-    m.box(-12.0, hx0, 0, 12.6, z0, z1, RWHITE)
-    m.box(-12.3, hx0, 12.6, 12.9, z0 - 0.3, z1 + 0.3, DGREY)
-    number_disc(m, -7.0, 10.6, z1, (0, 1), 0.95, "8")  # airside
-    m.box(-12.0 - 0.0, -11.3, 0, 12.9, z1 - 0.1, z1 + 0.3, DGREY)  # downpipe / stack beside the roundel
-    wx0, wx1 = -W / 2, -12.0
-    # the wing steps down (Street View 59): a two-storey part by the block under a roof clerestory, then a lower part at the far end
-    xb, hA, hB = -26.0, 8.6, 6.2
-    m.box(xb, wx1, 0, hA, z0, z1, STEEL, top=False)
+    # Street View 59 (recounted 2026-10-21): the roundel slab next to the hall, then the wing, whose first-floor ribbon starts under a taller
+    # tower set back a little from the slab; roof clerestory above the wing; a one-storey skirt projects at the far end
+    xb, hA, hB = -26.0, 6.9, 5.4
+    hs, ht = 11.0, 13.0
+    wx0 = -W / 2
+    m.frame = NAVY  # the window surrounds are navy in the photo
+    m.box(-7.0, hx0, 0, hs, z0, z1, RWHITE)  # roundel slab
+    m.box(-7.1, hx0, hs, hs + 0.25, z0 - 0.15, z1 + 0.15, DGREY)
+    m.box(-12.0, -7.0, hA, ht, z0 + 0.5, z1, RWHITE)  # tower over the start of the wing, landside face set back 0.5 m
+    m.box(-12.1, -6.9, ht, ht + 0.25, z0 + 0.4, z1 + 0.1, DGREY)
+    number_disc(m, -4.5, 9.4, z1, (0, 1), 0.95, "8")  # airside
+    m.box(-12.0, -11.3, 0, ht + 0.25, z1 - 0.1, z1 + 0.3, DGREY)  # downpipe / stack beside the tower
+    m.box(xb, -7.0, 0, hA, z0, z1, STEEL, top=False)
     m.box(wx0, xb, 0, hB, z0, z1, STEEL, top=False)
-    m.box(xb - 0.15, wx1, hA, hA + 0.25, z0 - 0.15, z1 + 0.15, DGREY)
+    m.box(xb, -7.0, hA, hA + 0.05, z0, z1, METAL)  # roofs (the wall boxes are open at the top)
+    m.box(wx0, xb, hB, hB + 0.05, z0, z1, METAL)
+    m.box(xb - 0.15, -7.0, hA, hA + 0.25, z0 - 0.15, z1 + 0.15, DGREY)  # eaves cornice
     m.box(wx0 - 0.15, xb - 0.15, hB, hB + 0.25, z0 - 0.15, z1 + 0.15, DGREY)  # ends short of the step so the two trims do not overlap
     cx0, cx1 = -25.0, -13.5
-    m.box(cx0, cx1, hA + 0.25, 10.9, z0 + 2.5, z1 - 4, RWHITE, top=True)  # roof clerestory
-    m.box(cx0 - 0.1, cx1 + 0.1, 10.9, 11.1, z0 + 2.4, z1 - 3.9, DGREY)
-    rows_x(m, -1, cx0, z0 + 4.5, z1 - 6.0, 9.3, 8, 2.2, 1.2)
-    rows_z(m, -1, z0 + 2.5, cx0 + 0.6, cx1 - 0.6, 9.3, 4, 2.2, 1.2)  # the clerestory glazing seen from the street
-    rows_z(m, 1, z1 - 4, cx0 + 0.6, cx1 - 0.6, 9.3, 4, 2.2, 1.2)
-    rows_z(m, 1, z1, wx0 + 4, wx1 - 4, 1.6, 4, 2.2, 2.6)
+    m.box(cx0, cx1, hA + 0.25, 9.5, z0 + 2.5, z1 - 4, RWHITE, top=True)  # roof clerestory
+    m.box(cx0 - 0.1, cx1 + 0.1, 9.5, 9.7, z0 + 2.4, z1 - 3.9, DGREY)
+    rows_x(m, -1, cx0, z0 + 4.5, z1 - 6.0, 7.55, 8, 2.2, 1.7)
+    rows_z(m, -1, z0 + 2.5, cx0 + 0.5, cx1 - 0.5, 7.55, 8, 1.1, 1.7)  # the clerestory glazing seen from the street: eight panes
+    rows_z(m, 1, z1 - 4, cx0 + 0.5, cx1 - 0.5, 7.55, 8, 1.1, 1.7)
+    rows_z(m, 1, z1, wx0 + 4, -14.0, 1.6, 4, 2.2, 2.6)
     m.box(wx0 + 6.0, wx0 + 9.0, 0, 2.5, z1, z1 + 0.08, DGREY)
-    # landside (-Z, east, 109 St), Street View 59 / 61: from the south, a ground row of small windows and two doors, an upper ribbon of
-    # large-paned windows across the wing and the end block, the LAW OFFICE / AVIATION boards under the tall block, the roundel on the
-    # block's landside face at its north end; on the hall a tall narrow window, a personnel door and a bank of big glazed bays
-    # Street View 59, three tiers stepping down: the roof clerestory, a long first-floor ribbon of big pale panes that starts on the block, and
-    # a ground row of a few small windows and doors (not a continuous row); the far end drops to a lower roof with smaller windows
-    m.window((0, 0, -1), (-4.4, 3.7, z0), (1, 0, 0), 1.1, 2.3)  # tall narrow window on the block, below the roundel
-    for wxx, ww, wh_ in ((-8.0, 2.4, 1.9), (-14.6, 3.2, 1.8), (-21.4, 1.6, 1.8), (-28.0, 2.6, 1.6)):
-        m.window((0, 0, -1), (wxx, 1.1, z0), (1, 0, 0), ww, wh_)
-    for dx in (-13.6, -19.6, -31.6):
-        m.box(dx, dx + 1.2, 0, 2.2, z0 - 0.08, z0, DGREY)
-    rows_z(m, -1, z0, -5.6, -25.8, 4.2, 6, 3.0, 2.0)
-    rows_z(m, -1, z0, -27.2, -32.6, 3.4, 3, 1.2, 1.3)
-    # LAW OFFICE across the block / wing joint, AVIATION a step lower beyond it; each on a thin backing board
-    for sx, sy, sw_, sh_, v0, v1 in ((-10.5, 7.8, 5.0, 0.85, 0.0, 0.5), (-15.7, 7.4, 4.4, 0.6, 0.5, 1.0)):
-        m.box(sx - sw_ / 2 - 0.06, sx + sw_ / 2 + 0.06, sy - sh_ / 2 - 0.06, sy + sh_ / 2 + 0.06, z0 - 0.1, z0, GREY)
+    # landside (-Z, east, 109 St): per the photo, from the hall: tall narrow window under the roundel (1); ground tier: window, window, door,
+    # long strip window, glass door, window (6); first-floor ribbon of eight panes; clerestory of eight panes; at the far end the skirt
+    # with a window and a door and three small windows above it
+    number_disc(m, -4.5, 9.4, z0, (0, -1), 0.95, "8")
+    m.window((0, 0, -1), (-5.0, 3.3, z0), (1, 0, 0), 1.1, 2.1)
+    for wxx, ww, wh_, wy in ((-9.2, 2.2, 1.9, 1.1), (-12.2, 1.9, 1.9, 1.1), (-19.4, 3.6, 1.7, 1.3), (-21.2, 1.1, 2.0, 0.1), (-24.2, 1.9, 1.9, 1.1)):
+        m.window((0, 0, -1), (wxx, wy, z0), (1, 0, 0), ww, wh_)
+    m.box(-14.4, -13.2, 0, 2.2, z0 - 0.08, z0, DGREY)
+    rows_z(m, -1, z0, -25.8, -7.4, 4.2, 8, 2.0, 2.2)
+    # wall profile: plinth, navy band under the ribbon, downpipes, a corner pilaster on the slab, a skirt at the far end
+    m.box(-26.0, hx0, 0, 0.45, z0 - 0.06, z0, DGREY)
+    m.box(-25.8, -7.0, 3.95, 4.07, z0 - 0.06, z0, NAVY)
+    for dpx in (-25.95, -7.45, -2.6):
+        m.box(dpx, dpx + 0.16, 0, hA if dpx < -7.0 else hs, z0 - 0.12, z0, GREY)
+    m.box(-7.0, -6.8, 0, hs, z0 - 0.1, z0, GREY)  # slab edge pilaster
+    m.box(wx0, -26.0, 0, 3.6, z0 - 1.6, z0, STEEL)  # one-storey skirt
+    m.box(wx0 - 0.1, -25.9, 3.6, 3.9, z0 - 1.7, z0, DGREY)
+    m.window((0, 0, -1), (-29.0, 1.1, z0 - 1.6), (1, 0, 0), 2.2, 1.5)
+    m.box(-32.2, -31.0, 0, 2.2, z0 - 1.68, z0 - 1.6, DGREY)
+    rows_z(m, -1, z0, wx0 + 0.5, -26.5, 4.2, 3, 1.2, 1.0)
+    # LAW OFFICE across the tower base, AVIATION a little lower beyond it, standing on the eaves cornice
+    for sx, sy, sw_, sh_, v0, v1, dep in ((-10.8, 7.63, 5.0, 0.85, 0.0, 0.5, 0.55), (-15.9, 7.51, 4.4, 0.6, 0.5, 1.0, 2.55)):
+        m.box(sx - sw_ / 2 - 0.06, sx + sw_ / 2 + 0.06, sy - sh_ / 2 - 0.06, sy + sh_ / 2 + 0.06, z0 - 0.1, z0 + dep, GREY)
         rect_sign(m, sx, sy, z0 - 0.12, (0, -1), sw_, sh_, "lawoffice", v0, v1)
-    number_disc(m, -4.2, 10.4, z0, (0, -1), 0.95, "8")
     m.box(hx0, hx1, 0, 3.0, z0 - 0.05, z0, WHITE)  # hall landside: pale lower wall, glazed bays above
     rows_z(m, -1, z0, hx0 + 4.0, hx1 - 4.0, 3.2, 8, 2.6, 4.6)
     m.box(hx1 - 3.0, hx1 - 1.8, 0, 2.2, z0 - 0.08, z0, DGREY)
