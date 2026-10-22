@@ -183,8 +183,7 @@ def museum():
     d.ellipse((w * 0.2, h * 0.15, w * 0.8, h * 0.27), fill=(120, 170, 220))
     d.polygon([(w * 0.28, h * 0.22), (w * 0.62, h * 0.19), (w * 0.74, h * 0.2), (w * 0.62, h * 0.225)], fill=(200, 40, 40))
     d.line([(w * 0.42, h * 0.17), (w * 0.5, h * 0.21)], fill=(200, 40, 40), width=8)
-    text_fit(d, "ALBERTA AVIATION MUSEUM", "georgiab.ttf", (w * 0.22, h * 0.095, w * 0.78, h * 0.135), (236, 236, 232))
-    text_fit(d, "EDMONTON", "georgiab.ttf", (w * 0.3, h * 0.295, w * 0.7, h * 0.33), (236, 236, 232))
+    text_fit(d, "ALBERTA   AVIATION   MUSEUM", "georgiab.ttf", (w * 0.2, h * 0.085, w * 0.8, h * 0.145), (236, 236, 232))
     d.rectangle((w * 0.07, h * 0.43, w * 0.93, h * 0.7), fill=(16, 16, 20), outline=(90, 90, 96), width=6)   # LED panel
     cols = [(240, 90, 60), (250, 210, 60), (90, 200, 120), (80, 160, 240), (200, 100, 220)]
     for k, txt in enumerate(("Volunteers", "Needed", "APPLY ONLINE")):

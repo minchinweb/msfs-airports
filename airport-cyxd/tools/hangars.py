@@ -897,7 +897,7 @@ def hangar14():
     glazed(10.0, 23.5)
     solid(23.5, 37.0, wins=True)
     glazed(37.0, 48.0)
-    m.box(U(50.0), U(48.0), 0, H, z1, z1 + 0.25, WHITE)             # pilaster under the lettering
+    m.box(U(50.0), U(48.0), 0, 6.3, z1, z1 + 0.25, WHITE)           # pilaster under the lettering; stops below the sign band (6.4-7.8) so it no longer hides the middle of AVIATION
     glazed(50.0, 78.0, sill=1.1, pitch=2.5)                         # lobby glazing (2014 aerial)
     m.box(U(79.5), U(78.0), 0, H, z1, z1 + 0.25, WHITE)             # second pilaster
     glazed(79.5, 88.4, sill=1.1, pitch=2.5)

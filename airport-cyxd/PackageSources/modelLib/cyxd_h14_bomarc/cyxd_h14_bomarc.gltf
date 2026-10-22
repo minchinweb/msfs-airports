@@ -81,7 +81,7 @@
   {
    "bufferView": 0,
    "componentType": 5126,
-   "count": 1652,
+   "count": 2588,
    "type": "VEC3",
    "min": [
     -2.6,
@@ -97,19 +97,19 @@
   {
    "bufferView": 1,
    "componentType": 5126,
-   "count": 1652,
+   "count": 2588,
    "type": "VEC3"
   },
   {
    "bufferView": 2,
    "componentType": 5126,
-   "count": 1652,
+   "count": 2588,
    "type": "VEC2"
   },
   {
    "bufferView": 3,
    "componentType": 5123,
-   "count": 2982,
+   "count": 4098,
    "type": "SCALAR"
   }
  ],
@@ -117,28 +117,28 @@
   {
    "buffer": 0,
    "byteOffset": 0,
-   "byteLength": 19824
+   "byteLength": 31056
   },
   {
    "buffer": 0,
-   "byteOffset": 19824,
-   "byteLength": 19824
+   "byteOffset": 31056,
+   "byteLength": 31056
   },
   {
    "buffer": 0,
-   "byteOffset": 39648,
-   "byteLength": 13216
+   "byteOffset": 62112,
+   "byteLength": 20704
   },
   {
    "buffer": 0,
-   "byteOffset": 52864,
-   "byteLength": 5964
+   "byteOffset": 82816,
+   "byteLength": 8196
   }
  ],
  "buffers": [
   {
    "uri": "cyxd_h14_bomarc.bin",
-   "byteLength": 58828
+   "byteLength": 91012
   }
  ]
 }

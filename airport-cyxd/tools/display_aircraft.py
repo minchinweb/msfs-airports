@@ -146,17 +146,45 @@ def roundel(m, T, c, n, r):
         disc(m, add(wc, mul(wn, 0.03 + 0.02 * k)), wn, rr, sw)
 
 
+LEAF = [(0, 1.0), (.15, .66), (.3, .74), (.27, .40), (.60, .54), (.52, .26), (.96, .10), (.86, -.12), (.40, -.20), (.12, -.30), (.05, -.38), (.05, -1.0)]
+LEAF = LEAF + [(-x, y) for x, y in LEAF[:0:-1]]   # full outline: right half down the stem, then the left half back up
+
+
+def maple_flag(m, wc, along, up, wn, w, h, off=0.03):
+    """Canadian flag (red | white | red in 1:2:1, 2:1 overall, red maple leaf on the white) centred on world point wc, lying in the plane spanned by the
+    unit vectors along / up, facing wn.  Drawn one-sided; call it again with the opposite normal for the back."""
+    at = lambda a, b, e=0.0: add(add(add(wc, mul(along, a)), mul(up, b)), mul(wn, off + e))
+    back = sub(wc, wn)
+    for a0, a1, sw in ((-w / 2, -w / 4, RED), (w / 4, w / 2, RED)):
+        m.poly([at(a0, -h / 2), at(a1, -h / 2), at(a1, h / 2), at(a0, h / 2)], sw, back)
+    m.poly([at(-w / 4, -h / 2, .004), at(w / 4, -h / 2, .004), at(w / 4, h / 2, .004), at(-w / 4, h / 2, .004)], WHITE, back)
+    k = h * 0.30
+    pts = [at(x * k, y * k + 0.04 * h, .008) for x, y in LEAF]
+    cen = at(0, 0.1 * k + 0.04 * h, .008)
+    for i in range(len(pts)):
+        m.poly([cen, pts[i], pts[(i + 1) % len(pts)]], RED, back)
+
+
 def flag(m, T, c, n, w, h):
-    """Canadian flag marking (red, white, red bands) on a vertical surface; n = local +-x."""
-    wn = norm(T.vec(n))
-    along = norm(T.vec((0, 0, 1)))
-    up = norm(T.vec((0, 1, 0)))
-    wc = T.pt(c)
-    for k, (off, ww, sw) in enumerate(((-w / 3, w / 3, RED), (0, w / 3, WHITE), (w / 3, w / 3, RED))):
-        p = add(wc, mul(along, off))
-        corners = [add(add(p, mul(along, sx * ww / 2)), mul(up, sy * h / 2)) for sx, sy in ((-1, -1), (1, -1), (1, 1), (-1, 1))]
-        corners = [add(q, mul(wn, 0.03)) for q in corners]
-        m.poly(corners, sw, sub(p, wn))
+    """Canadian flag on a vertical surface (the fin): c = local centre, n = local +-x outward normal, nose direction runs along the flag."""
+    maple_flag(m, T.pt(c), norm(T.vec((0, 0, 1))), norm(T.vec((0, 1, 0))), norm(T.vec(n)), w, h)
+
+
+def wrap_roundel(m, ax, az, wn, y, r, R):
+    """RCAF roundel wrapped onto a vertical cylinder of radius R about (ax, az): rings of small quads follow the curved skin, each colour a
+    hair above the last (no flat plate standing off the body)."""
+    th0 = math.atan2(wn[0], wn[2])
+    for k, (rr, sw) in enumerate(((r, BLUE), (r * .68, WHITE), (r * .36, RED))):
+        Rk = R + .006 * (k + 1)
+        P = lambda dx, dy: (ax + Rk * math.sin(th0 + dx / R), y + dy, az + Rk * math.cos(th0 + dx / R))
+        n = 16
+        rings = [[P(rr * j / 3 * math.cos(2 * math.pi * i / n), rr * j / 3 * math.sin(2 * math.pi * i / n)) for i in range(n)] for j in (1, 2, 3)]
+        c = (ax, y, az)
+        for i in range(n):
+            q = (i + 1) % n
+            m.poly([P(0, 0), rings[0][i], rings[0][q]], sw, c)
+            for j in (1, 2):
+                m.poly([rings[j - 1][i], rings[j - 1][q], rings[j][q], rings[j][i]], sw, c)
 
 
 def stripe(m, T, pts, h, sw, side):
@@ -198,9 +226,12 @@ def voodoo():
         roundel(m, T, (sx * 3.9, -.45, -3.3), (0, -1, 0), .6)
         roundel(m, T, (sx * 1.38, .1, 1.5), (sx, 0, 0), .5)
         stripe(m, T, [(sx * 1.2, .35, 7.5), (sx * 1.3, .3, 3), (sx * 1.35, .25, -2), (sx * 1.3, .2, -6), (sx * 1.15, .15, -9)], .22, RED, sx)
-        flag(m, T, (sx * .15, 3.2, -9.0), (sx, 0, 0), 1.7, 1.0)
-    fin(m, T, [(-5.2, .9), (-10.2, .9), (-10.4, 5.3), (-8.7, 5.3)], -.12, .12, ACGREY)
+        flag(m, T, (sx * .12, 3.3, -9.0), (sx, 0, 0), 1.7, .85)
+    fin(m, T, [(-5.2, .2), (-9.9, .2), (-10.4, 5.3), (-8.7, 5.3)], -.12, .12, ACGREY)   # base sunk into the fuselage spine (it used to float 0.1-0.2 m above it)
     tube(m, arc_pole((0.0, 0.0, 0.0), f, R, 2.75), .3, BLUE, (-f[1], 0.0, f[0]), n=10)
+    # round concrete plaque the pole stands on, with a bronze plate; sunk 0.05 below the ground so no face is coplanar with it
+    revolve(m, [(-.05, 1.9), (.16, 1.9), (.16, .05)], LROOF, 0, 0, n=24)
+    disc(m, (0.0, .18, 0.0), (0, 1, 0), 1.3, BRONZE, k=24)
     m.mirror_x()
     return m
 
@@ -216,22 +247,43 @@ def norseman():
     loft(m, T, [(4.0, 0, .05, .6, .72), (2.0, 0, .1, .66, .88), (-1.0, 0, .12, .62, .82), (-3.4, 0, .25, .38, .6), (-5.0, 0, .5, .08, .2)], YELLOWR, n=12)
     loft(m, T, [(5.0, 0, .05, .1, .1), (4.9, 0, .05, .5, .5), (4.5, 0, .05, .66, .66), (4.0, 0, .05, .66, .66)], MINT, n=12)
     for sx in (-1, 1):
-        slab(m, T, [(sx * .6, 2.5), (sx * 6.9, 2.5), (sx * 6.9, .3), (sx * .6, .3)], 1.3, 1.6, YELLOWR)
+        slab(m, T, [(sx * .3, 2.5), (sx * 6.9, 2.5), (sx * 6.9, .3), (sx * .3, .3)], 1.3, 1.6, YELLOWR)
         slab(m, T, [(sx * 6.9, 2.5), (sx * 7.85, 2.4), (sx * 7.85, .4), (sx * 6.9, .3)], 1.3, 1.6, MINT)
         slab(m, T, [(sx * .1, -4.0), (sx * 2.4, -4.2), (sx * 2.4, -4.9), (sx * .1, -5.0)], .55, .66, YELLOWR)
         rod3(m, T, (sx * .55, -.2, 1.7), (sx * 3.7, 1.35, 1.6), .1, YELLOWR)
         rod3(m, T, (sx * .55, -.2, 1.0), (sx * 3.7, 1.35, 1.0), .08, YELLOWR)
         rod3(m, T, (sx * .1, .6, -4.3), (sx * 1.6, .55, -4.3), .06, YELLOWR)
-        loft(m, T, [(3.6, sx * 1.5, -2.0, .04, .04), (3.1, sx * 1.5, -2.0, .28, .26), (1.5, sx * 1.5, -2.0, .36, .32), (-1.5, sx * 1.5, -2.0, .36, .32),
-                    (-3.0, sx * 1.5, -2.0, .26, .22), (-3.5, sx * 1.5, -2.0, .04, .04)], LROOF, GREY, n=10)
-        rod3(m, T, (sx * .5, -.5, 1.9), (sx * 1.45, -1.75, 1.7), .09, DGREY)
-        rod3(m, T, (sx * .5, -.5, 1.5), (sx * 1.45, -1.75, 1.7), .09, DGREY)
-        rod3(m, T, (sx * .5, -.5, -.6), (sx * 1.45, -1.75, -.8), .09, DGREY)
-        rod3(m, T, (sx * .5, -.5, -1.0), (sx * 1.45, -1.75, -.8), .09, DGREY)
+        loft(m, T, [(4.4, sx * 1.5, -2.1, .04, .04), (3.8, sx * 1.5, -2.1, .36, .34), (2.0, sx * 1.5, -2.1, .5, .44), (-1.5, sx * 1.5, -2.1, .5, .44),
+                    (-3.4, sx * 1.5, -2.1, .36, .3), (-4.1, sx * 1.5, -2.1, .04, .04)], LROOF, GREY, n=10)   # floats: a little bigger than before
+        for zz in (1.9, 1.5, -.6, -1.0):        # float struts: fuselage side to the float deck
+            rod3(m, T, (sx * .5, -.5, zz), (sx * 1.45, -1.7, 1.7 if zz > 0 else -.8), .12, DGREY)
+        rod3(m, T, (sx * .5, -.5, 1.7), (sx * 1.5, -1.7, 1.7), .1, DGREY)
+        rod3(m, T, (sx * .1, -.9, 1.7), (sx * 1.5, -1.7, 1.7), .1, DGREY)   # spreader under the belly
+        rod3(m, T, (sx * .5, .35, 2.0), (sx * 3.6, 1.35, 2.0), .12, YELLOWR)     # wing struts: cabin side up to the wing underside (front pair + rear pair)
+        rod3(m, T, (sx * .5, .35, .5), (sx * 3.6, 1.35, .6), .12, YELLOWR)
+        rod3(m, T, (sx * .1, 1.0, 1.9), (sx * 1.6, 1.4, 1.9), .12, YELLOWR)     # cabin-roof braces to the wing root
+        rod3(m, T, (sx * .1, 1.0, .7), (sx * 1.6, 1.4, .7), .12, YELLOWR)
         stripe(m, T, [(sx * .66, .15, 3.9), (sx * .66, .12, 1), (sx * .6, .2, -2.4), (sx * .38, .35, -3.4)], .16, GREEN, sx)
+    tbox(m, T, -.4, .4, .6, 1.5, .3, 2.5, YELLOWR)         # centre section: cabin roof into the wing (the wings used to hover above the fuselage)
+    # propeller: spinner, hub and three blades on the cowl face
+    loft(m, T, [(5.55, 0, .05, .02, .02), (5.4, 0, .05, .16, .16), (5.1, 0, .05, .24, .24), (4.95, 0, .05, .2, .2)], MINT, n=10)
+    for a in (90, 210, 330):
+        ca, sa = math.cos(math.radians(a)), math.sin(math.radians(a))
+        def bp(r, wd, zz):
+            return [(ca * r - sa * wd, .05 + sa * r + ca * wd, zz), (ca * r + sa * wd, .05 + sa * r - ca * wd, zz)]
+        lo = bp(.15, .12, 5.1) + bp(1.55, .08, 5.1)[::-1]
+        hi = bp(.15, .12, 5.2) + bp(1.55, .08, 5.2)[::-1]
+        prism3(m, T, lo, hi, DARK)
     fin(m, T, [(-3.0, .7), (-4.9, .4), (-5.0, 2.5), (-4.0, 2.7)], -.06, .06, YELLOWR)
     # pylon: C-shaped green strap, base on the ground at the model origin; cut-out fir trees stand in front (the Street View photos)
-    tube(m, arc_pole((0.0, 0.0, 0.0), f, R, 2.9), .2, GREEN, (-f[1], 0.0, f[0]), n=8)
+    arc = arc_pole((0.0, 0.0, 0.0), f, R, 2.9)
+    # mount: the strap's top end runs on into a cradle under the fuselage belly between the floats (it used to stop in mid-air)
+    end = arc[-1]
+    zs = min((z / 10.0 for z in range(-50, 51)), key=lambda z: math.hypot(*(T.pt((0, -1.0, z))[i] - end[i] for i in (0, 2))))
+    cradle = T.pt((0, -1.0, zs))
+    tube(m, arc + [cradle], .2, GREEN, (-f[1], 0.0, f[0]), n=8)
+    tbox(m, T, -.45, .45, -1.15, -.7, zs - 1.0, zs + 1.0, GREEN)
+    tbox(m, ID, -.9, .9, -.05, .25, -.6, .6, LROOF)                       # concrete footing under the strap
     for dx, dz in ((-3.6, -2.0), (-2.2, 3.0), (3.2, -3.4), (4.4, 1.0)):
         x, z = dx, dz
         for k, (r, y0, y1) in enumerate(((1.0, 0.0, 1.8), (.75, 1.7, 3.0), (.45, 2.9, 4.0))):
@@ -278,9 +330,7 @@ def bomarc():
             prism3(m, ID, [(p[0] - b[0] * .05, p[1], p[2] - b[2] * .05) for p in pts], [(p[0] + b[0] * .05, p[1], p[2] + b[2] * .05) for p in pts], RWHITE)
     for e in (1, -1):                       # body roundels and the flag on the fin face
         wn = (v[0] * e, 0.0, v[2] * e)
-        c = (wn[0] * .46, 9.0, wn[2] * .46)
-        for k, (rr, sw) in enumerate(((.34, BLUE), (.24, WHITE), (.12, RED))):
-            disc(m, add(c, mul(wn, .02 * k)), wn, rr, sw)
+        wrap_roundel(m, 0.0, 0.0, wn, 9.0, .34, .445)   # follows the body's curved skin
         fc = (wn[0] * .1 + u[0] * 1.1, 4.3, wn[2] * .1 + u[2] * 1.1)
         fp = [add(fc, add(mul(u, sx * .3), (0, sy * .35, 0))) for sx, sy in ((-1, -1), (1, -1), (1, 1), (-1, 1))]
         m.poly([add(p, mul(wn, .02)) for p in fp], RED, sub(fc, wn))
@@ -301,6 +351,10 @@ def memorial():
     m.box(-.7, .7, .9, 2.2, .55, .575, BRONZE)
     for k, (x, z, col) in enumerate(((-3.4, -1.0, RED), (-1.9, -2.7, BLUE), (3.3, -1.5, DARK))):
         m.box(x - .05, x + .05, .2, 9.0, z - .05, z + .05, METAL)
+        if col == RED:                                 # Canadian flag (maple leaf), both faces
+            for sz in (1, -1):
+                maple_flag(m, (x + .05 + .85, 8.45, z), (1, 0, 0), (0, 1, 0), (0, 0, sz), 1.7, .85)
+            continue
         fl = [(x + .05, 8.9, z), (x + 1.7, 8.9, z), (x + 1.7, 7.7, z), (x + .05, 7.7, z)]
         m.poly(fl, col, (x + 1, 8.3, z - 1))
         m.poly(fl[::-1], col, (x + 1, 8.3, z + 1))

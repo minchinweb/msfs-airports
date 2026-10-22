@@ -81,7 +81,7 @@
   {
    "bufferView": 0,
    "componentType": 5126,
-   "count": 484,
+   "count": 638,
    "type": "VEC3",
    "min": [
     -5.2,
@@ -97,19 +97,19 @@
   {
    "bufferView": 1,
    "componentType": 5126,
-   "count": 484,
+   "count": 638,
    "type": "VEC3"
   },
   {
    "bufferView": 2,
    "componentType": 5126,
-   "count": 484,
+   "count": 638,
    "type": "VEC2"
   },
   {
    "bufferView": 3,
    "componentType": 5123,
-   "count": 822,
+   "count": 984,
    "type": "SCALAR"
   }
  ],
@@ -117,28 +117,28 @@
   {
    "buffer": 0,
    "byteOffset": 0,
-   "byteLength": 5808
+   "byteLength": 7656
   },
   {
    "buffer": 0,
-   "byteOffset": 5808,
-   "byteLength": 5808
+   "byteOffset": 7656,
+   "byteLength": 7656
   },
   {
    "buffer": 0,
-   "byteOffset": 11616,
-   "byteLength": 3872
+   "byteOffset": 15312,
+   "byteLength": 5104
   },
   {
    "buffer": 0,
-   "byteOffset": 15488,
-   "byteLength": 1644
+   "byteOffset": 20416,
+   "byteLength": 1968
   }
  ],
  "buffers": [
   {
    "uri": "cyxd_h14_memorial.bin",
-   "byteLength": 17132
+   "byteLength": 22384
   }
  ]
 }

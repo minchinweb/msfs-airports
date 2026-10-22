@@ -81,7 +81,7 @@
   {
    "bufferView": 0,
    "componentType": 5126,
-   "count": 2104,
+   "count": 2708,
    "type": "VEC3",
    "min": [
     -7.2184557607792055,
@@ -90,26 +90,26 @@
    ],
    "max": [
     6.612522242984302,
-    8.732171905577705,
+    8.87239600533228,
     6.540257148827347
    ]
   },
   {
    "bufferView": 1,
    "componentType": 5126,
-   "count": 2104,
+   "count": 2708,
    "type": "VEC3"
   },
   {
    "bufferView": 2,
    "componentType": 5126,
-   "count": 2104,
+   "count": 2708,
    "type": "VEC2"
   },
   {
    "bufferView": 3,
    "componentType": 5123,
-   "count": 3252,
+   "count": 4176,
    "type": "SCALAR"
   }
  ],
@@ -117,28 +117,28 @@
   {
    "buffer": 0,
    "byteOffset": 0,
-   "byteLength": 25248
+   "byteLength": 32496
   },
   {
    "buffer": 0,
-   "byteOffset": 25248,
-   "byteLength": 25248
+   "byteOffset": 32496,
+   "byteLength": 32496
   },
   {
    "buffer": 0,
-   "byteOffset": 50496,
-   "byteLength": 16832
+   "byteOffset": 64992,
+   "byteLength": 21664
   },
   {
    "buffer": 0,
-   "byteOffset": 67328,
-   "byteLength": 6504
+   "byteOffset": 86656,
+   "byteLength": 8352
   }
  ],
  "buffers": [
   {
    "uri": "cyxd_h14_norseman.bin",
-   "byteLength": 73832
+   "byteLength": 95008
   }
  ]
 }
