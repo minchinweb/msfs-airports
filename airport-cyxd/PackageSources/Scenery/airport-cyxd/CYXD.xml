@@ -945,7 +945,7 @@
 	<!-- control tower: remove sim-placed objects around it -->
 	<ExclusionRectangle latitudeMinimum="53.56788169" latitudeMaximum="53.56831885" longitudeMinimum="-113.51892570" longitudeMaximum="-113.51818769" excludeAllObjects="TRUE" excludeBeaconObjects="FALSE" excludeEffectObjects="FALSE" excludeGenericBuildingObjects="FALSE" excludeLibraryObjects="FALSE" excludeTaxiwaySignObjects="FALSE" excludeTriggerObjects="FALSE" excludeWindsockObjects="FALSE" excludeExtrusionBridgeObjects="FALSE" excludeSimObjects="FALSE" excludeWorldScripts="FALSE" excludeCarParking="FALSE" excludeRectangles="FALSE" excludePolygons="FALSE" />
 	<!-- 1938 arched hangar, west side (replica at Fort Edmonton Park); doors face NE -->
-	<SceneryObject lat="53.56955" lon="-113.52551" alt="0.00000000000000" pitch="0.000000" bank="0.000000" heading="57.78" imageComplexity="VERY_SPARSE" altitudeIsAgl="TRUE" snapToGround="TRUE" snapToNormal="FALSE">
+	<SceneryObject lat="53.57075" lon="-113.52550" alt="0.00000000000000" pitch="0.000000" bank="0.000000" heading="57.78" imageComplexity="VERY_SPARSE" altitudeIsAgl="TRUE" snapToGround="TRUE" snapToNormal="FALSE">
 		<LibraryObject name="{0DDC62DE-900D-5F4C-B5BA-EFE16E11800D}" scale="1.000000"/>
 	</SceneryObject>
 	<!-- Administration Building (1940s-50s style), faces the circular drive -->
@@ -1099,10 +1099,10 @@
 		<Attribute name="ExcludeMSBuildings" guid="{F78A3074-8AD5-4B8B-92C4-C1C948BB7AA5}" type="UINT8" value="1"/>
 		<Attribute name="ExcludeTIN" guid="{18B58CBF-AE02-4A19-8AA9-3809E8E73400}" type="UINT8" value="1"/>
 		<Attribute name="ExclusionFlags" guid="{4CACC252-E6DC-419A-B20C-16EC601DF70E}" type="UINT32" value="3"/>
-		<Vertex lat="53.56968202736797" lon="-113.52615000613093"/>
-		<Vertex lat="53.56912664500543" lon="-113.52556180107860"/>
-		<Vertex lat="53.56939706658286" lon="-113.52484070691568"/>
-		<Vertex lat="53.56995244894539" lon="-113.52542891196804"/>
+		<Vertex lat="53.57088202736796" lon="-113.52614000613093"/>
+		<Vertex lat="53.57032664500543" lon="-113.52555180107859"/>
+		<Vertex lat="53.57059706658286" lon="-113.52483070691568"/>
+		<Vertex lat="53.57115244894538" lon="-113.52541891196803"/>
 	</Polygon>
 	<Polygon version="0.4.0" displayName="No generated buildings: Administration Building (1940s-50s style), faces the circula" parentGroupID="6" altitude="667.68023681640625">
 		<Attribute name="UniqueGUID" guid="{359C73E8-06BE-4FB2-ABCB-EC942F7761D0}" type="GUID" value="{195ED077-894F-541E-B106-4375599444BF}"/>
