@@ -1237,7 +1237,7 @@ def garage22():
     m = fmesh()
     x0, x1, z0, z1 = -50.0, 50.0, -36.0, 36.0
     GH, SL, GC = 3.2, 0.5, 3.5  # level height, slab thickness, ground-floor clearance under the lowest slab
-    BW, XA = 15.0, -14.0  # half width of the dipping bay, x where the dip starts (same for every deck, so the ramps are parallel)
+    BW, XA = 18.0, -14.0  # half width of the dipping bay, x where the dip starts (same for every deck, so the ramps are parallel)
     SLOPE = GH / 44.0
     YG = 0.08  # ramp foot at the ground
     decks = [(4.0, x1), (7.2, 40.0), (10.4, 30.0)]
@@ -1275,11 +1275,11 @@ def garage22():
         m.poly([(xa, yd - SL, za), (xb, yd - SL, za), (xb, yd - SL, zb), (xa, yd - SL, zb)], DGREY, (0.0, yd + 5.0, 0.0))  # underside
 
     m.poly([(x0, 0.03, z0), (x1, 0.03, z0), (x1, 0.03, z1), (x0, 0.03, z1)], DGREY, (0.0, -5.0, 0.0))  # the ground deck
-    columns(x0, x1, 0.03, GC)
+    columns(x0, x1 - 4.0, 0.03, GC)  # the lowest tier cantilevers 4 m past the ground-floor columns (Street View 14)
     for zz, s in ((z0, -1), (z1, 1)):  # ground-level side board (Street View 15): block plinth, brown ribbed board up to the first slab
         zi, zo = (zz, zz + 0.3 * s) if s > 0 else (zz - 0.3, zz)
-        m.box(x0, 45.0, 0, 0.9, min(zi, zo), max(zi, zo), TANBLK)
-        m.box(x0, 45.0, 0.9, GC, min(zi, zo) - (0.05 if s < 0 else 0), max(zi, zo) + (0.05 if s > 0 else 0), BRONZE)
+        m.box(x0, 46.0, 0, 0.9, min(zi, zo), max(zi, zo), TANBLK)
+        m.box(x0, 46.0, 0.9, GC, min(zi, zo) - (0.05 if s < 0 else 0), max(zi, zo) + (0.05 if s > 0 else 0), BRONZE)
     for k, (yd, X) in enumerate(decks):
         # U-shaped deck: flat slabs along both sides and across the NW end, the centre bay is a ramp down to the level below
         flat_slab(x0, X, z0, -BW, yd)
@@ -1309,7 +1309,7 @@ def garage22():
         m.box(XA, X, yd, yd + 0.9, BW, BW + 0.25, TAN)
         m.box(XA, X, yd, yd + 0.9, -BW - 0.25, -BW, TAN)
         if k + 1 < len(decks):
-            columns(x0, min(X, decks[k + 1][1]), yd, yd + GH - SL)
+            columns(x0, min(X, decks[k + 1][1]) - 3.0, yd, yd + GH - SL)  # each tier overhangs the one below
     # entrance at the SE end (Street View 16/17): the lowest ramp meets the ground between the edge beams; a gate island with two ticket posts,
     # a short barrier boom over each lane and yellow bollards, just outside the mouth
     m.box(50.5, 56.0, 0, 0.2, -0.9, 0.9, TAN)
