@@ -1153,9 +1153,9 @@ def hangar39():
 def hangar21():
     """Old terminal, "Hangar 21" (OSM way 230718907, later Amiskwaciy Academy), traced from the 2017 Wayback zoom-19 imagery
     (docs/cyxd/footprints/terminal21-2017-overlay.png).  Frame: +Z = bearing 51 (apron side, NE), +X = bearing 141 (SE) along the building.
-    North wing (tall dark-brick block with the "21" roundel on its landside face), a two-storey spine along the apron with a glazed ground
-    floor and a canopy, a lower cream landside wing with a glazed entrance, the taller SE block, and a covered walkway to the garage
-    (Street View 13, 14, 17, 18)."""
+    North wing (tall dark-brick block), a two-storey spine along the apron with a glazed ground floor and a canopy, the two-storey landside
+    sections behind a long concrete awning with red masts, the taller SE block with the glazed viewing lounge wrapping its SE corner, and a
+    covered walkway to the garage (MS-1270.213.1 / .3; the 2017 aerial)."""
     m = fmesh()
     # north wing x -86..-51.5, z -8..17
     m.box(-86.0, -51.5, 0, 9.5, -8.0, 17.0, BRICKD, top=False)
@@ -1166,69 +1166,121 @@ def hangar21():
     rows_z(m, 1, 17.0, -84.0, -53.5, 6.2, 6, 2.2, 1.6)
     rows_x(m, -1, -86.0, -6.0, 15.0, 4.0, 4, 2.2, 1.8)
     m.box(-78.0, -58.0, 0, 3.2, -8.6, -8.0, GLASS)  # entrance glazing
-    # spine along the apron x -52..72, z -4..13, two storeys; glazed ground floor behind columns
-    m.box(-52.0, 72.0, 0, 7.6, -4.0, 13.0, BRICKD, top=False)
-    m.box(-52.2, 72.2, 7.6, 8.1, -4.2, 13.2, DGREY)
-    for x in range(-48, 71, 6):
+    # spine along the apron x -52..28, z -4..13, two storeys (the SE block carries on to x 75.5); glazed ground floor behind columns
+    m.box(-52.0, 28.0, 0, 7.6, -4.0, 13.0, BRICKD, top=False)
+    m.box(-52.2, 28.0, 7.6, 8.1, -4.2, 13.2, DGREY)
+    for x in range(-48, 61, 6):
         rows_z(m, 1, 13.0, x, x + 5.0, 1.0, 1, 4.0, 2.6)
         rows_z(m, 1, 13.0, x, x + 5.0, 4.6, 1, 4.0, 1.6)
-    m.box(-48.0, 70.0, 3.9, 4.3, 13.0, 16.0, CREAM)  # apron-side canopy
+    m.box(-48.0, 64.0, 3.9, 4.3, 13.0, 16.0, CREAM)  # apron-side canopy (stops short of the lounge)
     for x in range(-46, 70, 12):
         m.box(x, x + 0.5, 0, 3.9, 15.4, 15.9, CREAM)
-    # lower cream landside wing x -50..8, z -21..-4 with a glazed entrance bay
-    m.box(-50.0, 8.0, 0, 4.6, -21.0, -4.0, CREAM, top=False)
-    m.box(-50.2, 8.2, 4.6, 5.0, -21.2, -3.8, DGREY)
-    rows_z(m, -1, -21.0, -48.0, 6.0, 1.2, 12, 2.4, 1.8)
-    m.box(-12.0, 4.0, 0, 3.6, -21.1, -21.0, GLASS)
-    m.box(-14.0, 6.0, 3.6, 3.9, -24.0, -21.0, CREAM)  # entrance canopy
-    # inner courtyard roof between the wings
-    m.box(-40.0, 8.0, 5.0, 5.2, -21.0, -4.0, DGREY)
-    # SE end (archive photos MS-1270.213.1 and .3, 2013): a two-storey brick wall set back at z -13 (x 8..40) behind a deep landside canopy with
-    # red struts, then the block (x 40..76, z -19) with two "21" roundels (one on the set-back wall, one on the block), and the glazed viewing
-    # lounge cantilevered from the upper floor at the SE corner.
-    m.box(8.0, 40.0, 0, 9.5, -13.0, 13.0, BRICKD, top=False)
-    m.box(7.8, 40.2, 9.5, 10.0, -13.2, 13.2, DGREY)
-    m.box(40.0, 76.0, 0, 9.5, -19.0, 13.0, BRICKD, top=False)
-    m.box(39.8, 76.2, 9.5, 10.0, -19.2, 13.2, DGREY)
-    m.box(9.0, 39.0, 0.3, 3.1, -13.15, -13.0, GLASS)  # glazed doors under the canopy
-    m.box(8.0, 40.0, 4.1, 4.6, -23.0, -13.0, CREAM)  # canopy slab with a pale ribbed fascia
-    for x in (10.0, 18.0, 26.0, 34.0, 39.0):
-        m.box(x, x + 0.6, 0, 4.1, -23.0, -22.4, RED)
-    for x in range(9, 40, 5):  # red struts rising from the canopy edge to the roof edge
-        rod(m, x, 4.6, -22.8, 10.0, -13.3, 0.3, RED)
-    rows_z(m, -1, -13.0, 10.0, 28.0, 6.0, 3, 2.2, 1.6)
-    number_disc(m, 32.0, 7.8, -13.1, (0, -1), 1.2, "21")
-    number_disc(m, 45.0, 6.6, -19.1, (0, -1), 1.4, "21")
-    rows_z(m, -1, -19.0, 48.0, 58.0, 5.3, 2, 2.2, 1.6)
-    m.box(41.0, 43.5, 0, 2.4, -19.1, -19.0, DARK)  # service door
-    m.box(48.0, 58.0, 3.5, 4.0, -19.9, -19.0, CREAM)  # small canopy over the entrance
-    rows_z(m, -1, -19.0, 62.0, 74.0, 1.0, 3, 2.6, 1.4)
-    # viewing lounge x 56..76, upper floor, on the APRON (NE) face at the SE end so it looks east toward the runways (user, 2026-10-21: it had
-    # been put on the landside); glazed on the apron face and the SE end under a sloping glass roof
-    lz0, lz1 = 13.0, 16.6
-    m.box(56.0, 76.0, 4.2, 4.8, lz0, lz1, DGREY)
-    m.box(56.0, 76.0, 4.8, 8.6, lz0, lz1, GLASS, top=False)
-    for x in [56.0 + 4.0 * i for i in range(6)]:
-        m.box(x, x + 0.15, 4.8, 8.6, lz1, lz1 + 0.15, DGREY)
-    m.poly([(56.0, 8.6, lz1), (76.0, 8.6, lz1), (76.0, 9.6, lz0), (56.0, 9.6, lz0)], GLASS, (66.0, 4.0, (lz0 + lz1) / 2))
-    for x in (56.0, 76.0):  # triangular glass sides under the sloping roof
-        m.poly([(x, 8.6, lz0), (x, 8.6, lz1), (x, 9.6, lz0)], GLASS, (66.0 if x > 60 else 66.0, 6.0, (lz0 + lz1) / 2))
-    for x in (60.0, 72.0):  # two slim columns carrying the cantilever
-        m.box(x, x + 0.5, 0, 4.2, lz1 - 0.6, lz1 - 0.1, DGREY)
-    rows_x(m, 1, 76.0, -17.0, 11.0, 2.0, 5, 3.0, 1.6)
-    rows_x(m, 1, 76.0, -17.0, 11.0, 6.0, 5, 3.0, 1.6)
-    roof_vents(m, [(-70, 4), (-65, 10), (0, 5), (10, 8), (50, 0), (60, 6)], 10.0)
-    # covered walkway from the garage straight into the spine's landside wall (user, 2026-10-21: it used to stop on the low wing's roof, hanging).
-    # It runs on piers, passes over the low cream wing at a floor height just above that roof, and ends flush in the spine wall (7.6 m).
-    # It starts at the garage's NE face (z -46.8 here; the garage was widened to the measured 74 m on 2026-10-22).
-    m.box(-41.0, -34.0, 5.2, 7.4, -46.8, -4.0, BRICKD)
-    m.box(-41.2, -33.8, 7.4, 7.7, -47.0, -3.8, DGREY)
+    # Landside (2026-10-22, re-measured from the Wayback 2017-05-03 zoom-20 tiles with the image lean taken out, 0.22 m per metre of height
+    # toward -z, and checked against MS-1270.213.1 / .3, 2013).  Two storeys of brick all along, in two planes that meet at a jog at x 28: the
+    # NW section stands forward at z -16 (its SE-facing end is the lit sliver in .3), the SE block is set back at z -12.9.  There was no low
+    # cream wing.  A flat concrete awning with a pale ribbed fascia (top 4.9 m) runs along both: 4.3 m deep on the NW section, 10 m deep on
+    # brick piers on the SE block, where it ends flush with the SE end wall.  Tall red masts stand on its fascia and lean back a little: 3.6 m
+    # apart along the NW section (the dots along its edge in the aerial) and on the last 25 m of the SE block (MS-1270.213.1 shows them rising
+    # past the roof line); none on the stretch in between (.3).
+    m.box(-51.5, -45.0, 0, 4.6, -19.0, -4.0, BRICKD, top=False)  # low link to the north wing
+    m.box(-51.5, -44.8, 4.6, 5.0, -19.2, -4.0, DGREY)
+    m.box(-45.0, 28.0, 0, 7.6, -16.0, -4.0, BRICKD, top=False)  # NW section
+    m.box(-45.2, 28.2, 7.6, 8.15, -16.2, -3.8, DGREY)
+
+    def ext_x(pts, x0, x1, sw):  # (z, y) profile extruded along x
+        cen = ((x0 + x1) / 2, sum(y for _, y in pts) / len(pts), sum(z for z, _ in pts) / len(pts))
+        for i in range(len(pts)):
+            (za, ya), (zb, yb) = pts[i], pts[(i + 1) % len(pts)]
+            m.poly([(x0, ya, za), (x1, ya, za), (x1, yb, zb), (x0, yb, zb)], sw, cen)
+        for x in (x0, x1):
+            m.poly([(x, y, z) for z, y in pts], sw, cen)
+    ext_x([(-16.15, 8.15), (-14.6, 9.4), (-12.4, 9.4), (-12.4, 8.15)], -26.9, 27.9, SLATE)  # sloped metal band along its top (.3)
+    rows_z(m, -1, -16.0, -26.0, 27.0, 4.9, 10, 2.6, 1.9)
+    m.box(-26.5, 27.5, 0.3, 3.2, -16.12, -16.0, GLASS)  # glazed ground floor under the awning
+    m.box(28.0, 75.5, 0, 9.5, -12.9, 13.0, BRICKD, top=False)  # SE block
+    m.box(27.8, 75.7, 9.5, 10.0, -13.1, 13.2, DGREY)
+    m.box(38.0, 54.0, 10.0, 12.8, 2.5, 12.0, BRICKD, top=False)  # rooftop penthouse on the apron side (.3; aerial)
+    m.box(37.8, 54.2, 12.8, 13.1, 2.3, 12.2, DGREY)
+    rows_x(m, 1, 54.0, 4.0, 11.5, 10.6, 4, 0.9, 1.8)
+    rows_z(m, -1, -12.9, 30.0, 68.0, 6.0, 7, 2.2, 1.6)
+    m.box(29.0, 67.0, 0.3, 3.2, -13.02, -12.9, GLASS)
+    za, zo = -20.3, -22.9  # awning edge on the NW section / the SE block
+    m.box(-27.2, 28.0, 4.0, 4.35, za + 0.1, -15.9, BEIGE)
+    m.box(-27.2, 28.0, 3.8, 4.9, za, za + 0.3, CREAM)
+    m.box(28.0, 75.3, 4.0, 4.35, zo + 0.1, -12.8, BEIGE)
+    m.box(28.0, 75.5, 3.8, 4.9, zo, zo + 0.3, CREAM)
+    m.box(28.0, 28.3, 3.8, 4.9, zo + 0.3, za + 0.3, CREAM)
+    m.box(75.2, 75.5, 3.8, 4.9, zo + 0.3, -12.9, CREAM)
+    def under(x0, x1, y, z0, z1, sw):  # Mesh.box has no bottom face
+        m.poly([(x0, y, z0), (x1, y, z0), (x1, y, z1), (x0, y, z1)], sw, ((x0 + x1) / 2, y + 1.0, (z0 + z1) / 2))
+    under(-27.2, 28.0, 4.0, za + 0.3, -15.9, BEIGE)
+    under(28.0, 75.3, 4.0, zo + 0.3, -12.8, BEIGE)
+    under(-27.2, 28.0, 3.8, za, za + 0.3, CREAM)
+    under(28.0, 75.5, 3.8, zo, zo + 0.3, CREAM)
+    under(28.0, 28.3, 3.8, zo + 0.3, za + 0.3, CREAM)
+    for x in (31.0, 42.0, 53.0, 64.0):  # brick piers under the deep part
+        m.box(x, x + 0.7, 0, 3.8, zo + 0.05, zo + 0.75, BRICK)
+    for x in [-25.2 + 3.6 * i for i in range(10)] + [74.6 - 3.6 * i for i in range(7)]:
+        ze = za if x < 28 else zo
+        rod(m, x, 3.9, ze - 0.25, 11.4 if x > 28 else 9.4, ze + 0.6, 0.16, RED)  # mast on the fascia's face
+        rod(m, x + 0.3, 4.2, ze - 0.25, 7.2, ze + 0.35, 0.1, RED)  # its brace
+    # under the SE end of the awning a brick block with the school sign, and a white shed beside the corner (.1)
+    m.box(68.5, 75.5, 0, 4.0, -21.6, -12.9, BRICKD)
+    m.box(75.5, 75.6, 2.0, 3.3, -20.8, -16.8, TEAL)
+    m.box(75.5, 80.0, 0, 3.0, -16.4, -13.6, RWHITE)
+    m.box(75.4, 80.2, 3.0, 3.2, -16.5, -13.5, DGREY)
+    # two "21" roundels (.1): on the landside face just short of the corner, above the awning, and on the SE end wall beside a teal banner
+    number_disc(m, 72.6, 7.6, -12.9, (0, -1), 0.8, "21")
+    number_disc(m, 75.5, 7.9, -9.9, (1, 0), 0.8, "21")
+    m.box(75.5, 75.62, 4.0, 9.2, -11.9, -10.9, TEAL)
+    # SE end wall (.1): a small ribbed canopy over the door near the landside corner, two upper windows, two ground-floor windows
+    m.box(75.5, 76.7, 4.0, 4.9, -7.0, -2.3, CREAM)
+    m.box(75.5, 75.6, 0, 2.4, -7.0, -5.9, DARK)
+    for z in (-1.8, 2.1):
+        m.window((1, 0, 0), (75.5, 5.6, z), (0, 0, 1), 1.9, 1.5)
+    for z in (1.6, 11.0):
+        m.window((1, 0, 0), (75.5, 1.0, z), (0, 0, 1), 1.5, 1.2)
+    # glazed viewing lounge (the "reviewing window"): an L that wraps the SE corner (user, 2026-10-22), cantilevered 3 m off the SE end wall
+    # and off the apron face, so it looks both down Airport Rd and along the apron.  .1 shows the end leg running past the corner (that is the
+    # end of the apron leg); seven tall panes on the end leg over grey spandrels, a glass roof sloping up to the walls with a hip at the corner.
+    # Gone by the 2017 imagery.  The apron leg's length (13 m) is a guess; no photo shows that face.
+    wx, wz = 75.5, 13.0  # SE end wall, apron face
+    ox, oz = wx + 3.0, wz + 3.0  # outer faces
+    ez0, ax0 = 5.5, 65.5  # far ends of the end leg and of the apron leg
+    for y0, y1, sw in ((4.0, 5.1, SLATE), (5.1, 8.5, GLASS)):
+        m.box(wx, ox, y0, y1, ez0, wz, sw, top=False)
+        m.box(ax0, ox, y0, y1, wz, oz, sw, top=False)
+    under(wx, ox, 4.0, ez0, wz, SLATE)
+    under(ax0, ox, 4.0, wz, oz, SLATE)
+    lc = (wx, 6.0, wz)  # inside the corner
+    m.poly([(ox, 8.5, ez0), (ox, 8.5, oz), (wx, 9.5, wz), (wx, 9.5, ez0)], GLASS, lc)
+    m.poly([(ax0, 8.5, oz), (ox, 8.5, oz), (wx, 9.5, wz), (ax0, 9.5, wz)], GLASS, lc)
+    m.poly([(wx, 8.5, ez0), (ox, 8.5, ez0), (wx, 9.5, ez0)], GLASS, (wx + 1.0, 8.8, ez0 + 1.0))
+    m.poly([(ax0, 8.5, wz), (ax0, 8.5, oz), (ax0, 9.5, wz)], GLASS, (ax0 + 1.0, 8.8, wz + 1.0))
+    for i in range(8):
+        z = ez0 + i * (oz - ez0) / 7
+        m.box(ox, ox + 0.12, 5.1, 8.5, z - 0.07, z + 0.07, DGREY)
+    for i in range(8):
+        x = ax0 + i * (ox - 1.5 - ax0) / 7
+        m.box(x - 0.07, x + 0.07, 5.1, 8.5, oz, oz + 0.12, DGREY)
+    roof_vents(m, [(-70, 4), (-65, 10)], 10.0)
+    roof_vents(m, [(0, 5), (10, 8)], 8.1)
+    roof_vents(m, [(60, 0), (66, 6)], 10.0)
+    # covered walkway from the garage to the landside (aerial 2017: 7.5 m wide, x -39.2..-31.7; user, 2026-10-21: it must not hang).  It runs on
+    # piers from the garage's NE face (z -46.8) at a floor height of 5.2 m, over the awning line, into a brick head-house at the foot of the NW
+    # section (x -43.5..-27, out to z -21.6 in the aerial; the NW awning starts at its SE side).
+    m.box(-43.5, -27.0, 0, 7.4, -21.6, -16.0, BRICKD, top=False)
+    m.box(-43.7, -26.8, 7.4, 7.8, -21.8, -15.9, DGREY)
+    m.box(-41.0, -38.0, 0.3, 3.2, -21.72, -21.6, GLASS)
+    m.box(-39.2, -31.7, 5.2, 7.4, -46.8, -21.6, BRICKD)
+    m.box(-39.4, -31.5, 7.4, 7.7, -47.0, -21.6, DGREY)
+    under(-39.2, -31.7, 5.2, -46.8, -21.6, DGREY)
     for z in (-44.0, -36.0, -28.0):
-        for x in (-40.6, -34.6):
+        for x in (-38.8, -32.7):
             m.box(x, x + 0.6, 0, 5.2, z, z + 0.6, CREAM)
-    for z in (-40.0, -31.0, -24.0, -12.0):  # window slots along both sides
-        m.window((1, 0, 0), (-34.0, 5.8, z), (0, 0, 1), 3.5, 1.1)
-        m.window((-1, 0, 0), (-41.0, 5.8, z), (0, 0, 1), 3.5, 1.1)
+    for z in (-44.0, -38.0, -32.0, -26.0):  # window slots along both sides
+        m.window((1, 0, 0), (-31.7, 5.8, z), (0, 0, 1), 3.5, 1.1)
+        m.window((-1, 0, 0), (-39.2, 5.8, z), (0, 0, 1), 3.5, 1.1)
     # gate annexes: the jetway roots stand at the face of the building (see CYXD.xml / gen_parking.py: GATE 1 on the NW end wall, GATES 2-4 on the NE face); each gets a small boarding bay with a
     # door where the bridge docks (user, 2026-10-21: the jetways did not attach to the building).  Authored x = footprint x - 5, z = footprint z - 17.5.
     for xc in (-41.0, 0.0, 41.0):  # gates 2-4 at 41 m pitch (s = 45 / 86 / 127 m from the NW corner, gen_parking.py NE_GATES_S; xc = s - 86)
