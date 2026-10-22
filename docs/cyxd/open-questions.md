@@ -31,6 +31,7 @@ Reviewed 2026-10-22. Current state is in `STATUS.md`; links are in `reference-li
 12. The hotels (Edmonton Inn, Chateau Louis) are not modelled; the Chateau Nova hotel is 2005, out of era but present in OSM.
 13. **Flashing red obstruction lights** (added 2026-10-22) on the downtown Edmonton buildings near the approach paths and on the nearby NAIT buildings. Not started: pick the buildings under or beside the approaches (from LiDAR or OSM heights), then place flashing red beacons on their roofs.
 14. **Review parking places and jetways** (added 2026-10-22): check every parking spot (`TaxiwayParking`) and jetway against what the SDK expects (parking type, name/number, heading, radius, and for jetways the matching gate parking and the `Jetway` and `Handle` setup). Not started.
+15. **Opus review of the terminal, Esso building and Hangar 19** (added 2026-10-22): have Opus review the terminal building (Hangar 21), the Esso building (Hangar 20) and Hangar 19: compare each model with its reference photos and footprint, and check placement, proportions, textures and signs. Not started.
 
 ## Research gaps
 
