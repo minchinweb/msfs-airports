@@ -90,6 +90,16 @@ def stripes(m, x0, x1, y0, y1, plane, front, cols, w=1.7, axis="x", depth=0.08):
         i += 1
 
 
+def rod(m, x, y0, z0, y1, z1, w, sw):
+    """Square rod of side w leaning from (x, y0, z0) to (x, y1, z1) (a canopy strut); built from four side quads."""
+    b = [(x, y0, z0), (x + w, y0, z0), (x + w, y0, z0 + w), (x, y0, z0 + w)]
+    t = [(px, y1, pz + (z1 - z0)) for px, _, pz in b]
+    c = (x + w / 2, (y0 + y1) / 2, (z0 + z1) / 2 + w / 2)
+    for i in range(4):
+        j = (i + 1) % 4
+        m.poly([b[i], b[j], t[j], t[i]], sw, c)
+
+
 def roof_vents(m, pts, y, sw=DGREY):
     for x, z in pts:
         m.box(x - 0.4, x + 0.4, y, y + 0.9, z - 0.4, z + 0.4, sw)
@@ -755,9 +765,6 @@ def hangar21():
     rows_z(m, 1, 17.0, -84.0, -53.5, 2.4, 6, 2.2, 1.6)
     rows_z(m, 1, 17.0, -84.0, -53.5, 6.2, 6, 2.2, 1.6)
     rows_x(m, -1, -86.0, -6.0, 15.0, 4.0, 4, 2.2, 1.8)
-    for x in (-82.0, -77.0, -72.0, -67.0, -62.0, -57.0):  # red-brown vertical fins on the landside face (Street View 13)
-        m.box(x, x + 0.6, 0, 9.5, -8.5, -8.0, RED)
-    number_disc(m, -60.0, 7.4, -8.5, (0, -1), 1.3, "21")
     m.box(-78.0, -58.0, 0, 3.2, -8.6, -8.0, GLASS)  # entrance glazing
     # spine along the apron x -52..72, z -4..13, two storeys; glazed ground floor behind columns
     m.box(-52.0, 72.0, 0, 7.6, -4.0, 13.0, BRICKD, top=False)
@@ -768,21 +775,44 @@ def hangar21():
     m.box(-48.0, 70.0, 3.9, 4.3, 13.0, 16.0, CREAM)  # apron-side canopy
     for x in range(-46, 70, 12):
         m.box(x, x + 0.5, 0, 3.9, 15.4, 15.9, CREAM)
-    # lower cream landside wing x -50..25, z -21..-4 with a glazed entrance bay
-    m.box(-50.0, 25.0, 0, 4.6, -21.0, -4.0, CREAM, top=False)
-    m.box(-50.2, 25.2, 4.6, 5.0, -21.2, -3.8, DGREY)
+    # lower cream landside wing x -50..8, z -21..-4 with a glazed entrance bay
+    m.box(-50.0, 8.0, 0, 4.6, -21.0, -4.0, CREAM, top=False)
+    m.box(-50.2, 8.2, 4.6, 5.0, -21.2, -3.8, DGREY)
     rows_z(m, -1, -21.0, -48.0, 6.0, 1.2, 12, 2.4, 1.8)
     m.box(-12.0, 4.0, 0, 3.6, -21.1, -21.0, GLASS)
     m.box(-14.0, 6.0, 3.6, 3.9, -24.0, -21.0, CREAM)  # entrance canopy
     # inner courtyard roof between the wings
-    m.box(-40.0, 20.0, 5.0, 5.2, -21.0, -4.0, DGREY)
-    # SE block x 25..76, z -19..13, taller
-    m.box(25.0, 76.0, 0, 9.5, -19.0, 13.0, BRICKD, top=False)
-    m.box(24.8, 76.2, 9.5, 10.0, -19.2, 13.2, DGREY)
-    for y in (2.0, 6.0):
-        rows_z(m, -1, -19.0, 27.0, 74.0, y, 8, 3.0, 1.6)
-        rows_x(m, 1, 76.0, -17.0, 11.0, y, 5, 3.0, 1.6)
-    m.box(24.0, 30.0, 0, 8.0, 13.0, 13.1, DARK)
+    m.box(-40.0, 8.0, 5.0, 5.2, -21.0, -4.0, DGREY)
+    # SE end (archive photos MS-1270.213.1 and .3, 2013): a two-storey brick wall set back at z -13 (x 8..40) behind a deep landside canopy with
+    # red struts, then the block (x 40..76, z -19) with two "21" roundels (one on the set-back wall, one on the block), and the glazed viewing
+    # lounge cantilevered from the upper floor at the SE corner.
+    m.box(8.0, 40.0, 0, 9.5, -13.0, 13.0, BRICKD, top=False)
+    m.box(7.8, 40.2, 9.5, 10.0, -13.2, 13.2, DGREY)
+    m.box(40.0, 76.0, 0, 9.5, -19.0, 13.0, BRICKD, top=False)
+    m.box(39.8, 76.2, 9.5, 10.0, -19.2, 13.2, DGREY)
+    m.box(9.0, 39.0, 0.3, 3.1, -13.15, -13.0, GLASS)  # glazed doors under the canopy
+    m.box(8.0, 40.0, 4.1, 4.6, -23.0, -13.0, CREAM)  # canopy slab with a pale ribbed fascia
+    for x in (10.0, 18.0, 26.0, 34.0, 39.0):
+        m.box(x, x + 0.6, 0, 4.1, -23.0, -22.4, RED)
+    for x in range(9, 40, 5):  # red struts rising from the canopy edge to the roof edge
+        rod(m, x, 4.6, -22.8, 10.0, -13.3, 0.3, RED)
+    rows_z(m, -1, -13.0, 10.0, 28.0, 6.0, 3, 2.2, 1.6)
+    number_disc(m, 32.0, 7.8, -13.1, (0, -1), 1.2, "21")
+    number_disc(m, 45.0, 6.6, -19.1, (0, -1), 1.4, "21")
+    rows_z(m, -1, -19.0, 48.0, 58.0, 5.3, 2, 2.2, 1.6)
+    m.box(41.0, 43.5, 0, 2.4, -19.1, -19.0, DARK)  # service door
+    m.box(48.0, 58.0, 3.5, 4.0, -19.9, -19.0, CREAM)  # small canopy over the entrance
+    rows_z(m, -1, -19.0, 62.0, 74.0, 1.0, 3, 2.6, 1.4)
+    # viewing lounge x 58..76, upper floor, glazed on the landside face and the SE end under a sloping glass roof
+    m.box(58.0, 76.0, 4.2, 4.8, -21.3, -19.0, DGREY)
+    m.box(58.0, 76.0, 4.8, 8.6, -21.3, -19.0, GLASS, top=False)
+    for x in [58.0 + 3.0 * i for i in range(6)] + [75.85]:
+        m.box(x, x + 0.15, 4.8, 8.6, -21.45, -21.3, DGREY)
+    m.poly([(58.0, 8.6, -21.3), (76.0, 8.6, -21.3), (76.0, 9.6, -19.0), (58.0, 9.6, -19.0)], GLASS, (67.0, 4.0, -20.0))
+    for x in (58.0, 76.0):
+        m.poly([(x, 8.6, -21.3), (x, 8.6, -19.0), (x, 9.6, -19.0)], GLASS, (x - 1 if x > 60 else x + 1, 8.0, -20.5))
+    rows_x(m, 1, 76.0, -17.0, 11.0, 2.0, 5, 3.0, 1.6)
+    rows_x(m, 1, 76.0, -17.0, 11.0, 6.0, 5, 3.0, 1.6)
     roof_vents(m, [(-70, 4), (-65, 10), (0, 5), (10, 8), (50, 0), (60, 6)], 10.0)
     # covered walkway from the spine's SW side toward the garage, on piers
     m.box(-41.0, -34.0, 5.5, 8.5, -52.0, -21.0, BRICKD)
@@ -813,8 +843,18 @@ def garage22():
             m.box(x, x + 0.8, 0, 3.0, z - 0.4, z + 0.4, CREAM)
     # tiers: (x_start, x_end, top height)
     for xa, xb, h in ((x0, 30.0, 10.4), (30.0, 40.0, 7.2), (40.0, x1, 4.0)):
-        m.box(xa, xb, 3.0, h, z0, z1, BRONZE, top=True)
-        m.box(xa - 0.1, xb + 0.1, h, h + 0.35, z0 - 0.1, z1 + 0.1, TAN)  # concrete cap
+        dish = h > 10.0  # the top deck is not flat: a 5 m rim round a middle that slopes 1.8 m down toward the back (archive photo MS-1270.213.3)
+        m.box(xa, xb, 3.0, h - 1.8 if dish else h, z0, z1, BRONZE, top=True)
+        if dish:
+            r, d = 5.0, 1.8
+            for ax, bx, az, bz, ox0, ox1, oz0, oz1 in ((xa, xb, z0, z0 + r, 0.1, 0.1, 0.1, 0.0), (xa, xb, z1 - r, z1, 0.1, 0.1, 0.0, 0.1),
+                                                       (xa, xa + r, z0 + r, z1 - r, 0.1, 0.0, 0.0, 0.0), (xb - r, xb, z0 + r, z1 - r, 0.0, 0.1, 0.0, 0.0)):
+                m.box(ax, bx, h - d, h, az, bz, BRONZE, top=False)
+                m.box(ax - ox0, bx + ox1, h, h + 0.35, az - oz0, bz + oz1, TAN)
+            m.poly([(xa + r, h - 0.2, z0 + r), (xb - r, h - 0.2, z0 + r), (xb - r, h - d, z1 - r), (xa + r, h - d, z1 - r)], DGREY,
+                   ((xa + xb) / 2, h - 6.0, 0.0))
+        else:
+            m.box(xa - 0.1, xb + 0.1, h, h + 0.35, z0 - 0.1, z1 + 0.1, TAN)  # concrete cap
         y = 3.0
         while y + 3.3 <= h + 0.01:
             m.box(xa - 0.15, xb + 0.15, y + 2.55, y + 3.0, z0 - 0.15, z1 + 0.15, TAN)  # slab edge beam
@@ -826,11 +866,11 @@ def garage22():
     for yy in (3.9, 7.2):
         rows_x(m, -1, x0, z0 + 3.0, z1 - 3.0, yy, 6, 7.0, 1.0)
     # stair tower at the NW end (angled wall in the photos) and the "22" roundel at the roof corner
-    m.box(-30.0, -22.0, 10.4, 14.5, 10.0, 18.0, TAN)
-    m.box(-30.2, -21.8, 14.5, 14.8, 9.8, 18.2, DGREY)
+    m.box(-49.5, -41.5, 8.6, 14.5, 22.0, 30.0, TAN)
+    m.box(-49.7, -41.3, 14.5, 14.8, 21.8, 30.2, DGREY)
     m.box(-52.0, -50.0, 10.4, 12.0, 20.0, 27.0, CREAM)
     number_disc(m, -40.0, 8.0, z1 + 0.2, (0, 1), 1.4, "22")
-    m.box(0.0, 3.0, 10.75, 12.0, -3.0, 3.0, DGREY)  # roof lift housing
+    m.box(0.0, 3.0, 8.0, 12.0, -3.0, 3.0, DGREY)  # roof lift housing
     m.mirror_x()
     return m
 
