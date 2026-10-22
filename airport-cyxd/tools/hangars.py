@@ -1247,15 +1247,15 @@ def garage22():
     """Terminal parking garage ("22" roundel), an OPEN parkade (user, 2026-10-21: it is open in real life, give it a ground deck and leave the sides open).
     Frame (before the final mirror): +X = bearing 148 = the FRONT, toward Airport Rd, +Z = bearing 58 (NE, toward the terminal = east), -X = the back / NW end.
     Three decks (10.4 / 7.2 / 4.0 m) over an open ground level; clear spans inside, posts only on the perimeter.
-    Front (MS-1270.213.3): each tier is set back from the one below (decks reach x 30 / 40 / 50) and the front is FOUR segments across (z quarters,
-    west to east), each set back 5 m more than the one before (0 / 5 / 10 / 15 m, estimated).  A post stands at every corner of the stepped front (8) on every
+    Front (MS-1270.213.3): each tier is set back from the one below (decks reach x 50 / 46.7 / 43.5) and the front is FOUR segments across (z quarters,
+    west to east), each set back by the same step (18 m / 5.5 = 3.27 m, user estimate) from the one before.  A post stands at every corner of the stepped front (8) on every
     level, and the brown rim board runs unbroken round the whole front, including the step returns.
     Each deck is a U open to the front: flat sides and flat NW end round a central bay (36 m wide) whose floor slopes DOWN TOWARD THE BACK, from a
-    slope start line 7.6 m (25 ft) behind the bay's most receded front segment (so the flat strip is wider on the west half), to a 10 m flat landing
-    against a back wall; the landing is the next deck's flat surface (the lowest lands on the ground), with nose-in stall stripes.
+    slope start line 7.6 m (25 ft) behind the bay's most receded front segment (so the flat strip is wider on the west half), and lands on the NW flat zone of
+    the deck below, flowing under this deck's NW arm (no wall), with nose-in stalls there; the lowest slope ends on the ground.
     Vehicle entrance: ground level at the west (-Z) end of the front, with a gate island, ticket posts, booms and yellow bollards.  Ground-level
     side boards over a block plinth along both long sides (Street View 15).  "22" roundels on the NE (land side) face of the NW stair tower and of a
-    second, angled stair tower near the east end of the front whose roof falls toward the west.  Footprint about 100 x 72 m (2017 Wayback)."""
+    second, angled stair tower at the front of the top deck's east quarter, projecting past it, whose roof falls toward the west.  Footprint about 100 x 72 m (2017 Wayback)."""
     m = fmesh()
     x0, x1, z0, z1 = -50.0, 50.0, -36.0, 36.0
     GH, SL, GC = 3.2, 0.5, 3.5  # level height, slab thickness, ground-floor clearance under the lowest slab
@@ -1263,9 +1263,11 @@ def garage22():
     LAND = 10.0  # landing length
     YG = 0.08  # landing level on the ground
     FLAT = 7.6  # flat deck in front of the slope (about 25 ft, MS-1270.213.3)
-    SETS = (0.0, 5.0, 10.0, 15.0)  # front segment setbacks, west (-Z) to east (+Z)
+    STEP = 18.0 / 5.5  # one step: 1/5.5 of a quarter of the front (user estimate); the SAME distance for each tier's recess and each front segment's setback
+    SETS = (0.0, STEP, 2 * STEP, 3 * STEP)  # front segment setbacks, west (-Z) to east (+Z)
     ZB = (z0, -BW, 0.0, BW, z1)  # segment boundaries
-    decks = [(4.0, x1), (7.2, 40.0), (10.4, 30.0)]
+    decks = [(4.0, x1), (7.2, x1 - STEP), (10.4, x1 - 2 * STEP)]
+    prev_xb = None
 
     def column(x, z, ya, yb, head=True):
         m.box(x - 0.4, x + 0.4, ya, yb, z - 0.4, z + 0.4, CREAM)
@@ -1320,10 +1322,13 @@ def garage22():
         m.box(x0, 46.0, 0.9, GC, zi - (0.05 if s < 0 else 0), zo + (0.05 if s > 0 else 0), BRONZE)
     for k, (yd, X) in enumerate(decks):
         XF = [X - s for s in SETS]  # front of each segment
-        XB = X - 60.0  # foot of the ramp (same for every segment; the landings still meet the deck below)
-        xw = XB - LAND  # back wall of the bay
         XT = XF[2] - FLAT  # slope start: 7.6 m behind the most receded bay segment
-        yl = YG if k == 0 else yd - GH  # landing level (the next deck, or the ground)
+        yl = YG if k == 0 else yd - GH  # landing level (the next deck down, or the ground)
+        # the slope flows into the level below: the lowest ends on the ground 44 m on, the others land on the NW flat zone of the deck below
+        # (10 m behind where that deck's own opening starts), and continue under this deck's NW arm; no wall at the bottom
+        XB = XT - 44.0 if k == 0 else prev_xb - 10.0
+        prev_xb = XB
+        xw = XB  # the opening in this deck's slab ends exactly at the foot of its slope
         slope = (yd - yl) / (XT - XB)
         # U-shaped deck, open to the front: flat slabs for the two outer segments, the NW end, and a flat strip in front of the slope in each bay half
         flat_slab(x0, XF[0], ZB[0], ZB[1], yd)
@@ -1335,16 +1340,14 @@ def garage22():
         ye = yl + 0.02
         m.poly([(XT, yd, -BW), (XB, ye, -BW), (XB, ye, BW), (XT, yd, BW)], DGREY, (XT, yd - 5.0, 0.0))  # ramp surface
         m.poly([(XT, yd - SL, -BW), (XB, ye - 0.03, -BW), (XB, ye - 0.03, BW), (XT, yd - SL, BW)], DGREY, (XT, yd + 5.0, 0.0))  # underside
-        # back wall of the bay and edge beams down both sides of the ramp and landing
-        m.box(xw - 0.3, xw, yl, yd - SL, -BW, BW, TAN)
+        # edge beams down both sides of the ramp
         xs = XT - SL / slope
-        prof = [(xs, yd - SL), (xw, yd - SL), (xw, yl), (XB, yl)]
         for za, zb in ((BW, BW + 0.3), (-BW - 0.3, -BW)):
-            prism_z(prof, za, zb, TAN)
-        # nose-in stall stripes on the landing against the back wall
+            prism_z([(xs, yd - SL), (XB, yd - SL), (XB, yl)], za, zb, TAN)
+        # nose-in stall stripes on the landing at the foot of the slope, under this deck's NW arm
         for i in range(-6, 7):
             zs = i * 2.7
-            m.poly([(xw + 0.4, yl + 0.03, zs - 0.06), (xw + 5.4, yl + 0.03, zs - 0.06), (xw + 5.4, yl + 0.03, zs + 0.06), (xw + 0.4, yl + 0.03, zs + 0.06)],
+            m.poly([(xw - 5.4, yl + 0.03, zs - 0.06), (xw - 0.4, yl + 0.03, zs - 0.06), (xw - 0.4, yl + 0.03, zs + 0.06), (xw - 5.4, yl + 0.03, zs + 0.06)],
                    WHITE, (xw, yl - 5.0, zs))
         # brown rim board, continuous round the whole deck: both long sides, the NW end, each front segment and every step return
         h = yd + 1.1
@@ -1377,10 +1380,13 @@ def garage22():
     m.box(-52.0, -50.0, 11.4, 13.0, 20.0, 27.0, CREAM)
     number_disc(m, -45.5, 12.7, 30.0, (0, 1), 1.4, "22")
     m.box(-48.0, -45.0, 10.4, 13.4, -3.0, 3.0, DGREY)  # roof lift housing
-    # second stair tower near the east (+Z) end of the front on the top deck: an angled tower whose roof falls from east to west, with a "22"
-    # roundel on its NE face, away from the garage toward the terminal (MS-1270.213.3, Street View 14/16)
-    prism_x([(23.0, 10.4), (34.0, 10.4), (34.0, 15.2), (23.0, 12.4)], 5.0, 13.0, TAN)
-    number_disc(m, 9.0, 12.6, 34.0, (0, 1), 1.3, "22")
+    # second stair tower at the front of the TOP deck's east quarter (grid P14 in the first top-down render): it projects past the deck's front edge,
+    # its roof falls from east to west, and a "22" roundel faces NE, away from the garage toward the terminal (MS-1270.213.3, Street View 14/16)
+    yt = decks[2][0]
+    xf3 = decks[2][1] - SETS[3]
+    flat_slab(xf3, xf3 + 3.0, 19.6, 25.2, yt)  # the projecting floor, resting on the deck below
+    prism_x([(19.8, yt), (25.0, yt), (25.0, yt + 4.8), (19.8, yt + 2.0)], xf3 - 2.5, xf3 + 3.0, TAN)
+    number_disc(m, xf3 + 0.25, yt + 2.4, 25.0, (0, 1), 1.3, "22")
     m.mirror_x()
     return m
 
