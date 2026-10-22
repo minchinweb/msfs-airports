@@ -1039,7 +1039,7 @@ HEADINGS = [("hangar 11", 0.0), ("usaaf hangar t1", 0.0), ("usaaf hangar t2", 0.
 # (east, north) metre shifts to clear taxiways (north complex vs taxiway III; row A vs taxiway X)
 SHIFTS = [("north hangar complex: bay 1", (0, -20)), ("north hangar complex: bay 2", (0, -20)),
           ("north complex: shop", (0, -25)), ("north complex: annex", (0, 10)), ("bcatp hangar row a", (-3.7, -1.5)),
-          ("1938 arched hangar", (0.7, 132.9))]  # re-registered on the 1944 aerial (docs/cyxd/footprints/first-hangar-candidates.png)
+          ("1938 arched hangar", (27.0, 37.0))]  # re-registered on the 1944 aerial from the Kingsway / 118 Ave junction (docs/cyxd/footprints/first-hangar-candidates.png)
 # T4 stays as the sim's own generated building; hotels wait until the tower/wing split is known
 # row C: the Aerocentre and the Shell hangar stand there
 SKIP = ("edmonton inn", "chateau louis", "usaaf hangar t4", "bcatp hangar row b", "bcatp hangar row c", "bcatp hangar row a",
