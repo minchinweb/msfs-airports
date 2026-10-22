@@ -929,12 +929,20 @@ def hangar15_wing():
     m.box(x0 - 0.1, x1 + 0.1, H - 1.2, H + 0.3, z0 - 0.1, z1 + 0.1, PANEL)
     # airside face as seen from the NAIT parkade roof (west-lineup photo, 2014): pale blue-grey wall, a central cluster of tall window
     # bays with a porthole at its SE end, one more window near the NW end; no dark doors visible
-    for k in range(3):
-        for t in range(3):
-            m.window((0, 0, 1), (6.0 - k * 5.6 - 0.1, 0.9 + t * 1.5, z1), (-1, 0, 0), 4.4, 1.3)
+    # City of Edmonton Archives ET-28-895 / -899 (c.1980-82): the middle of this wing stands taller than its ends, about a quarter of
+    # the length, with four tall glazed bays between white piers
+    rx0, rx1, RH = -10.2, 6.6, 7.5
+    m.box(rx0, rx1, H, RH, z0, z1, PBLUE, top=False)
+    m.box(rx0 - 0.1, rx1 + 0.1, RH - 0.3, RH + 0.3, z0 - 0.1, z1 + 0.1, PANEL)
+    bay = (rx1 - rx0) / 4
+    for k in range(4):
+        m.window((0, 0, 1), (rx1 - k * bay - 0.45, 0.9, z1), (-1, 0, 0), bay - 0.9, 5.9)
+    for k in range(5):
+        px = rx1 - k * bay
+        m.box(px - 0.25, px + 0.25, 0, RH - 0.3, z1, z1 + 0.12, PANEL)
     m.window((0, 0, 1), (-19.0, 1.6, z1), (1, 0, 0), 2.2, 1.0)
     m.box(7.6 - 0.45, 7.6 + 0.45, 2.4, 3.3, z1, z1 + 0.06, DARK)  # porthole (square stand-in)
-    number_disc(m, 0.0, 5.35, z1 + 0.1, (0, 1), 0.65, "15")  # on the parapet band above the doors, facing the taxiway
+    number_disc(m, 17.0, 4.9, z1 + 0.1, (0, 1), 0.65, "15")  # on the low section clear of the raised middle, facing the taxiway
     m.mirror_x()
     return m
 
