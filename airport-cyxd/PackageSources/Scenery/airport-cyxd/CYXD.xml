@@ -1318,8 +1318,8 @@
 	<SceneryObject lat="53.57094000" lon="-113.52317800" alt="0.00000000000000" pitch="0.000000" bank="0.000000" heading="51" imageComplexity="VERY_SPARSE" altitudeIsAgl="TRUE" snapToGround="TRUE" snapToNormal="FALSE">
 		<LibraryObject name="{BC3DDEF1-0B1F-5C85-8636-E3B1A76D5CED}" scale="1.000000"/>
 	</SceneryObject>
-	<!-- Terminal parking garage (22; traced from the 2017 imagery) -->
-	<SceneryObject lat="53.57056700" lon="-113.52406700" alt="0.00000000000000" pitch="0.000000" bank="0.000000" heading="58" imageComplexity="VERY_SPARSE" altitudeIsAgl="TRUE" snapToGround="TRUE" snapToNormal="FALSE">
+	<!-- Terminal parking garage (22; measured from the 2017 imagery) -->
+	<SceneryObject lat="53.57052000" lon="-113.52398700" alt="0.00000000000000" pitch="0.000000" bank="0.000000" heading="58" imageComplexity="VERY_SPARSE" altitudeIsAgl="TRUE" snapToGround="TRUE" snapToNormal="FALSE">
 		<LibraryObject name="{9A6AA281-EF8A-5225-9ABE-984619C7262E}" scale="1.000000"/>
 	</SceneryObject>
 	<!-- Second hangar by Kingsway (1930s-1982; barrel vault, pale wing, brick towers) -->
@@ -1634,17 +1634,17 @@
 		<Vertex lat="53.57056401472470" lon="-113.52186904037417"/>
 		<Vertex lat="53.57178005247014" lon="-113.52352389526374"/>
 	</Polygon>
-	<Polygon version="0.4.0" displayName="No generated buildings: Terminal parking garage (22; traced from the 2017 imagery)" parentGroupID="6" altitude="667.68023681640625">
-		<Attribute name="UniqueGUID" guid="{359C73E8-06BE-4FB2-ABCB-EC942F7761D0}" type="GUID" value="{98A9E5E5-1C5A-520D-BE01-0CBAD85807D6}"/>
+	<Polygon version="0.4.0" displayName="No generated buildings: Terminal parking garage (22; measured from the 2017 imagery)" parentGroupID="6" altitude="667.68023681640625">
+		<Attribute name="UniqueGUID" guid="{359C73E8-06BE-4FB2-ABCB-EC942F7761D0}" type="GUID" value="{48AF4641-149F-5266-B25D-73A5A8E96E20}"/>
 		<Attribute name="ExcludeDetectedBuildings" guid="{5C1A2387-1F07-47DF-A569-962CF6258E55}" type="UINT8" value="1"/>
 		<Attribute name="ExcludeOSMBuildings" guid="{F3C2635D-9F2F-458F-8663-90B3837BED09}" type="UINT8" value="1"/>
 		<Attribute name="ExcludeMSBuildings" guid="{F78A3074-8AD5-4B8B-92C4-C1C948BB7AA5}" type="UINT8" value="1"/>
 		<Attribute name="ExcludeTIN" guid="{18B58CBF-AE02-4A19-8AA9-3809E8E73400}" type="UINT8" value="1"/>
 		<Attribute name="ExclusionFlags" guid="{4CACC252-E6DC-419A-B20C-16EC601DF70E}" type="UINT32" value="3"/>
-		<Vertex lat="53.57079392521840" lon="-113.52505375379833"/>
-		<Vertex lat="53.56993977605681" lon="-113.52415680718214"/>
-		<Vertex lat="53.57034007478159" lon="-113.52308024620167"/>
-		<Vertex lat="53.57119422394319" lon="-113.52397719281787"/>
+		<Vertex lat="53.57079840495079" lon="-113.52506345381808"/>
+		<Vertex lat="53.56982223448040" lon="-113.52403837197099"/>
+		<Vertex lat="53.57024159504921" lon="-113.52291054618193"/>
+		<Vertex lat="53.57121776551961" lon="-113.52393562802902"/>
 	</Polygon>
 	<Polygon version="0.4.0" displayName="No generated buildings: Second hangar by Kingsway (1930s-1982; barrel vault, pale wi" parentGroupID="6" altitude="667.68023681640625">
 		<Attribute name="UniqueGUID" guid="{359C73E8-06BE-4FB2-ABCB-EC942F7761D0}" type="GUID" value="{740A4360-F7FA-5C21-A64D-F9452BD49DDF}"/>
