@@ -1328,7 +1328,7 @@ def garage22():
 # (and accept losing the hotel, or rebuild the hotel as a model).  The size itself is the proper 70 x 44 m; for the larger 1944-aerial reading
 # (about 70 x 55 m) raise D in the HANGARS row and the z extents in hangar_second(), and move the shift up by half the difference.
 ORANGE_LAT, ORANGE_LON, ORANGE_HDG = 53.56945, -113.52610, 57.78
-ORANGE_SHIFT_NE_M = 14.0
+ORANGE_SHIFT_NE_M = 18.0
 
 
 def _orange_pos():
@@ -1340,20 +1340,20 @@ def hangar_second():
     """The second barrel-vault hangar beside Kingsway, still standing in 1982 (user's "orange"; postcard PC013987 far hangar, City Archives ET-28-900 of 1982,
     the 1944 aerial).  Massing only: a pale two-storey flat-roofed wing with ribbon windows and a red band at the left, brick towers flush with the front at
     the ends of the barrel-vault hall, the hall with a dark roof and a big door opening under its arched front, a low service block behind the wing.
-    Frame: +Z = front (NE, apron), +X = right of the front; footprint x -35..35, z -22..22.  Details of the wing and the towers are guesses."""
+    Frame: +Z = front (NE, apron), +X = right of the front; footprint x -40..40, z -26..26 (resized 2026-10-21 from the 1982 photo ET-28-900: crest about 15.5 m, length about 80 m; +-20 % uncertain).  Details of the wing and the towers are guesses."""
     m = fmesh()
-    zf, zb = 22.0, -22.0
-    # wing x -35..-15: pale cream, two storeys, flat roof, red band under the parapet
-    m.box(-35.0, -15.0, 0, 7.4, -4.0, zf, CREAM, top=False)
-    m.box(-35.2, -14.8, 7.4, 7.8, -4.2, zf + 0.2, DGREY)
-    m.box(-35.0, -15.0, 6.2, 6.7, zf, zf + 0.1, RED)
-    for y in (1.4, 4.0):
-        rows_z(m, 1, zf, -35.0, -15.0, y, 5, 2.4, 1.5)
-        rows_x(m, -1, -35.0, -2.0, zf - 1.0, y, 4, 2.4, 1.5)
-    m.box(-28.0, -26.0, 0, 2.3, zf, zf + 0.1, DARK)  # entrance
-    m.box(-35.0, -15.0, 0, 4.4, zb, -4.0, CREAM, top=True)  # low service block behind the wing
-    # barrel-vault hall x -9..29 (span 38), z -22..22
-    xh0, xh1, wall, rise = -9.0, 29.0, 7.0, 5.5
+    zf, zb = 26.0, -26.0
+    # wing x -40..-16: pale cream, two storeys, flat roof, red band under the parapet
+    m.box(-40.0, -16.0, 0, 8.8, -4.0, zf, CREAM, top=False)
+    m.box(-40.2, -15.8, 8.8, 9.2, -4.2, zf + 0.2, DGREY)
+    m.box(-40.0, -16.0, 7.4, 8.0, zf, zf + 0.1, RED)
+    for y in (1.6, 4.8):
+        rows_z(m, 1, zf, -40.0, -16.0, y, 6, 2.4, 1.7)
+        rows_x(m, -1, -40.0, -2.0, zf - 1.0, y, 4, 2.4, 1.7)
+    m.box(-30.0, -28.0, 0, 2.3, zf, zf + 0.1, DARK)  # entrance
+    m.box(-40.0, -16.0, 0, 4.8, zb, -4.0, CREAM, top=True)  # low service block behind the wing
+    # barrel-vault hall x -10..34 (span 44), z -22..22
+    xh0, xh1, wall, rise = -10.0, 34.0, 9.0, 6.5
     m.box(xh0, xh1, 0, wall, zb, zf, CREAM, top=False)
     n = 16
     prof = [(-math.cos(math.pi * i / n) * (xh1 - xh0) / 2 + (xh0 + xh1) / 2, wall + math.sin(math.pi * i / n) * rise) for i in range(n + 1)]
@@ -1362,13 +1362,13 @@ def hangar_second():
         m.poly([(xa, ya, zb), (xb, yb, zb), (xb, yb, zf), (xa, ya, zf)], METAL, (0, wall - 3, 0))
     for z in (zf, zb):
         m.poly([(xh0, wall, z)] + [(x, y, z) for x, y in prof] + [(xh1, wall, z)], CREAM, (0, wall, 0))
-    m.box(-6.0, 26.0, 0, 6.6, zf, zf + 0.1, DARK)  # door opening
+    m.box(-7.0, 31.0, 0, 8.4, zf, zf + 0.1, DARK)  # door opening
     for k in range(4):
-        m.box(-5.9 + k * 8.0, 1.9 + k * 8.0, 0, 6.4, zf + 0.1, zf + 0.3, DOORG)
-    window_row(m, xh0 + 0.5, xh1 - 0.5, 7.4, zf, 9, 1.4, 1.2, (0, 0, 1), "x")
+        m.box(-6.9 + k * 9.5, 1.9 + k * 9.5, 0, 8.2, zf + 0.1, zf + 0.3, DOORG)
+    window_row(m, xh0 + 0.5, xh1 - 0.5, 9.6, zf, 9, 1.6, 1.4, (0, 0, 1), "x")
     for sgn in (-1, 1):
-        for i in range(6):
-            m.window((sgn, 0, 0), (xh0 if sgn < 0 else xh1, 3.2, zb + 4 + i * 6.5), (0, 0, 1), 3.0, 1.6)
+        for i in range(8):
+            m.window((sgn, 0, 0), (xh0 if sgn < 0 else xh1, 4.0, zb + 4 + i * 6.5), (0, 0, 1), 3.0, 1.8)
 
     def brick_tower(x0, x1, h, floors):
         z0 = zf - (x1 - x0)
@@ -1378,8 +1378,8 @@ def hangar_second():
             y = 1.6 + f * (h - 3.0) / floors
             m.window((0, 0, 1), (x0 + 1.0, y, zf), (1, 0, 0), x1 - x0 - 2.0, 1.8)
             m.window((0, 0, -1), (x0 + 1.0, y, z0), (1, 0, 0), x1 - x0 - 2.0, 1.8)
-    brick_tower(-15.0, -9.0, 13.0, 3)
-    brick_tower(29.0, 35.0, 15.0, 4)
+    brick_tower(-16.0, -10.0, 15.0, 3)
+    brick_tower(34.0, 40.0, 17.5, 4)
     m.mirror_x()
     return m
 
@@ -1400,7 +1400,7 @@ HANGARS = [
     ("cyxd_hangar40", "Hangar 40 (Canadian Helicopters, white roof of OSM 230718900)", hangar40, 53.575004, -113.529385, 228, 72.0, 46.0),
     ("cyxd_hangar21", "Hangar 21 (old terminal, OSM 230718907; traced from the 2017 imagery)", hangar21, 53.570940, -113.523178, 51, 162.0, 70.0),
     ("cyxd_garage22", "Terminal parking garage (22; traced from the 2017 imagery)", garage22, 53.570567, -113.524067, 58, 100.0, 72.0),
-    ("cyxd_hangar_second", "Second hangar by Kingsway (1930s-1982; barrel vault, pale wing, brick towers)", hangar_second, *_orange_pos(), ORANGE_HDG, 70.0, 44.0),
+    ("cyxd_hangar_second", "Second hangar by Kingsway (1930s-1982; barrel vault, pale wing, brick towers)", hangar_second, *_orange_pos(), ORANGE_HDG, 80.0, 52.0),
     ("cyxd_hangar3", "Hangar 3 (pale-blue flat-roofed hangar, traced from the 2014 imagery)", hangar3, 53.574710, -113.508533, 90, 81.6, 25.7),
     ("cyxd_hangar3_annex", "Hangar 3 tan block annex (south end)", hangar3_annex, 53.574273, -113.508547, 90, 15.9, 13.2),
     ("cyxd_bluehangar", "Dark-blue gabled hangar north of Hangar 3 (5 109 St NW, OSM 325272095)", bluehangar, 53.575629, -113.508404, 180, 20.7, 24.6),

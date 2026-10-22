@@ -412,3 +412,6 @@ Offline check renders used a throwaway software rasteriser (scratchpad, not comm
 - Second "22" board on the stair tower's SE (long-side) face. Interpretation of "second sideboard"; no long sign board is visible in Street View 15-18.
 - White box: it was the generic "Administration Building" (50 x 20 x 10 m, 1940s-50s, `historic-buildings-genericbuilding.xml`) at terminal frame (66, -12), inside the old terminal's landside; not in any 2012-2019 photo or the 2017 aerial, so it is now in `SKIP` in `gen_buildings.py`.
 - New tree-exclusion polygon "Between the parking garage and the old terminal" (terminal frame x -60..100, z -62..-22) in `hangars.place()` (`VEG_EXCL`).
+
+### Second (orange) hangar enlarged from ET-28-900 (2026-10-21, not built)
+- 1982 photo ET-28-900 (not the Hudson General 1990 photo): scale from the horizon-distance ratio against the foreground white building and the parked twins gives about 0.9-1.0 m/px at the hangar. Resized from 70 x 44 x 12.5 m to 80 x 52 m, crest 15.5 m (wall 9, rise 6.5, span 44), wing 8.8 m, towers 15 and 17.5 m, doors 8.4 m high. NE shift 14 -> 18 m. Estimate good to about +-20 %. The hotel (OSM 230718905) clearance was NOT re-checked (no outline in the repo); verify in the sim.
