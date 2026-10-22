@@ -18,6 +18,10 @@ The `msfs-sdk` MCP server searches the MSFS SDK documentation (fork https://gith
 
 Adjust the path if the clone is elsewhere. Check with `claude mcp list`. The tools only load in a new session. The fork has no `bin` or `prepare` script, so `npx` from GitHub does not work.
 
+## SDK procedure reference
+
+`docs/sdk-reference/KBOS Procedures.xml` is the SDK's procedure reference: approach XML in the `<Approach>`/`<Leg>` format, with `<Transition>`, `<Waypoint>` and `<Ndb>` entries. It is a fragment with no root element, so wrap it before parsing. It covers approaches only, with no departures or arrivals. Use it for the XML shape of approach, landing and procedure entries. Do not copy its fixes or idents into another airport.
+
 ## Building
 
 Use `build.bat` in the repo root. From the bash tool, run it through cmd. The `//c` stops Git Bash from rewriting `/c` as a path:
