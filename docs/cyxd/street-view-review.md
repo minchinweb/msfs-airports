@@ -22,8 +22,9 @@ User corrections (2026-10-21) are already applied below: the old `canadian-helic
 | `hangar15-photos/` | 0, 1 | Hangar 15 ("15" roundel) and the teal Hangar 16 | high |
 | `hangar18-photos/` | 2-6 | Edmonton Flying Club ("18" roundel, club sign) | high for 2-4; 5, 6 are the north end of the group |
 | `hangar21-terminal-photos/` | 13, 14 | Old terminal, now Amiskwaciy Academy (1003 / 1012 Airport Rd) | high |
-| `hangar21-terminal-photos/` | 15 | Parking garage (8603 Flying Club Rd) | high |
-| `hangar21-terminal-photos/` | 16-18 | Terminal and garage from Airport Rd | medium |
+| `hangar22-photos/` | 15 | Parking garage (8603 Flying Club Rd) | high |
+| `hangar22-photos/` | 16 | Garage from Airport Rd (145 Airport Rd) | medium |
+| `hangar21-terminal-photos/` | 17, 18 | Terminal from Airport Rd | medium |
 | `hangar38-photos/` | 19-25 | Hangar 38 (olive-mustard, "38" roundel) | high |
 | `hangar39-photos/` | 26-28 | Hangar 39 (pale blue, tall) | high that it is the blue hangar; no roundel in these views |
 | `hangar40-photos/` | 29-32 | Hangar 40 ("40" roundel, white with brick office) | high |
