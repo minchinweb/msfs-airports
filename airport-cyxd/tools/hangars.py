@@ -396,12 +396,26 @@ def hangar7():
     m.box(-8.4, 16.4, 7.8, 8.2, z1, z1 + 0.3, DGREY)
     m.box(-8.4, 16.4, 4.0, 4.15, z1 + 0.25, z1 + 0.3, DGREY)  # leaf joint between the two tiers
     number_disc(m, -13.2, 6.3, z1, (0, 1), 0.95, "7")
-    m.box(-10.0, 10.0, 0, 5.4, z0 - 8.0, z0, SLATE)  # annex, east end
-    m.box(-10.3, 10.3, 5.4, 5.7, z0 - 8.3, z0, DGREY)
-    m.box(-4.0, 4.0, 3.0, 3.25, z0 - 9.4, z0 - 8.0, NAVY)  # awning
-    rows_z(m, -1, z0 - 8.0, -9.0, 9.0, 1.2, 2, 1.4, 2.0)
-    m.box(x0, x1, 5.8, 6.6, z0 - 0.02, z0 + 0.02, DGREY)
-    number_disc(m, 14.0, 3.5, z0, (0, -1), 0.95, "7")  # landside roundel on the east gable beside the annex (user, 2026-10-21)
+    # landside (z0 wall, 109 St), Street View 54-56 (2026-10-21 pass): the roundel sits high at the corner (+x); seven awning windows (1.3 x 1.0 m,
+    # sill 3.9 m, small white awning over each): four left of the glazed entrance, three right; the entrance has a white awning and a blue/gold
+    # crest sign over it, a window above the sign; one pale man door low at the left under the second window.  No annex on this wall: the two
+    # white lean-tos stand on the adjacent +x wall (photo 56).  Positions measured along the wall with perspective corrected (+/- 1 m).
+    number_disc(m, 14.0, 6.5, z0, (0, -1), 0.95, "7")  # landside roundel high at the corner (Street View 54-56)
+    for xc in (15.65, 10.55, 5.45, 1.1, -3.3, -5.5, -8.7):
+        m.window((0, 0, -1), (xc - 0.65, 3.9, z0), (1, 0, 0), 1.3, 1.0)
+        m.box(xc - 0.95, xc + 0.95, 5.2, 5.45, z0 - 0.5, z0 + 0.02, RWHITE)  # awning over the window (clear of the roundel above)
+    door_z(m, -1, z0, 13.1, 0.9, 2.1, leaf=DOORG, frame=WHITE)
+    m.box(-0.6, 1.6, 0, 2.3, z0 - 0.12, z0, DGREY)  # entrance: glazed double door
+    m.window((0, 0, -1), (-0.5, 0.1, z0), (1, 0, 0), 2.0, 2.1, frame=DGREY)
+    m.box(-1.3, 2.5, 2.3, 2.6, z0 - 1.1, z0, RWHITE)  # entrance awning
+    m.box(-1.2, 2.4, 2.75, 3.45, z0 - 0.08, z0, NAVY)  # crest sign
+    m.box(-0.5, 1.7, 3.0, 3.2, z0 - 0.14, z0 - 0.08, YELLOW)
+    for zz in (z0 + 9.0, z0 + 19.0):  # white lean-to annexes on the +x wall
+        m.poly([(x1, 3.8, zz), (x1, 3.8, zz + 5.5), (x1 + 3.2, 3.0, zz + 5.5), (x1 + 3.2, 3.0, zz)], RWHITE, (x1 + 1, -4, zz + 2))
+        m.poly([(x1, 3.8, zz), (x1 + 3.2, 3.0, zz), (x1 + 3.2, 0, zz), (x1, 0, zz)], RWHITE, (x1 + 1, 1, zz + 10))
+        m.poly([(x1 + 3.2, 3.0, zz + 5.5), (x1, 3.8, zz + 5.5), (x1, 0, zz + 5.5), (x1 + 3.2, 0, zz + 5.5)], RWHITE, (x1 + 1, 1, zz - 5))
+        m.box(x1 + 3.2, x1 + 3.3, 0, 3.0, zz, zz + 5.5, RWHITE)
+        door_x(m, 1, x1 + 3.3, zz + 2.75, 0.9, 2.0, leaf=BLUE, frame=WHITE)
     roof_vents(m, [(0, -8), (0, 0), (0, 8)], wh + rise)
     m.mirror_x()
     return m
