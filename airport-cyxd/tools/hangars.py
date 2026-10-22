@@ -663,37 +663,65 @@ def gs_hut():
 
 def hangar20():
     """Hangar 20 = the Esso / Imperial Oil building (user, 2026-10-21; Street View 2012, 83 Airport Rd NW).  Two tiers of tan horizontal-ribbed
-    cladding: a 45 x 45 m two-storey upper tier with a ribbon window and rounded front corners, wrapped on the SW (front, Airport Rd) and SE
-    sides by a lower one-storey tier with a long dark glazed band and the Esso oval.  Blue "20" roundel on the upper tier's NW end wall.
+    cladding: a 45 x 45 m two-storey upper tier with a ribbon window and a quarter-round roll from the roof into the NW and SE end walls,
+    wrapped on the SW (front, Airport Rd) and SE sides, and by a narrow strip on the NW, by a lower one-storey tier with a long dark glazed
+    band and two Esso ovals (front and SE face).  Blue "20"
+    roundel high on the upper tier's front at the NW end.
     Measured on the 2014 imagery (not in OSM).  Heading 228 (front faces SW); origin at the upper tier's centre."""
     m = fmesh()
-    U, hu, hl, r = 45.0, 10.5, 4.6, 4.5
+    U, hu, hl, r = 45.0, 10.5, 4.6, 2.0
     a = U / 2
-    pts = [(-a, -a), (a, -a), (a, a - r)] + [(a - r + r * math.cos(math.radians(15 * k)), a - r + r * math.sin(math.radians(15 * k))) for k in range(1, 7)] \
-        + [(-a + r + r * math.cos(math.radians(90 + 15 * k)), a - r + r * math.sin(math.radians(90 + 15 * k))) for k in range(0, 7)] + [(-a, a - r)]
-    prism(m, pts, 0, hu, BEIGE)
-    m.box(-a - 0.2, a + 0.2, hu, hu + 0.35, -a - 0.2, a + 0.2, DGREY)  # roof edge
+    # upper tier: square in plan; the roof rolls over into the NW and SE end walls in a quarter-round of radius r (Street View 09-11: the curve
+    # shows in elevation at both ends of the front, and as a ribbed bullnose along the SE end in 09); the front and back roof edges are square
+    prof = [(-a, 0.0), (a, 0.0)] + [(a - r + r * math.cos(math.radians(15 * k)), hu - r + r * math.sin(math.radians(15 * k))) for k in range(7)] \
+        + [(-a + r + r * math.cos(math.radians(90 + 15 * k)), hu - r + r * math.sin(math.radians(90 + 15 * k))) for k in range(7)]
+    c = (0.0, hu / 2, 0.0)
+    for zf in (-a, a):
+        m.poly([(x, y, zf) for x, y in prof], BEIGE, c)
+    for i in range(1, len(prof)):  # every edge but the bottom one (0 -> 1)
+        (xa, ya), (xb, yb) = prof[i], prof[(i + 1) % len(prof)]
+        flat = abs(ya - hu) < 1e-6 and abs(yb - hu) < 1e-6
+        m.poly([(xa, ya, -a), (xb, yb, -a), (xb, yb, a), (xa, ya, a)], DGREY if flat else BEIGE, c)  # flat roof membrane, clad curves
     # lower tier wrapping the SE (-X) and SW (+Z) sides
-    m.box(-a - 10.0, -a, 0, hl, -a, a + 8.0, BEIGE)
-    m.box(-a, a, 0, hl, a, a + 8.0, BEIGE)
-    m.box(-a - 10.2, a, hl, hl + 0.3, -a - 0.2, a + 8.2, DGREY)
-    # glazing: upper ribbon on the long walls, lower tier dark band
-    rows_z(m, 1, a, -a + 5.0, a - 5.0, 6.4, 4, 8.0, 2.0)
+    m.box(-a - 10.0, -a, 0, hl, -a, a + 8.0, BEIGE, top=False)  # the dark roof slab below covers the tops
+    m.box(-a, a, 0, hl, a, a + 8.0, BEIGE, top=False)
+    # NW end: a narrow strip of the lower tier (user, 2026-10-22: it wraps the NW end too); Street View 10 and 11 show its front only
+    # about 1.5-2 m past the upper tier's NW wall
+    m.box(a, a + 2.0, 0, hl, -a, a + 8.0, BEIGE, top=False)
+    m.box(-a - 10.2, a + 2.2, hl, hl + 0.3, -a - 0.2, a + 8.2, DGREY)
+    # entrance vestibule on the front at the NW end: one storey, a strip window and a door (Street View 10 and 11)
+    m.box(a - 7.0, a, 0, 3.3, a + 8.0, a + 10.5, BEIGE, top=False)
+    m.box(a - 7.1, a + 0.1, 3.3, 3.5, a + 8.0, a + 10.6, DGREY)
+    m.window((0, 0, 1), (a - 5.3, 1.7, a + 10.5), (1, 0, 0), 3.6, 0.65)
+    m.box(a - 6.6, a - 5.5, 0, 2.2, a + 10.5, a + 10.56, DGREY)
+    # glazing: upper tier front, one dark ribbon from about 7 m in from the NW end to 6 m short of the SE end (solid panel there, Street
+    # View 10 and 11), between two thin dark bands that run the full width; ribbons on the end walls; lower tier dark band
+    m.window((0, 0, 1), (-a + 6.0, 5.9, a), (1, 0, 0), 2 * a - 13.0, 1.8)
+    for yb in (5.75, 7.75):
+        m.box(-a, a, yb, yb + 0.12, a, a + 0.04, DGREY)
     rows_x(m, 1, a, -a + 5.0, a - 5.0, 6.4, 3, 8.0, 2.0)
-    rows_x(m, -1, -a, -a + 5.0, a - 5.0, 6.4, 3, 8.0, 2.0)
+    m.window((-1, 0, 0), (-a, 5.9, -a + 7.0), (0, 0, 1), 2 * a - 9.0, 1.8)  # SE end: one ribbon from near the front corner (Street View 09)
     # lower tier, front band, split in two so no window or frame touches the Esso oval (x -6 +- 2.3, y 2.4..4.4; model x before mirror_x)
     m.window((0, 0, 1), (-a, 1.0, a + 8.0), (1, 0, 0), (-6.0 - 3.0) - (-a), 2.0)
-    m.window((0, 0, 1), (-3.0, 1.0, a + 8.0), (1, 0, 0), a - (-3.0), 2.0)
-    m.window((-1, 0, 0), (-a - 10.0, 1.0, -a), (0, 0, 1), 2 * a + 8.0, 2.0)  # lower tier, SE band
+    m.window((0, 0, 1), (-3.0, 1.0, a + 8.0), (1, 0, 0), (a - 7.5) - (-3.0), 2.0)  # stops short of the vestibule
+    # lower tier, SE band, split around the second Esso oval (z a - 3 +- 2.3)
+    m.window((-1, 0, 0), (-a - 10.0, 1.0, -a), (0, 0, 1), 2 * a - 6.0, 2.0)
+    m.window((-1, 0, 0), (-a - 10.0, 1.0, a), (0, 0, 1), 8.0, 2.0)
     # NE (airside) wall, west-lineup photo: long ribbon window over the SE half, big dark hangar-type door in the NW half
     m.window((0, 0, -1), (-20.0, 6.0, -a), (1, 0, 0), 22.0, 2.2)
     m.box(3.0, 18.0, 0, 7.6, -a - 0.12, -a, DGREY)
     # Esso oval (white, blue rim, red lettering bar) on the lower tier's front wall
     ox, oy, oz = -6.0, 3.4, a + 8.0
     oval_sign(m, ox, oy, oz + 0.12, (0, 1), 4.6, 2.0, "esso")  # texture from tools/make_signs.py: blue-rimmed white oval, red "Esso"
-    number_disc(m, 10.5, 9.0, -a, (0, -1), 1.0, "20")  # airside roundel above the big door (user, 2026-10-21)
-    number_disc(m, a, 8.6, a - 6.0, (1, 0), 1.2, "20")  # NW end wall of the upper tier (Street View photo 11)
-    m.box(-4.0, 4.0, hu + 0.35, hu + 1.5, -6.0, 6.0, DGREY)  # plant on the roof
+    # second oval on the lower tier's SE face, about 11 m back from the front corner (Street View 09: lit side, right of the corner)
+    oval_sign(m, -a - 10.0 - 0.12, oy, a - 3.0, (-1, 0), 4.6, 2.0, "esso")
+    # airside roundel (user, 2026-10-21): the dark spot at the upper right of the airside face in the west line-up photo, about 2.5 m in
+    # from the NW end, up and to the right of the big door (user, 2026-10-22)
+    number_disc(m, a - 2.5, 8.8, -a, (0, -1), 1.0, "20")
+    # landside roundel high on the upper tier's front at the NW end, just inside the curve (Street View 10 and 11; it was on the NW end
+    # wall, where the curve now leaves no room above the ribbon)
+    number_disc(m, a - 3.4, 8.7, a, (0, 1), 0.9, "20")
+    m.box(-4.0, 4.0, hu, hu + 1.2, -6.0, 6.0, DGREY)  # plant on the roof
     m.mirror_x()
     return m
 
