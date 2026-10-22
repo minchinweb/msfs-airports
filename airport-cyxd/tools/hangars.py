@@ -663,7 +663,9 @@ def hangar20():
     rows_z(m, 1, a, -a + 5.0, a - 5.0, 6.4, 4, 8.0, 2.0)
     rows_x(m, 1, a, -a + 5.0, a - 5.0, 6.4, 3, 8.0, 2.0)
     rows_x(m, -1, -a, -a + 5.0, a - 5.0, 6.4, 3, 8.0, 2.0)
-    m.window((0, 0, 1), (-a, 1.0, a + 8.0), (1, 0, 0), 2 * a, 2.0)  # lower tier, front band
+    # lower tier, front band, split in two so no window or frame touches the Esso oval (x -6 +- 2.3, y 2.4..4.4; model x before mirror_x)
+    m.window((0, 0, 1), (-a, 1.0, a + 8.0), (1, 0, 0), (-6.0 - 3.0) - (-a), 2.0)
+    m.window((0, 0, 1), (-3.0, 1.0, a + 8.0), (1, 0, 0), a - (-3.0), 2.0)
     m.window((-1, 0, 0), (-a - 10.0, 1.0, -a), (0, 0, 1), 2 * a + 8.0, 2.0)  # lower tier, SE band
     # NE (airside) wall, west-lineup photo: long ribbon window over the SE half, big dark hangar-type door in the NW half
     m.window((0, 0, -1), (-20.0, 6.0, -a), (1, 0, 0), 22.0, 2.2)
