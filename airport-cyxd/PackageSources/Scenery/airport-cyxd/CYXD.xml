@@ -968,10 +968,6 @@
 	<ExclusionRectangle latitudeMinimum="53.64330370" latitudeMaximum="53.64415802" longitudeMinimum="-113.51360499" longitudeMaximum="-113.51215418" excludeAllObjects="TRUE" excludeBeaconObjects="FALSE" excludeEffectObjects="FALSE" excludeGenericBuildingObjects="FALSE" excludeLibraryObjects="FALSE" excludeTaxiwaySignObjects="FALSE" excludeTriggerObjects="FALSE" excludeWindsockObjects="FALSE" excludeExtrusionBridgeObjects="FALSE" excludeSimObjects="FALSE" excludeWorldScripts="FALSE" excludeCarParking="FALSE" excludeRectangles="FALSE" excludePolygons="FALSE" />
 	<!-- control tower: remove sim-placed objects around it -->
 	<ExclusionRectangle latitudeMinimum="53.56788169" latitudeMaximum="53.56831885" longitudeMinimum="-113.51892570" longitudeMaximum="-113.51818769" excludeAllObjects="TRUE" excludeBeaconObjects="FALSE" excludeEffectObjects="FALSE" excludeGenericBuildingObjects="FALSE" excludeLibraryObjects="FALSE" excludeTaxiwaySignObjects="FALSE" excludeTriggerObjects="FALSE" excludeWindsockObjects="FALSE" excludeExtrusionBridgeObjects="FALSE" excludeSimObjects="FALSE" excludeWorldScripts="FALSE" excludeCarParking="FALSE" excludeRectangles="FALSE" excludePolygons="FALSE" />
-	<!-- BCATP hangar row A along Kingsway (long axis NW-SE) -->
-	<SceneryObject lat="53.56920" lon="-113.52019" alt="0.00000000000000" pitch="0.000000" bank="0.000000" heading="138" imageComplexity="VERY_SPARSE" altitudeIsAgl="TRUE" snapToGround="TRUE" snapToNormal="FALSE">
-		<LibraryObject name="{BB08DA08-3307-5E2C-91B9-B8B5CA17B3EF}" scale="1.000000"/>
-	</SceneryObject>
 	<!-- 1938 arched hangar, west side (replica at Fort Edmonton Park); doors face NE -->
 	<SceneryObject lat="53.56955" lon="-113.52551" alt="0.00000000000000" pitch="0.000000" bank="0.000000" heading="57.78" imageComplexity="VERY_SPARSE" altitudeIsAgl="TRUE" snapToGround="TRUE" snapToNormal="FALSE">
 		<LibraryObject name="{0DDC62DE-900D-5F4C-B5BA-EFE16E11800D}" scale="1.000000"/>
@@ -1057,7 +1053,7 @@
 		<LibraryObject name="{29B358ED-E096-5E29-A73B-86C051B06B22}" scale="1.000000"/>
 	</SceneryObject>
 	<!-- Hangar 18 (Edmonton Flying Club complex, traced from 2014 imagery) -->
-	<SceneryObject lat="53.56855800" lon="-113.51983300" alt="0.00000000000000" pitch="0.000000" bank="0.000000" heading="48" imageComplexity="VERY_SPARSE" altitudeIsAgl="TRUE" snapToGround="TRUE" snapToNormal="FALSE">
+	<SceneryObject lat="53.56849800" lon="-113.51974200" alt="0.00000000000000" pitch="0.000000" bank="0.000000" heading="48" imageComplexity="VERY_SPARSE" altitudeIsAgl="TRUE" snapToGround="TRUE" snapToNormal="FALSE">
 		<LibraryObject name="{0096CDE1-498E-5CD1-A3D2-6CA0D48403B6}" scale="1.000000"/>
 	</SceneryObject>
 	<!-- Hangar 38 (mustard yellow, OSM 230718902) -->
@@ -1069,7 +1065,7 @@
 		<LibraryObject name="{3BE3060C-8E60-5E6B-B37F-53B50F50FD0B}" scale="1.000000"/>
 	</SceneryObject>
 	<!-- Hangar 40 (Canadian Helicopters, white roof of OSM 230718900) -->
-	<SceneryObject lat="53.57493100" lon="-113.52859000" alt="0.00000000000000" pitch="0.000000" bank="0.000000" heading="228" imageComplexity="VERY_SPARSE" altitudeIsAgl="TRUE" snapToGround="TRUE" snapToNormal="FALSE">
+	<SceneryObject lat="53.57500400" lon="-113.52938500" alt="0.00000000000000" pitch="0.000000" bank="0.000000" heading="228" imageComplexity="VERY_SPARSE" altitudeIsAgl="TRUE" snapToGround="TRUE" snapToNormal="FALSE">
 		<LibraryObject name="{5AF9C0C7-F582-55D5-98C8-01608ED24982}" scale="1.000000"/>
 	</SceneryObject>
 	<!-- Hangar 3 (pale-blue flat-roofed hangar, traced from the 2014 imagery) -->
@@ -1112,18 +1108,6 @@
 	<SceneryObject lat="53.572005" lon="-113.529643" alt="0.00000000000000" pitch="0.000000" bank="0.000000" heading="0" imageComplexity="VERY_SPARSE" altitudeIsAgl="TRUE" snapToGround="TRUE" snapToNormal="FALSE">
 		<Beacon type="CIVILIAN" baseType="AIRPORT"/>
 	</SceneryObject>
-	<Polygon version="0.4.0" displayName="No generated buildings: BCATP hangar row A along Kingsway (long axis NW-SE)" parentGroupID="6" altitude="667.68023681640625">
-		<Attribute name="UniqueGUID" guid="{359C73E8-06BE-4FB2-ABCB-EC942F7761D0}" type="GUID" value="{DA48EA9E-7DDA-5D7B-BAF0-C98A2AEB2F1E}"/>
-		<Attribute name="ExcludeDetectedBuildings" guid="{5C1A2387-1F07-47DF-A569-962CF6258E55}" type="UINT8" value="1"/>
-		<Attribute name="ExcludeOSMBuildings" guid="{F3C2635D-9F2F-458F-8663-90B3837BED09}" type="UINT8" value="1"/>
-		<Attribute name="ExcludeMSBuildings" guid="{F78A3074-8AD5-4B8B-92C4-C1C948BB7AA5}" type="UINT8" value="1"/>
-		<Attribute name="ExcludeTIN" guid="{18B58CBF-AE02-4A19-8AA9-3809E8E73400}" type="UINT8" value="1"/>
-		<Attribute name="ExclusionFlags" guid="{4CACC252-E6DC-419A-B20C-16EC601DF70E}" type="UINT32" value="3"/>
-		<Vertex lat="53.56983600082377" lon="-113.52026774692531"/>
-		<Vertex lat="53.56931249036736" lon="-113.52124483019290"/>
-		<Vertex lat="53.56856399917623" lon="-113.52011225307469"/>
-		<Vertex lat="53.56908750963265" lon="-113.51913516980710"/>
-	</Polygon>
 	<Polygon version="0.4.0" displayName="No generated buildings: 1938 arched hangar, west side (replica at Fort Edmonton Park" parentGroupID="6" altitude="667.68023681640625">
 		<Attribute name="UniqueGUID" guid="{359C73E8-06BE-4FB2-ABCB-EC942F7761D0}" type="GUID" value="{1A7D2098-F1CD-5F62-8F3E-399742F5EE14}"/>
 		<Attribute name="ExcludeDetectedBuildings" guid="{5C1A2387-1F07-47DF-A569-962CF6258E55}" type="UINT8" value="1"/>
@@ -1383,10 +1367,10 @@
 		<Attribute name="ExcludeMSBuildings" guid="{F78A3074-8AD5-4B8B-92C4-C1C948BB7AA5}" type="UINT8" value="1"/>
 		<Attribute name="ExcludeTIN" guid="{18B58CBF-AE02-4A19-8AA9-3809E8E73400}" type="UINT8" value="1"/>
 		<Attribute name="ExclusionFlags" guid="{4CACC252-E6DC-419A-B20C-16EC601DF70E}" type="UINT32" value="3"/>
-		<Vertex lat="53.56854316788435" lon="-113.52078668454713"/>
-		<Vertex lat="53.56799516540513" lon="-113.51995747629988"/>
-		<Vertex lat="53.56857283211566" lon="-113.51887931545288"/>
-		<Vertex lat="53.56912083459488" lon="-113.51970852370013"/>
+		<Vertex lat="53.56854331449792" lon="-113.52078669520841"/>
+		<Vertex lat="53.56787501879155" lon="-113.51977546563857"/>
+		<Vertex lat="53.56845268550208" lon="-113.51869730479157"/>
+		<Vertex lat="53.56912098120844" lon="-113.51970853436141"/>
 	</Polygon>
 	<Polygon version="0.4.0" displayName="No generated buildings: Hangar 38 (mustard yellow, OSM 230718902)" parentGroupID="6" altitude="667.68023681640625">
 		<Attribute name="UniqueGUID" guid="{359C73E8-06BE-4FB2-ABCB-EC942F7761D0}" type="GUID" value="{2E5E96E8-F73E-582B-9E08-266CC3512B8C}"/>
@@ -1419,10 +1403,10 @@
 		<Attribute name="ExcludeMSBuildings" guid="{F78A3074-8AD5-4B8B-92C4-C1C948BB7AA5}" type="UINT8" value="1"/>
 		<Attribute name="ExcludeTIN" guid="{18B58CBF-AE02-4A19-8AA9-3809E8E73400}" type="UINT8" value="1"/>
 		<Attribute name="ExclusionFlags" guid="{4CACC252-E6DC-419A-B20C-16EC601DF70E}" type="UINT32" value="3"/>
-		<Vertex lat="53.57487524726242" lon="-113.52812942202765"/>
-		<Vertex lat="53.57520939511560" lon="-113.52863503681256"/>
-		<Vertex lat="53.57498675273758" lon="-113.52905057797234"/>
-		<Vertex lat="53.57465260488440" lon="-113.52854496318743"/>
+		<Vertex lat="53.57489781928880" lon="-113.52863458915814"/>
+		<Vertex lat="53.57545918768214" lon="-113.52948402199681"/>
+		<Vertex lat="53.57511018071120" lon="-113.53013541084186"/>
+		<Vertex lat="53.57454881231786" lon="-113.52928597800320"/>
 	</Polygon>
 	<Polygon version="0.4.0" displayName="No generated buildings: Hangar 3 (pale-blue flat-roofed hangar, traced from the 2014" parentGroupID="6" altitude="667.68023681640625">
 		<Attribute name="UniqueGUID" guid="{359C73E8-06BE-4FB2-ABCB-EC942F7761D0}" type="GUID" value="{137BB838-2F51-52EE-AA73-B210DBC3D4B2}"/>

@@ -330,3 +330,9 @@ Source: `docs/cyxd/procedures-2010.md` and the plate screenshots in `docs/cyxd/c
 - `hangar18()` now has three stacked blocks (road to apron): C landside club block (white pilastered wall with window slots on Airport Rd, entrance with the FLYING CLUB board, glazed club room at the SE end with a roof overhang, viewing deck over a lower block, fascia lettering, "18" roundel), B middle block (teal base, striped upper wall, cream pier with door), A airside block (olive hangar with two white leaves on its SE face, pier, white wing with swoosh and "18"). Footprint 70 x 84 m, centre 53.568558, -113.519833, heading 48. Measurement and video notes: `hangar18-photos/SOURCES.md`, overlay `footprints/hangar18-three-blocks.png`.
 - Uncertain: the aerial shows no clear roof for C (placed 13 m deep on the road side of B, from the street views); the hangar doors now face SE (toward the tower), as in the video, not NE as before.
 - New texture `efc` (`make_signs.py`).
+
+## Follow-up round (2026-10-21, later)
+- **BCATP hangar row A removed** (added to `SKIP` in `gen_buildings.py`): its 75 x 100 m generic box overlapped the Hangar 18 complex (brown roof in the sim).
+- **Hangar 40 enlarged** to fill the hole in the sim aerial (user: the grass patch NW of H39 is where it stood): 72 x 46 m, heading 228, centred 53.575004, -113.529385 (measured from the screenshot at about 1.73 px/m, ±3 m). The white part is kept (hall deepened to 46 m) and the blue-grey gabled hall of OSM 230718900 is added at the SE end.
+- **Hangar 18 landside club block shifted 18 m toward the tower (SE)** to the user's purple box (x about -2..62 in the complex frame); complex is now 88 x 84 m, centre 53.568498, -113.519742.
+- Not viewed in the sim.

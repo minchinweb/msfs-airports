@@ -1030,7 +1030,7 @@ SHIFTS = [("north hangar complex: bay 1", (0, -20)), ("north hangar complex: bay
           ("north complex: shop", (0, -25)), ("north complex: annex", (0, 10)), ("bcatp hangar row a", (-3.7, -1.5))]
 # T4 stays as the sim's own generated building; hotels wait until the tower/wing split is known
 # row C: the Aerocentre and the Shell hangar stand there
-SKIP = ("edmonton inn", "chateau louis", "usaaf hangar t4", "bcatp hangar row b", "bcatp hangar row c",
+SKIP = ("edmonton inn", "chateau louis", "usaaf hangar t4", "bcatp hangar row b", "bcatp hangar row c", "bcatp hangar row a",
         "hangar 11", "hangar 14", "usaaf hangar t1", "usaaf hangar t2")  # the last four: replaced by hangars.py models  # row B: the c.1972 control tower stands here
 KX, KY = 66170.0, 111200.0
 EXCL_MARGIN = 6.0

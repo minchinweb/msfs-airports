@@ -434,7 +434,7 @@ def hangar40():
     entrance and a white gabled canopy (middle), and a taller white block carrying the blue "40" roundel (right).  Footprint is the white
     roof of OSM way 230718900 (about 38 x 25 m); the blue-grey gabled hall beside it is not part of this model.  Heading 318."""
     m = Mesh(textured=True)
-    W, D = 38.0, 25.0
+    W, D = 38.0, 46.0  # white part 38 wide; the hole in the aerial is 72 x 46 m (user, 2026-10-21), the blue-grey hall fills the rest
     x0, x1, z0, z1 = -W / 2, W / 2, -D / 2, D / 2
     hx0 = 3.0
     m.box(hx0, x1, 0, 8.0, z0, z1, RWHITE, top=False)
@@ -455,6 +455,10 @@ def hangar40():
     m.box(-19.1, -6.9, 11.0, 11.3, z0 - 0.1, z1 + 0.1, DGREY)
     number_disc(m, -9.4, 8.7, z1, (0, 1), 1.15, "40")
     m.box(-1.0, 1.6, 7.6, 8.9, -6.0, -2.0, DGREY)  # roof unit on the office
+    # blue-grey gabled hall at the SE end of OSM 230718900, x -53..-19 (together 72 m)
+    m.box(-53.0, -19.0, 0, 9.0, z0, z1, STEEL, top=False)
+    m.gable(-53.0, -19.0, 9.0, 3.0, z0, z1, along_z=True, sw_roof=METAL, sw_wall=STEEL)
+    m.pos = [(x + 17.0, y, z) for x, y, z in m.pos]  # centre the 72 m footprint on the origin
     m.mirror_x()
     return m
 
@@ -604,6 +608,7 @@ def hangar18():
     m.box(bx1 + 0.1, bx1 + 0.16, 3.5, 4.8, bz1 - 3.5, bz1 - 1.3, BLUE)  # small blue sign
     roof_vents(m, [(0, -40), (15, -30), (28, -44)], 9.9)
     # ---- C: landside club block -------------------------------------------------------------
+    n_c = len(m.pos)
     cx0, cx1, cz0, cz1 = -20.0, 44.0, -62.0, -49.0
     wing1 = 28.0  # long wing x -20..28 (two storeys, 6.8 m); club room x 28..40 (8.0 m); ground-floor block to x 44 under the deck
     m.box(cx0, wing1, 0, 6.8, cz0, cz1, RWHITE, top=False)
@@ -641,8 +646,10 @@ def hangar18():
     m.box(40.0, 40.12, 7.0, 7.7, cz0, cz1, DGREY)  # fascia the lettering sits on
     rect_sign(m, 40.14, 7.35, -55.5, (1, 0), 12.0, 0.7, "efc", 0.0, 0.5)  # EDMONTON FLYING CLUB on the club-room fascia, facing the tower
     roof_vents(m, [(-5, -55), (10, -55)], 7.6)
+    # user, 2026-10-21: the club block lies 18 m further toward the tower (SE) than first traced (x -2..62)
+    m.pos[n_c:] = [(x + 18.0, y, z) for x, y, z in m.pos[n_c:]]
     # shift the origin to the middle of the whole footprint (x -26..44, z -62..22)
-    m.pos = [(x - 9.0, y, z + 20.0) for x, y, z in m.pos]
+    m.pos = [(x - 18.0, y, z + 20.0) for x, y, z in m.pos]
     m.mirror_x()
     return m
 
@@ -742,10 +749,10 @@ HANGARS = [
     ("cyxd_hangar8", "Hangar 8 (pale blue-grey with end block, OSM 325268698)", hangar8, 53.570358, -113.508293, 270, 66.3, 52.9),
     ("cyxd_hangar11", "Hangar 11 (USAAF T3 barrel vault with annexes, OSM 325268748)", hangar11, 53.569251, -113.508228, 0, 86.3, 64.0),
     ("cyxd_hangar14", "Hangar 14 (Alberta Aviation Museum, OSM 230718920)", hangar14, 53.565714, -113.517130, 180, 90.8, 100.0),
-    ("cyxd_hangar18", "Hangar 18 (Edmonton Flying Club complex, traced from 2014 imagery)", hangar18, 53.568558, -113.519833, 48, 70.0, 84.0),
+    ("cyxd_hangar18", "Hangar 18 (Edmonton Flying Club complex, traced from 2014 imagery)", hangar18, 53.568498, -113.519742, 48, 88.0, 84.0),
     ("cyxd_hangar38", "Hangar 38 (mustard yellow, OSM 230718902)", hangar38, 53.573308, -113.529714, 138, 68.8, 64.0),
     ("cyxd_hangar39", "Hangar 39 (pale-blue double hall, OSM 230718901, beside Hangar 38)", hangar39, 53.574052, -113.528731, 138, 107.0, 90.5),
-    ("cyxd_hangar40", "Hangar 40 (Canadian Helicopters, white roof of OSM 230718900)", hangar40, 53.574931, -113.528590, 228, 38.0, 25.0),
+    ("cyxd_hangar40", "Hangar 40 (Canadian Helicopters, white roof of OSM 230718900)", hangar40, 53.575004, -113.529385, 228, 72.0, 46.0),
     ("cyxd_hangar3", "Hangar 3 (pale-blue flat-roofed hangar, traced from the 2014 imagery)", hangar3, 53.574710, -113.508533, 90, 81.6, 25.7),
     ("cyxd_hangar3_annex", "Hangar 3 tan block annex (south end)", hangar3_annex, 53.574273, -113.508547, 90, 15.9, 13.2),
     ("cyxd_bluehangar", "Dark-blue gabled hangar north of Hangar 3 (5 109 St NW, OSM 325272095)", bluehangar, 53.575629, -113.508404, 180, 20.7, 24.6),
