@@ -336,3 +336,10 @@ Source: `docs/cyxd/procedures-2010.md` and the plate screenshots in `docs/cyxd/c
 - **Hangar 40 enlarged** to fill the hole in the sim aerial (user: the grass patch NW of H39 is where it stood): 72 x 46 m, heading 228, centred 53.575004, -113.529385 (measured from the screenshot at about 1.73 px/m, ±3 m). The white part is kept (hall deepened to 46 m) and the blue-grey gabled hall of OSM 230718900 is added at the SE end.
 - **Hangar 18 landside club block shifted 18 m toward the tower (SE)** to the user's purple box (x about -2..62 in the complex frame); complex is now 88 x 84 m, centre 53.568498, -113.519742.
 - Not viewed in the sim.
+
+## Old terminal (Hangar 21) and parking garage (2026-10-21, built OK, not viewed in the sim)
+- Footprints measured on Esri Wayback release 14035 (2017-08-10, zoom 19, 0.18 m/px); the overlay is `footprints/terminal21-2017-overlay.png` (red = terminal parts, green/cyan = garage tiers, drawn from the model parameters).
+- `cyxd_hangar21`: heading 51, centre 53.570940, -113.523178, 162 x 70 m. Dark-brick north wing (9.5 m) with the "21" roundel and red fins on its landside face, a two-storey brick spine along the apron with a glazed ground floor and canopy, a lower cream landside wing with a glazed entrance, a taller SE block, and a covered walkway on piers to the garage. Era is a blend of the 2012 (cream, glazed) and 2019 (brick, Amiskwaciy Academy) Street View shots.
+- `cyxd_garage22`: heading 58, centre 53.570567, -113.524067, 100 x 72 m. Open piered ground floor, three brown-clad decks stepping down toward the SE (10.4 / 7.2 / 4.0 m), stair tower at the NW end, "22" roundel on the NE face (photo 14).
+- Not modelled: the curved grass berms between the gates, flagpoles, the school sign. Heights are guessed from shadows. The existing gate 7 and 10-12 jetways were left as they were.
+- Hangar 19 was already built earlier today (see the follow-up above); nothing new was done for it.

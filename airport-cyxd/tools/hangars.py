@@ -739,6 +739,102 @@ def hangar39():
     return m
 
 
+# Old terminal (Building 21) and its parking garage -------------------------------------------
+def hangar21():
+    """Old terminal, "Hangar 21" (OSM way 230718907, later Amiskwaciy Academy), traced from the 2017 Wayback zoom-19 imagery
+    (docs/cyxd/footprints/terminal21-2017-overlay.png).  Frame: +Z = bearing 51 (apron side, NE), +X = bearing 141 (SE) along the building.
+    North wing (tall dark-brick block with the "21" roundel on its landside face), a two-storey spine along the apron with a glazed ground
+    floor and a canopy, a lower cream landside wing with a glazed entrance, the taller SE block, and a covered walkway to the garage
+    (Street View 13, 14, 17, 18)."""
+    m = Mesh(textured=True)
+    # north wing x -86..-51.5, z -8..17
+    m.box(-86.0, -51.5, 0, 9.5, -8.0, 17.0, BRICKD, top=False)
+    m.box(-86.2, -51.3, 9.5, 10.0, -8.2, 17.2, DGREY)
+    rows_z(m, -1, -8.0, -84.0, -53.5, 2.4, 6, 2.2, 1.6)
+    rows_z(m, -1, -8.0, -84.0, -53.5, 6.2, 6, 2.2, 1.6)
+    rows_z(m, 1, 17.0, -84.0, -53.5, 2.4, 6, 2.2, 1.6)
+    rows_z(m, 1, 17.0, -84.0, -53.5, 6.2, 6, 2.2, 1.6)
+    rows_x(m, -1, -86.0, -6.0, 15.0, 4.0, 4, 2.2, 1.8)
+    for x in (-82.0, -77.0, -72.0, -67.0, -62.0, -57.0):  # red-brown vertical fins on the landside face (Street View 13)
+        m.box(x, x + 0.6, 0, 9.5, -8.5, -8.0, RED)
+    number_disc(m, -60.0, 7.4, -8.5, (0, -1), 1.3, "21")
+    m.box(-78.0, -58.0, 0, 3.2, -8.6, -8.0, GLASS)  # entrance glazing
+    # spine along the apron x -52..72, z -4..13, two storeys; glazed ground floor behind columns
+    m.box(-52.0, 72.0, 0, 7.6, -4.0, 13.0, BRICKD, top=False)
+    m.box(-52.2, 72.2, 7.6, 8.1, -4.2, 13.2, DGREY)
+    for x in range(-48, 71, 6):
+        rows_z(m, 1, 13.0, x, x + 5.0, 1.0, 1, 4.0, 2.6)
+        rows_z(m, 1, 13.0, x, x + 5.0, 4.6, 1, 4.0, 1.6)
+    m.box(-48.0, 70.0, 3.9, 4.3, 13.0, 16.0, CREAM)  # apron-side canopy
+    for x in range(-46, 70, 12):
+        m.box(x, x + 0.5, 0, 3.9, 15.4, 15.9, CREAM)
+    # lower cream landside wing x -50..25, z -21..-4 with a glazed entrance bay
+    m.box(-50.0, 25.0, 0, 4.6, -21.0, -4.0, CREAM, top=False)
+    m.box(-50.2, 25.2, 4.6, 5.0, -21.2, -3.8, DGREY)
+    rows_z(m, -1, -21.0, -48.0, 6.0, 1.2, 12, 2.4, 1.8)
+    m.box(-12.0, 4.0, 0, 3.6, -21.1, -21.0, GLASS)
+    m.box(-14.0, 6.0, 3.6, 3.9, -24.0, -21.0, CREAM)  # entrance canopy
+    # inner courtyard roof between the wings
+    m.box(-40.0, 20.0, 5.0, 5.2, -21.0, -4.0, DGREY)
+    # SE block x 25..76, z -19..13, taller
+    m.box(25.0, 76.0, 0, 9.5, -19.0, 13.0, BRICKD, top=False)
+    m.box(24.8, 76.2, 9.5, 10.0, -19.2, 13.2, DGREY)
+    for y in (2.0, 6.0):
+        rows_z(m, -1, -19.0, 27.0, 74.0, y, 8, 3.0, 1.6)
+        rows_x(m, 1, 76.0, -17.0, 11.0, y, 5, 3.0, 1.6)
+    m.box(24.0, 30.0, 0, 8.0, 13.0, 13.1, DARK)
+    roof_vents(m, [(-70, 4), (-65, 10), (0, 5), (10, 8), (50, 0), (60, 6)], 10.0)
+    # covered walkway from the spine's SW side toward the garage, on piers
+    m.box(-41.0, -34.0, 5.5, 8.5, -52.0, -21.0, BRICKD)
+    m.box(-41.2, -33.8, 8.5, 8.8, -52.2, -20.8, DGREY)
+    for z in (-46.0, -36.0):
+        for x in (-40.6, -34.6):
+            m.box(x, x + 0.6, 0, 5.5, z, z + 0.6, CREAM)
+    # centre the whole footprint (x -86..76, z -52..17) on the origin
+    m.pos = [(x + 5.0, y, z + 17.5) for x, y, z in m.pos]
+    m.mirror_x()
+    return m
+
+
+def garage22():
+    """Terminal parking garage ("22" roundel), three decks stepping down toward the SE end, brown horizontal cladding on an open ground floor
+    of precast piers, stair tower at the NW end (Street View 14-18).  Footprint from the 2017 Wayback zoom-19 imagery:
+    about 100 x 72 m, +Z = bearing 58 (NE, toward the terminal), +X = bearing 148."""
+    m = Mesh(textured=True)
+    x0, x1, z0, z1 = -50.0, 50.0, -36.0, 36.0
+    m.box(x0 + 0.6, x1 - 0.6, 0, 3.0, z0 + 0.6, z1 - 0.6, DARK, top=False)  # open ground floor
+    for i in range(12):  # precast piers on both long faces and the ends
+        x = x0 + 0.5 + i * (x1 - x0 - 1.4) / 11
+        for z in (z0, z1 - 0.8):
+            m.box(x, x + 0.9, 0, 3.0, z, z + 0.8, CREAM)
+    for k in range(1, 8):
+        z = z0 + k * (z1 - z0) / 8
+        for x in (x0, x1 - 0.8):
+            m.box(x, x + 0.8, 0, 3.0, z - 0.4, z + 0.4, CREAM)
+    # tiers: (x_start, x_end, top height)
+    for xa, xb, h in ((x0, 30.0, 10.4), (30.0, 40.0, 7.2), (40.0, x1, 4.0)):
+        m.box(xa, xb, 3.0, h, z0, z1, BRONZE, top=True)
+        m.box(xa - 0.1, xb + 0.1, h, h + 0.35, z0 - 0.1, z1 + 0.1, TAN)  # concrete cap
+        y = 3.0
+        while y + 3.3 <= h + 0.01:
+            m.box(xa - 0.15, xb + 0.15, y + 2.55, y + 3.0, z0 - 0.15, z1 + 0.15, TAN)  # slab edge beam
+            y += 3.3
+        for yy in [3.0 + 3.3 * j + 0.9 for j in range(int((h - 3.0) / 3.3 + 0.01))]:
+            n = max(1, int((xb - xa) / 9))
+            rows_z(m, -1, z0, xa + 0.5, xb - 0.5, yy, n, 6.0 if xb - xa > 30 else 4.0, 1.0)
+            rows_z(m, 1, z1, xa + 0.5, xb - 0.5, yy, n, 6.0 if xb - xa > 30 else 4.0, 1.0)
+    for yy in (3.9, 7.2):
+        rows_x(m, -1, x0, z0 + 3.0, z1 - 3.0, yy, 6, 7.0, 1.0)
+    # stair tower at the NW end (angled wall in the photos) and the "22" roundel at the roof corner
+    m.box(-30.0, -22.0, 10.4, 14.5, 10.0, 18.0, TAN)
+    m.box(-30.2, -21.8, 14.5, 14.8, 9.8, 18.2, DGREY)
+    m.box(-52.0, -50.0, 10.4, 12.0, 20.0, 27.0, CREAM)
+    number_disc(m, -40.0, 8.0, z1 + 0.2, (0, 1), 1.4, "22")
+    m.box(0.0, 3.0, 10.75, 12.0, -3.0, 3.0, DGREY)  # roof lift housing
+    m.mirror_x()
+    return m
+
+
 # placement ----------------------------------------------------------------------------------
 # name -> (title, builder, lat, lon, heading, footprint W (across front), D (depth), extra exclusion margin)
 HANGARS = [
@@ -753,6 +849,8 @@ HANGARS = [
     ("cyxd_hangar38", "Hangar 38 (mustard yellow, OSM 230718902)", hangar38, 53.573308, -113.529714, 138, 68.8, 64.0),
     ("cyxd_hangar39", "Hangar 39 (pale-blue double hall, OSM 230718901, beside Hangar 38)", hangar39, 53.574052, -113.528731, 138, 107.0, 90.5),
     ("cyxd_hangar40", "Hangar 40 (Canadian Helicopters, white roof of OSM 230718900)", hangar40, 53.575004, -113.529385, 228, 72.0, 46.0),
+    ("cyxd_hangar21", "Hangar 21 (old terminal, OSM 230718907; traced from the 2017 imagery)", hangar21, 53.570940, -113.523178, 51, 162.0, 70.0),
+    ("cyxd_garage22", "Terminal parking garage (22; traced from the 2017 imagery)", garage22, 53.570567, -113.524067, 58, 100.0, 72.0),
     ("cyxd_hangar3", "Hangar 3 (pale-blue flat-roofed hangar, traced from the 2014 imagery)", hangar3, 53.574710, -113.508533, 90, 81.6, 25.7),
     ("cyxd_hangar3_annex", "Hangar 3 tan block annex (south end)", hangar3_annex, 53.574273, -113.508547, 90, 15.9, 13.2),
     ("cyxd_bluehangar", "Dark-blue gabled hangar north of Hangar 3 (5 109 St NW, OSM 325272095)", bluehangar, 53.575629, -113.508404, 180, 20.7, 24.6),

@@ -1068,6 +1068,14 @@
 	<SceneryObject lat="53.57500400" lon="-113.52938500" alt="0.00000000000000" pitch="0.000000" bank="0.000000" heading="228" imageComplexity="VERY_SPARSE" altitudeIsAgl="TRUE" snapToGround="TRUE" snapToNormal="FALSE">
 		<LibraryObject name="{5AF9C0C7-F582-55D5-98C8-01608ED24982}" scale="1.000000"/>
 	</SceneryObject>
+	<!-- Hangar 21 (old terminal, OSM 230718907; traced from the 2017 imagery) -->
+	<SceneryObject lat="53.57094000" lon="-113.52317800" alt="0.00000000000000" pitch="0.000000" bank="0.000000" heading="51" imageComplexity="VERY_SPARSE" altitudeIsAgl="TRUE" snapToGround="TRUE" snapToNormal="FALSE">
+		<LibraryObject name="{BC3DDEF1-0B1F-5C85-8636-E3B1A76D5CED}" scale="1.000000"/>
+	</SceneryObject>
+	<!-- Terminal parking garage (22; traced from the 2017 imagery) -->
+	<SceneryObject lat="53.57056700" lon="-113.52406700" alt="0.00000000000000" pitch="0.000000" bank="0.000000" heading="58" imageComplexity="VERY_SPARSE" altitudeIsAgl="TRUE" snapToGround="TRUE" snapToNormal="FALSE">
+		<LibraryObject name="{9A6AA281-EF8A-5225-9ABE-984619C7262E}" scale="1.000000"/>
+	</SceneryObject>
 	<!-- Hangar 3 (pale-blue flat-roofed hangar, traced from the 2014 imagery) -->
 	<SceneryObject lat="53.57471000" lon="-113.50853300" alt="0.00000000000000" pitch="0.000000" bank="0.000000" heading="90" imageComplexity="VERY_SPARSE" altitudeIsAgl="TRUE" snapToGround="TRUE" snapToNormal="FALSE">
 		<LibraryObject name="{479FF4D0-1BB7-5420-BA36-38F85A85C25F}" scale="1.000000"/>
@@ -1407,6 +1415,30 @@
 		<Vertex lat="53.57545918768214" lon="-113.52948402199681"/>
 		<Vertex lat="53.57511018071120" lon="-113.53013541084186"/>
 		<Vertex lat="53.57454881231786" lon="-113.52928597800320"/>
+	</Polygon>
+	<Polygon version="0.4.0" displayName="No generated buildings: Hangar 21 (old terminal, OSM 230718907; traced from the 2017" parentGroupID="6" altitude="667.68023681640625">
+		<Attribute name="UniqueGUID" guid="{359C73E8-06BE-4FB2-ABCB-EC942F7761D0}" type="GUID" value="{1C194667-3D20-5A3A-AFD7-8DB71093A1CD}"/>
+		<Attribute name="ExcludeDetectedBuildings" guid="{5C1A2387-1F07-47DF-A569-962CF6258E55}" type="UINT8" value="1"/>
+		<Attribute name="ExcludeOSMBuildings" guid="{F3C2635D-9F2F-458F-8663-90B3837BED09}" type="UINT8" value="1"/>
+		<Attribute name="ExcludeMSBuildings" guid="{F78A3074-8AD5-4B8B-92C4-C1C948BB7AA5}" type="UINT8" value="1"/>
+		<Attribute name="ExcludeTIN" guid="{18B58CBF-AE02-4A19-8AA9-3809E8E73400}" type="UINT8" value="1"/>
+		<Attribute name="ExclusionFlags" guid="{4CACC252-E6DC-419A-B20C-16EC601DF70E}" type="UINT32" value="3"/>
+		<Vertex lat="53.57131598527531" lon="-113.52448695962583"/>
+		<Vertex lat="53.57009994752986" lon="-113.52283210473627"/>
+		<Vertex lat="53.57056401472470" lon="-113.52186904037417"/>
+		<Vertex lat="53.57178005247014" lon="-113.52352389526374"/>
+	</Polygon>
+	<Polygon version="0.4.0" displayName="No generated buildings: Terminal parking garage (22; traced from the 2017 imagery)" parentGroupID="6" altitude="667.68023681640625">
+		<Attribute name="UniqueGUID" guid="{359C73E8-06BE-4FB2-ABCB-EC942F7761D0}" type="GUID" value="{98A9E5E5-1C5A-520D-BE01-0CBAD85807D6}"/>
+		<Attribute name="ExcludeDetectedBuildings" guid="{5C1A2387-1F07-47DF-A569-962CF6258E55}" type="UINT8" value="1"/>
+		<Attribute name="ExcludeOSMBuildings" guid="{F3C2635D-9F2F-458F-8663-90B3837BED09}" type="UINT8" value="1"/>
+		<Attribute name="ExcludeMSBuildings" guid="{F78A3074-8AD5-4B8B-92C4-C1C948BB7AA5}" type="UINT8" value="1"/>
+		<Attribute name="ExcludeTIN" guid="{18B58CBF-AE02-4A19-8AA9-3809E8E73400}" type="UINT8" value="1"/>
+		<Attribute name="ExclusionFlags" guid="{4CACC252-E6DC-419A-B20C-16EC601DF70E}" type="UINT32" value="3"/>
+		<Vertex lat="53.57079392521840" lon="-113.52505375379833"/>
+		<Vertex lat="53.56993977605681" lon="-113.52415680718214"/>
+		<Vertex lat="53.57034007478159" lon="-113.52308024620167"/>
+		<Vertex lat="53.57119422394319" lon="-113.52397719281787"/>
 	</Polygon>
 	<Polygon version="0.4.0" displayName="No generated buildings: Hangar 3 (pale-blue flat-roofed hangar, traced from the 2014" parentGroupID="6" altitude="667.68023681640625">
 		<Attribute name="UniqueGUID" guid="{359C73E8-06BE-4FB2-ABCB-EC942F7761D0}" type="GUID" value="{137BB838-2F51-52EE-AA73-B210DBC3D4B2}"/>
