@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ModelInfo guid="{94EB3876-FA6C-5B8E-A15E-DDBDDD820061}" version="1.1">
+	<LODS>
+		<LOD minSize="0" ModelFile="cyxd_hangar_second.gltf"/>
+	</LODS>
+</ModelInfo>
