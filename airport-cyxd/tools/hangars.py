@@ -1247,8 +1247,8 @@ def garage22():
     """Terminal parking garage ("22" roundel), an OPEN parkade (user, 2026-10-21: it is open in real life, give it a ground deck and leave the sides open).
     Frame (before the final mirror): +X = bearing 148 = the FRONT, toward Airport Rd, +Z = bearing 58 (NE, toward the terminal = east), -X = the back / NW end.
     Three decks (10.4 / 7.2 / 4.0 m) over an open ground level; clear spans inside, posts only on the perimeter.
-    Front (MS-1270.213.3): each tier is set back from the one below (decks reach x 50 / 46.7 / 43.5) and the front is FOUR segments across (z quarters,
-    west to east), each set back by the same step (18 m / 5.5 = 3.27 m, user estimate) from the one before.  A post stands at every corner of the stepped front (8) on every
+    Front (MS-1270.213.3): each tier is set back from the one below (decks reach x 50 / 45.9 / 41.8) and the front is FOUR segments across (z quarters,
+    west to east), each set back by the same step (18 m / 5.5 x 1.25 = 4.09 m, user estimate) from the one before.  A post stands at every corner of the stepped front (8) on every
     level, and the brown rim board runs unbroken round the whole front, including the step returns.
     Each deck is a U open to the front: flat sides and flat NW end round a central bay (36 m wide) whose floor slopes DOWN TOWARD THE BACK, from a
     slope start line 7.6 m (25 ft) behind the bay's most receded front segment (so the flat strip is wider on the west half), and lands on the NW flat zone of
@@ -1263,7 +1263,7 @@ def garage22():
     LAND = 10.0  # landing length
     YG = 0.08  # landing level on the ground
     FLAT = 7.6  # flat deck in front of the slope (about 25 ft, MS-1270.213.3)
-    STEP = 18.0 / 5.5  # one step: 1/5.5 of a quarter of the front (user estimate); the SAME distance for each tier's recess and each front segment's setback
+    STEP = 18.0 / 5.5 * 1.25  # one step: 1/5.5 of a quarter of the front, +25 % (user, 2026-10-22) = 4.09 m; the SAME distance for each tier's recess and each front segment's setback
     SETS = (0.0, STEP, 2 * STEP, 3 * STEP)  # front segment setbacks, west (-Z) to east (+Z)
     ZB = (z0, -BW, 0.0, BW, z1)  # segment boundaries
     decks = [(4.0, x1), (7.2, x1 - STEP), (10.4, x1 - 2 * STEP)]
