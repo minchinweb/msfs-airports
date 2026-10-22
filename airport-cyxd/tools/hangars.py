@@ -1232,7 +1232,7 @@ def garage22():
     Mk 5 (user, 2026-10-21): (1) only perimeter columns (clear spans inside); (2) the decks are not flat: the aerial (terminal21-2017-overlay.png)
     shows a central bay starting about 45 % of the way along from the NW end that dips toward the SE, so every deck is a U (flat sides and NW end)
     round a ramp slab that descends at about 7 % to the level below (the lowest to the ground, where it is the vehicle entrance with a gate, island
-    and yellow bollards as in Street View 16/17); (3) a second "22" board on the stair tower's long (SE) side.
+    and yellow bollards as in Street View 16/17); (3) the long brown cladding boards along the side (Street View 15): a ground-level board over a block plinth was missing, now on both long sides.
     Footprint from the 2017 Wayback zoom-19 imagery: about 100 x 72 m, +Z = bearing 58 (NE, toward the terminal), +X = bearing 148."""
     m = fmesh()
     x0, x1, z0, z1 = -50.0, 50.0, -36.0, 36.0
@@ -1276,6 +1276,10 @@ def garage22():
 
     m.poly([(x0, 0.03, z0), (x1, 0.03, z0), (x1, 0.03, z1), (x0, 0.03, z1)], DGREY, (0.0, -5.0, 0.0))  # the ground deck
     columns(x0, x1, 0.03, GC)
+    for zz, s in ((z0, -1), (z1, 1)):  # ground-level side board (Street View 15): block plinth, brown ribbed board up to the first slab
+        zi, zo = (zz, zz + 0.3 * s) if s > 0 else (zz - 0.3, zz)
+        m.box(x0, 45.0, 0, 0.9, min(zi, zo), max(zi, zo), TANBLK)
+        m.box(x0, 45.0, 0.9, GC, min(zi, zo) - (0.05 if s < 0 else 0), max(zi, zo) + (0.05 if s > 0 else 0), BRONZE)
     for k, (yd, X) in enumerate(decks):
         # U-shaped deck: flat slabs along both sides and across the NW end, the centre bay is a ramp down to the level below
         flat_slab(x0, X, z0, -BW, yd)
@@ -1316,13 +1320,12 @@ def garage22():
         m.box(52.0, 52.12, 1.1, 1.22, zb0, zb1, stripe)
     for xb_, zb_ in ((50.8, -0.7), (50.8, 0.7), (55.6, -0.7), (55.6, 0.7), (52.0, -7.4), (52.0, 7.4)):
         m.box(xb_ - 0.2, xb_ + 0.2, 0, 1.0, zb_ - 0.2, zb_ + 0.2, YELLOW)
-    # stair tower at the NW end (angled wall in the photos) with the "22" roundel on its NE face and a second one on its SE (long-side) face,
+    # stair tower at the NW end (angled wall in the photos) with the "22" roundel on its NE face
     # and the lift housing on the roof
     m.box(-49.5, -41.5, 10.4, 15.0, 22.0, 30.0, TAN)
     m.box(-49.7, -41.3, 15.0, 15.3, 21.8, 30.2, DGREY)
     m.box(-52.0, -50.0, 11.4, 13.0, 20.0, 27.0, CREAM)
     number_disc(m, -45.5, 12.7, 30.0, (0, 1), 1.4, "22")
-    number_disc(m, -41.5, 12.7, 26.0, (1, 0), 1.4, "22")
     m.box(-24.0, -21.0, 10.4, 13.4, -3.0, 3.0, DGREY)  # roof lift housing (in the aerial it stands on the flat part, before the dip)
     m.mirror_x()
     return m
