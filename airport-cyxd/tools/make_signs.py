@@ -2,7 +2,10 @@
 drawn at its true board aspect and squashed to a square, then stretched back onto the oval polygon in gen_buildings.py).
     python -I airport-cyxd/tools/make_signs.py"""
 from pathlib import Path
-from PIL import Image, ImageDraw, ImageFont
+import random
+
+import numpy as np
+from PIL import Image, ImageDraw, ImageFilter, ImageFont
 
 HERE = Path(__file__).resolve().parent
 FONTS = Path("C:/Windows/Fonts")
@@ -21,6 +24,50 @@ def text_fit(d, txt, font_file, box, fill, anchor_xy=None):
         size -= 4
     cx, cy = (x0 + x1) / 2, (y0 + y1) / 2
     d.text((cx - (r + l) / 2, cy - (b + t) / 2), txt, font=f, fill=fill)
+
+
+def painted_text(im, txt, font_file, box, fill, seed=1, track=0.07, wobble=0.012, bold=0.045):
+    """Sign-painter lettering (user, 2026-10-21: the NWI sign looked too modern and too exact against the 1950s photo): a heavy condensed grotesque
+    set letter by letter with wide tracking, each letter a little off the baseline, size and angle, then the edge roughened, softened and the ink
+    faded, so it reads as hand-painted on a board instead of typeset."""
+    rnd = random.Random(seed)
+    x0, y0, x1, y1 = box
+    bw, bh = x1 - x0, y1 - y0
+    size = 600
+    while size > 10:
+        f = ImageFont.truetype(str(FONTS / font_file), size)
+        adv = [f.getlength(c) for c in txt]
+        total = sum(adv) + track * size * (len(txt) - 1)
+        l, t, r, b = f.getbbox("H")
+        if total <= bw and (b - t) <= bh * 0.86:
+            break
+        size -= 4
+    cap = b - t
+    mask = Image.new("L", im.size, 0)
+    x = x0 + (bw - total) / 2
+    base = y0 + (bh + cap) / 2
+    for c, a in zip(txt, adv):
+        if c != " ":
+            sz = int(size * (1 + rnd.uniform(-0.025, 0.025)))
+            ff = ImageFont.truetype(str(FONTS / font_file), sz)
+            tile = Image.new("L", (int(sz * 1.6), int(sz * 1.6)), 0)
+            ImageDraw.Draw(tile).text((sz * 0.3, sz * 0.2), c, font=ff, fill=255)
+            tile = tile.rotate(rnd.uniform(-0.8, 0.8), resample=Image.BICUBIC)
+            top = ff.getbbox("H")[1]
+            dy = rnd.uniform(-wobble, wobble) * bh
+            mask.paste(255, (int(x - sz * 0.3), int(base - cap - (top - sz * 0.2) * 0 + dy - sz * 0.2 - top + 0)), tile)
+        x += a + track * size
+    k = int(size * bold) | 1  # thicken the strokes: the painted letters are heavier than Franklin Gothic Medium
+    mask = mask.filter(ImageFilter.MaxFilter(max(3, k)))
+    m = np.asarray(mask.filter(ImageFilter.GaussianBlur(max(1.0, size * 0.012))), dtype=np.float32) / 255.0
+    noise = np.random.RandomState(seed).normal(0.0, 0.16, m.shape).astype(np.float32)
+    noise = np.asarray(Image.fromarray(((noise + 1) * 127).clip(0, 255).astype(np.uint8)).filter(ImageFilter.GaussianBlur(1.4)), dtype=np.float32) / 127.0 - 1.0
+    m = np.clip((m - 0.5 + noise * 0.5) * 3.2 + 0.5, 0.0, 1.0)  # rough, slightly soft edge
+    fade = 0.86 + 0.14 * np.random.RandomState(seed + 7).rand(*m.shape).astype(np.float32)
+    a = (m * fade)[..., None]
+    arr = np.asarray(im.convert("RGB"), dtype=np.float32)
+    ink = np.array(fill, dtype=np.float32)
+    im.paste(Image.fromarray((arr * (1 - a) + ink * a).astype(np.uint8)))
 
 
 def esso(w=2000, h=800):
@@ -46,15 +93,19 @@ def navcan(w=2000, h=900):
 
 
 def lawoffice():
-    """Top half: LAW OFFICE board (7.6 x 1.1 m); bottom half: AVIATION board (5.6 x 0.8 m); each stretched over half the square."""
+    """Top half: LAW OFFICE board (5.0 x 0.85 m); bottom half: AVIATION board (4.4 x 0.6 m); each stretched over half the square.
+    Street View 59 (2012): thin, widely spaced regular-weight capitals on a pale board with a dark edge line, AVIATION in a lighter grey."""
     im = Image.new("RGB", (1024, 1024), (236, 236, 232))
-    for k, (txt, aspect) in enumerate((("LAW OFFICE", 7.6 / 1.1), ("AVIATION", 5.6 / 0.8))):
+    for k, (txt, aspect, bg, edge, ink, track) in enumerate((
+            ("LAW OFFICE", 5.0 / 0.85, (234, 234, 228), (64, 68, 72), (44, 46, 50), 0.16),
+            ("AVIATION", 4.4 / 0.6, (226, 228, 226), (110, 114, 118), (86, 90, 94), 0.30))):
         w = 2000
         h = int(w / aspect)
-        b = Image.new("RGB", (w, h), (238, 238, 234))
+        b = Image.new("RGB", (w, h), bg)
         d = ImageDraw.Draw(b)
-        d.rectangle((0, 0, w - 1, h - 1), outline=(90, 94, 96), width=int(h * 0.06))
-        text_fit(d, txt, "arialbd.ttf", (w * 0.05, h * 0.2, w * 0.95, h * 0.8), (52, 56, 58))
+        d.rectangle((0, 0, w - 1, h - 1), outline=edge, width=max(3, int(h * 0.05)))
+        d.rectangle((int(h * 0.09), int(h * 0.09), w - 1 - int(h * 0.09), h - 1 - int(h * 0.09)), outline=tuple(int(c * 0.5 + bg[0] * 0.5) for c in edge), width=2)
+        painted_text(b, txt, "arial.ttf", (w * 0.05, h * 0.16, w * 0.95, h * 0.84), ink, seed=31 + k, track=track, wobble=0.0, bold=0.0)
         im.paste(b.resize((1024, 512), Image.LANCZOS), (0, 512 * k))
     return im
 
@@ -70,7 +121,7 @@ def nwi():
         d = ImageDraw.Draw(b)
         if k == 0:
             d.rectangle((0, 0, w - 1, h - 1), outline=(60, 64, 70), width=int(h * 0.03))
-        text_fit(d, txt, "arialbd.ttf", (w * 0.04, h * 0.18, w * 0.96, h * 0.82), (30, 34, 52))
+        painted_text(b, txt, "framd.ttf", (w * 0.04, h * 0.16, w * 0.96, h * 0.84), (26, 30, 46), seed=11 + k)
         im.paste(b.resize((1024, 512), Image.LANCZOS), (0, 512 * k))
     return im
 

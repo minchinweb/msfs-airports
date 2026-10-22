@@ -216,15 +216,15 @@
   {
    "bufferView": 0,
    "componentType": 5126,
-   "count": 20926,
+   "count": 32766,
    "type": "VEC3",
    "min": [
-    -46.87,
+    -47.06999999999999,
     0,
     -46.32
    ],
    "max": [
-    43.21,
+    43.41,
     14.9,
     32.32
    ]
@@ -232,19 +232,19 @@
   {
    "bufferView": 1,
    "componentType": 5126,
-   "count": 20926,
+   "count": 32766,
    "type": "VEC3"
   },
   {
    "bufferView": 2,
    "componentType": 5126,
-   "count": 20926,
+   "count": 32766,
    "type": "VEC2"
   },
   {
    "bufferView": 3,
    "componentType": 5123,
-   "count": 9348,
+   "count": 27108,
    "type": "SCALAR"
   },
   {
@@ -282,53 +282,53 @@
   {
    "buffer": 0,
    "byteOffset": 0,
-   "byteLength": 251112
+   "byteLength": 393192
   },
   {
    "buffer": 0,
-   "byteOffset": 251112,
-   "byteLength": 251112
+   "byteOffset": 393192,
+   "byteLength": 393192
   },
   {
    "buffer": 0,
-   "byteOffset": 502224,
-   "byteLength": 167408
+   "byteOffset": 786384,
+   "byteLength": 262128
   },
   {
    "buffer": 0,
-   "byteOffset": 669632,
-   "byteLength": 18696
+   "byteOffset": 1048512,
+   "byteLength": 54216
   },
   {
    "buffer": 0,
-   "byteOffset": 688328,
+   "byteOffset": 1102728,
    "byteLength": 43632
   },
   {
    "buffer": 0,
-   "byteOffset": 731960,
+   "byteOffset": 1146360,
    "byteLength": 12
   },
   {
    "buffer": 0,
-   "byteOffset": 731972,
+   "byteOffset": 1146372,
    "byteLength": 336
   },
   {
    "buffer": 0,
-   "byteOffset": 732308,
+   "byteOffset": 1146708,
    "byteLength": 204
   },
   {
    "buffer": 0,
-   "byteOffset": 732512,
+   "byteOffset": 1146912,
    "byteLength": 24
   }
  ],
  "buffers": [
   {
    "uri": "cyxd_hangar11.bin",
-   "byteLength": 732536
+   "byteLength": 1146936
   }
  ]
 }
