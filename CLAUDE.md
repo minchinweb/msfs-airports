@@ -18,6 +18,10 @@ The `msfs-sdk` MCP server searches the MSFS SDK documentation (fork https://gith
 
 Adjust the path if the clone is elsewhere. Check with `claude mcp list`. The tools only load in a new session. The fork has no `bin` or `prepare` script, so `npx` from GitHub does not work.
 
+## Reading the sim's default airport data
+
+MSFS 2024 cannot export a default airport to editable XML, and ADE is 2020-only. Use `python -I tools/sim_airport.py <IDENT> [...] [--sim msfs] [--json out.json]` instead. It reads Little Navmap's database (which Little Navmap builds from the sim through SimConnect) and prints the marker, runways and ends, starts, parking, taxi paths, frequencies and approaches. It prints the date Little Navmap last loaded the scenery library first; if that's old, ask the user to run Scenery Library > Load Scenery Library in Little Navmap.
+
 ## SDK procedure reference
 
 `docs/sdk-reference/KBOS Procedures.xml` is the SDK's procedure reference: approach XML in the `<Approach>`/`<Leg>` format, with `<Transition>`, `<Waypoint>` and `<Ndb>` entries. It is a fragment with no root element, so wrap it before parsing. It covers approaches only, with no departures or arrivals. Use it for the XML shape of approach, landing and procedure entries. Do not copy its fixes or idents into another airport.
