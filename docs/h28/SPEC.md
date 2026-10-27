@@ -2,7 +2,7 @@
 
 Draft started 2026-10-27. Status: **open questions are marked `DECISION`**. Nothing is built yet.
 
-Planned project: `airport-h28/airport-H28-del-bonita-whetstone-intl.xml`, package `minchinweb-airport-h28-whetstone`, source `airport-h28/PackageSources/Scenery/airport-h28/H28.xml`. Handoff notes will go in `docs/h28/STATUS.md`.
+Planned project: `airport-h28/airport-H28-del-bonita-whetstone-intl.xml`, package `cardboardgt-airport-h28-whetstone`, source `airport-h28/PackageSources/Scenery/airport-h28/H28.xml`. Handoff notes will go in `docs/h28/STATUS.md`.
 
 ## Facts gathered so far
 

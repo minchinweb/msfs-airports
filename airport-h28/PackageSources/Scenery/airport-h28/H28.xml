@@ -1,0 +1,17 @@
+<?xml version="1.0"?>
+<FSData version="9.0">
+	<Airport displayName="Airport (H28)" groupIndex="1" groupID="1" groupGenerated="FALSE" region="North America" country="Canada" state="Alberta" city="Del Bonita" name="Whetstone Intl (CEQ4)" ident="H28" lat="48.99868000000000" lon="-112.77713000000000" alt="1321.60000000000000" magvar="12.500000" trafficScalar="1.000000" airportTestRadius="2000.00000000000000" applyFlatten="FALSE" isOnTIN="FALSE" tinColorCorrection="TRUE">
+		<AirportArchetype/>
+		<!-- STUB: surface is a placeholder; set it to Grass in the Project Editor. Geometry is the sim's default H28 runway, to be trimmed to 1353 m. -->
+		<Runway parentGroupID="1" lat="48.99868000000000" lon="-112.77713000000000" alt="1321.60000000000000" heading="89.97000000000000" length="1594.00000000000000" width="20.00000000000000" patternAltitude="304.79998779296875" surface="{00000000-0000-0000-0000-000000000000}" transparent="FALSE" number="07" designator="NONE" primaryLanding="TRUE" primaryTakeoff="TRUE" primaryPattern="LEFT" secondaryLanding="TRUE" secondaryTakeoff="TRUE" secondaryPattern="LEFT" primaryMarkingBias="0.00000000000000" secondaryMarkingBias="0.00000000000000" groundMerging="TRUE" excludeVegetationAround="TRUE">
+			<Markings edges="FALSE" threshold="FALSE" alternateThreshold="FALSE" fixedDistance="FALSE" alternateFixedDistance="FALSE" touchdown="FALSE" alternateTouchdown="FALSE" dashes="FALSE" ident="FALSE" leadingZeroIdent="FALSE" precision="FALSE" alternatePrecision="FALSE" edgePavement="FALSE" singleEnd="FALSE" primaryClosed="FALSE" secondaryClosed="FALSE" primaryStol="FALSE" secondaryStol="FALSE" noThresholdEndArrows="FALSE"/>
+			<Lights center="NONE" edge="NONE"/>
+			<RunwayStart end="PRIMARY" lat="48.99867600000000" lon="-112.78761300000000" alt="1321.60000000000000" heading="89.97000000000000"/>
+			<RunwayStart end="SECONDARY" lat="48.99868400000000" lon="-112.76664700000000" alt="1321.60000000000000" heading="269.97000000000000"/>
+		</Runway>
+		<Aprons/>
+		<PaintedElements/>
+		<ApronEdgeLights/>
+		<Com frequency="122.800000" type="CTAF" name="WHETSTONE"/>
+	</Airport>
+</FSData>

@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Project Version="2" Name="airport-H28-Del-Bonita-Whetstone-Intl" FolderName="Packages" MetadataFolderName="PackagesMetadata">
+	<OutputDirectory>.</OutputDirectory>
+	<TemporaryOutputDirectory>_PackageInt</TemporaryOutputDirectory>
+	<Packages>
+		<Package>PackageDefinitions\cardboardgt-airport-h28-whetstone.xml</Package>
+	</Packages>
+	<PublishingGroups/>
+</Project>
