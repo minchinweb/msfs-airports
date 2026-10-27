@@ -8,10 +8,10 @@ Prefix commit messages with 🤖.
 
 ## MSFS SDK docs MCP server
 
-The `msfs-sdk` MCP server searches the MSFS SDK documentation (fork https://github.com/d41k4n/MSFS-SDK-MCP, branch `msfs2024`). It is registered in local scope (`~/.claude.json`, not committed), so install it on every new computer. It needs Node 18+. If `msfs-sdk` is missing from `/mcp`, offer to run these steps:
+The `msfs-sdk` MCP server searches the MSFS SDK documentation (our fork https://github.com/minchinweb/MSFS-SDK-MCP, branch `retail-docs-site`; it reads the docs site's new layout, which the original `msfs2024` branch can't). It is registered in local scope (`~/.claude.json`, not committed), so install it on every new computer. It needs Node 18+. If `msfs-sdk` is missing from `/mcp`, offer to run these steps:
 
     cd D:\Code
-    git clone -b msfs2024 https://github.com/d41k4n/MSFS-SDK-MCP
+    git clone -b retail-docs-site https://github.com/minchinweb/MSFS-SDK-MCP
     cd MSFS-SDK-MCP; npm install; npm run build
     # then, in this repo's folder and in ../msfs-airports:
     claude mcp add --scope local msfs-sdk -- node D:/Code/MSFS-SDK-MCP/dist/index.js
