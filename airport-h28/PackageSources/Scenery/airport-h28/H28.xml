@@ -215,6 +215,7 @@
 		<Attribute name="MaterialGUID" guid="{cd28efd0-d3f0-43b6-9f88-4e4707344a04}" type="GUID" value="{8862C0D8-5ADB-4BA8-952F-7D2E199CE9AC}"/>
 		<Attribute name="MaterialTiling" guid="{58d2d4ff-1657-4ab0-bdb2-09b2d8a77688}" type="FLOAT32" value="10"/>
 		<Attribute name="MaterialFalloff" guid="{c17ebbde-627d-4585-94f0-7c329cd69c4e}" type="FLOAT32" value="1"/>
+		<Attribute name="Layer" guid="{9E2B4C3E-7D84-453F-9DCC-B6498FF46703}" type="UINT32" value="1"/>
 		<Vertex lat="48.99884700" lon="-112.78474000"/>
 		<Vertex lat="48.99884700" lon="-112.76620000"/>
 		<Vertex lat="48.99851400" lon="-112.76620000"/>
@@ -225,6 +226,7 @@
 		<Attribute name="MaterialGUID" guid="{cd28efd0-d3f0-43b6-9f88-4e4707344a04}" type="GUID" value="{FDDD19DB-8975-497C-896D-34467B444AF6}"/>
 		<Attribute name="MaterialTiling" guid="{58d2d4ff-1657-4ab0-bdb2-09b2d8a77688}" type="FLOAT32" value="10"/>
 		<Attribute name="MaterialFalloff" guid="{c17ebbde-627d-4585-94f0-7c329cd69c4e}" type="FLOAT32" value="1"/>
+		<Attribute name="Layer" guid="{9E2B4C3E-7D84-453F-9DCC-B6498FF46703}" type="UINT32" value="1"/>
 		<Vertex lat="48.99851400" lon="-112.78474000"/>
 		<Vertex lat="48.99851400" lon="-112.78282000"/>
 		<Vertex lat="48.99781300" lon="-112.78282000"/>
