@@ -1,0 +1,4 @@
+# H28 reference images
+
+- `wikimedia-sign-and-runway.jpg`: "Frank Whetstone International Airport.jpg" by FiveXdollars, CC0, 2026-05-09 (https://commons.wikimedia.org/wiki/File:Frank_Whetstone_International_Airport.jpg), downscaled to 1200x1600. At the west end by the road: wooden sign "Frank Whetstone International Airport" on white posts; barbed-wire fence along the road; white cones with black tops (a large one by the fence, a row of smaller ones down the runway edges); orange ball markers on the power line; a wooden pole with a transformer and a line running across the strip; the windsock (red/orange) stands well down the strip, left of the pole; flat green grass. Windsock position still to be matched.
+- `sim-aerial-west-end-184446.png`: sim aerial screenshot (2026-10-27) of the west end, showing the striped runway ending at the property edge. This is the file attached as the "west end photo"; it is the same image as the aerial screenshot, not a ground photo.
