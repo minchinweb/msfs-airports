@@ -20,6 +20,14 @@
 			<AssetDir>PackageDefinitions\cardboardgt-airport-h28-whetstone\ContentInfo\</AssetDir>
 			<OutputDir>ContentInfo\cardboardgt-airport-h28-whetstone\</OutputDir>
 		</AssetGroup>
+		<AssetGroup Name="h28-modellib">
+			<Type Version="1">ModelLib</Type>
+			<Flags>
+				<FSXCompatibility>false</FSXCompatibility>
+			</Flags>
+			<AssetDir>PackageSources\modelLib\</AssetDir>
+			<OutputDir>Scenery\cardboardgt\h28\</OutputDir>
+		</AssetGroup>
 		<AssetGroup Name="h28-scenery">
 			<Type Version="0">BGL</Type>
 			<Flags>

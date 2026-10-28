@@ -35,3 +35,7 @@ Project: `airport-h28/airport-H28-del-bonita-whetstone-intl.xml` (package `cardb
 - Added: wooden power pole, 43 white cones (south edge: 62/95/127 m then every 61 m; north edge from 202 m every 61 m; extra at 202 and 266 m where red-white pairs sit; red cone model still missing), 7-wire farm fence along the west side and parking (spacing 5 m is a guess), fence posts at corners, "Runway Grass" and "Taxi Grass" material polygons, RNAV (GPS)-A circling approach (final course 300 magnetic, MAP over the field, MDA 5000). Approach comments now spell out IF/FAF/MAP/TF/CA/DF/HM.
 - WARNING: opening the project in the Scenery Editor re-saves H28.xml and DROPS the Waypoint and Approach elements (seen 2026-10-27). Keep the approaches out of any editor round-trip or re-run `gen_h28.py`-style insertion afterwards.
 - The user's H28v2 / H28v3 folders in the main checkout are Scenery Editor saves of this project (cone test placement, polygon v0.5.0).
+
+## Cones (2026-10-27)
+
+- `airport-h28/tools/gen_cones.py` builds two glTF models into `PackageSources/modelLib/` (white cone with a black top, and an all-red cone; 0.45 m tall, 0.4 m base) plus `texture/h28_palette.png`, adds a ModelLib group to the package definition, swaps the library cone in H28.xml for the white model and places red cones 1.5 m east of the white cones at 202 m and 266 m (3 of them; the north edge has no cone at 266 m). Re-run it after any regeneration of the cones. Models compile (`modellib.bgl`); not seen in the sim yet.
