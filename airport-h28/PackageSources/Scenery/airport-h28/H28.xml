@@ -1,7 +1,7 @@
 <?xml version="1.0"?>
 <FSData version="9.0">
-	<!-- windsock west of the 07 threshold area, north side (Canadian side) -->
-	<SceneryObject groupIndex="1" lat="48.99903000000000" lon="-112.78269300047752" alt="0.00000000000000" pitch="0.000000" bank="0.000000" heading="0.000000" imageComplexity="VERY_SPARSE" altitudeIsAgl="TRUE" snapToGround="TRUE" snapToNormal="FALSE">
+	<!-- windsock on the border line at the east edge of the parking area, ~138 m east of the west fence (2012 Google Earth shadow) -->
+	<SceneryObject groupIndex="1" lat="48.99855000000000" lon="-112.78285000000000" alt="0.00000000000000" pitch="0.000000" bank="0.000000" heading="0.000000" imageComplexity="VERY_SPARSE" altitudeIsAgl="TRUE" snapToGround="TRUE" snapToNormal="FALSE">
 		<Windsock poleHeight="4.572000" sockLength="2.743200" lighted="FALSE" containerTitle="Windsock"/>
 	</SceneryObject>
 	<Airport displayName="Airport (H28)" groupIndex="2" groupID="1" groupGenerated="FALSE" region="North America" country="Canada" state="Alberta" city="Del Bonita" name="Whetstone Intl (CEQ4)" ident="H28" lat="48.99868000000000" lon="-112.77713000000000" alt="1321.60000000000000" magvar="12.500000" trafficScalar="1.000000" airportTestRadius="2000.00000000000000" applyFlatten="FALSE" isOnTIN="FALSE" tinColorCorrection="TRUE">
