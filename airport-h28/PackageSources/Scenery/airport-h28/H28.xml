@@ -4,7 +4,22 @@
 	<SceneryObject groupIndex="1" lat="48.99855000000000" lon="-112.78285000000000" alt="0.00000000000000" pitch="0.000000" bank="0.000000" heading="0.000000" imageComplexity="VERY_SPARSE" altitudeIsAgl="TRUE" snapToGround="TRUE" snapToNormal="FALSE">
 		<Windsock poleHeight="4.572000" sockLength="2.743200" lighted="FALSE" containerTitle="Windsock"/>
 	</SceneryObject>
-	<Airport displayName="Airport (H28)" groupIndex="2" groupID="1" groupGenerated="FALSE" region="North America" country="Canada" state="Alberta" city="Del Bonita" name="Whetstone Intl (CEQ4)" ident="H28" lat="48.99868000000000" lon="-112.77713000000000" alt="1321.60000000000000" magvar="12.500000" trafficScalar="1.000000" airportTestRadius="2000.00000000000000" applyFlatten="FALSE" isOnTIN="FALSE" tinColorCorrection="TRUE">
+	<!-- mowed strip + west parking: no trees, no generated buildings (strip south edge = border line; fence ~ runway west end) -->
+	<Polygon version="0.4.0" displayName="H28 strip and parking: no vegetation or buildings" groupIndex="3" altitude="1321.6">
+		<Attribute name="UniqueGUID" guid="{359C73E8-06BE-4FB2-ABCB-EC942F7761D0}" type="GUID" value="{6F1D3A52-8B27-4C0E-9A41-5E7B2C9D1A38}"/>
+		<Attribute name="ExcludeDetectedBuildings" guid="{5C1A2387-1F07-47DF-A569-962CF6258E55}" type="UINT8" value="1"/>
+		<Attribute name="ExcludeOSMBuildings" guid="{F3C2635D-9F2F-458F-8663-90B3837BED09}" type="UINT8" value="1"/>
+		<Attribute name="ExcludeMSBuildings" guid="{F78A3074-8AD5-4B8B-92C4-C1C948BB7AA5}" type="UINT8" value="1"/>
+		<Attribute name="VegetationDensity" guid="{41EFF715-C392-4B31-A457-50A504353A90}" type="UINT32" value="0"/>
+		<Attribute name="VegetationFalloff" guid="{E82ABE17-FB4C-4F67-A28C-ED41969AEAD6}" type="FLOAT32" value="5"/>
+		<Vertex lat="48.99884700" lon="-112.78474000"/>
+		<Vertex lat="48.99884700" lon="-112.76620000"/>
+		<Vertex lat="48.99851400" lon="-112.76620000"/>
+		<Vertex lat="48.99851400" lon="-112.78282000"/>
+		<Vertex lat="48.99781300" lon="-112.78282000"/>
+		<Vertex lat="48.99781300" lon="-112.78474000"/>
+	</Polygon>
+	<Airport displayName="Airport (H28)" groupIndex="2" groupID="1" groupGenerated="FALSE" region="North America" country="Canada" state="Alberta" city="Del Bonita" name="Whetstone Intl (CEQ4)" ident="H28" lat="48.99868000000000" lon="-112.77713000000000" alt="1321.60000000000000" magvar="347.090000" trafficScalar="1.000000" airportTestRadius="2000.00000000000000" applyFlatten="FALSE" isOnTIN="FALSE" tinColorCorrection="TRUE">
 		<AirportArchetype/>
 		<Group displayName="Taxi Pts" parentGroupID="1" groupID="3" groupGenerated="FALSE"/>
 		<Group displayName="Taxi Paths" parentGroupID="1" groupID="4" groupGenerated="FALSE"/>

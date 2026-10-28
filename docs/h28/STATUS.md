@@ -20,3 +20,11 @@ Project: `airport-h28/airport-H28-del-bonita-whetstone-intl.xml` (package `cardb
 - Runway now keeps the sim's old east end (lon -112.766217) and is cut at the west (centre -112.77548). Tie-downs, taxi points and windsock shifted +0.0033 deg lon to follow.
 - Added `DeleteAirport` (all TRUE) to remove the default 08/26 runway; PAPI-2 (3.5 deg) on 07 added. Both build clean; not yet seen in the sim.
 - Still to do: cones, fences, mowed polygon, port buildings, power line, RNAV approaches.
+
+## 2026-10-27 (later): polygon, approach, magvar
+
+- Library GUIDs (fence, cone, pole, sign) still needed from the Scenery Editor; VectorPlacement/LibraryObject syntax is confirmed from the SDK docs (see chat notes).
+- Fixed airport `magvar`: was 12.5 (which the XML reads as west); now 347.09 (12.91 E, matching Little Navmap's value).
+- Added a vegetation/building exclusion polygon over the strip and the west parking (L shape; strip south edge = border line, fence = runway west end).
+- Added fictional RNAV (GPS) RWY 25: IF WH25I 10 NM, FAF WH25F 5 NM, MAP at the threshold, MDA 4800 ft, missed climb then hold at WH25I. Waypoint region "K2" is a guess. Unverified in the sim.
+- Not yet done: RNAV (GPS)-A circling, mowed-grass material polygon (needs a material GUID), buildings. North parking spots (lat 48.99908) are about 25 m north of the strip's north edge; move them if the real layout is south only.
