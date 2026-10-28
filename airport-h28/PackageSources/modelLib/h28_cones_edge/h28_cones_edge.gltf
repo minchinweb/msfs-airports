@@ -1,0 +1,138 @@
+{
+ "asset": {
+  "version": "2.0",
+  "generator": "airport-h28/tools/gen_cones.py",
+  "extensions": {
+   "ASOBO_normal_map_convention": {
+    "tangent_space_convention": "DirectX"
+   }
+  }
+ },
+ "extensionsUsed": [
+  "ASOBO_normal_map_convention"
+ ],
+ "scene": 0,
+ "scenes": [
+  {
+   "nodes": [
+    0
+   ]
+  }
+ ],
+ "nodes": [
+  {
+   "mesh": 0,
+   "name": "h28_cones_edge"
+  }
+ ],
+ "meshes": [
+  {
+   "name": "h28_cones_edge",
+   "primitives": [
+    {
+     "attributes": {
+      "POSITION": 0,
+      "NORMAL": 1,
+      "TEXCOORD_0": 2
+     },
+     "indices": 3,
+     "mode": 4,
+     "material": 0
+    }
+   ]
+  }
+ ],
+ "materials": [
+  {
+   "name": "h28_flat",
+   "pbrMetallicRoughness": {
+    "baseColorTexture": {
+     "index": 0
+    },
+    "metallicFactor": 0.0,
+    "roughnessFactor": 0.9
+   }
+  }
+ ],
+ "textures": [
+  {
+   "sampler": 0,
+   "source": 0
+  }
+ ],
+ "samplers": [
+  {
+   "magFilter": 9728,
+   "minFilter": 9728
+  }
+ ],
+ "images": [
+  {
+   "uri": "h28_palette.png"
+  }
+ ],
+ "accessors": [
+  {
+   "bufferView": 0,
+   "componentType": 5126,
+   "count": 172,
+   "type": "VEC3",
+   "min": [
+    -0.9,
+    0.0,
+    -10.8
+   ],
+   "max": [
+    0.9,
+    1.2,
+    10.8
+   ]
+  },
+  {
+   "bufferView": 1,
+   "componentType": 5126,
+   "count": 172,
+   "type": "VEC3"
+  },
+  {
+   "bufferView": 2,
+   "componentType": 5126,
+   "count": 172,
+   "type": "VEC2"
+  },
+  {
+   "bufferView": 3,
+   "componentType": 5123,
+   "count": 480,
+   "type": "SCALAR"
+  }
+ ],
+ "bufferViews": [
+  {
+   "buffer": 0,
+   "byteOffset": 0,
+   "byteLength": 2064
+  },
+  {
+   "buffer": 0,
+   "byteOffset": 2064,
+   "byteLength": 2064
+  },
+  {
+   "buffer": 0,
+   "byteOffset": 4128,
+   "byteLength": 1376
+  },
+  {
+   "buffer": 0,
+   "byteOffset": 5504,
+   "byteLength": 960
+  }
+ ],
+ "buffers": [
+  {
+   "uri": "h28_cones_edge.bin",
+   "byteLength": 6464
+  }
+ ]
+}

@@ -2,8 +2,11 @@
 airport-h28/PackageSources/modelLib/:
   h28_cone_white/   white cone with a black top (the strip's edge cones)
   h28_cone_red/     all-red cone (placed next to a white one at the red-white pairs)
+  h28_cones_edge/   the two edge cones across the runway as one model (white, at +-EDGE, CONE_SCALE built in)
+  h28_cones_07/     the threshold set: a white and a red cone on each edge, the red one 2 m outboard (west at heading 0)
   texture/h28_palette.png(.xml)
-Placements are written by gen_field.py.
+The sets exist because the sim drops a lone 1.2 m cone a few hundred metres out (it culls by on-screen size); a 20 m
+wide model stays drawn as far as the fence segments do. Placements are written by gen_field.py.
     python -I airport-h28/tools/gen_cones.py
 Prints the two model GUIDs (stable: uuid5 of the model name). Safe to re-run."""
 import json
@@ -11,7 +14,11 @@ import math
 import struct
 import uuid
 import zlib
+import sys
 from pathlib import Path
+
+sys.path.insert(0, str(Path(__file__).resolve().parent))
+import gen_field as gf  # noqa: E402
 
 ROOT = Path(__file__).resolve().parents[2]
 MODELLIB = ROOT / "airport-h28/PackageSources/modelLib"
@@ -41,6 +48,14 @@ def write_palette(path):
 class Mesh:
     def __init__(self):
         self.pos, self.nrm, self.uv, self.idx = [], [], [], []
+        self.at(0.0, 0.0, 1.0)
+
+    def at(self, ox, oz, s):
+        """Place the next cone at (ox, oz) with scale s (glTF frame: +X is west once placed, see h28_cones_07)."""
+        self.ox, self.oz, self.s = ox, oz, s
+
+    def p(self, x, y, z):
+        return (self.ox + self.s * x, self.s * y, self.oz + self.s * z)
 
     def uvof(self, sw):
         return ((sw + 0.5) / len(PALETTE), 0.5)
@@ -56,7 +71,7 @@ class Mesh:
             ln = math.sqrt(sum(v * v for v in n))
             n = tuple(v / ln for v in n)
             for r, y in ((r0, y0), (r1, y1)):
-                self.pos.append((r * c, y, r * s))
+                self.pos.append(self.p(r * c, y, r * s))
                 self.nrm.append(n)
                 self.uv.append(self.uvof(sw))
         for i in range(SIDES):
@@ -65,12 +80,12 @@ class Mesh:
 
     def cap(self, r, y, sw):
         base = len(self.pos)
-        self.pos.append((0, y, 0))
+        self.pos.append(self.p(0, y, 0))
         self.nrm.append((0, 1, 0))
         self.uv.append(self.uvof(sw))
         for i in range(SIDES + 1):
             a = 2 * math.pi * i / SIDES
-            self.pos.append((r * math.cos(a), y, r * math.sin(a)))
+            self.pos.append(self.p(r * math.cos(a), y, r * math.sin(a)))
             self.nrm.append((0, 1, 0))
             self.uv.append(self.uvof(sw))
         for i in range(SIDES):
@@ -130,16 +145,16 @@ def lerp_r(y):
     return R0 + (R1 - R0) * y / H
 
 
-def white_cone():
-    m = Mesh()
+def white_cone(m=None):
+    m = m or Mesh()
     m.band(R0, 0.0, lerp_r(H - TOP), H - TOP, WHITE)
     m.band(lerp_r(H - TOP), H - TOP, R1, H, BLACK)
     m.cap(R1, H, BLACK)
     return m
 
 
-def red_cone():
-    m = Mesh()
+def red_cone(m=None):
+    m = m or Mesh()
     m.band(R0, 0.0, R1, H, RED)
     m.cap(R1, H, RED)
     return m
@@ -149,7 +164,18 @@ def main():
     write_palette(MODELLIB / "texture" / "h28_palette.png")
     white = white_cone().save(MODELLIB / "h28_cone_white", "h28_cone_white")
     red = red_cone().save(MODELLIB / "h28_cone_red", "h28_cone_red")
-    print("white", white, "red", red)
+    edge = Mesh()
+    thr = Mesh()
+    for z in (-gf.EDGE, gf.EDGE):
+        edge.at(0.0, z, gf.CONE_SCALE)
+        white_cone(edge)
+        thr.at(0.0, z, gf.CONE_SCALE)
+        white_cone(thr)
+        thr.at(gf.RED_GAP, z, gf.CONE_SCALE)
+        red_cone(thr)
+    g_edge = edge.save(MODELLIB / "h28_cones_edge", "h28_cones_edge")
+    g_thr = thr.save(MODELLIB / "h28_cones_07", "h28_cones_07")
+    print("white", white, "red", red, "edge set", g_edge, "threshold set", g_thr)
 
 
 if __name__ == "__main__":

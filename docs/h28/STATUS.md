@@ -85,3 +85,10 @@ Built OK (sim closed, `_RPTErrors.xml` empty); not yet seen in the sim. Run orde
   - New highway lights: 10 m, 2.5 m arm over the road, 10,000 cd, 6 of them on the east shoulder from the CBSA lane to the CBP approach. One is at the border, at the runway's west end, as a beacon for the 07 threshold.
   - The emissive windows and the CBP canopy underside are unchanged (always lit, day too).
 - To check at night: flares visible from 5-10 nm; light pools on the ground under the lamps; whether brighter lamps or more of them are needed.
+
+## In-sim fixes (2026-10-28, after the first in-sim look)
+
+- **Lights:** the beams pointed up. The SDK's Blender exporter (`io/com/msfs_light_extensions.py`) adds a 180° X turn to every light, so an MSFS light shines along node +Z; down is the rotation `[0.7071, 0, 0, 0.7071]`. Each lamp also has an all-round, flare-only light (30,000 cd, 360°) so it shows from the air. Beams are now 165°. Unverified in the sim.
+- **Exclusions:** `ExclusionFlags` is a bitmask (1 roads, 2 street lights, 4 power lines, 8 feature points; SDK Scenery XML Properties). The field polygon and a new corridor polygon use 6 and ExcludeTIN. The corridor (`gen_port.CORRIDOR`) covers both ports and the road between them. It removes the sim's buildings, street lights and power lines, and clears trees 15–20 m back from our buildings.
+- **CBSA office:** now a drive-through (`gen_port.drive_through`): grey siding, an open north–south bay with a lit ceiling, and a red-gabled annex at the south-west. It is 6 m east of the OSM footprint so the sim's road traffic clears it. Its four pole lights stand 8 m off the north and south faces, either side of the bay. Shed colours: shed2 cream, shed4 brown.
+- **Cones:** the sim culled lone 1.2 m cones after about four pairs. Each station is now one model across the runway: `h28_cones_edge` has the two white cones, and `h28_cones_07` has white and red on both edges, red 2 m outboard (heading 0 at 07, 180 at 25). The red cones were already on the edge lines; the photo's inward offset is perspective.

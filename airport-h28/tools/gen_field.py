@@ -42,6 +42,7 @@ EDGE = 9.9  # cone line offset (65 ft runway)
 T07 = 200.0  # threshold cones, metres east of the west fence
 RWY_LEN = 4440 * 0.3048
 CONE_SCALE = 2.0
+RED_GAP = 2.0  # red threshold cone, metres outboard (along the runway) of the white one, on the same edge line
 FENCE_SEG = 20.0  # metres per fence model (at most)
 POST_GAP = 5.0
 
@@ -101,18 +102,14 @@ def fences():
 
 # --- cones -------------------------------------------------------------------------------------------------------------
 def cones():
-    white, red = guid("h28_cone_white"), guid("h28_cone_red")
-    t25 = T07 + RWY_LEN
+    """One model per station across the runway (gen_cones.py): the two white edge cones, or at each threshold the
+    white and red pair on both edges (heading 0 puts the red cones west, 180 east)."""
+    edge, thr = guid("h28_cones_edge"), guid("h28_cones_07")
     n = round(RWY_LEN / 60.96)
-    stations = [62.0, 95.0, 127.0] + [T07 + RWY_LEN * k / n for k in range(n + 1)]
-    out = []
-    for side, off in (("S", -EDGE), ("N", EDGE)):
-        lat = CL + off / LAT
-        for m in stations:
-            out.append(obj(f"white cone, {side} edge, {m:.0f} m from the west fence", white, *at(m, lat), scale=CONE_SCALE))
-        for m, what in ((T07 - 2.0, "07"), (t25 + 2.0, "25")):
-            out.append(obj(f"red cone, {side} edge, threshold {what} (outboard of the white cone)", red, *at(m, lat),
-                           scale=CONE_SCALE))
+    stations = [62.0, 95.0, 127.0] + [T07 + RWY_LEN * k / n for k in range(1, n)]
+    out = [obj(f"edge cones, {m:.0f} m from the west fence", edge, *at(m, CL)) for m in stations]
+    out.append(obj("threshold 07 cones (red outboard, west)", thr, *at(T07, CL), 0.0))
+    out.append(obj("threshold 25 cones (red outboard, east)", thr, *at(T07 + RWY_LEN, CL), 180.0))
     return out
 
 
@@ -131,6 +128,8 @@ def exclusion():
             '\t\t<Attribute name="ExcludeDetectedBuildings" guid="{5C1A2387-1F07-47DF-A569-962CF6258E55}" type="UINT8" value="1"/>\n'
             '\t\t<Attribute name="ExcludeOSMBuildings" guid="{F3C2635D-9F2F-458F-8663-90B3837BED09}" type="UINT8" value="1"/>\n'
             '\t\t<Attribute name="ExcludeMSBuildings" guid="{F78A3074-8AD5-4B8B-92C4-C1C948BB7AA5}" type="UINT8" value="1"/>\n'
+            '\t\t<Attribute name="ExcludeTIN" guid="{18B58CBF-AE02-4A19-8AA9-3809E8E73400}" type="UINT8" value="1"/>\n'
+            '\t\t<Attribute name="ExclusionFlags" guid="{4CACC252-E6DC-419A-B20C-16EC601DF70E}" type="UINT32" value="6"/>\n'
             '\t\t<Attribute name="VegetationScale" guid="{6A043F59-E6F2-4117-A2E4-D510E7317C29}" type="UINT32" value="0"/>\n'
             '\t\t<Attribute name="VegetationDensity" guid="{41EFF715-C392-4B31-A457-50A504353A90}" type="UINT32" value="0"/>\n'
             '\t\t<Attribute name="VegetationFalloff" guid="{E82ABE17-FB4C-4F67-A28C-ED41969AEAD6}" type="FLOAT32" value="5.000000"/>\n'
@@ -217,7 +216,7 @@ def main():
     S = set_attr("Vasi", "biasX", "12.000000")  # inside the 13.4 m fence line
     gp.H28.write_text(S.replace("\n", nl), encoding="utf-8", newline="")
     print(f"runway {length:.0f} m, centre lon {mid:.6f}; field {(EF - WF) * LON:.0f} m fence to fence; "
-          f"{block.count('cone,')} cones, {block.count('fence, edge')} fence segments")
+          f"{block.count(' cones')} cone sets, {block.count('fence, edge')} fence segments")
 
 
 S = ""

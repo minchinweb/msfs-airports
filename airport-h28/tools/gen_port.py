@@ -5,7 +5,9 @@ polygons in H28.xml (between BEGIN/END markers).
 Footprints come from OSM (Overpass, 2026-10-27; see FOOTPRINTS). The sim's aerial agrees with OSM here (road centre at
 lon -112.7884, checked on a DevMode top-down shot 2026-10-28), so DX is 0; an earlier 246 m shift came from a runway cut
 too short at the west. Heights and colours are estimates from the 2025 Street View photos (docs/h28/street-view-photos).
-Only the CBP port (2012) has a drive-through canopy; the CBSA office is a small flat-roofed building by its lane.
+The CBP port (2012) has a drive-through canopy. The CBSA office is a drive-through: a grey-sided flat-roofed block with
+an open north-south vehicle bay through it and a red-gabled annex at the south end (Street View 2025, refs 04 and 05);
+it sits 6 m east of the OSM footprint so the sim's road traffic clears it.
 Model frame: origin on the ground at the footprint centre, X = east, Z = north (mirrored at the end, as in CYXD)."""
 import json
 import math
@@ -25,18 +27,20 @@ LAT, LON = 111200.0, 73030.0
 DX = 0.0  # OSM -> sim aerial shift (none: they agree)
 
 # palette swatches
-WALL, TRIM, ROOF, DARK, GREEN, BROWN, REDR, WHITE, GREY, GLOW, STEEL, ORANGE = range(12)
+WALL, TRIM, ROOF, DARK, GREEN, BROWN, REDR, WHITE, GREY, GLOW, STEEL, ORANGE, SIDING, CREAM = range(14)
 PALETTE = [(208, 200, 184), (150, 148, 142), (70, 72, 78), (30, 32, 36), (52, 96, 70), (110, 78, 56), (140, 54, 44),
-           (232, 232, 228), (170, 174, 176), (255, 224, 150), (120, 128, 134), (240, 110, 20)]
+           (232, 232, 228), (170, 174, 176), (255, 224, 150), (120, 128, 134), (240, 110, 20), (188, 194, 196),
+           (226, 212, 168)]
 SW = 16
 
 # name: (OSM way, lat, lon centroid, width E-W m, depth N-S m, wall height, kind, wall, roof)
 FOOTPRINTS = [
-    ("cbsa_main", "CBSA main building (OSM way 1147679785)", 48.999586, -112.787966, 15, 13, 4.2, "office", WHITE, GREY),
+    ("cbsa_main", "CBSA main building (OSM way 1147679785)", 48.999586, -112.787966 + 6 / 73030, 15, 13, 4.2, "drive", SIDING,
+     GREY),
     ("cbsa_shed1", "CBSA outbuilding (OSM way 1147682043)", 49.000096, -112.787649, 14, 12, 3.6, "gable", WHITE, GREY),
-    ("cbsa_shed2", "CBSA outbuilding (OSM way 1147682044)", 48.999998, -112.787738, 10, 8, 3.2, "gable", WHITE, GREY),
+    ("cbsa_shed2", "CBSA outbuilding (OSM way 1147682044)", 48.999998, -112.787738, 10, 8, 3.2, "gable", CREAM, GREY),
     ("cbsa_shed3", "CBSA outbuilding (OSM way 1147682041)", 48.999355, -112.787841, 7, 8, 3.0, "gable", WHITE, GREY),
-    ("cbsa_shed4", "CBSA outbuilding (OSM way 1147682042)", 48.999239, -112.787861, 5, 5, 3.0, "flat", WHITE, GREY),
+    ("cbsa_shed4", "CBSA outbuilding (OSM way 1147682042)", 48.999239, -112.787861, 5, 5, 3.0, "flat", BROWN, GREY),
     ("cbp_main", "CBP main building (OSM way 1147679784)", 48.996529, -112.789077, 28, 22, 4.6, "canopy", TRIM, ROOF),
     ("cbp_booth", "CBP outbuilding (OSM way 1151192789)", 48.996581, -112.788819, 8, 15, 3.4, "flat", TRIM, ROOF),
     ("village_shed", "US-side shed (OSM way 1147682039)", 48.996405, -112.789473, 13, 8, 3.4, "gable", WHITE, REDR),
@@ -64,7 +68,7 @@ def write_palette(path):
 class Mesh:
     def __init__(self):
         self.pos, self.nrm, self.uv, self.idx, self.glow = [], [], [], [], []
-        self.lights = []  # (x, y, z, intensity, cone angle) downward street lights, model frame before mirroring
+        self.lights = []  # (x, y, z, intensity, cone angle, flare only) street lights, model frame before mirroring
 
     def poly(self, pts, sw, glow=False):
         """Flat polygon, normal from the winding (counter-clockwise seen from outside)."""
@@ -122,7 +126,7 @@ class Mesh:
             self.poly([P(x0 - e, y0, a), P(x0 - e, y0, b), P(x0 - e, y1, b), P(x0 - e, y1, a)], GLOW, True)
 
     def mirror_x(self):
-        self.lights = [(-x, y, z, i, c) for x, y, z, i, c in self.lights]
+        self.lights = [(-x, *rest) for x, *rest in self.lights]
         self.pos = [(-x, y, z) for x, y, z in self.pos]
         self.nrm = [(-x, y, z) for x, y, z in self.nrm]
         self.idx = [i for t in range(0, len(self.idx), 3) for i in (self.idx[t], self.idx[t + 2], self.idx[t + 1])]
@@ -170,16 +174,16 @@ class Mesh:
             "extensionsUsed": ["ASOBO_normal_map_convention"] + (["ASOBO_street_light"] if self.lights else []),
             "scene": 0, "scenes": [{"nodes": [0]}],
             "nodes": [{"mesh": 0, "name": name, **({"children": list(range(1, len(self.lights) + 1))} if self.lights else {})}]
-            # MSFS 2024 street light (ASOBO_macro_light is deprecated): the node's -Z is the beam, turned to point
-            # down; night only; lens flare on so the lamps show from a distance (parameter names from the SDK's
-            # Blender exporter, io_scene_gltf2_msfs_2024/blender/msfs_lights.py)
-            + [{"name": f"{name}_light{k}", "translation": [x, y, z], "rotation": [-0.70710678, 0.0, 0.0, 0.70710678],
+            # MSFS 2024 street light (ASOBO_macro_light is deprecated), night only, with lens flare. The beam is the
+            # node's +Z: the SDK's Blender exporter (io/com/msfs_light_extensions.py) adds a 180 deg X turn to the glTF
+            # light (-Z) rotation, so +90 deg about X points it down. Parameter names from blender/msfs_lights.py.
+            + [{"name": f"{name}_light{k}", "translation": [x, y, z], "rotation": [0.70710678, 0.0, 0.0, 0.70710678],
                 "extensions": {"ASOBO_street_light": {
                     "color": [1.0, 0.9, 0.75], "intensity": i, "cone_angle": c, "has_symmetry": False,
                     "flash_frequency": 0.0, "flash_duration": 0.2, "flash_phase": 0.0, "rotation_phase": 0.0,
                     "rotation_speed": 0.0, "random_phase": False, "day_night_cycle": True,
-                    "flare_enabled": True, "flare_only": False}}}
-               for k, (x, y, z, i, c) in enumerate(self.lights)],
+                    "flare_enabled": True, "flare_only": f}}}
+               for k, (x, y, z, i, c, f) in enumerate(self.lights)],
             "meshes": [{"name": name, "primitives": prims}],
             "materials": mats, "textures": [{"sampler": 0, "source": 0}],
             "samplers": [{"magFilter": 9728, "minFilter": 9728}],
@@ -197,6 +201,8 @@ class Mesh:
 def build(kind, w, d, h, wall, roof):
     m = Mesh()
     x0, x1, z0, z1 = -w / 2, w / 2, -d / 2, d / 2
+    if kind == "drive":
+        return drive_through(w, d, h, wall, roof)
     m.box(x0, x1, 0.0, h, z0, z1, wall, top=(kind in ("flat", "canopy", "office")))
     if kind in ("gable", "stable"):
         rise = min(w, d) * (0.30 if kind == "stable" else 0.22)
@@ -220,19 +226,60 @@ def build(kind, w, d, h, wall, roof):
     return m
 
 
+BAY = (-2.0, 3.0)  # CBSA drive-through bay, x from the footprint centre (metres east)
+ANNEX = 4.0  # depth of the red-gabled annex at the south end
+
+
+def drive_through(w, d, h, wall, roof):
+    """CBSA office: two office blocks either side of an open north-south vehicle bay under one flat roof, and a
+    red-gabled annex at the south-west corner. Lit bay ceiling."""
+    m = Mesh()
+    x0, x1, z0, z1 = -w / 2, w / 2, -d / 2, d / 2
+    za = z0 + ANNEX
+    bx0, bx1 = BAY
+    m.box(x0, bx0, 0.0, h, za, z1, wall, top=False)  # west offices
+    m.box(bx1, x1, 0.0, h, z0, z1, wall, top=False)  # east offices
+    m.box(x0 - 0.3, x1 + 0.3, h, h + 0.45, za - 0.3, z1 + 0.3, WHITE, bottom=True)  # roof slab over offices and bay
+    m.box(bx1 - 0.01, x1 + 0.3, h, h + 0.45, z0 - 0.3, za - 0.3, WHITE)  # roof over the east block's south end
+    m.poly([(bx0, h - 0.01, za - 0.3), (bx0, h - 0.01, z1 + 0.3), (bx1, h - 0.01, z1 + 0.3), (bx1, h - 0.01, za - 0.3)][::-1],
+           GLOW, True)  # bay ceiling light panel
+    m.box(x0, bx0 - 0.5, 0.0, h - 0.9, z0, za, CREAM, top=False)  # annex
+    m.gable(x0 - 0.3, bx0 - 0.2, h - 0.9, 1.6, z0 - 0.3, za, REDR, CREAM)
+    m.box(x0 - 0.05, x0, h - 1.2, h - 0.9, za - 0.5, za, REDR)  # annex trim
+    m.windows(x0, bx0, za, z1, 1.0, 2.5, 2, 2)
+    m.windows(bx1, x1, z0, z1, 1.0, 2.5, 2, 3)
+    for z in (za + 0.3, z1 - 0.3):  # bay posts at the west roof edge
+        m.box(bx0 - 0.15, bx0 + 0.15, 0.0, h, z - 0.15, z + 0.15, STEEL, top=False)
+    m.poly([(x0 - 0.01, 0.0, za + 1.5), (x0 - 0.01, 0.0, za + 2.5), (x0 - 0.01, 2.1, za + 2.5), (x0 - 0.01, 2.1, za + 1.5)], DARK)  # door on the road side
+    m.box(bx0 + 0.2, bx0 + 0.6, 0.0, 0.9, -0.5, 0.5, ORANGE)  # bollard in the bay
+    return m
+
+
 def footprint(lat, lon, w, d, pad):
     hw, hd = (w / 2 + pad) / LON, (d / 2 + pad) / LAT
     return [(lat - hd, lon - hw), (lat - hd, lon + hw), (lat + hd, lon + hw), (lat + hd, lon - hw)]
 
 
-def exclusion(title, c, guid):
+# Both ports and the road between them (the CBP village south to the CBSA sheds north, 15-20 m clear of the buildings):
+# no sim buildings, street lights or power lines (ExclusionFlags 2 + 4), and the forest pulled back.
+CORRIDOR = [(48.99555, -112.78990), (48.99555, -112.78800), (48.99870, -112.78800), (48.99870, -112.78730),
+            (49.00030, -112.78730), (49.00030, -112.78900)]
+
+
+def exclusion(title, c, guid, corridor=False):
     vs = "".join(f'\t\t<Vertex lat="{la:.8f}" lon="{lo:.8f}"/>\n' for la, lo in c)
+    extra = ('\t\t<Attribute name="ExcludeTIN" guid="{18B58CBF-AE02-4A19-8AA9-3809E8E73400}" type="UINT8" value="1"/>\n'
+             '\t\t<Attribute name="ExclusionFlags" guid="{4CACC252-E6DC-419A-B20C-16EC601DF70E}" type="UINT32" value="6"/>\n'
+             '\t\t<Attribute name="VegetationScale" guid="{6A043F59-E6F2-4117-A2E4-D510E7317C29}" type="UINT32" value="0"/>\n'
+             '\t\t<Attribute name="VegetationDensity" guid="{41EFF715-C392-4B31-A457-50A504353A90}" type="UINT32" value="0"/>\n'
+             '\t\t<Attribute name="VegetationFalloff" guid="{E82ABE17-FB4C-4F67-A28C-ED41969AEAD6}" type="FLOAT32" '
+             'value="10.000000"/>\n') if corridor else ""
     return (f'\t<Polygon version="0.5.0" displayName="{title}" groupIndex="3" altitude="1321.59997558593750">\n'
             f'\t\t<Attribute name="UniqueGUID" guid="{{359C73E8-06BE-4FB2-ABCB-EC942F7761D0}}" type="GUID" value="{guid}"/>\n'
             '\t\t<Attribute name="ExcludeDetectedBuildings" guid="{5C1A2387-1F07-47DF-A569-962CF6258E55}" type="UINT8" value="1"/>\n'
             '\t\t<Attribute name="ExcludeOSMBuildings" guid="{F3C2635D-9F2F-458F-8663-90B3837BED09}" type="UINT8" value="1"/>\n'
             '\t\t<Attribute name="ExcludeMSBuildings" guid="{F78A3074-8AD5-4B8B-92C4-C1C948BB7AA5}" type="UINT8" value="1"/>\n'
-            f'{vs}\t</Polygon>\n')
+            f'{extra}{vs}\t</Polygon>\n')
 
 
 def main():
@@ -250,6 +297,8 @@ def main():
         c = footprint(lat, plon + (7.0 / LON if kind == "canopy" else 0), w + (14 if kind == "canopy" else 0), d, pad)
         eg = "{" + str(uuid.uuid5(NS, "excl_" + key)).upper() + "}"
         lines.append(exclusion(f"{title}: no sim buildings", c, eg))
+    lines.append(exclusion("Border crossings and the road between: no sim buildings, street lights, power lines or trees",
+                           CORRIDOR, "{" + str(uuid.uuid5(NS, "excl_corridor")).upper() + "}", corridor=True))
     lines.append(f"\t{END}\n")
     block = "".join(lines)
 
