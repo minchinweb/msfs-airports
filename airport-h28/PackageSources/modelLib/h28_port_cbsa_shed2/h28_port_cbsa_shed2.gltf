@@ -38,6 +38,16 @@
      "indices": 3,
      "mode": 4,
      "material": 0
+    },
+    {
+     "attributes": {
+      "POSITION": 0,
+      "NORMAL": 1,
+      "TEXCOORD_0": 2
+     },
+     "indices": 4,
+     "mode": 4,
+     "material": 1
     }
    ]
   }
@@ -51,6 +61,24 @@
     },
     "metallicFactor": 0.0,
     "roughnessFactor": 0.9
+   }
+  },
+  {
+   "name": "h28_glow",
+   "pbrMetallicRoughness": {
+    "baseColorTexture": {
+     "index": 0
+    },
+    "metallicFactor": 0.0,
+    "roughnessFactor": 0.9
+   },
+   "emissiveFactor": [
+    1.0,
+    1.0,
+    1.0
+   ],
+   "emissiveTexture": {
+    "index": 0
    }
   }
  ],
@@ -75,35 +103,41 @@
   {
    "bufferView": 0,
    "componentType": 5126,
-   "count": 30,
+   "count": 418,
    "type": "VEC3",
    "min": [
-    -5.3,
+    -5.449999999999999,
     0.0,
-    -4.3
+    -4.42
    ],
    "max": [
-    5.3,
-    4.96,
-    4.3
+    5.449999999999999,
+    5.185568191047311,
+    4.42
    ]
   },
   {
    "bufferView": 1,
    "componentType": 5126,
-   "count": 30,
+   "count": 418,
    "type": "VEC3"
   },
   {
    "bufferView": 2,
    "componentType": 5126,
-   "count": 30,
+   "count": 418,
    "type": "VEC2"
   },
   {
    "bufferView": 3,
    "componentType": 5123,
-   "count": 42,
+   "count": 624,
+   "type": "SCALAR"
+  },
+  {
+   "bufferView": 4,
+   "componentType": 5123,
+   "count": 6,
    "type": "SCALAR"
   }
  ],
@@ -111,28 +145,33 @@
   {
    "buffer": 0,
    "byteOffset": 0,
-   "byteLength": 360
+   "byteLength": 5016
   },
   {
    "buffer": 0,
-   "byteOffset": 360,
-   "byteLength": 360
+   "byteOffset": 5016,
+   "byteLength": 5016
   },
   {
    "buffer": 0,
-   "byteOffset": 720,
-   "byteLength": 240
+   "byteOffset": 10032,
+   "byteLength": 3344
   },
   {
    "buffer": 0,
-   "byteOffset": 960,
-   "byteLength": 84
+   "byteOffset": 13376,
+   "byteLength": 1248
+  },
+  {
+   "buffer": 0,
+   "byteOffset": 14624,
+   "byteLength": 12
   }
  ],
  "buffers": [
   {
    "uri": "h28_port_cbsa_shed2.bin",
-   "byteLength": 1044
+   "byteLength": 14636
   }
  ]
 }

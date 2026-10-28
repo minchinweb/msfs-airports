@@ -103,41 +103,41 @@
   {
    "bufferView": 0,
    "componentType": 5126,
-   "count": 258,
+   "count": 5652,
    "type": "VEC3",
    "min": [
-    -7.8,
-    0.0,
-    -6.8
+    -13.719999999999999,
+    -0.02,
+    -7.5
    ],
    "max": [
     7.8,
-    4.9,
-    6.8
+    45.5,
+    7.5
    ]
   },
   {
    "bufferView": 1,
    "componentType": 5126,
-   "count": 258,
+   "count": 5652,
    "type": "VEC3"
   },
   {
    "bufferView": 2,
    "componentType": 5126,
-   "count": 258,
+   "count": 5652,
    "type": "VEC2"
   },
   {
    "bufferView": 3,
    "componentType": 5123,
-   "count": 270,
+   "count": 8286,
    "type": "SCALAR"
   },
   {
    "bufferView": 4,
    "componentType": 5123,
-   "count": 114,
+   "count": 126,
    "type": "SCALAR"
   }
  ],
@@ -145,33 +145,33 @@
   {
    "buffer": 0,
    "byteOffset": 0,
-   "byteLength": 3096
+   "byteLength": 67824
   },
   {
    "buffer": 0,
-   "byteOffset": 3096,
-   "byteLength": 3096
+   "byteOffset": 67824,
+   "byteLength": 67824
   },
   {
    "buffer": 0,
-   "byteOffset": 6192,
-   "byteLength": 2064
+   "byteOffset": 135648,
+   "byteLength": 45216
   },
   {
    "buffer": 0,
-   "byteOffset": 8256,
-   "byteLength": 540
+   "byteOffset": 180864,
+   "byteLength": 16572
   },
   {
    "buffer": 0,
-   "byteOffset": 8796,
-   "byteLength": 228
+   "byteOffset": 197436,
+   "byteLength": 252
   }
  ],
  "buffers": [
   {
    "uri": "h28_port_cbsa_main.bin",
-   "byteLength": 9024
+   "byteLength": 197688
   }
  ]
 }

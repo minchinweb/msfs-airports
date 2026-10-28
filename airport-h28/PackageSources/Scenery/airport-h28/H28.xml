@@ -844,7 +844,7 @@
 		<Vertex lat="48.99968042" lon="-112.78772637"/>
 		<Vertex lat="48.99968042" lon="-112.78804131"/>
 	</Polygon>
-	<!-- CBSA outbuilding (OSM way 1147682043), gable, 14x12 m, 3.6 m walls -->
+	<!-- CBSA outbuilding (OSM way 1147682043), garage2, 14x12 m, 3.6 m walls -->
 	<SceneryObject lat="49.00009600" lon="-112.78764900" alt="0.00000000000000" pitch="0.000000" bank="0.000000" heading="0.000000" imageComplexity="VERY_SPARSE" altitudeIsAgl="TRUE" snapToGround="TRUE" snapToNormal="FALSE">
 		<LibraryObject name="{D18F7BA3-5C5D-5126-B865-57E5F626247B}" scale="1.000000"/>
 	</SceneryObject>
@@ -858,7 +858,7 @@
 		<Vertex lat="49.00018593" lon="-112.78749838"/>
 		<Vertex lat="49.00018593" lon="-112.78779962"/>
 	</Polygon>
-	<!-- CBSA outbuilding (OSM way 1147682044), gable, 10x8 m, 3.2 m walls -->
+	<!-- CBSA outbuilding (OSM way 1147682044), garage1, 10x8 m, 3.2 m walls -->
 	<SceneryObject lat="48.99999800" lon="-112.78773800" alt="0.00000000000000" pitch="0.000000" bank="0.000000" heading="0.000000" imageComplexity="VERY_SPARSE" altitudeIsAgl="TRUE" snapToGround="TRUE" snapToNormal="FALSE">
 		<LibraryObject name="{8062B5E0-71B3-5F50-9886-A183C5FBBA7D}" scale="1.000000"/>
 	</SceneryObject>
@@ -872,7 +872,7 @@
 		<Vertex lat="49.00006994" lon="-112.78761476"/>
 		<Vertex lat="49.00006994" lon="-112.78786124"/>
 	</Polygon>
-	<!-- CBSA outbuilding (OSM way 1147682041), gable, 7x8 m, 3.0 m walls -->
+	<!-- CBSA outbuilding (OSM way 1147682041), garage2, 7x8 m, 3.0 m walls -->
 	<SceneryObject lat="48.99935500" lon="-112.78784100" alt="0.00000000000000" pitch="0.000000" bank="0.000000" heading="0.000000" imageComplexity="VERY_SPARSE" altitudeIsAgl="TRUE" snapToGround="TRUE" snapToNormal="FALSE">
 		<LibraryObject name="{ADBD160A-BBD1-54B5-A431-59DB14E44AD3}" scale="1.000000"/>
 	</SceneryObject>
@@ -886,7 +886,7 @@
 		<Vertex lat="48.99942694" lon="-112.78773830"/>
 		<Vertex lat="48.99942694" lon="-112.78794370"/>
 	</Polygon>
-	<!-- CBSA outbuilding (OSM way 1147682042), flat, 5x5 m, 3.0 m walls -->
+	<!-- CBSA outbuilding (OSM way 1147682042), garage1, 5x5 m, 3.0 m walls -->
 	<SceneryObject lat="48.99923900" lon="-112.78786100" alt="0.00000000000000" pitch="0.000000" bank="0.000000" heading="0.000000" imageComplexity="VERY_SPARSE" altitudeIsAgl="TRUE" snapToGround="TRUE" snapToNormal="FALSE">
 		<LibraryObject name="{5D6172F4-F253-50FF-9B84-B412E6C0AFB7}" scale="1.000000"/>
 	</SceneryObject>
@@ -1021,61 +1021,13 @@
 	<SceneryObject lat="48.99892597" lon="-112.78709564" alt="0.00000000000000" pitch="0.000000" bank="0.000000" heading="90.000000" imageComplexity="VERY_SPARSE" altitudeIsAgl="TRUE" snapToGround="TRUE" snapToNormal="FALSE">
 		<LibraryObject name="{5DE37C34-C5A3-54D1-AFEB-2CE25A6DFA8C}" scale="1.000000"/>
 	</SceneryObject>
-	<!-- pole light, CBSA main building -->
-	<SceneryObject lat="48.99945560" lon="-112.78794546" alt="0.00000000000000" pitch="0.000000" bank="0.000000" heading="0.000000" imageComplexity="VERY_SPARSE" altitudeIsAgl="TRUE" snapToGround="TRUE" snapToNormal="FALSE">
-		<LibraryObject name="{0D374A02-C38E-5F76-A073-6F78A14E06B5}" scale="1.000000"/>
+	<!-- CBSA plaza and road lights (6 lamps, one model) -->
+	<SceneryObject lat="48.99958600" lon="-112.78788384" alt="0.00000000000000" pitch="0.000000" bank="0.000000" heading="0.000000" imageComplexity="VERY_SPARSE" altitudeIsAgl="TRUE" snapToGround="TRUE" snapToNormal="FALSE">
+		<LibraryObject name="{F156844C-0E22-5D43-AD37-73CB77EBBAD2}" scale="1.000000"/>
 	</SceneryObject>
-	<!-- pole light, CBSA main building -->
-	<SceneryObject lat="48.99945560" lon="-112.78780853" alt="0.00000000000000" pitch="0.000000" bank="0.000000" heading="0.000000" imageComplexity="VERY_SPARSE" altitudeIsAgl="TRUE" snapToGround="TRUE" snapToNormal="FALSE">
-		<LibraryObject name="{0D374A02-C38E-5F76-A073-6F78A14E06B5}" scale="1.000000"/>
-	</SceneryObject>
-	<!-- pole light, CBSA main building -->
-	<SceneryObject lat="48.99971640" lon="-112.78794546" alt="0.00000000000000" pitch="0.000000" bank="0.000000" heading="180.000000" imageComplexity="VERY_SPARSE" altitudeIsAgl="TRUE" snapToGround="TRUE" snapToNormal="FALSE">
-		<LibraryObject name="{0D374A02-C38E-5F76-A073-6F78A14E06B5}" scale="1.000000"/>
-	</SceneryObject>
-	<!-- pole light, CBSA main building -->
-	<SceneryObject lat="48.99971640" lon="-112.78780853" alt="0.00000000000000" pitch="0.000000" bank="0.000000" heading="180.000000" imageComplexity="VERY_SPARSE" altitudeIsAgl="TRUE" snapToGround="TRUE" snapToNormal="FALSE">
-		<LibraryObject name="{0D374A02-C38E-5F76-A073-6F78A14E06B5}" scale="1.000000"/>
-	</SceneryObject>
-	<!-- pole light, CBP main building -->
-	<SceneryObject lat="48.99638512" lon="-112.78881683" alt="0.00000000000000" pitch="0.000000" bank="0.000000" heading="0.000000" imageComplexity="VERY_SPARSE" altitudeIsAgl="TRUE" snapToGround="TRUE" snapToNormal="FALSE">
-		<LibraryObject name="{0D374A02-C38E-5F76-A073-6F78A14E06B5}" scale="1.000000"/>
-	</SceneryObject>
-	<!-- pole light, CBP main building -->
-	<SceneryObject lat="48.99638512" lon="-112.78857036" alt="0.00000000000000" pitch="0.000000" bank="0.000000" heading="0.000000" imageComplexity="VERY_SPARSE" altitudeIsAgl="TRUE" snapToGround="TRUE" snapToNormal="FALSE">
-		<LibraryObject name="{0D374A02-C38E-5F76-A073-6F78A14E06B5}" scale="1.000000"/>
-	</SceneryObject>
-	<!-- pole light, CBP main building -->
-	<SceneryObject lat="48.99667288" lon="-112.78881683" alt="0.00000000000000" pitch="0.000000" bank="0.000000" heading="180.000000" imageComplexity="VERY_SPARSE" altitudeIsAgl="TRUE" snapToGround="TRUE" snapToNormal="FALSE">
-		<LibraryObject name="{0D374A02-C38E-5F76-A073-6F78A14E06B5}" scale="1.000000"/>
-	</SceneryObject>
-	<!-- pole light, CBP main building -->
-	<SceneryObject lat="48.99667288" lon="-112.78857036" alt="0.00000000000000" pitch="0.000000" bank="0.000000" heading="180.000000" imageComplexity="VERY_SPARSE" altitudeIsAgl="TRUE" snapToGround="TRUE" snapToNormal="FALSE">
-		<LibraryObject name="{0D374A02-C38E-5F76-A073-6F78A14E06B5}" scale="1.000000"/>
-	</SceneryObject>
-	<!-- road light at the border, by the runway's west end -->
-	<SceneryObject lat="48.99853000" lon="-112.78824631" alt="0.00000000000000" pitch="0.000000" bank="0.000000" heading="270.000000" imageComplexity="VERY_SPARSE" altitudeIsAgl="TRUE" snapToGround="TRUE" snapToNormal="FALSE">
-		<LibraryObject name="{E7667251-5640-50DA-AFA0-D879CE73BFED}" scale="1.000000"/>
-	</SceneryObject>
-	<!-- road light, CBSA approach -->
-	<SceneryObject lat="48.99905000" lon="-112.78824631" alt="0.00000000000000" pitch="0.000000" bank="0.000000" heading="270.000000" imageComplexity="VERY_SPARSE" altitudeIsAgl="TRUE" snapToGround="TRUE" snapToNormal="FALSE">
-		<LibraryObject name="{E7667251-5640-50DA-AFA0-D879CE73BFED}" scale="1.000000"/>
-	</SceneryObject>
-	<!-- road light, CBSA lane -->
-	<SceneryObject lat="48.99985000" lon="-112.78824631" alt="0.00000000000000" pitch="0.000000" bank="0.000000" heading="270.000000" imageComplexity="VERY_SPARSE" altitudeIsAgl="TRUE" snapToGround="TRUE" snapToNormal="FALSE">
-		<LibraryObject name="{E7667251-5640-50DA-AFA0-D879CE73BFED}" scale="1.000000"/>
-	</SceneryObject>
-	<!-- road light, US side -->
-	<SceneryObject lat="48.99795000" lon="-112.78824631" alt="0.00000000000000" pitch="0.000000" bank="0.000000" heading="270.000000" imageComplexity="VERY_SPARSE" altitudeIsAgl="TRUE" snapToGround="TRUE" snapToNormal="FALSE">
-		<LibraryObject name="{E7667251-5640-50DA-AFA0-D879CE73BFED}" scale="1.000000"/>
-	</SceneryObject>
-	<!-- road light, US side -->
-	<SceneryObject lat="48.99740000" lon="-112.78824631" alt="0.00000000000000" pitch="0.000000" bank="0.000000" heading="270.000000" imageComplexity="VERY_SPARSE" altitudeIsAgl="TRUE" snapToGround="TRUE" snapToNormal="FALSE">
-		<LibraryObject name="{E7667251-5640-50DA-AFA0-D879CE73BFED}" scale="1.000000"/>
-	</SceneryObject>
-	<!-- road light, CBP approach -->
-	<SceneryObject lat="48.99690000" lon="-112.78824631" alt="0.00000000000000" pitch="0.000000" bank="0.000000" heading="270.000000" imageComplexity="VERY_SPARSE" altitudeIsAgl="TRUE" snapToGround="TRUE" snapToNormal="FALSE">
-		<LibraryObject name="{E7667251-5640-50DA-AFA0-D879CE73BFED}" scale="1.000000"/>
+	<!-- CBP plaza and road lights (8 lamps, one model) -->
+	<SceneryObject lat="48.99652900" lon="-112.78907700" alt="0.00000000000000" pitch="0.000000" bank="0.000000" heading="0.000000" imageComplexity="VERY_SPARSE" altitudeIsAgl="TRUE" snapToGround="TRUE" snapToNormal="FALSE">
+		<LibraryObject name="{20F93523-B55A-5A92-A0E5-99318C8B6C09}" scale="1.000000"/>
 	</SceneryObject>
 	<!-- END power line and pole lights -->
 	<!-- BEGIN road props (generated by airport-h28/tools/gen_props.py) -->

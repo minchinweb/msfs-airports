@@ -1,0 +1,612 @@
+{
+ "asset": {
+  "version": "2.0",
+  "generator": "airport-h28/tools/gen_port.py",
+  "extensions": {
+   "ASOBO_normal_map_convention": {
+    "tangent_space_convention": "DirectX"
+   }
+  }
+ },
+ "extensionsUsed": [
+  "ASOBO_normal_map_convention",
+  "ASOBO_street_light"
+ ],
+ "scene": 0,
+ "scenes": [
+  {
+   "nodes": [
+    0
+   ]
+  }
+ ],
+ "nodes": [
+  {
+   "mesh": 0,
+   "name": "h28_lights_ca",
+   "children": [
+    1,
+    2,
+    3,
+    4,
+    5,
+    6,
+    7,
+    8,
+    9,
+    10,
+    11,
+    12
+   ]
+  },
+  {
+   "name": "h28_lights_ca_light0",
+   "translation": [
+    3.9000000001539092,
+    7.6,
+    -13.650000000327873
+   ],
+   "rotation": [
+    0.70710678,
+    0.0,
+    0.0,
+    0.70710678
+   ],
+   "extensions": {
+    "ASOBO_street_light": {
+     "color": [
+      1.0,
+      0.9,
+      0.75
+     ],
+     "intensity": 8000,
+     "cone_angle": 165.0,
+     "has_symmetry": false,
+     "flash_frequency": 0.0,
+     "flash_duration": 0.2,
+     "flash_phase": 0.0,
+     "rotation_phase": 0.0,
+     "rotation_speed": 0.0,
+     "random_phase": false,
+     "day_night_cycle": true,
+     "flare_enabled": true,
+     "flare_only": false
+    }
+   }
+  },
+  {
+   "name": "h28_lights_ca_light1",
+   "translation": [
+    3.9000000001539092,
+    7.55,
+    -13.650000000327873
+   ],
+   "rotation": [
+    0.70710678,
+    0.0,
+    0.0,
+    0.70710678
+   ],
+   "extensions": {
+    "ASOBO_street_light": {
+     "color": [
+      1.0,
+      0.9,
+      0.75
+     ],
+     "intensity": 60000.0,
+     "cone_angle": 360.0,
+     "has_symmetry": false,
+     "flash_frequency": 0.0,
+     "flash_duration": 0.2,
+     "flash_phase": 0.0,
+     "rotation_phase": 0.0,
+     "rotation_speed": 0.0,
+     "random_phase": false,
+     "day_night_cycle": true,
+     "flare_enabled": true,
+     "flare_only": true
+    }
+   }
+  },
+  {
+   "name": "h28_lights_ca_light2",
+   "translation": [
+    -4.299999999584259,
+    7.6,
+    -13.650000000327873
+   ],
+   "rotation": [
+    0.70710678,
+    0.0,
+    0.0,
+    0.70710678
+   ],
+   "extensions": {
+    "ASOBO_street_light": {
+     "color": [
+      1.0,
+      0.9,
+      0.75
+     ],
+     "intensity": 8000,
+     "cone_angle": 165.0,
+     "has_symmetry": false,
+     "flash_frequency": 0.0,
+     "flash_duration": 0.2,
+     "flash_phase": 0.0,
+     "rotation_phase": 0.0,
+     "rotation_speed": 0.0,
+     "random_phase": false,
+     "day_night_cycle": true,
+     "flare_enabled": true,
+     "flare_only": false
+    }
+   }
+  },
+  {
+   "name": "h28_lights_ca_light3",
+   "translation": [
+    -4.299999999584259,
+    7.55,
+    -13.650000000327873
+   ],
+   "rotation": [
+    0.70710678,
+    0.0,
+    0.0,
+    0.70710678
+   ],
+   "extensions": {
+    "ASOBO_street_light": {
+     "color": [
+      1.0,
+      0.9,
+      0.75
+     ],
+     "intensity": 60000.0,
+     "cone_angle": 360.0,
+     "has_symmetry": false,
+     "flash_frequency": 0.0,
+     "flash_duration": 0.2,
+     "flash_phase": 0.0,
+     "rotation_phase": 0.0,
+     "rotation_speed": 0.0,
+     "random_phase": false,
+     "day_night_cycle": true,
+     "flare_enabled": true,
+     "flare_only": true
+    }
+   }
+  },
+  {
+   "name": "h28_lights_ca_light4",
+   "translation": [
+    3.9000000001539092,
+    7.6,
+    13.650000000327873
+   ],
+   "rotation": [
+    0.70710678,
+    0.0,
+    0.0,
+    0.70710678
+   ],
+   "extensions": {
+    "ASOBO_street_light": {
+     "color": [
+      1.0,
+      0.9,
+      0.75
+     ],
+     "intensity": 8000,
+     "cone_angle": 165.0,
+     "has_symmetry": false,
+     "flash_frequency": 0.0,
+     "flash_duration": 0.2,
+     "flash_phase": 0.0,
+     "rotation_phase": 0.0,
+     "rotation_speed": 0.0,
+     "random_phase": false,
+     "day_night_cycle": true,
+     "flare_enabled": true,
+     "flare_only": false
+    }
+   }
+  },
+  {
+   "name": "h28_lights_ca_light5",
+   "translation": [
+    3.9000000001539092,
+    7.55,
+    13.650000000327873
+   ],
+   "rotation": [
+    0.70710678,
+    0.0,
+    0.0,
+    0.70710678
+   ],
+   "extensions": {
+    "ASOBO_street_light": {
+     "color": [
+      1.0,
+      0.9,
+      0.75
+     ],
+     "intensity": 60000.0,
+     "cone_angle": 360.0,
+     "has_symmetry": false,
+     "flash_frequency": 0.0,
+     "flash_duration": 0.2,
+     "flash_phase": 0.0,
+     "rotation_phase": 0.0,
+     "rotation_speed": 0.0,
+     "random_phase": false,
+     "day_night_cycle": true,
+     "flare_enabled": true,
+     "flare_only": true
+    }
+   }
+  },
+  {
+   "name": "h28_lights_ca_light6",
+   "translation": [
+    -4.299999999584259,
+    7.6,
+    13.650000000327873
+   ],
+   "rotation": [
+    0.70710678,
+    0.0,
+    0.0,
+    0.70710678
+   ],
+   "extensions": {
+    "ASOBO_street_light": {
+     "color": [
+      1.0,
+      0.9,
+      0.75
+     ],
+     "intensity": 8000,
+     "cone_angle": 165.0,
+     "has_symmetry": false,
+     "flash_frequency": 0.0,
+     "flash_duration": 0.2,
+     "flash_phase": 0.0,
+     "rotation_phase": 0.0,
+     "rotation_speed": 0.0,
+     "random_phase": false,
+     "day_night_cycle": true,
+     "flare_enabled": true,
+     "flare_only": false
+    }
+   }
+  },
+  {
+   "name": "h28_lights_ca_light7",
+   "translation": [
+    -4.299999999584259,
+    7.55,
+    13.650000000327873
+   ],
+   "rotation": [
+    0.70710678,
+    0.0,
+    0.0,
+    0.70710678
+   ],
+   "extensions": {
+    "ASOBO_street_light": {
+     "color": [
+      1.0,
+      0.9,
+      0.75
+     ],
+     "intensity": 60000.0,
+     "cone_angle": 360.0,
+     "has_symmetry": false,
+     "flash_frequency": 0.0,
+     "flash_duration": 0.2,
+     "flash_phase": 0.0,
+     "rotation_phase": 0.0,
+     "rotation_speed": 0.0,
+     "random_phase": false,
+     "day_night_cycle": true,
+     "flare_enabled": true,
+     "flare_only": true
+    }
+   }
+  },
+  {
+   "name": "h28_lights_ca_light8",
+   "translation": [
+    28.820819999902064,
+    9.6,
+    -59.60320000042998
+   ],
+   "rotation": [
+    0.70710678,
+    0.0,
+    0.0,
+    0.70710678
+   ],
+   "extensions": {
+    "ASOBO_street_light": {
+     "color": [
+      1.0,
+      0.9,
+      0.75
+     ],
+     "intensity": 12000,
+     "cone_angle": 165.0,
+     "has_symmetry": false,
+     "flash_frequency": 0.0,
+     "flash_duration": 0.2,
+     "flash_phase": 0.0,
+     "rotation_phase": 0.0,
+     "rotation_speed": 0.0,
+     "random_phase": false,
+     "day_night_cycle": true,
+     "flare_enabled": true,
+     "flare_only": false
+    }
+   }
+  },
+  {
+   "name": "h28_lights_ca_light9",
+   "translation": [
+    28.820819999902064,
+    9.55,
+    -59.60320000042998
+   ],
+   "rotation": [
+    0.70710678,
+    0.0,
+    0.0,
+    0.70710678
+   ],
+   "extensions": {
+    "ASOBO_street_light": {
+     "color": [
+      1.0,
+      0.9,
+      0.75
+     ],
+     "intensity": 60000.0,
+     "cone_angle": 360.0,
+     "has_symmetry": false,
+     "flash_frequency": 0.0,
+     "flash_duration": 0.2,
+     "flash_phase": 0.0,
+     "rotation_phase": 0.0,
+     "rotation_speed": 0.0,
+     "random_phase": false,
+     "day_night_cycle": true,
+     "flare_enabled": true,
+     "flare_only": true
+    }
+   }
+  },
+  {
+   "name": "h28_lights_ca_light10",
+   "translation": [
+    28.820819999902064,
+    9.6,
+    29.356800000152816
+   ],
+   "rotation": [
+    0.70710678,
+    0.0,
+    0.0,
+    0.70710678
+   ],
+   "extensions": {
+    "ASOBO_street_light": {
+     "color": [
+      1.0,
+      0.9,
+      0.75
+     ],
+     "intensity": 12000,
+     "cone_angle": 165.0,
+     "has_symmetry": false,
+     "flash_frequency": 0.0,
+     "flash_duration": 0.2,
+     "flash_phase": 0.0,
+     "rotation_phase": 0.0,
+     "rotation_speed": 0.0,
+     "random_phase": false,
+     "day_night_cycle": true,
+     "flare_enabled": true,
+     "flare_only": false
+    }
+   }
+  },
+  {
+   "name": "h28_lights_ca_light11",
+   "translation": [
+    28.820819999902064,
+    9.55,
+    29.356800000152816
+   ],
+   "rotation": [
+    0.70710678,
+    0.0,
+    0.0,
+    0.70710678
+   ],
+   "extensions": {
+    "ASOBO_street_light": {
+     "color": [
+      1.0,
+      0.9,
+      0.75
+     ],
+     "intensity": 60000.0,
+     "cone_angle": 360.0,
+     "has_symmetry": false,
+     "flash_frequency": 0.0,
+     "flash_duration": 0.2,
+     "flash_phase": 0.0,
+     "rotation_phase": 0.0,
+     "rotation_speed": 0.0,
+     "random_phase": false,
+     "day_night_cycle": true,
+     "flare_enabled": true,
+     "flare_only": true
+    }
+   }
+  }
+ ],
+ "meshes": [
+  {
+   "name": "h28_lights_ca",
+   "primitives": [
+    {
+     "attributes": {
+      "POSITION": 0,
+      "NORMAL": 1,
+      "TEXCOORD_0": 2
+     },
+     "indices": 3,
+     "mode": 4,
+     "material": 0
+    },
+    {
+     "attributes": {
+      "POSITION": 0,
+      "NORMAL": 1,
+      "TEXCOORD_0": 2
+     },
+     "indices": 4,
+     "mode": 4,
+     "material": 1
+    }
+   ]
+  }
+ ],
+ "materials": [
+  {
+   "name": "h28_flat",
+   "pbrMetallicRoughness": {
+    "baseColorTexture": {
+     "index": 0
+    },
+    "metallicFactor": 0.0,
+    "roughnessFactor": 0.9
+   }
+  },
+  {
+   "name": "h28_glow",
+   "pbrMetallicRoughness": {
+    "baseColorTexture": {
+     "index": 0
+    },
+    "metallicFactor": 0.0,
+    "roughnessFactor": 0.9
+   },
+   "emissiveFactor": [
+    1.0,
+    1.0,
+    1.0
+   ],
+   "emissiveTexture": {
+    "index": 0
+   }
+  }
+ ],
+ "textures": [
+  {
+   "sampler": 0,
+   "source": 0
+  }
+ ],
+ "samplers": [
+  {
+   "magFilter": 9728,
+   "minFilter": 9728
+  }
+ ],
+ "images": [
+  {
+   "uri": "h28_port_palette.png"
+  }
+ ],
+ "accessors": [
+  {
+   "bufferView": 0,
+   "componentType": 5126,
+   "count": 384,
+   "type": "VEC3",
+   "min": [
+    -4.549999999584259,
+    0.0,
+    -59.85320000042998
+   ],
+   "max": [
+    29.070819999902064,
+    10.0,
+    29.606800000152816
+   ]
+  },
+  {
+   "bufferView": 1,
+   "componentType": 5126,
+   "count": 384,
+   "type": "VEC3"
+  },
+  {
+   "bufferView": 2,
+   "componentType": 5126,
+   "count": 384,
+   "type": "VEC2"
+  },
+  {
+   "bufferView": 3,
+   "componentType": 5123,
+   "count": 540,
+   "type": "SCALAR"
+  },
+  {
+   "bufferView": 4,
+   "componentType": 5123,
+   "count": 36,
+   "type": "SCALAR"
+  }
+ ],
+ "bufferViews": [
+  {
+   "buffer": 0,
+   "byteOffset": 0,
+   "byteLength": 4608
+  },
+  {
+   "buffer": 0,
+   "byteOffset": 4608,
+   "byteLength": 4608
+  },
+  {
+   "buffer": 0,
+   "byteOffset": 9216,
+   "byteLength": 3072
+  },
+  {
+   "buffer": 0,
+   "byteOffset": 12288,
+   "byteLength": 1080
+  },
+  {
+   "buffer": 0,
+   "byteOffset": 13368,
+   "byteLength": 72
+  }
+ ],
+ "buffers": [
+  {
+   "uri": "h28_lights_ca.bin",
+   "byteLength": 13440
+  }
+ ]
+}

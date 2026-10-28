@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ModelInfo guid="{F156844C-0E22-5D43-AD37-73CB77EBBAD2}" version="1.1">
+	<LODS>
+		<LOD minSize="0" ModelFile="h28_lights_ca.gltf"/>
+	</LODS>
+</ModelInfo>
