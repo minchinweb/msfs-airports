@@ -28,3 +28,10 @@ Project: `airport-h28/airport-H28-del-bonita-whetstone-intl.xml` (package `cardb
 - Added a vegetation/building exclusion polygon over the strip and the west parking (L shape; strip south edge = border line, fence = runway west end).
 - Added fictional RNAV (GPS) RWY 25: IF WH25I 10 NM, FAF WH25F 5 NM, MAP at the threshold, MDA 4800 ft, missed climb then hold at WH25I. Waypoint region "K2" is a guess. Unverified in the sim.
 - Not yet done: RNAV (GPS)-A circling, mowed-grass material polygon (needs a material GUID), buildings. North parking spots (lat 48.99908) are about 25 m north of the strip's north edge; move them if the real layout is south only.
+
+## 2026-10-27 (evening)
+
+- magvar now written as -12.91 (negative = east, per the SDK docs); same meaning as 347.09.
+- Added: wooden power pole, 43 white cones (south edge: 62/95/127 m then every 61 m; north edge from 202 m every 61 m; extra at 202 and 266 m where red-white pairs sit; red cone model still missing), 7-wire farm fence along the west side and parking (spacing 5 m is a guess), fence posts at corners, "Runway Grass" and "Taxi Grass" material polygons, RNAV (GPS)-A circling approach (final course 300 magnetic, MAP over the field, MDA 5000). Approach comments now spell out IF/FAF/MAP/TF/CA/DF/HM.
+- WARNING: opening the project in the Scenery Editor re-saves H28.xml and DROPS the Waypoint and Approach elements (seen 2026-10-27). Keep the approaches out of any editor round-trip or re-run `gen_h28.py`-style insertion afterwards.
+- The user's H28v2 / H28v3 folders in the main checkout are Scenery Editor saves of this project (cone test placement, polygon v0.5.0).

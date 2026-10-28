@@ -2,7 +2,7 @@
 <AssetPackage ReleaseNotes="PackageDefinitions\cardboardgt-airport-h28-whetstone\ReleaseNotes.xml" Version="0.0.1">
 	<ItemSettings>
 		<ContentType>SCENERY</ContentType>
-		<Title>H28 Whetstone International (Del Bonita)</Title>
+		<Title>H28/CEQ4 Whetstone International (Del Bonita)</Title>
 		<Manufacturer/>
 		<Creator>Cardboard_GT</Creator>
 	</ItemSettings>
@@ -30,3 +30,4 @@
 		</AssetGroup>
 	</AssetGroups>
 </AssetPackage>
+

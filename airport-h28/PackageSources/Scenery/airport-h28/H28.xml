@@ -1,54 +1,311 @@
 <?xml version="1.0"?>
 <FSData version="9.0">
-	<!-- windsock on the border line at the east edge of the parking area, ~138 m east of the west fence (2012 Google Earth shadow) -->
-	<SceneryObject groupIndex="1" lat="48.99855000000000" lon="-112.78285000000000" alt="0.00000000000000" pitch="0.000000" bank="0.000000" heading="0.000000" imageComplexity="VERY_SPARSE" altitudeIsAgl="TRUE" snapToGround="TRUE" snapToNormal="FALSE">
+	<SceneryObject lat="48.99855000000000" lon="-112.78285000000000" alt="0.00000000000000" pitch="0.000000" bank="0.000000" heading="0.000000" imageComplexity="VERY_SPARSE" altitudeIsAgl="TRUE" snapToGround="TRUE" snapToNormal="FALSE">
 		<Windsock poleHeight="4.572000" sockLength="2.743200" lighted="FALSE" containerTitle="Windsock"/>
 	</SceneryObject>
-	<!-- mowed strip + west parking: no trees, no generated buildings (strip south edge = border line; fence ~ runway west end) -->
-	<Polygon version="0.4.0" displayName="H28 strip and parking: no vegetation or buildings" groupIndex="3" altitude="1321.6">
+	<Polygon version="0.5.0" displayName="H28 strip and parking: no vegetation or buildings" groupIndex="2" altitude="1321.59997558593750">
 		<Attribute name="UniqueGUID" guid="{359C73E8-06BE-4FB2-ABCB-EC942F7761D0}" type="GUID" value="{6F1D3A52-8B27-4C0E-9A41-5E7B2C9D1A38}"/>
 		<Attribute name="ExcludeDetectedBuildings" guid="{5C1A2387-1F07-47DF-A569-962CF6258E55}" type="UINT8" value="1"/>
 		<Attribute name="ExcludeOSMBuildings" guid="{F3C2635D-9F2F-458F-8663-90B3837BED09}" type="UINT8" value="1"/>
 		<Attribute name="ExcludeMSBuildings" guid="{F78A3074-8AD5-4B8B-92C4-C1C948BB7AA5}" type="UINT8" value="1"/>
+		<Attribute name="VegetationScale" guid="{6A043F59-E6F2-4117-A2E4-D510E7317C29}" type="UINT32" value="0"/>
 		<Attribute name="VegetationDensity" guid="{41EFF715-C392-4B31-A457-50A504353A90}" type="UINT32" value="0"/>
-		<Attribute name="VegetationFalloff" guid="{E82ABE17-FB4C-4F67-A28C-ED41969AEAD6}" type="FLOAT32" value="5"/>
+		<Attribute name="VegetationFalloff" guid="{E82ABE17-FB4C-4F67-A28C-ED41969AEAD6}" type="FLOAT32" value="5.000000"/>
+		<Vertex lat="48.99781300000000" lon="-112.78474000000000"/>
+		<Vertex lat="48.99781300000000" lon="-112.78282000000000"/>
+		<Vertex lat="48.99851400000000" lon="-112.78282000000000"/>
+		<Vertex lat="48.99851400000000" lon="-112.76620000000000"/>
+		<Vertex lat="48.99884700000000" lon="-112.76620000000000"/>
+		<Vertex lat="48.99884700000000" lon="-112.78474000000000"/>
+	</Polygon>
+	<!-- wooden power pole (T-bar, line runs north/south), ~33 m east of the west fence on the border line -->
+	<SceneryObject lat="48.99851700" lon="-112.78428813" alt="0.00000000000000" pitch="0.000000" bank="0.000000" heading="0.000000" imageComplexity="VERY_SPARSE" altitudeIsAgl="TRUE" snapToGround="TRUE" snapToNormal="FALSE">
+		<LibraryObject name="{4D51E533-A968-4882-A48C-0216DDC94E94}" scale="1.000000"/>
+	</SceneryObject>
+	<!-- white cone, S edge, 62 m from the west fence -->
+	<SceneryObject lat="48.99851400" lon="-112.78389103" alt="0.00000000000000" pitch="0.000000" bank="0.000000" heading="0.000000" imageComplexity="VERY_SPARSE" altitudeIsAgl="TRUE" snapToGround="TRUE" snapToNormal="FALSE">
+		<LibraryObject name="{332F3033-B7B6-7FDD-1CAB-6E972A9235B8}" scale="1.000000"/>
+	</SceneryObject>
+	<!-- white cone, S edge, 95 m from the west fence -->
+	<SceneryObject lat="48.99851400" lon="-112.78343916" alt="0.00000000000000" pitch="0.000000" bank="0.000000" heading="0.000000" imageComplexity="VERY_SPARSE" altitudeIsAgl="TRUE" snapToGround="TRUE" snapToNormal="FALSE">
+		<LibraryObject name="{332F3033-B7B6-7FDD-1CAB-6E972A9235B8}" scale="1.000000"/>
+	</SceneryObject>
+	<!-- white cone, S edge, 127 m from the west fence -->
+	<SceneryObject lat="48.99851400" lon="-112.78300099" alt="0.00000000000000" pitch="0.000000" bank="0.000000" heading="0.000000" imageComplexity="VERY_SPARSE" altitudeIsAgl="TRUE" snapToGround="TRUE" snapToNormal="FALSE">
+		<LibraryObject name="{332F3033-B7B6-7FDD-1CAB-6E972A9235B8}" scale="1.000000"/>
+	</SceneryObject>
+	<!-- white cone, S edge, 188 m from the west fence -->
+	<SceneryObject lat="48.99851400" lon="-112.78216572" alt="0.00000000000000" pitch="0.000000" bank="0.000000" heading="0.000000" imageComplexity="VERY_SPARSE" altitudeIsAgl="TRUE" snapToGround="TRUE" snapToNormal="FALSE">
+		<LibraryObject name="{332F3033-B7B6-7FDD-1CAB-6E972A9235B8}" scale="1.000000"/>
+	</SceneryObject>
+	<!-- white cone, S edge, 249 m from the west fence -->
+	<SceneryObject lat="48.99851400" lon="-112.78133044" alt="0.00000000000000" pitch="0.000000" bank="0.000000" heading="0.000000" imageComplexity="VERY_SPARSE" altitudeIsAgl="TRUE" snapToGround="TRUE" snapToNormal="FALSE">
+		<LibraryObject name="{332F3033-B7B6-7FDD-1CAB-6E972A9235B8}" scale="1.000000"/>
+	</SceneryObject>
+	<!-- white cone, S edge, 310 m from the west fence -->
+	<SceneryObject lat="48.99851400" lon="-112.78049517" alt="0.00000000000000" pitch="0.000000" bank="0.000000" heading="0.000000" imageComplexity="VERY_SPARSE" altitudeIsAgl="TRUE" snapToGround="TRUE" snapToNormal="FALSE">
+		<LibraryObject name="{332F3033-B7B6-7FDD-1CAB-6E972A9235B8}" scale="1.000000"/>
+	</SceneryObject>
+	<!-- white cone, S edge, 371 m from the west fence -->
+	<SceneryObject lat="48.99851400" lon="-112.77965990" alt="0.00000000000000" pitch="0.000000" bank="0.000000" heading="0.000000" imageComplexity="VERY_SPARSE" altitudeIsAgl="TRUE" snapToGround="TRUE" snapToNormal="FALSE">
+		<LibraryObject name="{332F3033-B7B6-7FDD-1CAB-6E972A9235B8}" scale="1.000000"/>
+	</SceneryObject>
+	<!-- white cone, S edge, 432 m from the west fence -->
+	<SceneryObject lat="48.99851400" lon="-112.77882462" alt="0.00000000000000" pitch="0.000000" bank="0.000000" heading="0.000000" imageComplexity="VERY_SPARSE" altitudeIsAgl="TRUE" snapToGround="TRUE" snapToNormal="FALSE">
+		<LibraryObject name="{332F3033-B7B6-7FDD-1CAB-6E972A9235B8}" scale="1.000000"/>
+	</SceneryObject>
+	<!-- white cone, S edge, 493 m from the west fence -->
+	<SceneryObject lat="48.99851400" lon="-112.77798935" alt="0.00000000000000" pitch="0.000000" bank="0.000000" heading="0.000000" imageComplexity="VERY_SPARSE" altitudeIsAgl="TRUE" snapToGround="TRUE" snapToNormal="FALSE">
+		<LibraryObject name="{332F3033-B7B6-7FDD-1CAB-6E972A9235B8}" scale="1.000000"/>
+	</SceneryObject>
+	<!-- white cone, S edge, 554 m from the west fence -->
+	<SceneryObject lat="48.99851400" lon="-112.77715408" alt="0.00000000000000" pitch="0.000000" bank="0.000000" heading="0.000000" imageComplexity="VERY_SPARSE" altitudeIsAgl="TRUE" snapToGround="TRUE" snapToNormal="FALSE">
+		<LibraryObject name="{332F3033-B7B6-7FDD-1CAB-6E972A9235B8}" scale="1.000000"/>
+	</SceneryObject>
+	<!-- white cone, S edge, 615 m from the west fence -->
+	<SceneryObject lat="48.99851400" lon="-112.77631880" alt="0.00000000000000" pitch="0.000000" bank="0.000000" heading="0.000000" imageComplexity="VERY_SPARSE" altitudeIsAgl="TRUE" snapToGround="TRUE" snapToNormal="FALSE">
+		<LibraryObject name="{332F3033-B7B6-7FDD-1CAB-6E972A9235B8}" scale="1.000000"/>
+	</SceneryObject>
+	<!-- white cone, S edge, 676 m from the west fence -->
+	<SceneryObject lat="48.99851400" lon="-112.77548353" alt="0.00000000000000" pitch="0.000000" bank="0.000000" heading="0.000000" imageComplexity="VERY_SPARSE" altitudeIsAgl="TRUE" snapToGround="TRUE" snapToNormal="FALSE">
+		<LibraryObject name="{332F3033-B7B6-7FDD-1CAB-6E972A9235B8}" scale="1.000000"/>
+	</SceneryObject>
+	<!-- white cone, S edge, 737 m from the west fence -->
+	<SceneryObject lat="48.99851400" lon="-112.77464826" alt="0.00000000000000" pitch="0.000000" bank="0.000000" heading="0.000000" imageComplexity="VERY_SPARSE" altitudeIsAgl="TRUE" snapToGround="TRUE" snapToNormal="FALSE">
+		<LibraryObject name="{332F3033-B7B6-7FDD-1CAB-6E972A9235B8}" scale="1.000000"/>
+	</SceneryObject>
+	<!-- white cone, S edge, 798 m from the west fence -->
+	<SceneryObject lat="48.99851400" lon="-112.77381298" alt="0.00000000000000" pitch="0.000000" bank="0.000000" heading="0.000000" imageComplexity="VERY_SPARSE" altitudeIsAgl="TRUE" snapToGround="TRUE" snapToNormal="FALSE">
+		<LibraryObject name="{332F3033-B7B6-7FDD-1CAB-6E972A9235B8}" scale="1.000000"/>
+	</SceneryObject>
+	<!-- white cone, S edge, 859 m from the west fence -->
+	<SceneryObject lat="48.99851400" lon="-112.77297771" alt="0.00000000000000" pitch="0.000000" bank="0.000000" heading="0.000000" imageComplexity="VERY_SPARSE" altitudeIsAgl="TRUE" snapToGround="TRUE" snapToNormal="FALSE">
+		<LibraryObject name="{332F3033-B7B6-7FDD-1CAB-6E972A9235B8}" scale="1.000000"/>
+	</SceneryObject>
+	<!-- white cone, S edge, 920 m from the west fence -->
+	<SceneryObject lat="48.99851400" lon="-112.77214244" alt="0.00000000000000" pitch="0.000000" bank="0.000000" heading="0.000000" imageComplexity="VERY_SPARSE" altitudeIsAgl="TRUE" snapToGround="TRUE" snapToNormal="FALSE">
+		<LibraryObject name="{332F3033-B7B6-7FDD-1CAB-6E972A9235B8}" scale="1.000000"/>
+	</SceneryObject>
+	<!-- white cone, S edge, 981 m from the west fence -->
+	<SceneryObject lat="48.99851400" lon="-112.77130716" alt="0.00000000000000" pitch="0.000000" bank="0.000000" heading="0.000000" imageComplexity="VERY_SPARSE" altitudeIsAgl="TRUE" snapToGround="TRUE" snapToNormal="FALSE">
+		<LibraryObject name="{332F3033-B7B6-7FDD-1CAB-6E972A9235B8}" scale="1.000000"/>
+	</SceneryObject>
+	<!-- white cone, S edge, 1042 m from the west fence -->
+	<SceneryObject lat="48.99851400" lon="-112.77047189" alt="0.00000000000000" pitch="0.000000" bank="0.000000" heading="0.000000" imageComplexity="VERY_SPARSE" altitudeIsAgl="TRUE" snapToGround="TRUE" snapToNormal="FALSE">
+		<LibraryObject name="{332F3033-B7B6-7FDD-1CAB-6E972A9235B8}" scale="1.000000"/>
+	</SceneryObject>
+	<!-- white cone, S edge, 1103 m from the west fence -->
+	<SceneryObject lat="48.99851400" lon="-112.76963662" alt="0.00000000000000" pitch="0.000000" bank="0.000000" heading="0.000000" imageComplexity="VERY_SPARSE" altitudeIsAgl="TRUE" snapToGround="TRUE" snapToNormal="FALSE">
+		<LibraryObject name="{332F3033-B7B6-7FDD-1CAB-6E972A9235B8}" scale="1.000000"/>
+	</SceneryObject>
+	<!-- white cone, S edge, 1164 m from the west fence -->
+	<SceneryObject lat="48.99851400" lon="-112.76880134" alt="0.00000000000000" pitch="0.000000" bank="0.000000" heading="0.000000" imageComplexity="VERY_SPARSE" altitudeIsAgl="TRUE" snapToGround="TRUE" snapToNormal="FALSE">
+		<LibraryObject name="{332F3033-B7B6-7FDD-1CAB-6E972A9235B8}" scale="1.000000"/>
+	</SceneryObject>
+	<!-- white cone, S edge, 1225 m from the west fence -->
+	<SceneryObject lat="48.99851400" lon="-112.76796607" alt="0.00000000000000" pitch="0.000000" bank="0.000000" heading="0.000000" imageComplexity="VERY_SPARSE" altitudeIsAgl="TRUE" snapToGround="TRUE" snapToNormal="FALSE">
+		<LibraryObject name="{332F3033-B7B6-7FDD-1CAB-6E972A9235B8}" scale="1.000000"/>
+	</SceneryObject>
+	<!-- white cone, S edge, 1286 m from the west fence -->
+	<SceneryObject lat="48.99851400" lon="-112.76713080" alt="0.00000000000000" pitch="0.000000" bank="0.000000" heading="0.000000" imageComplexity="VERY_SPARSE" altitudeIsAgl="TRUE" snapToGround="TRUE" snapToNormal="FALSE">
+		<LibraryObject name="{332F3033-B7B6-7FDD-1CAB-6E972A9235B8}" scale="1.000000"/>
+	</SceneryObject>
+	<!-- white cone, N edge, 202 m from the west fence -->
+	<SceneryObject lat="48.99884700" lon="-112.78197401" alt="0.00000000000000" pitch="0.000000" bank="0.000000" heading="0.000000" imageComplexity="VERY_SPARSE" altitudeIsAgl="TRUE" snapToGround="TRUE" snapToNormal="FALSE">
+		<LibraryObject name="{332F3033-B7B6-7FDD-1CAB-6E972A9235B8}" scale="1.000000"/>
+	</SceneryObject>
+	<!-- white cone, N edge, 263 m from the west fence -->
+	<SceneryObject lat="48.99884700" lon="-112.78113874" alt="0.00000000000000" pitch="0.000000" bank="0.000000" heading="0.000000" imageComplexity="VERY_SPARSE" altitudeIsAgl="TRUE" snapToGround="TRUE" snapToNormal="FALSE">
+		<LibraryObject name="{332F3033-B7B6-7FDD-1CAB-6E972A9235B8}" scale="1.000000"/>
+	</SceneryObject>
+	<!-- white cone, N edge, 324 m from the west fence -->
+	<SceneryObject lat="48.99884700" lon="-112.78030347" alt="0.00000000000000" pitch="0.000000" bank="0.000000" heading="0.000000" imageComplexity="VERY_SPARSE" altitudeIsAgl="TRUE" snapToGround="TRUE" snapToNormal="FALSE">
+		<LibraryObject name="{332F3033-B7B6-7FDD-1CAB-6E972A9235B8}" scale="1.000000"/>
+	</SceneryObject>
+	<!-- white cone, N edge, 385 m from the west fence -->
+	<SceneryObject lat="48.99884700" lon="-112.77946819" alt="0.00000000000000" pitch="0.000000" bank="0.000000" heading="0.000000" imageComplexity="VERY_SPARSE" altitudeIsAgl="TRUE" snapToGround="TRUE" snapToNormal="FALSE">
+		<LibraryObject name="{332F3033-B7B6-7FDD-1CAB-6E972A9235B8}" scale="1.000000"/>
+	</SceneryObject>
+	<!-- white cone, N edge, 446 m from the west fence -->
+	<SceneryObject lat="48.99884700" lon="-112.77863292" alt="0.00000000000000" pitch="0.000000" bank="0.000000" heading="0.000000" imageComplexity="VERY_SPARSE" altitudeIsAgl="TRUE" snapToGround="TRUE" snapToNormal="FALSE">
+		<LibraryObject name="{332F3033-B7B6-7FDD-1CAB-6E972A9235B8}" scale="1.000000"/>
+	</SceneryObject>
+	<!-- white cone, N edge, 507 m from the west fence -->
+	<SceneryObject lat="48.99884700" lon="-112.77779765" alt="0.00000000000000" pitch="0.000000" bank="0.000000" heading="0.000000" imageComplexity="VERY_SPARSE" altitudeIsAgl="TRUE" snapToGround="TRUE" snapToNormal="FALSE">
+		<LibraryObject name="{332F3033-B7B6-7FDD-1CAB-6E972A9235B8}" scale="1.000000"/>
+	</SceneryObject>
+	<!-- white cone, N edge, 568 m from the west fence -->
+	<SceneryObject lat="48.99884700" lon="-112.77696237" alt="0.00000000000000" pitch="0.000000" bank="0.000000" heading="0.000000" imageComplexity="VERY_SPARSE" altitudeIsAgl="TRUE" snapToGround="TRUE" snapToNormal="FALSE">
+		<LibraryObject name="{332F3033-B7B6-7FDD-1CAB-6E972A9235B8}" scale="1.000000"/>
+	</SceneryObject>
+	<!-- white cone, N edge, 629 m from the west fence -->
+	<SceneryObject lat="48.99884700" lon="-112.77612710" alt="0.00000000000000" pitch="0.000000" bank="0.000000" heading="0.000000" imageComplexity="VERY_SPARSE" altitudeIsAgl="TRUE" snapToGround="TRUE" snapToNormal="FALSE">
+		<LibraryObject name="{332F3033-B7B6-7FDD-1CAB-6E972A9235B8}" scale="1.000000"/>
+	</SceneryObject>
+	<!-- white cone, N edge, 690 m from the west fence -->
+	<SceneryObject lat="48.99884700" lon="-112.77529183" alt="0.00000000000000" pitch="0.000000" bank="0.000000" heading="0.000000" imageComplexity="VERY_SPARSE" altitudeIsAgl="TRUE" snapToGround="TRUE" snapToNormal="FALSE">
+		<LibraryObject name="{332F3033-B7B6-7FDD-1CAB-6E972A9235B8}" scale="1.000000"/>
+	</SceneryObject>
+	<!-- white cone, N edge, 751 m from the west fence -->
+	<SceneryObject lat="48.99884700" lon="-112.77445655" alt="0.00000000000000" pitch="0.000000" bank="0.000000" heading="0.000000" imageComplexity="VERY_SPARSE" altitudeIsAgl="TRUE" snapToGround="TRUE" snapToNormal="FALSE">
+		<LibraryObject name="{332F3033-B7B6-7FDD-1CAB-6E972A9235B8}" scale="1.000000"/>
+	</SceneryObject>
+	<!-- white cone, N edge, 812 m from the west fence -->
+	<SceneryObject lat="48.99884700" lon="-112.77362128" alt="0.00000000000000" pitch="0.000000" bank="0.000000" heading="0.000000" imageComplexity="VERY_SPARSE" altitudeIsAgl="TRUE" snapToGround="TRUE" snapToNormal="FALSE">
+		<LibraryObject name="{332F3033-B7B6-7FDD-1CAB-6E972A9235B8}" scale="1.000000"/>
+	</SceneryObject>
+	<!-- white cone, N edge, 873 m from the west fence -->
+	<SceneryObject lat="48.99884700" lon="-112.77278601" alt="0.00000000000000" pitch="0.000000" bank="0.000000" heading="0.000000" imageComplexity="VERY_SPARSE" altitudeIsAgl="TRUE" snapToGround="TRUE" snapToNormal="FALSE">
+		<LibraryObject name="{332F3033-B7B6-7FDD-1CAB-6E972A9235B8}" scale="1.000000"/>
+	</SceneryObject>
+	<!-- white cone, N edge, 934 m from the west fence -->
+	<SceneryObject lat="48.99884700" lon="-112.77195074" alt="0.00000000000000" pitch="0.000000" bank="0.000000" heading="0.000000" imageComplexity="VERY_SPARSE" altitudeIsAgl="TRUE" snapToGround="TRUE" snapToNormal="FALSE">
+		<LibraryObject name="{332F3033-B7B6-7FDD-1CAB-6E972A9235B8}" scale="1.000000"/>
+	</SceneryObject>
+	<!-- white cone, N edge, 995 m from the west fence -->
+	<SceneryObject lat="48.99884700" lon="-112.77111546" alt="0.00000000000000" pitch="0.000000" bank="0.000000" heading="0.000000" imageComplexity="VERY_SPARSE" altitudeIsAgl="TRUE" snapToGround="TRUE" snapToNormal="FALSE">
+		<LibraryObject name="{332F3033-B7B6-7FDD-1CAB-6E972A9235B8}" scale="1.000000"/>
+	</SceneryObject>
+	<!-- white cone, N edge, 1056 m from the west fence -->
+	<SceneryObject lat="48.99884700" lon="-112.77028019" alt="0.00000000000000" pitch="0.000000" bank="0.000000" heading="0.000000" imageComplexity="VERY_SPARSE" altitudeIsAgl="TRUE" snapToGround="TRUE" snapToNormal="FALSE">
+		<LibraryObject name="{332F3033-B7B6-7FDD-1CAB-6E972A9235B8}" scale="1.000000"/>
+	</SceneryObject>
+	<!-- white cone, N edge, 1117 m from the west fence -->
+	<SceneryObject lat="48.99884700" lon="-112.76944492" alt="0.00000000000000" pitch="0.000000" bank="0.000000" heading="0.000000" imageComplexity="VERY_SPARSE" altitudeIsAgl="TRUE" snapToGround="TRUE" snapToNormal="FALSE">
+		<LibraryObject name="{332F3033-B7B6-7FDD-1CAB-6E972A9235B8}" scale="1.000000"/>
+	</SceneryObject>
+	<!-- white cone, N edge, 1178 m from the west fence -->
+	<SceneryObject lat="48.99884700" lon="-112.76860964" alt="0.00000000000000" pitch="0.000000" bank="0.000000" heading="0.000000" imageComplexity="VERY_SPARSE" altitudeIsAgl="TRUE" snapToGround="TRUE" snapToNormal="FALSE">
+		<LibraryObject name="{332F3033-B7B6-7FDD-1CAB-6E972A9235B8}" scale="1.000000"/>
+	</SceneryObject>
+	<!-- white cone, N edge, 1239 m from the west fence -->
+	<SceneryObject lat="48.99884700" lon="-112.76777437" alt="0.00000000000000" pitch="0.000000" bank="0.000000" heading="0.000000" imageComplexity="VERY_SPARSE" altitudeIsAgl="TRUE" snapToGround="TRUE" snapToNormal="FALSE">
+		<LibraryObject name="{332F3033-B7B6-7FDD-1CAB-6E972A9235B8}" scale="1.000000"/>
+	</SceneryObject>
+	<!-- white cone, N edge, 1300 m from the west fence -->
+	<SceneryObject lat="48.99884700" lon="-112.76693910" alt="0.00000000000000" pitch="0.000000" bank="0.000000" heading="0.000000" imageComplexity="VERY_SPARSE" altitudeIsAgl="TRUE" snapToGround="TRUE" snapToNormal="FALSE">
+		<LibraryObject name="{332F3033-B7B6-7FDD-1CAB-6E972A9235B8}" scale="1.000000"/>
+	</SceneryObject>
+	<!-- white cone, S edge, 202 m from the west fence -->
+	<SceneryObject lat="48.99851400" lon="-112.78197401" alt="0.00000000000000" pitch="0.000000" bank="0.000000" heading="0.000000" imageComplexity="VERY_SPARSE" altitudeIsAgl="TRUE" snapToGround="TRUE" snapToNormal="FALSE">
+		<LibraryObject name="{332F3033-B7B6-7FDD-1CAB-6E972A9235B8}" scale="1.000000"/>
+	</SceneryObject>
+	<!-- white cone, S edge, 266 m from the west fence -->
+	<SceneryObject lat="48.99851400" lon="-112.78109766" alt="0.00000000000000" pitch="0.000000" bank="0.000000" heading="0.000000" imageComplexity="VERY_SPARSE" altitudeIsAgl="TRUE" snapToGround="TRUE" snapToNormal="FALSE">
+		<LibraryObject name="{332F3033-B7B6-7FDD-1CAB-6E972A9235B8}" scale="1.000000"/>
+	</SceneryObject>
+	<VectorPlacement displayName="7-wire farm fence: west (road) side and parking" profile="{C8E3B7FF-1D86-4CAA-0178-8AD8AF582EDB}" snapToVertices="FALSE" spacing="5.0" heading="0.000000" scale="1.000000" scaleDelta="0.000000" rotation="Follow edge" avoidDiscontinuity="TRUE" castShadow="TRUE">
+		<Model modelGUID="{C8E3B7FF-1D86-4CAA-0178-8AD8AF582EDB}" probability="1"/>
+		<Vertex lat="48.99884700" lon="-112.78474000"/>
+		<Vertex lat="48.99781300" lon="-112.78474000"/>
+		<Vertex lat="48.99781300" lon="-112.78282000"/>
+		<Vertex lat="48.99851400" lon="-112.78282000"/>
+	</VectorPlacement>
+	<VectorPlacement displayName="wooden fence posts at the fence corners" profile="{2F9D8F36-A130-499C-A035-C81641B91980}" snapToVertices="TRUE" spacing="5.0" heading="0.000000" scale="1.000000" scaleDelta="0.000000" rotation="Follow edge" avoidDiscontinuity="TRUE" castShadow="TRUE">
+		<Model modelGUID="{2F9D8F36-A130-499C-A035-C81641B91980}" probability="0.34"/>
+		<Model modelGUID="{D3AB249A-A581-431C-A3DC-7C4109C220C6}" probability="0.33"/>
+		<Model modelGUID="{F3E19207-416C-476A-924D-38257A524E11}" probability="0.33"/>
+		<Vertex lat="48.99884700" lon="-112.78474000"/>
+		<Vertex lat="48.99781300" lon="-112.78474000"/>
+		<Vertex lat="48.99781300" lon="-112.78282000"/>
+		<Vertex lat="48.99851400" lon="-112.78282000"/>
+	</VectorPlacement>
+	<Polygon version="0.5.0" displayName="Runway Grass: mowed strip" altitude="1321.6">
+		<Attribute name="UniqueGUID" guid="{359C73E8-06BE-4FB2-ABCB-EC942F7761D0}" type="GUID" value="{83848979-20DF-4693-AA43-0E256565A1AC}"/>
+		<Attribute name="MaterialGUID" guid="{cd28efd0-d3f0-43b6-9f88-4e4707344a04}" type="GUID" value="{8862C0D8-5ADB-4BA8-952F-7D2E199CE9AC}"/>
+		<Attribute name="MaterialTiling" guid="{58d2d4ff-1657-4ab0-bdb2-09b2d8a77688}" type="FLOAT32" value="10"/>
+		<Attribute name="MaterialFalloff" guid="{c17ebbde-627d-4585-94f0-7c329cd69c4e}" type="FLOAT32" value="1"/>
 		<Vertex lat="48.99884700" lon="-112.78474000"/>
 		<Vertex lat="48.99884700" lon="-112.76620000"/>
 		<Vertex lat="48.99851400" lon="-112.76620000"/>
+		<Vertex lat="48.99851400" lon="-112.78474000"/>
+	</Polygon>
+	<Polygon version="0.5.0" displayName="Taxi Grass: west parking" altitude="1321.6">
+		<Attribute name="UniqueGUID" guid="{359C73E8-06BE-4FB2-ABCB-EC942F7761D0}" type="GUID" value="{90EE05B3-469C-41E3-A87F-5E1611A72D47}"/>
+		<Attribute name="MaterialGUID" guid="{cd28efd0-d3f0-43b6-9f88-4e4707344a04}" type="GUID" value="{FDDD19DB-8975-497C-896D-34467B444AF6}"/>
+		<Attribute name="MaterialTiling" guid="{58d2d4ff-1657-4ab0-bdb2-09b2d8a77688}" type="FLOAT32" value="10"/>
+		<Attribute name="MaterialFalloff" guid="{c17ebbde-627d-4585-94f0-7c329cd69c4e}" type="FLOAT32" value="1"/>
+		<Vertex lat="48.99851400" lon="-112.78474000"/>
 		<Vertex lat="48.99851400" lon="-112.78282000"/>
 		<Vertex lat="48.99781300" lon="-112.78282000"/>
 		<Vertex lat="48.99781300" lon="-112.78474000"/>
 	</Polygon>
-	<Airport displayName="Airport (H28)" groupIndex="2" groupID="1" groupGenerated="FALSE" region="North America" country="Canada" state="Alberta" city="Del Bonita" name="Whetstone Intl (CEQ4)" ident="H28" lat="48.99868000000000" lon="-112.77713000000000" alt="1321.60000000000000" magvar="347.090000" trafficScalar="1.000000" airportTestRadius="2000.00000000000000" applyFlatten="FALSE" isOnTIN="FALSE" tinColorCorrection="TRUE">
+	<Airport displayName="Airport (H28)" groupIndex="1" groupID="1" groupGenerated="FALSE" region="North America" country="Canada" state="Alberta" city="Del Bonita" name="Whetstone Intl (CEQ4)" ident="H28" lat="48.99868000000000" lon="-112.77713000000000" alt="1321.59999999999991" magvar="-12.910000" trafficScalar="1.000000" airportTestRadius="2000.00000000000000" applyFlatten="FALSE" isOnTIN="FALSE" tinColorCorrection="TRUE">
 		<AirportArchetype/>
-		<Group displayName="Taxi Pts" parentGroupID="1" groupID="3" groupGenerated="FALSE"/>
-		<Group displayName="Taxi Paths" parentGroupID="1" groupID="4" groupGenerated="FALSE"/>
-		<Group displayName="Parking" parentGroupID="1" groupID="5" groupGenerated="FALSE"/>
-		<TaxiwayPoint displayName="Runway entry" parentGroupID="3" index="0" type="NORMAL" orientation="FORWARD" lat="48.99868000000000" lon="-112.78169300047752"/>
-		<TaxiwayPoint displayName="North apron" parentGroupID="3" index="1" type="NORMAL" orientation="FORWARD" lat="48.99896000000000" lon="-112.78169300047752"/>
-		<TaxiwayPoint displayName="South apron" parentGroupID="3" index="2" type="NORMAL" orientation="FORWARD" lat="48.99840000000000" lon="-112.78169300047752"/>
-		<TaxiwayParking parentGroupID="5" index="3" type="RAMP_GA_SMALL" lat="48.99908000000000" lon="-112.78209300047752" heading="180.000000" radius="8.000000" name="PARKING" number="1" suffix="NONE" numberMarking="FALSE" has3DMesh="TRUE" drawDirt="FALSE" passengerAccessType="RAMP" numberBiasX="0.000000" numberBiasZ="0.000000" numberHeading="0.000000"/>
-		<TaxiwayParking parentGroupID="5" index="4" type="RAMP_GA_SMALL" lat="48.99908000000000" lon="-112.78129300047752" heading="180.000000" radius="8.000000" name="PARKING" number="2" suffix="NONE" numberMarking="FALSE" has3DMesh="TRUE" drawDirt="FALSE" passengerAccessType="RAMP" numberBiasX="0.000000" numberBiasZ="0.000000" numberHeading="0.000000"/>
-		<TaxiwayParking parentGroupID="5" index="5" type="RAMP_GA_SMALL" lat="48.99828000000000" lon="-112.78209300047752" heading="0.000000" radius="8.000000" name="PARKING" number="3" suffix="NONE" numberMarking="FALSE" has3DMesh="TRUE" drawDirt="FALSE" passengerAccessType="RAMP" numberBiasX="0.000000" numberBiasZ="0.000000" numberHeading="0.000000"/>
-		<TaxiwayParking parentGroupID="5" index="6" type="RAMP_GA_SMALL" lat="48.99828000000000" lon="-112.78129300047752" heading="0.000000" radius="8.000000" name="PARKING" number="4" suffix="NONE" numberMarking="FALSE" has3DMesh="TRUE" drawDirt="FALSE" passengerAccessType="RAMP" numberBiasX="0.000000" numberBiasZ="0.000000" numberHeading="0.000000"/>
+		<Group displayName="Taxi Pts" parentGroupID="1" groupIndex="2" groupID="2" groupGenerated="FALSE"/>
+		<Group displayName="Taxi Paths" parentGroupID="1" groupIndex="1" groupID="3" groupGenerated="FALSE"/>
+		<Group displayName="Parking" parentGroupID="1" groupID="4" groupGenerated="FALSE"/>
+		<TaxiwayPoint displayName="Runway entry" parentGroupID="2" index="0" type="NORMAL" orientation="FORWARD" lat="48.99868000000000" lon="-112.78169300047752"/>
+		<TaxiwayPoint displayName="North apron" parentGroupID="2" groupIndex="1" index="1" type="NORMAL" orientation="FORWARD" lat="48.99896000000000" lon="-112.78169300047752"/>
+		<TaxiwayPoint displayName="South apron" parentGroupID="2" groupIndex="2" index="2" type="NORMAL" orientation="FORWARD" lat="48.99840000000000" lon="-112.78169300047752"/>
+		<TaxiwayParking parentGroupID="4" index="3" type="RAMP_GA_SMALL" lat="48.99908000000000" lon="-112.78209300047752" heading="180.000000" radius="8.000000" name="PARKING" number="1" suffix="NONE" numberMarking="FALSE" has3DMesh="TRUE" drawDirt="FALSE" passengerAccessType="RAMP" numberBiasX="0.000000" numberBiasZ="0.000000" numberHeading="0.000000"/>
+		<TaxiwayParking parentGroupID="4" groupIndex="1" index="4" type="RAMP_GA_SMALL" lat="48.99908000000000" lon="-112.78129300047752" heading="180.000000" radius="8.000000" name="PARKING" number="2" suffix="NONE" numberMarking="FALSE" has3DMesh="TRUE" drawDirt="FALSE" passengerAccessType="RAMP" numberBiasX="0.000000" numberBiasZ="0.000000" numberHeading="0.000000"/>
+		<TaxiwayParking parentGroupID="4" groupIndex="2" index="5" type="RAMP_GA_SMALL" lat="48.99828000000000" lon="-112.78209300047752" heading="0.000000" radius="8.000000" name="PARKING" number="3" suffix="NONE" numberMarking="FALSE" has3DMesh="TRUE" drawDirt="FALSE" passengerAccessType="RAMP" numberBiasX="0.000000" numberBiasZ="0.000000" numberHeading="0.000000"/>
+		<TaxiwayParking parentGroupID="4" groupIndex="3" index="6" type="RAMP_GA_SMALL" lat="48.99828000000000" lon="-112.78129300047752" heading="0.000000" radius="8.000000" name="PARKING" number="4" suffix="NONE" numberMarking="FALSE" has3DMesh="TRUE" drawDirt="FALSE" passengerAccessType="RAMP" numberBiasX="0.000000" numberBiasZ="0.000000" numberHeading="0.000000"/>
 		<TaxiName index="0" name=""/>
-		<TaxiwayPath parentGroupID="4" type="TAXI" surface="{322DE917-E25D-4AD8-BFBB-4D5F4D259413}" centerLine="FALSE" start="0" end="1" width="8.000000" weightLimit="0" name="0" drawSurface="FALSE" drawDetail="FALSE" groundMerging="TRUE" excludeVegetationAround="TRUE" excludeVegetationInside="TRUE"/>
-		<TaxiwayPath parentGroupID="4" type="TAXI" surface="{322DE917-E25D-4AD8-BFBB-4D5F4D259413}" centerLine="FALSE" start="0" end="2" width="8.000000" weightLimit="0" name="0" drawSurface="FALSE" drawDetail="FALSE" groundMerging="TRUE" excludeVegetationAround="TRUE" excludeVegetationInside="TRUE"/>
-		<TaxiwayPath parentGroupID="4" type="PARKING" surface="{322DE917-E25D-4AD8-BFBB-4D5F4D259413}" centerLine="FALSE" start="1" end="3" width="8.000000" weightLimit="0" name="0" drawSurface="FALSE" drawDetail="FALSE" groundMerging="TRUE" excludeVegetationAround="TRUE" excludeVegetationInside="TRUE"/>
-		<TaxiwayPath parentGroupID="4" type="PARKING" surface="{322DE917-E25D-4AD8-BFBB-4D5F4D259413}" centerLine="FALSE" start="1" end="4" width="8.000000" weightLimit="0" name="0" drawSurface="FALSE" drawDetail="FALSE" groundMerging="TRUE" excludeVegetationAround="TRUE" excludeVegetationInside="TRUE"/>
-		<TaxiwayPath parentGroupID="4" type="PARKING" surface="{322DE917-E25D-4AD8-BFBB-4D5F4D259413}" centerLine="FALSE" start="2" end="5" width="8.000000" weightLimit="0" name="0" drawSurface="FALSE" drawDetail="FALSE" groundMerging="TRUE" excludeVegetationAround="TRUE" excludeVegetationInside="TRUE"/>
-		<TaxiwayPath parentGroupID="4" type="PARKING" surface="{322DE917-E25D-4AD8-BFBB-4D5F4D259413}" centerLine="FALSE" start="2" end="6" width="8.000000" weightLimit="0" name="0" drawSurface="FALSE" drawDetail="FALSE" groundMerging="TRUE" excludeVegetationAround="TRUE" excludeVegetationInside="TRUE"/>
-		<Runway parentGroupID="1" lat="48.99868000000000" lon="-112.77548000000000" alt="1321.60000000000000" heading="89.97000000000000" length="1353.00000000000000" width="20.00000000000000" patternAltitude="304.79998779296875" surface="{322DE917-E25D-4AD8-BFBB-4D5F4D259413}" transparent="FALSE" number="07" designator="NONE" primaryLanding="TRUE" primaryTakeoff="TRUE" primaryPattern="LEFT" secondaryLanding="TRUE" secondaryTakeoff="TRUE" secondaryPattern="LEFT" primaryMarkingBias="0.00000000000000" secondaryMarkingBias="0.00000000000000" groundMerging="TRUE" excludeVegetationAround="TRUE">
+		<TaxiwayPath parentGroupID="3" type="PARKING" surface="{322DE917-E25D-4AD8-BFBB-4D5F4D259413}" centerLine="FALSE" start="1" end="3" width="8.000000" weightLimit="0" name="0" drawSurface="FALSE" drawDetail="FALSE" groundMerging="TRUE" excludeVegetationAround="TRUE" excludeVegetationInside="TRUE"/>
+		<TaxiwayPath parentGroupID="3" groupIndex="1" type="PARKING" surface="{322DE917-E25D-4AD8-BFBB-4D5F4D259413}" centerLine="FALSE" start="1" end="4" width="8.000000" weightLimit="0" name="0" drawSurface="FALSE" drawDetail="FALSE" groundMerging="TRUE" excludeVegetationAround="TRUE" excludeVegetationInside="TRUE"/>
+		<TaxiwayPath parentGroupID="3" groupIndex="2" type="PARKING" surface="{322DE917-E25D-4AD8-BFBB-4D5F4D259413}" centerLine="FALSE" start="2" end="5" width="8.000000" weightLimit="0" name="0" drawSurface="FALSE" drawDetail="FALSE" groundMerging="TRUE" excludeVegetationAround="TRUE" excludeVegetationInside="TRUE"/>
+		<TaxiwayPath parentGroupID="3" groupIndex="3" type="PARKING" surface="{322DE917-E25D-4AD8-BFBB-4D5F4D259413}" centerLine="FALSE" start="2" end="6" width="8.000000" weightLimit="0" name="0" drawSurface="FALSE" drawDetail="FALSE" groundMerging="TRUE" excludeVegetationAround="TRUE" excludeVegetationInside="TRUE"/>
+		<TaxiwayPath parentGroupID="3" groupIndex="4" type="TAXI" surface="{322DE917-E25D-4AD8-BFBB-4D5F4D259413}" centerLine="FALSE" start="0" end="1" width="8.000000" weightLimit="0" name="0" drawSurface="FALSE" drawDetail="FALSE" groundMerging="TRUE" excludeVegetationAround="TRUE" excludeVegetationInside="TRUE"/>
+		<TaxiwayPath parentGroupID="3" groupIndex="5" type="TAXI" surface="{322DE917-E25D-4AD8-BFBB-4D5F4D259413}" centerLine="FALSE" start="0" end="2" width="8.000000" weightLimit="0" name="0" drawSurface="FALSE" drawDetail="FALSE" groundMerging="TRUE" excludeVegetationAround="TRUE" excludeVegetationInside="TRUE"/>
+		<Runway parentGroupID="1" groupIndex="3" lat="48.99868000000000" lon="-112.77548000000000" alt="1321.59999999999991" heading="89.97000122070312" length="1353.00000000000000" width="20.00000000000000" patternAltitude="304.79998779296875" surface="{0E12195B-4A50-42D1-B8C8-177B270F3AAB}" transparent="FALSE" number="07" designator="NONE" primaryLanding="TRUE" primaryTakeoff="TRUE" primaryPattern="LEFT" secondaryLanding="TRUE" secondaryTakeoff="TRUE" secondaryPattern="LEFT" primaryMarkingBias="0.00000000000000" secondaryMarkingBias="0.00000000000000" groundMerging="TRUE" excludeVegetationAround="TRUE" excludeBuildingAround="TRUE">
 			<Markings edges="FALSE" threshold="FALSE" alternateThreshold="FALSE" fixedDistance="FALSE" alternateFixedDistance="FALSE" touchdown="FALSE" alternateTouchdown="FALSE" dashes="FALSE" ident="FALSE" leadingZeroIdent="FALSE" precision="FALSE" alternatePrecision="FALSE" edgePavement="FALSE" singleEnd="FALSE" primaryClosed="FALSE" secondaryClosed="FALSE" primaryStol="FALSE" secondaryStol="FALSE" noThresholdEndArrows="FALSE"/>
 			<Lights center="NONE" edge="NONE"/>
-				<Vasi end="PRIMARY" side="LEFT" type="PAPI2" biasX="15.000000" biasZ="300.000000" spacing="9.000000" pitch="3.500000"/>
-			<RunwayStart end="PRIMARY" lat="48.99867600000000" lon="-112.78433300000000" alt="1321.60000000000000" heading="89.97000000000000"/>
-			<RunwayStart end="SECONDARY" lat="48.99868400000000" lon="-112.76662700000000" alt="1321.60000000000000" heading="269.97000000000000"/>
+			<Vasi end="PRIMARY" side="LEFT" type="PAPI2" biasX="15.000000" biasZ="300.000000" spacing="9.000000" pitch="3.500000"/>
+			<RunwayStart end="PRIMARY" lat="48.99867600000000" lon="-112.78433300000000" alt="1321.59999999999991" heading="89.97000122070312"/>
+			<RunwayStart end="SECONDARY" lat="48.99868400000000" lon="-112.76662700000000" alt="1321.59999999999991" heading="269.97000122070312"/>
+			<Material guid="{0E12195B-4A50-42D1-B8C8-177B270F3AAB}" type="Base tiled" tilingU="1.000000" tilingV="1.000000" width="1.000000" falloff="0.000000" opacity="255"/>
+			<Material guid="{322DE917-E25D-4AD8-BFBB-4D5F4D259413}" type="Base tiled" tilingU="1.000000" tilingV="1.000000" width="1.000000" falloff="0.000000" opacity="255"/>
+			<Material guid="{00000000-0000-0000-0000-000000000000}" type="Base tiled" tilingU="1.000000" tilingV="1.000000" width="1.000000" falloff="0.000000" opacity="255"/>
 		</Runway>
 		<Aprons/>
 		<PaintedElements/>
 		<ApronEdgeLights/>
 		<Com frequency="122.800000" type="CTAF" name="WHETSTONE"/>
-		<DeleteAirport deleteAllApproaches="TRUE" deleteAllApronLights="TRUE" deleteAllAprons="TRUE" deleteAllFrequencies="TRUE" deleteAllHelipads="TRUE" deleteAllRunways="TRUE" deleteAllStarts="TRUE" deleteAllTaxiways="TRUE" deleteAllVectorPlacement="TRUE" deleteAllBoundaryFences="TRUE" deleteAllJetways="TRUE" deleteAllControlTowers="TRUE" deleteAllDepartures="TRUE" deleteAllArrivals="TRUE" deleteAllPaintedElements="TRUE" deleteAllLightSupports="TRUE" deleteAllTaxiwaySigns="TRUE" deleteAllILSs="TRUE" deleteAllTerminalWaypoints="TRUE" deleteAllTerminalNDBs="TRUE"/>
+			<!-- Fictional RNAV (GPS) RWY 25. Codes:
+			     IF (Initial Fix): where the leg sequence starts.   IAF (Initial Approach Fix): where the approach may be joined.
+			     TF (Track to Fix): fly a track to the named fix.   FAF (Final Approach Fix): the final descent starts here.
+			     MAP (Missed Approach Point): go around here if the runway is not in sight.
+			     CA (Course to Altitude): fly a course until a given altitude.   DF (Direct to Fix): fly straight to a fix.
+			     HM (Hold, Manual termination): hold until the pilot ends it.   MDA (Minimum Descent Altitude).
+			     LNAV (Lateral Navigation): GPS course guidance only, no glidepath.
+			     IF WH25I 10 NM and FAF WH25F 5 NM east on the centreline, MDA 4800 (464 ft AGL), MAP at the threshold,
+			     missed: climb on 257 then direct to the IF and hold. Courses are magnetic (magvar 12.9E). -->
+			<Waypoint lat="48.998684" lon="-112.512650" waypointType="UNNAMED" magvar="-12.910000" waypointIdent="WH25I" waypointRegion="K2"/>
+			<Waypoint lat="48.998684" lon="-112.639430" waypointType="UNNAMED" magvar="-12.910000" waypointIdent="WH25F" waypointRegion="K2"/>
+			<Approach type="RNAV" runway="25" designator="NONE" gpsOverlay="FALSE" lnav="TRUE" fixType="TERMINAL_WAYPOINT" fixRegion="K2" fixIdent="WH25I" altitude="5900.0F" heading="257.1" missedAltitude="5800.0F">
+				<ApproachLegs>
+					<Leg type="IF" fixType="TERMINAL_WAYPOINT" fixRegion="K2" fixIdent="WH25I" altitudeDescriptor="+" altitude1="6300.0F" isIAF="TRUE" isIF="TRUE"/>
+					<Leg type="TF" fixType="TERMINAL_WAYPOINT" fixRegion="K2" fixIdent="WH25F" magneticCourse="257.1" distance="5.0N" altitudeDescriptor="+" altitude1="5900.0F" isFAF="TRUE"/>
+					<Leg type="TF" fixType="RUNWAY" fixRegion="K2" fixIdent="RW25" flyOver="FALSE" magneticCourse="257.1" distance="5.0N" altitudeDescriptor="A" altitude1="4800.0F" isMAP="TRUE"/>
+				</ApproachLegs>
+				<MissedApproachLegs>
+					<Leg type="CA" turnDirection="L" magneticCourse="257.1" altitudeDescriptor="+" altitude1="5800.0F"/>
+					<Leg type="DF" fixType="TERMINAL_WAYPOINT" fixRegion="K2" fixIdent="WH25I" flyOver="FALSE" altitudeDescriptor="+" altitude1="6300.0F"/>
+					<Leg type="HM" fixType="TERMINAL_WAYPOINT" fixRegion="K2" fixIdent="WH25I" turnDirection="R" magneticCourse="77.1" time="1" altitudeDescriptor="+" altitude1="6300.0F"/>
+				</MissedApproachLegs>
+			</Approach>
+			<!-- Fictional RNAV (GPS)-A: circling only (no runway), final course 300 magnetic, offset from both runways,
+			     MAP over the field (WHFLD), circling MDA 5000 (664 ft AGL), circling not authorised north of the runway.
+			     Same codes as above; descriptor "A" = at or above the altitude. Untested whether the sim accepts an RNAV
+			     approach with no runway (CYXD's radio range approaches do this with type NDB). -->
+			<Waypoint lat="48.885287" lon="-112.591391" waypointType="UNNAMED" magvar="-12.910000" waypointIdent="WHAAI" waypointRegion="K2"/>
+			<Waypoint lat="48.941983" lon="-112.684261" waypointType="UNNAMED" magvar="-12.910000" waypointIdent="WHAAF" waypointRegion="K2"/>
+			<Waypoint lat="48.998680" lon="-112.777130" waypointType="UNNAMED" magvar="-12.910000" waypointIdent="WHFLD" waypointRegion="K2"/>
+			<Approach type="RNAV" designator="NONE" suffix="A" gpsOverlay="FALSE" lnav="TRUE" fixType="TERMINAL_WAYPOINT" fixRegion="K2" fixIdent="WHAAI" altitude="6200.0F" heading="300.0" missedAltitude="6000.0F">
+				<ApproachLegs>
+					<Leg type="IF" fixType="TERMINAL_WAYPOINT" fixRegion="K2" fixIdent="WHAAI" altitudeDescriptor="+" altitude1="6600.0F" isIAF="TRUE" isIF="TRUE"/>
+					<Leg type="TF" fixType="TERMINAL_WAYPOINT" fixRegion="K2" fixIdent="WHAAF" magneticCourse="300.0" distance="5.0N" altitudeDescriptor="+" altitude1="6200.0F" isFAF="TRUE"/>
+					<Leg type="TF" fixType="TERMINAL_WAYPOINT" fixRegion="K2" fixIdent="WHFLD" flyOver="TRUE" magneticCourse="300.0" distance="5.0N" altitudeDescriptor="A" altitude1="5000.0F" isMAP="TRUE"/>
+				</ApproachLegs>
+				<MissedApproachLegs>
+					<Leg type="CA" turnDirection="R" magneticCourse="300.0" altitudeDescriptor="+" altitude1="6000.0F"/>
+					<Leg type="DF" fixType="TERMINAL_WAYPOINT" fixRegion="K2" fixIdent="WHAAI" flyOver="FALSE" altitudeDescriptor="+" altitude1="6600.0F"/>
+					<Leg type="HM" fixType="TERMINAL_WAYPOINT" fixRegion="K2" fixIdent="WHAAI" turnDirection="R" magneticCourse="120.0" time="1" altitudeDescriptor="+" altitude1="6600.0F"/>
+				</MissedApproachLegs>
+			</Approach>
+		<DeleteAirport deleteAllApproaches="TRUE" deleteAllApronLights="TRUE" deleteAllAprons="TRUE" deleteAllFrequencies="TRUE" deleteAllHelipads="TRUE" deleteAllRunways="TRUE" deleteAllStarts="TRUE" deleteAllTaxiways="TRUE" deleteAllVectorPlacement="TRUE" deleteAllBoundaryFences="TRUE" deleteAllJetways="TRUE" deleteAllControlTowers="TRUE" deleteAllDepartures="TRUE" deleteAllArrivals="TRUE" deleteAllPaintedElements="TRUE" deleteAllLightSupports="TRUE" deleteAllTaxiwaySigns="TRUE" deleteAllILSs="TRUE" deleteAllTerminalWaypoints="TRUE" deleteAllTerminalNDBs="TRUE" deleteAllProjectedMeshes="FALSE" deleteAllGLSs="FALSE"/>
 	</Airport>
 </FSData>
+
