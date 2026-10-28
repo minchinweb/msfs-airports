@@ -39,3 +39,7 @@ Project: `airport-h28/airport-H28-del-bonita-whetstone-intl.xml` (package `cardb
 ## Cones (2026-10-27)
 
 - `airport-h28/tools/gen_cones.py` builds two glTF models into `PackageSources/modelLib/` (white cone with a black top, and an all-red cone; 0.45 m tall, 0.4 m base) plus `texture/h28_palette.png`, adds a ModelLib group to the package definition, swaps the library cone in H28.xml for the white model and places red cones 1.5 m east of the white cones at 202 m and 266 m (3 of them; the north edge has no cone at 266 m). Re-run it after any regeneration of the cones. Models compile (`modellib.bgl`); not seen in the sim yet.
+
+## Layout pass (2026-10-27, late)
+
+`airport-h28/tools/fix_h28_layout.py` (re-runnable): removed the Runway/Taxi Grass material polygons; runway now 37 m wide with the striped surface; striped-grass `Apron` over the parking area (tiling/heading guessed, stripe direction unchecked); 4 parking spots + 2 taxi points inside the parking area; cones scaled x3, in pairs at the same stations on both edges (62, 95, 127, then 202 and every 61 m to the east mark at 1152 m), red cone 1.5 m inboard of the white at 202 m and 1152 m on both edges; power pole heading 90; fence replaced by two lines of wooden posts (first post model, 6 m spacing) 13.4 m either side of the centreline along the runway length (FAA: 4 ft fences 44 ft left and right). Road-side and parking perimeter fences dropped. Build NOT run: the sim was open (exit 2); rebuild with the sim closed.
