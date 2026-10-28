@@ -43,3 +43,13 @@ Project: `airport-h28/airport-H28-del-bonita-whetstone-intl.xml` (package `cardb
 ## Layout pass (2026-10-27, late)
 
 `airport-h28/tools/fix_h28_layout.py` (re-runnable): removed the Runway/Taxi Grass material polygons; runway stays 20 m wide, with a second striped-grass Apron (37 m wide, full strip length) around it; striped-grass `Apron` over the parking area (tiling/heading guessed, stripe direction unchecked); 4 parking spots + 2 taxi points inside the parking area; cones scaled x3, in pairs at the same stations on both edges (62, 95, 127, then 202 and every 61 m to the east mark at 1152 m), red cone 1.5 m inboard of the white at 202 m and 1152 m on both edges; power pole heading 90; fence replaced by two lines of wooden posts (first post model, 6 m spacing) 13.4 m either side of the centreline along the runway length (FAA: 4 ft fences 44 ft left and right). Road-side and parking perimeter fences dropped. Build NOT run: the sim was open (exit 2); rebuild with the sim closed.
+
+## Port of entry and village (2026-10-27)
+
+`airport-h28/tools/gen_port.py` (re-runnable) builds ten flat-colour glTF models into `modelLib/h28_port_*` (palette `texture/h28_port_palette.png`) and writes their placements and a building-exclusion polygon each into H28.xml between `BEGIN/END port of entry and village`.
+- Canada (north of the border): CBSA main building with an inspection canopy over the highway lane, plus four sheds.
+- US (south): CBP main building with canopy, a booth/outbuilding, a shed, and two stables (the "village").
+- Footprints and sizes are OSM's (Overpass via the mail.ru mirror). Heights, colours and canopies are estimates; no Street View photos of the ports are in the repo yet.
+- **Position assumption to check:** OSM's highway is at lon -112.7884, about 270 m west of the sim's road. Every OSM position is shifted 246 m east (`DX`) so the highway lines up 20 m west of the strip's west fence. If the ports sit wrongly in the sim, change `DX` and re-run.
+- Night: window strips and canopy undersides use an emissive material; untested whether it glows only at night. Pole lights and the facade textures are still to do.
+- Built OK (`_RPTErrors.xml` empty); not yet seen in the sim.

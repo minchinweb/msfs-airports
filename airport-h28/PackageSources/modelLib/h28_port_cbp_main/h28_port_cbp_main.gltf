@@ -1,0 +1,177 @@
+{
+ "asset": {
+  "version": "2.0",
+  "generator": "airport-h28/tools/gen_port.py",
+  "extensions": {
+   "ASOBO_normal_map_convention": {
+    "tangent_space_convention": "DirectX"
+   }
+  }
+ },
+ "extensionsUsed": [
+  "ASOBO_normal_map_convention"
+ ],
+ "scene": 0,
+ "scenes": [
+  {
+   "nodes": [
+    0
+   ]
+  }
+ ],
+ "nodes": [
+  {
+   "mesh": 0,
+   "name": "h28_port_cbp_main"
+  }
+ ],
+ "meshes": [
+  {
+   "name": "h28_port_cbp_main",
+   "primitives": [
+    {
+     "attributes": {
+      "POSITION": 0,
+      "NORMAL": 1,
+      "TEXCOORD_0": 2
+     },
+     "indices": 3,
+     "mode": 4,
+     "material": 0
+    },
+    {
+     "attributes": {
+      "POSITION": 0,
+      "NORMAL": 1,
+      "TEXCOORD_0": 2
+     },
+     "indices": 4,
+     "mode": 4,
+     "material": 1
+    }
+   ]
+  }
+ ],
+ "materials": [
+  {
+   "name": "h28_flat",
+   "pbrMetallicRoughness": {
+    "baseColorTexture": {
+     "index": 0
+    },
+    "metallicFactor": 0.0,
+    "roughnessFactor": 0.9
+   }
+  },
+  {
+   "name": "h28_glow",
+   "pbrMetallicRoughness": {
+    "baseColorTexture": {
+     "index": 0
+    },
+    "metallicFactor": 0.0,
+    "roughnessFactor": 0.9
+   },
+   "emissiveFactor": [
+    1.0,
+    1.0,
+    1.0
+   ],
+   "emissiveTexture": {
+    "index": 0
+   }
+  }
+ ],
+ "textures": [
+  {
+   "sampler": 0,
+   "source": 0
+  }
+ ],
+ "samplers": [
+  {
+   "magFilter": 9728,
+   "minFilter": 9728
+  }
+ ],
+ "images": [
+  {
+   "uri": "h28_port_palette.png"
+  }
+ ],
+ "accessors": [
+  {
+   "bufferView": 0,
+   "componentType": 5126,
+   "count": 280,
+   "type": "VEC3",
+   "min": [
+    -27.0,
+    0.0,
+    -13.0
+   ],
+   "max": [
+    14.3,
+    6.3999999999999995,
+    13.0
+   ]
+  },
+  {
+   "bufferView": 1,
+   "componentType": 5126,
+   "count": 280,
+   "type": "VEC3"
+  },
+  {
+   "bufferView": 2,
+   "componentType": 5126,
+   "count": 280,
+   "type": "VEC2"
+  },
+  {
+   "bufferView": 3,
+   "componentType": 5123,
+   "count": 270,
+   "type": "SCALAR"
+  },
+  {
+   "bufferView": 4,
+   "componentType": 5123,
+   "count": 150,
+   "type": "SCALAR"
+  }
+ ],
+ "bufferViews": [
+  {
+   "buffer": 0,
+   "byteOffset": 0,
+   "byteLength": 3360
+  },
+  {
+   "buffer": 0,
+   "byteOffset": 3360,
+   "byteLength": 3360
+  },
+  {
+   "buffer": 0,
+   "byteOffset": 6720,
+   "byteLength": 2240
+  },
+  {
+   "buffer": 0,
+   "byteOffset": 8960,
+   "byteLength": 540
+  },
+  {
+   "buffer": 0,
+   "byteOffset": 9500,
+   "byteLength": 300
+  }
+ ],
+ "buffers": [
+  {
+   "uri": "h28_port_cbp_main.bin",
+   "byteLength": 9800
+  }
+ ]
+}

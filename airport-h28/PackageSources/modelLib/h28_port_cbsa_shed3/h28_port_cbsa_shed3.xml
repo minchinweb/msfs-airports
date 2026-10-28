@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ModelInfo guid="{ADBD160A-BBD1-54B5-A431-59DB14E44AD3}" version="1.1">
+	<LODS>
+		<LOD minSize="0" ModelFile="h28_port_cbsa_shed3.gltf"/>
+	</LODS>
+</ModelInfo>
