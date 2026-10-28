@@ -14,3 +14,9 @@ Project: `airport-h28/airport-H28-del-bonita-whetstone-intl.xml` (package `cardb
 - Vegetation-exclusion polygon (only the runway's `excludeVegetationAround` is set), threshold double cones, edge cones, fences, mowed polygon.
 - PAPI on 07, threshold reflectors; the port of entry buildings and lights; the power line; RNAV 25 and RNAV-A.
 - A world-map search for "CEQ4".
+
+## 2026-10-27 update
+- Sim check by user: north-south alignment perfect (aerial cones visible); grass looks striped up close.
+- Runway now keeps the sim's old east end (lon -112.766217) and is cut at the west (centre -112.77548). Tie-downs, taxi points and windsock shifted +0.0033 deg lon to follow.
+- Added `DeleteAirport` (all TRUE) to remove the default 08/26 runway; PAPI-2 (3.5 deg) on 07 added. Both build clean; not yet seen in the sim.
+- Still to do: cones, fences, mowed polygon, port buildings, power line, RNAV approaches.

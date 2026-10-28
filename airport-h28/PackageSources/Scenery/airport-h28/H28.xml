@@ -26,6 +26,7 @@
 		<Runway parentGroupID="1" lat="48.99868000000000" lon="-112.77548000000000" alt="1321.60000000000000" heading="89.97000000000000" length="1353.00000000000000" width="20.00000000000000" patternAltitude="304.79998779296875" surface="{322DE917-E25D-4AD8-BFBB-4D5F4D259413}" transparent="FALSE" number="07" designator="NONE" primaryLanding="TRUE" primaryTakeoff="TRUE" primaryPattern="LEFT" secondaryLanding="TRUE" secondaryTakeoff="TRUE" secondaryPattern="LEFT" primaryMarkingBias="0.00000000000000" secondaryMarkingBias="0.00000000000000" groundMerging="TRUE" excludeVegetationAround="TRUE">
 			<Markings edges="FALSE" threshold="FALSE" alternateThreshold="FALSE" fixedDistance="FALSE" alternateFixedDistance="FALSE" touchdown="FALSE" alternateTouchdown="FALSE" dashes="FALSE" ident="FALSE" leadingZeroIdent="FALSE" precision="FALSE" alternatePrecision="FALSE" edgePavement="FALSE" singleEnd="FALSE" primaryClosed="FALSE" secondaryClosed="FALSE" primaryStol="FALSE" secondaryStol="FALSE" noThresholdEndArrows="FALSE"/>
 			<Lights center="NONE" edge="NONE"/>
+				<Vasi end="PRIMARY" side="LEFT" type="PAPI2" biasX="15.000000" biasZ="300.000000" spacing="9.000000" pitch="3.500000"/>
 			<RunwayStart end="PRIMARY" lat="48.99867600000000" lon="-112.78433300000000" alt="1321.60000000000000" heading="89.97000000000000"/>
 			<RunwayStart end="SECONDARY" lat="48.99868400000000" lon="-112.76662700000000" alt="1321.60000000000000" heading="269.97000000000000"/>
 		</Runway>
