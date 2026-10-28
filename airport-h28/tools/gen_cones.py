@@ -3,12 +3,11 @@ airport-h28/PackageSources/modelLib/:
   h28_cone_white/   white cone with a black top (the strip's edge cones)
   h28_cone_red/     all-red cone (placed next to a white one at the red-white pairs)
   texture/h28_palette.png(.xml)
-Then swaps the library cone in H28.xml for the white model and adds a red cone beside the white cones at 202 m and 266 m.
+Placements are written by gen_field.py.
     python -I airport-h28/tools/gen_cones.py
-Prints the two model GUIDs. Safe to re-run (it replaces earlier red cones and the old GUIDs)."""
+Prints the two model GUIDs (stable: uuid5 of the model name). Safe to re-run."""
 import json
 import math
-import re
 import struct
 import uuid
 import zlib
@@ -16,9 +15,7 @@ from pathlib import Path
 
 ROOT = Path(__file__).resolve().parents[2]
 MODELLIB = ROOT / "airport-h28/PackageSources/modelLib"
-H28 = ROOT / "airport-h28/PackageSources/Scenery/airport-h28/H28.xml"
 NS = uuid.UUID("5d0c6c7e-0c1d-4a53-9b6e-0c7d00000028")
-LIB_CONE = "{332F3033-B7B6-7FDD-1CAB-6E972A9235B8}"
 PALETTE = [(236, 234, 230), (196, 40, 36), (24, 24, 26)]  # white, red, black
 WHITE, RED, BLACK = range(3)
 SW = 16
@@ -64,7 +61,7 @@ class Mesh:
                 self.uv.append(self.uvof(sw))
         for i in range(SIDES):
             a, b, c2, d = base + 2 * i, base + 2 * i + 1, base + 2 * i + 2, base + 2 * i + 3
-            self.idx += [a, c2, b, b, c2, d]
+            self.idx += [a, b, c2, b, d, c2]  # counter-clockwise seen from outside (glTF front face)
 
     def cap(self, r, y, sw):
         base = len(self.pos)
@@ -125,8 +122,8 @@ class Mesh:
         return guid
 
 
-H, R0, R1 = 0.45, 0.20, 0.05  # cone height, base radius, top radius (metres)
-TOP = 0.10  # black-top band height
+H, R0, R1 = 0.60, 0.45, 0.07  # cone height, base radius, top radius (metres): squat, as in the 2025 photos
+TOP = 0.14  # black-top band height
 
 
 def lerp_r(y):
@@ -153,30 +150,6 @@ def main():
     white = white_cone().save(MODELLIB / "h28_cone_white", "h28_cone_white")
     red = red_cone().save(MODELLIB / "h28_cone_red", "h28_cone_red")
     print("white", white, "red", red)
-
-    s = H28.read_text(encoding="utf-8")
-    nl = "\r\n" if "\r\n" in s else "\n"
-    s = s.replace("\r\n", "\n")
-    # forget earlier red cones, then re-point the white ones
-    s = re.sub(r"\t<!-- red cone[^\n]*-->\n\t<SceneryObject[^\n]*>\n[^\n]*\n\t</SceneryObject>\n", "", s)
-    s = s.replace(LIB_CONE, white)
-    for old in re.findall(r'<LibraryObject name="(\{[0-9A-F-]{36}\})" scale="1.000000"/>', s):
-        pass
-    # red cone 1.5 m east of each white cone at 202 m and 266 m
-    add = {}
-    for m in re.finditer(r"(\t<!-- white cone, ([SN]) edge, (202|266) m from the west fence -->\n"
-                         r"\t<SceneryObject lat=\"([-0-9.]+)\" lon=\"([-0-9.]+)\"[^>]*>)", s):
-        side, dist, lat, lon = m.group(2), m.group(3), float(m.group(4)), float(m.group(5))
-        lon2 = lon + 1.5 / 73030.0
-        add[m.start()] = (
-            f'\t<!-- red cone, {side} edge, {dist} m from the west fence (next to the white cone) -->\n'
-            f'\t<SceneryObject lat="{lat:.8f}" lon="{lon2:.8f}" alt="0.00000000000000" pitch="0.000000" bank="0.000000" '
-            f'heading="0.000000" imageComplexity="VERY_SPARSE" altitudeIsAgl="TRUE" snapToGround="TRUE" snapToNormal="FALSE">\n'
-            f'\t\t<LibraryObject name="{red}" scale="1.000000"/>\n\t</SceneryObject>\n')
-    for pos in sorted(add, reverse=True):
-        s = s[:pos] + add[pos] + s[pos:]
-    H28.write_text(s.replace("\n", nl), encoding="utf-8", newline="")
-    print(len(add), "red cones placed")
 
 
 if __name__ == "__main__":

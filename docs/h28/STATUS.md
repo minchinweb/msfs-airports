@@ -59,3 +59,29 @@ Project: `airport-h28/airport-H28-del-bonita-whetstone-intl.xml` (package `cardb
 `airport-h28/tools/gen_powerline.py` (run `gen_port.py` first; it owns the palette): three-wire spans (9.4 m up, 1.2 m sag, 60 m long) north and south of the existing pole on the border line, library poles at each span end, and four orange marker balls on the first span north (across the strip). Also a pole-light model (7 m steel pole, lamp head, `ASOBO_macro_light` night-only light) with four placed around each main port building's plaza (8 lights total).
 - Unchecked in the sim: wire height against the library pole's real height, whether the pole's cross-arm lines up with the wires, light direction and brightness (intensity 3000, cone 120, symmetric), and that `day_night_cycle` means night-only.
 - Built OK (`_RPTErrors.xml` empty).
+
+## Rework pass (2026-10-28): runway, fences, cones, power line, port positions
+
+Built OK with the sim closed (`_RPTErrors.xml` empty); not yet seen in the sim. Supersedes the layout, cone, fence, power-line and `DX` notes above. Re-run order: `gen_port.py`, `gen_cones.py`, `gen_field.py`, `gen_powerline.py` (all in `airport-h28/tools/`). `fix_h28_layout.py` is gone; `gen_field.py` replaces it.
+
+- **The sim aerial matches OSM** (DevMode top-down 2026-10-28: road centre at -112.7884). The old 246 m east shift of the buildings (`DX`) came from cutting the runway too short at the west. `DX` is now 0, so our buildings sit on the sim's generated ones, and their exclusion polygons remove those.
+- **Runway** keeps its centreline and east end (-112.766217). The west end goes back to the sim default (-112.788063, 6 m inside the west fence), so it is 1,595 m x 65 ft. The published 4,440 ft lies between the threshold double cones: 200 m east of the west fence (where the 2012 red-white cones are) and 4,440 ft further east, about 49 m from the east fence. The marker is at the new midpoint (-112.77714). PAPI `biasX` is 12 m (inside the fence). Unclear: the SDK says `biasZ` is measured from the runway centre, FSX measured it from the end, so check where the PAPI lands.
+- **Fenced field**, from the OSM aerodrome outline (way 1208466528) and Google Earth 2012: strip fences 13.4 m (44 ft) each side of the centreline over the full length (the south one on the border); west fence at -112.78815; US parking 138 x 77 m south of the border at the west end; Canadian pocket 74 m long, out to 24 m north of the centreline. The fence is our own glTF (wooden posts every 5 m, four wires): 8 edge models `h28_fence_0..7`, 175 placements. Striped-grass aprons cover strip, pocket and parking; the no-vegetation/buildings polygon covers the whole field out to the road shoulder.
+- **Cones**: the side faces were wound inside-out (only the inner face drew); fixed in `gen_cones.py`. Model is now squatter (0.6 m tall, 0.9 m base), placed at scale 2. White cones on both edges (9.9 m off the centreline) evenly spaced about 200 ft between the threshold stations, plus 62/95/127 m in the west overrun. A red cone sits 2 m outboard of the white one at each threshold.
+- **Tie-downs**: 4 in the US parking (30 m south of the border, nose north), 2 in the Canadian pocket (radius 6 m), taxi paths to a runway entry point 70 m from the west fence.
+- **Power lines** (own pole models with the cross-arm at 9.4 m and wires at 9.5 m = the FAA's 31 ft): south line from the road shoulder to a transformer pole in the US parking (33 m east of the fence, 70 ft south of the centreline), then east to a pole by the windsock, with balls on that span. North line: road to a dead-end pole just north of the Canadian pocket. Neither crosses the strip. Routing is read from the photos; low confidence on the north line and on where the south line ends.
+- **CBSA** office: no canopy (the 2025 photos show none), white walls, grey roof; its pole lights are by the lane on its west side.
+- Windsock: NE corner of the US parking, on the border line.
+
+To check in the sim: cone faces; fence look (posts and wires visible?); wire and cross-arm heights; PAPI position; tie-downs clear of the fences; that buildings overlap the aerial's.
+Ideas not done: CBSA lattice radio mast (photo 05), facade textures, a gate in the west fence.
+
+## Road props and night lighting (2026-10-28, later)
+
+Built OK (sim closed, `_RPTErrors.xml` empty); not yet seen in the sim. Run order is now `gen_port`, `gen_cones`, `gen_field`, `gen_powerline`, `gen_props`.
+- `gen_props.py`: `h28_barrel` (orange/white traffic drum with a black base, 0.95 m) and `h28_jersey` (12.5 ft concrete New Jersey profile). 16 drums along the CBSA lane divider: OSM way 1147664053 (barrier=bollard) every 5 m, plus 3 at its ends. In reality the divider is tall delineator posts with drums at the ends; here all of them are drums, as asked. 20 Jersey barriers in a row on the west edge of the grass island between the CBP inspection lane and the through road, lat 48.99640-48.99712. **That position is a guess**; no photo in the repo shows them.
+- Lighting review: the lights were `ASOBO_macro_light`, which is deprecated in MSFS 2024 (the SDK's Blender add-on converts it to a street light). They are now `ASOBO_street_light` (names from the SDK's `io_scene_gltf2_msfs_2024/blender/msfs_lights.py`): night only, `flare_enabled` true (the lens flare is what shows from a distance), beam turned straight down (node -Z rotated to -Y; check that it isn't pointing up), warm white.
+  - Plaza lights: 8 m, 6,000 cd, 140 deg cone, 4 per port.
+  - New highway lights: 10 m, 2.5 m arm over the road, 10,000 cd, 6 of them on the east shoulder from the CBSA lane to the CBP approach. One is at the border, at the runway's west end, as a beacon for the 07 threshold.
+  - The emissive windows and the CBP canopy underside are unchanged (always lit, day too).
+- To check at night: flares visible from 5-10 nm; light pools on the ground under the lamps; whether brighter lamps or more of them are needed.

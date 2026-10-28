@@ -22,12 +22,12 @@
  "nodes": [
   {
    "mesh": 0,
-   "name": "h28_wire_plain"
+   "name": "h28_wire_n1"
   }
  ],
  "meshes": [
   {
-   "name": "h28_wire_plain",
+   "name": "h28_wire_n1",
    "primitives": [
     {
      "attributes": {
@@ -75,35 +75,35 @@
   {
    "bufferView": 0,
    "componentType": 5126,
-   "count": 576,
+   "count": 384,
    "type": "VEC3",
    "min": [
-    -1.45,
-    8.15,
+    -1.02,
+    8.539866800000851,
     0.0
    ],
    "max": [
-    1.45,
-    9.450000000000001,
-    60.0
+    1.02,
+    9.52,
+    85.03329999978746
    ]
   },
   {
    "bufferView": 1,
    "componentType": 5126,
-   "count": 576,
+   "count": 384,
    "type": "VEC3"
   },
   {
    "bufferView": 2,
    "componentType": 5126,
-   "count": 576,
+   "count": 384,
    "type": "VEC2"
   },
   {
    "bufferView": 3,
    "componentType": 5123,
-   "count": 864,
+   "count": 576,
    "type": "SCALAR"
   }
  ],
@@ -111,28 +111,28 @@
   {
    "buffer": 0,
    "byteOffset": 0,
-   "byteLength": 6912
-  },
-  {
-   "buffer": 0,
-   "byteOffset": 6912,
-   "byteLength": 6912
-  },
-  {
-   "buffer": 0,
-   "byteOffset": 13824,
    "byteLength": 4608
   },
   {
    "buffer": 0,
-   "byteOffset": 18432,
-   "byteLength": 1728
+   "byteOffset": 4608,
+   "byteLength": 4608
+  },
+  {
+   "buffer": 0,
+   "byteOffset": 9216,
+   "byteLength": 3072
+  },
+  {
+   "buffer": 0,
+   "byteOffset": 12288,
+   "byteLength": 1152
   }
  ],
  "buffers": [
   {
-   "uri": "h28_wire_plain.bin",
-   "byteLength": 20160
+   "uri": "h28_wire_n1.bin",
+   "byteLength": 13440
   }
  ]
 }

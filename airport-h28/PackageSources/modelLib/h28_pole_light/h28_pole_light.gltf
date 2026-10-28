@@ -10,7 +10,7 @@
  },
  "extensionsUsed": [
   "ASOBO_normal_map_convention",
-  "ASOBO_macro_light"
+  "ASOBO_street_light"
  ],
  "scene": 0,
  "scenes": [
@@ -32,24 +32,34 @@
    "name": "h28_pole_light_light0",
    "translation": [
     -0.0,
-    6.6,
-    1.0
+    7.6,
+    0.85
+   ],
+   "rotation": [
+    -0.70710678,
+    0.0,
+    0.0,
+    0.70710678
    ],
    "extensions": {
-    "ASOBO_macro_light": {
+    "ASOBO_street_light": {
      "color": [
       1.0,
-      0.85,
-      0.6
+      0.9,
+      0.75
      ],
-     "intensity": 3000,
-     "cone_angle": 120.0,
-     "has_symmetry": true,
+     "intensity": 6000,
+     "cone_angle": 140.0,
+     "has_symmetry": false,
      "flash_frequency": 0.0,
-     "flash_duration": 0.0,
+     "flash_duration": 0.2,
      "flash_phase": 0.0,
+     "rotation_phase": 0.0,
      "rotation_speed": 0.0,
-     "day_night_cycle": true
+     "random_phase": false,
+     "day_night_cycle": true,
+     "flare_enabled": true,
+     "flare_only": false
     }
    }
   }
@@ -132,7 +142,7 @@
   {
    "bufferView": 0,
    "componentType": 5126,
-   "count": 60,
+   "count": 64,
    "type": "VEC3",
    "min": [
     -0.25,
@@ -141,26 +151,26 @@
    ],
    "max": [
     0.25,
-    7.0,
-    1.2
+    8.0,
+    1.1
    ]
   },
   {
    "bufferView": 1,
    "componentType": 5126,
-   "count": 60,
+   "count": 64,
    "type": "VEC3"
   },
   {
    "bufferView": 2,
    "componentType": 5126,
-   "count": 60,
+   "count": 64,
    "type": "VEC2"
   },
   {
    "bufferView": 3,
    "componentType": 5123,
-   "count": 84,
+   "count": 90,
    "type": "SCALAR"
   },
   {
@@ -174,33 +184,33 @@
   {
    "buffer": 0,
    "byteOffset": 0,
-   "byteLength": 720
+   "byteLength": 768
   },
   {
    "buffer": 0,
-   "byteOffset": 720,
-   "byteLength": 720
+   "byteOffset": 768,
+   "byteLength": 768
   },
   {
    "buffer": 0,
-   "byteOffset": 1440,
-   "byteLength": 480
+   "byteOffset": 1536,
+   "byteLength": 512
   },
   {
    "buffer": 0,
-   "byteOffset": 1920,
-   "byteLength": 168
+   "byteOffset": 2048,
+   "byteLength": 180
   },
   {
    "buffer": 0,
-   "byteOffset": 2088,
+   "byteOffset": 2228,
    "byteLength": 12
   }
  ],
  "buffers": [
   {
    "uri": "h28_pole_light.bin",
-   "byteLength": 2100
+   "byteLength": 2240
   }
  ]
 }

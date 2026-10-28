@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ModelInfo guid="{1DF5E3B5-6CC6-570D-ADC7-0D301C0B561A}" version="1.1">
+	<LODS>
+		<LOD minSize="0" ModelFile="h28_pole_transformer.gltf"/>
+	</LODS>
+</ModelInfo>

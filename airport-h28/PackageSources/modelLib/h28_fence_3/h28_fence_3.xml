@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ModelInfo guid="{69E4978B-0730-54CB-9B48-E02B2BB1CD16}" version="1.1">
+	<LODS>
+		<LOD minSize="0" ModelFile="h28_fence_3.gltf"/>
+	</LODS>
+</ModelInfo>

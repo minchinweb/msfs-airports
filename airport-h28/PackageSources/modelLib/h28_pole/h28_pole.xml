@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ModelInfo guid="{5DE37C34-C5A3-54D1-AFEB-2CE25A6DFA8C}" version="1.1">
+	<LODS>
+		<LOD minSize="0" ModelFile="h28_pole.gltf"/>
+	</LODS>
+</ModelInfo>

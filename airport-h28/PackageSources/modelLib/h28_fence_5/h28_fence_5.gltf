@@ -22,12 +22,12 @@
  "nodes": [
   {
    "mesh": 0,
-   "name": "h28_wire_balls"
+   "name": "h28_fence_5"
   }
  ],
  "meshes": [
   {
-   "name": "h28_wire_balls",
+   "name": "h28_fence_5",
    "primitives": [
     {
      "attributes": {
@@ -75,35 +75,35 @@
   {
    "bufferView": 0,
    "componentType": 5126,
-   "count": 2624,
+   "count": 144,
    "type": "VEC3",
    "min": [
-    -1.7,
-    7.6480000000000015,
-    0.0
+    -0.06,
+    0.0,
+    -0.06
    ],
    "max": [
-    1.7,
-    9.450000000000001,
-    60.0
+    0.06,
+    1.3,
+    18.88999999990375
    ]
   },
   {
    "bufferView": 1,
    "componentType": 5126,
-   "count": 2624,
+   "count": 144,
    "type": "VEC3"
   },
   {
    "bufferView": 2,
    "componentType": 5126,
-   "count": 2624,
+   "count": 144,
    "type": "VEC2"
   },
   {
    "bufferView": 3,
    "componentType": 5123,
-   "count": 3936,
+   "count": 216,
    "type": "SCALAR"
   }
  ],
@@ -111,28 +111,28 @@
   {
    "buffer": 0,
    "byteOffset": 0,
-   "byteLength": 31488
+   "byteLength": 1728
   },
   {
    "buffer": 0,
-   "byteOffset": 31488,
-   "byteLength": 31488
+   "byteOffset": 1728,
+   "byteLength": 1728
   },
   {
    "buffer": 0,
-   "byteOffset": 62976,
-   "byteLength": 20992
+   "byteOffset": 3456,
+   "byteLength": 1152
   },
   {
    "buffer": 0,
-   "byteOffset": 83968,
-   "byteLength": 7872
+   "byteOffset": 4608,
+   "byteLength": 432
   }
  ],
  "buffers": [
   {
-   "uri": "h28_wire_balls.bin",
-   "byteLength": 91840
+   "uri": "h28_fence_5.bin",
+   "byteLength": 5040
   }
  ]
 }
