@@ -31,7 +31,7 @@ s = s.replace("\r\n", "\n")
 s = re.sub(r"\t<Polygon version=\"0\.\d\.0\" displayName=\"(?:Runway|Taxi) Grass[^\n]*\n.*?\t</Polygon>\n", "", s, flags=re.S)
 
 # 2. runway 37 m wide (the mowed strip), striped surface already set
-s = re.sub(r'(<Runway [^>]*?) width="[0-9.]+"', r'\1 width="37.00000000000000"', s, count=1)
+s = re.sub(r'(<Runway [^>]*?) width="[0-9.]+"', r'\1 width="20.00000000000000"', s, count=1)
 
 # 3. pole turned 90 degrees
 s = re.sub(r'(<!-- wooden power pole[^\n]*-->\n\t<SceneryObject [^>]*?) heading="[-0-9.]+"', r'\1 heading="90.000000"', s, count=1)
@@ -93,6 +93,12 @@ apron = ('\t\t<Aprons>\n'
          'flipUV="FALSE" priority="1" tiling="25.000000" heading="0.000000" falloff="0.100000" opacity="255" groundMerging="TRUE" '
          'excludeVegetationAround="TRUE" excludeVegetationInside="TRUE" isRectangle="TRUE">\n'
          + "".join(f'\t\t\t\t<Vertex lat="{la:.8f}" lon="{lo:.8f}"/>\n' for la, lo in [(S, W), (S, PE), (PS, PE), (PS, W)])
+         + '\t\t\t</Apron>\n'
+         # the mowed strip around the 20 m runway, same striped surface
+         + f'\t\t\t<Apron parentGroupID="1" groupIndex="1" surface="{GRASS}" drawSurface="TRUE" drawDetail="FALSE" localUV="TRUE" '
+         'stretchUV="FALSE" flipUV="FALSE" priority="1" tiling="25.000000" heading="1.570796" falloff="0.100000" opacity="255" '
+         'groundMerging="TRUE" excludeVegetationAround="TRUE" excludeVegetationInside="TRUE" isRectangle="TRUE">\n'
+         + "".join(f'\t\t\t\t<Vertex lat="{la:.8f}" lon="{lo:.8f}"/>\n' for la, lo in [(S, W), (S, E), (N, E), (N, W)])
          + '\t\t\t</Apron>\n\t\t</Aprons>\n')
 s = re.sub(r"\t\t<Aprons/>\n|\t\t<Aprons>.*?</Aprons>\n", lambda m: apron, s, count=1, flags=re.S)
 

@@ -225,7 +225,7 @@
 		<TaxiwayPath parentGroupID="3" groupIndex="2" type="PARKING" surface="{322DE917-E25D-4AD8-BFBB-4D5F4D259413}" centerLine="FALSE" start="1" end="3" width="8.000000" weightLimit="0" name="0" drawSurface="FALSE" drawDetail="FALSE" groundMerging="TRUE" excludeVegetationAround="TRUE" excludeVegetationInside="TRUE"/>
 		<TaxiwayPath parentGroupID="3" groupIndex="3" type="PARKING" surface="{322DE917-E25D-4AD8-BFBB-4D5F4D259413}" centerLine="FALSE" start="1" end="4" width="8.000000" weightLimit="0" name="0" drawSurface="FALSE" drawDetail="FALSE" groundMerging="TRUE" excludeVegetationAround="TRUE" excludeVegetationInside="TRUE"/>
 		<TaxiwayPath parentGroupID="3" groupIndex="4" type="PARKING" surface="{322DE917-E25D-4AD8-BFBB-4D5F4D259413}" centerLine="FALSE" start="1" end="5" width="8.000000" weightLimit="0" name="0" drawSurface="FALSE" drawDetail="FALSE" groundMerging="TRUE" excludeVegetationAround="TRUE" excludeVegetationInside="TRUE"/>
-		<Runway parentGroupID="1" groupIndex="3" lat="48.99868000000000" lon="-112.77548000000000" alt="1321.59999999999991" heading="89.97000122070312" length="1353.00000000000000" width="37.00000000000000" patternAltitude="304.79998779296875" surface="{0E12195B-4A50-42D1-B8C8-177B270F3AAB}" transparent="FALSE" number="07" designator="NONE" primaryLanding="TRUE" primaryTakeoff="TRUE" primaryPattern="LEFT" secondaryLanding="TRUE" secondaryTakeoff="TRUE" secondaryPattern="LEFT" primaryMarkingBias="0.00000000000000" secondaryMarkingBias="0.00000000000000" groundMerging="TRUE" excludeVegetationAround="TRUE" excludeBuildingAround="TRUE">
+		<Runway parentGroupID="1" groupIndex="3" lat="48.99868000000000" lon="-112.77548000000000" alt="1321.59999999999991" heading="89.97000122070312" length="1353.00000000000000" width="20.00000000000000" patternAltitude="304.79998779296875" surface="{0E12195B-4A50-42D1-B8C8-177B270F3AAB}" transparent="FALSE" number="07" designator="NONE" primaryLanding="TRUE" primaryTakeoff="TRUE" primaryPattern="LEFT" secondaryLanding="TRUE" secondaryTakeoff="TRUE" secondaryPattern="LEFT" primaryMarkingBias="0.00000000000000" secondaryMarkingBias="0.00000000000000" groundMerging="TRUE" excludeVegetationAround="TRUE" excludeBuildingAround="TRUE">
 			<Markings edges="FALSE" threshold="FALSE" alternateThreshold="FALSE" fixedDistance="FALSE" alternateFixedDistance="FALSE" touchdown="FALSE" alternateTouchdown="FALSE" dashes="FALSE" ident="FALSE" leadingZeroIdent="FALSE" precision="FALSE" alternatePrecision="FALSE" edgePavement="FALSE" singleEnd="FALSE" primaryClosed="FALSE" secondaryClosed="FALSE" primaryStol="FALSE" secondaryStol="FALSE" noThresholdEndArrows="FALSE"/>
 			<Lights center="NONE" edge="NONE"/>
 			<Vasi end="PRIMARY" side="LEFT" type="PAPI2" biasX="15.000000" biasZ="300.000000" spacing="9.000000" pitch="3.500000"/>
@@ -241,6 +241,12 @@
 				<Vertex lat="48.99851400" lon="-112.78282000"/>
 				<Vertex lat="48.99781300" lon="-112.78282000"/>
 				<Vertex lat="48.99781300" lon="-112.78474000"/>
+			</Apron>
+			<Apron parentGroupID="1" groupIndex="1" surface="{322DE917-E25D-4AD8-BFBB-4D5F4D259413}" drawSurface="TRUE" drawDetail="FALSE" localUV="TRUE" stretchUV="FALSE" flipUV="FALSE" priority="1" tiling="25.000000" heading="1.570796" falloff="0.100000" opacity="255" groundMerging="TRUE" excludeVegetationAround="TRUE" excludeVegetationInside="TRUE" isRectangle="TRUE">
+				<Vertex lat="48.99851400" lon="-112.78474000"/>
+				<Vertex lat="48.99851400" lon="-112.76620000"/>
+				<Vertex lat="48.99884700" lon="-112.76620000"/>
+				<Vertex lat="48.99884700" lon="-112.78474000"/>
 			</Apron>
 		</Aprons>
 		<PaintedElements/>
