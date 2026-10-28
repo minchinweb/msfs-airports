@@ -24,9 +24,9 @@ LAT, LON = 111200.0, 73030.0
 DX = (-112.78474 - 20 / LON) - (-112.78838)  # OSM highway centre -> sim road centre (20 m west of the fence)
 
 # palette swatches
-WALL, TRIM, ROOF, DARK, GREEN, BROWN, REDR, WHITE, GREY, GLOW, STEEL = range(11)
+WALL, TRIM, ROOF, DARK, GREEN, BROWN, REDR, WHITE, GREY, GLOW, STEEL, ORANGE = range(12)
 PALETTE = [(208, 200, 184), (150, 148, 142), (70, 72, 78), (30, 32, 36), (52, 96, 70), (110, 78, 56), (140, 54, 44),
-           (232, 232, 228), (170, 174, 176), (255, 224, 150), (120, 128, 134)]
+           (232, 232, 228), (170, 174, 176), (255, 224, 150), (120, 128, 134), (240, 110, 20)]
 SW = 16
 
 # name: (OSM way, lat, lon centroid, width E-W m, depth N-S m, wall height, kind, wall, roof)
@@ -63,6 +63,7 @@ def write_palette(path):
 class Mesh:
     def __init__(self):
         self.pos, self.nrm, self.uv, self.idx, self.glow = [], [], [], [], []
+        self.lights = []  # (x, y, z, intensity) macro lights, model frame before mirroring
 
     def poly(self, pts, sw, glow=False):
         """Flat polygon, normal from the winding (counter-clockwise seen from outside)."""
@@ -120,6 +121,7 @@ class Mesh:
             self.poly([P(x0 - e, y0, a), P(x0 - e, y0, b), P(x0 - e, y1, b), P(x0 - e, y1, a)], GLOW, True)
 
     def mirror_x(self):
+        self.lights = [(-x, y, z, i) for x, y, z, i in self.lights]
         self.pos = [(-x, y, z) for x, y, z in self.pos]
         self.nrm = [(-x, y, z) for x, y, z in self.nrm]
         self.idx = [i for t in range(0, len(self.idx), 3) for i in (self.idx[t], self.idx[t + 2], self.idx[t + 1])]
@@ -164,9 +166,13 @@ class Mesh:
         g = {
             "asset": {"version": "2.0", "generator": "airport-h28/tools/gen_port.py",
                       "extensions": {"ASOBO_normal_map_convention": {"tangent_space_convention": "DirectX"}}},
-            "extensionsUsed": ["ASOBO_normal_map_convention"],
+            "extensionsUsed": ["ASOBO_normal_map_convention"] + (["ASOBO_macro_light"] if self.lights else []),
             "scene": 0, "scenes": [{"nodes": [0]}],
-            "nodes": [{"mesh": 0, "name": name}],
+            "nodes": [{"mesh": 0, "name": name, **({"children": list(range(1, len(self.lights) + 1))} if self.lights else {})}]
+            + [{"name": f"{name}_light{k}", "translation": [x, y, z], "extensions": {"ASOBO_macro_light": {
+                "color": [1.0, 0.85, 0.6], "intensity": i, "cone_angle": 120.0, "has_symmetry": True, "flash_frequency": 0.0,
+                "flash_duration": 0.0, "flash_phase": 0.0, "rotation_speed": 0.0, "day_night_cycle": True}}}
+               for k, (x, y, z, i) in enumerate(self.lights)],
             "meshes": [{"name": name, "primitives": prims}],
             "materials": mats, "textures": [{"sampler": 0, "source": 0}],
             "samplers": [{"magFilter": 9728, "minFilter": 9728}],

@@ -53,3 +53,9 @@ Project: `airport-h28/airport-H28-del-bonita-whetstone-intl.xml` (package `cardb
 - **Position assumption to check:** OSM's highway is at lon -112.7884, about 270 m west of the sim's road. Every OSM position is shifted 246 m east (`DX`) so the highway lines up 20 m west of the strip's west fence. If the ports sit wrongly in the sim, change `DX` and re-run.
 - Night: window strips and canopy undersides use an emissive material; untested whether it glows only at night. Pole lights and the facade textures are still to do.
 - Built OK (`_RPTErrors.xml` empty); not yet seen in the sim.
+
+## Power line and pole lights (2026-10-27)
+
+`airport-h28/tools/gen_powerline.py` (run `gen_port.py` first; it owns the palette): three-wire spans (9.4 m up, 1.2 m sag, 60 m long) north and south of the existing pole on the border line, library poles at each span end, and four orange marker balls on the first span north (across the strip). Also a pole-light model (7 m steel pole, lamp head, `ASOBO_macro_light` night-only light) with four placed around each main port building's plaza (8 lights total).
+- Unchecked in the sim: wire height against the library pole's real height, whether the pole's cross-arm lines up with the wires, light direction and brightness (intensity 3000, cone 120, symmetric), and that `day_night_cycle` means night-only.
+- Built OK (`_RPTErrors.xml` empty).

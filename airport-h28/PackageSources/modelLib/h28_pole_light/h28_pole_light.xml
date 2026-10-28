@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ModelInfo guid="{0D374A02-C38E-5F76-A073-6F78A14E06B5}" version="1.1">
+	<LODS>
+		<LOD minSize="0" ModelFile="h28_pole_light.gltf"/>
+	</LODS>
+</ModelInfo>

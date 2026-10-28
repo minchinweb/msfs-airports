@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ModelInfo guid="{751BE417-9A11-5D2D-8A5E-406E2F0ED892}" version="1.1">
+	<LODS>
+		<LOD minSize="0" ModelFile="h28_wire_balls.gltf"/>
+	</LODS>
+</ModelInfo>
