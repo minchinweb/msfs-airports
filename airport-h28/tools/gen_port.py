@@ -251,11 +251,11 @@ class Mesh:
             # light (-Z) rotation, so +90 deg about X points it down. Parameter names from blender/msfs_lights.py.
             + [{"name": f"{name}_light{k}", "translation": [x, y, z], "rotation": [0.70710678, 0.0, 0.0, 0.70710678],
                 "extensions": {"ASOBO_street_light": {
-                    "color": [1.0, 0.9, 0.75], "intensity": i, "cone_angle": c, "has_symmetry": False,
-                    "flash_frequency": 0.0, "flash_duration": 0.2, "flash_phase": 0.0, "rotation_phase": 0.0,
-                    "rotation_speed": 0.0, "random_phase": False, "day_night_cycle": True,
-                    "flare_enabled": True, "flare_only": f}}}
-               for k, (x, y, z, i, c, f) in enumerate(self.lights)],
+                    **{"color": [1.0, 0.9, 0.75], "intensity": i, "cone_angle": c, "has_symmetry": False,
+                       "flash_frequency": 0.0, "flash_duration": 0.2, "flash_phase": 0.0, "rotation_phase": 0.0,
+                       "rotation_speed": 0.0, "random_phase": False, "day_night_cycle": True,
+                       "flare_enabled": True, "flare_only": f}, **(ex[0] if ex else {})}}}
+               for k, (x, y, z, i, c, f, *ex) in enumerate(self.lights)],
             "meshes": [{"name": name, "primitives": prims}],
             "materials": mats, "textures": [{"sampler": 0, "source": 0}],
             "samplers": [{"magFilter": 9728, "minFilter": 9728}],
@@ -302,6 +302,8 @@ def build(kind, w, d, h, wall, roof):
 
 BAY = (-1.4, 1.8)  # CBSA drive-through bay, x from the footprint centre (metres east)
 ANNEX_H = 3.0  # annex wall height; its ridge is about level with the office parapet
+# Flashing red obstruction beacon: all-round, flare only, night only, 30 flashes a minute (Canadian/US tower lighting is 20-40).
+BEACON = (60000.0, 360.0, True, {"color": [1.0, 0.05, 0.02], "flash_frequency": 30.0, "flash_duration": 0.5})
 MAST = (12.0, -4.0, 42.0)  # radio mast: x, z from the office centre, height (about ten times the office, refs 04-06)
 FLAG = (9.5, -1.0, 9.0)  # flagpole east of the annex (refs 05, 06)
 
@@ -338,6 +340,9 @@ def mast(m, cx, cz, height, r=0.5, step=1.4):
             m.box(cx + sx - 0.12, cx + sx + 0.12, y - 0.9, y + 0.9, cz - 0.08, cz + 0.08, WHITE, bottom=True)
     for x, z in legs:  # whips on top
         m.strut((x, height, z), (x, height + 3.5, z), 0.025, GREY)
+    m.strut((cx, height, cz), (cx, height + 4.0, cz), 0.03, GREY)  # beacon post
+    m.box(cx - 0.15, cx + 0.15, height + 4.0, height + 4.35, cz - 0.15, cz + 0.15, REDR)
+    m.lights.append((cx, height + 4.45, cz, *BEACON))
     m.box(cx - 1.0, cx + 1.0, 0.0, 0.15, cz - 1.0, cz + 1.0, GREY)  # concrete pad
     m.box(cx - 1.6, cx - 0.9, 0.0, 1.8, cz - 0.5, cz + 0.5, STEEL)  # equipment cabinet (ref 06)
 

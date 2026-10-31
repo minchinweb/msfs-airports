@@ -40,7 +40,8 @@
     13,
     14,
     15,
-    16
+    16,
+    17
    ]
   },
   {
@@ -396,6 +397,41 @@
   {
    "name": "h28_lights_us_light10",
    "translation": [
+    -60.665510000494294,
+    8.239999999999963,
+    222.51119999999105
+   ],
+   "rotation": [
+    0.70710678,
+    0.0,
+    0.0,
+    0.70710678
+   ],
+   "extensions": {
+    "ASOBO_street_light": {
+     "color": [
+      1.0,
+      0.05,
+      0.02
+     ],
+     "intensity": 60000.0,
+     "cone_angle": 360.0,
+     "has_symmetry": false,
+     "flash_frequency": 30.0,
+     "flash_duration": 0.5,
+     "flash_phase": 0.0,
+     "rotation_phase": 0.0,
+     "rotation_speed": 0.0,
+     "random_phase": false,
+     "day_night_cycle": true,
+     "flare_enabled": true,
+     "flare_only": true
+    }
+   }
+  },
+  {
+   "name": "h28_lights_us_light11",
+   "translation": [
     -58.31551000049429,
     7.790000000000054,
     158.01520000006235
@@ -429,7 +465,7 @@
    }
   },
   {
-   "name": "h28_lights_us_light11",
+   "name": "h28_lights_us_light12",
    "translation": [
     -58.31551000049429,
     7.740000000000055,
@@ -464,7 +500,7 @@
    }
   },
   {
-   "name": "h28_lights_us_light12",
+   "name": "h28_lights_us_light13",
    "translation": [
     -58.31551000049429,
     7.830000000000018,
@@ -499,7 +535,7 @@
    }
   },
   {
-   "name": "h28_lights_us_light13",
+   "name": "h28_lights_us_light14",
    "translation": [
     -58.31551000049429,
     7.780000000000019,
@@ -534,7 +570,7 @@
    }
   },
   {
-   "name": "h28_lights_us_light14",
+   "name": "h28_lights_us_light15",
    "translation": [
     -58.31551000049429,
     8.21999999999989,
@@ -569,7 +605,7 @@
    }
   },
   {
-   "name": "h28_lights_us_light15",
+   "name": "h28_lights_us_light16",
    "translation": [
     -58.31551000049429,
     8.169999999999892,
@@ -682,10 +718,10 @@
   {
    "bufferView": 0,
    "componentType": 5126,
-   "count": 512,
+   "count": 532,
    "type": "VEC3",
    "min": [
-    -60.765510000494295,
+    -60.81551000049429,
     -6.210000000000036,
     -16.100000000389038
    ],
@@ -698,19 +734,19 @@
   {
    "bufferView": 1,
    "componentType": 5126,
-   "count": 512,
+   "count": 532,
    "type": "VEC3"
   },
   {
    "bufferView": 2,
    "componentType": 5126,
-   "count": 512,
+   "count": 532,
    "type": "VEC2"
   },
   {
    "bufferView": 3,
    "componentType": 5123,
-   "count": 720,
+   "count": 750,
    "type": "SCALAR"
   },
   {
@@ -724,33 +760,33 @@
   {
    "buffer": 0,
    "byteOffset": 0,
-   "byteLength": 6144
+   "byteLength": 6384
   },
   {
    "buffer": 0,
-   "byteOffset": 6144,
-   "byteLength": 6144
+   "byteOffset": 6384,
+   "byteLength": 6384
   },
   {
    "buffer": 0,
-   "byteOffset": 12288,
-   "byteLength": 4096
+   "byteOffset": 12768,
+   "byteLength": 4256
   },
   {
    "buffer": 0,
-   "byteOffset": 16384,
-   "byteLength": 1440
+   "byteOffset": 17024,
+   "byteLength": 1500
   },
   {
    "buffer": 0,
-   "byteOffset": 17824,
+   "byteOffset": 18524,
    "byteLength": 96
   }
  ],
  "buffers": [
   {
    "uri": "h28_lights_us.bin",
-   "byteLength": 17920
+   "byteLength": 18620
   }
  ]
 }

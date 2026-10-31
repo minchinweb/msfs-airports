@@ -100,7 +100,7 @@ def pole(transformer):
     return m
 
 
-def lamp(height, arm, intensity, cone):
+def lamp(height, arm, intensity, cone, beacon=False):
     """Steel pole with an arm along +Z, a lamp head with a glowing lens and a night-only street light under it."""
     m = gp.Mesh()
     m.box(-0.1, 0.1, -SINK, height, -0.1, 0.1, gp.STEEL, top=False)
@@ -110,11 +110,15 @@ def lamp(height, arm, intensity, cone):
             (0.2, height - 0.33, arm + 0.05)], gp.GLOW, True)
     m.lights.append((0.0, height - 0.4, arm - 0.15, intensity, cone, False))
     m.lights.append((0.0, height - 0.45, arm - 0.15, FLARE, 360.0, True))  # all-round flare, seen from the air
+    if beacon:  # flashing red obstruction light on top of the pole
+        m.box(-0.15, 0.15, height, height + 0.35, -0.15, 0.15, gp.REDR)
+        m.lights.append((0.0, height + 0.45, 0.0, *gp.BEACON))
     return m
 
 
 # Highway lights (2025 Street View: tall arm lights along AB-62/MT-213 at both ports, and one on the east shoulder at the
 # border by the runway's west end). Arms point west over the road.
+BEACON_LIGHT = 48.99853  # the road light on the runway's line (centreline 48.99868) carries the red beacon
 ROAD_LIGHTS = [("road light at the border, by the runway's west end", 48.99853),
                ("road light, CBSA approach", 48.99905), ("road light, CBSA lane", 48.99985),
                ("road light, US side", 48.99795), ("road light, US side", 48.99740), ("road light, CBP approach", 48.99690)]
@@ -201,6 +205,7 @@ def main():
             lamps.append((lat + sz / LAT, cx + sx / LON, hd, False))
     lamps += [(lat, ROAD + 1 / LON, 270.0, True) for _title, lat in ROAD_LIGHTS]
     pole_lamp, road_lamp = lamp(8.0, 1.0, 8000, 165.0), lamp(10.0, 2.5, 12000, 165.0)
+    beacon_lamp = lamp(10.0, 2.5, 12000, 165.0, True)
     for tag, title, key, north in (("ca", "CBSA plaza and road lights", "cbsa_main", True),
                                    ("us", "CBP plaza and road lights", "cbp_main", False)):
         olat, olon = next((f[2], f[3] + gp.DX) for f in gp.FOOTPRINTS if f[0] == key)
@@ -210,9 +215,9 @@ def main():
             if (lat > gf.BORDER) == north:
                 dy = ground(lat, lon) - oy
                 print(f"  {tag} lamp {lat:.5f},{lon:.5f}: {dy:+.2f} m")
-                merge(m, road_lamp if road else pole_lamp, (lon - olon) * LON, (lat - olat) * LAT, hd, dy)
+                merge(m, (beacon_lamp if abs(lat - BEACON_LIGHT) < 1e-7 else road_lamp) if road else pole_lamp, (lon - olon) * LON, (lat - olat) * LAT, hd, dy)
         name = f"h28_lights_{tag}"
-        out.append(gf.obj(f"{title} ({len(m.lights) // 2} lamps, one model)", m.save(ml / name, name), olat, olon))
+        out.append(gf.obj(f"{title} ({sum(1 for l in m.lights if not l[5] and len(l) == 6)} lamps, one model)", m.save(ml / name, name), olat, olon))
     out.append(f"\t{END}\n")
     block = "".join(out)
     s = gp.H28.read_text(encoding="utf-8")
