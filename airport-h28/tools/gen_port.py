@@ -28,20 +28,20 @@ LAT, LON = 111200.0, 73030.0
 DX = 0.0  # OSM -> sim aerial shift (none: they agree)
 
 # palette swatches
-WALL, TRIM, ROOF, DARK, GREEN, BROWN, REDR, WHITE, GREY, GLOW, STEEL, ORANGE, SIDING, CREAM, RED, NAVY, YELLOW = range(17)
+WALL, TRIM, ROOF, DARK, GREEN, BROWN, REDR, WHITE, GREY, GLOW, STEEL, ORANGE, SIDING, CREAM, RED, NAVY, YELLOW, SLATE = range(18)
 PALETTE = [(208, 200, 184), (150, 148, 142), (70, 72, 78), (30, 32, 36), (52, 96, 70), (110, 78, 56), (140, 54, 44),
            (232, 232, 228), (170, 174, 176), (255, 224, 150), (120, 128, 134), (240, 110, 20), (188, 194, 196),
-           (226, 212, 168), (214, 36, 36), (30, 44, 60), (232, 188, 40)]
+           (226, 212, 168), (214, 36, 36), (30, 44, 60), (232, 188, 40), (104, 112, 124)]
 SW = 16
 
 # name: (OSM way, lat, lon centroid, width E-W m, depth N-S m, wall height, kind, wall, roof)
 FOOTPRINTS = [
     ("cbsa_main", "CBSA main building (OSM way 1147679785)", 48.999586, -112.787966 + 6 / 73030, 15, 13, 4.2, "drive", SIDING,
      GREY),
-    ("cbsa_shed1", "CBSA outbuilding (OSM way 1147682043)", 49.000096, -112.787649, 14, 12, 3.6, "garage2", WHITE, GREY),
-    ("cbsa_shed2", "CBSA outbuilding (OSM way 1147682044)", 48.999998, -112.787738, 10, 8, 3.2, "garage1", CREAM, GREY),
-    ("cbsa_shed3", "CBSA outbuilding (OSM way 1147682041)", 48.999355, -112.787841, 7, 8, 3.0, "garage2", WHITE, GREY),
-    ("cbsa_shed4", "CBSA outbuilding (OSM way 1147682042)", 48.999239, -112.787861, 5, 5, 3.0, "garage1", CREAM, GREY),
+    ("cbsa_shed1", "CBSA outbuilding (OSM way 1147682043)", 49.000096, -112.787649, 14, 12, 3.6, "garage2", WHITE, SLATE),
+    ("cbsa_shed2", "CBSA outbuilding (OSM way 1147682044)", 48.999998, -112.787738, 10, 8, 3.2, "garage1", CREAM, SLATE),
+    ("cbsa_shed3", "CBSA outbuilding (OSM way 1147682041)", 48.999355, -112.787841, 7, 8, 3.0, "garage2", WHITE, SLATE),
+    ("cbsa_shed4", "CBSA outbuilding (OSM way 1147682042)", 48.999239, -112.787861, 5, 5, 3.0, "garage1", CREAM, SLATE),
     ("cbp_main", "CBP main building (OSM way 1147679784)", 48.996529, -112.789077, 28, 22, 4.6, "canopy", TRIM, ROOF),
     ("cbp_booth", "CBP outbuilding (OSM way 1151192789)", 48.996581, -112.788819, 8, 15, 3.4, "flat", TRIM, ROOF),
     ("village_shed", "US-side shed (OSM way 1147682039)", 48.996405, -112.789473, 13, 8, 3.4, "gable", WHITE, REDR),
@@ -436,7 +436,7 @@ def drive_through(w, d, h, wall, roof):
     for bx in (bx0 + 0.25, bx1 - 0.25):
         for bz in (z0 + 0.3, z1 - 0.3):
             m.box(bx - 0.13, bx + 0.13, 0.0, 1.0, bz - 0.13, bz + 0.13, YELLOW)
-    # annex: cream walls, red gable ends with white trim, grey shingle roof (ridge north-south), brick chimney
+    # annex: cream walls, red gable ends with white trim, slate shingle roof (ridge north-south), brick chimney
     m.box(bx1, x1, 0.0, ANNEX_H, z0, z1, CREAM, top=False)
     xm, half, ov = (bx1 + x1) / 2, (x1 - bx1) / 2 + 0.3, 0.35
     rise, ye = 1.9, ANNEX_H - 0.1
@@ -445,8 +445,8 @@ def drive_through(w, d, h, wall, roof):
     for sx in (-1, 1):
         e = xm + sx * half
         pts = [(e, ye, z0 - ov), (e, ye, z1 + ov), (xm, yr, z1 + ov), (xm, yr, z0 - ov)]
-        m.poly_out(pts, ROOF, (sx * rise, half, 0))
-        m.poly_out(pts, ROOF, (-sx * rise, -half, 0))
+        m.poly_out(pts, SLATE, (sx * rise, half, 0))
+        m.poly_out(pts, SLATE, (-sx * rise, -half, 0))
         m.strut((e, ye - 0.08, z0 - ov), (e, ye - 0.08, z1 + ov), 0.08, WHITE)  # fascia
         for zr in (z0 - ov, z1 + ov):
             m.strut((e, ye, zr), (xm, yr, zr), 0.07, WHITE)  # rake trim
