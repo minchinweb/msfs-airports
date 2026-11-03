@@ -43,7 +43,13 @@ CAR_PARKS = (
     ("Shell hangar wing, nose-in row along its landside face", [(144, -40.4), (193, -40.4), (193, -34.9), (144, -34.9)], 48.0),
     ("Shell hangar, column along its SE end wall", [(201.5, -33), (206.5, -33), (206.5, 0), (201.5, 0)], 318.0),
     ("Between the Shell hangar and Hangar 15, west column", [(214, -33), (219, -33), (219, 10), (214, 10)], 138.0),
-    ("Between the Shell hangar and Hangar 15, east column", [(219.5, -33), (224.5, -33), (224.5, 10), (219.5, 10)], 318.0),
+    ("Between the Shell hangar and Hangar 15, east column", [(219.5, -33), (224.5, -33), (224.5, -6.5), (219.5, -6.5)], 318.0),  # stops at Hangar 15's NW annex (2026-11-03)
+    # Hangar 15, 2026-11-03: Street View 25 Airport Rd (Jun 2012) shows cars nose-in along the landside wall and a second row out by the
+    # lot edge; both rows stop short of the small building SW of the hangar's SE corner (OSM 325234438, u 274-293) and leave the middle
+    # entrance (s 26-28 from the NW corner, u 252-254) clear.  Wall v -23.4; the Airport Rd fence is at about v -47 (Wayback 2017).
+    ("Hangar 15, nose-in row along its landside wall, NW part", [(227.5, -29.5), (251.5, -29.5), (251.5, -24), (227.5, -24)], 48.0),
+    ("Hangar 15, nose-in row along its landside wall, SE part", [(255, -29.5), (272, -29.5), (272, -24), (255, -24)], 48.0),
+    ("Hangar 15, outer row by the lot edge", [(228, -41), (272, -41), (272, -35.5), (228, -35.5)], 228.0),
     ("Aerocentre landside lot, north row", [(108, -10.5), (127, -10.5), (127, -5), (108, -5)], 48.0),
     ("Aerocentre landside lot, south row", [(108, -28.5), (127, -28.5), (127, -23), (108, -23)], 228.0),
 )

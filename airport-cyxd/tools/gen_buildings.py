@@ -60,7 +60,7 @@ def write_palette(path):
 TEX_T = 1.28  # metres per texture tile (8 clapboards / 8 shingle rows)
 TEX_NAMES = ("siding", "shingle_red", "shingle_grey", "ribbed", "ribbed_blue", "ribbed_green", "ribbed_mustard", "ribbed_steel",
              "ribbed_tan", "ribbed_white", "ribbed_yellow", "ribbed_teal", "brick", "shell", "esso", "navcan", "lawoffice", "nwi", "efc", "goa", "museum", "gac",
-             "aerocentre")
+             "aerocentre", "cessna")
 # night-lit materials: palette colour by day, warm emissive at night only (ASOBO_material_day_night_switch; the SDK's Blender exporter writes
 # emissiveFactor = colour x scale, default scale 1000).  key -> emissiveFactor.  "glow" = office windows, "glow_cab" = the dimmer tower cab.
 GLOW = {"glow": [180.0, 140.0, 85.0], "glow_cab": [40.0, 44.0, 36.0]}
@@ -152,7 +152,7 @@ def write_textures(folder):
     (folder / "cyxd_shell.png").write_bytes(sign.read_bytes())
     (folder / "cyxd_shell.png.xml").write_text('<BitmapConfiguration>\n\t<BitmapSlot>MTL_BITMAP_DECAL0</BitmapSlot>\n</BitmapConfiguration>\n')
     # Esso oval and NAV CANADA plaque: tools/make_signs.py
-    for nm in ("esso", "navcan", "lawoffice", "nwi", "efc", "goa", "museum", "gac", "aerocentre"):
+    for nm in ("esso", "navcan", "lawoffice", "nwi", "efc", "goa", "museum", "gac", "aerocentre", "cessna"):
         (folder / ("cyxd_%s.png" % nm)).write_bytes((Path(__file__).resolve().parent / ("assets/%s_sign.png" % nm)).read_bytes())
         (folder / ("cyxd_%s.png.xml" % nm)).write_text('<BitmapConfiguration>\n\t<BitmapSlot>MTL_BITMAP_DECAL0</BitmapSlot>\n</BitmapConfiguration>\n')
 
@@ -1084,65 +1084,107 @@ def shell_hangar():
     return m
 
 
+def awning(m, x_wall, nx, zc, w, y_top=3.7, y_low=2.9, out=1.2):
+    """Sloped blue fabric awning with a white valance over a door on an eave wall (x = x_wall, outward normal (nx, 0)), centred at z = zc."""
+    za, zb = zc - w / 2, zc + w / 2
+    xo = x_wall + nx * out
+    m.poly([(x_wall, y_top, za), (x_wall, y_top, zb), (xo, y_low, zb), (xo, y_low, za)], NAVY, (x_wall - nx, y_low - 1, zc))
+    for z in (za, zb):  # triangular cheeks
+        m.poly([(x_wall, y_top, z), (xo, y_low, z), (xo, y_low - 0.3, z), (x_wall, y_low - 0.3, z)], NAVY, (x_wall + nx * out / 2, y_low, zc))
+    m.box(min(xo, xo + nx * 0.03), max(xo, xo + nx * 0.03), y_low - 0.35, y_low, za, zb, WHITE)
+
+
 def hangar15():
-    """Hangar 15 (Centennial Flight Centre): pale-blue ribbed-clad hangar on a grey base.  The doors are in the gable end
-    (+Z, facing SE / "south"), ridge running back along Z.  Airside doors from the 2014 aerial; offices and awnings on the SW
-    eave wall (+X); "15" roundels on the south gable (SW end) and the north gable.  Mirrored at the end."""
+    """Hangar 15 (Centennial Flight Centre), reviewed 2026-11-03 (docs/cyxd/hangar15-photos/SOURCES.md): pale-blue ribbed hangar on a
+    2.6 m grey base, eave 9.5 m (scaled on a door and a pickup in Street View), low gable roof with the ridge along Z.  Footprint = OSM
+    way 325232647 less the NE wing: 43 x 55.6 m.  Pre-mirror frame: +Z = bearing 138 (the SE gable, the main door: "south"), +X = bearing
+    228 (the SW eave wall, landside).  The NE wing is a separate model (hangar15_wing).  Mirrored at the end."""
     m = Mesh(textured=True)
-    W, D, H = 47.0, 54.0, 7.6
+    W, D, H, RISE = 43.0, 55.6, 9.5, 3.0
     x0, x1, z0, z1 = -W / 2, W / 2, -D / 2, D / 2
     m.box(x0, x1, 0, 2.6, z0, z1, GREY, top=False)
     m.box(x0, x1, 2.6, H, z0, z1, PBLUE, top=False)
-    m.gable(x0, x1, H, 4.2, z0, z1, along_z=True, sw_roof=METAL, sw_wall=PBLUE)
+    m.gable(x0, x1, H, RISE, z0, z1, along_z=True, sw_roof=METAL, sw_wall=PBLUE)
     m.box(x1, x1 + 0.2, H - 0.3, H + 0.05, z0, z1, DGREY)
     m.box(x0 - 0.2, x0, H - 0.3, H + 0.05, z0, z1, DGREY)
-    # south gable (+Z): four grey-beige sliding leaves (x +1.8 .. -22.3, 6 m each) with a dark glazing strip, a beige-grey
-    # lower wall beside them (x +10.9 .. +1.8); the SW end bay (+X) stays plain pale blue
-    m.box(10.9, 1.8, 0, 5.4, z1, z1 + 0.12, DOORG)
-    m.box(1.8, -22.3, 0, 6.4, z1, z1 + 0.2, DOORG)
+    # SE gable (+Z), the main door (Commons 15256173388, Oct 2014, seen square-on from the south): four grey sliding leaves from 0.8 m off
+    # the NE corner (x0), 22.4 m wide and 7.5 m high, with a dark glazing strip at 3.9-4.9 m; a lower beige-grey wall beside them, then
+    # plain pale blue to the SW corner
+    dx0, dx1, DH = x0 + 0.8, x0 + 23.2, 7.5
+    leaf = (dx1 - dx0) / 4
+    m.box(dx1, 10.9, 0, 5.4, z1, z1 + 0.12, DOORG)
+    m.box(dx0, dx1, 0, DH, z1, z1 + 0.2, DOORG)
     for i in range(5):
-        xs = 1.8 - i * 6.025
-        m.box(xs - 0.08, xs + 0.08, 0, 6.4, z1 + 0.2, z1 + 0.26, DGREY)
+        xs = dx0 + i * leaf
+        m.box(xs - 0.08, xs + 0.08, 0, DH, z1 + 0.2, z1 + 0.26, DGREY)
     for i in range(4):
-        m.window((0, 0, 1), (1.8 - i * 6.025 - 0.3, 2.3, z1 + 0.2), (-1, 0, 0), 5.4, 1.9)
-    m.box(1.8, -22.3, 6.4, 6.55, z1, z1 + 0.28, DGREY)  # door header
-    number_disc(m, 17.0, 5.2, z1, (0, 1), 0.9, "15")  # south end of the gable, hidden behind the museum in the 2014 aerial
-    # landside roundel (user, 2026-10-21; Street View h15-01): high on the SW eave wall (the road side) toward its NW end, above the first windows
-    number_disc(m, x1, 6.5, z0 + 11.0, (1, 0), 0.7, "15")
-    for k in range(8):  # SW eave wall: office windows and two entrances with blue awnings
-        m.window((1, 0, 0), (x1, 4.6, z0 + 4.0 + k * 6.2), (0, 0, 1), 1.5, 1.2)
-    for zc in (-10.0, 10.0):
-        m.window((1, 0, 0), (x1, 0.0, zc - 0.6), (0, 0, 1), 1.2, 2.2)
-        m.box(x1, x1 + 1.1, 3.0, 3.4, zc - 1.2, zc + 1.2, NAVY)
+        m.window((0, 0, 1), (dx1 - i * leaf - 0.3, 3.9, z1 + 0.2), (-1, 0, 0), leaf - 0.6, 1.0)
+    m.box(dx0, dx1, DH, DH + 0.15, z1, z1 + 0.28, DGREY)  # door header
+    number_disc(m, 16.0, 7.4, z1, (0, 1), 0.9, "15")  # unconfirmed: behind the museum's roof in every airside view
+    # SW eave wall (+X, landside), s = metres from the NW corner (z0); positions from three views: Street View 17 and 25 Airport Rd
+    # (Jun 2012) and Commons 11094252276 (winter 2013), tied together by a perspective fit (+/-1 m to s 16, +/-3 m beyond)
+    wall = lambda s: z0 + s
+    number_disc(m, x1, 8.0, wall(1.1), (1, 0), 0.7, "15")  # high, just past the NW corner
+    m.window((1, 0, 0), (x1, 1.0, wall(1.1)), (0, 0, 1), 1.6, 1.2)
+    m.box(x1, x1 + 0.08, 0, 3.2, wall(3.9), wall(5.8), PANEL)  # light-grey service door
+    for s in (7.3, 15.3, 21.5, 31.5, 39.3, 46.0):  # upper-floor windows
+        m.window((1, 0, 0), (x1, 5.0, wall(s - 0.55)), (0, 0, 1), 1.1, 0.9)
+    for s in (15.3, 21.5, 31.5):  # ground-floor windows under them
+        m.window((1, 0, 0), (x1, 1.3, wall(s - 0.55)), (0, 0, 1), 1.1, 1.0)
+    for s in (11.1, 27.0, 45.0):  # glazed entrances under blue awnings
+        m.window((1, 0, 0), (x1, 0.0, wall(s - 1.0)), (0, 0, 1), 2.0, 2.4)
+        awning(m, x1, 1, wall(s), 3.7)
+    # NW gable (-Z), s = metres from the SW corner: two small upper windows and the Cessna board near the corner, a small window and a
+    # side door with a little canopy low down, a light box (floodlight) high at the corner; a low grey annex toward the middle
+    gw = lambda s: x1 - s
+    for s in (2.5, 4.8):
+        m.window((0, 0, -1), (gw(s - 0.3), 5.0, z0), (-1, 0, 0), 0.6, 1.0)
+    rect_sign(m, gw(7.8), 7.2, z0 - 0.15, (0, -1), 1.8, 2.2, "cessna")
+    m.box(gw(4.4), gw(3.8), 7.6, 8.0, z0 - 0.5, z0, DGREY)  # floodlight
+    m.window((0, 0, -1), (gw(6.9), 1.2, z0), (-1, 0, 0), 0.8, 1.0)
+    m.window((0, 0, -1), (gw(11.0), 0.0, z0), (-1, 0, 0), 1.0, 2.2)
+    m.box(gw(12.3), gw(10.7), 2.5, 2.65, z0 - 1.0, z0, NAVY)
+    ax0, ax1 = gw(32.6), gw(18.0)  # annex: s 18-32.6, 4.4 m high (depth estimated), door near its NE end
+    m.box(ax0, ax1, 0, 4.4, z0 - 4.5, z0, GREY)
+    m.box(ax0 - 0.1, ax1 + 0.1, 4.2, 4.5, z0 - 4.6, z0, DGREY)
+    m.window((0, 0, -1), (gw(29.8), 0.0, z0 - 4.5), (-1, 0, 0), 1.0, 2.2)
     m.mirror_x()
     return m
 
 
 def hangar15_wing():
-    """Low east wing attached to Hangar 15's NE (east) eave wall, flush with its south face: pale-blue sides, white parapet band,
-    dark slate sliding doors with a glazing strip (2014 aerial).  Placed with heading 48 so the door face (+Z) looks NE, toward the
-    runway; the 56.5 m length (the full length of Hangar 15 and a little more) runs along X.  Mirrored at the end."""
+    """Hangar 15's runway-side (NE) wing, reviewed 2026-11-03: OSM way 325232647 (u 220.9-282.5, v 19.6-36.5 in the Hangar 18 frame),
+    the City of Edmonton Archives obliques ET-28-895 / -899 (c.1980-82), the west line-up photo (NAIT parkade, 2014) and Commons
+    15256173388 (Oct 2014).  Pale-blue walls with a white parapet band, 6.5 m; the middle section (u 244.3-259.5) stands 8 m with four tall
+    glazed bays between white piers; the "15" disc just SE of it; a window toward the NW end; the wing's SE end (beside the main door) is a
+    dark-navy door face; the SE part of the NE face sits 0.8 m back (OSM).  The NW end runs 5.3 m past the hangar's NW gable.
+    Pre-mirror frame: +Z = bearing 48 (NE, runway), +X = bearing 138 (SE); origin u 251.7, v 25.7.  Mirrored at the end."""
     m = Mesh(textured=True)
-    W, D, H = 56.5, 14.5, 5.8
-    x0, x1, z0, z1 = -W / 2, W / 2, -D / 2, D / 2
-    m.box(x0, x1, 0, H, z0, z1, PBLUE, top=False)
-    m.box(x0 - 0.1, x1 + 0.1, H - 1.2, H + 0.3, z0 - 0.1, z1 + 0.1, PANEL)
-    # airside face as seen from the NAIT parkade roof (west-lineup photo, 2014): pale blue-grey wall, a central cluster of tall window
-    # bays with a porthole at its SE end, one more window near the NW end; no dark doors visible
-    # City of Edmonton Archives ET-28-895 / -899 (c.1980-82): the middle of this wing stands taller than its ends, about a quarter of
-    # the length, with four tall glazed bays between white piers
-    rx0, rx1, RH = -10.2, 6.6, 7.5
-    m.box(rx0, rx1, H, RH, z0, z1, PBLUE, top=False)
-    m.box(rx0 - 0.1, rx1 + 0.1, RH - 0.3, RH + 0.3, z0 - 0.1, z1 + 0.1, PANEL)
+    H, RH = 6.5, 8.0
+    xa, xb, xs, xc = -30.8, -25.5, 7.8, 30.8  # NW end, hangar NW gable line, step in the NE face, SE end
+    zh, zn, zf, zr = -6.1, -10.8, 10.8, 10.0  # hangar NE wall, the NW part's SW face, NE face, NE face of the SE part
+    rx0, rx1 = -7.4, 7.8
+    # blocks: NW part (past the gable), main part either side of the raised middle, SE part (set back); the white parapet band caps each
+    for a, b, c, e in ((xa, xb, zn, zf), (xb, rx0, zh, zf), (rx1, xs, zh, zf), (xs, xc, zh, zr)):
+        m.box(a, b, 0, H, c, e, PBLUE, top=False)
+        m.box(a - 0.1, b + 0.1, H - 1.2, H + 0.3, c - 0.1, e + 0.1, PANEL)
+    m.box(rx0, rx1, 0, RH, zh, zf, PBLUE, top=False)  # raised middle
+    m.box(rx0 - 0.1, rx1 + 0.1, RH - 0.3, RH + 0.3, zh, zf + 0.1, PANEL)
     bay = (rx1 - rx0) / 4
     for k in range(4):
-        m.window((0, 0, 1), (rx1 - k * bay - 0.45, 0.9, z1), (-1, 0, 0), bay - 0.9, 5.9)
+        m.window((0, 0, 1), (rx1 - k * bay - 0.45, 0.9, zf), (-1, 0, 0), bay - 0.9, 6.3)
     for k in range(5):
         px = rx1 - k * bay
-        m.box(px - 0.25, px + 0.25, 0, RH - 0.3, z1, z1 + 0.12, PANEL)
-    m.window((0, 0, 1), (-19.0, 1.6, z1), (1, 0, 0), 2.2, 1.0)
-    m.box(7.6 - 0.45, 7.6 + 0.45, 2.4, 3.3, z1, z1 + 0.06, DARK)  # porthole (square stand-in)
-    number_disc(m, 17.0, 4.9, z1 + 0.1, (0, 1), 0.65, "15")  # on the low section clear of the raised middle, facing the taxiway
+        m.box(px - 0.25, px + 0.25, 0, RH - 0.3, zf, zf + 0.12, PANEL)
+    number_disc(m, 10.3, 4.2, zr + 0.1, (0, 1), 0.8, "15")
+    m.window((0, 0, 1), (-17.1, 1.6, zf), (1, 0, 0), 2.2, 1.0)
+    m.box(-28.5, -27.2, 0, 2.8, zf, zf + 0.7, PBLUE)  # entry porch near the NW end (OSM)
+    m.window((0, 0, 1), (-28.35, 0.0, zf + 0.7), (1, 0, 0), 1.0, 2.2)
+    # SE end (+X): dark-navy sliding leaves nearly the full width, 4.6 m high, under the parapet band
+    m.box(xc, xc + 0.15, 0, 4.6, zh + 0.4, zr - 0.4, NAVY)
+    for k in range(4):
+        zk = zh + 0.4 + k * (zr - zh - 0.8) / 3
+        m.box(xc + 0.15, xc + 0.2, 0, 4.6, zk - 0.05, zk + 0.05, DARK)
     m.mirror_x()
     return m
 
@@ -1417,8 +1459,8 @@ def main():
     for title, (xt, zt), fn, name, hw, hd, hdg in (
             ("Aerocentre (two-storey blue-grey FBO building)", (6.25, 58.0), aerocentre, "cyxd_aerocentre", 14.0, 17.2, "48"),
             ("Shell hangar with north wing and west wing", (36.75, 87.5), shell_hangar, "cyxd_shell_hangar", 29.5, 31.25, "48"),
-            ("Hangar 15 (Centennial Flight Centre)", (33.5, 170.0), hangar15, "cyxd_hangar15", 23.5, 27.0, "138"),
-            ("Hangar 15 east wing", (2.75, 170.75), hangar15_wing, "cyxd_hangar15_wing", 28.25, 7.25, "48")):
+            ("Hangar 15 (Centennial Flight Centre)", (35.5, 170.1), hangar15, "cyxd_hangar15", 21.5, 27.8, "138"),
+            ("Hangar 15 east wing", (7.9, 167.8), hangar15_wing, "cyxd_hangar15_wing", 30.8, 10.8, "48")):
         la, lo = tower_frame(xt, zt)
         out.append((title, la, lo, hdg, fn().save(MODELLIB / name, name)))
         excl.append((title, footprint(la, lo, hdg, -hw - 6, hw + 6, -hd - 6, hd + 6)))

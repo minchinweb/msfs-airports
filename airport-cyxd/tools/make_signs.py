@@ -239,7 +239,27 @@ def aerocentre():
     return b.resize((1024, 1024), Image.LANCZOS)
 
 
+def cessna():
+    """Cessna board high on Hangar 15's NW gable near the landside corner (1.8 x 2.2 m; Street View 17 / 25 Airport Rd, Jun 2012, and
+    Commons 11094252276): white board, a round emblem over the CESSNA name.  Too small in the photos to read the artwork, so this is a
+    generic stand-in: a navy disc with a white swept wing and a red stripe, navy lettering.  Stretched over the whole square."""
+    w = 1800
+    h = 2200
+    b = Image.new("RGB", (w, h), (240, 240, 236))
+    d = ImageDraw.Draw(b)
+    d.rectangle((20, 20, w - 20, h - 20), outline=(40, 52, 110), width=24)
+    cx, cy, r = w / 2, h * 0.38, w * 0.33
+    d.ellipse((cx - r, cy - r, cx + r, cy + r), fill=(30, 50, 120))
+    d.polygon([(cx - r * 0.85, cy + r * 0.10), (cx + r * 0.80, cy - r * 0.42), (cx + r * 0.62, cy - r * 0.12), (cx - r * 0.55, cy + r * 0.30)],
+              fill=(244, 244, 244))
+    d.polygon([(cx - r * 0.70, cy + r * 0.42), (cx + r * 0.70, cy + r * 0.02), (cx + r * 0.60, cy + r * 0.20), (cx - r * 0.45, cy + r * 0.55)],
+              fill=(200, 36, 40))
+    text_fit(d, "CESSNA", "arialbd.ttf", (w * 0.08, h * 0.70, w * 0.92, h * 0.88), (30, 50, 120))
+    return b.resize((1024, 1024), Image.LANCZOS)
+
+
 if __name__ == "__main__":
+    cessna().save(HERE / "assets/cessna_sign.png")
     aerocentre().save(HERE / "assets/aerocentre_sign.png")
     esso().save(HERE / "assets/esso_sign.png")
     navcan().save(HERE / "assets/navcan_sign.png")

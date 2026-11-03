@@ -1260,6 +1260,10 @@ def hangar18():
     # (u 98-105 on the 2014 aerial).  User, 2026-11-02: the fence runs on to the Aerocentre and only breaks at the tower.
     chainlink_fence(m, [(44.0, -39.5), (76.4, -39.5), (76.4, 21.3)], gap=(76.4, -17.0, 3.0), h=2.4, closed=False)
     chainlink_fence(m, [(95.3, 17.0), (127.5, 17.0)], gap=(101.5, 17.0, 3.5), h=2.4, closed=False)
+    # user, 2026-11-03: the Aerocentre and the Shell hangar close the line from there; the fence carries on across the gap between the Shell
+    # hangar's SE wall (u 200.9) and Hangar 15's NW gable (u 226.2), airside of the car columns (v up to 10), clear of Hangar 15's NW annex
+    # (v 9.2) and its wing's NW end (v 14.9); a vehicle gate in the middle.  No photo shows this run; the line is chosen, not traced.
+    chainlink_fence(m, [(200.9, 12.5), (226.2, 12.5)], gap=(213.5, 12.5, 3.0), h=2.4, closed=False)
     m.mirror_x()
     return m
 

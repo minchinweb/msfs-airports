@@ -17,7 +17,7 @@ Reviewed 2026-10-22. Current state is in `STATUS.md`; links are in `reference-li
 
 ## Not built or not applied yet
 
-1. Hangar 15: adjust the face to the west line-up photo (`west-lineup-photos/flickr_woodhead_13858722704.jpg`).
+1. Hangar 15: rebuilt 2026-11-03 (see `hangar15-photos/SOURCES.md`). Still to check in the sim: the 9.5 m eave and the 6.5 / 8 m wing heights, the landside window positions past s 16 (+/-3 m), the NW annex depth (assumed), the new fence across the Hangar 16-15 gap, and the car rows. The "15" disc on the SE door gable is unconfirmed.
 2. Hangar 16: the box-out at the Aerocentre's SE end is not built. The AEROCENTRE logo is now a texture, and the wing's second tier is built (review 2026-11-02, see `hangar16-photos/SOURCES.md`). Still to check in the sim: the wing end 6 m short of the hangar's SE corner, the wing tier depths, and the car parks against the walls.
 3. Wind sock: move it to the position seen in the PWA 737 video (YouTube q5-woik2XsQ; Reddit 1ffvw4j). Watch the same videos for building layout and the taxi sign style.
 4. A static Pacific Western 737 on the apron.
