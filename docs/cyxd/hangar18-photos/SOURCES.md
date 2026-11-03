@@ -26,5 +26,15 @@ Frames in order, panning from the control tower toward the north:
 
 Takeaways for the model: (a) the clubhouse is a separate low rounded-corner building between the tower and the hangar, on the airside, with the club name on its fascia; (b) the green-fronted hangar is next to it, with the white swoosh-striped wing at its north end carrying the "18" roundel; (c) all of these are from the 2010s, so check older aerials for the 1940-1985 look.
 
+## Review (2026-11-02): door face, swoosh wall, parking, fence
+- **The airside block's faces were swapped.** 11094307134 (from the tower) shows the green face end at the pier, with open apron beyond and no white wall. 11165054745 (straight on) shows the pier at the right-hand (NE) corner of the green face. The video and JetPhotos 5873800 show the white wall turning away from the pier, with the swoosh curving up beside it and the "18" at its far end. So the whole SE face (39 m) is green and the white swoosh wall is the NE face.
+- **Doors:** in 11165054745 the face recedes to the right (column height 374 px at the left edge, 320 px at the pier). With that perspective correction, the two leaves span 22-78 % of the green face, so they are centred and about 20 m wide. The pier's personnel door (2.1 m) scales the wall to about 9.3 m, the leaves to 5.6 m, and the black band to 6.1-6.5 m. Each leaf has 8 small windows at about 2 m.
+- **Parking and fence** (2014 Wayback, measured in the hangar frame u = bearing 138, v = bearing 48, origin at the `HANGARS` centre):
+  - Trainers stood in three rows NE of the hangar (v about 76, 66 and 48).
+  - A column of four or five stood at u 52-58 between the door face and the tower.
+  - Four or five stood in the yard SE of the club room (u 44-76, v -40..-5).
+  - A light fence line runs along the yard's landside edge (v -39.5) and up u 76.4 to the tower annex. The red-cab fuel truck stands in a gap in it at v about -17, and cars park beyond it.
+  - The balcony photo 11094403683 shows the same fence beyond the trainers.
+
 ## Three-block reading (2026-10-21)
 User: Hangar 18 is three wings stuck together, from the road to the apron: the narrow landside club block (offices with landside windows, a viewing deck on the upper floor), a plain middle block, and the green hangar on the airside. Footprints measured on the Esri Wayback 2014-02-20 tile (zoom 17, about 0.7 m / px), rotated so the tower frame heading 48 is up: `../footprints/hangar18-three-blocks.png` (A airside x -26..27, z -17..22; B middle x -12..40, z -49..-17; C landside club x -20..44, z -62..-49; C is the least certain, the aerial shows no clear roof there). Video frames (`woodys_11395521785_video.mp4`, one per 1.5 s): from the tower side the facades run club room (balcony, fascia lettering) / teal hangar door / cream block pier with a blue sign / olive hangar with two white leaves / pier with door / long white wing with the swoosh and the "18" at its far corner, then the lower brown buildings (Hangar 19). The deck and fascia in the video are the club room's SE end (the same room Flickr 11094403683 was shot from, looking at the tower).

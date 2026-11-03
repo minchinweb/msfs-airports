@@ -1159,25 +1159,34 @@ def hangar18():
          pier with a door and the long white wing with the swoosh and the "18" at its NE corner (airside video, 11165054745)."""
     m = fmesh()
     # ---- A: airside block -------------------------------------------------------------------
-    ax0, ax1, az0, az1, zp = -26.0, 27.0, -17.0, 22.0, 1.5
-    m.box(ax0, ax1, 0, 8.6, az0, zp - 1.5, GREEN, top=False)  # olive hangar z -17..0
-    m.box(ax0 - 0.1, ax1 + 0.1, 8.6, 8.9, az0, zp - 1.5, DGREY)
-    m.box(ax0, ax1 + 0.1, 0, 8.6, zp - 1.5, zp, CREAM)  # block pier between the hangar and the wing (z 0..1.5)
-    m.box(ax0, ax1, 0, 9.6, zp, az1, RWHITE, top=False)  # white wing z 1.5..22
-    m.box(ax0 - 0.1, ax1 + 0.1, 9.6, 9.9, zp, az1 + 0.1, DGREY)
-    xd = ax1 + 0.04
-    m.box(xd, xd + 0.08, 0, 6.4, -14.5, -2.5, DARK)  # door opening
-    for z0_ in (-14.5, -8.5):
-        m.box(xd + 0.08, xd + 0.28, 0, 6.2, z0_ + 0.05, z0_ + 5.95, RWHITE)  # two sliding leaves
-        for k in range(3):
-            m.window((1, 0, 0), (xd + 0.28, 4.7, z0_ + 0.5 + k * 1.8), (0, 0, 1), 1.3, 0.5)  # small windows near the top of each leaf
-    m.box(xd + 0.08, xd + 0.4, 6.2, 6.8, -15.0, -2.0, DARK)  # black band over the doors
-    m.window((1, 0, 0), (ax1 + 0.1, 0.0, -1.1), (0, 0, 1), 0.9, 2.1)  # pier personnel door
-    # swoosh on the white wing's SE face: grey-blue band with a thin red line, curving up toward the SW end
-    for y0, y1, sw in ((5.6, 6.2, STEEL), (5.2, 5.4, RED)):
-        m.box(ax1, ax1 + 0.05, y0, y1, 6.0, 20.0, sw)
-        m.poly([(ax1 + 0.05, y0, 6.0), (ax1 + 0.05, y1, 6.0), (ax1 + 0.05, y1 + 2.4, 3.2), (ax1 + 0.05, y0 + 2.4, 3.2)], sw, (ax1 - 5, y0, 5.0))
-    number_disc(m, ax1, 8.0, 20.4, (1, 0), 0.95, "18")  # NE corner of the SE face
+    # Reviewed 2026-11-02 (Opus): the whole SE face (z -17..22) is the green door face, with the cream block pier at its EAST corner; the white
+    # wall with the swoosh is the NE face (the runway side), not a wing on the SE face.  Evidence: from the tower (11094307134) the green face
+    # ends at the pier with open apron beyond, and no white wall shows; straight on (11165054745) the pier is the right-hand (NE) corner of the
+    # green face; in the video and on JetPhotos 5873800 the white wall turns away from the pier with the swoosh curving up beside it and the
+    # "18" at its far (north) corner.  Door position from 11165054745, perspective-corrected (the face recedes to the right): the two leaves
+    # span 22-78 % of the green face, so they are centred; 5.6 m high, black band at 6.1..6.5 m, pier door 2.1 m gives the 9.3 m wall.
+    ax0, ax1, az0, az1, H = -26.0, 27.0, -17.0, 22.0, 9.3
+    zq = 18.8  # green face z -17..18.8, pier z 18.8..22
+    m.box(ax0, ax1, 0, H, az0, az1, RWHITE, top=False)
+    m.box(ax0 - 0.1, ax1 + 0.1, H, H + 0.3, az0, az1 + 0.1, DGREY)  # roof and coping
+    xd = ax1 + 0.02
+    m.box(ax1, xd + 0.08, 0, H, az0, zq, GREEN)  # ribbed green cladding over the SE face
+    m.box(xd + 0.08, xd + 0.2, 6.1, 6.5, az0, zq, DARK)  # black band across the whole face, above the doors
+    zd0, zd1, hd = -9.0, 11.0, 5.6
+    m.box(xd + 0.08, xd + 0.14, 0, hd + 0.1, zd0 - 0.1, zd1 + 0.1, DGREY)  # door frame
+    for z0_, z1_ in ((zd0, (zd0 + zd1) / 2 - 0.05), ((zd0 + zd1) / 2 + 0.05, zd1)):
+        m.box(xd + 0.14, xd + 0.3, 0, hd, z0_, z1_, RWHITE)  # two sectional leaves
+        for k in range(8):
+            m.window((1, 0, 0), (xd + 0.3, 2.0, z0_ + 0.6 + k * (z1_ - z0_ - 1.2) / 7.0 - 0.37), (0, 0, 1), 0.75, 0.35)  # row of small windows
+    m.box(ax1 - 3.0, ax1 + 0.2, 0, H + 0.2, zq, az1 + 0.15, CREAM)  # block pier at the east corner, a little taller than the cladding
+    m.window((1, 0, 0), (ax1 + 0.2, 0.0, 20.05), (0, 0, 1), 0.9, 2.1)  # its personnel door
+    # NE face: grey-teal swoosh over a thin red-orange line, straight along the wall, curving up beside the pier; the "18" at the north corner
+    zs = az1 + 0.05
+    path = [(-21.0, 0.0), (17.0, 0.0), (20.0, 0.4), (22.0, 1.2), (23.3, 2.2), (24.0, 3.2)]  # (x, rise)
+    for y0, y1, sw in ((4.4, 5.0, STEEL), (3.7, 3.9, RED)):
+        for (xa, ra), (xb, rb) in zip(path, path[1:]):
+            m.poly([(xa, y0 + ra, zs), (xb, y0 + rb, zs), (xb, y1 + rb, zs), (xa, y1 + ra, zs)], sw, ((xa + xb) / 2, y0, az1 - 5.0))
+    number_disc(m, ax0 + 2.6, 7.6, az1, (0, 1), 0.95, "18")
     # ---- B: middle block --------------------------------------------------------------------
     bx0, bx1, bz0, bz1 = -12.0, 40.0, -49.0, -17.0
     m.box(bx0, bx1, 0, 4.6, bz0, bz1, TEAL, top=False)
@@ -1243,6 +1252,14 @@ def hangar18():
     m.pos[n_c:] = [(x + 18.0, y, z) for x, y, z in m.pos[n_c:]]
     # shift the origin to the middle of the whole footprint (x -26..44, z -62..22)
     m.pos = [(x - 18.0, y, z + 20.0) for x, y, z in m.pos]
+    # airside / landside fence between the club and the tower (2014 aerial, measured in this final frame; the club balcony photo 11094403683
+    # shows it beyond the parked trainers, with cars and the Aerocentre behind it): along the landside edge of the club yard from the club
+    # room's SE end wall, then NE up to the tower annex's SW wall (the annex's west block, v 21.3 at u 76.3-82, from the tower model's
+    # ground outline).  The fuel truck stood in the gate in 2014.  The annex itself closes the line to its SE corner (u 95.3, v 17); from
+    # there a second run crosses to the Aerocentre's NW wall (model u 127.5), with a vehicle gate across the landside access road
+    # (u 98-105 on the 2014 aerial).  User, 2026-11-02: the fence runs on to the Aerocentre and only breaks at the tower.
+    chainlink_fence(m, [(44.0, -39.5), (76.4, -39.5), (76.4, 21.3)], gap=(76.4, -17.0, 3.0), h=2.4, closed=False)
+    chainlink_fence(m, [(95.3, 17.0), (127.5, 17.0)], gap=(101.5, 17.0, 3.5), h=2.4, closed=False)
     m.mirror_x()
     return m
 

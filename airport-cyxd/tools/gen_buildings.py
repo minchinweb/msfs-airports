@@ -491,9 +491,10 @@ def obox(m, p0, p1, y0, y1, hw, sw):
     m.poly([(x, y1, z) for x, z in q], sw, c)
 
 
-def chainlink_fence(m, pts, gap=None, h=2.4):
-    """Closed chain-link fence (posts + 3 rails, open mesh) along pts [(x, z)]; gap = (x, z, half-length) leaves a gate opening."""
-    for i in range(len(pts)):
+def chainlink_fence(m, pts, gap=None, h=2.4, closed=True):
+    """Chain-link fence (posts + 3 rails, open mesh) along pts [(x, z)], closed back to the first point unless closed=False;
+    gap = (x, z, half-length) leaves a gate opening."""
+    for i in range(len(pts) if closed else len(pts) - 1):
         a, b = pts[i], pts[(i + 1) % len(pts)]
         ln = math.hypot(b[0] - a[0], b[1] - a[1])
         n = max(1, int(round(ln / 3.0)))
