@@ -2018,7 +2018,11 @@ def place(out, excl, modellib, footprint):
     # rectangle (a base-scenery object is not covered by the building polygons), terminal frame x -100..100, z -130..45 (garage and terminal plus walkway)
     block = footprint("53.57094000", "-113.52317800", "51", -100.0, 100.0, -130.0, 45.0)
     excl.append(("Old terminal and parking garage: whole block", block))
-    OBJECT_RECTS.append(("old terminal and garage: remove sim-placed objects between them", block))
+    # ExclusionRectangle is north-aligned: one rectangle round this rotated block (heading 51) was its whole lat/lon bounding box, ~50 % bigger,
+    # and its NE corner removed the Esso frontage car park (2026-11-02).  Cover the block with 16 latitude bands instead, each only as wide as
+    # the block is within the band (overshoot at most one band height, ~16 m, at the corners).
+    for k, band in enumerate(_lat_bands(block, 16)):
+        OBJECT_RECTS.append(("old terminal and garage: remove sim-placed objects between them (band %d of 16)" % (k + 1), band))
     # trees pushing through Hangars 38 / 39 / 40 and between 38 and 39 (user, 2026-10-21): vegetation-free hull round all three plus a margin
     pts = []
     for name, title, fn, lat, lon, hdg, W, D in HANGARS:
@@ -2031,6 +2035,20 @@ def place(out, excl, modellib, footprint):
 
 OBJECT_RECTS = []  # (title, corners): ExclusionRectangle for base-scenery objects, written by gen_buildings.main()
 VEG_EXCL = []  # (title, corners): polygons that also remove trees
+
+
+def _lat_bands(corners, n):
+    """Cover the convex polygon corners [(lat, lon)] with n axis-aligned rectangles (as corner lists), one per latitude band, each spanning
+    the polygon's longitude extent within that band (polygon clipped to the band)."""
+    from shapely.geometry import Polygon, box
+    poly = Polygon([(lo, la) for la, lo in corners])
+    lo0, la0, lo1, la1 = poly.bounds
+    out = []
+    for k in range(n):
+        b0, b1 = la0 + (la1 - la0) * k / n, la0 + (la1 - la0) * (k + 1) / n
+        x0, _, x1, _ = poly.intersection(box(lo0, b0, lo1, b1)).bounds
+        out.append([(b0, x0), (b0, x1), (b1, x1), (b1, x0)])
+    return out
 
 
 def _hull(pts):
