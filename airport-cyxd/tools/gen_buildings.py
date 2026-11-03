@@ -60,6 +60,9 @@ def write_palette(path):
 TEX_T = 1.28  # metres per texture tile (8 clapboards / 8 shingle rows)
 TEX_NAMES = ("siding", "shingle_red", "shingle_grey", "ribbed", "ribbed_blue", "ribbed_green", "ribbed_mustard", "ribbed_steel",
              "ribbed_tan", "ribbed_white", "ribbed_yellow", "ribbed_teal", "brick", "shell", "esso", "navcan", "lawoffice", "nwi", "efc", "goa", "museum", "gac")
+# night-lit materials: palette colour by day, warm emissive at night only (ASOBO_material_day_night_switch; the SDK's Blender exporter writes
+# emissiveFactor = colour x scale, default scale 1000).  key -> emissiveFactor.  "glow" = office windows, "glow_cab" = the dimmer tower cab.
+GLOW = {"glow": [180.0, 140.0, 85.0], "glow_cab": [40.0, 44.0, 36.0]}
 
 
 
@@ -193,7 +196,7 @@ class Mesh:
                 key = "shingle_red"
             elif not vertical and sw in (ROOF, DARK):
                 key = "shingle_grey"
-        if key != "flat" and uvs is None:
+        if key != "flat" and key not in GLOW and uvs is None:
             ua = (n[2], 0.0, -n[0])  # horizontal, in the surface plane
             ul = math.hypot(ua[0], ua[2])
             ua = (ua[0] / ul, 0.0, ua[2] / ul) if ul > 1e-6 else (1.0, 0.0, 0.0)
@@ -203,7 +206,7 @@ class Mesh:
             self.nrm.append(n)
             if uvs is not None:
                 self.uv.append(uvs[len(self.uv) - base])
-            elif key == "flat":
+            elif key == "flat" or key in GLOW:
                 self.uv.append(uvp)
             else:
                 self.uv.append((sum(p[i] * ua[i] for i in range(3)) / TEX_T, -sum(p[i] * va[i] for i in range(3)) / TEX_T))
@@ -248,10 +251,11 @@ class Mesh:
     def blocked(self, x0, x1, y0, y1, z0, z1):
         return any(x0 < k[1] and x1 > k[0] and y0 < k[3] and y1 > k[2] and z0 < k[5] and z1 > k[4] for k in self.keepouts)
 
-    def window(self, face, origin, u_axis, w, h, off=0.06, frame=None):
+    def window(self, face, origin, u_axis, w, h, off=0.06, frame=None, lit=None):
         """Dark window on a wall: origin = lower-left corner on the wall, face = outward normal.  The glass is the front face of a closed
         dark backing box sunk into the wall, so nothing can be seen through the opening; the surround and sill are embedded in the wall
-        (no standoff gap, so no floating frame or odd shadows).  Skipped if inside a keepout box (see keepout)."""
+        (no standoff gap, so no floating frame or odd shadows).  Skipped if inside a keepout box (see keepout).  lit = a GLOW key: the
+        glass glows at night."""
         fr = self.frame if frame is None else frame
         ext = 0.4 if fr is not None else 0.1
         ca = [origin[i] + u_axis[i] * w for i in range(3)]
@@ -266,7 +270,7 @@ class Mesh:
             return tuple(origin[i] + u_axis[i] * du + up[i] * dv + face[i] * dn for i in range(3))
         # backing box: sunk 0.1 into the wall, glass face at gl
         c = corner(w / 2, h / 2, -0.05)
-        self.poly([corner(0, 0, gl), corner(w, 0, gl), corner(w, h, gl), corner(0, h, gl)], DARK, c)
+        self.poly([corner(0, 0, gl), corner(w, 0, gl), corner(w, h, gl), corner(0, h, gl)], DARK, c, tex=lit)
         for pts in ([corner(0, 0, -0.1), corner(w, 0, -0.1), corner(w, 0, gl), corner(0, 0, gl)],
                     [corner(0, h, -0.1), corner(w, h, -0.1), corner(w, h, gl), corner(0, h, gl)],
                     [corner(0, 0, -0.1), corner(0, h, -0.1), corner(0, h, gl), corner(0, 0, gl)],
@@ -305,7 +309,7 @@ class Mesh:
         pos = b"".join(struct.pack("<3f", *p) for p in self.pos)
         nrm = b"".join(struct.pack("<3f", *p) for p in self.nrm)
         uv = b"".join(struct.pack("<2f", *p) for p in self.uv)
-        keys = [k for k in ("flat",) + TEX_NAMES if k in self.tri_mat] or ["flat"]
+        keys = [k for k in ("flat",) + TEX_NAMES + tuple(GLOW) if k in self.tri_mat] or ["flat"]
         blob = pos + nrm + uv
         views = [{"buffer": 0, "byteOffset": 0, "byteLength": len(pos)},
                  {"buffer": 0, "byteOffset": len(pos), "byteLength": len(nrm)},
@@ -329,15 +333,19 @@ class Mesh:
         (folder / f"{name}.bin").write_bytes(blob)
         mats, texs, imgs = [], [], []
         for k in keys:
-            uri = "cyxd_palette.png" if k == "flat" else "cyxd_%s.png" % k
+            flat = k == "flat" or k in GLOW
+            uri = "cyxd_palette.png" if flat else "cyxd_%s.png" % k
             imgs.append({"uri": uri})
-            texs.append({"sampler": 0 if k == "flat" else 1, "source": len(imgs) - 1})
+            texs.append({"sampler": 0 if flat else 1, "source": len(imgs) - 1})
             mats.append({"name": "cyxd_" + k, "pbrMetallicRoughness": {
                 "baseColorTexture": {"index": len(texs) - 1}, "metallicFactor": 0.0, "roughnessFactor": 0.9}})
+            if k in GLOW:
+                mats[-1]["emissiveFactor"] = GLOW[k]
+                mats[-1]["extensions"] = {"ASOBO_material_day_night_switch": {"enabled": True}}
         g = {
             "asset": {"version": "2.0", "generator": "airport-cyxd/tools/gen_buildings.py",
                       "extensions": {"ASOBO_normal_map_convention": {"tangent_space_convention": "DirectX"}}},
-            "extensionsUsed": ["ASOBO_normal_map_convention"],
+            "extensionsUsed": ["ASOBO_normal_map_convention"] + (["ASOBO_material_day_night_switch"] if any(k in GLOW for k in keys) else []),
             "scene": 0, "scenes": [{"nodes": [0]}],
             "nodes": [{"mesh": 0, "name": name}],
             "meshes": [{"name": name, "primitives": prims}],
@@ -559,13 +567,13 @@ def ring(hx, hz, c, cx=0.0, cz=0.0):
             (cx + hx - c, cz + hz), (cx - hx + c, cz + hz), (cx - hx, cz + hz - c), (cx - hx, cz - hz + c)]
 
 
-def frustum(m, r0, y0, r1, y1, sw, top=False, bottom=False):
-    """Prism/frustum between two similar rings (x, z) at heights y0, y1."""
+def frustum(m, r0, y0, r1, y1, sw, top=False, bottom=False, tex=None):
+    """Prism/frustum between two similar rings (x, z) at heights y0, y1 (tex applies to the side faces only)."""
     n = len(r0)
     cen = (sum(x for x, z in r0) / n, (y0 + y1) / 2, sum(z for x, z in r0) / n)
     for i in range(n):
         a0, b0, a1, b1 = r0[i], r0[(i + 1) % n], r1[i], r1[(i + 1) % n]
-        m.poly([(a0[0], y0, a0[1]), (b0[0], y0, b0[1]), (b1[0], y1, b1[1]), (a1[0], y1, a1[1])], sw, cen)
+        m.poly([(a0[0], y0, a0[1]), (b0[0], y0, b0[1]), (b1[0], y1, b1[1]), (a1[0], y1, a1[1])], sw, cen, tex=tex)
     if top:
         m.poly([(x, y1, z) for x, z in r1], sw, cen)
     if bottom:
@@ -632,28 +640,66 @@ def control_tower():
         e = ring(hx + 0.04, hz + 0.04, c)
         frustum(m, e, y - 0.04, e, y + 0.04, DGREY)
     top = 7 * FL + 0.1
-    # windows: 2 per flat face per floor, 7 floors; face +-Z (width 2*(hx-c)), face +-X (width 2*(hz-c))
-    for k in range(7):
+    # Faces in this (pre-rotation) frame: +Z = NE (runway), -Z = SW (landside, over the annex), +X = SE (Aerocentre), -X = NW (Hangar 18);
+    # the north corner is (-X, +Z).  Reviewed 2026-11-02 against JetPhotos 5873800, wherezjeff, Flickr 33836413 (airside), 11165250793 and
+    # 11142546856 (SE / E) and 11094305354 / 11094396223 (SW, 2013):
+    # - windows only on the NE and SE faces, 2 per floor on floors 1-6; the ground floor has none (door + steps on the NE face, two louvres
+    #   on the SE face); SE floor 1 has only its SW window, and SE floor 5 (salmon) a large salmon-framed panel in place of its NE window.
+    #   The NW and SW faces are blank.  Floors 5-6 (salmon, white) glow at night.
+    # - "17" disc on the NE face over the window column, between the floor 2 and 3 windows; by 2013 a second one centred on the SW face.
+    # - north stairs: an open steel zig-zag stair from the ground to the balcony in a 2.6 m deep enclosure on the NW face's north end, its
+    #   NE wall flush with the NE face; outer wall clad on the corner half and open beside it, two tall panels with gaps on the SW side.
+    for k in range(1, 7):
         y = 1.0 + k * FL
+        lit = "glow" if k >= 5 else None
         for x in (-1.3, 1.3):
-            m.window((0, 0, 1), (x - 0.45, y, hz), (1, 0, 0), 0.9, 1.1)
-            m.window((0, 0, -1), (x - 0.45, y, -hz), (1, 0, 0), 0.9, 1.1)
+            m.window((0, 0, 1), (x - 0.45, y, hz), (1, 0, 0), 0.9, 1.1, lit=lit)
         for z in (-1.4, 1.4):
-            m.window((1, 0, 0), (hx, y, z - 0.45), (0, 0, 1), 0.9, 1.1)
-            m.window((-1, 0, 0), (-hx, y, z - 0.45), (0, 0, 1), 0.9, 1.1)
-    m.window((0, 0, -1), (0.4, 0.0, -hz), (1, 0, 0), 1.1, 2.1)  # door
-    number_disc(m, 0.0, 8.5, hz, (0, 1), 0.95, "17")
+            if (k == 1 and z > 0) or (k == 5 and z > 0):
+                continue
+            m.window((1, 0, 0), (hx, y, z - 0.45), (0, 0, 1), 0.9, 1.1, lit=lit)
+    m.box(hx, hx + 0.08, 5 * FL + 0.55, 5 * FL + 2.55, 0.4, 2.6, SALMON)          # boarded panel, SE floor 5, with a red frame
+    for a, b, c0, c1 in ((0.3, 0.4, 0.3, 2.7), (2.6, 2.7, 0.3, 2.7)):
+        m.box(hx, hx + 0.12, 5 * FL + 0.45, 5 * FL + 2.65, a, b, RED)
+    for yb in (5 * FL + 0.45, 5 * FL + 2.55):
+        m.box(hx, hx + 0.12, yb, yb + 0.1, 0.3, 2.7, RED)
+    for z in (-1.6, 0.4):                                                           # louvres, SE ground floor
+        m.box(hx, hx + 0.06, 1.1, 1.6, z, z + 0.9, DGREY)
+    # NE ground-floor door (north side) on a concrete landing, steps down toward the north corner, handrail
+    m.window((0, 0, 1), (-2.1, 0.9, hz), (1, 0, 0), 1.0, 2.1)
+    m.box(-2.5, -0.9, 0, 0.9, hz, hz + 1.4, PANEL)
+    for s in range(4):
+        m.box(-2.5 - 0.3 * (s + 1), -2.5 - 0.3 * s, 0, 0.9 - 0.22 * (s + 1), hz + 0.1, hz + 1.4, PANEL)
+    for x0 in (-3.7, -0.95):
+        m.box(x0, x0 + 0.05, 0.9, 1.9, hz + 1.3, hz + 1.35, METAL)
+    m.box(-3.7, -0.9, 1.85, 1.9, hz + 1.3, hz + 1.35, METAL)
+    number_disc(m, 0.0, 9.75, hz, (0, 1), 0.95, "17")
     number_disc(m, 0.0, 8.5, -hz, (0, -1), 0.95, "17")
-    # steel ladder shaft up the -X face (Flickr 11094305354 / 11094396223: a narrow flat-plated grey column standing 1.3 m off the wall,
-    # dark ladder slot in its front, ending under the white top floor; not a landing-and-stair cage)
-    lh = 6 * FL + 1.2
-    m.box(-hx - 1.3, -hx, 0, lh, -0.7, -0.6, METAL)
-    m.box(-hx - 1.3, -hx, 0, lh, 0.6, 0.7, METAL)
-    m.box(-hx - 1.3, -hx - 1.2, 0, lh, -0.7, 0.7, METAL)
-    m.box(-hx - 1.4, -hx, lh, lh + 0.15, -0.8, 0.8, DGREY)
-    m.window((-1, 0, 0), (-hx - 1.3, 2.4, 0.15), (0, 0, -1), 0.3, lh - 2.4)  # ladder slot
-    for k in range(int((lh - 2.4) / 0.3)):
-        m.box(-hx - 1.15, -hx - 0.05, 2.5 + k * 0.3, 2.55 + k * 0.3, -0.5, 0.5, DGREY)  # rungs, visible through the slot
+    # north stair enclosure (x -hx-2.6 .. -hx, z 1.2 .. hz); the NE wall runs on past the chamfer to meet the NE face
+    ex0, ex1, ez0, ez1, eh = -hx - 2.6, -hx, 1.2, hz, top
+    m.box(ex0, -hx + c, 0, eh, ez1 - 0.2, ez1, GREY)                              # NE wall, flush with the NE face
+    m.box(ex0, ex0 + 0.2, 0, eh, 3.4, ez1, GREY)                                  # outer (NW) wall, corner half
+    m.box(ex0, ex0 + 0.2, 0, eh, ez0, ez0 + 0.25, GREY)                           # outer corner post
+    m.box(ex0 + 0.2, ex0 + 1.0, 0, eh, ez0, ez0 + 0.2, METAL)                    # SW side: two tall panels with gaps
+    m.box(ex0 + 1.35, ex1, 0, eh, ez0, ez0 + 0.2, METAL)
+    m.box(ex0 - 0.1, ex1, eh, eh + 0.25, ez0 - 0.1, ez1 + 0.05, DGREY)            # cap under the balcony slab
+    # the stair inside: half-floor flights zig-zagging along z, in two runs side by side, landings at each end
+    xa, xm, xb = ex0 + 0.25, (ex0 + ex1) / 2, ex1 - 0.05
+    za, zb = ez0 + 0.35, ez1 - 0.35
+    half = FL / 2
+    for k in range(int(eh / half)):
+        y0, y1 = k * half, (k + 1) * half
+        run = (xa, xm) if k % 2 == 0 else (xm, xb)
+        z_lo, z_hi = (za + 1.0, zb - 1.0) if k % 2 == 0 else (zb - 1.0, za + 1.0)
+        for xx0, xx1 in (run,):
+            for t in (0.0, -0.12):
+                m.poly([(xx0, y0 + t, z_lo), (xx1, y0 + t, z_lo), (xx1, y1 + t, z_hi), (xx0, y1 + t, z_hi)], DARK,
+                       ((xx0 + xx1) / 2, (y0 + y1) / 2 - (5 if t == 0 else -5), (z_lo + z_hi) / 2))
+        zl = (zb - 1.0, zb) if k % 2 == 0 else (za, za + 1.0)
+        m.box(xa, xb, y1 - 0.1, y1, min(zl), max(zl), DARK)                         # landing
+        m.box(xa, xa + 0.04, y1, y1 + 1.0, za, zb, DARK)                             # outer handrail panel line
+    for z in (za, zb):
+        m.box(xm - 0.05, xm + 0.05, 0, eh, z - 0.05, z + 0.05, DARK)                 # stringer posts
     # balcony slab and rail
     sl = ring(hx + 0.9, hz + 0.9, c + 0.3)
     frustum(m, sl, top, sl, top + 0.45, WHITE, top=True, bottom=True)
@@ -662,7 +708,7 @@ def control_tower():
     y0 = top + 0.45
     r0, r1, r2 = ring(4.0, 4.6, 1.8), ring(4.0, 4.6, 1.8), ring(4.6, 5.2, 2.1)
     frustum(m, r0, y0, r1, y0 + 1.1, RED)
-    frustum(m, r1, y0 + 1.1, r2, y0 + 3.4, GLASS)
+    frustum(m, r1, y0 + 1.1, r2, y0 + 3.4, GLASS, tex="glow_cab")  # dim night glow in the cab
     frustum(m, r2, y0 + 3.4, r2, y0 + 4.5, RED)
     roof = ring(5.0, 5.6, 2.2)
     frustum(m, roof, y0 + 4.5, roof, y0 + 4.8, RED, top=True, bottom=True)
@@ -676,12 +722,26 @@ def control_tower():
         nx, ny, nz = m.nrm[i]
         m.nrm[i] = (-nz, ny, nx)
     # annex (flat roofs, pale grey over a dark base band)
-    for x0, x1, z0, z1, h in ((4.0, 16.7, 0.8, 11.5, 4.6), (6.4, 12.4, -7.5, -1.9, 4.0), (4.0, 12.4, -2.0, 0.8, 3.6)):
+    # (OSM 325232689 outline; 2026-11-02 review, 11094396223: the entrance sits in the recessed link at the left end of the main block's SW
+    # face, the NAV CANADA plaque high on that face near its left end over a glass-block panel)
+    for x0, x1, z0, z1, h in ((4.0, 16.7, 0.8, 11.5, 4.6), (6.4, 12.4, -7.5, -1.9, 4.0), (4.0, 11.1, -2.0, 0.8, 3.6)):
         m.box(x0, x1, 0, 1.0, z0, z1, DGREY, top=False)
         m.box(x0, x1, 1.0, h, z0, z1, GREY, top=False)
         m.box(x0 - 0.15, x1 + 0.15, h, h + 0.3, z0 - 0.15, z1 + 0.15, DGREY)
-    m.window((1, 0, 0), (16.7, 0.0, 5.0), (0, 0, 1), 1.2, 2.1)  # entrance door
-    oval_sign(m, 16.7 + 0.1, 3.3, 9.0, (1, 0), 2.6, 1.15, "navcan")  # NAV CANADA plaque on the annex wall beside the door
+    m.window((1, 0, 0), (11.1, 0.0, -1.2), (0, 0, 1), 1.2, 2.1)  # entrance door, in the recessed link
+    m.box(16.7, 16.75, 0.3, 2.4, 1.3, 5.5, PANEL)                 # glass-block panel
+    oval_sign(m, 16.7 + 0.1, 3.4, 3.2, (1, 0), 2.2, 0.8, "navcan")  # NAV CANADA plaque
+    m.window((-1, 0, 0), (4.0, 0.0, 6.0), (0, 0, 1), 1.0, 2.1)   # side door on the NE face beside the tower (11142546856)
+    for bx0, bz0 in ((8.0, 6.0), (12.0, 3.0)):                    # rooftop units
+        m.box(bx0, bx0 + 2.0, 4.9, 5.9, bz0, bz0 + 1.5, METAL)
+    # equipment yard in front of the west block: 2.8 m horizontally ribbed grey screen on a dark base, from the entrance's NW jamb out to
+    # the SW and back along the airside fence (11094396223, 11094305354; size estimated, about 10 x 5 m)
+    yx0, yx1, yz0, yz1, yh = 12.4, 22.6, -7.3, -2.0, 2.8
+    for (ax, az), (bx, bz) in (((yx0, yz1), (yx1, yz1)), ((yx1, yz1), (yx1, yz0)), ((yx1, yz0), (yx0, yz0))):
+        obox(m, (ax, az), (bx, bz), 0.0, 0.4, 0.06, DGREY)
+        obox(m, (ax, az), (bx, bz), 0.4, yh, 0.05, GREY)
+        for yy in (0.95, 1.5, 2.05, 2.6):
+            obox(m, (ax, az), (bx, bz), yy - 0.03, yy + 0.03, 0.08, DGREY)
     m.mirror_x()
     return m
 

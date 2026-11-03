@@ -9,7 +9,8 @@
   }
  },
  "extensionsUsed": [
-  "ASOBO_normal_map_convention"
+  "ASOBO_normal_map_convention",
+  "ASOBO_material_day_night_switch"
  ],
  "scene": 0,
  "scenes": [
@@ -48,6 +49,26 @@
      "indices": 4,
      "mode": 4,
      "material": 1
+    },
+    {
+     "attributes": {
+      "POSITION": 0,
+      "NORMAL": 1,
+      "TEXCOORD_0": 2
+     },
+     "indices": 5,
+     "mode": 4,
+     "material": 2
+    },
+    {
+     "attributes": {
+      "POSITION": 0,
+      "NORMAL": 1,
+      "TEXCOORD_0": 2
+     },
+     "indices": 6,
+     "mode": 4,
+     "material": 3
     }
    ]
   }
@@ -72,6 +93,46 @@
     "metallicFactor": 0.0,
     "roughnessFactor": 0.9
    }
+  },
+  {
+   "name": "cyxd_glow",
+   "pbrMetallicRoughness": {
+    "baseColorTexture": {
+     "index": 2
+    },
+    "metallicFactor": 0.0,
+    "roughnessFactor": 0.9
+   },
+   "emissiveFactor": [
+    180.0,
+    140.0,
+    85.0
+   ],
+   "extensions": {
+    "ASOBO_material_day_night_switch": {
+     "enabled": true
+    }
+   }
+  },
+  {
+   "name": "cyxd_glow_cab",
+   "pbrMetallicRoughness": {
+    "baseColorTexture": {
+     "index": 3
+    },
+    "metallicFactor": 0.0,
+    "roughnessFactor": 0.9
+   },
+   "emissiveFactor": [
+    40.0,
+    44.0,
+    36.0
+   ],
+   "extensions": {
+    "ASOBO_material_day_night_switch": {
+     "enabled": true
+    }
+   }
   }
  ],
  "textures": [
@@ -82,6 +143,14 @@
   {
    "sampler": 1,
    "source": 1
+  },
+  {
+   "sampler": 0,
+   "source": 2
+  },
+  {
+   "sampler": 0,
+   "source": 3
   }
  ],
  "samplers": [
@@ -102,21 +171,27 @@
   },
   {
    "uri": "cyxd_navcan.png"
+  },
+  {
+   "uri": "cyxd_palette.png"
+  },
+  {
+   "uri": "cyxd_palette.png"
   }
  ],
  "accessors": [
   {
    "bufferView": 0,
    "componentType": 5126,
-   "count": 5144,
+   "count": 4580,
    "type": "VEC3",
    "min": [
-    -16.849999999999998,
-    0.0,
-    -7.65
+    -22.68,
+    -0.12,
+    -7.799999999999999
    ],
    "max": [
-    6.580000000000001,
+    7.050000000000001,
     36.95,
     11.65
    ]
@@ -124,19 +199,19 @@
   {
    "bufferView": 1,
    "componentType": 5126,
-   "count": 5144,
+   "count": 4580,
    "type": "VEC3"
   },
   {
    "bufferView": 2,
    "componentType": 5126,
-   "count": 5144,
+   "count": 4580,
    "type": "VEC2"
   },
   {
    "bufferView": 3,
    "componentType": 5123,
-   "count": 7752,
+   "count": 6816,
    "type": "SCALAR"
   },
   {
@@ -144,39 +219,61 @@
    "componentType": 5123,
    "count": 90,
    "type": "SCALAR"
+  },
+  {
+   "bufferView": 5,
+   "componentType": 5123,
+   "count": 42,
+   "type": "SCALAR"
+  },
+  {
+   "bufferView": 6,
+   "componentType": 5123,
+   "count": 48,
+   "type": "SCALAR"
   }
  ],
  "bufferViews": [
   {
    "buffer": 0,
    "byteOffset": 0,
-   "byteLength": 61728
+   "byteLength": 54960
   },
   {
    "buffer": 0,
-   "byteOffset": 61728,
-   "byteLength": 61728
+   "byteOffset": 54960,
+   "byteLength": 54960
   },
   {
    "buffer": 0,
-   "byteOffset": 123456,
-   "byteLength": 41152
+   "byteOffset": 109920,
+   "byteLength": 36640
   },
   {
    "buffer": 0,
-   "byteOffset": 164608,
-   "byteLength": 15504
+   "byteOffset": 146560,
+   "byteLength": 13632
   },
   {
    "buffer": 0,
-   "byteOffset": 180112,
+   "byteOffset": 160192,
    "byteLength": 180
+  },
+  {
+   "buffer": 0,
+   "byteOffset": 160372,
+   "byteLength": 84
+  },
+  {
+   "buffer": 0,
+   "byteOffset": 160456,
+   "byteLength": 96
   }
  ],
  "buffers": [
   {
    "uri": "cyxd_control_tower.bin",
-   "byteLength": 180292
+   "byteLength": 160552
   }
  ]
 }

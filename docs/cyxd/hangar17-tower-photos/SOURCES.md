@@ -31,6 +31,16 @@ Also the Commons category https://commons.wikimedia.org/wiki/Category:Airport_to
 - Blue disc with yellow "17" on the grey shaft. The same disc numbering (e.g. "18") was on other buildings at the end.
 - Low flat-roofed grey NAV CANADA annex wrapped around the base.
 
+## Review (2026-11-02)
+Compass faces (the shaft is square to bearing 138): NE = runway, SE = Aerocentre, SW = landside / annex, NW = Hangar 18.
+- **Windows** only on the NE and SE faces, 2 per floor on floors 1-6; none on the ground floor, the NW or the SW face. SE floor 1 has only its SW window; SE floor 5 (salmon) has a large boarded, red-framed panel in place of its NE window (11165250793, 11142546856). Two louvres low on the SE face.
+- **Door**: NE face, north side, up four concrete steps with a handrail (11165250793, 11142546856).
+- **"17" discs**: on the NE face over the window column, between the floor-2 and floor-3 windows (JetPhotos 5873800, wherezjeff, Flickr 33836413); by 2013 also centred on the SW face (11094305354, 11094396223).
+- **North stairs**: an open steel zig-zag stair, ground to balcony, in a deep enclosure on the north end of the NW face. Its NE wall is flush with the NE face; the outer wall is clad at the corner and open beside it (the black flights show in JetPhotos and wherezjeff); the SW side shows two tall panels with gaps (11094305354). The old model had a 1.3 m ladder column instead.
+- **Annex** (outline = OSM 325232689): entrance in the recessed link at the NW end of the main block's SW face; NAV CANADA plaque high near that end over a glass-block panel (11094396223); a side door on the NE face next to the tower (11142546856); a screened equipment yard (horizontally ribbed grey screen, about 2.8 m) in front of the west block, along the airside fence (11094396223, 11094305354; size estimated).
+- Not modelled: a white one-storey block at the tower's airside foot in Flickr 33836413 (about 2011); it is gone in the 2012-13 photos.
+- Night: floors 5-6 windows glow warm and the cab glass dimly (`GLOW` in `gen_buildings.py`, `ASOBO_material_day_night_switch`). The Esri imagery at zoom 17+ is post-demolition (annex gone), so it was not used for the annex.
+
 ## OSM (queried 2026-10-10)
 - Way 182921011: `building=tower`, `service=aircraft_control`, concrete; footprint about 11.3 x 10.3 m, axis bearing ~138 deg true, centre 53.568140, -113.518516.
 - Way 325232689: "Blatchford Control Tower", historic building, 273 m2 incl. the annex (about 22 x 19 m, long axis 50 deg).
