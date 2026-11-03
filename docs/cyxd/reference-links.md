@@ -17,6 +17,7 @@ Saved in `hangar39-photos/` (8 photos, notes in its SOURCES.md): Flickr woodhead
   barrel vault and south annex, so it is modelled in this form.
 - Saved: `hangar11-photos/flickr_woodhead_11094833594.jpg` (high view over Hangar 11 and the long two-storey building north of it).
 - Link only: CBC (edmonton-hangar-11-1.4799808), Facebook photos (3) and group post, National Trust endangered places page.
+- Link only, added 2026-11-03: Facebook post "Northwest Industries in Edmonton, Alberta, in 1956" (credit Provincial Archives of Alberta), https://www.facebook.com/oldcanada/posts/northwest-industries-in-edmonton-alberta-in-195556-credit-provincial-archives-of/1370833485077644/ (not fetched; Facebook serves nothing to scripts; open it yourself).
 
 ## University of Alberta Libraries items (archive.org, saved 2026-10-17)
 Saved in `administration-building-photos/` and `aerials/` (notes in their SOURCES files): https://archive.org/details/PC013720 (Administration Building aerial postcard, 1948-88), https://archive.org/details/PC013987 (Municipal Airport postcard; metadata says 1929 but the hangars are 1938+), https://archive.org/details/WCWdb_2534 (1937 general plan, amended 1943, PDF).
@@ -89,3 +90,15 @@ Hangar 15 in the background: 6615792. Hangars 4, 5, 6, 7, 8 in the background: 6
 Findings in `runway-04-22-closure.md`. Sources used there:
 - Saved: `departures/rcaf-on-track-1978-edmonton-muni-1.jpg` (text page) and `-2.jpg` (plan), rcaf.info On-Track-1978-Edmonton-Muni; `departures/rcaf-manual-of-aerodromes-edmonton-p90.jpg`; `charts/procedures-2010/2008-CFS-CYXD-B230-B231.pdf` and `CFS_AD_E-ivao.pdf`; `aerials/Edmonton_City_Centre_Airport.jpg` (6 Jun 2012).
 - Link only: Edmonton Office of the City Auditor, City Centre Airport audit 2003 (edmonton.ca 03079_City_Centre_Airport.pdf; source for the 1995 plan's "two runways"); Tingley historical impact assessment 2009 (webdocs.edmonton.ca 2009DCM032-Att6.pdf); City news releases on the 2013 closure (news-archive-487808-72f8.pdf, news-archive-513911-d314.pdf); Environment Council of Alberta noise hearings 1982 (nonoise.org roll12doc53.pdf); E-Z Air v Edmonton, 2018 ABLCB 7; pwareunion.com/interesting.htm (rename dates 1963, 1975); ASN YXD history page.
+
+## Northwest Industries 1956 photos (saved 2026-11-03)
+Seven photos from the Facebook post above, saved in `hangar11-photos/nwi-1956-*.jpg` (notes in that folder's SOURCES.md). Most useful for Hangar 11: `nwi-1956-industries-ltd-hangar-airside.jpg` (sign and roof line) and `nwi-1956-jet-mh-worker-sign.jpg` (sign height). `nwi-1956-hangar-4-hercules-apron.jpg` shows Hangar 4 with its "NORTHWEST INDUSTRIES" front, for Hangar 4.
+
+- Post title (user's wording): "Northwest Industries in Edmonton, Alberta in 1955/56. Credit: Provincial Archives of Alberta." Date range 1955/56. The Provincial Archives of Alberta may hold more Northwest Industries photos of interest; search its collection (not searched yet).
+
+## General: PWA 737 landing over 109 St (Alberta Aviation Museum post, dated 1977-1987)
+
+- Link only, added 2026-11-03: Facebook post by the Alberta Aviation Museum, "Check out this incredible shot captured in Edmonton, a PWA Boeing 737 landing over..." https://www.facebook.com/abavmuseum/photos/check-out-this-incredible-shot-captured-in-edmonton-a-pwa-boeing-737-landing-ove/908981324575745/ (not fetched; Facebook blocks scripts, so the text was not read; the copy below came from the user).
+- Saved copy: general-photos/aava-pwa-737-109st-1977-1987.jpg (source: C:\Users\William\Downloads\487567094_1114960870644455_2138402057682034717_n.jpg). Watermarked "Alberta Aviation Museum".
+- Shows a Pacific Western Airlines 737 on approach over 109 St, with a "109 St." street sign on a signal pole and a CAA sign on the right.
+- Date: the post gives no exact date. Working range is 1977-1987: after September 1977, when Edmonton street signs changed to metric (per the user), and before 1987, when Pacific Western merged with Canadian Pacific Airlines to form Canadian Airlines International (per the user).
