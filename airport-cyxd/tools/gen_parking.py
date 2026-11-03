@@ -29,6 +29,14 @@ CAR_PARKS = (
     ("Flying Club front, along Airport Rd (nose-in to the club wall)", [(-29, -48.3), (70, -48.3), (70, -42.6), (-29, -42.6)], 48.0),
     ("Flying Club NW lot, between the club and Hangar 19", [(-43, -40), (-32, -40), (-32, -14), (-43, -14)], 138.0),
     ("Tower lot, landside of the club-tower fence, west of the access road", [(85, -38), (97, -38), (97, 9), (85, 9)], 138.0),
+    # General Aviation Centre (Hangar 19): front lot, two rows either side of a kerbed island, and a row along the Airport Rd verge
+    ("General Aviation Centre, row against the building", [(-112, -18.5), (-88, -18.5), (-88, -12.5), (-112, -12.5)], 48.0),
+    ("General Aviation Centre, row south of the island", [(-118, -25.5), (-73, -25.5), (-73, -19.5), (-118, -19.5)], 228.0),
+    ("General Aviation Centre, row along the Airport Rd verge", [(-128, -38), (-88, -38), (-88, -32), (-128, -32)], 48.0),
+    # Esso building (Hangar 20): nose-in row in front (the model's front wall is at v -27.4), and the column along its SE side, toward the
+    # GAC's round entrance (2014 aerial; Street View h19-nw-entrance shows cars parked along the Esso wall)
+    ("Esso building, row in front", [(-205, -34.5), (-160, -34.5), (-160, -28.5), (-205, -28.5)], 48.0),
+    ("Esso building, column along the SE side", [(-151, -27), (-144, -27), (-144, 3), (-151, 3)], 318.0),
 )
 NE_GATES_S = (45.0, 86.0, 127.0)  # along the terminal's NE face from its NW corner; bays in hangars.py are at x = s - 86
 GATE_OUT, ROOT_AHEAD = 22.6, 25.0  # spot distance from the face, jetway root distance ahead of the spot
