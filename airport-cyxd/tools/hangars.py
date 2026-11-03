@@ -1317,85 +1317,199 @@ def hangar18():
 
 # Hangar 38 / 39 (west side, doors face SE) ------------------------------------------------------
 def hangar38():
-    """Building 38: mustard-yellow ribbed hangar (heading 138, doors face SE) with a low-pitch gable roof, two big door panels with cream
-    edge lines, tall narrow windows at one end, a canopy and the "38" roundel high on the front.  OSM 230718902: 68.8 x 64.0 m."""
+    """Building 38: mustard-yellow ribbed hangar (heading 138, doors face SE) with a low-pitch gable roof (ridge front to back), two big door
+    panels with cream edge lines, tall narrow windows at the SW (viewer-left) end, a canopy under the "38" roundel near the gable peak.
+    OSM 230718902: 68.8 x 64.0 m (fits the 2017 aerial).  Heights re-measured 2026-11-03 (user: use the measurements): the SW long wall is
+    8.5 m to the eave in Street View h38-extra-21 (64 m wall seen square-on), and 9-9.5 m at the front corner with an 11 m peak in Flickr
+    13207457714 (personnel doors for scale); was 12.5 / 15.7 m.  Pre-mirror +X = bearing 228 (SW)."""
     m = fmesh()
-    W, D, wh, rise = 68.8, 64.0, 12.5, 3.2
+    W, D, wh, rise = 68.8, 64.0, 9.0, 2.2
     x0, x1, z0, z1 = -W / 2, W / 2, -D / 2, D / 2
     m.box(x0, x1, 0, wh, z0, z1, MUSTARD, top=False)
     m.gable(x0, x1, wh, rise, z0, z1, along_z=True, sw_roof=DGREY, sw_wall=MUSTARD)
     for x in (x0 - 0.12, x1):
         m.box(x, x + 0.12, wh - 0.4, wh + 0.05, z0, z1, DGREY)
-    # door panels with cream edge trim
+    # door panels with cream edge trim (top at 0.85 of the corner wall height in 13207457714)
+    dh = 7.6
     for a, b in ((-26.0, -4.0), (-2.0, 20.0)):
-        m.box(a, b, 0, 10.4, z1, z1 + 0.12, MUSTARD)
-        m.box(a, b, 10.3, 10.5, z1 + 0.1, z1 + 0.2, CREAM)
-        m.box(a, a + 0.18, 0, 10.4, z1 + 0.1, z1 + 0.2, CREAM)
-        m.box(b - 0.18, b, 0, 10.4, z1 + 0.1, z1 + 0.2, CREAM)
-    # viewer-left (+x) end: tall narrow windows, personnel doors
+        m.box(a, b, 0, dh, z1, z1 + 0.12, MUSTARD)
+        m.box(a, b, dh - 0.1, dh + 0.1, z1 + 0.1, z1 + 0.2, CREAM)
+        m.box(a, a + 0.18, 0, dh, z1 + 0.1, z1 + 0.2, CREAM)
+        m.box(b - 0.18, b, 0, dh, z1 + 0.1, z1 + 0.2, CREAM)
+    # viewer-left (+x, SW) end: tall narrow windows, personnel doors
     for xw in (30.5, 32.8):
-        m.window((0, 0, 1), (xw, 2.0, z1), (1, 0, 0), 1.1, 4.4)
+        m.window((0, 0, 1), (xw, 1.0, z1), (1, 0, 0), 1.1, 5.2)
     m.box(26.0, 27.6, 0, 2.2, z1, z1 + 0.1, DGREY)
     m.box(29.0, 30.0, 0, 2.2, z1, z1 + 0.1, DGREY)
-    number_disc(m, 6.5, 11.2, z1 + 0.12, (0, 1), 1.4, "38")  # big roundel high on the corner wall (Street View 2010)
-    for sgn, xp in ((1, x1), (-1, x0)):  # tall narrow window banks along both long walls
-        rows_x(m, sgn, xp, z0 + 4.0, z1 - 16.0, 3.5, 13, 0.9, 6.5)
-    # long walls: plain, with a couple of doors
-    number_disc(m, 0.0, 10.7, z0, (0, -1), 1.4, "38")  # landside roundel on the back wall (user, 2026-10-21)
-    for z in (-8.0, 14.0):
-        m.box(x1, x1 + 0.1, 0, 2.2, z, z + 1.1, DGREY)
-        m.box(x0 - 0.1, x0, 0, 2.2, z, z + 1.1, DGREY)
+    number_disc(m, 6.5, 9.4, z1 + 0.12, (0, 1), 1.2, "38")  # roundel just under the gable peak (13207457714, the 2014 panorama)
+    m.box(5.3, 7.7, 7.85, 8.0, z1, z1 + 1.0, DGREY)  # small canopy under it
+    # SW long wall on 121 St: a run of tall narrow windows, 0.6 m off the ground and 5 m tall (h38-extra-21: ~25 windows)
+    rows_x(m, 1, x1, z0 + 6.0, z1 - 6.0, 0.7, 22, 0.9, 5.0)
+    rows_x(m, -1, x0, z0 + 4.0, z1 - 16.0, 1.2, 13, 0.9, 4.2)  # NE wall (not photographed close; kept from the old model)
+    # back (NW) wall: a row of short windows, a white roller door and a personnel door (h38-23 / 24)
+    rows_z(m, -1, z0, x0 + 6.0, x1 - 14.0, 3.6, 10, 1.0, 1.8)
+    m.box(x0 + 12.0, x0 + 15.5, 0, 4.0, z0 - 0.12, z0, RWHITE)
+    m.box(x0 + 18.0, x0 + 19.0, 0, 2.2, z0 - 0.1, z0, DGREY)
+    # roundels at the west corner on both faces, high under the eave (h38-22..25, h38-extra-21; user 2026-10-21: landside roundel on the back wall)
+    number_disc(m, x1 - 3.0, 7.3, z0, (0, -1), 1.2, "38")
+    number_disc(m, x1, 7.3, z0 + 3.0, (1, 0), 1.2, "38")
     roof_vents(m, [(0, -14), (0, 0), (0, 14)], wh + rise)
     m.mirror_x()
     return m
 
 
+def _bar_xy(m, xa, ya, xb, yb, z0, z1, hw, sw):
+    """A steel bar from (xa, ya) to (xb, yb) in the x-y plane, z0..z1 deep, hw half-width: four side faces and both ends."""
+    L = math.hypot(xb - xa, yb - ya)
+    nx, ny = -(yb - ya) / L * hw, (xb - xa) / L * hw
+    c = ((xa + xb) / 2, (ya + yb) / 2, (z0 + z1) / 2)
+    q = [(xa + nx, ya + ny), (xb + nx, yb + ny), (xb - nx, yb - ny), (xa - nx, ya - ny)]
+    m.poly([(x, y, z1) for x, y in q], sw, c)
+    m.poly([(x, y, z0) for x, y in q[::-1]], sw, c)
+    for i in range(4):
+        (ax, ay), (bx, by) = q[i], q[(i + 1) % 4]
+        m.poly([(ax, ay, z0), (bx, by, z0), (bx, by, z1), (ax, ay, z1)], sw, c)
+
+
+def spar_letters(m, cx, cy, zf, width, depth=0.12, sw=PANEL):
+    """The SPAR letters and the swoosh of the Spar Aerospace logo (docs/cyxd/hangar39-photos/spar-logo-reference.svg, its two white paths;
+    user, 2026-11-03: add the swoosh) as solid cut-outs standing on a wall or screen at z = zf facing +Z, the whole logo centred at
+    (cx, cy) and `width` metres wide.  User, 2026-11-03: the sign was individual letters on the mesh between the halls, not a board.  Read left to right from the front: pre-mirror
+    +X is the viewer's left, so x runs from cx + width / 2 down to cx - width / 2."""
+    import re
+    from pathlib import Path
+    import shapely
+    from shapely.geometry import Polygon
+    from make_signs import _svg_subpaths
+    svg = (Path(__file__).resolve().parents[2] / "docs/cyxd/hangar39-photos/spar-logo-reference.svg").read_text(encoding="utf-8")
+    paths = re.findall(r'<path[^>]* d="([^"]+)"', svg)
+    geom = None
+    for d in paths[1:3]:  # [0] is the navy square, [1] the letters, [2] the swoosh
+        part = None
+        for sub in _svg_subpaths(d):
+            p = Polygon(sub).buffer(0)
+            part = p if part is None else part.symmetric_difference(p)  # even-odd: the P and R counters are holes
+        geom = part if geom is None else geom.union(part)  # the swoosh crosses the A
+    x0, y0, x1, y1 = geom.bounds
+    s = width / (x1 - x0)
+    X = lambda u: cx - (u - (x0 + x1) / 2) * s
+    Y = lambda v: cy - (v - (y0 + y1) / 2) * s
+    za, zb = zf, zf + depth
+    for tri in shapely.constrained_delaunay_triangles(geom).geoms:
+        pts = list(tri.exterior.coords)[:3]
+        m.poly([(X(u), Y(v), zb) for u, v in pts], sw, (cx, cy, za - 1.0))   # face
+        m.poly([(X(u), Y(v), za) for u, v in pts], sw, (cx, cy, zb + 1.0))   # back, seen through the mesh
+    polys = geom.geoms if hasattr(geom, "geoms") else [geom]
+    for poly in polys:
+        for ring in [poly.exterior] + list(poly.interiors):
+            c = list(ring.coords)
+            for (ua, va), (ub, vb) in zip(c[:-1], c[1:]):
+                # side wall: outward = away from the letter's body; use a point just inside the polygon next to this edge as the centre
+                mx, my = (ua + ub) / 2, (va + vb) / 2
+                L = math.hypot(ub - ua, vb - va) or 1.0
+                nx, ny = -(vb - va) / L, (ub - ua) / L
+                e = 0.05
+                if not poly.contains(shapely.Point(mx + nx * e, my + ny * e)):
+                    nx, ny = -nx, -ny
+                ctr = (X(mx + nx * 0.3), Y(my + ny * 0.3), (za + zb) / 2)
+                m.poly([(X(ua), Y(va), za), (X(ub), Y(vb), za), (X(ub), Y(vb), zb), (X(ua), Y(va), zb)], sw, ctr)
+
+
 def hangar39():
-    """Hangar 39 (user, 2026-10-21; photos 13207255803 and 13207268493 and Street View 26-28): OSM way 230718901 (107 x 90.5 m, heading 138,
-    doors face SE).  Two tall pale-blue gabled hangars side by side with a 13 m gap, joined by a lower set-back middle block (roller door and
-    two personnel doors, steel truss frame across the gap at the front) and a lower wing across the back.  Each bay's front is a recessed
-    wall of white sliding leaves with two tiers of tan louvre panels, flanked by blue piers that project forward (the outer ones carry the
-    door track).  Walls 16.7 m (a third above Hangar 38), ridge 19.7 m; "39" roundel position assumed."""
+    """Hangar 39, the old PWA hangar (PWA's Hercules base), later Northwest Industries / SPAR (Hercules maintenance until 2009); OSM way
+    230718901.  Reworked 2026-11-03 from the 2017-05 Wayback aerial (zoom 19, measured in this frame) and Woodhead's 2014 photos:
+    two tall pale-blue gabled halls, SW 44.6 m and NE 40.0 m wide, 80.2 m deep, an 11.6 m gap between them filled by a lower block whose
+    face stands 3.2 m behind the door wall (steel truss frame with a mesh sign screen across the gap at the front), a two-storey wing
+    12.4 m deep across the whole back, two low sheds at the front corners and a small vestibule behind the wing.  The OSM outline is 9 m
+    too wide on the SW (the paved strip); the centre moved 4.5 m NE and 3.3 m SE.
+    Heights (user, 2026-11-03: use the measurements): hall walls 15.0 m, ridge 17.4 m (back photo 13207143695 with door scale and
+    perspective: eave 15.4, ridge 17.1; gap photo 13207255803: eave 15.5; the downtown photo 15256173388 against the tower: rise ~3 m);
+    doors 12.9 m; middle block 8.8 m; back wing 8.4 m.  SPAR in large white letters with the logo's swoosh on the mesh screen (user), traced from the 1996-99 Spar Aerospace logo SVG.
+    Pre-mirror +X = bearing 228 (SW)."""
     m = fmesh()
-    W, D, wh, rise = 107.0, 90.5, 16.7, 3.0  # side wall a third taller than Hangar 38's 12.5 m (user, 2026-10-21; photo 13207457714)
-    x0, x1, z0, z1 = -W / 2, W / 2, -D / 2, D / 2
-    bw, wing = 47.0, 12.0
-    zb = z0 + wing  # bays run from the back wing to the front
-    gx0, gx1 = x0 + bw, x1 - bw
-    for bx0, bx1 in ((x0, x0 + bw), (x1 - bw, x1)):
-        m.box(bx0, bx1, 0, wh, zb, z1, PBLUE, top=False)
-        m.gable(bx0, bx1, wh, rise, zb, z1, along_z=True, sw_roof=METAL, sw_wall=PBLUE)
-        xs = [bx0 + 4.0 + 6.5 * i for i in range(7)]
-        m.box(xs[0], xs[-1], 0, 15.3, z1, z1 + 0.05, DARK)
-        leaves(m, z1, xs, 0, 15.0, RWHITE, post=DGREY)
-        louvres(m, z1, xs, [(4.4, 7.2), (10.4, 13.6)], sw=TAN)
-        m.box(xs[0], xs[-1], 15.0, 15.5, z1, z1 + 0.5, DGREY)
-        for px0, px1 in ((bx0, bx0 + 3.6), (bx1 - 3.0, bx1)):  # piers projecting past the door wall
-            m.box(px0, px1, 0, wh + 0.4, z1, z1 + 1.1, PBLUE)
-    # set-back middle block between the bays
-    zm = z1 - 14.0
-    m.box(gx0, gx1, 0, 12.5, zb, zm, PBLUE)
-    m.box(gx0, gx1, 12.5, 12.8, zb, zm + 0.1, DGREY)
-    m.box(gx0 + 2.0, gx0 + 7.0, 0, 4.2, zm, zm + 0.12, RWHITE)  # roller door
-    for dx in (gx0 + 9.0, gx1 - 1.6):
-        m.box(dx, dx + 1.1, 0, 2.2, zm, zm + 0.1, DGREY)
-    # steel truss frame across the gap at the front
-    for y in (15.8, 17.8, 19.6):
-        m.box(gx0, gx1, y, y + 0.35, z1 + 0.5, z1 + 0.9, DGREY)
-    for k in range(5):
-        m.box(gx0 + 1.0 + k * 2.8, gx0 + 1.3 + k * 2.8, 15.8, 19.6, z1 + 0.5, z1 + 0.9, DGREY)
-    # back wing across the full width
-    m.box(x0, x1, 0, 10.0, z0, zb, PBLUE)
-    m.box(x0, x1, 10.0, 10.4, z0 - 0.1, zb + 0.1, DGREY)
-    rows_z(m, -1, z0, x0 + 3.0, x1 - 3.0, 6.0, 20, 2.4, 1.6)
-    rows_z(m, -1, z0, x0 + 3.0, x1 - 3.0, 2.0, 12, 2.4, 1.6)
-    for sgn, xp in ((1, x1), (-1, x0)):  # end walls
-        rows_x(m, sgn, xp, zb + 4.0, z1 - 6.0, 11.5, 8, 1.6, 1.1)
-        rows_x(m, sgn, xp, z0 + 2.0, zb - 2.0, 5.0, 3, 1.6, 1.2)
-    number_disc(m, x1, 14.2, z1 - 14.0, (1, 0), 1.4, "39")
-    number_disc(m, 0.0, 10.0, zm + 0.12, (0, 1), 1.4, "39")  # airside roundel on the set-back middle block above the roller door (user, 2026-10-21)
-    number_disc(m, x0 + bw / 2, 14.6, zb, (0, -1), 1.3, "39")  # landside roundel high on the back wall above the low wing
-    roof_vents(m, [(-30, -10), (-30, 10), (-30, 28), (30, -10), (30, 10), (30, 28)], wh + rise)
+    wh, rise = 15.0, 2.4
+    zb, zf, zw = -33.9, 46.3, -46.3  # hall back, door wall, back of the wing
+    halls = ((3.5, 48.1), (-48.1, -8.1))  # SW, NE
+    gx0, gx1 = -8.1, 3.5  # the gap
+    for hx0, hx1 in halls:
+        m.box(hx0, hx1, 0, wh, zb, zf, PBLUE, top=False)
+        m.gable(hx0, hx1, wh, rise, zb, zf, along_z=True, sw_roof=METAL, sw_wall=PBLUE)
+        m.box(hx0 - 0.1, hx1 + 0.1, wh - 0.35, wh + 0.05, zf, zf + 0.15, RWHITE)  # white fascia line at the eaves of the door face
+    # the light re-roofed patch on the NE hall's SW slope, front 20 m (2017 aerial)
+    yr = lambda x: wh + rise * (1 - abs(x + 28.1) / 20.0) + 0.04
+    m.poly([(-8.1, yr(-8.1), 26.2), (-28.1, yr(-28.1), 26.2), (-28.1, yr(-28.1), zf), (-8.1, yr(-8.1), zf)], LROOF, (-18.0, 0.0, 36.0))
+    # door walls.  SW hall: 11 m solid wall at the SW end, doors, 1.3 m pier at the gap.  NE hall: pier, doors, 5.6 m corner wall with the
+    # "39" roundel (13207248843, the 2014 panoramas).  Five leaves per hall, each with two louvre columns in two tiers (13207248843:
+    # 3.2-5.0 and 7.7-9.5 m).
+    DH = 12.9
+    for (hx0, hx1), (d0, d1) in zip(halls, ((4.8, 37.1), (-42.5, -9.4))):
+        xs = [d0 + (d1 - d0) * i / 5 for i in range(6)]
+        m.box(d0, d1, 0, DH + 0.2, zf, zf + 0.05, DARK)
+        leaves(m, zf, xs, 0, DH, RWHITE, post=DOORG)
+        half = sorted(xs + [(a + b) / 2 for a, b in zip(xs[:-1], xs[1:])])
+        louvres(m, zf, half, [(3.2, 5.0), (7.7, 9.5)], sw=TAN)
+        m.box(d0, d1, DH, DH + 0.5, zf, zf + 0.5, DGREY)  # door head / track
+        hc, hw2 = (hx0 + hx1) / 2, (hx1 - hx0) / 2
+        m.box(hc - 0.34 * hw2, hc + 0.34 * hw2, DH + 0.5, wh + rise * 0.6, zf, zf + 0.06, RWHITE)  # white panel on the gable face
+        for px0, px1 in ((hx0, hx0 + 1.3), (hx1 - 1.3, hx1)):  # piers at the hall corners carrying the door track
+            m.box(px0, px1, 0, wh + 0.2, zf, zf + 0.6, PBLUE)
+    # solid door-wall parts with the white middle band (blue base band below 4.4 m): SW hall's SW end, NE hall's NE corner
+    for a, b in ((37.1, 46.8), (-46.8, -42.5)):
+        m.box(a, b, 4.4, 11.3, zf + 0.6, zf + 0.66, RWHITE)
+    number_disc(m, -45.3, 11.2, zf + 0.66, (0, 1), 1.3, "39")
+    # middle block in the gap, face 3.2 m behind the door wall; a navy door, a white roller door with two windows, a blue and a grey door
+    zm = zf - 3.2
+    m.box(gx0, gx1, 0, 8.8, zb, zm, PBLUE)
+    m.box(gx0, gx1, 8.8, 9.0, zb, zm + 0.1, RWHITE)
+    m.box(-1.7, 1.5, 0, 3.4, zm, zm + 0.12, RWHITE)
+    for x in (-0.9, 0.7):
+        m.box(x - 0.35, x + 0.35, 2.1, 2.45, zm + 0.12, zm + 0.16, DARK)
+    for xa, sw in ((1.73, NAVY), (-4.2, BLUE), (-7.5, DGREY)):
+        m.box(xa, xa + 1.0, 0, 2.2, zm, zm + 0.1, sw)
+    m.box(2.9, 3.1, 1.0, 9.6, zm, zm + 0.25, METAL)  # flue pipe up the face
+    # steel truss frame across the gap at the door wall: two Warren trusses (chords 14.8 / 13.5 and 12.1 / 10.9 m) and the mesh screen
+    zt0, zt1 = zf + 0.2, zf + 0.5
+    for ya, yb in ((13.5, 14.8), (10.9, 12.1)):
+        for y in (ya, yb):
+            m.box(gx0, gx1, y - 0.12, y + 0.12, zt0, zt1, DGREY)
+        n = 6
+        for k in range(n):
+            xa, xb = gx0 + (gx1 - gx0) * k / n, gx0 + (gx1 - gx0) * (k + 1) / n
+            _bar_xy(m, xa, ya if k % 2 == 0 else yb, xb, yb if k % 2 == 0 else ya, zt0, zt1, 0.07, DGREY)
+            m.box(xa - 0.06, xa + 0.06, ya, yb, zt0, zt1, DGREY)
+    sx0, sx1, sy0, sy1 = -6.95, 2.35, 9.7, 15.8  # mesh screen frame (9.3 x 6.1 m)
+    for a, b, c, d in ((sx0, sx1, sy0, sy0 + 0.1), (sx0, sx1, sy1 - 0.1, sy1), (sx0, sx0 + 0.1, sy0, sy1), (sx1 - 0.1, sx1, sy0, sy1)):
+        m.box(a, b, c, d, zt1, zt1 + 0.08, DARK)
+    # SPAR on the screen (user, 2026-11-03: no PWA-era photo of the front exists; the sign was large individual letters on the mesh, no
+    # board): the letters and swoosh of the 1996-99 Spar Aerospace logo, 9.2 m wide and 5.8 m tall (letters 8.4 x 2.7 m), centred on the
+    # screen, facing the apron
+    spar_letters(m, (sx0 + sx1) / 2, (sy0 + sy1) / 2, zt1 + 0.08, 9.2)
+    # back wing, two storeys, flat roof with a white parapet line: one ribbon of small windows at the upper floor, doors and a roller door
+    # below (13207143695); windows on its end walls (Street View 26)
+    m.box(-48.1, 48.1, 0, 8.4, zw, zb, PBLUE)
+    m.box(-48.2, 48.2, 8.4, 8.7, zw - 0.1, zb, RWHITE)
+    rows_z(m, -1, zw, -46.0, 46.0, 5.2, 36, 1.3, 1.1)
+    m.box(-16.0, -12.4, 0, 3.2, zw - 0.12, zw, RWHITE)
+    for x in (-20.0, -9.0, 14.0, 30.0):
+        m.box(x, x + 1.0, 0, 2.2, zw - 0.1, zw, BLUE)
+    for sgn, xp in ((1, 48.1), (-1, -48.1)):
+        rows_x(m, sgn, xp, zw + 1.5, zb - 1.5, 5.2, 4, 1.3, 1.1)
+    m.box(3.5, 6.5, 0, 3.0, zw - 5.0, zw, PBLUE)  # small vestibule behind the wing (2017 aerial)
+    number_disc(m, 45.6, 13.0, zb, (0, -1), 1.0, "39")  # landside roundel high on the SW hall's back gable, by its SW corner (13207143695)
+    # low sheds at the two front corners (2017 aerial; the SW one in panorama 11917029794)
+    m.box(48.1, 57.5, 0, 4.5, zf - 3.6, zf, PBLUE)
+    m.box(-55.5, -48.1, 0, 4.0, zf - 3.6, zf, PBLUE)
+    # NE wall (seen from the runway, 14150136906): a personnel door and a canopied entrance near the back
+    m.box(-48.2, -48.1, 0, 2.2, 0.0, 1.0, DGREY)
+    m.box(-48.2, -48.1, 0, 3.0, -26.0, -22.0, RWHITE)
+    m.box(-50.0, -48.1, 3.2, 3.4, -26.5, -21.5, DGREY)
+    # roof units (2017 aerial): vents on the hall slopes, white plant boxes on the middle block and the wing
+    slope = lambda hc, half: (lambda x, z: wh + rise * (1 - abs(x - hc) / half))
+    roof_vents(m, [(24.3, z) for z in (-30.3, -16.9, -2.1, 8.1, 17.7, 27.3, 40.1)], slope(25.8, 22.3))
+    roof_vents(m, [(-27.5, z) for z in (-29.9, -11.5, 13.1, 34.7)], slope(-28.1, 20.0))
+    for x, z in [(-1.5, z) for z in (-20.9, -14.7, -2.3, 19.7, 24.3)] + [(31.5, -41.3), (5.0, -41.3), (-32.5, -42.3), (-34.5, -40.3), (-44.5, -41.3)]:
+        y = 9.0 if z > zb else 8.7
+        m.box(x - 1.0, x + 1.0, y, y + 1.4, z - 0.9, z + 0.9, WHITE)
     m.mirror_x()
     return m
 
@@ -2028,7 +2142,7 @@ HANGARS = [
     ("cyxd_hangar14", "Hangar 14 (Alberta Aviation Museum, OSM 230718920)", hangar14, 53.565730, -113.517176, 180, 87.5, 100.0),
     ("cyxd_hangar18", "Hangar 18 (Edmonton Flying Club complex, traced from 2014 imagery)", hangar18, 53.568498, -113.519742, 48, 88.0, 84.0),
     ("cyxd_hangar38", "Hangar 38 (mustard yellow, OSM 230718902)", hangar38, 53.573308, -113.529714, 138, 68.8, 64.0),
-    ("cyxd_hangar39", "Hangar 39 (pale-blue double hall, OSM 230718901, beside Hangar 38)", hangar39, 53.574052, -113.528731, 138, 107.0, 90.5),
+    ("cyxd_hangar39", "Hangar 39 (pale-blue double hall, OSM 230718901, beside Hangar 38)", hangar39, 53.574057, -113.5286471, 138, 96.2, 92.6),
     # 2026-11-03: centre of the measured 72.8 x 51.4 m plan (2017 / 2014 aerials); within 1 m of the old placement, which was only 46 m deep
     ("cyxd_hangar40", "Hangar 40 (Canadian Helicopters: white block, brick office, blue-roofed hall; OSM 230718900)", hangar40, 53.5749955, -113.5293974, 228, 72.8, 51.4),
     ("cyxd_hangar21", "Hangar 21 (old terminal, OSM 230718907; traced from the 2017 imagery)", hangar21, 53.570940, -113.523178, 51, 162.0, 70.0),

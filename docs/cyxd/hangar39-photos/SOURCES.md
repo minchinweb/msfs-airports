@@ -30,3 +30,9 @@ Orientation, per the photo captions and the user: Hangar 39's main (door) face l
 - Door/gable orientation and the exact footprints must be checked against OSM, the 1944 aerial and the 1980s photos; these photos are from 2014.
 - Era: the building dates and the end of use of the PWA hangar were not checked. PWA hangars would fit the 1960s-80s part of the scenery's range; confirm from the 1980 archive photos (`aerials/city-edmonton-archives-1980ca-ET-28-895.jpg` and `-906.jpg`, `hangar21-terminal-photos/city-edmonton-archives-1980-ET-28-399.jpg`) before placing it.
 - Colours: Hangar 39 pale blue + white + mid-blue; Hangar 38 mustard yellow; both carry the same blue numbered discs used at the end of the airport's life.
+
+## SPAR logo (added 2026-11-03)
+
+| File | Source | Notes |
+|---|---|---|
+| `spar-logo-reference.svg` | cdnlogo.com ("spar-logo"), supplied by the user | Spar Aerospace logo used 1996-1999 (identified from slide 4 of Instagram findingirealfilm, post DTgntf5Df3v). White SPAR lettering and a white swoosh on a navy #41456e square. It is a trademark: used here as a reference only. `hangars.spar_letters()` traces its letter and swoosh paths into the cut-out SPAR letters and swoosh on Hangar 39's gap screen. |

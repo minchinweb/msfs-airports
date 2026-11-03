@@ -2,6 +2,7 @@
 drawn at its true board aspect and squashed to a square, then stretched back onto the oval polygon in gen_buildings.py).
     python -I airport-cyxd/tools/make_signs.py"""
 import math
+import re
 from pathlib import Path
 import random
 
@@ -238,6 +239,58 @@ def aerocentre():
              (w * 0.05, h * 0.18, w * 0.95, h * 0.86), (24, 24, 28))
     d.polygon([(w * 0.03, h * 0.70), (w * 0.17, h * 0.10), (w * 0.21, h * 0.06), (w * 0.10, h * 0.62)], fill=(200, 36, 40))  # swoosh over the A
     return b.resize((1024, 1024), Image.LANCZOS)
+
+
+def _svg_subpaths(d, steps=16):
+    """Flatten an SVG path's d string into closed subpaths [[(x, y), ...], ...] (absolute and relative M L H V C A Z; arcs as straight lines,
+    which only cut the small corners of the SPAR logo's P and R counters; hangars.spar_letters uses it)."""
+    toks = re.findall(r"[MmLlHhVvCcAaZz]|-?(?:\d+\.?\d*|\.\d+)(?:e-?\d+)?", d)
+    i, cur, start, subs, cmd = 0, (0.0, 0.0), (0.0, 0.0), [], None
+
+    def nums(k):
+        nonlocal i
+        v = [float(t) for t in toks[i:i + k]]
+        i += k
+        return v
+    while i < len(toks):
+        if re.fullmatch(r"[A-Za-z]", toks[i]):
+            cmd = toks[i]
+            i += 1
+            if cmd in "Zz":
+                cur = start
+                continue
+        rel, c = cmd.islower(), cmd.upper()
+        ox, oy = cur if rel else (0.0, 0.0)
+        if c == "M":
+            x, y = nums(2)
+            cur = start = (ox + x, oy + y)
+            subs.append([cur])
+            cmd = "l" if rel else "L"
+        elif c == "L":
+            x, y = nums(2)
+            cur = (ox + x, oy + y)
+            subs[-1].append(cur)
+        elif c == "H":
+            (x,) = nums(1)
+            cur = ((cur[0] if rel else 0.0) + x, cur[1])
+            subs[-1].append(cur)
+        elif c == "V":
+            (y,) = nums(1)
+            cur = (cur[0], (cur[1] if rel else 0.0) + y)
+            subs[-1].append(cur)
+        elif c == "C":
+            x1, y1, x2, y2, x, y = nums(6)
+            p0, p1, p2, p3 = cur, (ox + x1, oy + y1), (ox + x2, oy + y2), (ox + x, oy + y)
+            for k in range(1, steps + 1):
+                t = k / steps
+                a, b, cc, dd = (1 - t) ** 3, 3 * (1 - t) ** 2 * t, 3 * (1 - t) * t * t, t ** 3
+                subs[-1].append((a * p0[0] + b * p1[0] + cc * p2[0] + dd * p3[0], a * p0[1] + b * p1[1] + cc * p2[1] + dd * p3[1]))
+            cur = p3
+        elif c == "A":
+            _, _, _, _, _, x, y = nums(7)
+            cur = (ox + x, oy + y)
+            subs[-1].append(cur)
+    return subs
 
 
 def cessna():

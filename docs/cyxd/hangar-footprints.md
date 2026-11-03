@@ -31,8 +31,8 @@ Footprints for the hangars below, with how each was found. The per-building reas
 | 11 | 325268748 | 53.569251, -113.508228 | 0 (N) | 86.3 x 64.0 | high (same spot as the 1944 USAAF "T3" box; barrel-vault shadow on its north end; annexes) |
 | 14 | 230718920 | 53.565714, -113.517130 | 90 (E) | 100.0 x 90.8 | high (OSM "Hangar #14") |
 | 18 | traced | 53.568740, -113.519699 | 48 (NE) | 60 x 43 (+ rear wing) | medium (position from the 2014 imagery, 78 m NW of the tower) |
-| 38 | 230718902 | 53.573308, -113.529714 | 138 (SE) | 68.8 x 64.0 | medium (see below) |
-| 39 | 230718901 | 53.574052, -113.528731 | 138 (SE) | 107.0 x 90.5 | high (user): the pale-blue double hall, adjacent to the olive Hangar 38 in photo 26; Hangar 40 is at its NW (left) end in photo 28 |
+| 38 | 230718902 | 53.573308, -113.529714 | 138 (SE) | 68.8 x 64.0 | medium (see below); fits the 2017 aerial (checked 2026-11-03) |
+| 39 | 230718901 | 53.574057, -113.528647 | 138 (SE) | 96.2 x 92.6 | high (user): the pale-blue double hall, adjacent to the olive Hangar 38 in photo 26; Hangar 40 is at its NW (left) end in photo 28. Re-measured 2026-11-03 on the 2017 Wayback aerial (zoom 19): OSM's 107 m includes a 9 m paved strip on the SW, so the model is 96.2 x 92.6 m with the centre moved 4.5 m NE and 3.3 m SE (SW hall 44.6 m, gap 11.6 m, NE hall 40.0 m, 80.2 m deep, back wing 12.4 m) |
 | 40 | 230718900 | 53.574996, -113.529397 | 228 (SW, to 121 St) | 72.8 x 51.4 | high (the user; roundel, brick office and white block in photos 29-31). Measured 2026-11-03 on the 2017 and 2014 Wayback aerials: NW white flat-roofed block 29.0 x 36.7, brick office 12.7 wide, SE blue-roofed gabled hall 31.0 x 51.4 whose SW gable end (with the "40") stands 14.7 m forward of the office; all share the NE (airside) face |
 
 Old generic placements removed from the generator (`SKIP`): "Hangar 11", "Hangar 14", "USAAF hangar T1" (1944-photo box about 40 m north of Hangar 7) and

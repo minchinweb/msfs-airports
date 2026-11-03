@@ -432,8 +432,8 @@
 		<TaxiwayParking parentGroupID="3" groupIndex="14" index="42" type="FUEL" lat="53.57010692016311" lon="-113.52098276536573" heading="228.000000" radius="15.000000" name="PARKING" number="6" suffix="NONE" numberMarking="FALSE" has3DMesh="TRUE" drawDirt="TRUE" numberBiasX="0.000000" numberBiasZ="0.000000" numberHeading="0.000000"/>
 		<TaxiwayParking parentGroupID="3" groupIndex="15" index="43" type="FUEL" lat="53.56766693922663" lon="-113.51742311597087" heading="228.000000" radius="15.000000" name="PARKING" number="7" suffix="NONE" numberMarking="FALSE" has3DMesh="TRUE" drawDirt="TRUE" numberBiasX="0.000000" numberBiasZ="0.000000" numberHeading="0.000000"/>
 		<TaxiwayParking parentGroupID="3" groupIndex="16" index="44" type="RAMP_GA_LARGE" lat="53.57293375440443" lon="-113.52914771144088" heading="228.000000" radius="20.000000" name="PARKING" number="8" suffix="NONE" numberMarking="FALSE" has3DMesh="TRUE" drawDirt="TRUE" passengerAccessType="RAMP" numberBiasX="0.000000" numberBiasZ="0.000000" numberHeading="0.000000"/>
-		<TaxiwayParking parentGroupID="3" groupIndex="17" index="45" type="RAMP_GA_LARGE" lat="53.57373729249153" lon="-113.52775433249742" heading="48.000000" radius="20.000000" name="PARKING" number="9" suffix="NONE" numberMarking="FALSE" has3DMesh="TRUE" drawDirt="TRUE" passengerAccessType="RAMP" numberBiasX="0.000000" numberBiasZ="0.000000" numberHeading="0.000000"/>
-		<TaxiwayParking parentGroupID="3" groupIndex="18" index="46" type="RAMP_GA_LARGE" lat="53.57344111795516" lon="-113.52830711454835" heading="48.000000" radius="20.000000" name="PARKING" number="10" suffix="NONE" numberMarking="FALSE" has3DMesh="TRUE" drawDirt="TRUE" passengerAccessType="RAMP" numberBiasX="0.000000" numberBiasZ="0.000000" numberHeading="0.000000"/>
+		<TaxiwayParking parentGroupID="3" groupIndex="17" index="45" type="RAMP_GA_LARGE" lat="53.57372032826048" lon="-113.52768771199885" heading="48.000000" radius="20.000000" name="PARKING" number="9" suffix="NONE" numberMarking="FALSE" has3DMesh="TRUE" drawDirt="TRUE" passengerAccessType="RAMP" numberBiasX="0.000000" numberBiasZ="0.000000" numberHeading="0.000000"/>
+		<TaxiwayParking parentGroupID="3" groupIndex="18" index="46" type="RAMP_GA_LARGE" lat="53.57345404797637" lon="-113.52818469922596" heading="48.000000" radius="20.000000" name="PARKING" number="10" suffix="NONE" numberMarking="FALSE" has3DMesh="TRUE" drawDirt="TRUE" passengerAccessType="RAMP" numberBiasX="0.000000" numberBiasZ="0.000000" numberHeading="0.000000"/>
 		<TaxiwayParking parentGroupID="3" groupIndex="19" index="47" type="RAMP_GA_SMALL" lat="53.57553597070800" lon="-113.52936992614926" heading="228.000000" radius="8.000000" name="PARKING" number="11" suffix="NONE" numberMarking="FALSE" has3DMesh="TRUE" drawDirt="TRUE" helicopterStand="TRUE" numberBiasX="0.000000" numberBiasZ="0.000000" numberHeading="0.000000"/>
 		<TaxiwayParking parentGroupID="3" groupIndex="20" index="48" type="RAMP_GA_SMALL" lat="53.57566186998858" lon="-113.52913945917027" heading="228.000000" radius="8.000000" name="PARKING" number="12" suffix="NONE" numberMarking="FALSE" has3DMesh="TRUE" drawDirt="TRUE" helicopterStand="TRUE" numberBiasX="0.000000" numberBiasZ="0.000000" numberHeading="0.000000"/>
 		<TaxiwayParking parentGroupID="3" groupIndex="21" index="49" type="RAMP_GA_SMALL" lat="53.57577742754253" lon="-113.52890672530295" heading="228.000000" radius="8.000000" name="PARKING" number="13" suffix="NONE" numberMarking="FALSE" has3DMesh="TRUE" drawDirt="TRUE" helicopterStand="TRUE" numberBiasX="0.000000" numberBiasZ="0.000000" numberHeading="0.000000"/>
@@ -893,10 +893,10 @@
 			</Apron>
 			<!-- front-door apron: Hangar 39 (pale-blue double hall, OSM 230718901, beside Hang -->
 			<Apron parentGroupID="3" surface="{85D02B2B-08A1-452E-AB07-6D5AE7F52884}" drawSurface="TRUE" drawDetail="TRUE" localUV="TRUE" stretchUV="TRUE" flipUV="FALSE" priority="1" tiling="25.000000" heading="0.000000" falloff="0.100000" opacity="255" groundMerging="TRUE" excludeVegetationAround="TRUE" excludeVegetationInside="TRUE" isRectangle="FALSE">
-				<Vertex lat="53.57405147616556" lon="-113.52764223167719"/>
-				<Vertex lat="53.57340761847779" lon="-113.52884393178792"/>
-				<Vertex lat="53.57342766734899" lon="-113.52887426867501"/>
-				<Vertex lat="53.57407152503676" lon="-113.52767256856428"/>
+				<Vertex lat="53.57403701417937" lon="-113.52763869720144"/>
+				<Vertex lat="53.57401696530818" lon="-113.52760836031435"/>
+				<Vertex lat="53.57343809512533" lon="-113.52868876732980"/>
+				<Vertex lat="53.57345814399653" lon="-113.52871910421689"/>
 			</Apron>
 			<!-- front-door apron: Hangar 40 (Canadian Helicopters: white block, brick office,  -->
 			<Apron parentGroupID="3" surface="{85D02B2B-08A1-452E-AB07-6D5AE7F52884}" drawSurface="TRUE" drawDetail="TRUE" localUV="TRUE" stretchUV="TRUE" flipUV="FALSE" priority="1" tiling="25.000000" heading="0.000000" falloff="0.100000" opacity="255" groundMerging="TRUE" excludeVegetationAround="TRUE" excludeVegetationInside="TRUE" isRectangle="FALSE">
@@ -996,19 +996,20 @@
 			<!-- BEGIN parking aprons (generated by airport-cyxd/tools/gen_parking.py) -->
 			<!-- parking apron: Hangars 38 and 39: front apron for parallel-parked jets -->
 			<Apron parentGroupID="3" surface="{85D02B2B-08A1-452E-AB07-6D5AE7F52884}" drawSurface="TRUE" drawDetail="TRUE" localUV="TRUE" stretchUV="TRUE" flipUV="FALSE" priority="1" tiling="25.000000" heading="0.000000" falloff="0.100000" opacity="255" groundMerging="TRUE" excludeVegetationAround="TRUE" excludeVegetationInside="TRUE" isRectangle="FALSE">
-				<Vertex lat="53.57288622393672" lon="-113.52978144985676"/>
-				<Vertex lat="53.57288453330443" lon="-113.52977786351187"/>
+				<Vertex lat="53.57288541005301" lon="-113.52978021833115"/>
+				<Vertex lat="53.57288445399159" lon="-113.52977698478736"/>
 				<Vertex lat="53.57288514324890" lon="-113.52977371381911"/>
 				<Vertex lat="53.57329913772477" lon="-113.52900103187876"/>
-				<Vertex lat="53.57330100141777" lon="-113.52899953800423"/>
-				<Vertex lat="53.57330274261449" lon="-113.52900041518521"/>
-				<Vertex lat="53.57331455550258" lon="-113.52901826044307"/>
-				<Vertex lat="53.57402757116436" lon="-113.52774782873027"/>
-				<Vertex lat="53.57406952014964" lon="-113.52766953487557"/>
-				<Vertex lat="53.57407225648929" lon="-113.52766820964624"/>
-				<Vertex lat="53.57410762920617" lon="-113.52760518351134"/>
-				<Vertex lat="53.57373338361059" lon="-113.52703889495224"/>
-				<Vertex lat="53.57247679837104" lon="-113.52927784400165"/>
+				<Vertex lat="53.57330152973228" lon="-113.52899957870913"/>
+				<Vertex lat="53.57330383222777" lon="-113.52900203455314"/>
+				<Vertex lat="53.57345549843215" lon="-113.52871996494248"/>
+				<Vertex lat="53.57345613910941" lon="-113.52871607052818"/>
+				<Vertex lat="53.57403500929225" lon="-113.52763566351274"/>
+				<Vertex lat="53.57403687298525" lon="-113.52763416963820"/>
+				<Vertex lat="53.57403874928708" lon="-113.52763523191159"/>
+				<Vertex lat="53.57407311834878" lon="-113.52757131214851"/>
+				<Vertex lat="53.57369887275321" lon="-113.52700502358940"/>
+				<Vertex lat="53.57247679837105" lon="-113.52927784400165"/>
 				<Vertex lat="53.57285104396662" lon="-113.52984413256075"/>
 			</Apron>
 			<!-- parking apron: Hangar 40: apron NW of the white block (helicopter pads) -->
@@ -1603,7 +1604,7 @@
 		<LibraryObject name="{F21D551C-71C3-53D7-8F4C-7A93119A0E59}" scale="1.000000"/>
 	</SceneryObject>
 	<!-- Hangar 39 (pale-blue double hall, OSM 230718901, beside Hangar 38) -->
-	<SceneryObject lat="53.57405200" lon="-113.52873100" alt="0.00000000000000" pitch="0.000000" bank="0.000000" heading="138" imageComplexity="VERY_SPARSE" altitudeIsAgl="TRUE" snapToGround="TRUE" snapToNormal="FALSE">
+	<SceneryObject lat="53.57405700" lon="-113.52864710" alt="0.00000000000000" pitch="0.000000" bank="0.000000" heading="138" imageComplexity="VERY_SPARSE" altitudeIsAgl="TRUE" snapToGround="TRUE" snapToNormal="FALSE">
 		<LibraryObject name="{3BE3060C-8E60-5E6B-B37F-53B50F50FD0B}" scale="1.000000"/>
 	</SceneryObject>
 	<!-- Hangar 40 (Canadian Helicopters: white block, brick office, blue-roofed hall; OSM 230718900) -->
@@ -1957,10 +1958,10 @@
 		<Attribute name="ExcludeMSBuildings" guid="{F78A3074-8AD5-4B8B-92C4-C1C948BB7AA5}" type="UINT8" value="1"/>
 		<Attribute name="ExcludeTIN" guid="{18B58CBF-AE02-4A19-8AA9-3809E8E73400}" type="UINT8" value="1"/>
 		<Attribute name="ExclusionFlags" guid="{4CACC252-E6DC-419A-B20C-16EC601DF70E}" type="UINT32" value="3"/>
-		<Vertex lat="53.57475253456280" lon="-113.52858102004623"/>
-		<Vertex lat="53.57403646853622" lon="-113.52991749026283"/>
-		<Vertex lat="53.57335146543720" lon="-113.52888097995375"/>
-		<Vertex lat="53.57406753146378" lon="-113.52754450973715"/>
+		<Vertex lat="53.57473205791526" lon="-113.52856838450437"/>
+		<Vertex lat="53.57408097939361" lon="-113.52978356162568"/>
+		<Vertex lat="53.57338194208474" lon="-113.52872581549563"/>
+		<Vertex lat="53.57403302060640" lon="-113.52751063837432"/>
 	</Polygon>
 	<Polygon version="0.4.0" displayName="No generated buildings: Hangar 40 (Canadian Helicopters: white block, brick office, " parentGroupID="6" altitude="667.68023681640625">
 		<Attribute name="UniqueGUID" guid="{359C73E8-06BE-4FB2-ABCB-EC942F7761D0}" type="GUID" value="{C15E90E1-E758-5E9B-96EA-8662D6EE2EF8}"/>
@@ -2208,7 +2209,7 @@
 		<Vertex lat="53.57509343178176" lon="-113.53035292413679"/>
 		<Vertex lat="53.57557121029026" lon="-113.52946119526959"/>
 		<Vertex lat="53.57489756821824" lon="-113.52844187586319"/>
-		<Vertex lat="53.57406220669982" lon="-113.52737376463432"/>
+		<Vertex lat="53.57402769584244" lon="-113.52733989327149"/>
 		<Vertex lat="53.57329182427496" lon="-113.52870526163751"/>
 	</Polygon>
 	<Polygon version="0.4.0" displayName="No trees: Between the parking garage and the old terminal" parentGroupID="6" altitude="667.68023681640625">
