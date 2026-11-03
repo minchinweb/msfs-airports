@@ -37,6 +37,15 @@ CAR_PARKS = (
     # GAC's round entrance (2014 aerial; Street View h19-nw-entrance shows cars parked along the Esso wall)
     ("Esso building, row in front", [(-205, -34.5), (-160, -34.5), (-160, -28.5), (-205, -28.5)], 48.0),
     ("Esso building, column along the SE side", [(-151, -27), (-144, -27), (-144, 3), (-151, 3)], 318.0),
+    # Shell hangar / Aerocentre (Hangar 16), 2026-11-02: the 2014 Wayback roofs sit about 12 m NW (-u) of the models, which follow the Google
+    # Earth aerial, so the rows are placed from the cars on that aerial shifted +12 m in u, against the model walls (wing landside face v -34.4,
+    # hangar SE end u 200.9, Hangar 15's NW wall u 226.9).  Street View 2012 (sv19, sv27) shows the cars nose-in along the wing and the SE end.
+    ("Shell hangar wing, nose-in row along its landside face", [(144, -40.4), (193, -40.4), (193, -34.9), (144, -34.9)], 48.0),
+    ("Shell hangar, column along its SE end wall", [(201.5, -33), (206.5, -33), (206.5, 0), (201.5, 0)], 318.0),
+    ("Between the Shell hangar and Hangar 15, west column", [(214, -33), (219, -33), (219, 10), (214, 10)], 138.0),
+    ("Between the Shell hangar and Hangar 15, east column", [(219.5, -33), (224.5, -33), (224.5, 10), (219.5, 10)], 318.0),
+    ("Aerocentre landside lot, north row", [(108, -10.5), (127, -10.5), (127, -5), (108, -5)], 48.0),
+    ("Aerocentre landside lot, south row", [(108, -28.5), (127, -28.5), (127, -23), (108, -23)], 228.0),
 )
 NE_GATES_S = (45.0, 86.0, 127.0)  # along the terminal's NE face from its NW corner; bays in hangars.py are at x = s - 86
 GATE_OUT, ROOT_AHEAD = 22.6, 25.0  # spot distance from the face, jetway root distance ahead of the spot

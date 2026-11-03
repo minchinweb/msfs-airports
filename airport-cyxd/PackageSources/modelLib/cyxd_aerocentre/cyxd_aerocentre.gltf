@@ -38,6 +38,16 @@
      "indices": 3,
      "mode": 4,
      "material": 0
+    },
+    {
+     "attributes": {
+      "POSITION": 0,
+      "NORMAL": 1,
+      "TEXCOORD_0": 2
+     },
+     "indices": 4,
+     "mode": 4,
+     "material": 1
     }
    ]
   }
@@ -52,12 +62,26 @@
     "metallicFactor": 0.0,
     "roughnessFactor": 0.9
    }
+  },
+  {
+   "name": "cyxd_aerocentre",
+   "pbrMetallicRoughness": {
+    "baseColorTexture": {
+     "index": 1
+    },
+    "metallicFactor": 0.0,
+    "roughnessFactor": 0.9
+   }
   }
  ],
  "textures": [
   {
    "sampler": 0,
    "source": 0
+  },
+  {
+   "sampler": 1,
+   "source": 1
   }
  ],
  "samplers": [
@@ -75,16 +99,19 @@
  "images": [
   {
    "uri": "cyxd_palette.png"
+  },
+  {
+   "uri": "cyxd_aerocentre.png"
   }
  ],
  "accessors": [
   {
    "bufferView": 0,
    "componentType": 5126,
-   "count": 1718,
+   "count": 1954,
    "type": "VEC3",
    "min": [
-    -14.35,
+    -14.45,
     0.0,
     -17.349999999999998
    ],
@@ -97,19 +124,25 @@
   {
    "bufferView": 1,
    "componentType": 5126,
-   "count": 1718,
+   "count": 1954,
    "type": "VEC3"
   },
   {
    "bufferView": 2,
    "componentType": 5126,
-   "count": 1718,
+   "count": 1954,
    "type": "VEC2"
   },
   {
    "bufferView": 3,
    "componentType": 5123,
-   "count": 2574,
+   "count": 2922,
+   "type": "SCALAR"
+  },
+  {
+   "bufferView": 4,
+   "componentType": 5123,
+   "count": 6,
    "type": "SCALAR"
   }
  ],
@@ -117,28 +150,33 @@
   {
    "buffer": 0,
    "byteOffset": 0,
-   "byteLength": 20616
+   "byteLength": 23448
   },
   {
    "buffer": 0,
-   "byteOffset": 20616,
-   "byteLength": 20616
+   "byteOffset": 23448,
+   "byteLength": 23448
   },
   {
    "buffer": 0,
-   "byteOffset": 41232,
-   "byteLength": 13744
+   "byteOffset": 46896,
+   "byteLength": 15632
   },
   {
    "buffer": 0,
-   "byteOffset": 54976,
-   "byteLength": 5148
+   "byteOffset": 62528,
+   "byteLength": 5844
+  },
+  {
+   "buffer": 0,
+   "byteOffset": 68372,
+   "byteLength": 12
   }
  ],
  "buffers": [
   {
    "uri": "cyxd_aerocentre.bin",
-   "byteLength": 60124
+   "byteLength": 68384
   }
  ]
 }

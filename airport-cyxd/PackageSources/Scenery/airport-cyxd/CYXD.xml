@@ -907,12 +907,12 @@
 				<Vertex lat="53.57057199092454" lon="-113.52199657245994"/>
 				<Vertex lat="53.57057344416216" lon="-113.52199855011020"/>
 			</Apron>
-			<!-- front-door apron: Hangar 19 (low tan wings with a brick centre, 62-69 Airport  -->
+			<!-- front-door apron: Hangar 19 (General Aviation Centre, 77 Airport Rd: brick blo -->
 			<Apron parentGroupID="3" surface="{85D02B2B-08A1-452E-AB07-6D5AE7F52884}" drawSurface="TRUE" drawDetail="TRUE" localUV="TRUE" stretchUV="TRUE" flipUV="FALSE" priority="1" tiling="25.000000" heading="0.000000" falloff="0.100000" opacity="255" groundMerging="TRUE" excludeVegetationAround="TRUE" excludeVegetationInside="TRUE" isRectangle="FALSE">
-				<Vertex lat="53.56954056330993" lon="-113.52055689348985"/>
-				<Vertex lat="53.56907994551330" lon="-113.51995211797382"/>
-				<Vertex lat="53.56900797070054" lon="-113.52010693344604"/>
-				<Vertex lat="53.56946858849716" lon="-113.52071170896208"/>
+				<Vertex lat="53.56965111611048" lon="-113.52071223819883"/>
+				<Vertex lat="53.56905585618869" lon="-113.51993068214733"/>
+				<Vertex lat="53.56899495442404" lon="-113.52006167985461"/>
+				<Vertex lat="53.56959021434583" lon="-113.52084323590610"/>
 			</Apron>
 			<!-- front-door apron: Hangar 20 (Esso building, 83 Airport Rd NW; traced from the  -->
 			<Apron parentGroupID="3" surface="{85D02B2B-08A1-452E-AB07-6D5AE7F52884}" drawSurface="TRUE" drawDetail="TRUE" localUV="TRUE" stretchUV="TRUE" flipUV="FALSE" priority="1" tiling="25.000000" heading="0.000000" falloff="0.100000" opacity="255" groundMerging="TRUE" excludeVegetationAround="TRUE" excludeVegetationInside="TRUE" isRectangle="FALSE">
@@ -961,15 +961,14 @@
 			</Apron>
 			<!-- front-door apron: Hangar 15 (Centennial Flight Centre) -->
 			<Apron parentGroupID="3" surface="{85D02B2B-08A1-452E-AB07-6D5AE7F52884}" drawSurface="TRUE" drawDetail="TRUE" localUV="TRUE" stretchUV="TRUE" flipUV="FALSE" priority="1" tiling="25.000000" heading="0.000000" falloff="0.100000" opacity="255" groundMerging="TRUE" excludeVegetationAround="TRUE" excludeVegetationInside="TRUE" isRectangle="FALSE">
-				<Vertex lat="53.56650196693213" lon="-113.51671779669357"/>
-				<Vertex lat="53.56636055893529" lon="-113.51698172148424"/>
 				<Vertex lat="53.56648085216243" lon="-113.51716374280682"/>
 				<Vertex lat="53.56676366815613" lon="-113.51663589322547"/>
 				<Vertex lat="53.56664337492898" lon="-113.51645387190290"/>
-				<Vertex lat="53.56660980095637" lon="-113.51651653458033"/>
-				<Vertex lat="53.56661851366096" lon="-113.51631393456677"/>
-				<Vertex lat="53.56642118657616" lon="-113.51628996900993"/>
-				<Vertex lat="53.56640330338974" lon="-113.51670581391515"/>
+				<Vertex lat="53.56650196693213" lon="-113.51671779669357"/>
+				<Vertex lat="53.56653068214303" lon="-113.51655871638992"/>
+				<Vertex lat="53.56649839789814" lon="-113.51654225852334"/>
+				<Vertex lat="53.56644879991544" lon="-113.51681702795392"/>
+				<Vertex lat="53.56636055893529" lon="-113.51698172148424"/>
 			</Apron>
 			<!-- front-door apron: Hangar 15 east wing -->
 			<Apron parentGroupID="3" surface="{85D02B2B-08A1-452E-AB07-6D5AE7F52884}" drawSurface="TRUE" drawDetail="TRUE" localUV="TRUE" stretchUV="TRUE" flipUV="FALSE" priority="1" tiling="25.000000" heading="0.000000" falloff="0.100000" opacity="255" groundMerging="TRUE" excludeVegetationAround="TRUE" excludeVegetationInside="TRUE" isRectangle="FALSE">
@@ -1318,6 +1317,60 @@
 			<Vertex lat="53.56929787705483" lon="-113.52150140331877"/>
 			<Vertex lat="53.56947839790187" lon="-113.52116447805409"/>
 			<Vertex lat="53.56952517860131" lon="-113.52123526412397"/>
+		</CarParking>
+	</SceneryObject>
+	<!-- car park: Shell hangar wing, nose-in row along its landside face -->
+	<SceneryObject lat="53.56714536807174" lon="-113.51846091938201" alt="0.00000000000000" pitch="0.000000" bank="0.000000" heading="0.000000" imageComplexity="VERY_SPARSE" altitudeIsAgl="TRUE" snapToGround="TRUE" snapToNormal="FALSE">
+		<CarParking>
+			<Vertex lat="53.56729255277548" lon="-113.51873955544255"/>
+			<Vertex lat="53.56696508787937" lon="-113.51824405295332"/>
+			<Vertex lat="53.56699818336799" lon="-113.51818228332147"/>
+			<Vertex lat="53.56732564826411" lon="-113.51867778581068"/>
+		</CarParking>
+	</SceneryObject>
+	<!-- car park: Shell hangar, column along its SE end wall -->
+	<SceneryObject lat="53.56703539029314" lon="-113.51786440057312" alt="0.00000000000000" pitch="0.000000" bank="0.000000" heading="0.000000" imageComplexity="VERY_SPARSE" altitudeIsAgl="TRUE" snapToGround="TRUE" snapToNormal="FALSE">
+		<CarParking>
+			<Vertex lat="53.56695281121993" lon="-113.51807499020794"/>
+			<Vertex lat="53.56691939643461" lon="-113.51802442872945"/>
+			<Vertex lat="53.56711796936636" lon="-113.51765381093828"/>
+			<Vertex lat="53.56715138415167" lon="-113.51770437241677"/>
+		</CarParking>
+	</SceneryObject>
+	<!-- car park: Between the Shell hangar and Hangar 15, west column -->
+	<SceneryObject lat="53.56698194013769" lon="-113.51768184266611" alt="0.00000000000000" pitch="0.000000" bank="0.000000" heading="0.000000" imageComplexity="VERY_SPARSE" altitudeIsAgl="TRUE" snapToGround="TRUE" snapToNormal="FALSE">
+		<CarParking>
+			<Vertex lat="53.56686927425663" lon="-113.51794858651171"/>
+			<Vertex lat="53.56683585947132" lon="-113.51789802503322"/>
+			<Vertex lat="53.56709460601874" lon="-113.51741509882049"/>
+			<Vertex lat="53.56712802080406" lon="-113.51746566029898"/>
+		</CarParking>
+	</SceneryObject>
+	<!-- car park: Between the Shell hangar and Hangar 15, east column -->
+	<SceneryObject lat="53.56694518387383" lon="-113.51762622503976" alt="0.00000000000000" pitch="0.000000" bank="0.000000" heading="0.000000" imageComplexity="VERY_SPARSE" altitudeIsAgl="TRUE" snapToGround="TRUE" snapToNormal="FALSE">
+		<CarParking>
+			<Vertex lat="53.56683251799279" lon="-113.51789296888536"/>
+			<Vertex lat="53.56679910320747" lon="-113.51784240740687"/>
+			<Vertex lat="53.56705784975489" lon="-113.51735948119415"/>
+			<Vertex lat="53.56709126454021" lon="-113.51741004267265"/>
+		</CarParking>
+	</SceneryObject>
+	<!-- car park: Aerocentre landside lot, north row -->
+	<SceneryObject lat="53.56766611799287" lon="-113.51864084428215" alt="0.00000000000000" pitch="0.000000" bank="0.000000" heading="0.000000" imageComplexity="VERY_SPARSE" altitudeIsAgl="TRUE" snapToGround="TRUE" snapToNormal="FALSE">
+		<CarParking>
+			<Vertex lat="53.56771305834066" lon="-113.51876779590721"/>
+			<Vertex lat="53.56758608215645" lon="-113.51857566228894"/>
+			<Vertex lat="53.56761917764508" lon="-113.51851389265708"/>
+			<Vertex lat="53.56774615382928" lon="-113.51870602627535"/>
+		</CarParking>
+	</SceneryObject>
+	<!-- car park: Aerocentre landside lot, south row -->
+	<SceneryObject lat="53.56755780548465" lon="-113.51884299944096" alt="0.00000000000000" pitch="0.000000" bank="0.000000" heading="0.000000" imageComplexity="VERY_SPARSE" altitudeIsAgl="TRUE" snapToGround="TRUE" snapToNormal="FALSE">
+		<CarParking>
+			<Vertex lat="53.56760474583244" lon="-113.51896995106603"/>
+			<Vertex lat="53.56747776964823" lon="-113.51877781744776"/>
+			<Vertex lat="53.56751086513685" lon="-113.51871604781590"/>
+			<Vertex lat="53.56763784132106" lon="-113.51890818143417"/>
 		</CarParking>
 	</SceneryObject>
 	<!-- END car parking -->

@@ -226,7 +226,21 @@ def gac():
     return im
 
 
+def aerocentre():
+    """AEROCENTRE logo painted on the cream spandrel of the Aerocentre's third front bay (4.4 x 0.75 m): black heavy italic capitals, the
+    A crossed by a red swoosh (Commons 4846273897 / 4846891790, Flickr 33836413).  Stretched over the whole square."""
+    w = 2640
+    h = int(w / (4.4 / 0.75))
+    b = Image.new("RGB", (w, h), (214, 208, 190))
+    d = ImageDraw.Draw(b)
+    text_fit(d, "AEROCENTRE", "ariblki.ttf" if (FONTS / "ariblki.ttf").exists() else "arialbi.ttf",
+             (w * 0.05, h * 0.18, w * 0.95, h * 0.86), (24, 24, 28))
+    d.polygon([(w * 0.03, h * 0.70), (w * 0.17, h * 0.10), (w * 0.21, h * 0.06), (w * 0.10, h * 0.62)], fill=(200, 36, 40))  # swoosh over the A
+    return b.resize((1024, 1024), Image.LANCZOS)
+
+
 if __name__ == "__main__":
+    aerocentre().save(HERE / "assets/aerocentre_sign.png")
     esso().save(HERE / "assets/esso_sign.png")
     navcan().save(HERE / "assets/navcan_sign.png")
     lawoffice().save(HERE / "assets/lawoffice_sign.png")

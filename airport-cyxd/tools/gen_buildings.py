@@ -59,7 +59,8 @@ def write_palette(path):
 
 TEX_T = 1.28  # metres per texture tile (8 clapboards / 8 shingle rows)
 TEX_NAMES = ("siding", "shingle_red", "shingle_grey", "ribbed", "ribbed_blue", "ribbed_green", "ribbed_mustard", "ribbed_steel",
-             "ribbed_tan", "ribbed_white", "ribbed_yellow", "ribbed_teal", "brick", "shell", "esso", "navcan", "lawoffice", "nwi", "efc", "goa", "museum", "gac")
+             "ribbed_tan", "ribbed_white", "ribbed_yellow", "ribbed_teal", "brick", "shell", "esso", "navcan", "lawoffice", "nwi", "efc", "goa", "museum", "gac",
+             "aerocentre")
 # night-lit materials: palette colour by day, warm emissive at night only (ASOBO_material_day_night_switch; the SDK's Blender exporter writes
 # emissiveFactor = colour x scale, default scale 1000).  key -> emissiveFactor.  "glow" = office windows, "glow_cab" = the dimmer tower cab.
 GLOW = {"glow": [180.0, 140.0, 85.0], "glow_cab": [40.0, 44.0, 36.0]}
@@ -151,7 +152,7 @@ def write_textures(folder):
     (folder / "cyxd_shell.png").write_bytes(sign.read_bytes())
     (folder / "cyxd_shell.png.xml").write_text('<BitmapConfiguration>\n\t<BitmapSlot>MTL_BITMAP_DECAL0</BitmapSlot>\n</BitmapConfiguration>\n')
     # Esso oval and NAV CANADA plaque: tools/make_signs.py
-    for nm in ("esso", "navcan", "lawoffice", "nwi", "efc", "goa", "museum", "gac"):
+    for nm in ("esso", "navcan", "lawoffice", "nwi", "efc", "goa", "museum", "gac", "aerocentre"):
         (folder / ("cyxd_%s.png" % nm)).write_bytes((Path(__file__).resolve().parent / ("assets/%s_sign.png" % nm)).read_bytes())
         (folder / ("cyxd_%s.png.xml" % nm)).write_text('<BitmapConfiguration>\n\t<BitmapSlot>MTL_BITMAP_DECAL0</BitmapSlot>\n</BitmapConfiguration>\n')
 
@@ -780,26 +781,31 @@ def aerocentre():
     PASS = 4.4  # drive-through width at the -X end
     HX, HZ = 6.2, 6.9  # horn: legs along X and Z, right angle at the landside NW corner (x0, z0)
     ZE = -0.5  # the hangar front is 11 m behind the Aerocentre front: the SE end wall shows from z = ZE to z1
-    prism(m, [(x0, z0), (x1, z0), (x1, z1), (x0, z1)], FL, H, SLATE, top=False)
+    # upper floor: bay 2 is recessed REC for its full height (both storeys) under the continuous roof fascia
+    prism(m, [(x0, z0), (x1, z0), (x1, z1 - REC), (x0, z1 - REC)], FL, H, SLATE, top=False)
+    m.box(x0, bx0, FL, H, z1 - REC, z1, SLATE, top=False)
+    m.box(bx1, x1, FL, H, z1 - REC, z1, SLATE, top=False)
     prism(m, [(x0, z0 - HZ), (x0 + HX, z0), (x0, z0)], FL, H, SLATE, top=False)  # the horn
     m.box(x0 + PASS, bx0, 0.5, FL, z0, z1, SLATE, top=False)
     m.box(bx1, x1, 0.5, FL, z0, z1, SLATE, top=False)
     m.box(bx0, bx1, 0.5, FL, z0, z1 - REC, SLATE, top=False)
-    m.box(x0 + PASS, x1, 0.0, 0.5, z0, z1, NAVY, top=False)
+    m.box(x0 + PASS, bx0, 0.0, 0.5, z0, z1, NAVY, top=False)
+    m.box(bx1, x1, 0.0, 0.5, z0, z1, NAVY, top=False)
+    m.box(bx0, bx1, 0.0, 0.5, z0, z1 - REC, NAVY, top=False)
     prism(m, [(x0 - 0.15, z0 - 0.15), (x1 + 0.15, z0 - 0.15), (x1 + 0.15, z1 + 0.15), (x0 - 0.15, z1 + 0.15)], H, H + PH, NAVY)
     prism(m, [(x0 - 0.15, z0 - HZ - 0.2), (x0 + HX + 0.2, z0 - 0.15), (x0 - 0.15, z0 - 0.15)], H, H + PH, NAVY)
     # slab undersides: over the passage (rectangle + horn) and the recess; inner wall of the passage
     m.poly([(x0, FL, z0), (x0 + PASS, FL, z0), (x0 + PASS, FL, z1), (x0, FL, z1)], DGREY, (x0, FL - 3, 0))
     m.poly([(x0, FL, z0 - HZ), (x0 + HX, FL, z0), (x0, FL, z0)], DGREY, (x0, FL - 3, z0))
-    m.poly([(bx0, FL, z1 - REC), (bx1, FL, z1 - REC), (bx1, FL, z1), (bx0, FL, z1)], DGREY, (bx0, FL - 3, z1))
+    m.poly([(bx0, H, z1 - REC), (bx1, H, z1 - REC), (bx1, H, z1), (bx0, H, z1)], DGREY, (bx0, H - 3, z1))  # recess soffit under the roof
     m.poly([(x0 + PASS, 0.5, z0), (x0 + PASS, 0.5, z1), (x0 + PASS, FL, z1), (x0 + PASS, FL, z0)], DGREY, (x0 - 3, 2, 0))
     # columns that carry the overhang to the ground: horn tip, horn heel, passage edges front and back
     for cx_, cz_ in ((x0 + 0.35, z0 - HZ + 0.35), (x0 + HX - 0.45, z0 - 0.35), (x0 + PASS, z0 + 0.35), (x0 + PASS, z1 - 0.1)):
         m.box(cx_ - 0.35, cx_ + 0.35, 0.0, FL, cz_ - 0.35, cz_ + 0.35, NAVY)
 
-    def ribbon(face, x_a, x_b, zf, y, h, along, off=0.14):
-        """Upper-floor ribbon: panes about 1.8 m wide between x_a and x_b (or z when along == 'z')."""
-        n = max(1, round((x_b - x_a) / 1.8))
+    def ribbon(face, x_a, x_b, zf, y, h, along, off=0.14, n=None):
+        """Upper-floor ribbon: n panes (default: about 1.8 m wide) between x_a and x_b (or z when along == 'z')."""
+        n = n or max(1, round((x_b - x_a) / 1.8))
         pw = (x_b - x_a) / n
         for i in range(n):
             s = x_a + i * pw + 0.04
@@ -817,16 +823,21 @@ def aerocentre():
             ybot = 0.0 if (xe <= x0 + 0.01) else 0.5
             m.box(xe - 0.35, xe + 0.35, ybot, H, za, zb, NAVY)
         za, zb = (zf, zf + 0.12) if sgn > 0 else (zf - 0.12, zf)
-        xs0 = x0 if sgn > 0 else x0 + HX
-        m.box(xs0, x1, FL + 0.2, 5.3, za, zb, CREAM)  # spandrel band between the glazed floors
         zt = (zf, zf + 0.17) if sgn > 0 else (zf - 0.17, zf)
-        m.box(xs0, x1, FL - 0.05, FL + 0.2, zt[0], zt[1], NAVY)  # navy band, deeper than the spandrel so the faces do not coincide
+        # spandrel (cream) and navy floor band; on the front they skip bay 2 and run across the back of its recess instead
+        spans = [(x0 + HX, x1, za, zb, zt)] if sgn < 0 else [
+            (x0, bx0, za, zb, zt), (bx1, x1, za, zb, zt), (bx0, bx1, z1 - REC, z1 - REC + 0.12, (z1 - REC, z1 - REC + 0.17))]
+        for xa_, xb_, sa, sb, (ta, tb) in spans:
+            m.box(xa_, xb_, FL + 0.2, 5.3, sa, sb, CREAM)  # spandrel band between the glazed floors
+            m.box(xa_, xb_, FL - 0.05, FL + 0.2, ta, tb, NAVY)  # navy band, deeper than the spandrel so the faces do not coincide
         for k in range(1, 6):
             xa, xb = e[k] + 0.45, e[k - 1] - 0.45
             if sgn < 0 and k == 5:
                 xa = x0 + HX + 0.45
+            # pane counts from the apron (4846273897): 3 / 2 / 2 / 2 / 3 from the SE end
             if xb - xa > 0.8:
-                ribbon(face, xa, xb, zf, 5.4, 2.4, "x", 0.2)
+                ribbon(face, xa, xb, z1 - REC if (sgn > 0 and k == 2) else zf, 5.4, 2.4, "x", 0.2,
+                       n=(3, 2, 2, 2, 3)[k - 1] if sgn > 0 else None)
             if sgn > 0:
                 if k == 2:
                     continue  # entrance bay handled below
@@ -857,25 +868,17 @@ def aerocentre():
     m.window((1, 0, 0), (x1, 0.7, ZE + 0.45), (0, 0, 1), z1 - 0.45 - (ZE + 0.45), 2.8, off=0.14)
     m.box(x1, x1 + 0.12, FL + 0.2, 5.3, ZE, z1, CREAM)
     m.box(x1, x1 + 0.17, FL - 0.05, FL + 0.2, ZE, z1, NAVY)
-    # entrance recess (bay 2): angled panels and the door
-    xl, xr = bx0 + 0.35, bx1 - 0.35  # opening on the front plane
-    dl, dr = bx0 + 1.4, bx1 - 1.4  # door width at the back of the recess
+    # the SE end wall reads as three bays from the apron (4846273897): two navy piers between the corner and the hangar
+    for zc in (z1 - 4.6, z1 - 8.0):
+        m.box(x1, x1 + 0.45, 0.5, H, zc - 0.35, zc + 0.35, NAVY)
+    # entrance recess (bay 2): a plain rectangular recess REC deep through both storeys ("door nook"); glazed back wall with the door
     zb_ = z1 - REC
-    m.poly([(xl, 0.5, z1), (dl, 0.5, zb_), (dl, FL, zb_), (xl, FL, z1)], PANEL, (xl - 4, 2.0, z1 - 4))  # -X angled panel, carries the sign
-    m.poly([(xr, 0.7, z1), (dr, 0.7, zb_), (dr, 3.4, zb_), (xr, 3.4, z1)], DARK, (xr + 4, 2.0, z1 - 4))  # +X angled panel, dark glass
-    m.window((0, 0, 1), (dl, 0.0, zb_), (1, 0, 0), dr - dl, 2.7, off=0.06)  # door leaves
-    ax, az = dl - xl, zb_ - z1
-    al = math.hypot(ax, az)
-    ux_, uz_ = ax / al, az / al
-    nx_, nz_ = -uz_, ux_  # panel normal, pointing out of the recess toward +X/+Z
-
-    def on_panel(t, y, off):
-        return (xl + ux_ * t + nx_ * off, y, z1 + uz_ * t + nz_ * off)
-    t0, t1 = 0.25, al - 0.2
-    cen = (xl - 3.0, 2.0, z1 - 3.0)
-    m.poly([on_panel(t0, 2.05, 0.04), on_panel(t1, 2.05, 0.04), on_panel(t1, 3.25, 0.04), on_panel(t0, 3.25, 0.04)], WHITE, cen)
-    m.poly([on_panel(t0 + 0.2, 2.3, 0.07), on_panel(t1 - 0.15, 2.3, 0.07), on_panel(t1 - 0.15, 2.62, 0.07), on_panel(t0 + 0.2, 2.3 + 0.32, 0.07)], NAVY, cen)
-    m.poly([on_panel(t0 + 0.15, 2.78, 0.07), on_panel(t0 + 1.0, 2.78, 0.07), on_panel(t0 + 0.65, 3.12, 0.07), on_panel(t0 + 0.15, 3.12, 0.07)], RED, cen)
+    m.window((0, 0, 1), (bx0 + 0.45, 0.7, zb_), (1, 0, 0), 1.2, 2.8, off=0.14)
+    m.window((0, 0, 1), (bx1 - 1.65, 0.7, zb_), (1, 0, 0), 1.2, 2.8, off=0.14)
+    m.window((0, 0, 1), (bx0 + 1.85, 0.0, zb_), (1, 0, 0), bx1 - bx0 - 3.7, 2.7, off=0.06)  # door leaves
+    m.box(bx0, bx1, 0.0, 0.02, zb_, z1, DGREY)  # recess floor
+    # AEROCENTRE logo on the cream spandrel of bay 3, flat on the front (not in the recess): 4846273897, 4846891790, Flickr 33836413
+    rect_sign(m, (e[3] + e[2]) / 2, (FL + 0.2 + 5.3) / 2, z1 + 0.14, (0, 1), e[2] - e[3] - 0.9, 0.75, "aerocentre")
     for xd in (e[3] - 0.6, e[4] - 0.6):  # landside entrances
         m.window((0, 0, -1), (xd, 0.0, z0), (1, 0, 0), 1.2, 2.2, off=0.14)
     # roof gear: HF antenna pad and a whip mast over the NW part
@@ -967,11 +970,12 @@ def stars_lettering(m, x_right, y0, z, n, H):
 def shell_hangar():
     """Hangar 16 shell group as measured on the 2014 Google Earth aerial (docs/cyxd/aerials/google-earth-hangar16-201407.jpg,
     scale bar 8.94 m) and the 2012 street view: the cream ribbed-metal Shell hangar (45 x 39 x 11.2 m, flat roof with a red
-    parapet trim), the two-storey blue-grey NORTH wing (8 m) against the Aerocentre's back wall and the lower one-storey WEST wing
-    (4.8 m) on the landside with its red STARS band wrapped round the north corner.  Frame (before the final mirror): origin =
-    centre of the group (tower frame x 36.75, z 87.5), +Z = airside (bearing 48), +X = bearing 138 (SE).  Hangar front, from the NW
-    end (-X): sign column / grey roller shutter / sectional door, open bay, three striped door leaves, blank wall with the "16"
-    roundel at the SE end (+X).  Landside (-Z) wall: roundel by the NW corner, Shell sign toward the SE end.  Mirrored at the end."""
+    parapet trim), the two-storey blue-grey NORTH wing (8 m) against the Aerocentre's back wall and the lower WEST wing on the landside
+    (front tier 4.8 m, second tier 6.6 m) with the red STARS storefront band wrapped round its north corner.  Frame (before the final
+    mirror): origin = centre of the group (tower frame x 36.75, z 87.5), +Z = airside (bearing 48), +X = bearing 138 (SE).  Hangar
+    front, from the NW end (-X): sign column / grey roller shutter / sectional door, open bay, three striped door leaves, blank wall
+    with the "16" roundel at the SE end (+X).  Landside (-Z) wall: roundel at the NW corner, one clerestory row, and past the end of
+    the wing the Shell sign over red double doors.  Review 2026-11-02: docs/cyxd/hangar16-photos/SOURCES.md.  Mirrored at the end."""
     m = Mesh(textured=True)
     x0, x1, z0, z1 = -15.5, 29.5, -9.25, 29.75
     H = 11.2  # steps of about 3.2 m: west wing 4.8, north wing 8.0, hangar 11.2 (flickr_woodhead_14669349810)
@@ -1005,17 +1009,21 @@ def shell_hangar():
     number_disc(m, (l1 + x1) / 2, 6.0, z1, (0, 1), 1.0, "16")
     # NW end wall (above the north wing and the Aerocentre): Shell sign in the gable, centred on the hangar
     shell_sign(m, x0 - 0.2, 9.9, (z0 + z1) / 2, (-1, 0), 2.2, 1.9)
-    # landside (-Z) wall: blue roundel at the NW corner, Shell sign toward the SE end
-    number_disc(m, x0 + 3.0, 7.4, z0, (0, -1), 1.0, "16")
-    shell_sign(m, x1 - 5.0, 7.5, z0 - 0.2, (0, -1), 2.6, 2.24)
-    # landside window band (Street View 2012): two rows of grey glazing with yellow frames between the roundel and the sign
-    wb0, wb1 = x0 + 6.0, x1 - 9.0
-    nwin = int((wb1 - wb0) // 3.4)
-    for r_, yy in enumerate((5.8, 7.3)):
-        for i in range(nwin):
-            m.window((0, 0, -1), (wb0 + i * (wb1 - wb0) / nwin + 0.15, yy, z0), (1, 0, 0), (wb1 - wb0) / nwin - 0.3, 1.2, off=0.1)
-    for yy in (5.6, 7.1, 8.6):
-        m.box(wb0, wb1, yy, yy + 0.12, z0 - 0.14, z0, YELLOW)
+    # landside (-Z) wall (Street View 2012 sv19 / sv27, Commons 11165239203 from inside).  W1 = SE end of the west wing: the wing stops
+    # about 6 m short of the hangar's SE corner, and that strip of hangar wall comes down to the ground (sv19).
+    W1 = x1 - 6.0
+    number_disc(m, x0 + 1.8, 9.3, z0, (0, -1), 1.0, "16")  # high at the NW corner, just before the window band
+    # clerestory: ONE row of tall grey panels in yellow frames under the eave, six bays from the roundel to the end of the wing (the
+    # interior photo shows a single high row; the lower "row" in the street views is the wing's second tier)
+    wb0, wb1 = x0 + 3.2, W1
+    for i in range(6):
+        m.window((0, 0, -1), (wb0 + i * (wb1 - wb0) / 6 + 0.12, 7.3, z0), (1, 0, 0), (wb1 - wb0) / 6 - 0.24, 2.2, off=0.1, frame=YELLOW)
+    # SE strip below the Shell sign: a grey panel strip with red double doors at its foot (sv19)
+    sx = (W1 + x1) / 2 + 0.3
+    m.box(sx - 1.6, sx + 1.6, 0.0, 7.4, z0 - 0.08, z0, GREY)
+    shell_sign(m, sx, 8.9, z0 - 0.2, (0, -1), 2.8, 2.4)
+    m.box(sx - 0.95, sx + 0.95, 0.0, 2.3, z0 - 0.16, z0 - 0.08, RED)
+    m.box(sx - 0.02, sx + 0.02, 0.0, 2.3, z0 - 0.18, z0 - 0.16, DGREY)
     # SE (south) end wall: ribbon of windows high on the wall, above the vertical door seams
     for i in range(6):
         m.window((1, 0, 0), (x1, 7.4, z0 + 2.0 + i * 5.9), (0, 0, 1), 4.4, 1.0, off=0.1)
@@ -1027,23 +1035,51 @@ def shell_hangar():
     m.box(nb0 - 0.15, nb1, 8.0, 8.5, nz0 - 0.15, nz1, NAVY)
     for i in range(7):  # ribbon windows on its NW (-X) end wall
         m.window((-1, 0, 0), (nb0, 4.7, nz0 + 1.0 + i * 4.0), (0, 0, 1), 3.0, 1.8, off=0.1)
-    for i in range(4):  # and above the west wing on its landside (-Z) wall
-        m.window((0, 0, -1), (nb0 + 1.5 + i * 3.4, 5.4, nz0), (1, 0, 0), 2.6, 1.8, off=0.1)
-    # WEST wing: one-storey (4.8 m) landside wing, tower-frame x 46-68, z 58-113, grey ribbed.  Landside face at z = wz0, north end at x = w0.
-    w0, w1, wz0, wz1 = -29.5, 25.5, -31.25, z0
-    m.box(w0, w1, 0.0, 4.8, wz0, wz1, STEEL, top=False)
-    m.box(w0 - 0.1, w1 + 0.1, 4.8, 5.1, wz0 - 0.1, wz1, DGREY)
-    # red STARS band wrapped round the north corner: along the landside face and round the north end wall
-    m.box(w0 - 0.14, w0 + 15.0, 3.4, 4.5, wz0 - 0.14, wz0, RED)
-    m.box(w0 - 0.14, w0, 3.4, 4.5, wz0 - 0.14, wz0 + 9.0, RED)
-    # "STARS" in white heavy sans capitals at the SE end of the band (Street View 2012: upright, bold, wide, no star graphic)
-    stars_lettering(m, w0 + 14.4, 3.63, wz0 - 0.14, (0, -1), 0.62)
-    m.keepout(w0 + 11.3, w0 + 14.6, 3.65, 4.3, wz0 - 0.5, wz0 + 0.3)  # no window or frame may reach the lettering
-    # glazing runs just round the STARS corner: landside face from 2 m past the corner for 26 m, and two panes on the end wall
-    for i in range(9):
-        m.window((0, 0, -1), (w0 + 2.0 + i * 3.0, 0.9, wz0), (1, 0, 0), 2.6, 2.3, off=0.12)
-    for i in range(2):
-        m.window((-1, 0, 0), (w0, 0.9, wz0 + 2.0 + i * 3.0), (0, 0, 1), 2.6, 2.3, off=0.12)
+    # WEST wing (landside), grey, in two tiers (sv19: the end walls step): a front tier 4.8 m high, about 6.5 m deep along the car park, and
+    # a second tier 6.6 m high behind it against the hangar.  Front tier: light concrete-block wall to 2.4 m, grey ribbed fascia above with
+    # yellow posts.  Landside face at z = wz0, NW end at x = w0; s = distance along the face from the NW corner.
+    w0, wz0, wz1 = -29.5, -31.25, z0
+    m.box(w0, W1, 0.0, 4.8, wz0, wz1, STEEL, top=False)
+    m.box(w0 - 0.1, W1 + 0.1, 4.8, 5.1, wz0 - 0.1, wz1, DGREY)
+    m.box(w0, W1, 0.0, 2.4, wz0 - 0.06, wz0, GREY)
+    m.box(w0 - 0.06, w0, 0.0, 2.4, wz0 - 0.06, wz1, GREY)
+    m.box(W1, W1 + 0.06, 0.0, 2.4, wz0 - 0.06, wz1, GREY)
+    tz = wz0 + 6.5
+    m.box(x0, W1, 4.8, 6.6, tz, wz1, STEEL, top=False)
+    m.box(x0 - 0.1, W1 + 0.1, 6.6, 6.85, tz - 0.1, wz1, DGREY)
+    for s in (4.0, 13.5, 23.0, 32.5, 42.0, 51.5):
+        m.box(w0 + s - 0.12, w0 + s + 0.12, 3.45, 4.8, wz0 - 0.1, wz0, YELLOW)
+    for xp in (x0 + 4.0, x0 + 13.0, x0 + 22.0, x0 + 31.0):
+        m.box(xp - 0.12, xp + 0.12, 4.8, 6.6, tz - 0.1, tz, YELLOW)
+    # STARS (air ambulance) storefront at the NW end: red fascia band 2.3-3.4 m over the glazing, 16 m along the face and 2.6 m round the
+    # corner; a picture panel and "STARS" at its SE end, a small "STARS" on the return (sv27, sv19)
+    m.box(w0 - 0.2, w0 + 16.0, 2.3, 3.4, wz0 - 0.2, wz0, RED)
+    m.box(w0 - 0.2, w0, 2.3, 3.4, wz0 - 0.2, wz0 + 2.6, RED)
+    stars_lettering(m, w0 + 15.6, 2.52, wz0 - 0.2, (0, -1), 0.62)
+    m.poly([(w0 + 11.0, 2.35, wz0 - 0.23), (w0 + 12.6, 2.35, wz0 - 0.23), (w0 + 12.6, 3.35, wz0 - 0.23), (w0 + 11.0, 3.35, wz0 - 0.23)],
+           MUSTARD, (w0 + 11.8, 2.85, wz0 + 1))
+    m.poly([(w0 + 11.5, 2.4, wz0 - 0.24), (w0 + 11.8, 2.4, wz0 - 0.24), (w0 + 11.9, 3.2, wz0 - 0.24), (w0 + 11.6, 3.2, wz0 - 0.24)],
+           DARK, (w0 + 11.7, 2.8, wz0 + 1))
+    stars_lettering(m, w0 - 0.2, 2.65, wz0 + 0.3, (-1, 0), 0.45)
+    m.keepout(w0 + 10.8, w0 + 15.8, 2.3, 3.4, wz0 - 0.6, wz0 + 0.3)
+    # landside face, NW to SE: glass door, four storefront bays, door (under the band); one window; window-door-window; four storefront
+    # bays at the SE end
+    m.window((0, 0, -1), (w0 + 0.9, 0.0, wz0), (1, 0, 0), 1.0, 2.2, off=0.12)
+    for i in range(4):
+        m.window((0, 0, -1), (w0 + 2.8 + i * 2.7, 0.2, wz0), (1, 0, 0), 2.6, 2.0, off=0.12)
+    m.window((0, 0, -1), (w0 + 14.4, 0.0, wz0), (1, 0, 0), 1.0, 2.2, off=0.12)
+    m.window((0, 0, -1), (w0 + 25.0, 1.0, wz0), (1, 0, 0), 1.1, 1.2, off=0.12)
+    m.window((0, 0, -1), (w0 + 31.0, 1.0, wz0), (1, 0, 0), 1.2, 1.2, off=0.12)
+    m.window((0, 0, -1), (w0 + 32.4, 0.0, wz0), (1, 0, 0), 1.0, 2.2, off=0.12)
+    m.window((0, 0, -1), (w0 + 33.6, 1.0, wz0), (1, 0, 0), 1.2, 1.2, off=0.12)
+    for i in range(4):
+        m.window((0, 0, -1), (W1 - 11.0 + i * 2.7, 0.2, wz0), (1, 0, 0), 2.6, 2.1, off=0.12)
+    # NW end wall, from the landside corner: five red-framed panes under the band's return, a door, a small high window (sv27)
+    for i in range(5):
+        m.window((-1, 0, 0), (w0, 0.3, wz0 + 0.8 + i * 0.7), (0, 0, 1), 0.62, 1.9, off=0.12, frame=RED)
+    m.window((-1, 0, 0), (w0, 0.0, wz0 + 4.9), (0, 0, 1), 1.0, 2.2, off=0.12)
+    m.window((-1, 0, 0), (w0, 1.4, wz0 + 6.4), (0, 0, 1), 0.7, 0.7, off=0.12)
+    m.window((1, 0, 0), (W1, 0.0, wz0 + 3.5), (0, 0, 1), 1.0, 2.2, off=0.12)  # SE end wall door
     m.mirror_x()
     return m
 
