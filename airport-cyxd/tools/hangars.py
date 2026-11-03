@@ -883,47 +883,82 @@ def hangar20():
 
 def hangar40():
     """Hangar 40 = Canadian Helicopters (user, 2026-10-21; Street View 29-32, 2010-2012, 12039 / 12043 121 St NW; Flickr woodhead 13207130405).
-    Faces NW to the car park.  Exactly three masses (user, 2026-10-21): the brick office with the landside entrance in the middle and a gabled
-    hangar of the same size on each side of it.  The left one (+X) has its end plate flush with the office; the right one (-X, the SE one) comes
-    about 3.5 m forward of the office door and carries the blue "40" roundel (Street View 29).  Heading 228."""
+    Faces SW to 121 St and its car park (heading 228); the airside is the NE face.  Three masses side by side, measured 2026-11-03 on the
+    Esri Wayback aerials of 2017-05 (release 784, zoom 19) and 2014-02 (release 10), which agree to about 1 m (the site is cleared by 2026):
+      * NW (+X): flat-roofed white block, 29.0 m wide and 36.7 m deep, white membrane roof; its SW face carries two window pairs and doors
+        (Street View 31), its NW face doors and a louvre.
+      * middle: the two-storey brick office, 12.7 m wide, flush with the white block's front: red fascia, red awnings, glass-block panels and
+        the white gabled entrance canopy at its SE end, beside the hall (Flickr; Street View 29).  Behind it a lower grey link block runs to
+        the airside.
+      * SE (-X): the gabled hall, 31.0 m wide and 51.4 m deep, white ribbed walls and a pale-blue roof, ridge running SW-NE.  Its SW gable
+        end stands 14.7 m forward of the office (aerials; Street View 29 shows its side wall beside the entrance) and carries the blue "40"
+        roundel just inside the NW corner.
+    All three share the airside (NE) face, where both halls have big doors (user, 2026-10-21) with roundels above.  Flags: the Canadian
+    flag on a roof pole over the office and the Alberta flag on a bracket at the white block's corner (Street View 29)."""
+    import display_aircraft as da
     m = fmesh()
-    W, D = 72.0, 46.0
-    z0, z1 = -D / 2, D / 2
-    wh, rise = 8.0, 2.4
-    # left hall (+X) x 3..34, end plate flush with the office
-    m.box(3.0, 34.0, 0, wh, z0, z1, RWHITE, top=False)
-    m.gable(3.0, 34.0, wh, rise, z0, z1, along_z=True, sw_roof=METAL, sw_wall=RWHITE)
-    for xw in (8.0, 14.0, 20.0):
-        m.window((0, 0, 1), (xw, 4.2, z1), (1, 0, 0), 2.4, 1.6)  # window pairs seen on the left hall's end plate in Street View 29
-    m.box(25.0, 28.0, 0, 2.2, z1, z1 + 0.1, DGREY)  # personnel door
-    # big hangar doors on the gable wall opposite the landside, one per hall (user, 2026-10-21: both halls need an airside door), four leaves each
-    for dx0, dx1 in ((5.0, 32.0), (-36.0, -9.0)):
-        m.box(dx0, dx1, 0, 6.0, z0 - 0.05, z0, DARK)
-        leaves(m, z0, [dx0 + (dx1 - dx0) * i / 4 for i in range(5)], 0, 5.8, GREY, front=-1, post=DGREY)
-        m.box(dx0 - 0.3, dx1 + 0.3, 5.8, 6.3, z0 - 0.5, z0, DGREY)  # header
-    number_disc(m, 18.5, 7.1, z0 - 0.0, (0, -1), 0.8, "40")  # airside roundels above the doors (user: "there should be a rondelle somewhere")
-    number_disc(m, -22.5, 7.1, z0 - 0.0, (0, -1), 0.8, "40")
-    # brick office between the halls
-    m.box(-7.0, 3.0, 0, 7.6, z0, z1, BRICKD)
-    parapet(m, -7.2, 3.2, z0 - 0.2, z1 + 0.2, 7.5, 8.1, 0.4, RED)  # red fascia round a flat grey roof, not a red roof
-    m.box(-7.0, 3.0, 7.5, 7.7, z0, z1, DGREY)
-    m.window((0, 0, 1), (-3.2, 0.0, z1), (1, 0, 0), 1.4, 2.2)  # entrance door
-    m.box(-4.7, -0.3, 2.7, 3.2, z1, z1 + 1.5, RWHITE)  # white canopy with gable
-    m.gable(-4.7, -0.3, 3.2, 0.9, z1, z1 + 1.5, along_z=True, sw_roof=RWHITE, sw_wall=RWHITE)
-    for xg in (-6.6, 0.6):  # glass-block panels
-        m.window((0, 0, 1), (xg, 0.5, z1), (1, 0, 0), 1.6, 2.0)
-    m.box(-7.1, -4.5, 2.6, 3.3, z1, z1 + 1.0, RED)  # red awning
-    m.box(0.9, 3.0, 2.6, 3.3, z1, z1 + 1.0, RED)
-    for xw in (-6.0, -1.6):  # first-floor windows
-        m.window((0, 0, 1), (xw, 4.0, z1), (1, 0, 0), 2.6, 2.2)
-    m.box(-1.0, 1.6, 7.6, 8.9, -6.0, -2.0, DGREY)  # roof unit on the office
-    # right hall (-X) x -38..-7: same size, end plate 3.5 m forward of the office, the "40" roundel on it
-    zf = z1 + 3.5
-    m.box(-38.0, -7.0, 0, wh, z0, zf, RWHITE, top=False)
-    m.gable(-38.0, -7.0, wh, rise, z0, zf, along_z=True, sw_roof=METAL, sw_wall=RWHITE)
-    number_disc(m, -14.0, 6.4, zf, (0, 1), 1.15, "40")
-    m.box(-9.0, -7.4, 0, 2.2, zf, zf + 0.1, DGREY)
-    m.pos = [(x + 2.0, y, z) for x, y, z in m.pos]  # centre the 72 m footprint on the origin
+    za, zw, zh = -25.7, 11.0, 25.7          # airside face, front of the white block and office, front of the hall
+    xw0, xw1 = 7.4, 36.4                    # white block
+    xo0, xo1 = -5.4, 7.4                    # brick office
+    xh0, xh1 = -36.4, -5.4                  # hall
+    # white block: ribbed walls, flat white roof behind a low parapet
+    hw = 7.2
+    m.box(xw0, xw1, 0, hw, za, zw, RWHITE, top=False)
+    m.box(xw0, xw1, hw - 0.3, hw - 0.2, za, zw, WHITE)
+    parapet(m, xw0, xw1, za, zw, hw - 0.2, hw + 0.4, 0.25, RWHITE)
+    for x0, x1, x2 in ((25.0, 27.0, 1.2), (16.0, 22.0, 4.0), (11.0, 12.6, 2.0)):
+        m.box(x0, x1, hw - 0.2, hw + 0.2 + x2 * 0.5, -10.0 + x0 * 0.3, -6.0 + x0 * 0.3, DGREY)  # roof units and stacks (2017 aerial)
+    # SW face (Street View 31): two window pairs toward the office, a red door and a grey door
+    for xw in (12.0, 15.0):
+        m.window((0, 0, 1), (xw, 3.6, zw), (1, 0, 0), 2.4, 1.8)
+    m.box(22.5, 23.5, 0, 2.2, zw, zw + 0.08, RED)
+    m.box(9.4, 10.4, 0, 2.2, zw, zw + 0.08, DGREY)
+    # NW face (Street View 31, in shade): two doors with small canopies, a high louvre near the front corner
+    for zc in (-4.0, -11.0):
+        m.box(xw1, xw1 + 0.08, 0, 2.2, zc - 0.5, zc + 0.5, DGREY)
+        m.box(xw1, xw1 + 1.0, 2.5, 2.7, zc - 0.9, zc + 0.9, DGREY)
+    m.box(xw1, xw1 + 0.1, 4.2, 5.6, 4.0, 6.2, DGREY)
+    # brick office: two storeys, red fascia round a flat grey roof
+    ho = 7.6
+    m.box(xo0, xo1, 0, ho, 1.0, zw, BRICKD, top=False)
+    m.box(xo0, xo1, ho - 0.1, ho, 1.0, zw, DGREY)
+    parapet(m, xo0 - 0.1, xo1 + 0.1, 0.9, zw + 0.15, ho - 0.1, ho + 0.4, 0.3, RED)
+    m.box(xo0 + 0.1, xo1 - 0.1, 0, 0.9, zw, zw + 0.05, PANEL)                   # light base course
+    m.window((0, 0, 1), (-3.0, 0.0, zw), (1, 0, 0), 1.2, 2.3)                  # glazed entrance door
+    m.box(-3.4, -0.4, 2.6, 3.1, zw, zw + 1.4, RWHITE)                          # white gabled canopy over it
+    m.gable(-3.4, -0.4, 3.1, 0.9, zw, zw + 1.4, along_z=True, sw_roof=RWHITE, sw_wall=RWHITE)
+    for xg, wg in ((-5.2, 1.8), (-0.3, 1.4), (5.6, 1.6)):                       # glass-block panels
+        m.window((0, 0, 1), (xg, 0.5, zw), (1, 0, 0), wg, 2.1, frame=PANEL)
+    for xa0, xa1 in ((-0.4, 1.4), (5.4, 7.4)):                                  # red standing-seam awnings
+        m.box(xa0, xa1, 2.6, 3.2, zw, zw + 1.0, RED)
+    for xw, ww in ((-2.6, 2.4), (1.8, 2.0), (5.4, 1.8)):                        # first-floor windows
+        m.window((0, 0, 1), (xw, 4.0, zw), (1, 0, 0), ww, 2.2)
+    m.box(-1.0, 1.4, ho, ho + 1.1, 4.0, 6.0, DGREY)                            # roof unit
+    # link block behind the office, to the airside
+    m.box(xo0, xo1, 0, 7.0, za, 1.0, RWHITE, top=False)
+    m.box(xo0, xo1, 6.9, 7.0, za, 1.0, DGREY)
+    for zu in (-6.0, -14.0, -20.0):
+        m.box(-1.5, 1.5, 7.0, 8.0, zu - 1.0, zu + 1.0, DGREY)
+    # SE hall: white ribbed walls, pale-blue gabled roof
+    wh, rise = 8.0, 1.8
+    m.box(xh0, xh1, 0, wh, za, zh, RWHITE, top=False)
+    m.gable(xh0, xh1, wh, rise, za, zh, along_z=True, sw_roof=PBFLAT, sw_wall=RWHITE)
+    number_disc(m, xh1 - 2.4, 6.3, zh, (0, 1), 1.15, "40")                      # landside roundel by the NW corner (Street View 29)
+    m.box(-10.0, -9.0, 0, 2.2, zh, zh + 0.08, DGREY)                           # personnel door on the gable end
+    m.box(xh1, xh1 + 0.08, 0, 2.2, 18.0, 19.0, DGREY)                          # door on the side wall beside the office
+    # big doors on the airside (NE) face, one per hall, four leaves each, roundels above
+    for dx0, dx1, top in ((9.5, 34.0, 5.8), (-34.0, -7.6, 6.4)):
+        m.box(dx0, dx1, 0, top + 0.2, za - 0.05, za, DARK)
+        leaves(m, za, [dx0 + (dx1 - dx0) * i / 4 for i in range(5)], 0, top, GREY, front=-1, post=DGREY)
+        m.box(dx0 - 0.3, dx1 + 0.3, top, top + 0.5, za - 0.5, za, DGREY)       # header
+    number_disc(m, (xw0 + xw1) / 2, 6.6, za, (0, -1), 0.6, "40")
+    number_disc(m, (xh0 + xh1) / 2, 7.6, za, (0, -1), 0.8, "40")
+    # flags (Street View 29): Canadian flag on a roof pole over the office, Alberta flag on a bracket at the white block's front corner
+    m.box(1.9, 2.1, ho, 13.0, 3.9, 4.1, GREY)
+    da.tex_flag(m, [(2.1, 12.9, 4.0), (2.1, 12.9, 5.9), (2.1, 11.95, 5.9), (2.1, 11.95, 4.0)], "canada", (3.0, 12.4, 5.0))
+    da.rod3(m, da.ID, (8.3, 5.4, zw), (8.3, 7.6, zw + 1.4), 0.07, GREY)
+    da.tex_flag(m, [(8.3, 7.55, zw + 1.35), (10.1, 7.55, zw + 1.35), (10.1, 6.65, zw + 1.35), (8.3, 6.65, zw + 1.35)], "alberta",
+                (9.2, 7.1, zw))
     m.mirror_x()
     return m
 
@@ -1994,7 +2029,8 @@ HANGARS = [
     ("cyxd_hangar18", "Hangar 18 (Edmonton Flying Club complex, traced from 2014 imagery)", hangar18, 53.568498, -113.519742, 48, 88.0, 84.0),
     ("cyxd_hangar38", "Hangar 38 (mustard yellow, OSM 230718902)", hangar38, 53.573308, -113.529714, 138, 68.8, 64.0),
     ("cyxd_hangar39", "Hangar 39 (pale-blue double hall, OSM 230718901, beside Hangar 38)", hangar39, 53.574052, -113.528731, 138, 107.0, 90.5),
-    ("cyxd_hangar40", "Hangar 40 (Canadian Helicopters, white roof of OSM 230718900)", hangar40, 53.575004, -113.529385, 228, 72.0, 46.0),
+    # 2026-11-03: centre of the measured 72.8 x 51.4 m plan (2017 / 2014 aerials); within 1 m of the old placement, which was only 46 m deep
+    ("cyxd_hangar40", "Hangar 40 (Canadian Helicopters: white block, brick office, blue-roofed hall; OSM 230718900)", hangar40, 53.5749955, -113.5293974, 228, 72.8, 51.4),
     ("cyxd_hangar21", "Hangar 21 (old terminal, OSM 230718907; traced from the 2017 imagery)", hangar21, 53.570940, -113.523178, 51, 162.0, 70.0),
     # centre = the old placement (53.570567, -113.524067) moved by GARAGE_SHIFT (7.2 m toward bearing 148, 1.75 m toward 58); 114 m deep with the stepped front
     ("cyxd_garage22", "Terminal parking garage (22; measured from the 2017 imagery)", garage22, 53.570520, -113.523987, 58, 116.0, 76.0),

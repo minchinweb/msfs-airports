@@ -33,7 +33,7 @@ Footprints for the hangars below, with how each was found. The per-building reas
 | 18 | traced | 53.568740, -113.519699 | 48 (NE) | 60 x 43 (+ rear wing) | medium (position from the 2014 imagery, 78 m NW of the tower) |
 | 38 | 230718902 | 53.573308, -113.529714 | 138 (SE) | 68.8 x 64.0 | medium (see below) |
 | 39 | 230718901 | 53.574052, -113.528731 | 138 (SE) | 107.0 x 90.5 | high (user): the pale-blue double hall, adjacent to the olive Hangar 38 in photo 26; Hangar 40 is at its NW (left) end in photo 28 |
-| 40 | 230718900 (white NW part) | 53.575205, -113.529565 | 318 (NW, to the car park) | 38 x 25 | high (the user; roundel, brick office and white block in photos 29-31); the blue-grey gabled hall at the SE end of that OSM way is not built |
+| 40 | 230718900 | 53.574996, -113.529397 | 228 (SW, to 121 St) | 72.8 x 51.4 | high (the user; roundel, brick office and white block in photos 29-31). Measured 2026-11-03 on the 2017 and 2014 Wayback aerials: NW white flat-roofed block 29.0 x 36.7, brick office 12.7 wide, SE blue-roofed gabled hall 31.0 x 51.4 whose SW gable end (with the "40") stands 14.7 m forward of the office; all share the NE (airside) face |
 
 Old generic placements removed from the generator (`SKIP`): "Hangar 11", "Hangar 14", "USAAF hangar T1" (1944-photo box about 40 m north of Hangar 7) and
 "USAAF hangar T2" (a box on Hangar 8's spot). The three USAAF boxes land on the 2014 buildings that became Hangars 7, 8 and 11.

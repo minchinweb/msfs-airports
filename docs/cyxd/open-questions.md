@@ -23,7 +23,7 @@ Reviewed 2026-10-22. Current state is in `STATUS.md`; links are in `reference-li
 4. A static Pacific Western 737 on the apron.
 5. Hangar 14 displays: the black AIR MUSEUM sign is built (position estimated) but not the older blue board; the searchlight and the east-side and airside displays (CF-100, HS.125, Silver Star: OSM nodes near 53.5657, -113.5163) are not.
 6. The 1930s first hangar (stucco arch, tower and wing) as its own model; the 1938 hangar is already split off. For the 1938 hangar's door textures use the Fort Edmonton Park replica wedding photos (link in `reference-links.md`).
-7. The blue-grey gabled hall at the SE end of OSM 230718900 (formerly part of Hangar 40's way).
+7. ~~The blue-grey gabled hall at the SE end of OSM 230718900~~: it is Hangar 40's SE hall (the one with the "40"), built since 2026-11-03.
 8. Not to build (reference only): the 1950s terminal / Administration Building (postcards, 1950 photo); the 1978 sketch buildings until measured.
 9. Trans-Canada Air Lines 1938 logo (Ingenium CAVM-17996) for any TCA livery or sign work.
 10. Search `Category:Hangars at Edmonton City Centre Airport` on Commons for more photos.

@@ -65,6 +65,25 @@ CAR_PARKS = (
     ("Museum lot, fourth column, east half", [(439.5, -109.9), (443.5, -105.5), (421.5, -85.7), (417.5, -90.1)], 270.0),
     ("Museum lot, east column inside the fence", [(469.2, -118.7), (473.2, -114.2), (423.5, -69.4), (419.4, -73.9)], 90.0),
 )
+
+
+def _uv(x, y):
+    """Airport frame (x east, y north, metres from the CYXD reference point) -> the Hangar 18 (u, v) frame used by CAR_PARKS."""
+    hx, hy = (-113.519742 + 113.52043460802926) * KX, (53.568498 - 53.57248965775836) * KY
+    su, cu, sv, cv = (math.sin(math.radians(138)), math.cos(math.radians(138)), math.sin(math.radians(48)), math.cos(math.radians(48)))
+    return ((x - hx) * su + (y - hy) * cu, (x - hx) * sv + (y - hy) * cv)
+
+
+# Oval lot on 121 St NW between Hangar 40 and Hangar 38, west of Hangar 39 (user, 2026-11-03): the painted stalls on the 2017-05 Wayback
+# aerial (release 784, zoom 19), in the airport frame.  Four north-south columns of east-west stalls: one along the west kerb, one either
+# side of the planted median (lamp standards at its ends), one along the east kerb under the trees; the cut NE corner has no stalls.
+# The 2014 aerial has buses parked across it.
+CAR_PARKS += tuple((t, [_uv(x, y) for x, y in ((x0, y0), (x1, y0), (x1, y1), (x0, y1))], h) for t, x0, x1, y0, y1, h in (
+    ("Oval lot on 121 St (Hangars 38-40), west column", -659.0, -653.6, 197.0, 240.5, 270.0),
+    ("Oval lot on 121 St (Hangars 38-40), column west of the median", -645.6, -640.5, 200.0, 228.0, 90.0),
+    ("Oval lot on 121 St (Hangars 38-40), column east of the median", -638.9, -633.8, 200.0, 227.0, 270.0),
+    ("Oval lot on 121 St (Hangars 38-40), east column", -626.3, -620.9, 196.5, 221.0, 90.0),
+))
 NE_GATES_S = (45.0, 86.0, 127.0)  # along the terminal's NE face from its NW corner; bays in hangars.py are at x = s - 86
 GATE_OUT, ROOT_AHEAD = 22.6, 25.0  # spot distance from the face, jetway root distance ahead of the spot
 SNAP = 12.0  # a connector joins an existing node if the projection lies this close to one
@@ -161,12 +180,15 @@ def main():
         L = math.dist(a, b)
         for f in fr:
             add("PARKING", "RAMP_GA_LARGE", 20.0, (a[0] + (b[0] - a[0]) * f + n[0] * 24.0, a[1] + (b[1] - a[1]) * f + n[1] * 24.0), hdg)
-    # --- Hangar 40 (door wall faces NE): two light aircraft or helicopters at the doors, a jet further out
-    a, b, n = wall("Hangar 40 (", 48.0)
-    mid = ((a[0] + b[0]) / 2, (a[1] + b[1]) / 2)
-    u = ((b[0] - a[0]) / math.dist(a, b), (b[1] - a[1]) / math.dist(a, b))
-    for off, dep, t, r in ((-20.0, 28.0, "RAMP_GA_MEDIUM", 12.0), (20.0, 28.0, "RAMP_GA_MEDIUM", 12.0), (0.0, 64.0, "RAMP_GA_LARGE", 18.0)):
-        add("PARKING", t, r, (mid[0] + u[0] * off + n[0] * dep, mid[1] + u[1] * off + n[1] * dep), 228.0, heli=(dep < 40.0))  # the two at the doors are helicopter stands
+    # --- Hangar 40 (Canadian Helicopters; door wall faces NE), 2026-11-03: helicopter stands on the four yellow painted pads of the 2017-05
+    # Wayback aerial (release 784, zoom 19), in the airport frame.  Three small pads (ring ~8 m radius) in a column off the white block's NW
+    # corner, 16, 37 and 57 m out from the door wall, and one big pad (~12 m) 45 m out in front of the office.  The column joins the
+    # hand-placed heli lane in CYXD.xml (comment "Hangar 40 (Canadian Helicopters) heli lane": node 120 on taxiway A -> 137 -> 138 -> 139),
+    # so no connector crosses another pad; the big pad joins taxiway A at node 122 straight ahead of it.  The old layout (two medium stands
+    # at the doors and a jet stand 64 m out, between both connectors) is gone: the jet's wings reached into both taxi lines.
+    for pos, t, r, j in (((-591.25, 338.75), "RAMP_GA_SMALL", 8.0, "139"), ((-576.0, 352.75), "RAMP_GA_SMALL", 8.0, "138"),
+                         ((-560.6, 365.6), "RAMP_GA_SMALL", 8.0, "137"), ((-538.75, 323.5), "RAMP_GA_MEDIUM", 12.0, "122")):
+        add("PARKING", t, r, pos, 228.0, join=j, heli=True)
     # --- north complex: the court between the main block and bay 3, nose north, tails toward the taxiway
     for pos, t, r in (((-18, 700), "RAMP_GA_LARGE", 18.0), ((28, 700), "RAMP_GA_LARGE", 18.0), ((-18, 748), "RAMP_GA_LARGE", 18.0),
                       ((28, 748), "RAMP_GA_LARGE", 18.0), ((5, 794), "RAMP_GA_MEDIUM", 12.0)):
@@ -264,6 +286,13 @@ def main():
     row = Polygon([pa, pb, (pb[0] + n39[0] * 56, pb[1] + n39[1] * 56), (pa[0] + n39[0] * 56, pa[1] + n39[1] * 56)])
     blocks = unary_union([f.buffer(0.3) for f in feet.values()])
     extra = [("Hangars 38 and 39: front apron for parallel-parked jets", row.difference(blocks))]
+    # Hangar 40's apron runs on past the white block's NW wall to a grass edge at n = -656 (n along bearing 138, u along 48, airport frame;
+    # 2017 aerial), from the building line (u -231) out to taxiway A; the generated door apron stops at the wall line.  The column of painted
+    # helicopter pads stands on it.
+    eu, en = (math.sin(math.radians(48)), math.cos(math.radians(48))), (math.sin(math.radians(138)), math.cos(math.radians(138)))
+    un = lambda u, n_: (u * eu[0] + n_ * en[0], u * eu[1] + n_ * en[1])
+    extra.append(("Hangar 40: apron NW of the white block (helicopter pads)",
+                  Polygon([un(-231.0, -656.0), un(-125.0, -656.0), un(-125.0, -636.0), un(-231.0, -636.0)]).difference(blocks)))
     pave = unary_union([taxi_poly] + aprons + [g for _, g in extra])
     # generated hangar aprons (gen_aprons.py block) count as pavement
     m = re.search(r"<!-- BEGIN hangar aprons.*?<!-- END hangar aprons -->", text, flags=re.S)
