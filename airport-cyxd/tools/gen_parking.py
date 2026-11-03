@@ -49,9 +49,21 @@ CAR_PARKS = (
     # entrance (s 26-28 from the NW corner, u 252-254) clear.  Wall v -23.4; the Airport Rd fence is at about v -47 (Wayback 2017).
     ("Hangar 15, nose-in row along its landside wall, NW part", [(227.5, -29.5), (251.5, -29.5), (251.5, -24), (227.5, -24)], 48.0),
     ("Hangar 15, nose-in row along its landside wall, SE part", [(255, -29.5), (272, -29.5), (272, -24), (255, -24)], 48.0),
-    ("Hangar 15, outer row by the lot edge", [(228, -41), (272, -41), (272, -35.5), (228, -35.5)], 228.0),
+    ("Hangar 15, outer row by the lot edge", [(228, -41), (266, -41), (266, -35.5), (228, -35.5)], 228.0),  # ends at the museum's north-yard fence
     ("Aerocentre landside lot, north row", [(108, -10.5), (127, -10.5), (127, -5), (108, -5)], 48.0),
     ("Aerocentre landside lot, south row", [(108, -28.5), (127, -28.5), (127, -23), (108, -23)], 228.0),
+    # Alberta Aviation Museum (Hangar 14) front lot, 2026-11-03: the painted stalls on the 2026 Wayback aerial (zoom 19), traced in the airport
+    # frame as north-south columns of east-west stalls and converted to (u, v) here.  West to east: a single column by the west curb, a
+    # double column, the columns either side of the planted median, a double column, and the long column inside the east fence.  The
+    # fire lane and the drive along the museum front (12 m) are left clear.
+    ("Museum lot, west column", [(392.0, -153.4), (395.3, -149.7), (377.9, -134.0), (374.6, -137.7)], 90.0),
+    ("Museum lot, second column, west half", [(401.2, -143.4), (405.0, -139.2), (387.5, -123.4), (383.7, -127.6)], 90.0),  # stops short of the Norseman's fir cut-outs
+    ("Museum lot, second column, east half", [(414.8, -147.9), (418.6, -143.6), (391.4, -119.1), (387.5, -123.3)], 270.0),
+    ("Museum lot, column west of the median", [(421.6, -135.3), (425.2, -131.3), (400.5, -109.0), (396.8, -113.0)], 90.0),
+    ("Museum lot, column east of the median", [(429.2, -126.8), (433.2, -122.4), (411.1, -102.6), (407.2, -106.9)], 270.0),
+    ("Museum lot, fourth column, west half", [(435.4, -114.4), (439.4, -110.0), (417.4, -90.2), (413.4, -94.6)], 90.0),
+    ("Museum lot, fourth column, east half", [(439.5, -109.9), (443.5, -105.5), (421.5, -85.7), (417.5, -90.1)], 270.0),
+    ("Museum lot, east column inside the fence", [(469.2, -118.7), (473.2, -114.2), (423.5, -69.4), (419.4, -73.9)], 90.0),
 )
 NE_GATES_S = (45.0, 86.0, 127.0)  # along the terminal's NE face from its NW corner; bays in hangars.py are at x = s - 86
 GATE_OUT, ROOT_AHEAD = 22.6, 25.0  # spot distance from the face, jetway root distance ahead of the spot
@@ -183,8 +195,8 @@ def main():
         + [((53.0, -21.0), 318.0), ((51.0, -33.0), 183.0), ((68.0, -32.0), 93.0), ((64.0, -9.0), 3.0)]
     for (u, v), h in club:
         add("PARKING", "RAMP_GA_SMALL", 5.5, (hc[0] + u * e_u[0] + v * e_v[0], hc[1] + u * e_u[1] + v * e_v[1]), h)
-    # --- tucked away in the gap between Hangar 15's SE gable and Hangar 14's north wall (nose west, tail toward the N-S taxiway); the museum keeps 12 m
-    add("PARKING", "RAMP_GA_MEDIUM", 9.0, (250, -681), 270.0)
+    # (2026-11-03: the medium GA stand that stood between Hangar 15's SE gable and Hangar 14 was removed; that ground is the museum's
+    # fenced north yard, landside, and there is no room on Hangar 15's forecourt in front of its door)
 
     # --- numbering
     gate_n = ramp_n = 0

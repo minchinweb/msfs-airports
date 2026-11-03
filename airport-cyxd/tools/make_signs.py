@@ -1,6 +1,7 @@
 """Rasterise the Esso oval and the NAV CANADA plaque -> tools/assets/esso_sign.png and navcan_sign.png (1024 x 1024, power of two; each is
 drawn at its true board aspect and squashed to a square, then stretched back onto the oval polygon in gen_buildings.py).
     python -I airport-cyxd/tools/make_signs.py"""
+import math
 from pathlib import Path
 import random
 
@@ -258,7 +259,106 @@ def cessna():
     return b.resize((1024, 1024), Image.LANCZOS)
 
 
+# Right half of the 11-point maple leaf, top tip to stem, in leaf units (1 = the width of the flag's white square), from
+# airport-h28/tools/gen_port.py; mirrored for the left.  The stem's centre point is dropped from the outline (it is collinear).
+LEAF_R = [(0.0, 0.50), (0.07, 0.37), (0.14, 0.41), (0.11, 0.15), (0.21, 0.27), (0.25, 0.21), (0.42, 0.25), (0.37, 0.10),
+          (0.44, 0.06), (0.24, -0.09), (0.28, -0.17), (0.05, -0.13), (0.06, -0.32), (0.0, -0.32)]
+LEAF = LEAF_R[:-1] + [(-u, v) for u, v in reversed(LEAF_R[1:-1])]
+
+
+def leaf(d, cx, cy, size, fill):
+    """Maple leaf centred on (cx, cy) in a white square of width `size` (pixels)."""
+    d.polygon([(cx + x * size, cy - (y - 0.09) * size) for x, y in LEAF], fill=fill)
+
+
+def union_jack(img, x0, y0, x1, y1):
+    """Union Jack pasted into the box of img (simplified: centred red saltire); drawn on its own tile so the diagonals stop at the edge."""
+    tile = Image.new("RGB", (int(x1 - x0), int(y1 - y0)))
+    union_jack_draw(ImageDraw.Draw(tile), 0, 0, tile.width, tile.height)
+    img.paste(tile, (int(x0), int(y0)))
+
+
+def union_jack_draw(d, x0, y0, x1, y1):
+    w, h = x1 - x0, y1 - y0
+    d.rectangle((x0, y0, x1, y1), fill=(1, 33, 105))
+    t = h * 0.2
+    for a, b in (((x0, y0), (x1, y1)), ((x0, y1), (x1, y0))):
+        d.line([a, b], fill=(255, 255, 255), width=int(t))
+        d.line([a, b], fill=(200, 16, 46), width=int(t * 0.35))
+    d.rectangle((x0, y0 + h * 0.5 - t * 0.85, x1, y0 + h * 0.5 + t * 0.85), fill=(255, 255, 255))
+    d.rectangle((x0 + w * 0.5 - t * 0.85, y0, x0 + w * 0.5 + t * 0.85, y1), fill=(255, 255, 255))
+    d.rectangle((x0, y0 + h * 0.5 - t * 0.5, x1, y0 + h * 0.5 + t * 0.5), fill=(200, 16, 46))
+    d.rectangle((x0 + w * 0.5 - t * 0.5, y0, x0 + w * 0.5 + t * 0.5, y1), fill=(200, 16, 46))
+
+
+def shield(d, x0, y0, x1, y1):
+    """Heater-shield outline points for the box."""
+    w, h = x1 - x0, y1 - y0
+    pts = [(x0, y0), (x1, y0), (x1, y0 + h * 0.55)]
+    pts += [(x0 + w * 0.5 + w * 0.5 * math.cos(math.radians(a)), y0 + h * 0.55 + h * 0.45 * math.sin(math.radians(a))) for a in range(0, 181, 15)]
+    return pts
+
+
+def flags():
+    """Flag atlas, four 2:1 flags stacked (each 1024 x 256 after squashing; the model's quads are 2:1): row 0 Canada, row 1 Alberta,
+    row 2 the RCAF ensign (air-force blue, Union Jack canton, maple-leaf roundel in the fly), row 3 the Canadian Red Ensign (1957-65:
+    red, Union Jack canton, the arms of Canada in the fly; on the Bomarc's fins).  The memorial flies Canada, Alberta and the RCAF ensign
+    (user, 2026-11-03)."""
+    out = Image.new("RGB", (1024, 1024), (255, 255, 255))
+    W, H = 1024, 512
+    red = (213, 43, 30)
+    # Canada
+    b = Image.new("RGB", (W, H), (255, 255, 255)); d = ImageDraw.Draw(b)
+    d.rectangle((0, 0, W / 4, H), fill=red); d.rectangle((W * 3 / 4, 0, W, H), fill=red)
+    leaf(d, W / 2, H / 2, H, red)
+    out.paste(b.resize((1024, 256), Image.LANCZOS), (0, 0))
+    # Alberta: ultramarine field, the provincial shield in the centre
+    b = Image.new("RGB", (W, H), (0, 38, 100)); d = ImageDraw.Draw(b)
+    sx0, sy0, sx1, sy1 = W / 2 - H * 0.27, H * 0.12, W / 2 + H * 0.27, H * 0.88
+    sh = shield(d, sx0, sy0, sx1, sy1)
+    d.polygon(sh, fill=(240, 196, 40))                                                     # wheat field (base)
+    m = Image.new("L", (W, H), 0); ImageDraw.Draw(m).polygon(sh, fill=255)
+    lay = Image.new("RGB", (W, H)); ld = ImageDraw.Draw(lay)
+    hh = sy1 - sy0
+    ld.rectangle((sx0, sy0, sx1, sy0 + hh * 0.2), fill=(255, 255, 255))                   # St George's cross chief
+    ld.rectangle((sx0, sy0 + hh * 0.07, sx1, sy0 + hh * 0.13), fill=(200, 16, 46))
+    ld.rectangle((W / 2 - hh * 0.03, sy0, W / 2 + hh * 0.03, sy0 + hh * 0.2), fill=(200, 16, 46))
+    ld.rectangle((sx0, sy0 + hh * 0.2, sx1, sy0 + hh * 0.55), fill=(70, 130, 210))       # sky
+    ld.polygon([(sx0, sy0 + hh * 0.55), (sx0 + (sx1 - sx0) * 0.25, sy0 + hh * 0.3), (sx0 + (sx1 - sx0) * 0.5, sy0 + hh * 0.45),
+                (sx0 + (sx1 - sx0) * 0.72, sy0 + hh * 0.26), (sx1, sy0 + hh * 0.55)], fill=(245, 245, 250))   # snow peaks
+    ld.rectangle((sx0, sy0 + hh * 0.55, sx1, sy0 + hh * 0.68), fill=(40, 130, 60))       # green hills
+    ld.rectangle((sx0, sy0 + hh * 0.68, sx1, sy1), fill=(240, 196, 40))
+    b.paste(lay, (0, 0), m)
+    d.line(sh + [sh[0]], fill=(250, 250, 250), width=4)
+    out.paste(b.resize((1024, 256), Image.LANCZOS), (0, 256))
+    # RCAF ensign
+    b = Image.new("RGB", (W, H), (110, 160, 205)); d = ImageDraw.Draw(b)
+    union_jack(b, 0, 0, W / 2, H / 2)
+    cx, cy, r = W * 0.75, H * 0.5, H * 0.3
+    d.ellipse((cx - r, cy - r, cx + r, cy + r), fill=(30, 50, 120))
+    d.ellipse((cx - r * 0.68, cy - r * 0.68, cx + r * 0.68, cy + r * 0.68), fill=(255, 255, 255))
+    leaf(d, cx, cy, r * 1.05, red)
+    out.paste(b.resize((1024, 256), Image.LANCZOS), (0, 512))
+    # Canadian Red Ensign
+    b = Image.new("RGB", (W, H), (200, 16, 46)); d = ImageDraw.Draw(b)
+    union_jack(b, 0, 0, W / 2, H / 2)
+    sx0, sy0, sx1, sy1 = W * 0.75 - H * 0.2, H * 0.22, W * 0.75 + H * 0.2, H * 0.8
+    sh = shield(d, sx0, sy0, sx1, sy1)
+    d.polygon(sh, fill=(255, 255, 255))
+    hh, ww = sy1 - sy0, sx1 - sx0
+    d.rectangle((sx0, sy0, sx0 + ww / 2, sy0 + hh * 0.3), fill=(200, 16, 46))           # England / Scotland / Ireland / France, simplified
+    d.rectangle((sx0 + ww / 2, sy0, sx1, sy0 + hh * 0.3), fill=(240, 200, 40))
+    d.rectangle((sx0, sy0 + hh * 0.3, sx0 + ww / 2, sy0 + hh * 0.55), fill=(30, 60, 160))
+    d.rectangle((sx0 + ww / 2, sy0 + hh * 0.3, sx1, sy0 + hh * 0.55), fill=(240, 240, 240))
+    for k in (-1, 0, 1):                                                                 # three red maple leaves on the white base
+        leaf(d, (sx0 + sx1) / 2 + k * ww * 0.3, sy0 + hh * 0.74, hh * 0.2, red)
+    d.line(sh + [sh[0]], fill=(240, 200, 40), width=3)
+    out.paste(b.resize((1024, 256), Image.LANCZOS), (0, 768))
+    return out
+
+
 if __name__ == "__main__":
+    flags().save(HERE / "assets/flags_sign.png")
     cessna().save(HERE / "assets/cessna_sign.png")
     aerocentre().save(HERE / "assets/aerocentre_sign.png")
     esso().save(HERE / "assets/esso_sign.png")

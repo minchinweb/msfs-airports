@@ -81,7 +81,7 @@
   {
    "bufferView": 0,
    "componentType": 5126,
-   "count": 2474,
+   "count": 2768,
    "type": "VEC3",
    "min": [
     -10.691270721760613,
@@ -97,19 +97,19 @@
   {
    "bufferView": 1,
    "componentType": 5126,
-   "count": 2474,
+   "count": 2768,
    "type": "VEC3"
   },
   {
    "bufferView": 2,
    "componentType": 5126,
-   "count": 2474,
+   "count": 2768,
    "type": "VEC2"
   },
   {
    "bufferView": 3,
    "componentType": 5123,
-   "count": 4272,
+   "count": 4362,
    "type": "SCALAR"
   }
  ],
@@ -117,28 +117,28 @@
   {
    "buffer": 0,
    "byteOffset": 0,
-   "byteLength": 29688
+   "byteLength": 33216
   },
   {
    "buffer": 0,
-   "byteOffset": 29688,
-   "byteLength": 29688
+   "byteOffset": 33216,
+   "byteLength": 33216
   },
   {
    "buffer": 0,
-   "byteOffset": 59376,
-   "byteLength": 19792
+   "byteOffset": 66432,
+   "byteLength": 22144
   },
   {
    "buffer": 0,
-   "byteOffset": 79168,
-   "byteLength": 8544
+   "byteOffset": 88576,
+   "byteLength": 8724
   }
  ],
  "buffers": [
   {
    "uri": "cyxd_h14_voodoo.bin",
-   "byteLength": 87712
+   "byteLength": 97300
   }
  ]
 }

@@ -38,6 +38,16 @@
      "indices": 3,
      "mode": 4,
      "material": 0
+    },
+    {
+     "attributes": {
+      "POSITION": 0,
+      "NORMAL": 1,
+      "TEXCOORD_0": 2
+     },
+     "indices": 4,
+     "mode": 4,
+     "material": 1
     }
    ]
   }
@@ -52,12 +62,26 @@
     "metallicFactor": 0.0,
     "roughnessFactor": 0.9
    }
+  },
+  {
+   "name": "cyxd_flags",
+   "pbrMetallicRoughness": {
+    "baseColorTexture": {
+     "index": 1
+    },
+    "metallicFactor": 0.0,
+    "roughnessFactor": 0.9
+   }
   }
  ],
  "textures": [
   {
    "sampler": 0,
    "source": 0
+  },
+  {
+   "sampler": 1,
+   "source": 1
   }
  ],
  "samplers": [
@@ -75,13 +99,16 @@
  "images": [
   {
    "uri": "cyxd_palette.png"
+  },
+  {
+   "uri": "cyxd_flags.png"
   }
  ],
  "accessors": [
   {
    "bufferView": 0,
    "componentType": 5126,
-   "count": 2588,
+   "count": 2382,
    "type": "VEC3",
    "min": [
     -2.6,
@@ -97,19 +124,25 @@
   {
    "bufferView": 1,
    "componentType": 5126,
-   "count": 2588,
+   "count": 2382,
    "type": "VEC3"
   },
   {
    "bufferView": 2,
    "componentType": 5126,
-   "count": 2588,
+   "count": 2382,
    "type": "VEC2"
   },
   {
    "bufferView": 3,
    "componentType": 5123,
-   "count": 4098,
+   "count": 3744,
+   "type": "SCALAR"
+  },
+  {
+   "bufferView": 4,
+   "componentType": 5123,
+   "count": 24,
    "type": "SCALAR"
   }
  ],
@@ -117,28 +150,33 @@
   {
    "buffer": 0,
    "byteOffset": 0,
-   "byteLength": 31056
+   "byteLength": 28584
   },
   {
    "buffer": 0,
-   "byteOffset": 31056,
-   "byteLength": 31056
+   "byteOffset": 28584,
+   "byteLength": 28584
   },
   {
    "buffer": 0,
-   "byteOffset": 62112,
-   "byteLength": 20704
+   "byteOffset": 57168,
+   "byteLength": 19056
   },
   {
    "buffer": 0,
-   "byteOffset": 82816,
-   "byteLength": 8196
+   "byteOffset": 76224,
+   "byteLength": 7488
+  },
+  {
+   "buffer": 0,
+   "byteOffset": 83712,
+   "byteLength": 48
   }
  ],
  "buffers": [
   {
    "uri": "cyxd_h14_bomarc.bin",
-   "byteLength": 91012
+   "byteLength": 83760
   }
  ]
 }

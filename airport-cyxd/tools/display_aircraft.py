@@ -138,16 +138,67 @@ def disc(m, c, n, r, sw, k=20):
     m.poly([add(c, add(mul(a, r * math.cos(2 * math.pi * i / k)), mul(b, r * math.sin(2 * math.pi * i / k)))) for i in range(k)], sw, sub(c, n))
 
 
+# Right half of the 11-point maple leaf, top tip to stem, in leaf units (1 = the width of the flag's white square), from
+# airport-h28/tools/gen_port.py; mirrored for the left.  The stem's centre point is dropped from the outline (it is collinear).
+LEAF_R = [(0.0, 0.50), (0.07, 0.37), (0.14, 0.41), (0.11, 0.15), (0.21, 0.27), (0.25, 0.21), (0.42, 0.25), (0.37, 0.10),
+          (0.44, 0.06), (0.24, -0.09), (0.28, -0.17), (0.05, -0.13), (0.06, -0.32), (0.0, -0.32)]
+LEAF = LEAF_R[:-1] + [(-u, v) for u, v in reversed(LEAF_R[1:-1])]
+
+
+def ear_clip(pts):
+    """Triangulate a simple 2-D polygon (no holes); returns index triples (from airport-h28/tools/gen_port.py).  The leaf is concave, so a
+    fan from its centre (the old way) drew triangles outside the outline."""
+    area = sum(pts[i - 1][0] * pts[i][1] - pts[i][0] * pts[i - 1][1] for i in range(len(pts)))
+    idx = list(range(len(pts)))
+    if area < 0:
+        idx.reverse()
+    cr = lambda o, a, b: (a[0] - o[0]) * (b[1] - o[1]) - (a[1] - o[1]) * (b[0] - o[0])
+    tris = []
+    while len(idx) > 3:
+        for k in range(len(idx)):
+            i0, i1, i2 = idx[k - 1], idx[k], idx[(k + 1) % len(idx)]
+            a, b, c = pts[i0], pts[i1], pts[i2]
+            if cr(a, b, c) <= 1e-12:
+                continue
+            if any(cr(a, b, pts[q]) >= 0 and cr(b, c, pts[q]) >= 0 and cr(c, a, pts[q]) >= 0 for q in idx if q not in (i0, i1, i2)):
+                continue
+            tris.append((i0, i1, i2))
+            idx.pop(k)
+            break
+        else:
+            raise ValueError("polygon could not be triangulated")
+    tris.append(tuple(idx))
+    return tris
+
+
+LEAF_TRIS = ear_clip(LEAF)
+
+
+def leaf_at(m, at, sw, back):
+    """Maple leaf from a 2-D placement function at(x, y) (leaf units, centred on the white square) -> world point."""
+    pts = [at(x, y - 0.09) for x, y in LEAF]
+    for tri in LEAF_TRIS:
+        m.poly([pts[i] for i in tri], sw, back)
+
+
+def leaf_disc(m, c, n, size, sw):
+    """Red maple leaf lying flat at world point c, facing along n (size = the white square's width), stem toward world -y where possible."""
+    n = norm(n)
+    up = (0, 1, 0) if abs(n[1]) < 0.95 else (0, 0, 1)
+    a = norm(cross(up, n))
+    b = cross(n, a)
+    leaf_at(m, lambda x, y: add(c, add(mul(a, x * size), mul(b, y * size))), sw, sub(c, n))
+
+
 def roundel(m, T, c, n, r):
-    """RCAF roundel (blue ring, white ring, red centre) on a surface at local point c with local outward normal n."""
+    """Canadian roundel (blue ring, white disc, red maple leaf, as on the Bomarc and the Voodoo in the Street View frames) on a surface at
+    local point c with local outward normal n."""
     wn = norm(T.vec(n))
     wc = T.pt(c)
-    for k, (rr, sw) in enumerate(((r, BLUE), (r * 0.68, WHITE), (r * 0.36, RED))):
-        disc(m, add(wc, mul(wn, 0.03 + 0.02 * k)), wn, rr, sw)
+    disc(m, add(wc, mul(wn, 0.03)), wn, r, BLUE)
+    disc(m, add(wc, mul(wn, 0.05)), wn, r * 0.62, WHITE)
+    leaf_disc(m, add(wc, mul(wn, 0.07)), wn, r * 1.0, RED)
 
-
-LEAF = [(0, 1.0), (.15, .66), (.3, .74), (.27, .40), (.60, .54), (.52, .26), (.96, .10), (.86, -.12), (.40, -.20), (.12, -.30), (.05, -.38), (.05, -1.0)]
-LEAF = LEAF + [(-x, y) for x, y in LEAF[:0:-1]]   # full outline: right half down the stem, then the left half back up
 
 
 def maple_flag(m, wc, along, up, wn, w, h, off=0.03):
@@ -158,11 +209,22 @@ def maple_flag(m, wc, along, up, wn, w, h, off=0.03):
     for a0, a1, sw in ((-w / 2, -w / 4, RED), (w / 4, w / 2, RED)):
         m.poly([at(a0, -h / 2), at(a1, -h / 2), at(a1, h / 2), at(a0, h / 2)], sw, back)
     m.poly([at(-w / 4, -h / 2, .004), at(w / 4, -h / 2, .004), at(w / 4, h / 2, .004), at(-w / 4, h / 2, .004)], WHITE, back)
-    k = h * 0.30
-    pts = [at(x * k, y * k + 0.04 * h, .008) for x, y in LEAF]
-    cen = at(0, 0.1 * k + 0.04 * h, .008)
-    for i in range(len(pts)):
-        m.poly([cen, pts[i], pts[(i + 1) % len(pts)]], RED, back)
+    leaf_at(m, lambda x, y: at(x * h, y * h, .008), RED, back)   # the white square is h wide
+
+
+FLAG_ROW = {"canada": 0, "alberta": 1, "rcaf": 2, "red_ensign": 3}   # rows of tools/assets/flags_sign.png (make_signs.flags)
+
+
+def tex_flag(m, corners, row, back):
+    """Textured flag quad, both faces 0.01 m apart.  corners = world points for the image's top-left (hoist, top), top-right, bottom-right
+    and bottom-left; back = a point on the side the first face looks away from."""
+    v0, v1 = FLAG_ROW[row] / 4.0, (FLAG_ROW[row] + 1) / 4.0
+    uvs = [(0.0, v0), (1.0, v0), (1.0, v1), (0.0, v1)]
+    n = norm(cross(sub(corners[1], corners[0]), sub(corners[3], corners[0])))
+    if sum(n[i] * (corners[0][i] - back[i]) for i in range(3)) < 0:
+        n = mul(n, -1)
+    m.poly([add(p, mul(n, .005)) for p in corners], WHITE, sub(corners[0], n), tex="flags", uvs=uvs)
+    m.poly([add(p, mul(n, -.005)) for p in corners], WHITE, add(corners[0], n), tex="flags", uvs=uvs)
 
 
 def flag(m, T, c, n, w, h):
@@ -171,10 +233,11 @@ def flag(m, T, c, n, w, h):
 
 
 def wrap_roundel(m, ax, az, wn, y, r, R):
-    """RCAF roundel wrapped onto a vertical cylinder of radius R about (ax, az): rings of small quads follow the curved skin, each colour a
-    hair above the last (no flat plate standing off the body)."""
+    """Canadian roundel wrapped onto a vertical cylinder of radius R about (ax, az): the blue and white rings are small quads that follow the
+    curved skin, each a hair above the last; the red maple leaf is a small flat piece just off the skin."""
     th0 = math.atan2(wn[0], wn[2])
-    for k, (rr, sw) in enumerate(((r, BLUE), (r * .68, WHITE), (r * .36, RED))):
+    leaf_disc(m, (ax + (R + .03) * math.sin(th0), y, az + (R + .03) * math.cos(th0)), (math.sin(th0), 0, math.cos(th0)), r * .95, RED)
+    for k, (rr, sw) in enumerate(((r, BLUE), (r * .62, WHITE))):
         Rk = R + .006 * (k + 1)
         P = lambda dx, dy: (ax + Rk * math.sin(th0 + dx / R), y + dy, az + Rk * math.cos(th0 + dx / R))
         n = 16
@@ -237,6 +300,27 @@ def voodoo():
 
 
 # Norseman -----------------------------------------------------------------------------------
+def fir_tree(m, x, z, b=0.6, y0=0.35, y1=4.0, legs=True):
+    """Green sheet-metal fir round the Norseman: a tall square pyramid of four tiered panels on four short corner legs (Street View 210501,
+    211207, 211358: two panels show at once, meeting on a hip, the edges step out at each tier).  Each panel lies in its pyramid face; its
+    tier bottoms reach the hips, so the four panels close at the corners there, and pinch in to 45 % at each tier top."""
+    tiers = [(y0, 1.3), (1.2, 2.2), (2.05, 3.05), (2.9, y1)]
+    hip = lambda y: b * (y1 - y) / (y1 - y0)
+    for d in ((1.0, 0.0), (0.0, 1.0), (-1.0, 0.0), (0.0, -1.0)):
+        a = (-d[1], d[0])
+        def P(y, t, e):
+            h = hip(y) + e
+            return (x + d[0] * h + a[0] * t, y, z + d[1] * h + a[1] * t)
+        for ya, yb in tiers:
+            wa, wb = hip(ya), hip(yb) * .45
+            prism3(m, ID, [P(ya, -wa, -.015), P(ya, wa, -.015), P(yb, wb, -.015), P(yb, -wb, -.015)],
+                   [P(ya, -wa, .015), P(ya, wa, .015), P(yb, wb, .015), P(yb, -wb, .015)], GREEN)
+    if legs:
+        for sx in (-1, 1):
+            for sz in (-1, 1):
+                rod3(m, ID, (x + sx * (b - .05), y0 + .02, z + sz * (b - .05)), (x + sx * (b + .1), 0.0, z + sz * (b + .1)), .05, GREEN)
+
+
 def norseman():
     """Noorduyn Norseman V CF-HPY on floats, on a curved green pylon among green cut-out fir trees: cream-yellow, mint cowl and wingtips,
     green cheat line, silver floats; 9.8 m long, 15.7 m span (Street View photos 210501, 211150-211358)."""
@@ -284,11 +368,8 @@ def norseman():
     tube(m, arc + [cradle], .2, GREEN, (-f[1], 0.0, f[0]), n=8)
     tbox(m, T, -.45, .45, -1.15, -.7, zs - 1.0, zs + 1.0, GREEN)
     tbox(m, ID, -.9, .9, -.05, .25, -.6, .6, LROOF)                       # concrete footing under the strap
-    for dx, dz in ((-3.6, -2.0), (-2.2, 3.0), (3.2, -3.4), (4.4, 1.0)):
-        x, z = dx, dz
-        for k, (r, y0, y1) in enumerate(((1.0, 0.0, 1.8), (.75, 1.7, 3.0), (.45, 2.9, 4.0))):
-            prism3(m, ID, [(x - r, y0, z - .04), (x + r, y0, z - .04), (x + r, y0, z + .04), (x - r, y0, z + .04)],
-                   [(x - r * .6, y1, z - .04), (x + r * .6, y1, z - .04), (x + r * .6, y1, z + .04), (x - r * .6, y1, z + .04)], GREEN)
+    for x, z in ((-3.6, -2.0), (-2.2, 3.0), (3.2, -3.4), (4.4, 1.0)):
+        fir_tree(m, x, z)
     m.mirror_x()
     return m
 
@@ -328,36 +409,37 @@ def bomarc():
         for d in (1, -1):
             pts = [(a[0] * d * .44, 3.05, a[2] * d * .44), (a[0] * d * 1.55, 3.05, a[2] * d * 1.55), (a[0] * d * 1.55, 4.1, a[2] * d * 1.55), (a[0] * d * .44, 6.3, a[2] * d * .44)]
             prism3(m, ID, [(p[0] - b[0] * .05, p[1], p[2] - b[2] * .05) for p in pts], [(p[0] + b[0] * .05, p[1], p[2] + b[2] * .05) for p in pts], RWHITE)
-    for e in (1, -1):                       # body roundels and the flag on the fin face
+    for e in (1, -1):                       # body roundels
         wn = (v[0] * e, 0.0, v[2] * e)
         wrap_roundel(m, 0.0, 0.0, wn, 9.0, .34, .445)   # follows the body's curved skin
-        fc = (wn[0] * .1 + u[0] * 1.1, 4.3, wn[2] * .1 + u[2] * 1.1)
-        fp = [add(fc, add(mul(u, sx * .3), (0, sy * .35, 0))) for sx, sy in ((-1, -1), (1, -1), (1, 1), (-1, 1))]
-        m.poly([add(p, mul(wn, .02)) for p in fp], RED, sub(fc, wn))
+    # Canadian Red Ensign on the +u tail fin, both faces: upright (long side vertical) with the Union Jack canton at the top outer corner
+    # (Street View frontage/210410 and 210624; user, 2026-11-03).  Image top-left (hoist, top) = the fin's top outer corner.
+    fc = (u[0] * 1.0, 4.1, u[2] * 1.0)   # inside the fin outline (its outer edge slopes in above 4.1 m)
+    P = lambda du, dy, e: (fc[0] + u[0] * du + v[0] * e * .065, fc[1] + dy, fc[2] + u[2] * du + v[2] * e * .065)
+    for e in (1, -1):
+        tex_flag(m, [P(.25, .5, e), P(.25, -.5, e), P(-.25, -.5, e), P(-.25, .5, e)], "red_ensign", P(0, 0, -e))
     m.mirror_x()
     return m
 
 
 # Memorial -----------------------------------------------------------------------------------
 def memorial():
-    """Stone memorial block with a bronze plaque on a round paved pad, three flagpoles (Canada, Alberta, a third flag) beside it; Street View 211249."""
+    """Stone memorial block with a bronze plaque on a round paved pad inside a red brick ring, three flagpoles round it: the Canadian flag on
+    the Kingsway (SW) side, the Alberta flag on the NW and the RCAF ensign on the E (user, 2026-11-03; Street View 211225 from the lot and
+    211249 from the SE).  Pad about 13.6 m across, brick ring to 16.4 m (2017 / 2026 aerials)."""
     m = Mesh()
-    ring_r = 5.2
-    revolve(m, [(0, ring_r), (.18, ring_r), (.2, ring_r - .3)], LROOF, 0, 0, n=20)
-    revolve(m, [(.2, ring_r - .3), (.22, 0.05)], GREY, 0, 0, n=20)
+    ring_r = 6.8
+    revolve(m, [(0, ring_r + 1.4), (.06, ring_r + 1.4), (.07, .05)], BRICKD, 0, 0, n=28)     # brick ring (its middle is under the pad)
+    revolve(m, [(0, ring_r), (.18, ring_r), (.2, ring_r - .3)], LROOF, 0, 0, n=28)
+    revolve(m, [(.2, ring_r - .3), (.22, 0.05)], GREY, 0, 0, n=28)
     m.box(-1.0, 1.0, .2, 2.7, -.55, .55, WALL)
     m.box(-1.15, 1.15, 2.7, 2.9, -.65, .65, WALL)
     m.box(-.7, .7, .9, 2.2, -.575, -.55, BRONZE)       # plaque, facing the road side (-Z in the pre-mirror frame is south-west enough)
     m.box(-.7, .7, .9, 2.2, .55, .575, BRONZE)
-    for k, (x, z, col) in enumerate(((-3.4, -1.0, RED), (-1.9, -2.7, BLUE), (3.3, -1.5, DARK))):
-        m.box(x - .05, x + .05, .2, 9.0, z - .05, z + .05, METAL)
-        if col == RED:                                 # Canadian flag (maple leaf), both faces
-            for sz in (1, -1):
-                maple_flag(m, (x + .05 + .85, 8.45, z), (1, 0, 0), (0, 1, 0), (0, 0, sz), 1.7, .85)
-            continue
-        fl = [(x + .05, 8.9, z), (x + 1.7, 8.9, z), (x + 1.7, 7.7, z), (x + .05, 7.7, z)]
-        m.poly(fl, col, (x + 1, 8.3, z - 1))
-        m.poly(fl[::-1], col, (x + 1, 8.3, z + 1))
+    # (east, north) of each pole; the flags all fly toward the east (one wind), 1.8 x 0.9 m at the top of 9.6 m poles
+    for x, z, row in ((0.6, -6.0, "canada"), (-5.2, 3.0, "alberta"), (5.4, 2.0, "rcaf")):
+        revolve(m, [(.2, .07), (9.6, .045), (9.7, .07), (9.8, .0)], METAL, x, z, n=8)
+        tex_flag(m, [(x + .06, 9.5, z), (x + 1.86, 9.5, z), (x + 1.86, 8.6, z), (x + .06, 8.6, z)], row, (x + 1, 9.0, z - 1))
     m.mirror_x()
     return m
 
@@ -394,6 +476,31 @@ def _sign_pos():
     return 53.5651172 + n_ / KY, -113.5178105 + e / KX
 
 
+# Museum fence -----------------------------------------------------------------------------------
+# Traced in the airport frame (x east, y north, metres from the CYXD reference point) on the Esri Wayback aerials of 2026-10 (release 43291,
+# zoom 19) and 2017-05 (release 784; shifted 1.5 m W and 1.5 m S onto the 2026 one), 2026-11-03.  The user wants the museum wholly landside.
+FENCE_O = (215.6, -751.7)   # model origin = the Hangar 14 placement (middle of the hall + west wing)
+FENCE_RUNS = [
+    # airside line: the north yard's north fence (from its NW corner, past Hangar 15's south corner), the cut NE corner, the east fence
+    # outside the aircraft strip down to Kingsway, then the perimeter fence turning SE along Kingsway (stopped after ~20 m)
+    [(189.2, -672.6), (272.8, -672.6), (280.9, -695.5), (281.0, -893.4), (285.4, -901.9), (289.7, -906.1), (303.9, -916.8)],
+    # tie from Hangar 15's south corner (the model's, gen_buildings: u 281.8, v -23.4) to the north fence, 3.6 m south
+    [(217.0, -669.0), (217.0, -672.6)],
+    # the museum's west yard (2017): from the north yard's NW corner SW along the grey building's lot, then SE to the west wall near
+    # the SW corner, so the dirt yard west of the museum is inside
+    [(189.2, -672.6), (169.5, -688.5), (147.4, -727.1), (118.5, -771.5), (131.8, -781.5), (148.5, -791.5), (160.7, -799.3), (177.2, -800.5)],
+]
+
+
+def museum_fence():
+    """Chain-link fence round the Alberta Aviation Museum (Hangar 14): see FENCE_RUNS."""
+    m = Mesh()
+    for run in FENCE_RUNS:
+        chainlink_fence(m, [(x - FENCE_O[0], y - FENCE_O[1]) for x, y in run], h=2.4, closed=False)
+    m.mirror_x()
+    return m
+
+
 # (model name, comment, builder, lat, lon): origin = pole / pedestal base, heading 0
 DISPLAY = [
     ("cyxd_h14_sign", "Alberta Aviation Museum: black roadside sign with logo, LED panel and History Takes Flight board (Street View)", museum_sign, *_sign_pos()),
@@ -401,4 +508,6 @@ DISPLAY = [
     ("cyxd_h14_norseman", "Alberta Aviation Museum: Noorduyn Norseman CF-HPY on a green pylon (OSM node)", norseman, 53.5649030, -113.5173357),
     ("cyxd_h14_memorial", "Alberta Aviation Museum: memorial with three flagpoles (OSM node)", memorial, 53.5646807, -113.5168757),
     ("cyxd_h14_voodoo", "Alberta Aviation Museum: CF-101B Voodoo 101060 on a blue pole (OSM node)", voodoo, 53.5645597, -113.5163768),
+    ("cyxd_h14_fence", "Alberta Aviation Museum: chain-link fence round the north yard, the aircraft strip and the west yard (2017 / 2026 aerials)",
+     museum_fence, 53.56572977, -113.51717633),
 ]

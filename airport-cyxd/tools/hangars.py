@@ -1025,22 +1025,26 @@ def hangar11():
 def hangar14():
     """Hangar 14 (BCATP 1941, Alberta Aviation Museum), reworked from the 2011 Commons photo (Alberta_Aviation_Museum.jpg), the 2012-2024
     Street View frames, the 2026-10-21 frontage set and the 2014 aerial (hangar17-tower-photos/EDMONTON_MUNI_AIRPORT__15439598181_.jpg).
-    OSM 230718920: 90.8 (E-W) x 100 (N-S) m; front = the SOUTH gable (+Z, heading 180, facing Kingsway and the Bomarc).
+    OSM 230718920 says 90.8 (E-W) x 100 (N-S) m, but the aerials give 82 m (see the note below); front = the SOUTH gable (+Z, heading 180, facing Kingsway and the Bomarc).
     Windows counted from photos.  A perspective fit of the 2012 Street View frame (h14-kingsway-81) puts the west wall's 18 upper windows on an
     even 5.1 m pitch, the first 7.8 m north of the south corner (fit residual under 0.1 %).  The aerial gives the east wall the same 18 bays
     from 7.2 m; its porch block covers the three at 59-78 m, so 15 show.  Both long walls: tall four-pane upper windows over a row of small
     ones (2.85 m pitch west, 2.55 m east).
-    South face from the west end (viewer-left, +X): the end of the two-storey white clapboard west wing (10 m wide, 7.2 m); then the hall
-    front under a white band with the dark-green ALBERTA AVIATION MUSEUM lettering and a V wing mark either side (aerial crop): glazed door
+    South face from the west end (viewer-left, +X): the end of the two-storey white clapboard west wing (6.8 m wide, 7.2 m); then the hall
+    front under a white band with the dark-green ALBERTA AVIATION MUSEUM lettering and a V wing mark either side (aerial crop; positions below are on the old 80.8 m hall, scaled by S()): glazed door
     bay (10-23.5 m), solid green bay with four small windows, glazed bay with the teal awning, white pilaster (48-50), glazed lobby with the
     entrance doors and small canopy (70 m), a second pilaster (78-79.5), glazed bay, white corner post.  West wall: lean-to ledge, doors at 14
-    and 45 m, a one-storey block at 47-67 m with two doors.  East wall: low lean-to (3.4 m high, 3.5 m deep) and a porch block at 59-78 m."""
+    and 45 m, a one-storey block at 47-67 m with two doors.  East wall: low lean-to (3.4 m high, 5.5 m deep) and a porch block at 59-78 m."""
     m = Mesh(textured=True)
-    W, D, H = 90.8, 100.0, 8.8
-    WING, WH = 10.0, 7.2
+    # Reviewed 2026-11-03 (user agreed): the 2017 and 2026 Wayback aerials both put the roof at about 82 m east-west, not the OSM 90.8 m
+    # (west wing strip 6.2-6.9 m, hall 69-69.5 m, east lean-to 5.4-6.7 m; north-south 99.5 m agrees).  W is now the hall plus the west wing;
+    # the lean-to (LEAN deep) stands outside it on the east.  The south-face bays, measured on the old 80.8 m hall, are scaled by S().
+    W, D, H = 76.5, 100.0, 8.8
+    WING, WH, LEAN = 6.8, 7.2, 5.5
     x0, x1, z0, z1 = -W / 2, W / 2, -D / 2, D / 2
     xm = x1 - WING                       # west edge of the hall
     U = lambda u: x1 - u                 # x of a point u metres in from the west end
+    S = lambda u: WING + (u - 10.0) * (W - WING) / 80.8   # old south-face position (hall 10..90.8 m from the west end) -> new
     Z = lambda t: z1 - t                 # z of a point t metres north of the south corner
     m.box(x0, xm, 0, 4.4, z0, z1, TEAL, top=False)
     m.box(x0, xm, 4.4, H, z0, z1, WHITE, top=True)
@@ -1065,10 +1069,18 @@ def hangar14():
     door_x(m, 1, x1 + 3.0, Z(61.1), 1.0, 2.1)
     pane_x(m, 1, x1 + 3.0, Z(57.0), 1.1, 1.0, 1.1)
     # wing end (south face): two tall upper windows, door and small window below
-    for xc in (x1 - 2.8, x1 - 7.2):
+    for xc in (x1 - 1.9, x1 - 4.9):
         pane_z(m, 1, zw, xc, 3.9, 1.7, 2.8)
-    door_z(m, 1, zw, x1 - 2.2, 1.0, 2.1)
-    pane_z(m, 1, zw, x1 - 6.2, 1.1, 1.0, 1.1)
+    door_z(m, 1, zw, x1 - 1.5, 1.0, 2.1)
+    pane_z(m, 1, zw, x1 - 4.2, 1.1, 1.0, 1.1)
+    # roof-access ladder on the wing's west wall, 4.5 m from the south corner, from the lean-to ledge up past the eave (Street View 2022-10,
+    # frontage/210410)
+    for dz in (-0.25, 0.25):
+        m.box(x1 + 0.15, x1 + 0.22, 3.55, WH + 1.1, Z(4.5) + dz - 0.03, Z(4.5) + dz + 0.03, WHITE)
+    for k in range(int((WH + 1.0 - 3.7) / 0.3) + 1):
+        m.box(x1 + 0.16, x1 + 0.21, 3.7 + 0.3 * k, 3.74 + 0.3 * k, Z(4.5) - 0.25, Z(4.5) + 0.25, WHITE)
+    for y in (WH + 0.4, WH + 1.05):   # hoop stays back to the wall above the eave
+        m.box(x1, x1 + 0.2, y, y + 0.05, Z(4.5) - 0.28, Z(4.5) + 0.28, WHITE)
 
     # south face of the hall
     def solid(ua, ub, wins=False):
@@ -1095,14 +1107,14 @@ def hangar14():
             y += 0.8
         m.box(xa, xb, 5.42, 5.55, z1, z1 + 0.16, TEAL)
 
-    glazed(10.0, 23.5)
-    solid(23.5, 37.0, wins=True)
-    glazed(37.0, 48.0)
-    m.box(U(50.0), U(48.0), 0, 6.3, z1, z1 + 0.25, WHITE)           # pilaster under the lettering; stops below the sign band (6.4-7.8) so it no longer hides the middle of AVIATION
-    glazed(50.0, 78.0, sill=1.1, pitch=2.5)                         # lobby glazing (2014 aerial)
-    m.box(U(79.5), U(78.0), 0, H, z1, z1 + 0.25, WHITE)             # second pilaster
-    glazed(79.5, 88.4, sill=1.1, pitch=2.5)
-    xa, xb = U(71.8), U(68.6)                                       # glass entrance doors in the lobby: frame, centre post, push bars
+    glazed(S(10.0), S(23.5))
+    solid(S(23.5), S(37.0), wins=True)
+    glazed(S(37.0), S(48.0))
+    m.box(U(S(50.0)), U(S(48.0)), 0, 6.3, z1, z1 + 0.25, WHITE)     # pilaster under the lettering; stops below the sign band (6.4-7.8) so it no longer hides the middle of AVIATION
+    glazed(S(50.0), S(78.0), sill=1.1, pitch=2.5)                   # lobby glazing (2014 aerial)
+    m.box(U(S(79.5)), U(S(78.0)), 0, H, z1, z1 + 0.25, WHITE)       # second pilaster
+    glazed(S(79.5), W - 1.2, sill=1.1, pitch=2.5)
+    xa, xb = U(S(70.2) + 1.6), U(S(70.2) - 1.6)                     # glass entrance doors in the lobby (3.2 m): frame, centre post, push bars
     m.box(xa, xb, 0.0, 2.6, z1 + 0.04, z1 + 0.2, DARK)
     for x in (xa, (xa + xb) / 2 - 0.05, xb - 0.1):
         m.box(x, x + 0.1, 0.0, 2.7, z1 + 0.04, z1 + 0.24, WHITE)
@@ -1110,33 +1122,33 @@ def hangar14():
         m.box(xa, xb, y, y + 0.1, z1 + 0.04, z1 + 0.24, WHITE)
     for x in ((xa + xb) / 2 - 0.35, (xa + xb) / 2 + 0.25):
         m.box(x, x + 0.1, 0.9, 1.1, z1 + 0.2, z1 + 0.3, DGREY)
-    m.box(U(72.6), U(67.8), 2.85, 3.0, z1, z1 + 1.3, TEAL)          # small canopy over them
+    m.box(U(S(70.2) + 2.4), U(S(70.2) - 2.4), 2.85, 3.0, z1, z1 + 1.3, TEAL)  # small canopy over them
     m.box(x0, x0 + 1.2, 0, H, z1, z1 + 0.2, WHITE)                  # corner post
     m.box(x0, xm, 5.5, 5.6, z1, z1 + 0.3, TEAL)                     # door header
     # teal awning over the door in the third glazed bay (Commons photo; aerial)
-    ac, aw, ad = U(40.0), 3.6, 1.9
+    ac, aw, ad = U(S(40.0)), 3.2, 1.9
     q = lambda x, y, z: (x, y, z)
     m.poly([q(ac - aw, 3.9, z1), q(ac + aw, 3.9, z1), q(ac + aw, 3.15, z1 + ad), q(ac - aw, 3.15, z1 + ad)], TEAL, (ac, 0, z1 + 1))
     m.poly([q(ac - aw, 3.5, z1 + 0.1), q(ac + aw, 3.5, z1 + 0.1), q(ac + aw, 3.0, z1 + ad - 0.1), q(ac - aw, 3.0, z1 + ad - 0.1)], DARK, (ac, 6, z1 + 1))
     m.poly([q(ac - aw, 3.9, z1), q(ac - aw, 3.15, z1 + ad), q(ac - aw, 3.0, z1 + ad)], TEAL, (ac, 3, z1 + 1))
     m.poly([q(ac + aw, 3.9, z1), q(ac + aw, 3.0, z1 + ad), q(ac + aw, 3.15, z1 + ad)], TEAL, (ac, 3, z1 + 1))
-    rect_sign(m, U(48.8), 7.1, z1 + 0.06, (0, 1), 36.0, 1.4, "museum", 0.0, 0.5)   # ALBERTA AVIATION MUSEUM with the two V marks
+    rect_sign(m, U(S(48.8)), 7.1, z1 + 0.06, (0, 1), 36.0 * 0.863, 1.4 * 0.863, "museum", 0.0, 0.5)   # ALBERTA AVIATION MUSEUM with the two V marks (scaled with the face)
     # east wall (-X): 15 tall upper windows (18 bays from 7.2 m at 5.1 m; the porch block hides k = 11-13), a low lean-to with small windows
     for k in list(range(0, 11)) + list(range(14, 18)):
         pane_x(m, -1, x0, Z(7.2 + 5.1 * k), 4.6, 1.7, 2.8)
-    m.box(x0 - 3.5, x0, 0, 3.4, z0, z1, WHITE, top=True)             # lean-to, full length from the south face
-    m.box(x0 - 3.7, x0, 3.4, 3.65, z0 - 0.2, z1 + 0.2, TEAL)
+    m.box(x0 - LEAN, x0, 0, 3.4, z0, z1, WHITE, top=True)             # lean-to, full length from the south face (LEAN deep, 2017 aerial)
+    m.box(x0 - LEAN - 0.2, x0, 3.4, 3.65, z0 - 0.2, z1 + 0.2, TEAL)
     LOWE = [t for t in (6.0 + 2.55 * j for j in range(38)) if t < 98 and not (56.0 < t < 80.0)]
     for t in LOWE:
-        pane_x(m, -1, x0 - 3.5, Z(t), 1.3, 1.0, 1.1)
+        pane_x(m, -1, x0 - LEAN, Z(t), 1.3, 1.0, 1.1)
     door_z(m, 1, z1, x0 - 1.0, 1.0, 2.1)                              # lean-to south end: door and window
     pane_z(m, 1, z1, x0 - 2.6, 1.3, 1.0, 1.1)
-    m.box(x0 - 3.5, x0, 3.65, 7.2, Z(78.0), Z(59.0), WHITE)          # porch block at 59-78 m
-    m.box(x0 - 3.7, x0, 7.2, 7.45, Z(78.2), Z(58.8), TEAL)
-    door_x(m, -1, x0 - 3.5, Z(68.5), 1.0, 2.1)
+    m.box(x0 - LEAN, x0, 3.65, 7.2, Z(78.0), Z(59.0), WHITE)          # porch block at 59-78 m
+    m.box(x0 - LEAN - 0.2, x0, 7.2, 7.45, Z(78.2), Z(58.8), TEAL)
+    door_x(m, -1, x0 - LEAN, Z(68.5), 1.0, 2.1)
     for t in (62.5, 74.0):
-        pane_x(m, -1, x0 - 3.5, Z(t), 1.3, 1.0, 1.1)
-    for xc in [x0 + 3 + 6.7 * i for i in range(11)]:                  # north end: tall upper windows
+        pane_x(m, -1, x0 - LEAN, Z(t), 1.3, 1.0, 1.1)
+    for xc in [x0 + 3 + 6.7 * i for i in range(int((xm - x0 - 6) / 6.7) + 1)]:  # north end: tall upper windows
         pane_z(m, -1, z0, xc, 4.6, 1.7, 2.8)
     cx, hw = (x0 + xm) / 2, (xm - x0) / 2                              # vents sit on the gable pitch
     roof_vents(m, [(cx + dx, dz) for dx in (-20, 20) for dz in (-30, 0, 30)], lambda x, z: H + 0.5 + 2.6 * (1 - abs(x - cx) / hw) - 0.1)
@@ -1976,7 +1988,9 @@ HANGARS = [
     ("cyxd_hangar7", "Hangar 7 (steel blue, OSM 325271251)", hangar7, 53.571617, -113.508378, 270, 36.4, 39.3),
     ("cyxd_hangar8", "Hangar 8 (pale blue-grey with end block, OSM 325268698)", hangar8, 53.570358, -113.508293, 270, 66.3, 52.9),
     ("cyxd_hangar11", "Hangar 11 (USAAF T3 barrel vault with annexes, OSM 325268748)", hangar11, 53.569251, -113.508228, 0, 86.3, 64.0),
-    ("cyxd_hangar14", "Hangar 14 (Alberta Aviation Museum, OSM 230718920)", hangar14, 53.565714, -113.517130, 180, 90.8, 100.0),
+    # 2026-11-03: centre of the hall + west wing from the 2017 / 2026 aerials (x 215.6, y -751.7 in the airport frame: 3.1 m W, 1.8 m N of the
+    # OSM centroid); W 87.5 covers the 76.5 m hall + wing and the 5.5 m east lean-to with the symmetric exclusion
+    ("cyxd_hangar14", "Hangar 14 (Alberta Aviation Museum, OSM 230718920)", hangar14, 53.565730, -113.517176, 180, 87.5, 100.0),
     ("cyxd_hangar18", "Hangar 18 (Edmonton Flying Club complex, traced from 2014 imagery)", hangar18, 53.568498, -113.519742, 48, 88.0, 84.0),
     ("cyxd_hangar38", "Hangar 38 (mustard yellow, OSM 230718902)", hangar38, 53.573308, -113.529714, 138, 68.8, 64.0),
     ("cyxd_hangar39", "Hangar 39 (pale-blue double hall, OSM 230718901, beside Hangar 38)", hangar39, 53.574052, -113.528731, 138, 107.0, 90.5),

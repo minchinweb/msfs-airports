@@ -37,6 +37,12 @@ TO_TAXI = ("Hangar 21 (",)  # runs out to the taxiway (terminal: jets)
 TURN = {"Hangar 15 (": (18.0, 22.0)}  # forecourt depth, strip width: out of the door, then a turn to the taxiway (no strip through Hangar 14)
 KEEP_CLEAR = ("Hangar 14 (",)  # museum: no apron towards it; a fence line stands between it and Hangar 15
 KEEP_CLEAR_M = 12.0
+# 2026-11-03: and keep off the museum's side of its fence (display_aircraft.FENCE_RUNS, airport frame): Hangar 15's 18 m forecourt reached
+# across it into the museum's north yard.  The polygon follows the airside line to the east fence, runs south past Kingsway, and comes back
+# up the west-yard fence to the north yard's NW corner; 1 m clear of the wire.
+sys.path.insert(0, str(Path(__file__).resolve().parent))
+from display_aircraft import FENCE_RUNS  # noqa: E402
+MUSEUM_SIDE = Polygon(FENCE_RUNS[0][:4] + [(281.0, -930.0), (110.0, -930.0)] + FENCE_RUNS[2][3::-1]).buffer(1.0, join_style=2)
 
 
 
@@ -100,7 +106,7 @@ def main():
         def ext(d):
             return Polygon([a, b, (b[0] + n[0] * d, b[1] + n[1] * d), (a[0] + n[0] * d, a[1] + n[1] * d)])
         mid = ((a[0] + b[0]) / 2, (a[1] + b[1]) / 2)
-        avoid = unary_union([f2.buffer(KEEP_CLEAR_M) for t2, f2 in feet.items() if t2.startswith(KEEP_CLEAR)])
+        avoid = unary_union([f2.buffer(KEEP_CLEAR_M) for t2, f2 in feet.items() if t2.startswith(KEEP_CLEAR)] + [MUSEUM_SIDE])
         ray_hit = next((k for k in range(0, 160) if pave.contains(Point(mid[0] + n[0] * k, mid[1] + n[1] * k))), None)
         if prefix in TURN:
             dep, wid = TURN[prefix]

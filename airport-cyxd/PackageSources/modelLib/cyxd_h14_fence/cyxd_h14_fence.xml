@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ModelInfo guid="{F101D19C-48BC-5623-9BE3-7442EC6748B1}" version="1.1">
+	<LODS>
+		<LOD minSize="0" ModelFile="cyxd_h14_fence.gltf"/>
+	</LODS>
+</ModelInfo>

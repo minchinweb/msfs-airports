@@ -189,15 +189,15 @@
   {
    "bufferView": 0,
    "componentType": 5126,
-   "count": 17872,
+   "count": 17968,
    "type": "VEC3",
    "min": [
-    -48.6,
+    -41.45,
     0,
     -50.2
    ],
    "max": [
-    49.1,
+    43.95,
     11.9,
     51.9
    ]
@@ -205,37 +205,37 @@
   {
    "bufferView": 1,
    "componentType": 5126,
-   "count": 17872,
+   "count": 17968,
    "type": "VEC3"
   },
   {
    "bufferView": 2,
    "componentType": 5126,
-   "count": 17872,
+   "count": 17968,
    "type": "VEC2"
   },
   {
    "bufferView": 3,
    "componentType": 5123,
-   "count": 7944,
+   "count": 7932,
    "type": "SCALAR"
   },
   {
    "bufferView": 4,
    "componentType": 5123,
-   "count": 534,
+   "count": 990,
    "type": "SCALAR"
   },
   {
    "bufferView": 5,
    "componentType": 5123,
-   "count": 1368,
+   "count": 1356,
    "type": "SCALAR"
   },
   {
    "bufferView": 6,
    "componentType": 5123,
-   "count": 16950,
+   "count": 16662,
    "type": "SCALAR"
   },
   {
@@ -249,48 +249,48 @@
   {
    "buffer": 0,
    "byteOffset": 0,
-   "byteLength": 214464
+   "byteLength": 215616
   },
   {
    "buffer": 0,
-   "byteOffset": 214464,
-   "byteLength": 214464
+   "byteOffset": 215616,
+   "byteLength": 215616
   },
   {
    "buffer": 0,
-   "byteOffset": 428928,
-   "byteLength": 142976
+   "byteOffset": 431232,
+   "byteLength": 143744
   },
   {
    "buffer": 0,
-   "byteOffset": 571904,
-   "byteLength": 15888
+   "byteOffset": 574976,
+   "byteLength": 15864
   },
   {
    "buffer": 0,
-   "byteOffset": 587792,
-   "byteLength": 1068
+   "byteOffset": 590840,
+   "byteLength": 1980
   },
   {
    "buffer": 0,
-   "byteOffset": 588860,
-   "byteLength": 2736
+   "byteOffset": 592820,
+   "byteLength": 2712
   },
   {
    "buffer": 0,
-   "byteOffset": 591596,
-   "byteLength": 33900
+   "byteOffset": 595532,
+   "byteLength": 33324
   },
   {
    "buffer": 0,
-   "byteOffset": 625496,
+   "byteOffset": 628856,
    "byteLength": 12
   }
  ],
  "buffers": [
   {
    "uri": "cyxd_hangar14.bin",
-   "byteLength": 625508
+   "byteLength": 628868
   }
  ]
 }

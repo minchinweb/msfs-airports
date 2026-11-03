@@ -38,6 +38,16 @@
      "indices": 3,
      "mode": 4,
      "material": 0
+    },
+    {
+     "attributes": {
+      "POSITION": 0,
+      "NORMAL": 1,
+      "TEXCOORD_0": 2
+     },
+     "indices": 4,
+     "mode": 4,
+     "material": 1
     }
    ]
   }
@@ -52,12 +62,26 @@
     "metallicFactor": 0.0,
     "roughnessFactor": 0.9
    }
+  },
+  {
+   "name": "cyxd_flags",
+   "pbrMetallicRoughness": {
+    "baseColorTexture": {
+     "index": 1
+    },
+    "metallicFactor": 0.0,
+    "roughnessFactor": 0.9
+   }
   }
  ],
  "textures": [
   {
    "sampler": 0,
    "source": 0
+  },
+  {
+   "sampler": 1,
+   "source": 1
   }
  ],
  "samplers": [
@@ -75,41 +99,50 @@
  "images": [
   {
    "uri": "cyxd_palette.png"
+  },
+  {
+   "uri": "cyxd_flags.png"
   }
  ],
  "accessors": [
   {
    "bufferView": 0,
    "componentType": 5126,
-   "count": 638,
+   "count": 1168,
    "type": "VEC3",
    "min": [
-    -5.2,
+    -8.2,
     0,
-    -5.2
+    -8.2
    ],
    "max": [
-    5.2,
-    9.0,
-    5.2
+    8.2,
+    9.8,
+    8.2
    ]
   },
   {
    "bufferView": 1,
    "componentType": 5126,
-   "count": 638,
+   "count": 1168,
    "type": "VEC3"
   },
   {
    "bufferView": 2,
    "componentType": 5126,
-   "count": 638,
+   "count": 1168,
    "type": "VEC2"
   },
   {
    "bufferView": 3,
    "componentType": 5123,
-   "count": 984,
+   "count": 1968,
+   "type": "SCALAR"
+  },
+  {
+   "bufferView": 4,
+   "componentType": 5123,
+   "count": 36,
    "type": "SCALAR"
   }
  ],
@@ -117,28 +150,33 @@
   {
    "buffer": 0,
    "byteOffset": 0,
-   "byteLength": 7656
+   "byteLength": 14016
   },
   {
    "buffer": 0,
-   "byteOffset": 7656,
-   "byteLength": 7656
+   "byteOffset": 14016,
+   "byteLength": 14016
   },
   {
    "buffer": 0,
-   "byteOffset": 15312,
-   "byteLength": 5104
+   "byteOffset": 28032,
+   "byteLength": 9344
   },
   {
    "buffer": 0,
-   "byteOffset": 20416,
-   "byteLength": 1968
+   "byteOffset": 37376,
+   "byteLength": 3936
+  },
+  {
+   "buffer": 0,
+   "byteOffset": 41312,
+   "byteLength": 72
   }
  ],
  "buffers": [
   {
    "uri": "cyxd_h14_memorial.bin",
-   "byteLength": 22384
+   "byteLength": 41384
   }
  ]
 }

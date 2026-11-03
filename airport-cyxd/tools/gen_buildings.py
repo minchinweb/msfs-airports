@@ -60,7 +60,7 @@ def write_palette(path):
 TEX_T = 1.28  # metres per texture tile (8 clapboards / 8 shingle rows)
 TEX_NAMES = ("siding", "shingle_red", "shingle_grey", "ribbed", "ribbed_blue", "ribbed_green", "ribbed_mustard", "ribbed_steel",
              "ribbed_tan", "ribbed_white", "ribbed_yellow", "ribbed_teal", "brick", "shell", "esso", "navcan", "lawoffice", "nwi", "efc", "goa", "museum", "gac",
-             "aerocentre", "cessna")
+             "aerocentre", "cessna", "flags")
 # night-lit materials: palette colour by day, warm emissive at night only (ASOBO_material_day_night_switch; the SDK's Blender exporter writes
 # emissiveFactor = colour x scale, default scale 1000).  key -> emissiveFactor.  "glow" = office windows, "glow_cab" = the dimmer tower cab.
 GLOW = {"glow": [180.0, 140.0, 85.0], "glow_cab": [40.0, 44.0, 36.0]}
@@ -152,7 +152,7 @@ def write_textures(folder):
     (folder / "cyxd_shell.png").write_bytes(sign.read_bytes())
     (folder / "cyxd_shell.png.xml").write_text('<BitmapConfiguration>\n\t<BitmapSlot>MTL_BITMAP_DECAL0</BitmapSlot>\n</BitmapConfiguration>\n')
     # Esso oval and NAV CANADA plaque: tools/make_signs.py
-    for nm in ("esso", "navcan", "lawoffice", "nwi", "efc", "goa", "museum", "gac", "aerocentre", "cessna"):
+    for nm in ("esso", "navcan", "lawoffice", "nwi", "efc", "goa", "museum", "gac", "aerocentre", "cessna", "flags"):
         (folder / ("cyxd_%s.png" % nm)).write_bytes((Path(__file__).resolve().parent / ("assets/%s_sign.png" % nm)).read_bytes())
         (folder / ("cyxd_%s.png.xml" % nm)).write_text('<BitmapConfiguration>\n\t<BitmapSlot>MTL_BITMAP_DECAL0</BitmapSlot>\n</BitmapConfiguration>\n')
 
