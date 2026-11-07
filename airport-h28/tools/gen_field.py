@@ -110,7 +110,19 @@ def cones():
     out = [obj(f"edge cones, {m:.0f} m from the west fence", edge, *at(m, CL)) for m in stations]
     out.append(obj("threshold 07 cones (red outboard, west)", thr, *at(T07, CL), 0.0))
     out.append(obj("threshold 25 cones (red outboard, east)", thr, *at(T07 + RWY_LEN, CL), 180.0))
+    white = guid("h28_cone_white")
+    out += [obj(f"west-end cone: {title}", white, *at(m, lat), 0.0, CONE_SCALE) for title, m, lat in WEST_CONES]
     return out
+
+
+# Single white cones near the west fence, read off the Sep 2025 Street View (docs/h28/reference/streetview-2025-09-*):
+# a pair just north of the transformer pole (photos c, d, e; the 2012 imagery has cones there too), one in the US parking
+# right of that pole seen from the road (c, e), and one in the Canadian pocket by its north-west corner (a, b).
+# Distances come from the cones' apparent sizes against the edge cones at 62/95/127 m, so allow a few metres.
+WEST_CONES = [("pair by the transformer pole, north", 32.0, CL - EDGE / LAT),
+              ("pair by the transformer pole, south", 32.0, CL - 13.9 / LAT),
+              ("US parking, right of the transformer pole from the road", 21.0, BORDER - 13.0 / LAT),
+              ("Canadian pocket, by the north-west corner", 3.0, CL + 18.0 / LAT)]
 
 
 # --- polygons ----------------------------------------------------------------------------------------------------------

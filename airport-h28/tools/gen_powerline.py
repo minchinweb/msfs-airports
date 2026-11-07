@@ -1,12 +1,18 @@
 """Generate the H28 power lines (own pole and wire models, orange marker balls) and the port pole lights, and place them
 in H28.xml between BEGIN/END markers. Run gen_port.py first (it owns the palette), then:
     python -I airport-h28/tools/gen_powerline.py
-Routing, from the 2025 Street View (docs/h28/reference/streetview-west-end-2025-09.png), the Wikimedia photo and the FAA
-remark (Rwy 7: P-line 31 ft high, 70 ft right of the centreline, marked with red balls):
-- South line: a pole on the road's east shoulder just south of the border, a transformer pole in the US parking 33 m east
-  of the west fence and 70 ft (21 m) south of the centreline, then east along the parking to a pole by the windsock.
-  The span east of the transformer pole carries the balls (seen in the Wikimedia photo). It does not cross the strip.
-- North line: a short span from the road to a dead-end pole just north of the Canadian pocket; it ends before the strip.
+Routing (docs/h28/powerline-routing-2025.png, drawn by docs/h28/powerline_map.py from the user's review of the Esri
+frame, the Sep 2025 Street View streetview-2025-09-*, the CLUI 2014 photo and the mindtrip aerial), two separate systems:
+- US line, two wires on cross-arms: a pole in the trees west of the road just south of the border, over the road (one
+  ball over its middle) to the transformer pole in the US parking 33 m east of the west fence and 70 ft (21 m) south of
+  the centreline (FAA remark: P-line 31 ft high, 70 ft right of the centreline, red balls), east (three balls) to a pole
+  by the windsock, then due south across the US fields (US_SOUTH poles, about 77 m apart).
+- Canadian line, four wires stacked on one side of short poles (a low-voltage rack): from a pole north of the CBSA
+  garages south behind (east of) all the port buildings to a dead-end pole just north of the Canadian pocket, guyed
+  south to an anchor just inside the pocket's north fence. It does not run up the highway; its feed is not seen.
+- Road lights at the border: one on the east shoulder just north of the border (red beacon), with a single wire to the
+  transformer pole, and two on the west shoulder either side of the border, joined by a single wire and fed from the
+  US line's west pole (that drop is assumed).
 Wires hang from the cross-arm ends at 9.5 m (31 ft) with a small sag; the poles are built to that height, so wires and
 cross-arms line up (the library pole was about twice as tall as the old 9.4 m wires).
 Lights: night-only MSFS 2024 street lights with lens flare, so they show from a distance and lead pilots to the runway:
@@ -20,6 +26,7 @@ import json
 import math
 import urllib.request
 import re
+import time
 import sys
 from pathlib import Path
 
@@ -30,17 +37,32 @@ import gen_port as gp  # noqa: E402
 LAT, LON = gp.LAT, gp.LON
 HEIGHT, ARM = 9.5, 1.0  # wire attachment height and half cross-arm (metres)
 ROAD = -112.78826  # east shoulder of the highway
+ROAD_C = -112.78840  # road centre (checked on a DevMode top-down shot, see gen_port.py)
 SOUTH = gf.CL - 70 * 0.3048 / LAT  # 70 ft right of the 07 centreline
-NORTH = gf.POCKET_N + 4 / LAT
-# (title, lat, lon, transformer?)
-SOUTH_POLES = [("road pole, US side", SOUTH, ROAD, False), ("transformer pole, US parking", SOUTH, gf.WF + 33 / LON, True),
-               ("end pole by the windsock", SOUTH, gf.PARK_E - 6 / LON, False)]
-NORTH_POLES = [("road pole, Canadian side", NORTH, ROAD, False), ("dead-end pole north of the pocket", NORTH,
-                                                                  gf.POCKET_E + 3 / LON, False)]
+DROP = 8.6  # height of the single light-feed wires (below the cross-arm, above the transformer can)
+RACK = (8.4, 7.9, 7.4, 6.9)  # Canadian line: wire heights on the rack
+TX, SOCK = "transformer pole, US parking", "pole by the windsock, the line turns south"
+WEST = "US line west pole, in the trees west of the road"
+US_SPACING, US_SOUTH = 77.0, 10  # from the review: poles 78 m and 147 m south of the windsock pole; ten poles south
+# (title, lat, lon, kind): kind is plain, tx (transformer), rack or rack_end (Canadian, the last one guyed)
+US_POLES = ([(WEST, SOUTH, ROAD_C - 40 / LON, "plain"), (TX, SOUTH, gf.WF + 33 / LON, "tx"),
+             (SOCK, SOUTH, gf.WF + 137 / LON, "plain")]
+            + [(f"US line pole {k} south of the windsock", SOUTH - US_SPACING * k / LAT, gf.WF + 137 / LON, "plain")
+               for k in range(1, US_SOUTH + 1)])
+# The CBSA model reaches 43.6 m east of the west fence (its north garage; the radio mast is at about 31 m), so the line
+# runs 48 m east, behind all of it. North of the border, in metres: north end past the north garage (175.7), dead end
+# 7 m north of the pocket fence with the guy anchored 1 m inside it.
+CA_EAST = gf.WF + 48 / LON
+CA_POLES = [("Canadian line north end, past the CBSA garages", gf.BORDER + 185 / LAT, CA_EAST, "rack"),
+            ("Canadian line pole behind the CBSA office", gf.BORDER + 135 / LAT, CA_EAST, "rack"),
+            ("Canadian line pole behind the CBSA sheds", gf.BORDER + 88 / LAT, CA_EAST, "rack"),
+            ("Canadian line dead-end pole north of the pocket (guyed south)", gf.POCKET_N + 7 / LAT, CA_EAST, "rack_end")]
+GUY = 6.0  # m from the dead-end pole to its anchor
 FLARE = 60000.0  # cd, the flare-only light on each lamp (the downward light alone shows no flare from the side)
 SINK = 4.0  # m of lamp pole below ground (covers the sim terrain differing from the LiDAR)
 GROUND = Path(__file__).resolve().parent / "ground.json"
-BALL_SPANS = {("transformer pole, US parking", "end pole by the windsock")}
+# balls at these fractions along a span: one over the middle of the road, three between the transformer and windsock poles
+BALL_SPANS = {(WEST, TX): [(ROAD_C - US_POLES[0][2]) / (US_POLES[1][2] - US_POLES[0][2])], (TX, SOCK): [0.25, 0.5, 0.75]}
 BEGIN = "<!-- BEGIN power line and pole lights (generated by airport-h28/tools/gen_powerline.py) -->"
 END = "<!-- END power line and pole lights -->"
 
@@ -65,16 +87,18 @@ def ball(m, cx, cy, cz, r=0.3, n=8):
             m.poly([p(r0, y0, a1), p(r1, y1, a1), p(r1, y1, a0), p(r0, y0, a0)], gp.ORANGE)
 
 
-def span(length, balls):
-    """Two wires from (+-ARM, HEIGHT, 0) to (+-ARM, HEIGHT, length) along +Z, sagging about 1 m per 100 m."""
+def span(length, balls=(), dh=0.0, wires=((-ARM, HEIGHT), (ARM, HEIGHT))):
+    """Wires (x, height) from z = 0 to z = length along +Z, sagging about 1 m per 100 m; the far end is dh higher (the
+    ground there, from the LiDAR). Balls hang on the first wire with x > 0, at the given fractions along the span."""
     m = gp.Mesh()
     sag = 0.6 + 0.004 * length
     n = 12
-    for x in (-ARM, ARM):
-        tube(m, x, [(HEIGHT - 4 * sag * (t / n) * (1 - t / n), length * t / n) for t in range(n + 1)])
-    if balls:
-        for t in (0.25, 0.5, 0.75):
-            ball(m, ARM, HEIGHT - 4 * sag * t * (1 - t) - 0.3, length * t)
+    y = lambda h, t: h + dh * t - 4 * sag * t * (1 - t)  # noqa: E731
+    for x, h in wires:
+        tube(m, x, [(y(h, t / n), length * t / n) for t in range(n + 1)])
+    bx, bh = next(w for w in wires if w[0] > 0) if balls else (0, 0)
+    for t in balls:
+        ball(m, bx, y(bh, t) - 0.3, length * t)
     return m
 
 
@@ -100,6 +124,20 @@ def pole(transformer):
     return m
 
 
+def rack_pole(guyed):
+    """Short wooden pole with four spool insulators stacked on its +X side (a low-voltage rack); the dead-end pole has a
+    guy wire along +Z to a ground anchor GUY metres away."""
+    m = gp.Mesh()
+    octo(m, 0.14, 0.11, 0.0, 9.2, gp.BROWN)
+    m.box(0.11, 0.16, RACK[-1] - 0.3, RACK[0] + 0.3, -0.05, 0.05, gp.STEEL)  # rack bracket
+    for h in RACK:
+        m.box(0.16, 0.3, h - 0.07, h + 0.07, -0.07, 0.07, gp.GREY)
+    if guyed:
+        tube(m, 0.0, [(RACK[0] + 0.4, 0.12), (0.25, GUY)], 0.015)
+        m.box(-0.05, 0.05, 0.0, 0.3, GUY - 0.05, GUY + 0.05, gp.STEEL)  # anchor rod
+    return m
+
+
 def lamp(height, arm, intensity, cone, beacon=False):
     """Steel pole with an arm along +Z, a lamp head with a glowing lens and a night-only street light under it."""
     m = gp.Mesh()
@@ -116,12 +154,20 @@ def lamp(height, arm, intensity, cone, beacon=False):
     return m
 
 
-# Highway lights (2025 Street View: tall arm lights along AB-62/MT-213 at both ports, and one on the east shoulder at the
-# border by the runway's west end). Arms point west over the road.
-BEACON_LIGHT = 48.99853  # the road light on the runway's line (centreline 48.99868) carries the red beacon
-ROAD_LIGHTS = [("road light at the border, by the runway's west end", 48.99853),
-               ("road light, CBSA approach", 48.99905), ("road light, CBSA lane", 48.99985),
-               ("road light, US side", 48.99795), ("road light, US side", 48.99740), ("road light, CBP approach", 48.99690)]
+# Highway lights (2025 Street View: tall arm lights along AB-62/MT-213 at both ports). At the border: one on the east
+# shoulder just north of it, by the runway's west end, carrying the red beacon, and two on the west shoulder either side
+# of it (Street View g, h; CLUI 2014). (title, lat, lon, arm heading)
+EAST_SH, WEST_SH = ROAD + 1 / LON, ROAD_C - 8 / LON
+BEACON_LIGHT = "road light at the border, east shoulder, by the runway's west end"
+L_EAST = (BEACON_LIGHT, gf.BORDER + 6 / LAT, EAST_SH, 270.0)
+L_WEST_N = ("road light at the border, west shoulder, north", gf.BORDER + 10 / LAT, WEST_SH, 90.0)
+L_WEST_S = ("road light at the border, west shoulder, south", gf.BORDER - 14 / LAT, WEST_SH, 90.0)
+ROAD_LIGHTS = [L_EAST, L_WEST_N, L_WEST_S,
+               ("road light, CBSA approach", 48.99905, EAST_SH, 270.0), ("road light, CBSA lane", 48.99985, EAST_SH, 270.0),
+               ("road light, US side", 48.99795, EAST_SH, 270.0), ("road light, US side", 48.99740, EAST_SH, 270.0),
+               ("road light, CBP approach", 48.99690, EAST_SH, 270.0)]
+# single wires (from, to) between a pole or light and the next, all at DROP
+FEEDS = [(L_EAST, (TX,) + US_POLES[1][1:3]), (L_WEST_S, L_WEST_N), ((WEST,) + US_POLES[0][1:3], L_WEST_S)]
 
 
 def ground(lat, lon, cache={}):
@@ -131,8 +177,15 @@ def ground(lat, lon, cache={}):
     key = f"{lat:.6f},{lon:.6f}"
     if key not in cache:
         url = f"https://epqs.nationalmap.gov/v1/json?x={lon:.6f}&y={lat:.6f}&units=Meters&wkid=4326"
-        with urllib.request.urlopen(url, timeout=30) as r:
-            cache[key] = round(float(json.load(r)["value"]), 2)
+        for attempt in range(5):  # the service often times out (HTTP 504); try again
+            try:
+                with urllib.request.urlopen(url, timeout=30) as r:
+                    cache[key] = round(float(json.load(r)["value"]), 2)
+                break
+            except OSError:
+                if attempt == 4:
+                    raise
+                time.sleep(3)
         GROUND.write_text(json.dumps(cache, indent=1, sort_keys=True) + "\n", encoding="utf-8")
     return cache[key]
 
@@ -164,31 +217,40 @@ def bearing(a, b):
     return math.hypot(de, dn), math.degrees(math.atan2(de, dn)) % 360
 
 
-def line(poles, ml, g_pole, g_tx, tag):
+def line(poles, ml, models, tag, wires):
     out = []
     for k, (a, b) in enumerate(zip(poles, poles[1:])):
         length, hd = bearing(a, b)
         name = f"h28_wire_{tag}{k + 1}"
-        g = span(length, (a[0], b[0]) in BALL_SPANS).save(ml / name, name)
+        dh = ground(b[1], b[2]) - ground(a[1], a[2])
+        g = span(length, BALL_SPANS.get((a[0], b[0]), ()), dh, wires).save(ml / name, name)
         out.append(gf.obj(f"wires, {a[0]} to {b[0]} ({length:.0f} m)", g, a[1], a[2], hd))
     for k, p in enumerate(poles):
         hd = bearing(poles[max(k - 1, 0)], poles[min(k + 1, len(poles) - 1)])[1]
-        out.append(gf.obj(p[0], g_tx if p[3] else g_pole, p[1], p[2], hd))
+        out.append(gf.obj(p[0], models[p[3]], p[1], p[2], hd))
     return out
 
 
 def main():
     ml = gp.MODELLIB
-    for old in ("h28_wire_balls", "h28_wire_plain", "h28_pole_light", "h28_road_light"):  # earlier spans and lone lamps
-        for f in (ml / old).glob("*"):
+    olds = [ml / o for o in ("h28_wire_balls", "h28_wire_plain", "h28_pole_light", "h28_road_light")]  # earlier models
+    for old in olds + sorted(ml.glob("h28_wire_*")):  # and every span, since their count changes with the routing
+        for f in old.glob("*"):
             f.unlink()
-        if (ml / old).exists():
-            (ml / old).rmdir()
-    g_pole = pole(False).save(ml / "h28_pole", "h28_pole")
-    g_tx = pole(True).save(ml / "h28_pole_transformer", "h28_pole_transformer")
+        if old.exists():
+            old.rmdir()
+    models = {"plain": pole(False).save(ml / "h28_pole", "h28_pole"),
+              "tx": pole(True).save(ml / "h28_pole_transformer", "h28_pole_transformer"),
+              "rack": rack_pole(False).save(ml / "h28_pole_rack", "h28_pole_rack"),
+              "rack_end": rack_pole(True).save(ml / "h28_pole_rack_guyed", "h28_pole_rack_guyed")}
     out = [f"\t{BEGIN}\n"]
-    out += line(SOUTH_POLES, ml, g_pole, g_tx, "s")
-    out += line(NORTH_POLES, ml, g_pole, g_tx, "n")
+    out += line(US_POLES, ml, models, "us", ((-ARM, HEIGHT), (ARM, HEIGHT)))
+    out += line(CA_POLES, ml, models, "ca", tuple((0.3, h) for h in RACK))
+    for k, (a, b) in enumerate(FEEDS):
+        length, hd = bearing(a, b)
+        name = f"h28_wire_feed{k + 1}"
+        g = span(length, (), ground(b[1], b[2]) - ground(a[1], a[2]), ((0.0, DROP),)).save(ml / name, name)
+        out.append(gf.obj(f"single wire, {a[0]} to {b[0]} ({length:.0f} m)", g, a[1], a[2], hd))
     # lamps: (lat, lon, heading, road light?). Pole lights: four by each port's inspection lane (CBP: under its canopy east of the building; CBSA: either side of
     # the drive-through bay, 8 m out from the north and south faces), arms pointing in over the lane
     lamps = []
@@ -203,7 +265,7 @@ def main():
             continue
         for sx, sz, hd in ((sxs[0], -dz, 0), (sxs[1], -dz, 0), (sxs[0], dz, 180), (sxs[1], dz, 180)):
             lamps.append((lat + sz / LAT, cx + sx / LON, hd, False))
-    lamps += [(lat, ROAD + 1 / LON, 270.0, True) for _title, lat in ROAD_LIGHTS]
+    lamps += [(lat, lon, hd, title) for title, lat, lon, hd in ROAD_LIGHTS]
     pole_lamp, road_lamp = lamp(8.0, 1.0, 8000, 165.0), lamp(10.0, 2.5, 12000, 165.0)
     beacon_lamp = lamp(10.0, 2.5, 12000, 165.0, True)
     for tag, title, key, north in (("ca", "CBSA plaza and road lights", "cbsa_main", True),
@@ -215,7 +277,7 @@ def main():
             if (lat > gf.BORDER) == north:
                 dy = ground(lat, lon) - oy
                 print(f"  {tag} lamp {lat:.5f},{lon:.5f}: {dy:+.2f} m")
-                merge(m, (beacon_lamp if abs(lat - BEACON_LIGHT) < 1e-7 else road_lamp) if road else pole_lamp, (lon - olon) * LON, (lat - olat) * LAT, hd, dy)
+                merge(m, (beacon_lamp if road == BEACON_LIGHT else road_lamp) if road else pole_lamp, (lon - olon) * LON, (lat - olat) * LAT, hd, dy)
         name = f"h28_lights_{tag}"
         out.append(gf.obj(f"{title} ({sum(1 for l in m.lights if not l[5] and len(l) == 6)} lamps, one model)", m.save(ml / name, name), olat, olon))
     out.append(f"\t{END}\n")

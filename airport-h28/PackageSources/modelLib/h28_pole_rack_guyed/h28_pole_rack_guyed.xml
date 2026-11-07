@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ModelInfo guid="{2739EBCE-DA7B-5F6D-A798-6B64057E98D1}" version="1.1">
+	<LODS>
+		<LOD minSize="0" ModelFile="h28_pole_rack_guyed.gltf"/>
+	</LODS>
+</ModelInfo>

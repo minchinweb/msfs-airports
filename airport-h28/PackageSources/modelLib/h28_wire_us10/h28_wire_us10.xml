@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ModelInfo guid="{CDBF90A1-517E-5883-BD5B-A18415B2EC97}" version="1.1">
+	<LODS>
+		<LOD minSize="0" ModelFile="h28_wire_us10.gltf"/>
+	</LODS>
+</ModelInfo>

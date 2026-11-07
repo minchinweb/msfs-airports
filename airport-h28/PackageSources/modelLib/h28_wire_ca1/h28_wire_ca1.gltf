@@ -1,0 +1,138 @@
+{
+ "asset": {
+  "version": "2.0",
+  "generator": "airport-h28/tools/gen_port.py",
+  "extensions": {
+   "ASOBO_normal_map_convention": {
+    "tangent_space_convention": "DirectX"
+   }
+  }
+ },
+ "extensionsUsed": [
+  "ASOBO_normal_map_convention"
+ ],
+ "scene": 0,
+ "scenes": [
+  {
+   "nodes": [
+    0
+   ]
+  }
+ ],
+ "nodes": [
+  {
+   "mesh": 0,
+   "name": "h28_wire_ca1"
+  }
+ ],
+ "meshes": [
+  {
+   "name": "h28_wire_ca1",
+   "primitives": [
+    {
+     "attributes": {
+      "POSITION": 0,
+      "NORMAL": 1,
+      "TEXCOORD_0": 2
+     },
+     "indices": 3,
+     "mode": 4,
+     "material": 0
+    }
+   ]
+  }
+ ],
+ "materials": [
+  {
+   "name": "h28_flat",
+   "pbrMetallicRoughness": {
+    "baseColorTexture": {
+     "index": 0
+    },
+    "metallicFactor": 0.0,
+    "roughnessFactor": 0.9
+   }
+  }
+ ],
+ "textures": [
+  {
+   "sampler": 0,
+   "source": 0
+  }
+ ],
+ "samplers": [
+  {
+   "magFilter": 9728,
+   "minFilter": 9728
+  }
+ ],
+ "images": [
+  {
+   "uri": "h28_port_palette.png"
+  }
+ ],
+ "accessors": [
+  {
+   "bufferView": 0,
+   "componentType": 5126,
+   "count": 768,
+   "type": "VEC3",
+   "min": [
+    -0.32,
+    6.005000000000342,
+    0.0
+   ],
+   "max": [
+    -0.27999999999999997,
+    8.42,
+    49.99999999993179
+   ]
+  },
+  {
+   "bufferView": 1,
+   "componentType": 5126,
+   "count": 768,
+   "type": "VEC3"
+  },
+  {
+   "bufferView": 2,
+   "componentType": 5126,
+   "count": 768,
+   "type": "VEC2"
+  },
+  {
+   "bufferView": 3,
+   "componentType": 5123,
+   "count": 1152,
+   "type": "SCALAR"
+  }
+ ],
+ "bufferViews": [
+  {
+   "buffer": 0,
+   "byteOffset": 0,
+   "byteLength": 9216
+  },
+  {
+   "buffer": 0,
+   "byteOffset": 9216,
+   "byteLength": 9216
+  },
+  {
+   "buffer": 0,
+   "byteOffset": 18432,
+   "byteLength": 6144
+  },
+  {
+   "buffer": 0,
+   "byteOffset": 24576,
+   "byteLength": 2304
+  }
+ ],
+ "buffers": [
+  {
+   "uri": "h28_wire_ca1.bin",
+   "byteLength": 26880
+  }
+ ]
+}

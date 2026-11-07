@@ -125,7 +125,31 @@ Built OK (sim closed, `_RPTErrors.xml` empty); not yet seen in the sim.
 
 `airport-h28/tools/gen_border.py` (own marker block in H28.xml, own texture `texture/h28_border.png`; runs in any order). Sources and measurements are in its docstring.
 - **IBC monuments 308A and 308B** at the IBC's NAD83 coordinates, moved 3 m west (`ROAD_SHIFT`): their midpoint is 3 m east of OSM's road centre, which the sim aerial follows, so unshifted 308A would sit on the sim road's west edge. 308A (west verge): cream exposed aggregate, 0.6 m slab. 308B (east verge, about 10 m west of the strip fence): ochre paint, lettering on a pale strip, 0.9 m slab. Shaft 0.30 m square at the base, about 1.5 m tall overall (not measured), "INTERNATIONAL BOUNDARY" up the east and west faces, the number on the slab.
-- **Signs**, just inside the west fence, facing the strip: the CBP clearance sign (60 x 30 in blue panel on two 4 x 4 posts) 0.8 m inside the fence and 1.5 m south of the border, and the Whetstone board (lettered both sides, galvanized pipe frame, orange ball under it) 2 m inside and 4.5 m south. Positions are estimates from the 2014 CLUI and 2026 Wikimedia photos. The CBP sign isn't in the 2026 photo and may have been removed since 2014.
+- **Signs**, just inside the west fence, facing the strip: the CBP clearance sign (60 x 30 in blue panel on two 4 x 4 posts) 0.8 m inside the fence and 1.5 m south of the border, and the Whetstone board (lettered both sides, galvanized pipe frame, orange ball under it) 2 m inside and 4.5 m south. Positions are estimates from the 2014 CLUI and 2026 Wikimedia photos. The CBP sign isn't in the 2026 photo, but Sep 2025 Street View (`streetview-2025-09-d`, `-e`) still shows both boards from behind.
 - Built OK (sim closed, `_RPTErrors.xml` empty, `H28_BORDER.PNG.KTX2` written). Not yet seen in the sim. To check: the text reads the right way round (same convention as the Alberta sign, also unchecked); the monuments sit on grass, not on the road; the signs clear the fence.
 - **Cone pair**: two of the strip's white cones (`h28_cone_white`, scale 2) 3.3 m inside the west fence, 0.9 m and 2.5 m south of the border, east of the signs (from the 2014 and 2026 photos). Lone cones may be culled at a distance, as the strip's were; that's fine here.
 - Not modelled: the "CMA #25 START" sign.
+- **More west-end cones** (`gen_field.py`, `WEST_CONES`; Sep 2025 Street View, `docs/h28/reference/streetview-2025-09-*`), each `h28_cone_white` at scale 2: a pair 32 m east of the west fence just north of the transformer pole (on the south edge line and 4 m south of it), one in the US parking 21 m east of the fence and 13 m south of the border, and one in the Canadian pocket 3 m inside the fence, 18 m north of the centreline. Distances come from the cones' apparent sizes, so they may be a few metres off. Check them in the sim against photos c, d and e.
+
+## Power lines re-routed (2026-11-07)
+Supersedes the power-line routing and border road-light notes above. Routing comes from the user's review of the Esri frame (circled poles and arrows), the Sep 2025 Street View (`streetview-2025-09-a`, `-h`, `-j`), the CLUI 2014 photo (`clui-2014-08-20-02-06-58`) and the mindtrip aerial (`mindtrip-01`). Map: `docs/h28/powerline-routing-2025.png`, drawn by `python -I docs/h28/powerline_map.py`, which reads the positions from `gen_powerline.py`, so the map always shows what is modelled. The user's circles are drawn over the modelled poles. `docs/h28/powerline-routing.png` is the older map and is superseded.
+- **US line** (2 wires on cross-arms, `US_POLES`):
+  - starts at a pole in the trees 40 m west of the road centre, 70 ft south of the centreline (seen in Street View h; its distance from the road is a guess);
+  - crosses the road (one ball over the middle) to the transformer pole;
+  - runs east (three balls) to a pole by the windsock, 137 m east of the west fence;
+  - then runs due south for 10 poles, 77 m apart (770 m). The first two match the user's circles.
+  - The old pole on the east shoulder is gone.
+- **Canadian line** (4 wires stacked on one side of 9 m poles, `CA_POLES`, models `h28_pole_rack` and `h28_pole_rack_guyed`):
+  - It runs 48 m east of the west fence. That puts it behind every CBSA model: the north garage reaches 43.6 m east and the mast about 31 m. The user's circle was at 33 m, but there it would have run through the annex and the mast.
+  - It runs from a pole 185 m north of the border (past the garages; it does not continue up the highway, Street View j) to a dead-end pole 7 m north of the pocket fence, guyed 6 m south to an anchor 1 m inside that fence.
+  - Its feed isn't seen, possibly underground.
+- **Border road lights** (`ROAD_LIGHTS`):
+  - The beacon light moved to the east shoulder, 6 m north of the border. A single wire runs from it to the transformer pole.
+  - Two new lights stand on the west shoulder, 10 m north and 14 m south of the border, arms east over the road, joined by a single wire. A drop from the US line's west pole feeds the south one; that drop is assumed.
+  - These feed wires (`FEEDS`) are at 8.6 m.
+- **Spans follow the ground:** each span's far end is raised by the LiDAR height difference between its poles (`ground()`, cached in `ground.json`). The USGS service often returns 504, so `ground()` now retries.
+- Not yet seen in the sim. To check:
+  - the rack wires meet the insulators;
+  - the guy wire meets its pole;
+  - the corner pole by the windsock (its cross-arm is on the bisector);
+  - the spans south of the parking against the sim terrain.
