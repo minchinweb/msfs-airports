@@ -1,0 +1,140 @@
+{
+ "asset": {
+  "version": "2.0",
+  "generator": "airport-h28/tools/gen_sign.py",
+  "extensions": {
+   "ASOBO_normal_map_convention": {
+    "tangent_space_convention": "DirectX"
+   }
+  }
+ },
+ "extensionsUsed": [
+  "ASOBO_normal_map_convention"
+ ],
+ "scene": 0,
+ "scenes": [
+  {
+   "nodes": [
+    0
+   ]
+  }
+ ],
+ "nodes": [
+  {
+   "mesh": 0,
+   "name": "h28_sign_alberta"
+  }
+ ],
+ "meshes": [
+  {
+   "name": "h28_sign_alberta",
+   "primitives": [
+    {
+     "attributes": {
+      "POSITION": 0,
+      "NORMAL": 1,
+      "TEXCOORD_0": 2
+     },
+     "indices": 3,
+     "mode": 4,
+     "material": 0
+    }
+   ]
+  }
+ ],
+ "materials": [
+  {
+   "name": "h28_sign",
+   "pbrMetallicRoughness": {
+    "baseColorTexture": {
+     "index": 0
+    },
+    "metallicFactor": 0.0,
+    "roughnessFactor": 0.85
+   }
+  }
+ ],
+ "textures": [
+  {
+   "sampler": 0,
+   "source": 0
+  }
+ ],
+ "samplers": [
+  {
+   "magFilter": 9729,
+   "minFilter": 9987,
+   "wrapS": 33071,
+   "wrapT": 33071
+  }
+ ],
+ "images": [
+  {
+   "uri": "h28_sign_alberta.png"
+  }
+ ],
+ "accessors": [
+  {
+   "bufferView": 0,
+   "componentType": 5126,
+   "count": 280,
+   "type": "VEC3",
+   "min": [
+    -3.92,
+    -0.3,
+    -3.15
+   ],
+   "max": [
+    3.9,
+    4.364772532188842,
+    1.55
+   ]
+  },
+  {
+   "bufferView": 1,
+   "componentType": 5126,
+   "count": 280,
+   "type": "VEC3"
+  },
+  {
+   "bufferView": 2,
+   "componentType": 5126,
+   "count": 280,
+   "type": "VEC2"
+  },
+  {
+   "bufferView": 3,
+   "componentType": 5123,
+   "count": 420,
+   "type": "SCALAR"
+  }
+ ],
+ "bufferViews": [
+  {
+   "buffer": 0,
+   "byteOffset": 0,
+   "byteLength": 3360
+  },
+  {
+   "buffer": 0,
+   "byteOffset": 3360,
+   "byteLength": 3360
+  },
+  {
+   "buffer": 0,
+   "byteOffset": 6720,
+   "byteLength": 2240
+  },
+  {
+   "buffer": 0,
+   "byteOffset": 8960,
+   "byteLength": 840
+  }
+ ],
+ "buffers": [
+  {
+   "uri": "h28_sign_alberta.bin",
+   "byteLength": 9800
+  }
+ ]
+}

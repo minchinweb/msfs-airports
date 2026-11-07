@@ -112,3 +112,11 @@ Built OK (sim closed, `_RPTErrors.xml` empty); not yet seen in the sim.
 
 ## Flashing red beacons (2026-10-31)
 - `gen_port.BEACON`: red, all-round, flare-only, night-only, 30 flashes a minute, 60,000 cd (`flash_frequency` is per minute, `flash_duration` in seconds; `Mesh.lights` entries take an optional 7th item, a dict of `ASOBO_street_light` overrides). One sits on a post above the CBSA radio mast; one tops the border road light at the runway's west end (lat 48.99853, in `h28_lights_us`). Regenerated with `gen_port.py` then `gen_powerline.py`. Not yet built or checked in the sim.
+
+## Welcome to Alberta sign (2026-11-07)
+
+`airport-h28/tools/gen_sign.py` (own marker block in H28.xml; independent of the palette, so it runs in any order). Reworked the same day to match `reference/fbgroup-02-alberta-welcome-sign.jpg`:
+- The model has its own 2048 x 2048 texture (`texture/h28_sign_alberta.png`, linear filtering with mipmaps): the board face with real lettering (Arial Bold, each line stretched to its box in the photo), the wild rose decal (pink flower, bud, teal leaves, black outline, white sticker edge), a lighter frame round a recessed rough-sawn panel, plus wood, gravel, concrete, soil and end-grain swatches. The back is plain wood.
+- Geometry is measured off the photo, with the board taken as 16 ft (4.88 m) wide: board 1.42-3.90 m up, tall 12 x 12 in posts (4.36 m), shorter outer posts (3.44 m left, 2.89 m right), legs under the board ends, a gravel bed with timber edging, and a cream planter in front of the right posts.
+- **Position from Esri imagery** (`fetch_esri.py`, new `alberta-sign.png` clip): the gravel pad shows at the north edge of the house yard north of the CBSA sheds, 22.4 m east of the road centre, square to the road. Placed at 49.00066, -112.78809, facing south. The old estimate was 49.00150, about 95 m too far north.
+- Built OK (sim closed, `_RPTErrors.xml` empty; texture compiled to KTX2). Not yet seen in the sim. To check: the lettering reads the right way round; the sign isn't culled at a distance, since a lone 7 m model may vanish the way the lone cones did. If it is culled, merge it into a larger model. Also check whether the CBSA sheds hide it from the US parking, about 250 m south.
