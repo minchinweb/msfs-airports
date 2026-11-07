@@ -7,3 +7,23 @@
 - `earth-2012-west-end-wide.jpg`: Google Earth 2012, 80 m scale bar (about 4.1 px/m). Port-of-entry buildings north-west across the road. First white cones about 75-130 m east of the fence; red-white cones (pairs north and south of the strip) about 200 m and 300 m east of the fence. The red-white cones mark the effective runway end (displaced threshold?), with white cones marking the rest.
 
 - `afd-whetstone-h28-page-136.md`: transcription of the Northwest U.S. Airport/Facility Directory page 136 entry for Whetstone Intl (H28), effective 29 Oct 2026 (https://xcfind.com/static/afd/NW_136_29OCT2026.pdf). Gives RWY 07-25 as 4440 x 65 ft turf, CTAF 122.8, thresholds double cones, edge white cones every 200 ft, red balls on the P-line.
+
+## Border crossing photos (added 2026-11-07)
+
+Third-party photos for the port of entry and the road. Copyright stays with the original photographers and sources; they are here for modelling reference only, not for redistribution. Links are to the pages they came from.
+
+- `fbgroup-01-canada-welcome-sign.jpg`: Canadian "Welcome to Canada" sign with the Government of Canada wordmark, on grass, with a wooden post and a green-roofed building behind. Facebook group post (https://www.facebook.com/groups/667926326628373/posts/6489664514454496/), 2048x1536.
+- `fbgroup-02-alberta-welcome-sign.jpg`: "Welcome to Alberta, Wild Rose Country" wooden sign on a concrete base, with a row of yellow bollards. Same Facebook post, 2048x1536.
+- `fbgroup-03-rv-at-border.jpg`: an RV in the lane at the Canadian side, with the lattice mast, a grey shed, orange cones along the lane and a grey building ahead. Same Facebook post, 2048x1142.
+- `landingaday-runway-on-border.jpg`: aerial-style view of the strip with the border line across it, a light aircraft on the grass by the border obelisk. https://landingaday.wordpress.com/2013/01/03/del-bonita-montana/runway-on-border/ (tag page: https://landingaday.wordpress.com/tag/del-bonita-alberta/), 1024x768.
+- `travelingwards-a-crossing-border.jpg`, `travelingwards-b-crossing-border.jpg`: the Canadian port buildings from the road: white CBSA building with a canopy and sign, a red-gabled building beside it, and a flagpole. https://travelingwards.wordpress.com/2012/07/06/crossing-border/ (2012 Kodak, 1914x1406 and 2088x1266).
+- `travelingwards-c-crossing-border.jpg`: the "Del Bonita" canopy building with a booth and a red-and-white stop sign. Same post, 2182x1457.
+- `travelingwards-e-entering-alberta.jpg`: "Welcome to Alberta" sign on the road, with the port buildings at left. Same post, 2182x1528.
+- `tworvgypsies-2016-06-01-15-alberta.jpg`, `-16-`, `-19-`, `-24-`, `-26-` (`tworvgypsies-2016-06-01-*-alberta.jpg`): 2016 road shots entering Alberta. Views of the highway, the Alberta sign, and the port's approach and cones. Source: https://www.tworvgypsies.us/!USA-trip9-2016/2016-06-01-Canada/21b-Alberta-travel-roads.html, 600x399 each.
+- `clui-2014-08-20-02-05-02.jpg`, `clui-2014-08-20-02-06-58.jpg`, `clui-2014-08-20-02-12-04.jpg`: Del Bonita border crossing, 2014 (CLUI Land Use Database). Site page: https://clui.org/ludb/site/del-bonita-border-crossing, 2000x1335 JPEGs from the CLUI S3 bucket.
+- `tiktok-turbanbiker-7541934162551278856.mp4`: 59 s, 720x1280 handheld Insta360 video of a motorcycle rider crossing at Del Bonita. Shows the US port (Del Bonita canopy building, CBP "Stop, wait here for an officer" sign, red-and-white cones), the Canadian buildings, the lattice mast, the canopy and lanes, and the parking lot behind the port. Source: https://www.tiktok.com/@turbanbiker/video/7541934162551278856.
+
+- `mindtrip-01-aerial-road-and-port.jpg`: oblique aerial from a light aircraft: the road running north-south toward the port, the cluster of port buildings and sheds on the north side of the border, fields either side, a dark roadside post and fence line. Source: https://mindtrip.ai/attraction/montana/del-bonita-border-crossing/at-Ewy0R8gK, 1250x1600 (WebP converted to JPEG).
+- `mindtrip-02-del-bonita-canopy-building.jpg`: the "Del Bonita" canopy building on the Canadian side: the 3.5 m clearance sign over the lane, the red-gabled office beside it, the Canadian flag and the lattice mast. Same page, 1600x887.
+- `mindtrip-03-canadian-buildings-snow.jpg`: winter view of the red-gabled office, the stone-and-plaque monument on a concrete pad with chain posts, and the grey canopy building with a white SUV at right. Lattice mast at left. Same page, 1600x1264.
+- `mindtrip-04-rcmp-cairn-1974.jpg`: the RCMP and Alberta centenary cairn ("Erected 1974 in honour of the R.C.M.P. and 100 years of peaceful..."), a stone-faced block with a concrete base and chain posts, next to a brown outbuilding. Same page, 1200x1600.
