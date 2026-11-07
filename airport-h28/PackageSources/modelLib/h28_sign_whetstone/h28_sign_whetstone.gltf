@@ -1,0 +1,140 @@
+{
+ "asset": {
+  "version": "2.0",
+  "generator": "airport-h28/tools/gen_border.py",
+  "extensions": {
+   "ASOBO_normal_map_convention": {
+    "tangent_space_convention": "DirectX"
+   }
+  }
+ },
+ "extensionsUsed": [
+  "ASOBO_normal_map_convention"
+ ],
+ "scene": 0,
+ "scenes": [
+  {
+   "nodes": [
+    0
+   ]
+  }
+ ],
+ "nodes": [
+  {
+   "mesh": 0,
+   "name": "h28_sign_whetstone"
+  }
+ ],
+ "meshes": [
+  {
+   "name": "h28_sign_whetstone",
+   "primitives": [
+    {
+     "attributes": {
+      "POSITION": 0,
+      "NORMAL": 1,
+      "TEXCOORD_0": 2
+     },
+     "indices": 3,
+     "mode": 4,
+     "material": 0
+    }
+   ]
+  }
+ ],
+ "materials": [
+  {
+   "name": "h28_border",
+   "pbrMetallicRoughness": {
+    "baseColorTexture": {
+     "index": 0
+    },
+    "metallicFactor": 0.0,
+    "roughnessFactor": 0.85
+   }
+  }
+ ],
+ "textures": [
+  {
+   "sampler": 0,
+   "source": 0
+  }
+ ],
+ "samplers": [
+  {
+   "magFilter": 9729,
+   "minFilter": 9987,
+   "wrapS": 33071,
+   "wrapT": 33071
+  }
+ ],
+ "images": [
+  {
+   "uri": "h28_border.png"
+  }
+ ],
+ "accessors": [
+  {
+   "bufferView": 0,
+   "componentType": 5126,
+   "count": 420,
+   "type": "VEC3",
+   "min": [
+    -0.1,
+    -0.3,
+    -0.79
+   ],
+   "max": [
+    0.30000000000000004,
+    2.085,
+    0.79
+   ]
+  },
+  {
+   "bufferView": 1,
+   "componentType": 5126,
+   "count": 420,
+   "type": "VEC3"
+  },
+  {
+   "bufferView": 2,
+   "componentType": 5126,
+   "count": 420,
+   "type": "VEC2"
+  },
+  {
+   "bufferView": 3,
+   "componentType": 5123,
+   "count": 600,
+   "type": "SCALAR"
+  }
+ ],
+ "bufferViews": [
+  {
+   "buffer": 0,
+   "byteOffset": 0,
+   "byteLength": 5040
+  },
+  {
+   "buffer": 0,
+   "byteOffset": 5040,
+   "byteLength": 5040
+  },
+  {
+   "buffer": 0,
+   "byteOffset": 10080,
+   "byteLength": 3360
+  },
+  {
+   "buffer": 0,
+   "byteOffset": 13440,
+   "byteLength": 1200
+  }
+ ],
+ "buffers": [
+  {
+   "uri": "h28_sign_whetstone.bin",
+   "byteLength": 14640
+  }
+ ]
+}

@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ModelInfo guid="{BE2E29EA-3102-516B-9EFC-F77F5F89E7C4}" version="1.1">
+	<LODS>
+		<LOD minSize="0" ModelFile="h28_sign_whetstone.gltf"/>
+	</LODS>
+</ModelInfo>

@@ -1,0 +1,140 @@
+{
+ "asset": {
+  "version": "2.0",
+  "generator": "airport-h28/tools/gen_border.py",
+  "extensions": {
+   "ASOBO_normal_map_convention": {
+    "tangent_space_convention": "DirectX"
+   }
+  }
+ },
+ "extensionsUsed": [
+  "ASOBO_normal_map_convention"
+ ],
+ "scene": 0,
+ "scenes": [
+  {
+   "nodes": [
+    0
+   ]
+  }
+ ],
+ "nodes": [
+  {
+   "mesh": 0,
+   "name": "h28_mon_308b"
+  }
+ ],
+ "meshes": [
+  {
+   "name": "h28_mon_308b",
+   "primitives": [
+    {
+     "attributes": {
+      "POSITION": 0,
+      "NORMAL": 1,
+      "TEXCOORD_0": 2
+     },
+     "indices": 3,
+     "mode": 4,
+     "material": 0
+    }
+   ]
+  }
+ ],
+ "materials": [
+  {
+   "name": "h28_border",
+   "pbrMetallicRoughness": {
+    "baseColorTexture": {
+     "index": 0
+    },
+    "metallicFactor": 0.0,
+    "roughnessFactor": 0.85
+   }
+  }
+ ],
+ "textures": [
+  {
+   "sampler": 0,
+   "source": 0
+  }
+ ],
+ "samplers": [
+  {
+   "magFilter": 9729,
+   "minFilter": 9987,
+   "wrapS": 33071,
+   "wrapT": 33071
+  }
+ ],
+ "images": [
+  {
+   "uri": "h28_border.png"
+  }
+ ],
+ "accessors": [
+  {
+   "bufferView": 0,
+   "componentType": 5126,
+   "count": 48,
+   "type": "VEC3",
+   "min": [
+    -0.45,
+    -0.2,
+    -0.45
+   ],
+   "max": [
+    0.45,
+    1.4800000000000002,
+    0.45
+   ]
+  },
+  {
+   "bufferView": 1,
+   "componentType": 5126,
+   "count": 48,
+   "type": "VEC3"
+  },
+  {
+   "bufferView": 2,
+   "componentType": 5126,
+   "count": 48,
+   "type": "VEC2"
+  },
+  {
+   "bufferView": 3,
+   "componentType": 5123,
+   "count": 66,
+   "type": "SCALAR"
+  }
+ ],
+ "bufferViews": [
+  {
+   "buffer": 0,
+   "byteOffset": 0,
+   "byteLength": 576
+  },
+  {
+   "buffer": 0,
+   "byteOffset": 576,
+   "byteLength": 576
+  },
+  {
+   "buffer": 0,
+   "byteOffset": 1152,
+   "byteLength": 384
+  },
+  {
+   "buffer": 0,
+   "byteOffset": 1536,
+   "byteLength": 132
+  }
+ ],
+ "buffers": [
+  {
+   "uri": "h28_mon_308b.bin",
+   "byteLength": 1668
+  }
+ ]
+}
