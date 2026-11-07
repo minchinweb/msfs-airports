@@ -6,6 +6,9 @@ _build/*
 docs/edmonton-bridges/reference/**/elevation/*.tif
 docs/edmonton-bridges/reference/**/aerial/*.jpg
 
+# H28 Esri World Imagery clips, regenerate with docs/h28/fetch_esri.py
+docs/h28/esri/
+
 # Mapillary access token (never commit)
 .mapillary.txt
 
