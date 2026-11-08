@@ -477,8 +477,7 @@ def hangar8():
     rows_x(m, -1, cx0, z0 + 4.5, z1 - 6.0, 7.55, 8, 2.2, 1.7)
     rows_z(m, -1, z0 + 2.5, cx0 + 0.5, cx1 - 0.5, 7.55, 8, 1.1, 1.7)  # the clerestory glazing seen from the street: eight panes
     rows_z(m, 1, z1 - 4, cx0 + 0.5, cx1 - 0.5, 7.55, 8, 1.1, 1.7)
-    rows_z(m, 1, z1, wx0 + 4, -14.0, 1.6, 4, 2.2, 2.6)
-    m.box(wx0 + 6.0, wx0 + 9.0, 0, 2.5, z1, z1 + 0.08, DGREY)
+    rows_z(m, 1, z1, wx0 + 4, -14.0, 1.6, 4, 2.2, 2.6)  # (a 3 x 2.5 m grey "door" panel over the first window's foot removed, user 2026-11-07)
     # landside (-Z, east, 109 St): per the photo, from the hall: tall narrow window under the roundel (1); ground tier: window, window, door,
     # long strip window, glass door, window (6); first-floor ribbon of eight panes; clerestory of eight panes; at the far end the skirt
     # with a window and a door and three small windows above it
@@ -1897,8 +1896,9 @@ def garage22():
     m.box(tx1, tx1 + 0.12, Y[2], y3 + 1.2, tz0, tz1, BOARD)
     number_disc(m, tx1 + 0.14, y3 + 1.9, (tz0 + tz1) / 2 + 0.8, (1, 0), 1.2, "22")
     # vehicle entrance at ground level in front of the west arm (MS-1270.213.3: yellow bollards and a pay booth): a gate island with two ticket
-    # posts, a short barrier boom over each lane and yellow bollards
-    ze, xe = -23.0, F1[0] + 1.0
+    # posts, a short barrier boom over each lane and yellow bollards.  Centred on the west arm's front segment (ZW..ZB0, the building's west
+    # quarter; user 2026-11-07); at z -23 the east boom reached past the step onto the set-back west lane
+    ze, xe = (ZW + ZB0) / 2, F1[0] + 1.0
     m.box(xe, xe + 5.5, 0, 0.2, ze - 0.9, ze + 0.9, CONC)
     for xp in (xe + 1.5, xe + 3.5):
         m.box(xp - 0.2, xp + 0.2, 0.2, 1.5, ze - 0.35, ze + 0.35, DGREY)
@@ -2027,7 +2027,9 @@ def north_main():
             for e in (e0, e1):  # end wedges above the flat margins
                 m.poly([(X(e), EV, Z(s0)), (X(e), EV, Z(s1)), (X(e), EV + RISE, Z(s1))], CREAM, (X(em), EV + 1, Z(sm)))
         parapet(m, X(b1), X(b0), -hz, hz, EV, EV + 0.7, 0.3, TRIM)
-        m.box(X(b1), X(b0), EV, EV + 1.8, -hz, -hz + 2.5, DGREY)  # darker north band (the plan crop shows a dark strip along the north edge)
+        # darker north band (the plan crop shows a dark strip along the north edge); 6 cm proud of the parapet's north and end faces, which it
+        # used to share (z-fighting along the back, user 2026-11-07)
+        m.box(X(b1) - 0.06, X(b0) + 0.06, EV, EV + 1.8, -hz - 0.06, -hz + 2.5, DGREY)
         # south (apron) face: three sliding doors 22 x 7.5 m, personnel doors between them, clerestory windows above
         w = b1 - b0
         dcs = [b0 + 16.0, b0 + w / 2, b1 - 16.0]

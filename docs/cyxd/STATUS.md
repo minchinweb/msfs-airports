@@ -87,3 +87,12 @@ Lessons that apply to every model:
 2. Before touching anything generated, edit the generator, re-run it, then rebuild (`build.bat cyxd`, sim closed; read `_build/last-build.txt`; build notes are in `CLAUDE.md`). Restart the sim to see changes.
 3. Ask the user for in-sim results before reworking anything listed under "Known assumptions".
 4. Commit with a leading robot emoji and the Co-Authored-By trailer. Bump the package version and add a ReleaseNotes entry (0.2.2) once the user confirms the changes work.
+
+## Review fixes (2026-11-07)
+
+From the user's in-sim review; built (exit 0) but not yet viewed in the sim.
+- **Hangar 8:** removed a 3 x 2.5 m grey "door" panel on the airside wall that sat over the foot of the first window.
+- **Garage 22:** the vehicle entrance (gate island, booms, bollards) is centred on the west arm's front segment (the building's west quarter). At z -23 its east boom reached past the step onto the set-back west lane.
+- **North hangar complex (`north_main`):** the dark north band shared its north and end faces with the parapet (z-fighting along the back trim). It now stands 6 cm proud of both.
+- **Car parks:** `gen_parking.py --write` adds a "car park ground" block of asphalt `Apron`s (the general apron surface) under every `CarParking` lot. Each lot is grown 1.2 m all round, aisles under 8 m between rows are filled, and building footprints are cut from those margins but not from the lots themselves.
+- Tooling: the generators need shapely, which only the Python 3.15 install has. Run them with `py -3.15 -I ...`; the `python` on Git Bash's path is a Chocolatey 3.12 without it.
