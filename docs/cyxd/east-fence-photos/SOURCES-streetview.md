@@ -17,3 +17,5 @@ Google Street View screenshots (copyright Google; reference only, do not redistr
 | east-57-5-109-st-fence-200709.png | 5 109 St NW | 2007-09 | Brown fence and "no parking" sign beside 109 St; hangar roof beyond | Screenshot 2026-11-07 203102.png | 57 |
 | east-58-5-109-st-hangar-200709.png | 5 109 St NW | 2007-09 | Dark hangar and tan building behind chain-link fence over an empty field | Screenshot 2026-11-07 203048.png | 58 |
 | east-59-12300-109-st-fence-200709.png | 12300 109 St NW | 2007-09 | 109 St at chain-link fence; dark hangar and tan building beyond | Screenshot 2026-11-07 203033.png | 59 |
+
+**Used (2026-11-07):** the east line fence (`cyxd_east_fence`, `EFENCE_RUNS` in `airport-cyxd/tools/display_aircraft.py`) was traced on the 2017 aerial and drawn only where these photos back it up. User: the NAIT car park between Hangars 7 and 8 (east-47 / -48) is fenced at the end of the rows, before the airport closed.

@@ -501,6 +501,115 @@ def museum_fence():
     return m
 
 
+# West side fence (Hangars 38, 39, 40 and Flight Line Rd) -------------------------------------------------------------------------
+# Traced 2026-11-07 in the airport frame on the Esri Wayback aerial of 2017-05 (release 784, zoom 19, and zoom 20 behind Hangar 39 and
+# round Hangar 40's west yard); the hangar models sit on the same aerial to about 1 m.  Photos: hangar39-photos/13207143695.jpg (2014,
+# barbed chain-link along Hangar 39's back wing, turning to Hangar 38 with a gate), hangar40-photos/h40-31 (2010, the lot NW of Hangar
+# 40), hangar38-photos/h38-tan-16 / -17 (2007) and west-side-photos/west-06 / -10 / -11 / -15 and hangar30-photos/h30-08 / -14 (2007-10,
+# the perimeter fence with barbed-wire arms along Flight Line Rd).  User, 2026-11-07: from Hangar 38's SW corner the fence carries on in
+# line with the building's south face.
+WFENCE_O = (-560.0, 150.0)  # model origin, airport frame
+WFENCE_RUNS = [
+    # perimeter: from Hangar 38's south corner, SW in line with its SE face to Flight Line Rd, then the road's airside edge round the curve,
+    # NE up the road's NW side to the turning loop, round the loop and back SW down the road's SE side towards Hangar 30 (not modelled)
+    ([(-620.0, 45.6), (-631.0, 36.5), (-628.5, 26.0), (-629.0, 10.0), (-629.6, -10.0), (-629.5, -20.0), (-627.5, -30.0), (-621.8, -42.0),
+      (-617.4, -54.4), (-606.7, -68.6), (-589.0, -83.7), (-576.5, -92.6), (-560.5, -101.5), (-546.3, -107.7), (-532.1, -110.4),
+      (-515.0, -109.3), (-500.0, -106.6), (-473.4, -94.2), (-452.1, -72.9), (-429.0, -49.9), (-405.9, -23.2), (-399.7, -9.0),
+      (-391.7, 0.7), (-379.3, 2.5), (-369.6, -3.7), (-366.6, -16.1), (-371.3, -28.6), (-384.6, -36.5), (-398.8, -43.6),
+      (-411.3, -55.2), (-420.1, -64.1), (-431.7, -77.4), (-459.2, -103.1), (-466.0, -110.0)], None, -1),
+    # Hangar 39's yard: from its east corner NW along the grass edge, round the small lot NE of Hangar 40 (gate in its SE side), SW along
+    # Hangar 40's hall, across the lane to Hangar 39's back wing (3 m off it), along the wing, round its west corner and SE to Hangar 38's
+    # north corner (gate, 2014 photo)
+    ([(-467.2, 203.2), (-474.3, 213.0), (-515.1, 260.0), (-493.8, 281.4), (-506.3, 294.7), (-541.5, 269.2), (-559.9, 249.2),
+      (-580.3, 228.8), (-592.5, 221.5), (-582.0, 209.0), (-611.9, 179.1), (-620.1, 170.3), (-625.4, 164.1), (-613.9, 149.9),
+      (-607.4, 136.3)], [(-511.8, 256.2, 3.0), (-619.6, 157.0, 2.5)], -1),
+    # Hangar 40: the lot to its NW (cars in 2010, empty in 2017) against the yard and the helicopter apron, stopped past the pads
+    ([(-654.4, 291.5), (-607.2, 336.6), (-594.8, 347.2), (-570.0, 369.2)], None, 1),
+]
+
+
+def _fence_runs(runs, origin):
+    """Chain-link fence from [(points, gaps, barb)] in the airport frame, about origin (a display model at heading 0)."""
+    m = Mesh()
+    loc = lambda p: (p[0] - origin[0], p[1] - origin[1])
+    for run, gaps, barb in runs:
+        chainlink_fence(m, [loc(p) for p in run], gap=[(*loc(g), g[2]) for g in gaps] if gaps else None, h=2.4, closed=False, barb=barb)
+    m.mirror_x()
+    return m
+
+
+def west_fence():
+    """Barbed chain-link fence round Hangars 38-40 and along Flight Line Rd: see WFENCE_RUNS."""
+    return _fence_runs(WFENCE_RUNS, WFENCE_O)
+
+
+# East line fence (109 St, Hangars 3 to 11) --------------------------------------------------------------------------------------
+# Traced 2026-11-07 in the airport frame on the Esri Wayback aerial of 2017-05 (release 784, zoom 20; zoom 19 north of the dark-blue
+# hangar and south of Hangar 11), ends snapped to the hangar models.  The 2017 image is four years after closure, so only lines the
+# 2007-14 Street View photos back up are drawn (east-fence-photos/, and the h5- / h6- / h7- / h8- / h11-east photos): the 109 St fence
+# (east-59 / -58 / -57, barbed arms in -57), the masts compound (east-41), the gap fences H3-H4 (east-55, gate), H5-H6 (east-53 / -51 /
+# -50, driveway to a gate), H6-H7 (h7-east-49), H8-H11 (h8-east-44, gate) and the yard south of Hangar 11 (east-42, h11-east-43, 2012).
+# User, 2026-11-07: between Hangars 7 and 8 the NAIT car park is fenced at the end of the rows, in place before the airport closed; that
+# line runs on unbroken round the apron west of Hangars 8 and 11 to the yard, so it is drawn whole.  Left out: Hangar 5's 2017
+# construction fencing, Hangar 4's 2017 storage yard, the strip fence crossing the taxi lanes, and the H4-H5 gap (the models touch).
+EFENCE_O = (800.0, 35.0)  # model origin, airport frame
+EFENCE_RUNS = [
+    # 109 St, airside kerb: from north of the masts compound (gate at the airside road) to the dark-blue hangar, then on to Hangar 3
+    ([(808.5, 600.0), (808.5, 361.8), (806.4, 361.8)], [(808.5, 557.0, 5.0)], 1),
+    ([(806.4, 336.8), (808.5, 336.8), (808.5, 287.7), (800.5, 287.7)], None, 1),
+    # radio masts compound by the airside road
+    ([(769.0, 548.0), (790.0, 548.0), (790.0, 595.0), (769.0, 595.0), (769.0, 548.0)], None, 0),
+    # the field between 109 St and the apron: north side, then the west side down to Hangar 3 (gate at the taxi lane)
+    ([(808.5, 517.0), (778.5, 517.0), (778.5, 287.7)], [(778.5, 339.0, 6.0)], 0),
+    # the tan building's yard, north and west sides (stopped short of the taxi lane)
+    ([(728.5, 347.0), (728.5, 390.0), (778.5, 390.0)], None, 0),
+    # Hangar 3's annex to Hangar 4, gate with red posts
+    ([(786.0, 190.4), (786.0, 167.0), (780.3, 155.0), (780.3, 143.1)], [(786.0, 178.0, 3.0)], 0),
+    # Hangar 5 to Hangar 6: gate at the end of the driveway, fence along its south side
+    ([(778.5, 7.2), (778.5, -11.0), (830.0, -11.0)], [(778.5, -2.0, 3.0)], 0),
+    # Hangar 6 to Hangar 7
+    ([(778.5, -60.4), (778.5, -78.8)], None, 0),
+    # NAIT car park west end (Hangar 7 to Hangar 8), on round the apron west of Hangars 8 and 11 to the yard and the building south of it
+    ([(778.5, -118.7), (778.6, -180.0), (760.4, -204.0), (740.0, -204.0), (740.0, -248.0), (724.0, -248.0), (724.0, -298.8),
+      (757.0, -298.8), (757.0, -410.2), (739.4, -410.2), (739.4, -484.4), (775.4, -523.8), (790.5, -523.8)], None, 0),
+    ([(760.4, -204.0), (775.3, -204.0)], None, 0),  # spur to Hangar 8's NW corner
+    # the yard south of Hangar 11: north side, and the east side from Hangar 11 down along the road
+    ([(757.0, -410.2), (842.0, -410.2)], None, 0),
+    ([(842.0, -392.5), (842.0, -471.4), (866.8, -497.0), (888.0, -529.0)], None, 0),
+    # Hangar 8 to Hangar 11, gate
+    ([(822.0, -271.3), (822.0, -298.8), (838.0, -298.8), (838.0, -313.8)], [(838.0, -306.3, 3.0)], 0),
+]
+
+
+def east_fence():
+    """Chain-link fence along 109 St and between the east-line hangars: see EFENCE_RUNS."""
+    return _fence_runs(EFENCE_RUNS, EFENCE_O)
+
+
+# South fence (Kingsway and Princess Elizabeth Ave) --------------------------------------------------------------------------------
+# Traced 2026-11-07 in the airport frame on the Esri Wayback aerial of 2017-05 (release 784, zoom 19).  Photos: south-fence-photos/
+# south-27 to -40 (2009-10): chain-link with barbed-wire arms behind the sidewalk all the way, and at 10916 Princess Elizabeth Ave
+# (south-28) a signed gate beside the corner where the fence turns away from the road along the NAIT sports field.  Carries on from
+# the museum fence's end on Kingsway and closes on the east fence at the NW corner of the grey hangar south of Hangar 11.
+SFENCE_O = (600.0, -800.0)  # model origin, airport frame
+SFENCE_RUNS = [
+    # Kingsway SE from the museum fence, the corner at the Princess Elizabeth junction, NE along Princess Elizabeth (gate where the
+    # airside road from the south apron meets it), NW along the sports field (gate by the corner, south-28), then the grey hangar's
+    # car park: along its south edge and up its west side to the hangar's NW corner (the east fence's end).  Barbs toward the road.
+    ([(303.9, -916.8), (379.4, -969.9), (439.7, -1012.3), (495.0, -1051.2), (491.2, -1060.5), (500.0, -1065.0), (532.0, -1066.5),
+      (574.7, -1066.5), (619.7, -1038.1), (659.9, -1010.4), (690.7, -986.8), (701.8, -975.7), (737.3, -952.1), (772.8, -928.4),
+      (808.3, -901.2), (880.5, -848.4), (827.5, -773.0), (791.6, -721.9), (776.0, -720.6), (775.4, -523.8)],
+     [(789.5, -917.2, 4.0), (877.2, -850.6, 2.0)], -1),
+    # east side of the grey hangar: on from the east fence's end down the road edge, then the gate bar across the drive to the hangar
+    ([(888.0, -529.0), (894.7, -551.5), (873.8, -551.5)], [(884.0, -551.5, 4.0)], 0),
+]
+
+
+def south_fence():
+    """Barbed chain-link fence along Kingsway and Princess Elizabeth Ave: see SFENCE_RUNS."""
+    return _fence_runs(SFENCE_RUNS, SFENCE_O)
+
+
 # (model name, comment, builder, lat, lon): origin = pole / pedestal base, heading 0
 DISPLAY = [
     ("cyxd_h14_sign", "Alberta Aviation Museum: black roadside sign with logo, LED panel and History Takes Flight board (Street View)", museum_sign, *_sign_pos()),
@@ -510,4 +619,10 @@ DISPLAY = [
     ("cyxd_h14_voodoo", "Alberta Aviation Museum: CF-101B Voodoo 101060 on a blue pole (OSM node)", voodoo, 53.5645597, -113.5163768),
     ("cyxd_h14_fence", "Alberta Aviation Museum: chain-link fence round the north yard, the aircraft strip and the west yard (2017 / 2026 aerials)",
      museum_fence, 53.56572977, -113.51717633),
+    ("cyxd_west_fence", "West side fence: Hangars 38, 39 and 40 and the perimeter along Flight Line Rd (2017 aerial, 2007-14 photos)",
+     west_fence, 53.57248965775836 + WFENCE_O[1] / KY, -113.52043460802926 + WFENCE_O[0] / KX),
+    ("cyxd_east_fence", "East line fence: 109 St and the gaps between Hangars 3 and 11, the NAIT lot and the yard south of Hangar 11 (2017 aerial, 2007-14 photos)",
+     east_fence, 53.57248965775836 + EFENCE_O[1] / KY, -113.52043460802926 + EFENCE_O[0] / KX),
+    ("cyxd_south_fence", "South fence: Kingsway and Princess Elizabeth Ave from the museum to the grey hangar south of Hangar 11 (2017 aerial, 2009-10 photos)",
+     south_fence, 53.57248965775836 + SFENCE_O[1] / KY, -113.52043460802926 + SFENCE_O[0] / KX),
 ]

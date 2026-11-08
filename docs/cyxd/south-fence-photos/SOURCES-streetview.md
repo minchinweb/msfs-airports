@@ -18,3 +18,5 @@ Screenshots from Google Street View (copyright Google; reference only, do not re
 | south-38-kingsway-11104-200904.png | 11104 Kingsway NW | 2009-04 | Fence line along the south side of the field with a bench advert and lamp post; the terminal and hangars across the field | Screenshot 2026-11-07 202347.png | 38 |
 | south-39-kingsway-11166-200904.png | 11166 Kingsway NW | 2009-04 | Kingsway NW looking south-east: the fence and lamp posts on the field side, grass verge, traffic | Screenshot 2026-11-07 202325.png | 39 |
 | south-40-kingsway-11292-200904.png | 11292 Kingsway NW | 2009-04 | Kingsway NW looking west: fence running along the field, lamp post, a grass verge and sidewalk | Screenshot 2026-11-07 202310.png | 40 |
+
+**Used (2026-11-07):** `cyxd_south_fence` (`SFENCE_RUNS` in `airport-cyxd/tools/display_aircraft.py`), traced on the 2017-05 Wayback aerial. These photos give the barbed arms along the whole line and the gate by the sports field corner (south-28).

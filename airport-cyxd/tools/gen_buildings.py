@@ -500,24 +500,32 @@ def obox(m, p0, p1, y0, y1, hw, sw):
     m.poly([(x, y1, z) for x, z in q], sw, c)
 
 
-def chainlink_fence(m, pts, gap=None, h=2.4, closed=True):
+def chainlink_fence(m, pts, gap=None, h=2.4, closed=True, barb=0):
     """Chain-link fence (posts + 3 rails, open mesh) along pts [(x, z)], closed back to the first point unless closed=False;
-    gap = (x, z, half-length) leaves a gate opening."""
+    gap = (x, z, half-length), or a list of them, leaves gate openings.  barb = +1 / -1 adds a 45-degree arm with three strands of
+    barbed wire on every post, leaning to the left / right of the direction of travel along pts (before mirror_x)."""
+    gaps = [] if gap is None else (gap if isinstance(gap, list) else [gap])
+    ok = lambda q: all(math.hypot(q[0] - g[0], q[1] - g[1]) > g[2] for g in gaps)
     for i in range(len(pts) if closed else len(pts) - 1):
         a, b = pts[i], pts[(i + 1) % len(pts)]
         ln = math.hypot(b[0] - a[0], b[1] - a[1])
         n = max(1, int(round(ln / 3.0)))
         pt = lambda t: (a[0] + (b[0] - a[0]) * t, a[1] + (b[1] - a[1]) * t)
-        ok = lambda q: not gap or math.hypot(q[0] - gap[0], q[1] - gap[1]) > gap[2]
+        nx, nz = -(b[1] - a[1]) / (ln or 1.0) * barb, (b[0] - a[0]) / (ln or 1.0) * barb  # unit normal to the barb side
         for k in range(n + 1):
             q = pt(k / n)
             if ok(q):
                 m.box(q[0] - 0.06, q[0] + 0.06, 0, h, q[1] - 0.06, q[1] + 0.06, METAL)
+                if barb:
+                    obox(m, q, (q[0] + nx * 0.45, q[1] + nz * 0.45), h - 0.05, h + 0.42, 0.025, METAL)
         for k in range(n):
             q0, q1 = pt(k / n), pt((k + 1) / n)
             if ok(q0) and ok(q1):
                 for y in (0.15, h / 2, h - 0.03):
                     obox(m, q0, q1, y, y + 0.04, 0.02, METAL)
+                for s in ((0.15, 0.15), (0.3, 0.3), (0.45, 0.45)) if barb else ():
+                    obox(m, (q0[0] + nx * s[0], q0[1] + nz * s[0]), (q1[0] + nx * s[0], q1[1] + nz * s[0]),
+                         h + s[1] - 0.02, h + s[1], 0.012, METAL)
 
 
 def lattice_mast(m, x, z, mh, w, seg):

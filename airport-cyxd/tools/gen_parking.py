@@ -84,6 +84,34 @@ CAR_PARKS += tuple((t, [_uv(x, y) for x, y in ((x0, y0), (x1, y0), (x1, y1), (x0
     ("Oval lot on 121 St (Hangars 38-40), column east of the median", -638.9, -633.8, 200.0, 227.0, 270.0),
     ("Oval lot on 121 St (Hangars 38-40), east column", -626.3, -620.9, 196.5, 221.0, 90.0),
 ))
+# East line (109 St, Hangars 4 to 11), 2026-11-07: the painted stalls and wheel-stop lines on the 2017-05 Wayback aerial (release 784,
+# zoom 20), in the airport frame, kept where the cars on the 2014-02 aerial (release 10, zoom 17) or the 2007-10 Street View photos
+# (east-fence-photos/east-48 / -55 / -46) show them in use.  Hangar walls are the models'.
+#  * Landside faces: nose-in rows along the east walls of Hangars 4, 5 and 7 (2014 cars).  Hangar 6 is left clear: its model's east
+#    annex (to x 828) stands where the 2014 cars were.  Hangar 3 is flush with the 109 St kerb.
+#  * NAIT car park between Hangars 7 and 8 (east-48, Sep 2007, full; fenced at the west end of the rows, user 2026-11-07): a row
+#    against the wheel stops at y -124 and three head-to-head double rows on the stop lines at y -145, -166 and -185.  Hangar 8's
+#    door wall faces it across the last aisle.
+#  * Hangars 8-11: the double row west of Hangar 8 (centre line x 762), the row under the fence north of Hangar 11 (2014 cars), and
+#    the column along Hangar 11's west side.  Not drawn: the double row painted in front of Hangar 11's north doors (2017, after
+#    closure) and the two rows south of it, where the model's 1950s south annex stands.
+CAR_PARKS += tuple((t, [_uv(x, y) for x, y in ((x0, y0), (x1, y0), (x1, y1), (x0, y1))], h) for t, x0, x1, y0, y1, h in (
+    ("Hangar 4, nose-in row along its east (109 St) wall", 811.6, 817.1, 77.6, 136.6, 270.0),
+    ("Hangar 5, nose-in row along its east (109 St) wall", 820.9, 826.4, 13.9, 47.8, 270.0),
+    ("Hangar 7, nose-in row along its east wall, south of the door", 817.9, 823.4, -114.7, -98.0, 270.0),
+    ("Hangar 7, nose-in row along its east wall, north of the door", 817.9, 823.4, -95.0, -85.0, 270.0),
+    ("NAIT car park (Hangars 7-8), row south of Hangar 7", 782.0, 835.5, -129.5, -124.0, 0.0),
+    ("NAIT car park (Hangars 7-8), first double row, north half", 789.5, 835.5, -145.0, -139.5, 180.0),
+    ("NAIT car park (Hangars 7-8), first double row, south half", 789.5, 835.5, -150.5, -145.0, 0.0),
+    ("NAIT car park (Hangars 7-8), second double row, north half", 789.5, 835.5, -166.5, -161.0, 180.0),
+    ("NAIT car park (Hangars 7-8), second double row, south half", 789.5, 835.5, -172.0, -166.5, 0.0),
+    ("NAIT car park (Hangars 7-8), third double row, north half", 789.5, 828.0, -185.0, -179.5, 180.0),
+    ("NAIT car park (Hangars 7-8), third double row, south half", 789.5, 828.0, -190.5, -185.0, 0.0),
+    ("West of Hangar 8, double row, west half", 756.7, 762.2, -268.0, -212.0, 90.0),
+    ("West of Hangar 8, double row, east half", 762.2, 767.7, -268.0, -212.0, 270.0),
+    ("North of Hangar 11, row under the Hangar 8-11 fence", 779.0, 836.5, -304.8, -299.3, 0.0),
+    ("Hangar 11, column along its west side", 757.6, 762.8, -403.5, -308.5, 90.0),
+))
 NE_GATES_S = (45.0, 86.0, 127.0)  # along the terminal's NE face from its NW corner; bays in hangars.py are at x = s - 86
 GATE_OUT, ROOT_AHEAD = 22.6, 25.0  # spot distance from the face, jetway root distance ahead of the spot
 SNAP = 12.0  # a connector joins an existing node if the projection lies this close to one
