@@ -153,3 +153,12 @@ Supersedes the power-line routing and border road-light notes above. Routing com
   - the guy wire meets its pole;
   - the corner pole by the windsock (its cross-arm is on the bisector);
   - the spans south of the parking against the sim terrain.
+
+## Review fixes (2026-11-07, later)
+From the user's in-sim review. Regenerated (`gen_border.py`, `gen_powerline.py`, `powerline_map.py`); **not built yet** (the sim was running). Build with the sim closed, then check in the sim.
+- **Mirrored signs:** `gen_border.box` gave east and west faces the wrong texture "right" (south for an east face; facing west, your right is north). Fixed for the CBP and Whetstone boards, the monuments' "INTERNATIONAL BOUNDARY" faces and the slab tops. `gen_sign.py` (Alberta sign) uses its own `tbox`, which was already right.
+- **Orange ball** under the Whetstone board removed (the real one lies on the ground there in the 2014 and 2026 photos, but the user wanted it gone).
+- **Marker balls** are now centred on the wire, not hung 0.3 m under it.
+- **US line has three wires:** the two cross-arm ends at 9.5 m plus one on the pole-top insulator at 10.35 m (`US_WIRES`).
+- **The three border road lights on the grid** (the east-shoulder beacon light and the two west-shoulder lights) now stand on wooden poles like the power poles (`lamp(wood=True)`, `WOOD_LIGHTS`). The other road lights stay steel.
+- **Wires into the transformer pole:** the span from the west pole and the east-shoulder light's feed now start at the transformer pole (`ANCHORS`), so they meet its cross-arm whatever the sim terrain does. Any height mismatch now shows at the west pole in the trees, or at the light. The LiDAR only differs by 0.25 m between the two poles, so the old mismatch came from the sim's terrain.

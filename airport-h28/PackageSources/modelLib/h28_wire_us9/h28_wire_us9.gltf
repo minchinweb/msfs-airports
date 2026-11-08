@@ -75,7 +75,7 @@
   {
    "bufferView": 0,
    "componentType": 5126,
-   "count": 384,
+   "count": 576,
    "type": "VEC3",
    "min": [
     -1.02,
@@ -84,26 +84,26 @@
    ],
    "max": [
     1.02,
-    9.809999999999963,
+    10.659999999999963,
     77.00000000024261
    ]
   },
   {
    "bufferView": 1,
    "componentType": 5126,
-   "count": 384,
+   "count": 576,
    "type": "VEC3"
   },
   {
    "bufferView": 2,
    "componentType": 5126,
-   "count": 384,
+   "count": 576,
    "type": "VEC2"
   },
   {
    "bufferView": 3,
    "componentType": 5123,
-   "count": 576,
+   "count": 864,
    "type": "SCALAR"
   }
  ],
@@ -111,28 +111,28 @@
   {
    "buffer": 0,
    "byteOffset": 0,
+   "byteLength": 6912
+  },
+  {
+   "buffer": 0,
+   "byteOffset": 6912,
+   "byteLength": 6912
+  },
+  {
+   "buffer": 0,
+   "byteOffset": 13824,
    "byteLength": 4608
   },
   {
    "buffer": 0,
-   "byteOffset": 4608,
-   "byteLength": 4608
-  },
-  {
-   "buffer": 0,
-   "byteOffset": 9216,
-   "byteLength": 3072
-  },
-  {
-   "buffer": 0,
-   "byteOffset": 12288,
-   "byteLength": 1152
+   "byteOffset": 18432,
+   "byteLength": 1728
   }
  ],
  "buffers": [
   {
    "uri": "h28_wire_us9.bin",
-   "byteLength": 13440
+   "byteLength": 20160
   }
  ]
 }

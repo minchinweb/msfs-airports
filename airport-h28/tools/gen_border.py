@@ -29,8 +29,8 @@ Sources (docs/h28/reference/):
     Bonita, Montana", "CBP CLEARANCE", an arrow pointing left (south), and "Stay in Plane Until Officer Arrives" in a
     white box. Panel 1.27-2.03 m up. Not in the 2026 photo, which is framed further south; it may be gone.
   - Whetstone sign: weathered plank board with yellow hand-lettering (lettered on both sides: both photos show it),
-    hung on eye bolts from a galvanized pipe frame (1.30 m between uprights, crossbar 2.0 m up); an old orange marker
-    ball lies under it (in both photos).
+    hung on eye bolts from a galvanized pipe frame (1.30 m between uprights, crossbar 2.0 m up). The old orange marker
+    ball on the ground under it (both photos) is left out (user review, 2026-11-07).
   - Two white cones (the strip's edge-cone model) east of the signs, 1.6 m apart north-south: in front of the signs in
     the 2014 photo and, in the 2026 photo, beyond the board seen from the road. Their 0.9 m base agrees with the CBP
     panel scale.
@@ -263,22 +263,22 @@ def write_texture(path):
 # ---------------------------------------------------------------- geometry
 # Face directions and the texture "right" vector for a viewer standing outside each face.
 EAST, WEST, NORTH, SOUTH, UP = (1, 0, 0), (-1, 0, 0), (0, 0, 1), (0, 0, -1), (0, 1, 0)
-RIGHT_OF = {EAST: SOUTH, WEST: NORTH, NORTH: WEST, SOUTH: EAST}
+RIGHT_OF = {EAST: NORTH, WEST: SOUTH, NORTH: WEST, SOUTH: EAST}  # facing west, your right is north
 
 
 def box(m, x0, x1, y0, y1, z0, z1, side, top=None, east=None, west=None, faces="nsewt"):
     """Box with each face's texture right way round seen from outside; east/west override the side region."""
     P = lambda x, y, z: (x, y, z)  # noqa: E731
     if "e" in faces:
-        gs.quad(m, [P(x1, y0, z0), P(x1, y0, z1), P(x1, y1, z1), P(x1, y1, z0)], EAST, east or side, SOUTH, UP)
+        gs.quad(m, [P(x1, y0, z0), P(x1, y0, z1), P(x1, y1, z1), P(x1, y1, z0)], EAST, east or side, NORTH, UP)
     if "w" in faces:
-        gs.quad(m, [P(x0, y0, z0), P(x0, y0, z1), P(x0, y1, z1), P(x0, y1, z0)], WEST, west or side, NORTH, UP)
+        gs.quad(m, [P(x0, y0, z0), P(x0, y0, z1), P(x0, y1, z1), P(x0, y1, z0)], WEST, west or side, SOUTH, UP)
     if "n" in faces:
         gs.quad(m, [P(x0, y0, z1), P(x1, y0, z1), P(x1, y1, z1), P(x0, y1, z1)], NORTH, side, WEST, UP)
     if "s" in faces:
         gs.quad(m, [P(x0, y0, z0), P(x1, y0, z0), P(x1, y1, z0), P(x0, y1, z0)], SOUTH, side, EAST, UP)
-    if "t" in faces:  # seen from the east: up the texture is west
-        gs.quad(m, [P(x0, y1, z0), P(x1, y1, z0), P(x1, y1, z1), P(x0, y1, z1)], UP, top or side, SOUTH, WEST)
+    if "t" in faces:  # seen from the east: up the texture is west, right is north
+        gs.quad(m, [P(x0, y1, z0), P(x1, y1, z0), P(x1, y1, z1), P(x0, y1, z1)], UP, top or side, NORTH, WEST)
 
 
 def cylinder(m, p0, p1, r, region, n=8):
@@ -353,7 +353,7 @@ def build_cbp():
 
 
 def build_whetstone():
-    """Pipe frame with the board hung under the crossbar, and the old marker ball. Origin at ground level, centred."""
+    """Pipe frame with the board hung under the crossbar. Origin at ground level, centred."""
     m = gp.Mesh()
     r, zu, top = 0.045, 0.65, 2.0
     for z in (-zu, zu):
@@ -369,7 +369,6 @@ def build_whetstone():
     for z in (-0.45, 0.45):  # eye bolts
         box(m, -0.008, 0.008, by1, top - r, z - 0.008, z + 0.008, BOLT, faces="nsew")
         box(m, -0.012, 0.012, top + r, top + r + 0.04, z - 0.012, z + 0.012, BOLT)  # bolt top above the bar
-    sphere(m, (-0.1, 0.17, -0.1), 0.2, BALL)
     return m
 
 

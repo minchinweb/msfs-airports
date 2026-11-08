@@ -77,15 +77,15 @@
   {
    "bufferView": 0,
    "componentType": 5126,
-   "count": 420,
+   "count": 200,
    "type": "VEC3",
    "min": [
-    -0.1,
+    -0.045,
     -0.3,
     -0.79
    ],
    "max": [
-    0.30000000000000004,
+    0.045,
     2.085,
     0.79
    ]
@@ -93,19 +93,19 @@
   {
    "bufferView": 1,
    "componentType": 5126,
-   "count": 420,
+   "count": 200,
    "type": "VEC3"
   },
   {
    "bufferView": 2,
    "componentType": 5126,
-   "count": 420,
+   "count": 200,
    "type": "VEC2"
   },
   {
    "bufferView": 3,
    "componentType": 5123,
-   "count": 600,
+   "count": 300,
    "type": "SCALAR"
   }
  ],
@@ -113,28 +113,28 @@
   {
    "buffer": 0,
    "byteOffset": 0,
-   "byteLength": 5040
+   "byteLength": 2400
   },
   {
    "buffer": 0,
-   "byteOffset": 5040,
-   "byteLength": 5040
+   "byteOffset": 2400,
+   "byteLength": 2400
   },
   {
    "buffer": 0,
-   "byteOffset": 10080,
-   "byteLength": 3360
+   "byteOffset": 4800,
+   "byteLength": 1600
   },
   {
    "buffer": 0,
-   "byteOffset": 13440,
-   "byteLength": 1200
+   "byteOffset": 6400,
+   "byteLength": 600
   }
  ],
  "buffers": [
   {
    "uri": "h28_sign_whetstone.bin",
-   "byteLength": 14640
+   "byteLength": 7000
   }
  ]
 }

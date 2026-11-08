@@ -718,7 +718,7 @@
   {
    "bufferView": 0,
    "componentType": 5126,
-   "count": 532,
+   "count": 580,
    "type": "VEC3",
    "min": [
     -4.549999999584259,
@@ -726,7 +726,7 @@
     -107.22919999974488
    ],
    "max": [
-    45.79501999967059,
+    45.84501999967059,
     9.889999999999873,
     29.606800000152816
    ]
@@ -734,19 +734,19 @@
   {
    "bufferView": 1,
    "componentType": 5126,
-   "count": 532,
+   "count": 580,
    "type": "VEC3"
   },
   {
    "bufferView": 2,
    "componentType": 5126,
-   "count": 532,
+   "count": 580,
    "type": "VEC2"
   },
   {
    "bufferView": 3,
    "componentType": 5123,
-   "count": 750,
+   "count": 834,
    "type": "SCALAR"
   },
   {
@@ -760,33 +760,33 @@
   {
    "buffer": 0,
    "byteOffset": 0,
-   "byteLength": 6384
+   "byteLength": 6960
   },
   {
    "buffer": 0,
-   "byteOffset": 6384,
-   "byteLength": 6384
+   "byteOffset": 6960,
+   "byteLength": 6960
   },
   {
    "buffer": 0,
-   "byteOffset": 12768,
-   "byteLength": 4256
+   "byteOffset": 13920,
+   "byteLength": 4640
   },
   {
    "buffer": 0,
-   "byteOffset": 17024,
-   "byteLength": 1500
+   "byteOffset": 18560,
+   "byteLength": 1668
   },
   {
    "buffer": 0,
-   "byteOffset": 18524,
+   "byteOffset": 20228,
    "byteLength": 96
   }
  ],
  "buffers": [
   {
    "uri": "h28_lights_ca.bin",
-   "byteLength": 18620
+   "byteLength": 20324
   }
  ]
 }

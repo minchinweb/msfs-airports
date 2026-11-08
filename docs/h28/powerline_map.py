@@ -222,7 +222,7 @@ callout(P_CA_END, "dead-end pole,\nguy wire to just north\nof the airport fence"
 callout(P_TREES, "US line starts in the tree clump\n(Street View h)", -150, 70, GREEN)
 callout(P_TX, "transformer pole", 10, 40, "#222")
 text(P_SOCK, "pole by the windsock,\nline turns south", "#222", dx=12, dy=8)
-text(P_S1, "US line: 2 wires,\ndue south across\nthe fields", GREEN, dx=14, dy=-20)
+text(P_S1, "US line: 3 wires,\ndue south across\nthe fields", GREEN, dx=14, dy=-20)
 text((LAT0, P_SOCK[1]), f"continues south: {pl.US_SOUTH} poles south of the windsock,\n{pl.US_SPACING:.0f} m apart "
      f"({pl.US_SOUTH * pl.US_SPACING:.0f} m)", GREEN, dx=12, dy=-40)
 callout(L_EAST, "light, east side of the road, north of the border:\nsingle wire to the transformer pole", 190, -85,
@@ -254,7 +254,7 @@ d.text((lx, ly), "Legend", fill="#222", font=font_b)
 rows = ["can", "us", "drop", "pp", "p", "light", "ball", "guy", "border"]
 labels = {
     "can": "Canadian line (4 wires)",
-    "us": "US line (2 wires)",
+    "us": "US line (3 wires)",
     "drop": "Feed to a light (single wire)",
     "pp": "Your circle in review",
     "p": "Modelled pole",
