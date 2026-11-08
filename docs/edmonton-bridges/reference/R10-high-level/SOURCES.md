@@ -58,3 +58,9 @@ Not openly licensed, or no open licence found. URL only:
 ## Added 2026-10-19
 
 - `photos/national-trust-high-level-bridge.jpg` (2048 x 1365): "EPL Photo, High Level Bridge", from the National Trust for Canada page <https://nationaltrustcanada.ca/nt-endangered-places/high-level-bridge-edmonton>. Credit as printed there: EPL (Edmonton Public Library) photo. Licence not stated. Reference only; no measurement taken.
+
+## Added 2026-11-07: Provincial Archives of Alberta photo
+
+| File | Shows | Source | Licence |
+| --- | --- | --- | --- |
+| `photos/pa-cl3-train-high-level-bridge-c1925.jpg` | "Train crossing the High Level Bridge, Edmonton", c.1925 (PAA CL3). The Flickr page gives no other description. | [Flickr alberta_archives/31560061158](https://www.flickr.com/photos/alberta_archives/31560061158/) | Provincial Archives of Alberta, "No known copyright restrictions" (Flickr Commons) |

@@ -39,3 +39,25 @@ Credit: Provincial Archives of Alberta. Seven photos, copied from the user's Dow
 
 Which hangar each photo shows has not been checked against the model: treat the attributions above as the building's name on the sign, not as a confirmed hangar number.
 - Post title as given by the user: "Northwest Industries in Edmonton, Alberta in 1955/56. Credit: Provincial Archives of Alberta." The date range is 1955/56 (the URL slug reads "195556"). The Provincial Archives may hold more photos of the same building; search its collection for Northwest Industries Edmonton (not searched yet).
+
+## Northwest Industries, Provincial Archives of Alberta, Flickr batch (added 2026-11-07)
+All: Provincial Archives of Alberta, No known copyright restrictions (Flickr Commons), Flickr user alberta_archives. WS.42, WS.47 and WS.65 were uploaded 2024-09-19; the WS5 set was uploaded 2017-01-13 and is dated 2 July 1951. The other dates are taken from the titles.
+
+| File | Source | Credit / licence | Notes |
+|---|---|---|---|
+| `nwi-pa-ws42-t33-jet-1955.jpg` | https://www.flickr.com/photos/alberta_archives/54006870973/ | PAA WS.42 | Northwest Industries Ltd., T-33 jet, Edmonton, 1955 |
+| `nwi-pa-ws47-1-repairing-jet-1955.jpg` | https://www.flickr.com/photos/alberta_archives/54007062180/ | PAA WS.47/1 | Repairing jet aircraft, 1955 |
+| `nwi-pa-ws47-2-repairing-jet-1955.jpg` | https://www.flickr.com/photos/alberta_archives/54006972194/ | PAA WS.47/2 | Repairing jet aircraft, 1955 |
+| `nwi-pa-ws65-1-1956.jpg` | https://www.flickr.com/photos/alberta_archives/54006872303/ | PAA WS.65/1 | Northwest Industries, Edmonton, 1956 |
+| `nwi-pa-ws65-2-1956.jpg` | https://www.flickr.com/photos/alberta_archives/54006645446/ | PAA WS.65/2 | Northwest Industries, Edmonton, 1956 |
+| `nwi-pa-ws65-3-1956.jpg` | https://www.flickr.com/photos/alberta_archives/54005731657/ | PAA WS.65/3 | Northwest Industries, Edmonton, 1956 |
+| `nwi-pa-ws65-4-1956.jpg` | https://www.flickr.com/photos/alberta_archives/54005731667/ | PAA WS.65/4 | Northwest Industries, Edmonton, 1956 |
+| `nwi-pa-ws65-5-1956.jpg` | https://www.flickr.com/photos/alberta_archives/54006645431/ | PAA WS.65/5 | Northwest Industries, Edmonton, 1956 |
+| `nwi-pa-ws65-6-1956.jpg` | https://www.flickr.com/photos/alberta_archives/54005731637/ | PAA WS.65/6 | Northwest Industries, Edmonton, 1956 |
+| `nwi-pa-ws65-7-1956.jpg` | https://www.flickr.com/photos/alberta_archives/54006872293/ | PAA WS.65/7 | Northwest Industries, Edmonton, 1956 |
+| `nwi-pa-ws5-1-plant-1951.jpg` | https://www.flickr.com/photos/alberta_archives/31445475604/ | PAA WS5/1, Wells Photographic Studios | North West Industries airplane plant, 2 July 1951 |
+| `nwi-pa-ws5-2-plant-1951.jpg` | https://www.flickr.com/photos/alberta_archives/31910540510/ | PAA WS5/2, Wells | Same, 2 July 1951 |
+| `nwi-pa-ws5-3-plant-1951.jpg` | https://www.flickr.com/photos/alberta_archives/31445474274/ | PAA WS5/3, Wells | Same, 2 July 1951 |
+| `nwi-pa-ws5-4-plant-1951.jpg` | https://www.flickr.com/photos/alberta_archives/32167500141/ | PAA WS5/4, Wells | Same, 2 July 1951 |
+| `nwi-pa-ws5-5-plant-1951.jpg` | https://www.flickr.com/photos/alberta_archives/31476745083/ | PAA WS5/5, Wells | Same, 2 July 1951 |
+| `nwi-pa-ws5-6-plant-1951.jpg` | https://www.flickr.com/photos/alberta_archives/32167498111/ | PAA WS5/6, Wells | Same, 2 July 1951 |

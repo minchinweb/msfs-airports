@@ -42,3 +42,20 @@ Moved from `City of Edmonton Archive photos/`; the date is in the file name, the
 
 ## Moved from `historical-unknown-photos/` (2026-10-22)
 - `flickr_woodysworld1_11394759225.jpg` (Flickr, woodysworld1778; licence not checked): view across the apron from a stucco pier, probably this hangar's tower. Biplanes CF-CBN / CF-CBX / CF-BDW and three Lockheed 10-type airliners (so 1937 or later). In the distance, a two-storey wing with a white arched hangar front at its right end, possibly the 1938 hangar (`../hangar1938-photos/`); not confirmed.
+
+| `provincial-archives-a11662-airplane-hangar-blatchford.jpg` | Commons: https://commons.wikimedia.org/wiki/File:Airplane_Hanger_at_Blatchford_Field,_Edmonton_(26685970044).jpg . Flickr (secondary): https://www.flickr.com/photos/alberta_archives/26685970044/in/photostream/ | Provincial Archives of Alberta, A11662 (Commons, "no known copyright restrictions"). Commons date 1920 is a placeholder; undated, probably later 1920s, unconfirmed. | Arched hangar at left, three-storey tower in the centre, lower wing with hipped roof at right, cars and a biplane in front. Probably the same complex as `flickr_woodysworld1_11394759225.jpg` from the other side. 3000 x 2359 |
+
+## Provincial Archives of Alberta, Flickr alberta_archives (added 2026-11-07)
+All: No known copyright restrictions (Flickr Commons). Links are the Flickr photostream pages.
+
+| File | Source | Credit / licence | Notes |
+|---|---|---|---|
+| `pa-a10321-monovan-cord-edmonton-airport-1933.jpg` | https://www.flickr.com/photos/alberta_archives/27017711030/in/photostream/ | Provincial Archives of Alberta, A10321 | Monovan airplane and Cord automobile at Edmonton Airport, Lute Vieweger and Mark Abbot in front. 1933 |
+| `pa-bl137-1-winnie-mae-edmonton-1933.jpg` | https://www.flickr.com/photos/alberta_archives/24915324067/ | Provincial Archives of Alberta, BL137.1 | Wiley Post's Winnie Mae at the Edmonton Municipal Airport during his solo round-the-world flight, July 1933 |
+| `pa-bl87-5-imperial-oil-airshow-1931.jpg` | https://www.flickr.com/photos/alberta_archives/39785726241/ | Provincial Archives of Alberta, BL87.5 | Composite of the Imperial Oil Airshow at the Edmonton Municipal Airport, 1931 |
+| `pa-bl87-6-imperial-oil-airshow-1931.jpg` | https://www.flickr.com/photos/alberta_archives/39785726071/ | Provincial Archives of Alberta, BL87.6 | Imperial Oil Airshow, 1931 |
+| `pa-bl87-7-imperial-oil-airshow-1931.jpg` | https://www.flickr.com/photos/alberta_archives/24915350787/ | Provincial Archives of Alberta, BL87.7 | Imperial Oil Airshow, 1931 |
+| `pa-bl86-3-imperial-oil-airshow-1931.jpg` | https://www.flickr.com/photos/alberta_archives/39785701821/ | Provincial Archives of Alberta, BL86.3 | Imperial Oil Airshow, 1931 |
+| `pa-bl87-2-imperial-oil-airshow-1931.jpg` | https://www.flickr.com/photos/alberta_archives/28007228699/ | Provincial Archives of Alberta, BL87.2 | Imperial Oil Airshow, 1931. The Flickr copy is 500 px wide, so it is low resolution |
+
+Not added: https://www.flickr.com/photos/alberta_archives/25913346198/ is the Imperial Oil airshow composite already saved as imperial_oil_airshow_25913346198.jpg.

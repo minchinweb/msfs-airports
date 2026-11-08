@@ -102,3 +102,36 @@ Seven photos from the Facebook post above, saved in `hangar11-photos/nwi-1956-*.
 - Saved copy: general-photos/aava-pwa-737-109st-1977-1987.jpg (source: C:\Users\William\Downloads\487567094_1114960870644455_2138402057682034717_n.jpg). Watermarked "Alberta Aviation Museum".
 - Shows a Pacific Western Airlines 737 on approach over 109 St, with a "109 St." street sign on a signal pole and a CAA sign on the right.
 - Date: the post gives no exact date. Working range is 1977-1987: after September 1977, when Edmonton street signs changed to metric (per the user), and before 1987, when Pacific Western merged with Canadian Pacific Airlines to form Canadian Airlines International (per the user).
+
+## Dated history: "85 years at Blatchford Field" (key.aero, 2012)
+Source: https://www.key.aero/forum/historic-aviation/117905-85-years-at-blatchford-field-edmonton-city-centre-airport . Post by Tom H, 21 Feb 2012, sharing the Alberta Aviation Museum's 85th-anniversary timeline (sourced from the museum library and Ken Tingley's Historic Impact Assessment for the City of Edmonton). The post is pasted text, so the dates were not checked against the sources. Reply by wieesso, 21 Feb 2012: CAHS article "Memories of Blatchford Field", http://www.cahs.com/Journal79d.htm (not fetched).
+
+- 1927: Blatchford Field first licensed "Air Harbour" in Canada. Edmonton & Northern Alberta Flying Club established (oldest in Canada).
+- 1928: first air mail across the Prairies, Winnipeg to Edmonton.
+- 1929: Fort Vermilion mercy flight with diphtheria antitoxin. Air mail to Fort McMurray established.
+- 1930: scheduled prairie air mail, Winnipeg to Edmonton, with stops between.
+- 1931: Leigh Brittnell founds MacKenzie Air Service.
+- 1933: Edmonton leads Canada in passenger, air cargo and air mail. Edmonton Journal coins "Gateway to the North" for Blatchford Field.
+- 1936: Brittnell founds Aircraft Maintenance #1 at Blatchford Field.
+- 1937: Grant McConachie starts scheduled air mail to Whitehorse from Edmonton.
+- 1938: Trans-Canada Airways begins service to Edmonton (now Air Canada).
+- 1939: Aircraft Maintenance #1 is the largest facility of its kind in Canada.
+- 1940: the Alberta Aviation Museum hangar opens as No. 2 Air Observers School (Hangar 14, see `hangar14-photos/`). Edmonton Flying Club becomes No. 16 Elementary Flight Training School.
+- 1941: RCAF 418 (City of Edmonton) Squadron formed.
+- 1942: North West Staging Route to Alaska in full operation.
+- 1943: busiest airport in the world.
+- 1944: still the busiest airport in the world. BCATP training begins to wind down in Edmonton.
+- 1944-45: USAAF cold-weather testing of the P-59 jet fighter. USAAF bombers bound for the Pacific use the field as a fuel stop.
+- 1945: RCAF Winter Experimental Establishment opens, testing all RCAF types (later AETE at Cold Lake).
+- 1946: 418 Squadron re-formed postwar as a B-25 squadron. RCAF jets (Vampire, Meteor) tested for winter use. RCAF Survival School established. Postwar northern passenger and cargo service booms.
+- 1947: USAAF declares a housing emergency; ECCA growth causes a housing boom.
+- 1948: airport returned to the City of Edmonton. Canadian Pacific Airlines moves its head office to Edmonton. CP and TCA both use Edmonton as a western hub.
+- 1949: RCAF search and rescue squadron established.
+- 1949-51: Edmonton the "Cross Roads of the World" for international flights; traffic booms again.
+- 1951-60: air cargo and passenger traffic rise again as the DEW Line is built.
+- 1955: all RCAF and USAF operations move to the completed CFB Namao.
+- 1957: Edmonton Industrial Airport self-sufficient and profitable.
+- 1959: home to North West Air Command of NORAD (joint RCAF/USAF).
+- 1960: growth continues at the Edmonton Industrial Airport.
+
+Aircraft named in the post as having used the field in that period: Mitsubishi Zero, Bell P-59 Airacomet, B-17, B-24 and B-29, and Super Constellation, DC-6 and DC-7 airliners.
