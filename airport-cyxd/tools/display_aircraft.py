@@ -622,6 +622,44 @@ def south_fence():
     return _fence_runs(SFENCE_RUNS, SFENCE_O)
 
 
+# North fence (121 St, the Yellowhead ramp, the north hangar complex and Yellowhead Trail) ----------------------------------------
+# User, 2026-11-09: "add a fence around the north end of the airport ... follow the road edge, like it does around the south" (no Street
+# View here).  Traced in the airport frame on the Esri Wayback aerial of 2017-05 (release 784, zoom 19), where most of it shows as a
+# chain-link line: up 121 St's airside verge from the west fence's Hangar 40 lot (round the small paved pad by the road), along the inner
+# edge of the curving ramp to Yellowhead Trail, a gate across the north entrance road, then the edge of the business yards to the north
+# hangar complex, whose walls close the line.  Round the airside apron between the main hall and east bay 3 (and the narrow outbuilding
+# facing it), along the yards' south edge to the N-S service road, up its east side to Yellowhead Trail, east along the highway's south
+# verge (beside runway 34's approach-light bar), and down the west side of the fenced storage lots to the radio-masts compound, where the
+# east fence starts.  Barbs outward (all runs travel with the landside on the left).
+# Three models (a glTF here holds under 65535 vertices, about 1.2 km of barbed fence): (suffix, slice of NFENCE_RUNS, origin)
+NFENCE_PARTS = [("w", slice(0, 1), (-450.0, 650.0)), ("c", slice(1, 4), (60.0, 780.0)), ("e", slice(4, 5), (500.0, 900.0))]
+NFENCE_RUNS = [
+    # 121 St and the ramp, from the Hangar 40 lot fence's west end; gate across the north entrance road; the yards to the main hall's SW corner
+    ([(-654.4, 291.5), (-654.2, 433.4), (-626.4, 452.9), (-629.5, 462.0), (-640.0, 481.0), (-658.8, 502.6), (-659.5, 570.0),
+      (-656.5, 590.0), (-650.0, 610.0), (-641.0, 631.0), (-628.5, 650.5), (-611.0, 665.5), (-600.0, 673.5), (-586.4, 679.2), (-540.2, 689.9),
+      (-489.6, 698.7), (-420.0, 713.5), (-361.5, 745.6), (-356.2, 745.6), (-336.7, 727.0), (-324.3, 738.5), (-295.9, 712.0),
+      (-265.8, 666.8), (-216.0, 665.0), (-214.5, 668.5)],
+     [(-330.5, 732.7, 7.0)], 1),
+    # main hall's NE corner, past the apron's west side, to the narrow outbuilding's SW corner
+    ([(-43.2, 763.1), (-44.5, 800.0), (-46.0, 829.0), (-48.3, 832.5)], None, 1),
+    # from the outbuilding's east wall round the apron's north and east sides to east bay 3's NW corner
+    ([(-30.3, 850.0), (54.0, 850.0), (54.0, 722.0), (57.8, 720.1)], None, 1),
+    # east bay 3's NE corner, along the yards' south edge, up the service road's east side to Yellowhead Trail
+    ([(127.8, 720.1), (200.0, 707.5), (223.0, 706.6), (243.3, 721.0), (243.3, 950.1)], None, 1),
+    # Yellowhead's south verge, the storage lots' west side (gate where the track crosses) to the masts compound's NW corner
+    ([(243.3, 950.1), (300.0, 972.0), (350.0, 987.0), (399.0, 1002.0),
+      (450.0, 1014.0), (484.0, 1019.5), (520.0, 1018.0), (555.0, 1012.0), (626.0, 994.0), (697.0, 980.0), (753.3, 971.7),
+      (753.3, 594.5), (769.0, 595.0)],
+     [(753.3, 725.6, 4.0)], 1),
+]
+
+
+def north_fence(part):
+    """Barbed chain-link fence round the north end, one of NFENCE_PARTS: see NFENCE_RUNS."""
+    _, sl, origin = next(p for p in NFENCE_PARTS if p[0] == part)
+    return lambda: _fence_runs(NFENCE_RUNS[sl], origin)
+
+
 # (model name, comment, builder, lat, lon): origin = pole / pedestal base, heading 0
 DISPLAY = [
     ("cyxd_h14_sign", "Alberta Aviation Museum: black roadside sign with logo, LED panel and History Takes Flight board (Street View)", museum_sign, *_sign_pos()),
@@ -637,4 +675,7 @@ DISPLAY = [
      east_fence, 53.57248965775836 + EFENCE_O[1] / KY, -113.52043460802926 + EFENCE_O[0] / KX),
     ("cyxd_south_fence", "South fence: Kingsway and Princess Elizabeth Ave from the museum to the grey hangar south of Hangar 11 (2017 aerial, 2009-10 photos)",
      south_fence, 53.57248965775836 + SFENCE_O[1] / KY, -113.52043460802926 + SFENCE_O[0] / KX),
-]
+] + [("cyxd_north_fence_" + k, "North fence (%s): %s (2017 aerial)" % (k, w), north_fence(k), 53.57248965775836 + o[1] / KY, -113.52043460802926 + o[0] / KX)
+      for (k, _, o), w in zip(NFENCE_PARTS, ("121 St and the Yellowhead ramp to the north hangar complex",
+                                            "round the north complex's apron and the yards to Yellowhead Trail",
+                                            "Yellowhead Trail's south verge to the radio masts"))]

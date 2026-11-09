@@ -118,7 +118,10 @@ def main():
             quad = ext(dep)
             tip = (mid[0] + n[0] * dep, mid[1] + n[1] * dep)
             tgt = nearest_points(Point(tip), pave.difference(avoid))[1]
-            quad = unary_union([quad, LineString([tip, (tgt.x, tgt.y)]).buffer(wid / 2, cap_style=2)]).difference(avoid)
+            # convex hull of forecourt + strip: their bare union left two triangular notches where the angled strip met the forecourt
+            # (user, 2026-11-09); then clipped back off the museum side and other buildings
+            others = unary_union([f2 for t2, f2 in feet.items() if t2 != title])
+            quad = unary_union([quad, LineString([tip, (tgt.x, tgt.y)]).buffer(wid / 2, cap_style=2)]).convex_hull.difference(avoid).difference(others)
             mode = "forecourt %.0f m + turn %.0f m" % (dep, Point(tip).distance(tgt))
         elif prefix in FILL:
             ahead = aprons.intersection(ext(FILL_M))

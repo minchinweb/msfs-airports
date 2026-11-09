@@ -1192,17 +1192,14 @@
 			</Apron>
 			<!-- front-door apron: Hangar 15 (Centennial Flight Centre) -->
 			<Apron parentGroupID="3" surface="{85D02B2B-08A1-452E-AB07-6D5AE7F52884}" drawSurface="TRUE" drawDetail="TRUE" localUV="TRUE" stretchUV="TRUE" flipUV="FALSE" priority="1" tiling="25.000000" heading="0.000000" falloff="0.100000" opacity="255" groundMerging="TRUE" excludeVegetationAround="TRUE" excludeVegetationInside="TRUE" isRectangle="FALSE">
-				<Vertex lat="53.56645008941304" lon="-113.51679428087434"/>
-				<Vertex lat="53.56645008941304" lon="-113.51711720435704"/>
-				<Vertex lat="53.56647483051991" lon="-113.51715464128596"/>
-				<Vertex lat="53.56673357706733" lon="-113.51667171507323"/>
-				<Vertex lat="53.56661328384018" lon="-113.51648969375066"/>
-				<Vertex lat="53.56659174459071" lon="-113.51652989474378"/>
+				<Vertex lat="53.56670061741751" lon="-113.51671742438778"/>
+				<Vertex lat="53.56673012844874" lon="-113.51666234481016"/>
 				<Vertex lat="53.56660112267388" lon="-113.51631182241530"/>
 				<Vertex lat="53.56643374604248" lon="-113.51629149436873"/>
 				<Vertex lat="53.56645008941304" lon="-113.51630120919003"/>
-				<Vertex lat="53.56645008941304" lon="-113.51672704924668"/>
-				<Vertex lat="53.56648391056648" lon="-113.51673115685702"/>
+				<Vertex lat="53.56645008941304" lon="-113.51711720435704"/>
+				<Vertex lat="53.56647483051991" lon="-113.51715464128596"/>
+				<Vertex lat="53.56670529459983" lon="-113.51672450165165"/>
 			</Apron>
 			<!-- front-door apron: Hangar 15 east wing -->
 			<Apron parentGroupID="3" surface="{85D02B2B-08A1-452E-AB07-6D5AE7F52884}" drawSurface="TRUE" drawDetail="TRUE" localUV="TRUE" stretchUV="TRUE" flipUV="FALSE" priority="1" tiling="25.000000" heading="0.000000" falloff="0.100000" opacity="255" groundMerging="TRUE" excludeVegetationAround="TRUE" excludeVegetationInside="TRUE" isRectangle="FALSE">
@@ -2092,6 +2089,18 @@
 	<!-- South fence: Kingsway and Princess Elizabeth Ave from the museum to the grey hangar south of Hangar 11 (2017 aerial, 2009-10 photos) -->
 	<SceneryObject lat="53.56529541" lon="-113.51136705" alt="0.00000000000000" pitch="0.000000" bank="0.000000" heading="0" imageComplexity="VERY_SPARSE" altitudeIsAgl="TRUE" snapToGround="TRUE" snapToNormal="FALSE">
 		<LibraryObject name="{5B58D002-9BD1-539B-BA67-CEED4254F558}" scale="1.000000"/>
+	</SceneryObject>
+	<!-- North fence (w): 121 St and the Yellowhead ramp to the north hangar complex (2017 aerial) -->
+	<SceneryObject lat="53.57833498" lon="-113.52723527" alt="0.00000000000000" pitch="0.000000" bank="0.000000" heading="0" imageComplexity="VERY_SPARSE" altitudeIsAgl="TRUE" snapToGround="TRUE" snapToNormal="FALSE">
+		<LibraryObject name="{CB3D4AA5-4E35-572F-86C3-9C5E1C6C5628}" scale="1.000000"/>
+	</SceneryObject>
+	<!-- North fence (c): round the north complex's apron and the yards to Yellowhead Trail (2017 aerial) -->
+	<SceneryObject lat="53.57950405" lon="-113.51952785" alt="0.00000000000000" pitch="0.000000" bank="0.000000" heading="0" imageComplexity="VERY_SPARSE" altitudeIsAgl="TRUE" snapToGround="TRUE" snapToNormal="FALSE">
+		<LibraryObject name="{E02B476A-C47C-5F75-9788-C3DBD4B3F067}" scale="1.000000"/>
+	</SceneryObject>
+	<!-- North fence (e): Yellowhead Trail's south verge to the radio masts (2017 aerial) -->
+	<SceneryObject lat="53.58058318" lon="-113.51287831" alt="0.00000000000000" pitch="0.000000" bank="0.000000" heading="0" imageComplexity="VERY_SPARSE" altitudeIsAgl="TRUE" snapToGround="TRUE" snapToNormal="FALSE">
+		<LibraryObject name="{29F4D668-C0E9-50B6-A897-BECFF139A15D}" scale="1.000000"/>
 	</SceneryObject>
 	<!-- XD NDB station (Street View 2009): fenced lot, mast, shed -->
 	<SceneryObject lat="53.6436004638671900" lon="-113.5130004882812500" alt="0.00000000000000" pitch="0.000000" bank="0.000000" heading="0" imageComplexity="VERY_SPARSE" altitudeIsAgl="TRUE" snapToGround="TRUE" snapToNormal="FALSE">
