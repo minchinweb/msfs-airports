@@ -81,7 +81,7 @@
   {
    "bufferView": 0,
    "componentType": 5126,
-   "count": 39880,
+   "count": 44200,
    "type": "VEC3",
    "min": [
     -121.66000000000003,
@@ -97,19 +97,19 @@
   {
    "bufferView": 1,
    "componentType": 5126,
-   "count": 39880,
+   "count": 44200,
    "type": "VEC3"
   },
   {
    "bufferView": 2,
    "componentType": 5126,
-   "count": 39880,
+   "count": 44200,
    "type": "VEC2"
   },
   {
    "bufferView": 3,
    "componentType": 5123,
-   "count": 59820,
+   "count": 66300,
    "type": "SCALAR"
   }
  ],
@@ -117,28 +117,28 @@
   {
    "buffer": 0,
    "byteOffset": 0,
-   "byteLength": 478560
+   "byteLength": 530400
   },
   {
    "buffer": 0,
-   "byteOffset": 478560,
-   "byteLength": 478560
+   "byteOffset": 530400,
+   "byteLength": 530400
   },
   {
    "buffer": 0,
-   "byteOffset": 957120,
-   "byteLength": 319040
+   "byteOffset": 1060800,
+   "byteLength": 353600
   },
   {
    "buffer": 0,
-   "byteOffset": 1276160,
-   "byteLength": 119640
+   "byteOffset": 1414400,
+   "byteLength": 132600
   }
  ],
  "buffers": [
   {
    "uri": "cyxd_west_fence.bin",
-   "byteLength": 1395800
+   "byteLength": 1547000
   }
  ]
 }

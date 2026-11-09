@@ -35,6 +35,11 @@ DEPTH = {}  # fixed depths (none now; Hangar 38 is served by extending the hand-
 GROW = {"Hangar 8 (": 6.0, "Hangar 11 (": 6.0, "Hangar 18 (": 4.0}  # apron grows out until this clearance (m) from the next building (user: almost to the hangar beyond / the tower)
 TO_TAXI = ("Hangar 21 (",)  # runs out to the taxiway (terminal: jets)
 TURN = {"Hangar 15 (": (18.0, 22.0)}  # forecourt depth, strip width: out of the door, then a turn to the taxiway (no strip through Hangar 14)
+# paved out to the apron ahead: the convex hull of the door wall and the hand-written aprons straight ahead of it (within FILL_M), so
+# the whole door opens onto the ramp.  Hangar 30: apron "I" of the 2007 aerodrome chart (user, 2026-11-09), whose west edge runs ~20 deg
+# off the door wall, so most of the door saw no pavement straight ahead and got only a forecourt and link.
+FILL = ("Hangar 30 (",)
+FILL_M = 80.0
 KEEP_CLEAR = ("Hangar 14 (",)  # museum: no apron towards it; a fence line stands between it and Hangar 15
 KEEP_CLEAR_M = 12.0
 # 2026-11-03: and keep off the museum's side of its fence (display_aircraft.FENCE_RUNS, airport frame): Hangar 15's 18 m forecourt reached
@@ -115,6 +120,12 @@ def main():
             tgt = nearest_points(Point(tip), pave.difference(avoid))[1]
             quad = unary_union([quad, LineString([tip, (tgt.x, tgt.y)]).buffer(wid / 2, cap_style=2)]).difference(avoid)
             mode = "forecourt %.0f m + turn %.0f m" % (dep, Point(tip).distance(tgt))
+        elif prefix in FILL:
+            ahead = aprons.intersection(ext(FILL_M))
+            others = unary_union([f2 for t2, f2 in feet.items() if t2 != title])
+            near = [nearest_points(Point(p), aprons)[1] for p in (a, b)]  # also close the slivers beside the door wall's ends
+            quad = unary_union([LineString([a, b]), ahead] + near).convex_hull.difference(others)
+            mode = "fill to apron (%.0f m2 ahead)" % ahead.area
         elif prefix in TO_TAXI:
             dmax = 0
             for k in range(1, 11):

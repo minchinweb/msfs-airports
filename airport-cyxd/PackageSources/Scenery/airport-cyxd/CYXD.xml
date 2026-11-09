@@ -1215,18 +1215,11 @@
 			</Apron>
 			<!-- front-door apron: Hangar 30 (blue-grey steel hangar, 60 Flight Rd NW, KMC; OSM -->
 			<Apron parentGroupID="3" surface="{85D02B2B-08A1-452E-AB07-6D5AE7F52884}" drawSurface="TRUE" drawDetail="TRUE" localUV="TRUE" stretchUV="TRUE" flipUV="FALSE" priority="1" tiling="25.000000" heading="0.000000" falloff="0.100000" opacity="255" groundMerging="TRUE" excludeVegetationAround="TRUE" excludeVegetationInside="TRUE" isRectangle="FALSE">
-				<Vertex lat="53.57110597158177" lon="-113.52697192142635"/>
 				<Vertex lat="53.57138841933612" lon="-113.52643541695053"/>
-				<Vertex lat="53.57130759677633" lon="-113.52631525009880"/>
-				<Vertex lat="53.57102514902196" lon="-113.52685175457462"/>
-			</Apron>
-			<!-- front-door apron: Hangar 30 (blue-grey steel hangar, 60 Flight Rd NW, KMC; OSM -->
-			<Apron parentGroupID="3" surface="{85D02B2B-08A1-452E-AB07-6D5AE7F52884}" drawSurface="TRUE" drawDetail="TRUE" localUV="TRUE" stretchUV="TRUE" flipUV="FALSE" priority="1" tiling="25.000000" heading="0.000000" falloff="0.100000" opacity="255" groundMerging="TRUE" excludeVegetationAround="TRUE" excludeVegetationInside="TRUE" isRectangle="FALSE">
-				<Vertex lat="53.57121359507961" lon="-113.52622618189578"/>
-				<Vertex lat="53.57130759677633" lon="-113.52631525009880"/>
-				<Vertex lat="53.57140159847305" lon="-113.52640431830184"/>
-				<Vertex lat="53.57143780074586" lon="-113.52629641464969"/>
-				<Vertex lat="53.57124979735242" lon="-113.52611827824363"/>
+				<Vertex lat="53.57143571760304" lon="-113.52629444083651"/>
+				<Vertex lat="53.57092528045957" lon="-113.52574682281485"/>
+				<Vertex lat="53.57090898851478" lon="-113.52579535608579"/>
+				<Vertex lat="53.57110597158177" lon="-113.52697192142635"/>
 			</Apron>
 			<!-- END hangar aprons -->
 		</Aprons>

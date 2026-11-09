@@ -512,9 +512,14 @@ WFENCE_O = (-560.0, 150.0)  # model origin, airport frame
 WFENCE_RUNS = [
     # perimeter: from Hangar 38's south corner, SW in line with its SE face to Flight Line Rd, then the road's airside edge round the curve.
     # The 2017 road and fence go on NE over the old 04 end (a loop on the runway, then back towards Hangar 30), but we keep runway 04/22
-    # from an earlier period, so the run stops 35 m short of its end (user, 2026-11-08).
+    # from an earlier period, so the run leaves the road 35 m short of its end (user, 2026-11-08).  User, 2026-11-09: link it to Hangar
+    # 30's yard round the far side of the 04 end: south across Flight Line Rd (gate), along the 2017 fence on the south lot's edge and the
+    # grass bank, across the access road at its gate arms (gate), past the island to the sliding gate at Hangar 30's west corner (gate).
+    # Every point is either beyond the runway end or 33 m+ off its centre line (half-width 30.5 m).
     ([(-620.0, 45.6), (-631.0, 36.5), (-628.5, 26.0), (-629.0, 10.0), (-629.6, -10.0), (-629.5, -20.0), (-627.5, -30.0), (-621.8, -42.0),
-      (-617.4, -54.4), (-606.7, -68.6), (-589.0, -83.7), (-576.5, -92.6)], None, -1),
+      (-617.4, -54.4), (-606.7, -68.6), (-589.0, -83.7), (-576.5, -92.6), (-571.8, -124.7), (-556.7, -124.2), (-546.1, -128.2),
+      (-533.6, -135.3), (-528.3, -140.6), (-512.3, -133.9), (-498.1, -127.4), (-494.6, -125.1), (-481.1, -122.3)],
+     [(-573.6, -107.9, 12.0), (-520.3, -137.1, 6.0), (-488.2, -123.8, 6.0)], -1),
     # Hangar 39's yard: from its east corner NW along the grass edge, round the small lot NE of Hangar 40 (gate in its SE side), SW along
     # Hangar 40's hall, across the lane to Hangar 39's back wing (3 m off it), along the wing, round its west corner and SE to Hangar 38's
     # north corner (gate, 2014 photo)
