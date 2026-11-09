@@ -510,13 +510,11 @@ def museum_fence():
 # line with the building's south face.
 WFENCE_O = (-560.0, 150.0)  # model origin, airport frame
 WFENCE_RUNS = [
-    # perimeter: from Hangar 38's south corner, SW in line with its SE face to Flight Line Rd, then the road's airside edge round the curve,
-    # NE up the road's NW side to the turning loop, round the loop and back SW down the road's SE side towards Hangar 30 (not modelled)
+    # perimeter: from Hangar 38's south corner, SW in line with its SE face to Flight Line Rd, then the road's airside edge round the curve.
+    # The 2017 road and fence go on NE over the old 04 end (a loop on the runway, then back towards Hangar 30), but we keep runway 04/22
+    # from an earlier period, so the run stops 35 m short of its end (user, 2026-11-08).
     ([(-620.0, 45.6), (-631.0, 36.5), (-628.5, 26.0), (-629.0, 10.0), (-629.6, -10.0), (-629.5, -20.0), (-627.5, -30.0), (-621.8, -42.0),
-      (-617.4, -54.4), (-606.7, -68.6), (-589.0, -83.7), (-576.5, -92.6), (-560.5, -101.5), (-546.3, -107.7), (-532.1, -110.4),
-      (-515.0, -109.3), (-500.0, -106.6), (-473.4, -94.2), (-452.1, -72.9), (-429.0, -49.9), (-405.9, -23.2), (-399.7, -9.0),
-      (-391.7, 0.7), (-379.3, 2.5), (-369.6, -3.7), (-366.6, -16.1), (-371.3, -28.6), (-384.6, -36.5), (-398.8, -43.6),
-      (-411.3, -55.2), (-420.1, -64.1), (-431.7, -77.4), (-459.2, -103.1), (-466.0, -110.0)], None, -1),
+      (-617.4, -54.4), (-606.7, -68.6), (-589.0, -83.7), (-576.5, -92.6)], None, -1),
     # Hangar 39's yard: from its east corner NW along the grass edge, round the small lot NE of Hangar 40 (gate in its SE side), SW along
     # Hangar 40's hall, across the lane to Hangar 39's back wing (3 m off it), along the wing, round its west corner and SE to Hangar 38's
     # north corner (gate, 2014 photo)
@@ -575,7 +573,9 @@ EFENCE_RUNS = [
     ([(760.4, -204.0), (775.3, -204.0)], None, 0),  # spur to Hangar 8's NW corner
     # the yard south of Hangar 11: north side, and the east side from Hangar 11 down along the road
     ([(757.0, -410.2), (842.0, -410.2)], None, 0),
-    ([(842.0, -392.5), (842.0, -471.4), (866.8, -497.0), (888.0, -529.0)], None, 0),
+    # the diagonal follows the yard's curb on the Bing imagery the sim uses (2026-11-08): it sits about 3 m SW of the 2017 Wayback line,
+    # which put the fence on the road in the sim
+    ([(842.0, -392.5), (842.0, -471.4), (864.6, -498.8), (885.6, -530.8)], None, 0),
     # Hangar 8 to Hangar 11, gate
     ([(822.0, -271.3), (822.0, -298.8), (838.0, -298.8), (838.0, -313.8)], [(838.0, -306.3, 3.0)], 0),
 ]
@@ -601,7 +601,7 @@ SFENCE_RUNS = [
       (808.3, -901.2), (880.5, -848.4), (827.5, -773.0), (791.6, -721.9), (776.0, -720.6), (775.4, -523.8)],
      [(789.5, -917.2, 4.0), (877.2, -850.6, 2.0)], -1),
     # east side of the grey hangar: on from the east fence's end down the road edge, then the gate bar across the drive to the hangar
-    ([(888.0, -529.0), (894.7, -551.5), (873.8, -551.5)], [(884.0, -551.5, 4.0)], 0),
+    ([(885.6, -530.8), (894.7, -551.5), (873.8, -551.5)], [(884.0, -551.5, 4.0)], 0),
 ]
 
 

@@ -114,6 +114,9 @@ CAR_PARKS += tuple((t, [_uv(x, y) for x, y in ((x0, y0), (x1, y0), (x1, y1), (x0
 ))
 NE_GATES_S = (45.0, 86.0, 127.0)  # along the terminal's NE face from its NW corner; bays in hangars.py are at x = s - 86
 GATE_OUT, ROOT_AHEAD = 22.6, 25.0  # spot distance from the face, jetway root distance ahead of the spot
+# GATE 1 (user, 2026-11-08): at the old g7 position the spot was 28.4 m from the NW end wall and a 777 (parked centred on the spot, nose
+# ~37 m ahead) stood 9 m inside the terminal.  The spot moves back along its heading to 44 m from the wall; the Megalink stays where it was.
+GATE1_BACK = 15.6
 SNAP = 12.0  # a connector joins an existing node if the projection lies this close to one
 
 # old hand-placed positions kept (they were fine, only their types change): (lat, lon, heading)
@@ -182,12 +185,14 @@ def main():
 
     spots = []  # dicts: n(ame), num, t(ype), r, xy, h, jw, join
 
-    def add(name, t, r, pos, h, jw=None, join=None, num=None, heli=False):
-        spots.append(dict(name=name, t=t, r=r, xy=pos, h=h, jw=jw, join=join, heli=heli))
+    def add(name, t, r, pos, h, jw=None, join=None, num=None, heli=False, root=ROOT_AHEAD):
+        spots.append(dict(name=name, t=t, r=r, xy=pos, h=h, jw=jw, join=join, heli=heli, root=root))
 
     # --- terminal: wide-body gate on the NW end wall, three narrow-body gates on the NE face
     g7 = xy(OLD["g7"][0], OLD["g7"][1])
-    add("GATE", "GATE_HEAVY", 36.0, g7, OLD["g7"][2], "mega", join="85")
+    h7 = math.radians(OLD["g7"][2])
+    g7 = (g7[0] - GATE1_BACK * math.sin(h7), g7[1] - GATE1_BACK * math.cos(h7))
+    add("GATE", "GATE_HEAVY", 36.0, g7, OLD["g7"][2], "mega", join="85", root=ROOT_AHEAD + GATE1_BACK)
     a, b, n = wall("Hangar 21 (", 51.0)
     for s, j in zip(NE_GATES_S, ("22", "22", "23")):
         pos = (a[0] + (b[0] - a[0]) / math.dist(a, b) * s + n[0] * GATE_OUT, a[1] + (b[1] - a[1]) / math.dist(a, b) * s + n[1] * GATE_OUT)
@@ -386,7 +391,7 @@ def main():
         if not s["jw"]:
             continue
         h = math.radians(s["h"])
-        la, lo_ = ll(s["xy"][0] + ROOT_AHEAD * math.sin(h), s["xy"][1] + ROOT_AHEAD * math.cos(h))
+        la, lo_ = ll(s["xy"][0] + s["root"] * math.sin(h), s["xy"][1] + s["root"] * math.cos(h))
         guid = MEGALINK if s["jw"] == "mega" else LINK
         jw_lines += ['\t\t<Jetway gateName="GATE" parkingNumber="%d" suffix="NONE">' % s["num"],
                      "\t\t\t<!--SceneryObject name: Jetway_%s-->" % ("Megalink" if s["jw"] == "mega" else "Link"),
