@@ -27,7 +27,7 @@ DOORS = [
     ("Dark-blue gabled", 180), ("Hangar 19 (", 52), ("Hangar 20 (", 48),
     ("North hangar complex: two sawtooth", 180), ("North hangar complex: shop", 180), ("North hangar complex: annex", 180),
     ("North hangar complex: east bay 3", 180), ("North hangar complex: narrow", 180),
-    ("Aerocentre", 48), ("Shell hangar", 48), ("Hangar 15 (", 138), ("Hangar 15 east wing", 48),
+    ("Aerocentre", 48), ("Shell hangar", 48), ("Hangar 15 (", 138), ("Hangar 15 east wing", 48), ("Hangar 30 (", 138.5),
 ]
 # held back until the user confirms the door wall (see STATUS.md: the shop and annex are advised against)
 HOLD = ("Hangar 3 (", "Dark-blue gabled", "Second hangar", "North hangar complex: shop", "North hangar complex: annex")

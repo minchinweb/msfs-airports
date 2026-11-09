@@ -1,4 +1,4 @@
-"""CYXD hangars on the east line (3-8, 11), Hangar 14 (museum), Hangar 18 (Flying Club), Hangar 20 (Esso) and the west-side hangars 38 / 39 / 40.
+"""CYXD hangars on the east line (3-8, 11), Hangar 14 (museum), Hangar 18 (Flying Club), Hangar 20 (Esso) and the west-side hangars 30 / 38 / 39 / 40.
 
 Imported by gen_buildings.py (main() calls place()).  Footprints, centres and headings come from the OSM outlines as they were
 mapped in 2016 (Overpass `date:` query) cross-checked against Esri World Imagery Wayback 2014-02 tiles; see
@@ -958,6 +958,164 @@ def hangar40():
     da.rod3(m, da.ID, (8.3, 5.4, zw), (8.3, 7.6, zw + 1.4), 0.07, GREY)
     da.tex_flag(m, [(8.3, 7.55, zw + 1.35), (10.1, 7.55, zw + 1.35), (10.1, 6.65, zw + 1.35), (8.3, 6.65, zw + 1.35)], "alberta",
                 (9.2, 7.1, zw))
+    m.mirror_x()
+    return m
+
+
+def _lean_to(m, x0, x1, z_wall, z_out, h_hi, h_lo, sw_wall, sw_roof):
+    """Mono-pitch annex against a wall at z = z_wall (x0..x1 wide), sloping down to its eave h_lo at z = z_out."""
+    za, zb = min(z_wall, z_out), max(z_wall, z_out)
+    m.box(x0, x1, 0, h_lo, za, zb, sw_wall, top=False)
+    c = ((x0 + x1) / 2, h_lo - 1.0, (za + zb) / 2)
+    for x in (x0, x1):  # gable triangles on the two ends
+        m.poly([(x, h_lo, z_out), (x, h_lo, z_wall), (x, h_hi, z_wall)], sw_wall, c)
+    o = 0.3 if z_out > z_wall else -0.3  # roof sheet overhangs the eave
+    m.poly([(x0 - 0.15, h_lo - 0.05, z_out + o), (x1 + 0.15, h_lo - 0.05, z_out + o), (x1 + 0.15, h_hi + 0.06, z_wall),
+            (x0 - 0.15, h_hi + 0.06, z_wall)], sw_roof, c)
+
+
+def _lean_to_x(m, z0, z1, x_wall, x_out, h_hi, h_lo, sw_wall, sw_roof):
+    """As _lean_to, against a wall at x = x_wall (z0..z1 long), sloping down to h_lo at x = x_out."""
+    xa, xb = min(x_wall, x_out), max(x_wall, x_out)
+    m.box(xa, xb, 0, h_lo, z0, z1, sw_wall, top=False)
+    c = ((xa + xb) / 2, h_lo - 1.0, (z0 + z1) / 2)
+    for z in (z0, z1):
+        m.poly([(x_out, h_lo, z), (x_wall, h_lo, z), (x_wall, h_hi, z)], sw_wall, c)
+    o = 0.3 if x_out > x_wall else -0.3
+    m.poly([(x_out + o, h_lo - 0.05, z0 - 0.15), (x_out + o, h_lo - 0.05, z1 + 0.15), (x_wall, h_hi + 0.06, z1 + 0.15),
+            (x_wall, h_hi + 0.06, z0 - 0.15)], sw_roof, c)
+
+
+def _tyre(m, cx, cy, cz, r_out, r_in, half_w, n=28):
+    """Upright tyre with its axle along X (a giant haul-truck tyre on show): tread, sidewalls and a grey hub."""
+    P = lambda x, r, a: (x, cy + r * math.sin(a), cz + r * math.cos(a))
+    for k in range(n):
+        a0, a1 = 2 * math.pi * k / n, 2 * math.pi * (k + 1) / n
+        m.poly([P(cx - half_w, r_out, a0), P(cx + half_w, r_out, a0), P(cx + half_w, r_out, a1), P(cx - half_w, r_out, a1)], DARK, (cx, cy, cz))
+        for s in (-1, 1):
+            x = cx + s * half_w
+            m.poly([P(x, r_in, a0), P(x, r_out, a0), P(x, r_out, a1), P(x, r_in, a1)], DARK, (cx - s * 5.0, cy, cz))
+            m.poly([P(x - s * 0.15, 0.0, a0), P(x - s * 0.15, r_in, a0), P(x - s * 0.15, r_in, a1)], GREY, (cx - s * 5.0, cy, cz))  # hub
+
+
+def hangar30():
+    """Hangar 30: the blue-grey steel hangar with the "30" roundels and the KMC sign, 60 Flight Rd NW / 41 Flight Line Rd NW, between the
+    west turning loop and the terminal car park (OSM 2016 way 325241205).  Doors face SE to its apron slab (heading 138.5); Flight Line Rd
+    runs along the NW (back) face.  Plan measured 2026-11-08 on the Esri Wayback 2017-05-03 zoom-20 tiles (release 784) and checked against
+    the OSM 2016 outline, which has the same parts and sizes to 0.5 m (it sits ~4 m further NW, a registration offset).  The raw roof outline
+    is used with no lean correction: the D-shaped pad at the front E corner is ground-level and touches the roof's front edge, so the lean
+    here is under ~1 m (the garage's 0.2-0.3 m per metre does not fit this spot).
+      * hall: 37.4 x 33.2 m, low-pitch gable, ridge front to back on its centre line (the 2017 roof is two-tone either side of it)
+      * NE office strip: 10.0 m wide, two storeys, flat roof with five units; it stops 3.6 m short of the door wall, where a low L-shaped
+        block takes over and runs 3.9 m out in front of the door wall at the E corner (an entrance), with the D-shaped pad beside it
+      * NW (back) face: a mono-pitch annex, 13.0 x 5.8 m, flush with the SW wall (lower blue office, four windows: Street View h30-13, -07)
+      * SW face: a low lean-to strip, 3.0 m deep along the front 18 m and 1.6 m deep further back (OSM; containers in h30-07)
+      * a pale-blue portable office off the S corner (OSM 325243243; h30-07), the big tyre on its plinth by Flight Line Rd (h30-08, the
+        "dome" in h30-09), and the KMC pylon at the yard entrance (h30-12; aerial)
+    Heights from the 2010-04 Street View photos (user: use the measurements), scaled on the upper-floor door (2.1 m) on the stair in h30-13
+    and cross-checked by the eave / ridge / strip ratios in h30-07: hall eave 8.5 m, ridge 11.2 m, strip 7.5 m (upper floor at 3.5 m), back
+    annex 3.0 -> 4.4 m, the roll-up door in the back face 4.2 m.
+    The SE (apron) face is not in any photo: plain full-width sliding doors and a roundel on the gable are a GUESS (STATUS.md).
+    Pre-mirror +X = bearing 228.5 (SW), +Z = bearing 138.5 (front)."""
+    m = fmesh()
+    hx0, hx1, z0, z1 = -13.7, 23.7, -16.6, 16.6     # hall
+    sx0, sx1, sz1 = -23.7, -13.7, 13.0              # office strip (NE), ends at sz1
+    wh, rise, sh = 8.5, 2.7, 7.5
+    # hall: ribbed steel-blue walls, pale metal gable roof, dark eave trim
+    m.box(hx0, hx1, 0, wh, z0, z1, STEEL, top=False)
+    m.gable(hx0, hx1, wh, rise, z0, z1, along_z=True, sw_roof=LROOF, sw_wall=STEEL)
+    for x in (hx0 - 0.12, hx1):
+        m.box(x, x + 0.12, wh - 0.35, wh + 0.05, z0, z1, NAVY)
+    # front (SE) face: GUESS, no photo.  Six sliding leaves across 34.8 m, 7.0 m high, header, roundel on the gable above
+    dx0, dx1, DH = -12.4, 22.4, 7.0
+    m.box(dx0, dx1, 0, DH + 0.2, z1, z1 + 0.05, DARK)
+    leaves(m, z1, [dx0 + (dx1 - dx0) * i / 6 for i in range(7)], 0, DH, STEEL, post=DGREY)
+    m.box(dx0 - 0.3, dx1 + 0.3, DH, DH + 0.5, z1, z1 + 0.5, DGREY)
+    number_disc(m, (hx0 + hx1) / 2, 9.6, z1, (0, 1), 0.9, "30")
+    # back (NW) face: roll-up door, roundel high by the strip (h30-13: 1.25 m disc, centre 7.0 m), two wall lamps
+    m.box(-7.9, -4.3, 0, 4.2, z0 - 0.1, z0, RWHITE)
+    m.box(-8.1, -4.1, 4.2, 4.5, z0 - 0.35, z0, DGREY)
+    number_disc(m, hx0 + 1.0, 7.0, z0, (0, -1), 0.62, "30")
+    for xl in (-9.0, 6.0):
+        m.box(xl - 0.25, xl + 0.25, 6.6, 6.9, z0 - 0.3, z0, DGREY)
+    # SW face: roundel near the W corner and a round exhaust fan further along (h30-07)
+    number_disc(m, hx1, 7.3, z0 + 3.0, (1, 0), 0.62, "30")
+    fan = [(hx1 + 0.25, 6.3 + 0.55 * math.sin(2 * math.pi * k / 16), 9.0 + 0.55 * math.cos(2 * math.pi * k / 16)) for k in range(16)]
+    m.poly(fan, DGREY, (hx1 - 1.0, 6.3, 9.0))
+    m.box(hx1, hx1 + 0.25, 5.7, 6.9, 8.4, 9.6, STEEL)
+    # NE office strip: two storeys, flat roof behind a navy fascia; ground floor open for 2 m at the N corner (a post; h30-13)
+    m.box(sx0, sx1, 0, sh, z0 + 2.0, sz1, STEEL, top=False)
+    m.box(sx0 + 2.0, sx1, 0, 3.4, z0, z0 + 2.0, STEEL, top=False)
+    m.box(sx0, sx1, 3.4, sh, z0, z0 + 2.0, STEEL, top=False)
+    m.box(sx0 + 0.1, sx0 + 0.35, 0, 3.4, z0 + 0.1, z0 + 0.35, DGREY)
+    m.box(sx0, sx1, sh - 0.12, sh - 0.02, z0, sz1, LROOF)
+    parapet(m, sx0 - 0.08, sx1, z0 - 0.08, sz1 + 0.08, sh - 0.3, sh + 0.35, 0.22, NAVY)
+    for x, z in ((-19.0, -8.8), (-15.6, -5.4), (-15.8, 1.9), (-18.6, 7.6), (-15.6, 11.4)):  # roof units (2017 aerial)
+        m.box(x - 0.8, x + 0.8, sh, sh + 1.1, z - 0.9, z + 0.9, WHITE)
+    m.box(-15.9, -14.7, sh, sh + 0.4, -0.8, 1.4, PBFLAT)
+    # strip NE face (h30-08 / -09): eleven tall upper windows, a ground-floor row and two doors
+    rows_x(m, -1, sx0, z0 + 1.0, sz1 - 1.0, 4.1, 11, 1.15, 2.6)
+    rows_x(m, -1, sx0, z0 + 3.0, sz1 - 1.0, 1.0, 8, 1.5, 1.3)
+    for zd in (-12.0, 4.5):
+        m.box(sx0 - 0.08, sx0, 0, 2.2, zd, zd + 1.0, NAVY)
+    # strip NW face (h30-13): upper door at the stair head, a square two-pane window, a steel stair down toward the hall
+    m.box(-20.8, -19.8, 3.5, 5.6, z0 - 0.08, z0, NAVY)
+    m.window((0, 0, -1), (-16.1, 4.2, z0), (-1, 0, 0), 2.6, 2.3)
+    m.box(-22.0, -19.0, 3.35, 3.5, z0 - 1.3, z0, DGREY)                  # landing
+    for xa in (-21.95, -19.05):
+        m.box(xa - 0.04, xa + 0.04, 0, 3.5, z0 - 1.26, z0 - 1.18, DGREY)  # landing legs
+    for zs in (z0 - 0.15, z0 - 1.15):                                       # stringers and rails, landing to the ground at x -13.8
+        _bar_xy(m, -19.0, 3.45, -13.8, 0.0, zs - 0.06, zs, 0.1, DGREY)
+        _bar_xy(m, -19.0, 4.45, -13.8, 1.0, zs - 0.04, zs, 0.03, DGREY)
+    for k in range(18):
+        xs = -19.0 + 5.2 * (k + 0.5) / 18
+        ys = 3.5 * (1 - (k + 0.5) / 18)
+        m.box(xs - 0.15, xs + 0.15, ys - 0.04, ys, z0 - 1.12, z0 - 0.18, DGREY)
+    _bar_xy(m, -22.0, 4.45, -19.0, 4.45, z0 - 1.3, z0 - 1.26, 0.03, DGREY)
+    # low L-shaped block at the E corner: across the strip's end and out 3.9 m past the door wall (2017 aerial, OSM), entrance door
+    lh = 3.6
+    m.box(sx0 - 2.8, sx1, 0, lh, sz1, z1, STEEL, top=False)
+    m.box(sx0 - 2.8, sx0, 0, lh, z1, z1 + 3.9, STEEL, top=False)
+    m.box(sx0 - 2.8, sx1, lh - 0.1, lh, sz1, z1, LROOF)
+    m.box(sx0 - 2.8, sx0, lh - 0.1, lh, z1, z1 + 3.9, LROOF)
+    parapet(m, sx0 - 2.9, sx0 + 0.1, sz1, z1 + 4.0, lh - 0.2, lh + 0.3, 0.18, NAVY)
+    m.box(sx0 - 2.8, sx1, lh - 0.2, lh + 0.3, z1 - 0.18, z1, NAVY)
+    m.window((0, 0, 1), (-25.0, 0.0, z1 + 3.9), (1, 0, 0), 1.0, 2.2, frame=None)   # glazed door on the leg's front
+    rows_z(m, 1, z1, sx0, sx1, 1.0, 3, 1.4, 1.3)
+    # D-shaped pad by the entrance (2017 aerial): a low curved concrete kerb round a dark infill
+    D = [(-19.7 + 3.2 * math.cos(math.pi * k / 12), z1 + 0.05 + 3.2 * math.sin(math.pi * k / 12)) for k in range(13)]
+    for (xa, za_), (xb, zb_) in zip(D[:-1], D[1:]):
+        obox(m, (xa, za_), (xb, zb_), 0.0, 0.5, 0.12, PANEL)
+    m.poly([(x, 0.06, z) for x, z in D], DGREY, (-19.7, -1.0, z1 + 1.0))
+    # back annex (h30-13, -07): mono-pitch, blue walls, pale-blue metal roof, four windows on its NW face, a door on its SW end
+    ax0, ax1, az = 10.7, 23.7, z0 - 5.8
+    _lean_to(m, ax0, ax1, z0, az, 4.4, 3.0, STEEL, PBFLAT)
+    for xw in (13.0, 15.6, 18.8, 21.3):
+        m.window((0, 0, -1), (xw + 1.1, 1.7, az), (-1, 0, 0), 1.1, 0.9)
+    m.box(ax1, ax1 + 0.08, 0, 2.2, az + 1.0, az + 2.0, YELLOW)
+    # SW lean-to strip (OSM 2016; the 2017 roof): 3.0 m deep along the front, 1.6 m deep further back
+    _lean_to_x(m, -2.5, 15.7, hx1, hx1 + 3.0, 3.2, 2.6, STEEL, METAL)
+    _lean_to_x(m, -15.7, -3.9, hx1, hx1 + 1.6, 3.0, 2.6, STEEL, METAL)
+    m.box(hx1 + 3.0, hx1 + 3.08, 0, 2.2, 6.0, 7.0, NAVY)
+    # pale-blue portable office off the S corner (OSM 325243243; h30-07, right)
+    m.box(21.3, 27.1, 0, 2.7, z1 + 1.2, z1 + 3.6, PBLUE)
+    m.box(21.2, 27.2, 2.7, 2.85, z1 + 1.1, z1 + 3.7, GREY)
+    rows_z(m, 1, z1 + 3.6, 21.3, 27.1, 1.1, 3, 0.9, 0.9)
+    # roof vents on the hall (2017 aerial)
+    slope = lambda x, z: wh + rise * (1 - abs(x - (hx0 + hx1) / 2) / ((hx1 - hx0) / 2))
+    roof_vents(m, [(-5.3, -10.4), (-5.1, 7.8), (-9.7, 11.3), (8.5, -10.2), (14.6, 1.0), (8.7, 12.1), (19.4, 12.1)], slope)
+    # the giant tyre on its gravel plinth inside the yard fence by Flight Line Rd (h30-08; aerial), axle along the road (seen face-on from
+    # up the road in h30-09).  Its centre is 35.2 m from runway 04/22's centre line, 4.7 m outside the runway edge (user: keep it off the runway)
+    m.box(-15.4, -12.2, 0, 0.35, -41.6, -37.6, PANEL)
+    _tyre(m, -13.8, 0.35 + 1.8, -39.5, 1.8, 0.75, 0.65)
+    # KMC pylon on the grass at the north end of the yard's sliding gate, off the W corner (h30-08 / -12; 2017 aerial): grey frame, cream
+    # face; the lettering is suggested with red bars
+    px, pz = 39.5, -39.0
+    m.box(px - 1.1, px + 1.1, 0, 0.4, pz - 0.5, pz + 0.5, PANEL)
+    m.box(px - 1.0, px + 1.0, 0.4, 4.2, pz - 0.3, pz + 0.3, GREY)
+    for s in (-1, 1):
+        m.box(px - 0.85, px + 0.85, 1.0, 3.8, pz + s * 0.3, pz + s * 0.36, CREAM)
+        m.box(px - 0.6, px + 0.6, 3.0, 3.5, pz + s * 0.36, pz + s * 0.4, RED)
     m.mirror_x()
     return m
 
@@ -2147,6 +2305,8 @@ HANGARS = [
     ("cyxd_hangar39", "Hangar 39 (pale-blue double hall, OSM 230718901, beside Hangar 38)", hangar39, 53.574057, -113.5286471, 138, 96.2, 92.6),
     # 2026-11-03: centre of the measured 72.8 x 51.4 m plan (2017 / 2014 aerials); within 1 m of the old placement, which was only 46 m deep
     ("cyxd_hangar40", "Hangar 40 (Canadian Helicopters: white block, brick office, blue-roofed hall; OSM 230718900)", hangar40, 53.5749955, -113.5293974, 228, 72.8, 51.4),
+    # 2026-11-08: centre of the 47.4 x 33.2 m plan (hall + office strip) on the 2017 zoom-20 aerial, airport frame (-425.8, -125.7)
+    ("cyxd_hangar30", "Hangar 30 (blue-grey steel hangar, 60 Flight Rd NW, KMC; OSM 325241205)", hangar30, 53.5713590, -113.5268699, 138.5, 47.4, 33.2),
     ("cyxd_hangar21", "Hangar 21 (old terminal, OSM 230718907; traced from the 2017 imagery)", hangar21, 53.570940, -113.523178, 51, 162.0, 70.0),
     # centre = the old placement (53.570567, -113.524067) moved by GARAGE_SHIFT (7.2 m toward bearing 148, 1.75 m toward 58); 114 m deep with the stepped front
     ("cyxd_garage22", "Terminal parking garage (22; measured from the 2017 imagery)", garage22, 53.570520, -113.523987, 58, 116.0, 76.0),

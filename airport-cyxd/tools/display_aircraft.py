@@ -523,6 +523,13 @@ WFENCE_RUNS = [
       (-607.4, 136.3)], [(-511.8, 256.2, 3.0), (-619.6, 157.0, 2.5)], -1),
     # Hangar 40: the lot to its NW (cars in 2010, empty in 2017) against the yard and the helicopter apron, stopped past the pads
     ([(-654.4, 291.5), (-607.2, 336.6), (-594.8, 347.2), (-570.0, 369.2)], None, 1),
+    # Hangar 30's yard (user, 2026-11-09; 2017 zoom-20 aerial, Street View h30-07 / -08 / -12 / -13, barbed arms toward the road).  The
+    # diagonal sliding gate at the W corner is left open (the KMC pylon stands at its north end, in hangars.hangar30).  Flight Line Rd side:
+    # on the roadside grass 1.5 m in from the kerb, outside the big tyre (h30-08), NE until 1.8 m short of runway 04/22's edge (the road and
+    # fence were built over the old 04 end; the runway is kept, as for the perimeter run).
+    ([(-481.1, -122.3), (-474.0, -118.0), (-469.9, -109.8), (-458.0, -100.9), (-450.4, -92.1), (-446.4, -87.6), (-441.1, -83.2)], None, 1),
+    # lane side: from the gate SE between the airside lane and the building's SW lean-to, to the line of the door wall
+    ([(-474.0, -118.0), (-438.4, -159.0)], None, -1),
 ]
 
 
