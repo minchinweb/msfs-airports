@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ModelInfo guid="{0CCC30EE-244E-532D-A882-D694984D7B53}" version="1.1">
+	<LODS>
+		<LOD minSize="0" ModelFile="h28_cairn.gltf"/>
+	</LODS>
+</ModelInfo>

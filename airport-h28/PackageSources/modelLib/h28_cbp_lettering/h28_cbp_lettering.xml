@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ModelInfo guid="{2591DB3E-A95E-554D-8113-695B0F2F4492}" version="1.1">
+	<LODS>
+		<LOD minSize="0" ModelFile="h28_cbp_lettering.gltf"/>
+	</LODS>
+</ModelInfo>

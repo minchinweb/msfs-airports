@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ModelInfo guid="{F3954FCB-41DE-5300-BF91-03903D9DCFB2}" version="1.1">
+	<LODS>
+		<LOD minSize="0" ModelFile="h28_gate_border.gltf"/>
+	</LODS>
+</ModelInfo>

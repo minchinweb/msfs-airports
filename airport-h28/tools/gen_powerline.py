@@ -266,20 +266,18 @@ def main():
         name = f"h28_wire_feed{k + 1}"
         g = span(length, (), ground(b[1], b[2]) - ground(a[1], a[2]), ((0.0, DROP),)).save(ml / name, name)
         out.append(gf.obj(f"single wire, {a[0]} to {b[0]} ({length:.0f} m)", g, a[1], a[2], hd))
-    # lamps: (lat, lon, heading, road light?). Pole lights: four by each port's inspection lane (CBP: under its canopy east of the building; CBSA: either side of
-    # the drive-through bay, 8 m out from the north and south faces), arms pointing in over the lane
+    # lamps: (lat, lon, heading, road light?). Pole lights: four at the CBP port (gen_port.CBP_LAMPS: the car park and the
+    # inspection lanes) and four at the CBSA office, either side of the drive-through bay, 8 m out from the north and
+    # south faces, arms pointing in over the lane
     lamps = []
     for key, title, lat, lon, w, d, h, kind, wall, roof in gp.FOOTPRINTS:
-        if kind == "canopy":
-            cx, dz, sxs = lon + gp.DX + (w / 2 + 14) / LON, d / 2 + 5, (-9, 9)
+        if kind == "cbp":
+            lamps += [(lat + dz / LAT, lon + gp.DX + dx / LON, hd, False) for dx, dz, hd in gp.CBP_LAMPS]
         elif kind == "drive":
             cx, dz = lon + gp.DX + sum(gp.BAY) / 2 / LON, d / 2 + 8
             half = (gp.BAY[1] - gp.BAY[0]) / 2 + 2.5
-            sxs = (-half, half)
-        else:
-            continue
-        for sx, sz, hd in ((sxs[0], -dz, 0), (sxs[1], -dz, 0), (sxs[0], dz, 180), (sxs[1], dz, 180)):
-            lamps.append((lat + sz / LAT, cx + sx / LON, hd, False))
+            for sx, sz, hd in ((-half, -dz, 0), (half, -dz, 0), (-half, dz, 180), (half, dz, 180)):
+                lamps.append((lat + sz / LAT, cx + sx / LON, hd, False))
     lamps += [(lat, lon, hd, title) for title, lat, lon, hd in ROAD_LIGHTS]
     pole_lamp, road_lamp = lamp(8.0, 1.0, 8000, 165.0), lamp(10.0, 2.5, 12000, 165.0)
     beacon_lamp = lamp(10.0, 2.5, 12000, 165.0, True, wood=True)

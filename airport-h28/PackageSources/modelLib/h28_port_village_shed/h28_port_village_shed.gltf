@@ -75,35 +75,35 @@
   {
    "bufferView": 0,
    "componentType": 5126,
-   "count": 30,
+   "count": 178,
    "type": "VEC3",
    "min": [
-    -6.8,
+    -6.7,
     0.0,
-    -4.3
+    -2.95
    ],
    "max": [
-    6.8,
-    5.16,
-    4.3
+    6.7,
+    4.26,
+    2.95
    ]
   },
   {
    "bufferView": 1,
    "componentType": 5126,
-   "count": 30,
+   "count": 178,
    "type": "VEC3"
   },
   {
    "bufferView": 2,
    "componentType": 5126,
-   "count": 30,
+   "count": 178,
    "type": "VEC2"
   },
   {
    "bufferView": 3,
    "componentType": 5123,
-   "count": 42,
+   "count": 264,
    "type": "SCALAR"
   }
  ],
@@ -111,28 +111,28 @@
   {
    "buffer": 0,
    "byteOffset": 0,
-   "byteLength": 360
+   "byteLength": 2136
   },
   {
    "buffer": 0,
-   "byteOffset": 360,
-   "byteLength": 360
+   "byteOffset": 2136,
+   "byteLength": 2136
   },
   {
    "buffer": 0,
-   "byteOffset": 720,
-   "byteLength": 240
+   "byteOffset": 4272,
+   "byteLength": 1424
   },
   {
    "buffer": 0,
-   "byteOffset": 960,
-   "byteLength": 84
+   "byteOffset": 5696,
+   "byteLength": 528
   }
  ],
  "buffers": [
   {
    "uri": "h28_port_village_shed.bin",
-   "byteLength": 1044
+   "byteLength": 6224
   }
  ]
 }

@@ -5,10 +5,12 @@ polygons in H28.xml (between BEGIN/END markers).
 Footprints come from OSM (Overpass, 2026-10-27; see FOOTPRINTS). The sim's aerial agrees with OSM here (road centre at
 lon -112.7884, checked on a DevMode top-down shot 2026-10-28), so DX is 0; an earlier 246 m shift came from a runway cut
 too short at the west. Heights and colours are estimates from the 2025 Street View photos (docs/h28/street-view-photos).
-The CBP port (2012) has a drive-through canopy. The CBSA office (seen close up from the US parking, so it is modelled
-in detail; see drive_through) is a grey-sided flat-roofed block on the road side, an open north-south vehicle bay, and a
-cream annex with red gable ends on the east, with the flag and the radio mast; it sits 6 m east of the OSM footprint so
-the sim's road traffic clears it. Its garages and shed have sectional doors on the road side (see garage).
+The CBP port was rebuilt in 2012 (see cbp_port; photos older than that show the 1962 brick station). The CBSA office
+(seen close up from the US parking, so it is modelled in detail; see drive_through) is a flat-roofed block with a glazed
+screen wall on the road side and an open north-south vehicle bay behind it, and a cream annex with red gable ends on the
+east, with the flag and the radio mast. It sits 6.7 m east of the OSM footprint so the sim's road traffic, which runs
+where the real bay is, passes west of it. Its garages and shed have sectional doors on the road side (see garage).
+Windows, the bay ceiling and lamp lenses use the glow material: palette colour by day, lit at night only.
 Model frame: origin on the ground at the footprint centre, X = east, Z = north (mirrored at the end, as in CYXD)."""
 import json
 import math
@@ -28,26 +30,44 @@ LAT, LON = 111200.0, 73030.0
 DX = 0.0  # OSM -> sim aerial shift (none: they agree)
 
 # palette swatches
-WALL, TRIM, ROOF, DARK, GREEN, BROWN, REDR, WHITE, GREY, GLOW, STEEL, ORANGE, SIDING, CREAM, RED, NAVY, YELLOW, SLATE = range(18)
+(WALL, TRIM, ROOF, DARK, GREEN, BROWN, REDR, WHITE, GREY, GLOW, STEEL, ORANGE, SIDING, CREAM, RED, NAVY, YELLOW, SLATE,
+ GLASS, CHAR, TAN, METAL, HOUSE, BLUE, STUCCO) = range(25)
 PALETTE = [(208, 200, 184), (150, 148, 142), (70, 72, 78), (30, 32, 36), (52, 96, 70), (110, 78, 56), (140, 54, 44),
-           (232, 232, 228), (170, 174, 176), (255, 224, 150), (120, 128, 134), (240, 110, 20), (188, 194, 196),
-           (226, 212, 168), (214, 36, 36), (30, 44, 60), (232, 188, 40), (104, 112, 124)]
+           (232, 232, 228), (170, 174, 176), (255, 224, 150), (120, 128, 134), (240, 110, 20), (208, 211, 206),
+           (226, 212, 168), (214, 36, 36), (30, 44, 60), (232, 188, 40), (104, 112, 124),
+           # added 2026-11-16: tinted glass (dark by day, lit at night), charcoal siding, tan siding, blue-grey metal roof,
+           # grey-blue house siding, flag blue, tan stucco
+           (46, 56, 64), (84, 86, 90), (198, 188, 166), (98, 116, 136), (166, 174, 182), (38, 58, 122), (190, 172, 138)]
 SW = 16
+# Night-only emissive colour of the glow material (ASOBO_material_day_night_switch; the SDK's Blender exporter writes
+# emissiveFactor = colour x scale, default scale 1000; CYXD's office windows use the same value).
+NIGHT_GLOW = [180.0, 140.0, 85.0]
 
-# name: (OSM way, lat, lon centroid, width E-W m, depth N-S m, wall height, kind, wall, roof)
+# name: (title, lat, lon, width E-W m, depth N-S m, wall height, kind, wall, roof)
+# Positions are OSM centroids (Overpass, 2026-10-27) except:
+# - cbsa_main: the Esri clip (docs/h28/fetch_esri.py, cbsa-port.png) shows a 7.6 x 7.8 m flat-roofed block and an
+#   8.8 x 8.8 m annex, 16.4 m east-west in all (OSM's 15 x 13 m is too deep). It stays pulled east of the OSM centroid so
+#   the sim's road traffic, which runs where the real bay is, passes west of the building: 6.7 m keeps the west face
+#   where the earlier, 6 m shifted, model had it.
+# - cbp_main: the 2012 port, one model for the whole building (see cbp_port). Its centre is read off the Esri clip
+#   (us-port.png) and moved 5 m north and 2 m west, the shift that puts the white garage in that clip on its OSM
+#   footprint. OSM's "main" (28 x 22 m) and "booth" (8 x 15 m) ways do not match the 2012 building's outline.
 FOOTPRINTS = [
-    ("cbsa_main", "CBSA main building (OSM way 1147679785)", 48.999586, -112.787966 + 6 / 73030, 15, 13, 4.2, "drive", SIDING,
-     GREY),
+    ("cbsa_main", "CBSA main building (OSM way 1147679785)", 48.999586, -112.787966 + 6.7 / 73030, 16.4, 8.8, 4.2, "drive",
+     SIDING, GREY),
     ("cbsa_shed1", "CBSA outbuilding (OSM way 1147682043)", 49.000096, -112.787649, 14, 12, 3.6, "garage2", WHITE, SLATE),
     ("cbsa_shed2", "CBSA outbuilding (OSM way 1147682044)", 48.999998, -112.787738, 10, 8, 3.2, "garage1", CREAM, SLATE),
     ("cbsa_shed3", "CBSA outbuilding (OSM way 1147682041)", 48.999355, -112.787841, 7, 8, 3.0, "garage2", WHITE, SLATE),
     ("cbsa_shed4", "CBSA outbuilding (OSM way 1147682042)", 48.999239, -112.787861, 5, 5, 3.0, "garage1", CREAM, SLATE),
-    ("cbp_main", "CBP main building (OSM way 1147679784)", 48.996529, -112.789077, 28, 22, 4.6, "canopy", TRIM, ROOF),
-    ("cbp_booth", "CBP outbuilding (OSM way 1151192789)", 48.996581, -112.788819, 8, 15, 3.4, "flat", TRIM, ROOF),
-    ("village_shed", "US-side shed (OSM way 1147682039)", 48.996405, -112.789473, 13, 8, 3.4, "gable", WHITE, REDR),
-    ("village_stable1", "US-side stable (OSM way 1147682033)", 48.996060, -112.789547, 10, 31, 3.6, "stable", BROWN, REDR),
-    ("village_stable2", "US-side stable (OSM way 1147682034)", 48.995731, -112.789111, 31, 10, 3.6, "stable", BROWN, REDR),
+    ("cbp_main", "CBP port building, 2012 (Esri outline; OSM ways 1147679784 and 1151192789)", 48.996466, -112.789034,
+     36.8, 15.0, 5.0, "cbp", TAN, METAL),
+    ("village_shed", "CBP white metal garage (OSM way 1147682039)", 48.996405, -112.789473, 13, 5.5, 3.6, "metal", WHITE, GREY),
+    ("village_stable1", "CBP officer housing (OSM way 1147682033)", 48.996060, -112.789547, 10, 31, 2.7, "house", HOUSE, ROOF),
+    ("village_stable2", "CBP officer housing (OSM way 1147682034)", 48.995731, -112.789111, 31, 10, 2.7, "house", HOUSE, ROOF),
 ]
+# CBP pole lights, metres east and north of the cbp_main origin, and the heading of the lamp arm (gen_powerline.py):
+# two on the car park south of the building, two by the inspection lanes east of it. Positions are estimates.
+CBP_LAMPS = [(-12.0, -15.0, 0.0), (7.0, -17.0, 0.0), (22.0, -7.0, 90.0), (22.0, 9.0, 90.0)]
 
 
 def write_palette(path):
@@ -110,21 +130,21 @@ class Mesh:
         self.poly([P(x1, y0, z1), P(x1, y0, z0), P(x1, yr, zm)], sw_wall)
 
     def windows(self, x0, x1, z0, z1, y0, y1, count_x, count_z):
-        """Lit windows (emissive) on the four walls, slightly proud of the wall."""
+        """Windows on the four walls, slightly proud of the wall: tinted glass by day, lit at night."""
         e = 0.04
         P = lambda x, y, z: (x, y, z)  # noqa: E731
         for k in range(count_x):
             w = (x1 - x0) / count_x
             a = x0 + w * (k + 0.25)
             b = a + w * 0.5
-            self.poly([P(a, y0, z1 + e), P(b, y0, z1 + e), P(b, y1, z1 + e), P(a, y1, z1 + e)], GLOW, True)
-            self.poly([P(b, y0, z0 - e), P(a, y0, z0 - e), P(a, y1, z0 - e), P(b, y1, z0 - e)], GLOW, True)
+            self.poly([P(a, y0, z1 + e), P(b, y0, z1 + e), P(b, y1, z1 + e), P(a, y1, z1 + e)], GLASS, True)
+            self.poly([P(b, y0, z0 - e), P(a, y0, z0 - e), P(a, y1, z0 - e), P(b, y1, z0 - e)], GLASS, True)
         for k in range(count_z):
             w = (z1 - z0) / count_z
             a = z0 + w * (k + 0.25)
             b = a + w * 0.5
-            self.poly([P(x1 + e, y0, b), P(x1 + e, y0, a), P(x1 + e, y1, a), P(x1 + e, y1, b)], GLOW, True)
-            self.poly([P(x0 - e, y0, a), P(x0 - e, y0, b), P(x0 - e, y1, b), P(x0 - e, y1, a)], GLOW, True)
+            self.poly([P(x1 + e, y0, b), P(x1 + e, y0, a), P(x1 + e, y1, a), P(x1 + e, y1, b)], GLASS, True)
+            self.poly([P(x0 - e, y0, a), P(x0 - e, y0, b), P(x0 - e, y1, b), P(x0 - e, y1, a)], GLASS, True)
 
     def poly_out(self, pts, sw, out, glow=False):
         """Polygon turned to face the direction `out`."""
@@ -175,9 +195,9 @@ class Mesh:
             self.poly_out([B(a0, y0), B(a1, y0), P(a1, y0), P(a0, y0)], sw, (0, -1, 0))
 
     def window(self, face, a0, a1, y0, y1, frame=WHITE, panes=1):
-        """Framed lit window with a sill; vertical mullions for panes > 1."""
+        """Framed window with a sill (tinted glass by day, lit at night); vertical mullions for panes > 1."""
         self.panel(face, a0 - 0.08, a1 + 0.08, y0 - 0.08, y1 + 0.08, 0.03, frame)
-        self.panel(face, a0, a1, y0, y1, 0.05, GLOW, True)
+        self.panel(face, a0, a1, y0, y1, 0.05, GLASS, True)
         for k in range(1, panes):
             a = a0 + (a1 - a0) * k / panes
             self.panel(face, a - 0.04, a + 0.04, y0, y1, 0.07, frame)
@@ -187,7 +207,7 @@ class Mesh:
         self.panel(face, a0 - 0.08, a1 + 0.08, 0.0, h + 0.08, 0.03, TRIM)
         self.panel(face, a0, a1, 0.0, h, 0.05, sw)
         if lite:
-            self.panel(face, a0 + 0.2, a1 - 0.2, h * 0.6, h * 0.9, 0.06, GLOW, True)
+            self.panel(face, a0 + 0.2, a1 - 0.2, h * 0.6, h * 0.9, 0.06, GLASS, True)
 
     def garage_door(self, face, a0, a1, h=2.3, sw=WHITE):
         """Sectional garage door: frame, panel and four horizontal grooves."""
@@ -233,9 +253,9 @@ class Mesh:
             accs.append({"bufferView": len(views) - 1, "componentType": 5123, "count": len(tris) * 3, "type": "SCALAR"})
             m = {"name": "h28_glow" if glow else "h28_flat",
                  "pbrMetallicRoughness": {"baseColorTexture": {"index": 0}, "metallicFactor": 0.0, "roughnessFactor": 0.9}}
-            if glow:
-                m["emissiveFactor"] = [1.0, 1.0, 1.0]
-                m["emissiveTexture"] = {"index": 0}
+            if glow:  # palette colour by day, warm light at night only (as in CYXD's gen_buildings.py)
+                m["emissiveFactor"] = NIGHT_GLOW
+                m["extensions"] = {"ASOBO_material_day_night_switch": {"enabled": True}}
             mats.append(m)
             prims.append({"attributes": {"POSITION": 0, "NORMAL": 1, "TEXCOORD_0": 2}, "indices": len(accs) - 1, "mode": 4,
                           "material": len(mats) - 1})
@@ -243,7 +263,8 @@ class Mesh:
         g = {
             "asset": {"version": "2.0", "generator": "airport-h28/tools/gen_port.py",
                       "extensions": {"ASOBO_normal_map_convention": {"tangent_space_convention": "DirectX"}}},
-            "extensionsUsed": ["ASOBO_normal_map_convention"] + (["ASOBO_street_light"] if self.lights else []),
+            "extensionsUsed": ["ASOBO_normal_map_convention"] + (["ASOBO_street_light"] if self.lights else [])
+            + (["ASOBO_material_day_night_switch"] if any(self.glow) else []),
             "scene": 0, "scenes": [{"nodes": [0]}],
             "nodes": [{"mesh": 0, "name": name, **({"children": list(range(1, len(self.lights) + 1))} if self.lights else {})}]
             # MSFS 2024 street light (ASOBO_macro_light is deprecated), night only, with lens flare. The beam is the
@@ -271,41 +292,27 @@ class Mesh:
 
 
 def build(kind, w, d, h, wall, roof):
-    m = Mesh()
-    x0, x1, z0, z1 = -w / 2, w / 2, -d / 2, d / 2
     if kind == "drive":
         return drive_through(w, d, h, wall, roof)
+    if kind == "cbp":
+        return cbp_port()
+    if kind == "house":
+        return house(w, d, h, wall, roof)
+    if kind == "metal":
+        return metal_garage(w, d, h, wall, roof)
     if kind in GARAGE_DOORS:
         return garage(kind, w, d, h, wall, roof)
-    m.box(x0, x1, 0.0, h, z0, z1, wall, top=(kind in ("flat", "canopy", "office")))
-    if kind in ("gable", "stable"):
-        rise = min(w, d) * (0.30 if kind == "stable" else 0.22)
-        m.gable(x0 - 0.3, x1 + 0.3, h, rise, z0 - 0.3, z1 + 0.3, roof, wall)
-    else:
-        m.box(x0 - 0.3, x1 + 0.3, h, h + 0.35, z0 - 0.3, z1 + 0.3, roof)  # parapet / roof slab
-    if kind == "canopy":
-        # inspection canopy over the highway lane east of the building: roof on posts, lit underside
-        cx0, cx1 = x1 + 1.0, x1 + 13.0
-        ch = h + 1.2
-        m.box(cx0, cx1, ch, ch + 0.6, z0 - 2, z1 + 2, roof)
-        m.poly([(cx0, ch - 0.02, z1 + 2), (cx0, ch - 0.02, z0 - 2), (cx1, ch - 0.02, z0 - 2), (cx1, ch - 0.02, z1 + 2)], GLOW, True)
-        for px in (cx0 + 0.4, cx1 - 0.4):
-            for pz in (z0 - 1.6, 0.0, z1 + 1.6):
-                m.box(px - 0.2, px + 0.2, 0.0, ch, pz - 0.2, pz + 0.2, STEEL, top=False)
-        m.box(x1 + 0.6, x1 + 2.0, 0.0, 2.4, -3.0, 3.0, TRIM)  # inspection booth beside the lane
-    if kind in ("canopy", "flat", "office") and w >= 8:
-        m.windows(x0, x1, z0, z1, 1.2, 2.6, max(2, int(w // 4)), max(2, int(d // 4)))
-    if kind in ("canopy", "office"):
-        m.poly([(x1 + 0.0, 0.0, -0.8), (x1 + 0.0, 0.0, 0.8), (x1 + 0.0, 2.1, 0.8), (x1 + 0.0, 2.1, -0.8)], DARK)
-    return m
+    raise ValueError(kind)
 
 
-BAY = (-1.4, 1.8)  # CBSA drive-through bay, x from the footprint centre (metres east)
+CBSA_JOIN = -0.6  # CBSA office: x where the flat block meets the annex
+BAY = (-7.95, -3.7)  # CBSA drive-through bay, x from the footprint centre (metres east)
+BLOCK_D, ANNEX_D = 7.8, 8.8  # depths (north-south) of the flat block and the annex
 ANNEX_H = 3.0  # annex wall height; its ridge is about level with the office parapet
 # Flashing red obstruction beacon: all-round, flare only, night only, 30 flashes a minute (Canadian/US tower lighting is 20-40).
 BEACON = (60000.0, 360.0, True, {"color": [1.0, 0.05, 0.02], "flash_frequency": 30.0, "flash_duration": 0.5})
-MAST = (12.0, -4.0, 42.0)  # radio mast: x, z from the office centre, height (about ten times the office, refs 04-06)
-FLAG = (9.5, -1.0, 9.0)  # flagpole east of the annex (refs 05, 06)
+MAST = (13.5, -1.5, 42.0)  # radio mast: x, z from the office centre, height (about ten times the office, refs 04-06)
+FLAG = (9.9, -3.6, 9.0)  # flagpole east of the annex (refs 05, 06)
 
 
 def face(axis, at, sign):
@@ -400,82 +407,242 @@ def flag(m, x, z, height):
             m.poly_out([(cx + outline[i][0] * size, cy + outline[i][1] * size, z + e) for i in t], RED, (0, 0, s))
 
 
+def gable_roof(m, x0, x1, z0, z1, y0, rise, axis, sw_roof, sw_wall, ov=0.35):
+    """Gable roof on a box top at y0. axis "x": ridge east-west; "z": ridge north-south. The roof planes overhang the
+    walls by ov and are drawn on both sides (so the eaves are closed from below); the gable walls stand on the walls."""
+    if axis == "x":
+        zm, half = (z0 + z1) / 2, (z1 - z0) / 2
+        ye = y0 - rise / half * ov
+        for s in (-1, 1):
+            ze = zm + s * (half + ov)
+            pts = [(x0 - ov, ye, ze), (x1 + ov, ye, ze), (x1 + ov, y0 + rise, zm), (x0 - ov, y0 + rise, zm)]
+            m.poly_out(pts, sw_roof, (0, half, s * rise))
+            m.poly_out(pts, sw_roof, (0, -half, -s * rise))
+        for xf, s in ((x0, -1), (x1, 1)):
+            m.poly_out([(xf, y0, z0), (xf, y0, z1), (xf, y0 + rise, zm)], sw_wall, (s, 0, 0))
+    else:
+        xm, half = (x0 + x1) / 2, (x1 - x0) / 2
+        ye = y0 - rise / half * ov
+        for s in (-1, 1):
+            xe = xm + s * (half + ov)
+            pts = [(xe, ye, z0 - ov), (xe, ye, z1 + ov), (xm, y0 + rise, z1 + ov), (xm, y0 + rise, z0 - ov)]
+            m.poly_out(pts, sw_roof, (s * rise, half, 0))
+            m.poly_out(pts, sw_roof, (-s * rise, -half, 0))
+        for zf, s in ((z0, -1), (z1, 1)):
+            m.poly_out([(x0, y0, zf), (x1, y0, zf), (xm, y0 + rise, zf)], sw_wall, (0, 0, s))
+
+
 def drive_through(w, d, h, wall, roof):
-    """CBSA office, after the 2025 Street View (refs 04-08): a flat-roofed office block in grey-white siding on the road
-    (west) side, an open north-south drive-through bay, and a cream annex with red gable ends and a shingle roof on the
-    east side. Seen from the south (the US parking): office windows and door at the left, the dark bay, the red gable at
-    the right, the flag and the radio mast behind. Lit windows and bay ceiling."""
+    """CBSA office. Layout from mindtrip-02 (south face), mindtrip-03 and ref 04 (north face), ref 05 (west face), the
+    2025 TikTok video (inside the bay) and the Esri clip (plan: a 7.6 x 7.8 m flat-roofed block and an 8.8 m square annex).
+    West to east: a glazed screen wall on the road side, the open north-south drive-through bay right behind it, a narrow
+    solid part with a door on each face, then the cream annex with red gable ends north and south, a shingle roof and a
+    stucco chimney on its north wall. The "Del Bonita" band on the south fascia is a textured model of its own
+    (gen_details.py). Windows are tinted glass by day and lit at night, as is the bay ceiling."""
     m = Mesh()
-    x0, x1, z0, z1 = -w / 2, w / 2, -d / 2, d / 2
+    x0, x1, xj = -w / 2, w / 2, CBSA_JOIN
+    bz, az = BLOCK_D / 2, ANNEX_D / 2
     bx0, bx1 = BAY
     top = h - 0.2  # underside of the fascia
-    # office block, flat roof with a white fascia band and a dark cap
-    m.box(x0, bx0, 0.0, h, z0, z1, wall, top=False)
-    m.box(x0 - 0.25, bx1 + 0.1, top, h + 0.5, z0 - 0.25, z1 + 0.25, WHITE, bottom=True)
-    m.box(x0 - 0.3, bx1 + 0.1, h + 0.5, h + 0.58, z0 - 0.3, z1 + 0.3, TRIM, bottom=True)
-    m.poly_out([(bx0, top - 0.01, z0 - 0.25), (bx1, top - 0.01, z0 - 0.25), (bx1, top - 0.01, z1 + 0.25),
-                (bx0, top - 0.01, z1 + 0.25)], GLOW, (0, -1, 0), True)  # bay ceiling lights
-    m.box(-5.6, -4.4, h + 0.58, h + 1.3, 1.0, 2.0, GREY)  # roof unit
-    m.strut((bx0 + 0.4, h + 0.58, z0 + 1.0), (bx0 + 0.4, h + 3.2, z0 + 1.0), 0.04, STEEL)  # roof pole (ref 04)
-    # office walls: south and north (seen from the US parking and from the Canadian road), west on the lane, east into
-    # the bay with the inspection window
-    for zf, s in ((z0, -1), (z1, 1)):
-        f = face("z", zf, s)
-        m.window(f, -7.1, -5.8, 0.9, 2.4, TRIM, 2)
-        m.door(f, -5.4, -4.5)
-        m.window(f, -4.1, -1.8, 0.9, 2.4, TRIM, 3)
-        pilasters(m, f, (x0 + 0.09, -4.3, bx0 - 0.09), top)
-        m.panel(f, bx0 - 1.4, bx0 + 0.2, top + 0.05, h + 0.4, 0.3, NAVY)  # "Del Bonita" sign on the fascia (ref 06)
-        m.panel(f, bx0 - 1.25, bx0 + 0.05, top + 0.2, top + 0.3, 0.32, WHITE)
-    f = face("x", x0, -1)
-    m.window(f, -5.8, -3.2, 0.9, 2.4, TRIM, 3)
-    m.door(f, -2.5, -1.6)
-    m.window(f, 0.0, 2.6, 0.9, 2.4, TRIM, 2)
-    m.window(f, 3.4, 5.8, 0.9, 2.4, TRIM, 2)
-    pilasters(m, f, (z0 + 0.09, -2.9, 3.0, z1 - 0.09), top)
-    f = face("x", bx0, 1)
-    m.window(f, -2.0, 2.0, 1.0, 2.3, TRIM, 3)
-    m.door(f, 3.5, 4.4)
-    # bay: concrete floor, yellow bollards at the corners
-    m.box(bx0, bx1, 0.0, 0.05, z0 - 1.0, z1 + 1.0, GREY)
-    for bx in (bx0 + 0.25, bx1 - 0.25):
-        for bz in (z0 + 0.3, z1 - 0.3):
-            m.box(bx - 0.13, bx + 0.13, 0.0, 1.0, bz - 0.13, bz + 0.13, YELLOW)
-    # annex: cream walls, red gable ends with white trim, slate shingle roof (ridge north-south), brick chimney
-    m.box(bx1, x1, 0.0, ANNEX_H, z0, z1, CREAM, top=False)
-    xm, half, ov = (bx1 + x1) / 2, (x1 - bx1) / 2 + 0.3, 0.35
-    rise, ye = 1.9, ANNEX_H - 0.1
+    clear = 3.6  # bay opening (the sign says 3.5 m)
+    # flat block: screen wall, headers over the two bay openings, the solid east part, fascia and cap
+    m.box(x0, bx0, 0.0, top, -bz, bz, wall, top=False)
+    m.box(bx1, xj, 0.0, top, -bz, bz, wall, top=False)
+    for za, zb in ((-bz, -bz + 0.25), (bz - 0.25, bz)):
+        m.box(bx0, bx1, clear, top, za, zb, wall, top=False, bottom=True)
+    m.box(x0 - 0.25, xj + 0.1, top, h + 0.5, -bz - 0.25, bz + 0.25, wall, bottom=True)
+    m.box(x0 - 0.3, xj + 0.1, h + 0.5, h + 0.58, -bz - 0.3, bz + 0.3, TRIM, bottom=True)
+    m.poly_out([(bx0, clear, -bz + 0.25), (bx1, clear, -bz + 0.25), (bx1, clear, bz - 0.25), (bx0, clear, bz - 0.25)],
+               WHITE, (0, -1, 0), True)  # bay ceiling, lit at night
+    m.box(-2.7, -1.5, h + 0.58, h + 1.3, 0.5, 1.5, GREY)  # roof unit
+    m.strut((bx0 + 2.0, h + 0.58, 0.0), (bx0 + 2.0, h + 3.0, 0.0), 0.04, STEEL)  # roof light pole (mindtrip-02)
+    m.box(bx0 + 1.8, bx0 + 2.5, h + 2.9, h + 3.05, -0.12, 0.12, GREY, bottom=True)
+    # screen wall: tall windows and a door, glazed on both faces (ref 05, north to south: window, door, three windows)
+    for f in (face("x", x0, -1), face("x", bx0, 1)):
+        m.window(f, 2.3, 3.5, 0.9, 2.9, TRIM, 2)
+        m.door(f, 1.0, 1.9)
+        for a in (-0.7, -2.2, -3.7):
+            m.window(f, a, a + 1.3, 0.9, 2.9, TRIM, 2)
+    pilasters(m, face("x", x0, -1), (-bz + 0.09, 0.8, bz - 0.09), top)
+    # east side of the bay: the inspection windows and a door; doors on the south and north faces of the solid part
+    f = face("x", bx1, -1)
+    m.window(f, -2.6, 0.6, 1.0, 2.3, TRIM, 3)
+    m.door(f, 1.6, 2.5)
+    m.door(face("z", -bz, -1), bx1 + 0.9, bx1 + 1.8)
+    m.door(face("z", bz, 1), xj - 1.2, xj - 0.3)
+    for zf, s in ((-bz, -1), (bz, 1)):
+        pilasters(m, face("z", zf, s), (x0 + 0.09, bx0 - 0.09, bx1 + 0.09), top)
+    # bay: concrete floor, yellow kerbs, yellow bollards outside the four jambs
+    m.box(bx0, bx1, 0.0, 0.05, -bz - 1.0, bz + 1.0, GREY)
+    for ka, kb in ((bx0, bx0 + 0.25), (bx1 - 0.25, bx1)):
+        m.box(ka, kb, 0.05, 0.2, -bz, bz, YELLOW)
+    for bx in (bx0 - 0.1, bx1 + 0.1):
+        for bzz in (-bz - 0.45, bz + 0.45):
+            m.box(bx - 0.13, bx + 0.13, 0.0, 1.0, bzz - 0.13, bzz + 0.13, YELLOW)
+    # annex: cream walls, red gable ends with white trim, slate shingle roof (ridge north-south)
+    m.box(xj, x1, 0.0, ANNEX_H, -az, az, CREAM, top=False)
+    xm, half, ov = (xj + x1) / 2, (x1 - xj) / 2 + 0.3, 0.35
+    rise, ye = 1.65, ANNEX_H - 0.1
     yr = ye + rise
     ya = yr - rise * (x1 - xm) / half  # roof height over the side walls
     for sx in (-1, 1):
         e = xm + sx * half
-        pts = [(e, ye, z0 - ov), (e, ye, z1 + ov), (xm, yr, z1 + ov), (xm, yr, z0 - ov)]
+        pts = [(e, ye, -az - ov), (e, ye, az + ov), (xm, yr, az + ov), (xm, yr, -az - ov)]
         m.poly_out(pts, SLATE, (sx * rise, half, 0))
         m.poly_out(pts, SLATE, (-sx * rise, -half, 0))
-        m.strut((e, ye - 0.08, z0 - ov), (e, ye - 0.08, z1 + ov), 0.08, WHITE)  # fascia
-        for zr in (z0 - ov, z1 + ov):
+        m.strut((e, ye - 0.08, -az - ov), (e, ye - 0.08, az + ov), 0.08, WHITE)  # fascia
+        for zr in (-az - ov, az + ov):
             m.strut((e, ye, zr), (xm, yr, zr), 0.07, WHITE)  # rake trim
-    for zf, s in ((z0, -1), (z1, 1)):
-        m.poly_out([(bx1, ANNEX_H, zf), (x1, ANNEX_H, zf), (x1, ya, zf), (xm, yr, zf), (bx1, ya, zf)], REDR, (0, 0, s))
+    for zf, s in ((-az, -1), (az, 1)):
+        m.poly_out([(xj, ANNEX_H, zf), (x1, ANNEX_H, zf), (x1, ya, zf), (xm, yr, zf), (xj, ya, zf)], REDR, (0, 0, s))
         f = face("z", zf, s)
-        m.panel(f, bx1, x1, ANNEX_H - 0.18, ANNEX_H + 0.02, 0.04, WHITE)  # trim board under the red gable
-        for cxa in (bx1 + 0.06, x1 - 0.06):
+        m.panel(f, xj, x1, ANNEX_H - 0.18, ANNEX_H + 0.02, 0.04, WHITE)  # trim board under the red gable
+        for cxa in (xj + 0.06, x1 - 0.06):
             m.panel(f, cxa - 0.08, cxa + 0.08, 0.0, ANNEX_H, 0.05, WHITE)  # corner boards
-    f = face("z", z0, -1)
-    m.window(f, bx1 + 0.6, bx1 + 2.5, 0.9, 2.3)
-    m.window(f, bx1 + 3.2, x1 - 0.6, 0.9, 2.3)
-    f = face("z", z1, 1)
-    m.window(f, bx1 + 1.0, x1 - 1.0, 1.0, 2.3, WHITE, 2)
-    f = face("x", x1, 1)
-    for a in (-4.0, 0.0, 4.0):
-        m.window(f, a - 0.6, a + 0.6, 1.0, 2.2)
-    f = face("x", bx1, -1)
-    m.window(f, -1.0, 1.0, 1.0, 2.2, WHITE, 2)  # second inspection window, facing the bay
-    m.door(f, -4.6, -3.7)
-    m.box(xm - 0.35, xm + 0.35, yr - 1.2, yr + 0.9, z1 - 1.8, z1 - 1.1, REDR)  # chimney (ref 04)
-    m.box(xm - 0.42, xm + 0.42, yr + 0.9, yr + 1.0, z1 - 1.87, z1 - 1.03, GREY)
+    f = face("z", -az, -1)  # south: two picture windows (mindtrip-02)
+    m.window(f, xj + 1.0, xj + 3.6, 0.9, 2.4)
+    m.window(f, xj + 5.0, xj + 7.6, 0.9, 2.4)
+    f = face("z", az, 1)  # north: one window east of the chimney, a boarded opening beyond it (mindtrip-03)
+    m.window(f, 4.0, 5.2, 0.9, 2.5)
+    m.panel(f, 6.1, 7.4, 0.9, 2.6, 0.04, CREAM)
+    for a in (-2.8, 0.0, 2.8):
+        m.window(face("x", x1, 1), a - 0.6, a + 0.6, 1.0, 2.2)
+    m.box(2.3, 3.2, 0.0, yr + 1.0, az, az + 0.5, STUCCO)  # stucco chimney on the north gable wall (mindtrip-03)
+    m.box(2.2, 3.3, yr + 1.0, yr + 1.1, az - 0.1, az + 0.6, GREY)
     flag(m, FLAG[0], FLAG[1], FLAG[2])
     mast(m, *MAST)
+    return m
+
+
+def flagpole(m, x, z, height, kind):
+    """Flagpole with a flag streaming east, drawn on both sides: "us" (13 stripes and a blue canton, no stars), "cbp"
+    (blue with a white centre) or "dhs" (white with a blue centre)."""
+    m.strut((x, 0.0, z), (x, height, z), 0.06, WHITE)
+    m.box(x - 0.09, x + 0.09, height, height + 0.14, z - 0.09, z + 0.09, YELLOW)
+    fy0, fy1, ln, xa = height - 1.25, height - 0.1, 2.1, x + 0.07
+
+    def rect(a, b, y0, y1, sw, e=0.0):
+        for s in (1, -1):
+            m.poly_out([(xa + a, y0, z + s * e), (xa + b, y0, z + s * e), (xa + b, y1, z + s * e), (xa + a, y1, z + s * e)],
+                       sw, (0, 0, s))
+
+    if kind == "us":
+        hs = (fy1 - fy0) / 13
+        for k in range(13):
+            rect(0.0, ln, fy1 - (k + 1) * hs, fy1 - k * hs, RED if k % 2 == 0 else WHITE)
+        rect(0.0, ln * 0.4, fy1 - 7 * hs, fy1, BLUE, 0.012)
+    else:
+        field, centre = (BLUE, WHITE) if kind == "cbp" else (WHITE, BLUE)
+        rect(0.0, ln, fy0, fy1, field)
+        rect(ln * 0.36, ln * 0.64, fy0 + 0.28, fy1 - 0.28, centre, 0.012)
+
+
+def cbp_port():
+    """The US port building of 2012 (the 1962 brick station in ref 10, Aug 2008, is gone). Plan from the Esri clip
+    (docs/h28/esri/us-port.png, 0.1 m per pixel); elevations from wikimedia-delbonita-usa-2014.jpg (Jan 2014, looking
+    north at the south side) and the Oct 2024 Street View (refs 11-13). Origin at the middle of the building.
+    - West wing: a tall charcoal vehicle garage, ridge east-west, with a south-facing cross gable and a white overhead
+      door; a yellow clearance frame and bollards in front of it.
+    - Office: a lower tan wing running south from it, gable to the south with a band of windows (the lettering on the
+      gable is a textured model of its own, gen_details.py).
+    - East wing: two storeys, tan, ridge east-west, with an overhead door in its east end by the inspection lanes
+      (refs 12, 13; less certain).
+    - A fenced yard south of the east wing and three flagpoles (CBP, US, DHS). Roofs are blue-grey standing-seam metal.
+    Wall heights are estimates from the door and window sizes in the 2014 photo."""
+    m = Mesh()
+    # west wing and its cross gable
+    ax0, ax1, az0, az1, ah = -18.25, -1.5, -0.5, 7.25, 5.0
+    m.box(ax0, ax1, 0.0, ah, az0, az1, CHAR, top=False)
+    gable_roof(m, ax0, ax1, az0, az1, ah, 2.6, "x", METAL, CHAR)
+    gx0, gx1, gz0 = -17.5, -10.5, -1.1
+    m.box(gx0, gx1, 0.0, ah, gz0, az0, CHAR, top=False)
+    gable_roof(m, gx0, gx1, gz0, (az0 + az1) / 2, ah, 2.0, "z", METAL, CHAR)
+    f = face("z", gz0, -1)
+    m.garage_door(f, -16.1, -11.9, 4.2, WHITE)
+    m.window(face("x", ax0, -1), 2.0, 4.5, 2.6, 3.6, WHITE, 2)
+    for a in (-15.0, -10.0, -5.0):
+        m.window(face("z", az1, 1), a, a + 1.6, 2.6, 3.6, WHITE, 2)
+    for x in (-16.8, -11.2):  # clearance frame and bollards
+        m.box(x - 0.1, x + 0.1, 0.0, 4.6, -6.1, -5.9, YELLOW)
+        m.box(x - 0.12, x + 0.12, 0.0, 1.1, -2.0, -1.76, YELLOW)
+    m.box(-16.8, -11.2, 4.5, 4.6, -6.05, -5.95, YELLOW, bottom=True)
+    # office
+    bx0, bx1, bz0, bz1, bh = -10.5, -1.5, -7.5, -0.5, 3.2
+    m.box(bx0, bx1, 0.0, bh, bz0, bz1, TAN, top=False)
+    gable_roof(m, bx0, bx1, bz0, 2.0, bh, 2.3, "z", METAL, TAN)
+    f = face("z", bz0, -1)
+    m.panel(f, bx0, bx1, 0.0, 0.8, 0.03, BROWN)  # dark wainscot under the windows
+    for k in range(5):
+        a = -9.9 + k * 1.6
+        m.window(f, a, a + 1.3, 1.0, 2.2)
+    f = face("x", bx0, -1)
+    m.door(f, -6.6, -5.7)
+    m.window(f, -4.6, -2.6, 1.0, 2.2, WHITE, 2)
+    m.window(face("x", bx1, 1), -6.5, -3.5, 1.0, 2.2, WHITE, 3)
+    # two-storey east wing
+    cx0, cx1, cz0, cz1, ch = -1.5, 18.5, -0.5, 7.5, 6.0
+    m.box(cx0, cx1, 0.0, ch, cz0, cz1, TAN, top=False)
+    gable_roof(m, cx0, cx1, cz0, cz1, ch, 2.2, "x", METAL, TAN)
+    f = face("z", cz0, -1)
+    for a in (4.5, 7.0):
+        m.window(f, a, a + 1.8, 4.0, 5.0, WHITE, 2)
+    for a in (6.0, 9.6):
+        m.door(f, a, a + 0.9, sw=BROWN, lite=False)
+    for a in (12.3, 15.0):
+        m.window(f, a, a + 1.2, 1.0, 2.1)
+    f = face("z", cz1, 1)
+    for a in (1.0, 6.0, 11.0, 15.5):
+        m.window(f, a, a + 1.6, 4.0, 5.0, WHITE, 2)
+        m.window(f, a, a + 1.6, 1.0, 2.1, WHITE, 2)
+    f = face("x", cx1, 1)
+    m.garage_door(f, 1.6, 5.4, 3.8, WHITE)
+    m.window(f, 2.6, 4.4, 4.4, 5.2, WHITE, 2)
+    # fenced yard south of the east wing (brown slatted fence), flagpoles
+    fx0, fx1, fz0, t = 0.5, 13.5, -9.5, 0.04
+    m.box(fx0, fx1, 0.0, 1.6, fz0 - t, fz0 + t, BROWN)
+    for x in (fx0, fx1):
+        m.box(x - t, x + t, 0.0, 1.6, fz0, cz0, BROWN)
+    for x, kind in ((1.5, "cbp"), (7.5, "us"), (13.5, "dhs")):
+        flagpole(m, x, -13.0, 9.0, kind)
+    return m
+
+
+def house(w, d, h, wall, roof):
+    """CBP officer housing: a long single-storey house in grey-blue siding with a low dark gable roof along its length,
+    white corner boards and white-framed windows (refs 11-13, Oct 2024)."""
+    m = Mesh()
+    x0, x1, z0, z1 = -w / 2, w / 2, -d / 2, d / 2
+    m.box(x0, x1, 0.0, h, z0, z1, wall, top=False)
+    ns = d > w
+    gable_roof(m, x0, x1, z0, z1, h, min(w, d) * 0.16, "z" if ns else "x", roof, wall, 0.4)
+    for cx in (x0, x1):
+        for cz in (z0, z1):
+            m.box(cx - 0.07, cx + 0.07, 0.0, h, cz - 0.07, cz + 0.07, WHITE)
+    sides = (face("x", x0, -1), face("x", x1, 1)) if ns else (face("z", z0, -1), face("z", z1, 1))
+    lo, hi = (z0, z1) if ns else (x0, x1)
+    n = int((hi - lo - 3.0) // 4.2) + 1
+    for i, f in enumerate(sides):
+        for k in range(n):
+            a = lo + 1.5 + k * (hi - lo - 4.2) / max(1, n - 1)
+            if i == 0 and k == n // 2:
+                m.door(f, a + 0.1, a + 1.0, lite=False)
+            else:
+                m.window(f, a, a + 1.2, 1.0, 2.1)
+    ends = (face("z", z0, -1), face("z", z1, 1)) if ns else (face("x", x0, -1), face("x", x1, 1))
+    for f in ends:
+        m.window(f, -3.0, -1.8, 1.0, 2.1)
+        m.window(f, 1.8, 3.0, 1.0, 2.1)
+    return m
+
+
+def metal_garage(w, d, h, wall, roof):
+    """CBP white metal garage: low gable roof (ridge east-west), a roll door in the east end, a door on the south side."""
+    m = Mesh()
+    x0, x1, z0, z1 = -w / 2, w / 2, -d / 2, d / 2
+    m.box(x0, x1, 0.0, h, z0, z1, wall, top=False)
+    gable_roof(m, x0, x1, z0, z1, h, d * 0.12, "x", roof, wall, 0.2)
+    m.garage_door(face("x", x1, 1), -1.8, 1.8, 3.1, WHITE)
+    m.door(face("z", z0, -1), 3.0, 3.9, lite=False)
     return m
 
 
@@ -549,6 +716,11 @@ def exclusion(title, c, guid, corridor=False):
 
 def main():
     write_palette(MODELLIB / "texture" / "h28_port_palette.png")
+    old = MODELLIB / "h28_port_cbp_booth"  # folded into cbp_main (2026-11-16)
+    if old.exists():
+        for f in old.glob("*"):
+            f.unlink()
+        old.rmdir()
     lines = [f"\t{BEGIN}\n"]
     for key, title, lat, lon, w, d, h, kind, wall, roof in FOOTPRINTS:
         name = f"h28_port_{key}"
@@ -558,8 +730,8 @@ def main():
         lines.append(f'\t<SceneryObject lat="{lat:.8f}" lon="{plon:.8f}" alt="0.00000000000000" pitch="0.000000" bank="0.000000" '
                      'heading="0.000000" imageComplexity="VERY_SPARSE" altitudeIsAgl="TRUE" snapToGround="TRUE" snapToNormal="FALSE">\n'
                      f'\t\t<LibraryObject name="{guid}" scale="1.000000"/>\n\t</SceneryObject>\n')
-        pad = 16 if kind == "canopy" else 4  # the canopy models extend ~14 m east of the footprint
-        c = footprint(lat, plon + (7.0 / LON if kind == "canopy" else 0), w + (14 if kind == "canopy" else 0), d, pad)
+        pad = 9 if kind == "cbp" else 4  # the CBP yard and flagpoles reach 6 m south of its 15 m depth
+        c = footprint(lat, plon, w, d, pad)
         eg = "{" + str(uuid.uuid5(NS, "excl_" + key)).upper() + "}"
         lines.append(exclusion(f"{title}: no sim buildings", c, eg))
     lines.append(exclusion("Border crossings and the road between: no sim buildings, street lights, power lines or trees",

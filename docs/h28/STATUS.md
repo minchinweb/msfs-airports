@@ -162,3 +162,26 @@ From the user's in-sim review. Regenerated (`gen_border.py`, `gen_powerline.py`,
 - **US line has three wires:** the two cross-arm ends at 9.5 m plus one on the pole-top insulator at 10.35 m (`US_WIRES`).
 - **The three border road lights on the grid** (the east-shoulder beacon light and the two west-shoulder lights) now stand on wooden poles like the power poles (`lamp(wood=True)`, `WOOD_LIGHTS`). The other road lights stay steel.
 - **Wires into the transformer pole:** the span from the west pole and the east-shoulder light's feed now start at the transformer pole (`ANCHORS`), so they meet its cross-arm whatever the sim terrain does. Any height mismatch now shows at the west pole in the trees, or at the light. The LiDAR only differs by 0.25 m between the two poles, so the old mismatch came from the sim's terrain.
+
+## Release prep (2026-11-09)
+- The 2026-11-07 review fixes are now built (sim closed, `_RPTErrors.xml` empty). They have not been looked at in the sim yet.
+- The version is now **1.0.0**. `ReleaseNotes.xml` has the first-release notes, including the OSM credit and a note that the approaches are fictional. Rebuilt, so `manifest.json` reads 1.0.0.
+- Plan: publish on flightsim.to (MSFS 2024 only) as a zip of `airport-h28/Packages/cardboardgt-airport-h28-whetstone/` (the folder itself inside the zip). The page description should credit OSM (ODbL) and USGS 3DEP and say the approaches are fictional.
+- Still to do: a real `ContentInfo/Thumbnail.jpg` (412x170; the current one is a placeholder frozen lake), screenshots (the user is gathering them), a script that writes the release zip, a test install from the zip into a clean Community folder, and the upload.
+
+## Pre-release review (2026-11-16)
+Compared the models (rendered from the glTF files) with the reference photos, then reworked both ports. Built OK (sim closed, `_RPTErrors.xml` empty). **Not yet seen in the sim.** Run order is now `gen_port`, `gen_cones`, `gen_field`, `gen_powerline`, `gen_props`, then `gen_sign`, `gen_border`, `gen_details` in any order. The palette grew by seven swatches, so everything was regenerated.
+- **US port remodelled** (`gen_port.cbp_port`). The port was rebuilt in 2012, so the 2008 Street View (ref 10) shows buildings that are gone. Sources: `reference/wikimedia-delbonita-usa-2014.jpg`, refs 11-13 (Oct 2024) and the Esri clip `esri/us-port.png`.
+  - One model, `h28_port_cbp_main`: a charcoal garage wing with a south cross gable and overhead door, a tan office gable running south, a two-storey tan east wing, blue-grey metal roofs, a fenced yard, three flagpoles and a yellow clearance frame. `h28_port_cbp_booth` is gone. The flat box with the canopy on posts is gone.
+  - The two "stables" are officer housing: grey-blue siding, low dark gable roofs along their length (`house`). The shed is a white metal garage with a roll door in its east end (`metal_garage`).
+  - **Position to check in DevMode:** the building's centre (48.996466, -112.789034) is read off the Esri clip and corrected by the Esri-to-OSM shift (5 m north, 2 m west). OSM's footprints for it don't match the 2012 outline, so it may be a few metres off the sim aerial. Move it in `FOOTPRINTS`.
+  - Its four pole lights are now `gen_port.CBP_LAMPS` (two on the car park, two by the lanes). Positions are estimates.
+  - Unsure: the overhead door in the east wing's east end, and all wall heights.
+- **CBSA office re-laid out** (`gen_port.drive_through`). The Esri clip shows a 7.6 x 7.8 m flat block and an 8.8 m square annex (OSM's 15 x 13 m was too deep). The bay is now at the west end behind a glazed screen wall, with a narrow solid part and doors east of it. The annex has a stucco chimney on its north wall. The building is still pulled east (6.7 m) so the sim's road traffic passes west of it; its west face is where it was.
+- **Windows are dark by day.** The glow material now has `ASOBO_material_day_night_switch` and a tinted-glass base colour (as CYXD), so windows, the bay ceiling and the lamp lenses light up at night only. Check at night that they still glow.
+- **CBSA siding** is a warmer off-white (208, 211, 206), up from (188, 194, 196). The sim shifts colours, so judge it there.
+- **New `gen_details.py`** (own texture `h28_details.png`): the "Del Bonita" band on the CBSA south fascia, the CBP lettering on the office gable, two CBSA roadside signs, the yellow border gates standing open on both verges, the 1974 RCMP cairn and the braced gate posts in the west fence. Positions and sizes are estimates; see its docstring. To check: the sign text reads the right way round; the gate leaves are off the road; the east leaf clears monument 308B.
+- Flashing red beacons: the user found them blocky in the sim. Not changed; waiting to hear what to do with them.
+- Thumbnail still to do (the user will take the screenshot).
+- Not modelled: the CBP lane booths and gate arms, the shelterbelt west of the CBP buildings, the small brown shed by the cairn, the chain-link compound at the border.
+
