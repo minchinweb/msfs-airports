@@ -84,7 +84,7 @@
   {
    "bufferView": 0,
    "componentType": 5126,
-   "count": 16245,
+   "count": 16957,
    "type": "VEC3",
    "min": [
     -417.4685407890417,
@@ -93,26 +93,26 @@
    ],
    "max": [
     412.33153062893746,
-    25.222956222972716,
+    25.922956222972715,
     489.32941802186747
    ]
   },
   {
    "bufferView": 1,
    "componentType": 5126,
-   "count": 16245,
+   "count": 16957,
    "type": "VEC3"
   },
   {
    "bufferView": 2,
    "componentType": 5126,
-   "count": 16245,
+   "count": 16957,
    "type": "VEC2"
   },
   {
    "bufferView": 3,
    "componentType": 5123,
-   "count": 24549,
+   "count": 25617,
    "type": "SCALAR"
   }
  ],
@@ -120,28 +120,28 @@
   {
    "buffer": 0,
    "byteOffset": 0,
-   "byteLength": 194940
+   "byteLength": 203484
   },
   {
    "buffer": 0,
-   "byteOffset": 194940,
-   "byteLength": 194940
+   "byteOffset": 203484,
+   "byteLength": 203484
   },
   {
    "buffer": 0,
-   "byteOffset": 389880,
-   "byteLength": 129960
+   "byteOffset": 406968,
+   "byteLength": 135656
   },
   {
    "buffer": 0,
-   "byteOffset": 519840,
-   "byteLength": 49098
+   "byteOffset": 542624,
+   "byteLength": 51234
   }
  ],
  "buffers": [
   {
    "uri": "br_t127_davies_2.bin",
-   "byteLength": 568940
+   "byteLength": 593860
   }
  ]
 }

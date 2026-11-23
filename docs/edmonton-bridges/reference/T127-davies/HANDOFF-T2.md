@@ -42,7 +42,7 @@ Station, on the OSM footprint (93 m x 20.6 m):
 - centre platform 0.35 m above the rail, with yellow edge strips and a glazed lift and stair enclosure;
 - white panel belly from the pier caps up to the track bed;
 - white band to 1.3 m above the rail, then a glazed band leaning out to the eaves at 5 m;
-- barrel roof, crest 8.5 m above the rail: white outside, timber soffit, 6 m overhang at both ends, open ends for the trains;
+- roof, from the ETS drone shot (SOURCES.md): a shallow standing-seam curve (eaves 5 m and crest 6.2 m above the rail), with a 7 m wide glazed clerestory 1.6 m high along the crest; the ends run 12 m past the end walls and sweep up 3 m over the tracks; timber soffit, open ends for the trains;
 - ground floor of glass rooms and a solid service block, set back under the belly, with columns along the edges.
 
 Levels:
@@ -77,7 +77,7 @@ Sim checks:
 - Track centres at least 5.1 m apart: OSM has 4.3 m, which the aerial's 10 m girder pair cannot fit.
 - Y pier and cap sizes. The fork height.
 - The two ends: rail 1.0 m above the ground where the OSM bridge ways end, and fill until the rail is 4.5 m up.
-- All station heights: ground floor to the caps, the glazed band, the roof crest and overhang.
+- All station heights: ground floor to the caps, the glazed band, the roof curve, clerestory and upswept overhang (the drone shot gives the shape, not the sizes).
 - The mast spacing.
 
 The Railway Age and City start points (69A Avenue or 83 Street) are not used. The OSM bridge ends are.

@@ -40,3 +40,4 @@ No Government of Alberta bridge sheet, Structurae record, or engineering paper f
 - OpenStreetMap API, read 2026-11-23 (ODbL): the station building, platform, bus station and crossing ways, in `geometry.json` `osm_added_2026_11_23`.
 - Mapillary: 4 more frames, in `street/SOURCES.md`.
 - Model notes: `HANDOFF-T2.md`.
+- Edmonton Transit Service, "Tap to Pay" (YouTube, https://www.youtube.com/watch?v=QIa6F95k4aU, 17 s), 0:00 to 0:03: a drone shot of Davies station with a train arriving and the park and ride beside it. It shows the roof: a shallow standing-seam curve with a raised glazed clerestory along it, its ends sweeping up over the tracks. Viewed only, through YouTube's storyboard frames and the video thumbnail; not saved (copyright, no licence stated).

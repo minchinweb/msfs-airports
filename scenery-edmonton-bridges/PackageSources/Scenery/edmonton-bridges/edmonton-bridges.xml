@@ -3690,60 +3690,21 @@
 		<Attribute name="ExcludeTIN" guid="{18B58CBF-AE02-4A19-8AA9-3809E8E73400}" type="UINT8" value="1"/>
 		<Attribute name="ExclusionFlags" guid="{4CACC252-E6DC-419A-B20C-16EC601DF70E}" type="UINT32" value="7"/>
 		<Attribute name="ExcludeRocks" guid="{F104723A-D6D1-4B2E-9B44-ACCD8AB372DC}" type="UINT8" value="1"/>
+		<Vertex lat="53.50058209" lon="-113.44434327"/>
+		<Vertex lat="53.50059702" lon="-113.44428644"/>
 		<Vertex lat="53.49984043" lon="-113.44335520"/>
 		<Vertex lat="53.49983175" lon="-113.44329041"/>
 		<Vertex lat="53.49989980" lon="-113.44310880"/>
 		<Vertex lat="53.50126583" lon="-113.44309457"/>
 		<Vertex lat="53.50130083" lon="-113.44317279"/>
-		<Vertex lat="53.50136311" lon="-113.44320398"/>
+		<Vertex lat="53.50136418" lon="-113.44320639"/>
 		<Vertex lat="53.50128592" lon="-113.44523193"/>
 		<Vertex lat="53.50111728" lon="-113.44535740"/>
 		<Vertex lat="53.50061523" lon="-113.44475721"/>
-		<Vertex lat="53.50059702" lon="-113.44428644"/>
+		<Vertex lat="53.50061888" lon="-113.44464575"/>
 	</Polygon>
 	<Polygon version="0.4.0" displayName="Bridges exclusion: T127 Davies guideway and station (2)" parentGroupID="6" altitude="670.000">
 		<Attribute name="UniqueGUID" guid="{359C73E8-06BE-4FB2-ABCB-EC942F7761D0}" type="GUID" value="{3D20771B-9AE9-53B5-A5C3-AF52C6C5BAF1}"/>
-		<Attribute name="ExcludeDetectedBuildings" guid="{5C1A2387-1F07-47DF-A569-962CF6258E55}" type="UINT8" value="1"/>
-		<Attribute name="ExcludeOSMBuildings" guid="{F3C2635D-9F2F-458F-8663-90B3837BED09}" type="UINT8" value="1"/>
-		<Attribute name="ExcludeMSBuildings" guid="{F78A3074-8AD5-4B8B-92C4-C1C948BB7AA5}" type="UINT8" value="1"/>
-		<Attribute name="VegetationScale" guid="{6A043F59-E6F2-4117-A2E4-D510E7317C29}" type="UINT32" value="0"/>
-		<Attribute name="VegetationDensity" guid="{41EFF715-C392-4B31-A457-50A504353A90}" type="UINT32" value="0"/>
-		<Attribute name="ExcludeTIN" guid="{18B58CBF-AE02-4A19-8AA9-3809E8E73400}" type="UINT8" value="1"/>
-		<Attribute name="ExclusionFlags" guid="{4CACC252-E6DC-419A-B20C-16EC601DF70E}" type="UINT32" value="7"/>
-		<Attribute name="ExcludeRocks" guid="{F104723A-D6D1-4B2E-9B44-ACCD8AB372DC}" type="UINT8" value="1"/>
-		<Vertex lat="53.50031699" lon="-113.44490402"/>
-		<Vertex lat="53.50018867" lon="-113.44480037"/>
-		<Vertex lat="53.49952898" lon="-113.44400875"/>
-		<Vertex lat="53.49913637" lon="-113.44347994"/>
-		<Vertex lat="53.49919054" lon="-113.44360132"/>
-		<Vertex lat="53.49905330" lon="-113.44399887"/>
-		<Vertex lat="53.49958664" lon="-113.44463185"/>
-		<Vertex lat="53.49935627" lon="-113.44523484"/>
-		<Vertex lat="53.49934400" lon="-113.44552346"/>
-		<Vertex lat="53.49858573" lon="-113.44554735"/>
-		<Vertex lat="53.49813063" lon="-113.44591742"/>
-		<Vertex lat="53.49804351" lon="-113.44591536"/>
-		<Vertex lat="53.49734210" lon="-113.44512658"/>
-		<Vertex lat="53.49735292" lon="-113.44501163"/>
-		<Vertex lat="53.49730378" lon="-113.44493983"/>
-		<Vertex lat="53.49775798" lon="-113.44315041"/>
-		<Vertex lat="53.49778956" lon="-113.44311648"/>
-		<Vertex lat="53.49883546" lon="-113.44311065"/>
-		<Vertex lat="53.49849505" lon="-113.44272908"/>
-		<Vertex lat="53.49812636" lon="-113.44253987"/>
-		<Vertex lat="53.49563538" lon="-113.44254782"/>
-		<Vertex lat="53.49560202" lon="-113.44250214"/>
-		<Vertex lat="53.49560260" lon="-113.44232024"/>
-		<Vertex lat="53.49562925" lon="-113.44227679"/>
-		<Vertex lat="53.49572537" lon="-113.44226988"/>
-		<Vertex lat="53.49797062" lon="-113.44224786"/>
-		<Vertex lat="53.49844877" lon="-113.44230582"/>
-		<Vertex lat="53.49864254" lon="-113.44243950"/>
-		<Vertex lat="53.49887355" lon="-113.44268521"/>
-		<Vertex lat="53.50031385" lon="-113.44437444"/>
-	</Polygon>
-	<Polygon version="0.4.0" displayName="Bridges exclusion: T127 Davies guideway and station (3)" parentGroupID="6" altitude="670.000">
-		<Attribute name="UniqueGUID" guid="{359C73E8-06BE-4FB2-ABCB-EC942F7761D0}" type="GUID" value="{C4B4447A-EDCA-5897-A91F-6671A8DE2158}"/>
 		<Attribute name="ExcludeDetectedBuildings" guid="{5C1A2387-1F07-47DF-A569-962CF6258E55}" type="UINT8" value="1"/>
 		<Attribute name="ExcludeOSMBuildings" guid="{F3C2635D-9F2F-458F-8663-90B3837BED09}" type="UINT8" value="1"/>
 		<Attribute name="ExcludeMSBuildings" guid="{F78A3074-8AD5-4B8B-92C4-C1C948BB7AA5}" type="UINT8" value="1"/>
@@ -3761,30 +3722,52 @@
 		<Vertex lat="53.50134765" lon="-113.44968162"/>
 		<Vertex lat="53.50125514" lon="-113.44890342"/>
 		<Vertex lat="53.50131116" lon="-113.44811930"/>
-		<Vertex lat="53.50144227" lon="-113.44707337"/>
-		<Vertex lat="53.50140819" lon="-113.44651349"/>
+		<Vertex lat="53.50143657" lon="-113.44715989"/>
+		<Vertex lat="53.50143366" lon="-113.44665583"/>
 		<Vertex lat="53.50132078" lon="-113.44621072"/>
-		<Vertex lat="53.50116250" lon="-113.44589740"/>
-		<Vertex lat="53.50031699" lon="-113.44490402"/>
-		<Vertex lat="53.50031699" lon="-113.44466642"/>
-		<Vertex lat="53.50033524" lon="-113.44468751"/>
-		<Vertex lat="53.50031699" lon="-113.44437823"/>
-		<Vertex lat="53.50036510" lon="-113.44448285"/>
+		<Vertex lat="53.50112277" lon="-113.44584232"/>
+		<Vertex lat="53.50069775" lon="-113.44531949"/>
+		<Vertex lat="53.50014518" lon="-113.44474916"/>
+		<Vertex lat="53.49937422" lon="-113.44381976"/>
+		<Vertex lat="53.49936125" lon="-113.44375584"/>
+		<Vertex lat="53.49913637" lon="-113.44347994"/>
+		<Vertex lat="53.49919054" lon="-113.44360132"/>
+		<Vertex lat="53.49905330" lon="-113.44399887"/>
+		<Vertex lat="53.49958664" lon="-113.44463185"/>
+		<Vertex lat="53.49935627" lon="-113.44523484"/>
+		<Vertex lat="53.49934400" lon="-113.44552346"/>
+		<Vertex lat="53.49858573" lon="-113.44554735"/>
+		<Vertex lat="53.49813063" lon="-113.44591742"/>
+		<Vertex lat="53.49803886" lon="-113.44591292"/>
+		<Vertex lat="53.49734210" lon="-113.44512658"/>
+		<Vertex lat="53.49735292" lon="-113.44501163"/>
+		<Vertex lat="53.49730378" lon="-113.44493983"/>
+		<Vertex lat="53.49775798" lon="-113.44315041"/>
+		<Vertex lat="53.49778956" lon="-113.44311648"/>
+		<Vertex lat="53.49883546" lon="-113.44311065"/>
+		<Vertex lat="53.49849505" lon="-113.44272908"/>
+		<Vertex lat="53.49812636" lon="-113.44253987"/>
+		<Vertex lat="53.49563538" lon="-113.44254782"/>
+		<Vertex lat="53.49560130" lon="-113.44249627"/>
+		<Vertex lat="53.49560946" lon="-113.44229775"/>
+		<Vertex lat="53.49797508" lon="-113.44224786"/>
+		<Vertex lat="53.49844877" lon="-113.44230582"/>
+		<Vertex lat="53.49869614" lon="-113.44249290"/>
+		<Vertex lat="53.49949767" lon="-113.44343971"/>
+		<Vertex lat="53.49953793" lon="-113.44344039"/>
 		<Vertex lat="53.50083886" lon="-113.44504318"/>
-		<Vertex lat="53.50127388" lon="-113.44569363"/>
-		<Vertex lat="53.50139418" lon="-113.44590350"/>
-		<Vertex lat="53.50155955" lon="-113.44641362"/>
-		<Vertex lat="53.50160176" lon="-113.44664964"/>
-		<Vertex lat="53.50160416" lon="-113.44709932"/>
+		<Vertex lat="53.50139205" lon="-113.44589869"/>
+		<Vertex lat="53.50158002" lon="-113.44651463"/>
+		<Vertex lat="53.50160409" lon="-113.44710071"/>
 		<Vertex lat="53.50144648" lon="-113.44843491"/>
-		<Vertex lat="53.50142472" lon="-113.44902834"/>
-		<Vertex lat="53.50152693" lon="-113.44968955"/>
+		<Vertex lat="53.50142189" lon="-113.44894703"/>
+		<Vertex lat="53.50150999" lon="-113.44961268"/>
 		<Vertex lat="53.50169413" lon="-113.45018721"/>
 		<Vertex lat="53.50187122" lon="-113.45052385"/>
 		<Vertex lat="53.50421172" lon="-113.45408192"/>
 		<Vertex lat="53.50458608" lon="-113.45451574"/>
 		<Vertex lat="53.50497019" lon="-113.45478046"/>
-		<Vertex lat="53.50497129" lon="-113.45492152"/>
+		<Vertex lat="53.50497126" lon="-113.45492167"/>
 	</Polygon>
 	<Polygon version="0.4.0" displayName="Bridges flatten: R10 High Level Bridge river" parentGroupID="6" altitude="614.910">
 		<Attribute name="UniqueGUID" guid="{359C73E8-06BE-4FB2-ABCB-EC942F7761D0}" type="GUID" value="{8B4A0506-24AA-509F-B2D0-770CA9BC9E0D}"/>

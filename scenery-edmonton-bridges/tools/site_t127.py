@@ -21,8 +21,8 @@ Assumed (flagged, no published figure): rail top 1.2 m above the LiDAR pier top 
 U girder 4.9 m wide over the webs, 2.2 m deep, webs 1.2 m above the rail; track centres at least 5.1 m apart (the 2019 aerial shows
 a 10 m wide pair of girders, wider than the OSM 4.3 m spacing allows); Y pier sizes (shaft 1.2 m x 1.8 m, fork at 45 % of the
 height); the ends of the structure (rail top 1.0 m above the ground where the OSM bridge ways end, retained fill until the deck is
-4.5 m up); station heights (ground floor up to the pier caps, glazed band from 1.3 m to 5 m above the rail, roof crest 8.5 m above the rail, 6 m roof
-overhang at both ends); overhead-line masts every 50 m.  No signals, signs or lamps.
+4.5 m up); station heights (ground floor up to the pier caps, glazed band from 1.3 m to 5 m above the rail, roof crest 6.2 m above the rail,
+clerestory, 12 m upswept overhang at both ends; the shape is from the ETS "Tap to Pay" drone shot, youtube QIa6F95k4aU); overhead-line masts every 50 m.  No signals, signs or lamps.
 Park and ride (P157): the two ETS lots in OSM (amenity=parking, park_ride=yes; about 42,900 m2 for the 1,300 stalls Wikipedia gives),
 paved in the model (asphalt) at the median 2018 bare earth inside each, with a flatten polygon at that level, and filled with the
 sim's own parked cars by <CarParking> rows beside the OSM parking aisles (the CYXD method, airport-cyxd/tools/gen_parking.py; no
@@ -440,17 +440,28 @@ def _station(m, ax, st0, st1, sw0, sw1, pl0, pl1, y, g, T):
         for i in range(k + 1):
             s = st0 + (st1 - st0) * i / k
             beam(m, ax.p3(s, sg * (tw + 0.05), y + 1.3), ax.p3(s, sg * (tw + 0.85), y + 5.0), 0.25, 0.25, WHITE)
-    # roof: a barrel from eave to eave, 6 m past both end walls; white outside, timber soffit
-    R0, R1, rise = st0 - 6.0, st1 + 6.0, 3.5
+    # roof (ETS drone shot, youtube QIa6F95k4aU at 0:00-0:03): a shallow standing-seam curve from eave to eave whose ends run 12 m
+    # past the end walls and sweep up over the tracks, timber soffit; a raised glazed clerestory along the middle
+    OVER, LIFT, rise = 12.0, 3.0, 1.2
     half = tw + 0.9
-    nseg = 10
-    def arc(u):
+    nseg = 8
+
+    def lift(s):
+        d = max(st0 - s, s - st1, 0.0)
+        return LIFT * (d / OVER) ** 2
+
+    def arc(u, s):
         tt = -half + 2 * half * u
-        return tt, y + 5.0 + rise * (1 - (tt / half) ** 2)
+        return tt, y + 5.0 + rise * (1 - (tt / half) ** 2) + lift(s)
+    ss_roof = sorted(set([st0 - OVER + OVER * k / 6 for k in range(7)] + [st0 + (st1 - st0) * k / 16 for k in range(17)]
+                         + [st1 + OVER * k / 6 for k in range(7)]))
     for i in range(nseg):
-        (ta, ya), (tb, yb) = arc(i / nseg), arc((i + 1) / nseg)
-        sweep(m, ax, [R0 + (R1 - R0) * k / 18 for k in range(19)], lambda s: [(ta, ya - 0.5), (tb, yb - 0.5), (tb, yb), (ta, ya)],
-              [TIMBER, WHITE, WHITEST, WHITE])
+        sweep(m, ax, ss_roof, lambda s, i=i: [(arc(i / nseg, s)[0], arc(i / nseg, s)[1] - 0.5), (arc((i + 1) / nseg, s)[0], arc((i + 1) / nseg, s)[1] - 0.5),
+                                              arc((i + 1) / nseg, s), arc(i / nseg, s)], [TIMBER, WHITE, WHITEST, WHITE])
+    # clerestory: 7 m wide, glazed sides 1.6 m tall, on the crest from 5 m inside each end wall
+    yc = y + 5.0 + rise
+    sweep(m, ax, [st0 + 5.0, st1 - 5.0], lambda s: [(-3.5, yc - 0.3), (3.5, yc - 0.3), (3.5, yc + 1.6), (-3.5, yc + 1.6)],
+          [WHITE, GLASS, WHITEST, GLASS])
     # platform (OSM way 1157283680): concrete, yellow edge strips, a glass lift and stair enclosure in the middle
     pw = T((pl0 + pl1) / 2) - 1.65
     ribbon(m, ax, pl0, pl1, -pw, pw, y + G_FLOOR, y + 0.35, CONC, sw_top=PANEL)
