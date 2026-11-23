@@ -16,13 +16,13 @@ Numbers below are cited. Where two sources disagree, both are given. A blank in 
 
 Wikipedia calls the original 1953 north span a truss and names it Clover Bar. That sentence is about the other highway deck. The 12 May 2015 photograph, taken facing northeast, shows a girder highway in front of the railway truss. Four concrete piers stand in the channel under the nearer highway. A second highway deck is not labelled in that frame. A count of spans was not published. A count was not taken from the photograph.
 
-**Spans.** Individual span lengths are not published. They were not made by dividing a mapped length.
+**Spans.** Alberta Transportation bridge record, file 77132 (BEVERLY BRDG, B143, Highway 16 over the North Saskatchewan River, in service 1972). Source: https://www.transportation.alberta.ca/PlanningTools/Data/Bridge/Structure-Export.csv (extract retrieved 2026-11-23; last inspected 2023-08-16). Five spans: 54.9, 70.1, 70.1, 70.1 and 54.9 m. Max span 70.1 m. The set is symmetric, so the interior piers sit at 54.9, 125.0, 195.1 and 265.2 m from either abutment. The 2015 photo-read pier stations (54, 129, 207, 280 m) are replaced by these.
 
-**Length.** No published structural length was found. Structurae's Clover Bar Highway Bridge page has no technical data. The OpenStreetMap road centreline, way 61430014, is a straight line 321.5 m long. The mapped outline, way 642360969, is a closed ring. Its perimeter is 719.6 m. That perimeter is not a span length. The long sides of the outline are 339.3 m and 341.7 m (197.8 m plus 143.9 m, with a node on that side). Use 321.5 m for the plan shape of the road. Use the outline for the mapped footprint. The mapped length and a structural length between abutments are different extents if a structural length is ever published.
+**Length.** Nominal bridge length 320.1 m (file 77132, as above). The model deck runs between the abutments at exactly 320.1 m, centred on the middle of the OSM way. Structurae's Clover Bar Highway Bridge page has no technical data. The OpenStreetMap road centreline, way 61430014, is 322.0 m on the model's frame (earlier notes gave 321.5 m, a different measure), so 0.97 m is trimmed at each end. The mapped outline, way 642360969, is a closed ring. Its perimeter is 719.6 m. That perimeter is not a span length. The long sides of the outline are 339.3 m and 341.7 m (197.8 m plus 143.9 m, with a node on that side). The outline is the mapped footprint. Structural length is the 320.1 m from file 77132.
 
 **Girders.** Steel girders (City rehab; Wikipedia for the 1972 Beverly span). Girder depth is not published. The number of girder lines is not published. Depth was not read from the 2015 photograph.
 
-**Piers.** Concrete piers in the channel. The 2015 photograph shows four shafts under the nearer highway, wider toward the water. A published pier count was not found. A count was not taken from the photograph as a published figure. The City's 2025 work on the structure it names Beverly Bridge includes abutment repair. Abutment size is not published. Bearing types are described only as repaired.
+**Piers.** Four concrete piers, five spans (file 77132). Concrete shafts and caps; abutments on pile foundations (file 77132). Shaft shape is not in the record: the model keeps the 2015 photo read (single wide columns under the first two piers, twin columns under the last two), which is still assumed. The 2015 photograph shows four shafts under the nearer highway, wider toward the water, which agrees with the record's count. The City's 2025 work on the structure it names Beverly Bridge includes abutment repair. Abutment size is not published. Bearing types are described only as repaired.
 
 **Clearance above the river.** Not published. No navigation clearance is published. No elevation above sea level is published for the deck, the soffit, or the water. Environment Canada gauge 05DF001 is at the Low Level Bridge and uses a local assumed datum. No source used here converts a clearance at this crossing from that gauge.
 
@@ -50,11 +50,17 @@ No openly licensed frame was found that shows either road meeting grade. Two Map
 
 **Thickness.** The City names a concrete deck, waterproofing, and new pavement on the structure it calls Beverly Bridge. No thickness is given for the concrete, the waterproofing, or the asphalt. The depth from the wearing surface to the soffit is not published.
 
-**Width.** OpenStreetMap way 61430014 tags `width=11.1`. No published source found states 11.1 m. The mapped outline is 19.4 m across at the northwest end and 19.2 m across at the southeast end. Those are the OpenStreetMap outline, not a published structural width. Lane width is missing. Shoulder width is missing.
+**Width.** Alberta file 77132: gross deck width 19.2 m, total clear roadway 16.8 m. The model uses these as the authority:
+
+- Gross 19.2 m, centred on the middle of the OSM outline (way 642360969, 19.3 m across, mid-line 0.85 m north of the way): -8.75 m (south) to +10.45 m (north) about the way.
+- Clear roadway 16.8 m = carriageway 11.1 m plus two 2.85 m shoulders. The 11.1 m is the OSM `width=11.1` tag, read as three 3.7 m lanes (lane width is assumed, not published). The shoulders are assumed.
+- The 2.4 m left over (gross less clear) is split between the edges: 1.8 m on the south side for the sidewalk (City, south side; the width is assumed) and 0.6 m on the north side for the parapet (assumed).
+
+So the 16.8 m clear roadway and the 19.2 m gross both hold in the model. Lane, shoulder and sidewalk widths are not published; only the totals are.
 
 **Lanes.** Three, one-way, asphalt (City; OpenStreetMap way 61430014). The way is tagged 100 km/h. The City uses the same 100 km/h, reduced to 60 km/h in the 2026 construction zone. Node order on the bridge way is northwest to southeast. A live read of the same way on 14 October 2026 also has `lit=yes`, `hgv=designated`, `hazmat=designated`, `placement=right_of:2`, `NHS=yes`, and language variants of Yellowhead / Trans-Canada. The extract does not store those tags. No published source found states a clearance that matches those tags. The tags are not a deck elevation.
 
-**Sidewalks.** The City says the sidewalk on the south side of Beverly Bridge stays open during the 2026 work. A sidewalk width is not published. OpenStreetMap does not map a bridge-tagged sidewalk on way 61430014. There is no `sidewalk` tag on that way. The 9 August 2011 photograph, taken from a highway deck toward the railway, shows a blue metal railing and an asphalt wearing surface in the foreground. Width was not measured from that frame. The frame does not label which of the two highway decks the photographer stood on.
+**Sidewalks.** The City says the sidewalk on the south side of Beverly Bridge stays open during the 2026 work. The sidewalk width is not published; the model uses 1.8 m (assumed, see Width). OpenStreetMap does not map a bridge-tagged sidewalk on way 61430014. There is no `sidewalk` tag on that way. The 9 August 2011 photograph, taken from a highway deck toward the railway, shows a blue metal railing and an asphalt wearing surface in the foreground. Width was not measured from that frame. The frame does not label which of the two highway decks the photographer stood on.
 
 **Crossfall.** Not published. Longitudinal grade on the span is not published.
 
@@ -62,11 +68,11 @@ No openly licensed frame was found that shows either road meeting grade. Two Map
 
 - Deck elevation above sea level from a published source, and the vertical datum. Soffit elevation.
 - Clearance from the roadway or the soffit down to the river, and a navigation clearance.
-- Published span count and span lengths. Girder depth. Number of girder lines.
-- Published pier count, pier heights, and the plan size of the piers and the abutments.
+- Girder depth. Number of girder lines.
+- Pier heights, the plan size and shape of the piers and the abutments (the record gives materials only; the shaft shape is still the 2015 photo read).
 - Deck thickness, and the depth from the wearing surface to the soffit.
-- Lane width and shoulder width. What the OpenStreetMap `width=11.1` tag measures. A published structural width.
-- Sidewalk width, and a mapped sidewalk way on this deck.
+- Lane width and shoulder width (the record gives only the 16.8 m clear roadway; the 3.7 m lanes and 2.85 m shoulders are assumed). Sidewalk width (1.8 m assumed). Do not treat the OSM `width=11.1` tag as a structural width; it is consistent with three 3.7 m lanes.
+- A mapped sidewalk way on this deck.
 - Crossfall as a slope. Longitudinal grade on the spans.
 - Where each Yellowhead approach meets natural grade, and the length, gradient, and elevation change of each climb.
 - A published statement that settles which mapped carriageway is Beverly and which is Clover Bar. The names on the road way and on the outline do not match each other.
@@ -81,3 +87,9 @@ Review result: buildable with assumptions. Missing from the published record, st
 - Outline lateral extent about the way: -8.8 m (south) to +10.5 m (north). The south excess over the 11.1 m carriageway matches the City's south-side sidewalk.
 - The 12 May 2015 photograph (nearer deck, the south one) shows slender concrete columns under a thin constant-depth girder deck: single wide columns at about 54 m and 129 m, twin columns at about 207 m and 280 m from the NW end (scale from the 321.5 m deck length, plus or minus 10 m); column height above the water about 20 m, deck plus girders about 3 m deep. The deck shows a blue steel railing.
 - Web searches for span lengths, a bridge file or a drawing (Structurae, Wikipedia, City and Alberta project pages, news) found none.
+
+## Update 2026-11-23: Alberta file 77132
+
+The Alberta Transportation record (https://www.transportation.alberta.ca/PlanningTools/Data/Bridge/Structure-Export.csv, inspected 2023-08-16) gives five spans of 54.9, 70.1, 70.1, 70.1 and 54.9 m, nominal 320.1 m, gross width 19.2 m, clear roadway 16.8 m, concrete piers and caps, pile-founded abutments and a polymer-modified asphalt wearing surface. The span and width statements above are now sourced from it. The 2015 photo-read pier stations (54, 129, 207, 280 m) were replaced by 54.9, 125.0, 195.1 and 265.2 m from the first abutment. The record is symmetric, so the stations are the same from either end; the model's 0 m is the NW end of the OSM way and the deck starts at 0.97 m on that axis.
+
+The same extract has file 02032, CLOVERBAR BRIDGE (B292), in service 2001 on Highway 16 over the same river: five spans 55, 70, 70, 70, 55 m, nominal 320 m, gross 17.5 m, clear roadway 16.6 m, last inspected 2025-09-14. R21 is not changed here, but its own width and span notes should be checked against that record.

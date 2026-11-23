@@ -84,35 +84,35 @@
   {
    "bufferView": 0,
    "componentType": 5126,
-   "count": 15400,
+   "count": 15432,
    "type": "VEC3",
    "min": [
-    -146.13342652839424,
+    -144.89106172480422,
     -6.0,
-    -91.94594755562645
+    -90.7606897255111
    ],
    "max": [
-    144.50148456713418,
-    32.94554094474307,
-    94.66506824239022
+    143.25912031607893,
+    32.95371804506652,
+    93.47981074389105
    ]
   },
   {
    "bufferView": 1,
    "componentType": 5126,
-   "count": 15400,
+   "count": 15432,
    "type": "VEC3"
   },
   {
    "bufferView": 2,
    "componentType": 5126,
-   "count": 15400,
+   "count": 15432,
    "type": "VEC2"
   },
   {
    "bufferView": 3,
    "componentType": 5123,
-   "count": 23100,
+   "count": 23148,
    "type": "SCALAR"
   }
  ],
@@ -120,28 +120,28 @@
   {
    "buffer": 0,
    "byteOffset": 0,
-   "byteLength": 184800
+   "byteLength": 185184
   },
   {
    "buffer": 0,
-   "byteOffset": 184800,
-   "byteLength": 184800
+   "byteOffset": 185184,
+   "byteLength": 185184
   },
   {
    "buffer": 0,
-   "byteOffset": 369600,
-   "byteLength": 123200
+   "byteOffset": 370368,
+   "byteLength": 123456
   },
   {
    "buffer": 0,
-   "byteOffset": 492800,
-   "byteLength": 46200
+   "byteOffset": 493824,
+   "byteLength": 46296
   }
  ],
  "buffers": [
   {
    "uri": "br_r20_beverly.bin",
-   "byteLength": 539000
+   "byteLength": 540120
   }
  ]
 }
