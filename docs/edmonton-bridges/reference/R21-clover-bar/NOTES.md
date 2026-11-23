@@ -12,23 +12,23 @@ Numbers below are cited. Where two sources disagree, both are given. A blank in 
 
 ## Bridge
 
-**Type.** Wikipedia calls Clover Bar the original truss span, completed in the summer of 1953. Structurae lists a Clover Bar Highway Bridge completed in 1952, with no structural type on the public page. The Library of Congress subject record quotes a 1999 environmental impact assessment: the existing Clover Bar Bridge was constructed in 1952/3 as a two-lane, two-way bridge. Truck News, 6 April 2001, lists construction of a three-lane Clover Bar Bridge for westbound Yellowhead traffic among that season's projects. The OpenStreetMap outline, way 642360970, tags `bridge:structure=beam`. Way 61431758 has no `bridge:structure` tag.
+**Type.** Alberta Transportation bridge record, file 02032, CLOVERBAR BRIDGE (B292), Highway 16 over the North Saskatchewan River. Status IN SERVICE, first in service 2001, last inspected 2025-09-14 (https://www.transportation.alberta.ca/PlanningTools/Data/Bridge/Structure-Export.csv). The record gives concrete piers and caps, pile-founded abutments and a polymer-modified asphalt wearing surface. It does not give a superstructure type. A girder is not stated by the record. The model's plate-girder deck is an assumption, consistent with the 2001 date and 70 m spans. The 1953 truss is not the present bridge; see Opening.
 
-The 9 August 2011 photograph is taken from a highway deck immediately next to the railway. The railway sits north of both highway decks. The foreground is asphalt and a blue metal railing. It is not a through-truss portal. The 12 May 2015 photograph, facing northeast, shows a girder highway in front of the railway truss. That nearer highway is not labelled. A published statement that the 1953 truss is still the silhouette, or that a 2001 girder replaced it, was not found beyond the sources above. Present-day package: model the structure that stands now. Do not invent a demolished truss as the finished deck.
+Conflict, one note: Wikipedia calls the original Clover Bar a truss completed in 1953. Structurae lists a 1952 Clover Bar Highway Bridge with no type. The 1999 EIA says 1952/3. Same file 02032, record CLOVERBAR BR, is that old structure: REMOVED, first in service 1952, 7 spans, 11 m gross deck. The 1953 date belongs to the removed truss. The 1952 and 1953 dates are not averaged, and neither is used for the present bridge.
 
-**Spans.** Individual span lengths are not published. They were not made by dividing a mapped length. They were not copied from R20.
+**Spans.** Five spans: 55, 70, 70, 70 and 55 m, maximum 70 m (record, file 02032). The span set is symmetric, so the interior piers sit at 55, 125, 195 and 265 m from either abutment. The removed structure's seven spans (record CLOVERBAR BR) are not used.
 
-**Length.** No published structural length was found. Structurae's public page has no technical data. The OpenStreetMap road centreline, way 61431758, is a straight line 355.1 m long. The mapped outline, way 642360970, is a closed ring. Its perimeter is 723.6 m. That perimeter is not a span length. The long sides of the outline are 344.4 m and 344.9 m. Use 355.1 m for the plan shape of the road. Use the outline for the mapped footprint. The mapped length and a structural length between abutments are different extents if a structural length is ever published.
+**Length.** Nominal bridge length 320 m (record, file 02032). The model deck runs 320 m between abutments, centred on the middle of OSM way 61431758 (355.1 m), trimmed 17.55 m at each end. The OSM outline perimeter (723.6 m) and its 344.5 m length are mapped extents, not the structural length.
 
-**Truss or girders.** Depth is not published. A panel count is not published. The number of girder lines is not published. Depth was not read from the photographs.
+**Truss or girders.** Not stated by the record. The present bridge is a 2001 structure with 70 m spans. The 12 May 2015 photograph shows a girder highway in front of the railway truss, not a truss. The model is a five-line plate-girder deck, 2.8 m deep. Girder depth and line count are assumed, not published.
 
-**Piers.** Concrete piers in the channel. The 2011 photograph, looking at the railway, shows concrete shafts under the rail deck. Those shafts are the railway. A published pier count for this highway was not found. A count was not taken from the 2015 photograph as a published figure. Abutment size is not published.
+**Piers.** Concrete shafts and caps, four interior piers (record, file 02032). Pier plan size, height and abutment size are not in the record. Wall-type piers under a cap are assumed, as before. The cap now spans the 17.5 m gross deck. Pier stations come from the record, not from the photograph.
 
 **Clearance above the river.** Not published. No navigation clearance is published. No elevation above sea level is published for the deck, the soffit, or the water. Environment Canada gauge 05DF001 is at the Low Level Bridge and uses a local assumed datum. No source used here converts a clearance at this crossing from that gauge.
 
-**Opening.** Wikipedia: completed in the summer of 1953. Wikipedia cites the Edmonton Journal of 18 August 2012, a "this day" note for 18 August 1953, Premier Manning first to drive the Clover Bar Bridge. Structurae: 1952. The 1999 EIA: 1952/3. All three are published. They were not averaged. Beverly was amalgamated with Edmonton eight years after 1953 (Wikipedia).
+**Opening.** First in service 2001 (record, file 02032, IN SERVICE). Truck News, 6 April 2001, lists a three-lane Clover Bar Bridge for westbound traffic among that season's projects, which fits the 2001 date. The 1952 and 1953 dates above are for the removed truss.
 
-**Rehabilitation that shows.** Truck News, 2001: construction of a three-lane Clover Bar Bridge for westbound traffic. The 1999 EIA described a two-lane two-way structure and a replacement study. What the 2001 work changed on the silhouette is not described beyond "three-lane." The City's 2025–2026 project is named Beverly Bridge. That work is in the R20 folder. It is not copied here.
+**Rehabilitation that shows.** The record's 2001 date matches Truck News 2001 (construction of a three-lane Clover Bar Bridge for westbound traffic). What else changed on the silhouette is not described. The City's 2025–2026 project is named Beverly Bridge. That work is in the R20 folder. It is not copied here.
 
 ## Approaches
 
@@ -50,7 +50,7 @@ No openly licensed frame was found that shows either road meeting grade. Mapilla
 
 **Thickness.** Not published. The depth from the wearing surface to the soffit is not published.
 
-**Width.** Way 61431758 has no `width` tag in the extract and none in the live read on 14 October 2026. The mapped outline is 17.2 m across at the northwest end and 17.1 m across at the southeast end. Those are the OpenStreetMap outline, not a published structural width. Lane width is missing. Shoulder width is missing. The R20 way's `width=11.1` tag is not copied here.
+**Width.** Record, file 02032: gross deck width 17.5 m, total clear roadway 16.6 m. The model centres the 17.5 m gross deck on the middle of the OSM outline (way 642360970, 17.2 m across at the NW end and 17.1 m at the SE end). The 0.9 m between gross and clear is the edges, split 0.45 m each side (assumed). Carriageway 11.1 m and shoulders 2.75 m each side are assumed: the way has no width tag and the record gives no lane width. The 11.1 m is not taken from the R20 way's width tag. Lane width is missing. Shoulder width is missing.
 
 **Lanes.** Three, one-way (OpenStreetMap way 61431758; Truck News 2001 for a three-lane Clover Bar Bridge). The way is tagged 100 km/h. Node order on the bridge way is southeast to northwest. A live read of the same way on 14 October 2026 also has `lit=yes`, `hgv=designated`, `hazmat=designated`, `NHS=yes`, and language variants of Yellowhead / Trans-Canada. The extract does not store those tags. The tags are not a deck elevation.
 
@@ -62,14 +62,14 @@ No openly licensed frame was found that shows either road meeting grade. Mapilla
 
 - Deck elevation above sea level from a published source, and the vertical datum. Soffit elevation.
 - Clearance from the roadway or the soffit down to the river, and a navigation clearance.
-- Published span count and span lengths. Truss or girder depth. Whether the present silhouette is the 1953 truss or a later girder.
-- Published pier count, pier heights, and the plan size of the piers and the abutments.
+- A source that states the superstructure type. Girder depth and the number of girder lines.
+- Pier plan size and pier heights. Abutment size.
 - Deck thickness, and the depth from the wearing surface to the soffit.
-- Lane width, shoulder width, and a published structural width.
-- Sidewalk presence and width on this deck.
+- Lane width and shoulder width. The record gives only the 16.6 m total clear roadway.
+- Sidewalk presence and width on this deck. The 0.9 m between gross and clear is not split by a source.
 - Crossfall as a slope. Longitudinal grade on the spans.
 - Where each Yellowhead approach meets natural grade, and the length, gradient, and elevation change of each climb.
-- A published statement that settles which mapped carriageway is Beverly and which is Clover Bar. The names on the road way and on the outline do not match each other.
+- A published statement that settles which mapped carriageway is Beverly and which is Clover Bar. File 02032 gives no direction, and the names on the road way and on the outline do not match each other.
 - An openly licensed underside photograph, a labelled elevation of this deck alone, and an openly licensed aerial.
 
 ## Tier 2 review (2026-10-15)

@@ -794,14 +794,14 @@
 		<Attribute name="ExcludeTIN" guid="{18B58CBF-AE02-4A19-8AA9-3809E8E73400}" type="UINT8" value="1"/>
 		<Attribute name="ExclusionFlags" guid="{4CACC252-E6DC-419A-B20C-16EC601DF70E}" type="UINT32" value="7"/>
 		<Attribute name="ExcludeRocks" guid="{F104723A-D6D1-4B2E-9B44-ACCD8AB372DC}" type="UINT8" value="1"/>
-		<Vertex lat="53.57133431" lon="-113.36965924"/>
-		<Vertex lat="53.57149407" lon="-113.36953383"/>
-		<Vertex lat="53.57153954" lon="-113.36956398"/>
-		<Vertex lat="53.57285994" lon="-113.37434444"/>
-		<Vertex lat="53.57284406" lon="-113.37441222"/>
-		<Vertex lat="53.57268240" lon="-113.37453782"/>
-		<Vertex lat="53.57264642" lon="-113.37452058"/>
-		<Vertex lat="53.57132103" lon="-113.36973108"/>
+		<Vertex lat="53.57135913" lon="-113.36975395"/>
+		<Vertex lat="53.57152111" lon="-113.36962680"/>
+		<Vertex lat="53.57156657" lon="-113.36965696"/>
+		<Vertex lat="53.57279338" lon="-113.37409873"/>
+		<Vertex lat="53.57277753" lon="-113.37416651"/>
+		<Vertex lat="53.57261363" lon="-113.37429385"/>
+		<Vertex lat="53.57257765" lon="-113.37427660"/>
+		<Vertex lat="53.57134586" lon="-113.36982579"/>
 	</Polygon>
 	<Polygon version="0.4.0" displayName="Bridges exclusion: R22 Clover Bar Railway Bridge" parentGroupID="6" altitude="610.000">
 		<Attribute name="UniqueGUID" guid="{359C73E8-06BE-4FB2-ABCB-EC942F7761D0}" type="GUID" value="{71741E56-2A10-5D75-894C-4ECA150BF2DB}"/>
@@ -3555,10 +3555,10 @@
 		<Attribute name="PreciseTerraforming" guid="{4D2A51D4-91AC-412F-833E-212CC10E5FBC}" type="UINT8" value="1"/>
 		<Attribute name="AffectRocks" guid="{F60DBBC7-DE6F-4FEA-BE7E-AFB1D73D57E7}" type="UINT8" value="1"/>
 		<Attribute name="ForceElevation" guid="{9460843D-964B-4E45-AC49-634856FB6E1C}" type="UINT8" value="1"/>
-		<Vertex lat="53.57234997" lon="-113.37343174"/>
-		<Vertex lat="53.57162920" lon="-113.37082336"/>
-		<Vertex lat="53.57183644" lon="-113.37066173"/>
-		<Vertex lat="53.57255721" lon="-113.37327011"/>
+		<Vertex lat="53.57234887" lon="-113.37343260"/>
+		<Vertex lat="53.57162810" lon="-113.37082422"/>
+		<Vertex lat="53.57183754" lon="-113.37066087"/>
+		<Vertex lat="53.57255494" lon="-113.37325703"/>
 	</Polygon>
 	<Polygon version="0.4.0" displayName="Bridges grass: R21 Clover Bar Bridge bank" parentGroupID="6" altitude="610.000">
 		<Attribute name="UniqueGUID" guid="{359C73E8-06BE-4FB2-ABCB-EC942F7761D0}" type="GUID" value="{97A51510-4943-51C5-81BD-DAA98E842CA1}"/>
@@ -3569,10 +3569,10 @@
 		<Attribute name="ExcludeTIN" guid="{18B58CBF-AE02-4A19-8AA9-3809E8E73400}" type="UINT8" value="1"/>
 		<Attribute name="Layer" guid="{9E2B4C3E-7D84-453F-9DCC-B6498FF46703}" type="UINT32" value="-50"/>
 		<Attribute name="ExclusionFlags" guid="{4CACC252-E6DC-419A-B20C-16EC601DF70E}" type="UINT32" value="3"/>
-		<Vertex lat="53.57238257" lon="-113.37340632"/>
-		<Vertex lat="53.57252461" lon="-113.37329553"/>
-		<Vertex lat="53.57282523" lon="-113.37436017"/>
-		<Vertex lat="53.57267299" lon="-113.37447951"/>
+		<Vertex lat="53.57238147" lon="-113.37340718"/>
+		<Vertex lat="53.57252571" lon="-113.37329467"/>
+		<Vertex lat="53.57275868" lon="-113.37411454"/>
+		<Vertex lat="53.57260414" lon="-113.37423552"/>
 	</Polygon>
 	<Polygon version="0.4.0" displayName="Bridges grass: R21 Clover Bar Bridge bank" parentGroupID="6" altitude="610.000">
 		<Attribute name="UniqueGUID" guid="{359C73E8-06BE-4FB2-ABCB-EC942F7761D0}" type="GUID" value="{48702680-9B85-533F-88B7-DE13B5B15FE8}"/>
@@ -3583,10 +3583,10 @@
 		<Attribute name="ExcludeTIN" guid="{18B58CBF-AE02-4A19-8AA9-3809E8E73400}" type="UINT8" value="1"/>
 		<Attribute name="Layer" guid="{9E2B4C3E-7D84-453F-9DCC-B6498FF46703}" type="UINT32" value="-50"/>
 		<Attribute name="ExclusionFlags" guid="{4CACC252-E6DC-419A-B20C-16EC601DF70E}" type="UINT32" value="3"/>
-		<Vertex lat="53.57166180" lon="-113.37079794"/>
-		<Vertex lat="53.57135481" lon="-113.36970886"/>
-		<Vertex lat="53.57150726" lon="-113.36959061"/>
-		<Vertex lat="53.57180384" lon="-113.37068715"/>
+		<Vertex lat="53.57166069" lon="-113.37079880"/>
+		<Vertex lat="53.57137960" lon="-113.36980360"/>
+		<Vertex lat="53.57153427" lon="-113.36968353"/>
+		<Vertex lat="53.57180494" lon="-113.37068629"/>
 	</Polygon>
 	<Polygon version="0.4.0" displayName="Bridges flatten: R22 Clover Bar Railway Bridge river" parentGroupID="6" altitude="610.000">
 		<Attribute name="UniqueGUID" guid="{359C73E8-06BE-4FB2-ABCB-EC942F7761D0}" type="GUID" value="{FA6A1A64-F49C-50B4-9B0D-71B57FA78FAE}"/>
