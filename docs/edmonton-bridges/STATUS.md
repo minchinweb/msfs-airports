@@ -1,6 +1,6 @@
 # Edmonton bridges status
 
-Last updated: 2026-10-14. Package: `scenery-edmonton-bridges/` (project `scenery-edmonton-bridges.xml`, definition `PackageDefinitions/cardboardgt-scenery-edmonton-bridges.xml`, version 0.1.0).
+Last updated: 2026-11-23 (reference data refetched; see the 2026-11-23 section). Package: `scenery-edmonton-bridges/` (project `scenery-edmonton-bridges.xml`, definition `PackageDefinitions/cardboardgt-scenery-edmonton-bridges.xml`, version 0.1.0).
 
 ## What this is
 
@@ -15,6 +15,10 @@ Built on 2026-10-14 with the sim closed (the 0.1.0 text follows; 0.2.0 compiled 
 ## What to model
 
 Three inventories. `docs/edmonton-bridges/bridges.md` is the North Saskatchewan crossings from Devon to Scotford. `docs/edmonton-bridges/freeway-bridges.md` is the freeway structures on VFR lines among CYXD, CYED, CYEG, CZVL, CFB6, and CEZ3. `docs/edmonton-bridges/lrt.md` is the above-ground LRT stations, viaducts, and extension bridges. The freeway list names the cross road on the QE2, Yellowhead, Henday, Whitemud, and Sherwood Park Freeway decks, and records the Henday, Whitemud, Terwillegar, Groat, and Capilano bridges left off. Highway 16 west of the Henday, Highway 21, and the other crossings added on 14 October are plotted as crosses and still left off the include list. Deck, approach, ramp, and cross-road geometry for every plotted road and river bridge is in `bridge-geometry.json`. Above-ground LRT centreline geometry, including construction and unfunded alignments, is in `lrt-tracks.json`. The build order is `docs/edmonton-bridges/PRIORITY.md`. It ranks every included and excluded bridge, viaduct, and station by how it reads from the air, whether it falls on a VFR approach, and whether it is a named fix on the Edmonton VFR terminal chart or the City Centre helicopter chart. First box is the High Level Bridge and the Dudley B. Menzies Bridge together. Reference briefs for R8–R15, the Groat ravine decks G116, G117, Z125, T133, and G119, P152 and B254, N258, N259, N260, F256, and V257 are in `docs/edmonton-bridges/reference/`. Numbers are unique across every prefix. Bridge codes use 1–136. Stops are P137–P189, at-grade track is K190–K253, and the later codes are listed in `lrt.md` and `bridges.md`. The prompt for the next reference subagent is `docs/edmonton-bridges/reference-prompt.md`. Fill the braces and send one structure at a time. The named checkpoints Bridges, Quesnell, Bremner Cloverleaf, and Sherwood Park Cloverleaf come next. Do not place anything inside the `CYXD Airport Area` polygon; NAIT and Blatchford Gate are inside it.
+
+## 2026-11-23 reference data (no model changes)
+
+`fetch-site-data.py` was fixed to fill the AB-Edmonton-1m nodata cells from NRCAN-Edmonton_2018-1m, and all 29 reference folders with a `geometry.json` were refetched. The 2018 DEM tifs and 2019 aerial jpgs are now on disk for every folder (gitignored). The gitignored data is about 290 MB of DEM and 116 MB of aerial. `analyze-elevation.py` was rerun. The only change to `ELEVATION.md` is added rows: H39, H52, R6, R20, R21, R22, W85 and Y79 now have deck heights. None of the figures for the existing 21 sites moved. The eight new sites are not in `PRIORITY.md` and have no models. `BLOCKERS.md` is updated to match. The git diff on `ELEVATION.md`, `data/elevation-summary.json` and the `ortho-2019.json` bounds files is not committed.
 
 ## Next
 
