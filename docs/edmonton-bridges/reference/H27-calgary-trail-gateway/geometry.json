@@ -1,0 +1,8560 @@
+{
+ "code": "H27 and H28",
+ "name": "Henday / Calgary Trail / Gateway Boulevard and Blackmud Creek arches",
+ "centre": [
+  53.437,
+  -113.4935
+ ],
+ "centre_note": "Midpoint of the two OSM deck centres. H27 (Henday / Calgary Trail / Gateway Boulevard) is 53.437, -113.491. H28 (Blackmud Creek arches) is 53.437, -113.496. Both from bridge-geometry.json, centre field, not estimated.",
+ "individual_centres": {
+  "H27": [
+   53.437,
+   -113.491
+  ],
+  "H28": [
+   53.437,
+   -113.496
+  ]
+ },
+ "crs": "EPSG:4326",
+ "coordinate_order": "[lat, lon]",
+ "geometry_source": "docs/edmonton-bridges/bridge-geometry.json (OpenStreetMap, retrieved 2026-10-14)",
+ "geometry_retrieved": "2026-11-23",
+ "plan_length_note": "plan_length_m is the horizontal WGS84 length along the OSM nodes (spherical haversine), one decimal. A plan length is not a structural length. An approach plan length is not the climb to grade. Ways clipped by the download box are marked in 'which'.",
+ "dropped_note": "Dropped as a different code or outside the structure: (a) the W88 Whitemud / Calgary Trail object (53.4804, -113.4938) and its Calgary Trail NW and Gateway Boulevard NW bridge ways, about 4.5 km north; (b) H29 approach way 25477516 (Henday at 111 Street), west of the Blackmud arches. Cross-road ways (Calgary Trail, Gateway Boulevard, Whitemud Drive and ring ramps passing under or over the deck) are kept only as the cross_roads list, not as decks or approaches. Three ways appear on both the H27 and H28 objects (41985724, 186995537, 22927691); each is placed once, under H27.",
+ "decks": [
+  {
+   "osm_way": 22924964,
+   "part": "road_deck",
+   "which": "Anthony Henday Drive (Highway 216), eastbound, on the interchange flyovers. Two lanes. Trellis-beam structure over the interchange per CCE 2008.",
+   "listed_under": "H27",
+   "plan_length_m": 100.2,
+   "tags": {
+    "bridge": "yes",
+    "highway": "motorway",
+    "lanes": "2",
+    "layer": "1",
+    "maxspeed": "100",
+    "name": "Anthony Henday Drive NW",
+    "oneway": "yes",
+    "ref": "216",
+    "surface": "asphalt"
+   },
+   "nodes": [
+    [
+     53.437125,
+     -113.491015
+    ],
+    [
+     53.437156,
+     -113.490585
+    ],
+    [
+     53.43723,
+     -113.489512
+    ]
+   ],
+   "direction": "east"
+  },
+  {
+   "osm_way": 22924966,
+   "part": "road_deck",
+   "which": "Anthony Henday Drive (Highway 216), westbound, on the interchange flyovers. Two lanes.",
+   "listed_under": "H27",
+   "plan_length_m": 110.2,
+   "tags": {
+    "bridge": "yes",
+    "highway": "motorway",
+    "lanes": "2",
+    "layer": "1",
+    "maxspeed": "100",
+    "name": "Anthony Henday Drive NW",
+    "oneway": "yes",
+    "ref": "216",
+    "surface": "asphalt"
+   },
+   "nodes": [
+    [
+     53.437545,
+     -113.489575
+    ],
+    [
+     53.437424,
+     -113.491226
+    ]
+   ],
+   "direction": "west"
+  },
+  {
+   "osm_way": 22916449,
+   "part": "link_deck",
+   "which": "One-lane motorway link over the interchange, eastbound on this node order.",
+   "listed_under": "H27",
+   "plan_length_m": 101.4,
+   "tags": {
+    "bridge": "yes",
+    "highway": "motorway_link",
+    "lanes": "1",
+    "layer": "1",
+    "oneway": "yes",
+    "surface": "asphalt"
+   },
+   "nodes": [
+    [
+     53.437048,
+     -113.491009
+    ],
+    [
+     53.437122,
+     -113.489483
+    ]
+   ],
+   "direction": "east"
+  },
+  {
+   "osm_way": 22924969,
+   "part": "link_deck",
+   "which": "Two-lane motorway link to Calgary Trail (destination 2 South), westbound on this node order.",
+   "listed_under": "H27",
+   "plan_length_m": 99.2,
+   "tags": {
+    "bridge": "yes",
+    "destination": "Calgary;Edmonton International Airport",
+    "destination:ref": "2 South",
+    "highway": "motorway_link",
+    "lanes": "2",
+    "layer": "1",
+    "oneway": "yes",
+    "surface": "asphalt"
+   },
+   "nodes": [
+    [
+     53.437997,
+     -113.489855
+    ],
+    [
+     53.438015,
+     -113.491353
+    ]
+   ],
+   "direction": "west"
+  },
+  {
+   "osm_way": 41985559,
+   "part": "road_deck",
+   "which": "Anthony Henday Drive, eastbound, the southern piece over Blackmud Creek. Two lanes. The arch span is not separated in OSM.",
+   "listed_under": "H28",
+   "plan_length_m": 84.5,
+   "tags": {
+    "bridge": "yes",
+    "highway": "motorway",
+    "lanes": "2",
+    "layer": "1",
+    "maxspeed": "100",
+    "name": "Anthony Henday Drive NW",
+    "oneway": "yes",
+    "ref": "216",
+    "surface": "asphalt"
+   },
+   "nodes": [
+    [
+     53.436516,
+     -113.496938
+    ],
+    [
+     53.43667,
+     -113.495689
+    ]
+   ],
+   "direction": "east"
+  },
+  {
+   "osm_way": 41985746,
+   "part": "road_deck",
+   "which": "Anthony Henday Drive, eastbound, the eastern piece over Blackmud Creek. Two lanes.",
+   "listed_under": "H28",
+   "plan_length_m": 65.5,
+   "tags": {
+    "bridge": "yes",
+    "highway": "motorway",
+    "lanes": "2",
+    "layer": "1",
+    "maxspeed": "100",
+    "name": "Anthony Henday Drive NW",
+    "oneway": "yes",
+    "ref": "216"
+   },
+   "nodes": [
+    [
+     53.436775,
+     -113.494713
+    ],
+    [
+     53.436881,
+     -113.49374
+    ]
+   ],
+   "direction": "east"
+  },
+  {
+   "osm_way": 41985530,
+   "part": "road_deck",
+   "which": "Anthony Henday Drive, westbound, the western piece over Blackmud Creek. Two lanes.",
+   "listed_under": "H28",
+   "plan_length_m": 97.5,
+   "tags": {
+    "bridge": "yes",
+    "highway": "motorway",
+    "lanes": "2",
+    "layer": "1",
+    "maxspeed": "100",
+    "name": "Anthony Henday Drive NW",
+    "oneway": "yes",
+    "ref": "216",
+    "surface": "asphalt"
+   },
+   "nodes": [
+    [
+     53.436869,
+     -113.496638
+    ],
+    [
+     53.436686,
+     -113.498077
+    ]
+   ],
+   "direction": "west"
+  },
+  {
+   "osm_way": 41985706,
+   "part": "road_deck",
+   "which": "Anthony Henday Drive, westbound, the eastern piece over Blackmud Creek. Two lanes.",
+   "listed_under": "H28",
+   "plan_length_m": 68.4,
+   "tags": {
+    "bridge": "yes",
+    "highway": "motorway",
+    "lanes": "2",
+    "layer": "1",
+    "maxspeed": "100",
+    "name": "Anthony Henday Drive NW",
+    "oneway": "yes",
+    "ref": "216",
+    "surface": "asphalt"
+   },
+   "nodes": [
+    [
+     53.437185,
+     -113.49387
+    ],
+    [
+     53.437084,
+     -113.494888
+    ]
+   ],
+   "direction": "west"
+  },
+  {
+   "osm_way": 41986110,
+   "part": "link_deck",
+   "which": "One-lane motorway link tagged as a bridge on the westbound alignment. Identity as a separate arch ramp is not confirmed.",
+   "listed_under": "H28",
+   "plan_length_m": 68.6,
+   "tags": {
+    "bridge": "yes",
+    "highway": "motorway_link",
+    "lanes": "1",
+    "layer": "1",
+    "oneway": "yes",
+    "surface": "asphalt"
+   },
+   "nodes": [
+    [
+     53.437254,
+     -113.493901
+    ],
+    [
+     53.437163,
+     -113.494926
+    ]
+   ],
+   "direction": "west"
+  },
+  {
+   "osm_way": 22915670,
+   "part": "ramp_deck",
+   "which": "Two-lane ramp tagged as a bridge at layer 2, running north to south across the Henday alignment, destination 2 South. CCE 2008 calls the third Blackmud structure a ramp from the Calgary Trail interchange; this way is the best candidate, not confirmed. Plan length 316.4 m is far longer than the 76 m CCE figure per structure.",
+   "listed_under": "H28",
+   "plan_length_m": 316.4,
+   "tags": {
+    "bridge": "yes",
+    "destination": "Calgary;Edmonton International Airport",
+    "destination:ref": "2 South",
+    "highway": "motorway_link",
+    "lanes": "2",
+    "layer": "2",
+    "oneway": "yes",
+    "surface": "asphalt"
+   },
+   "nodes": [
+    [
+     53.437651,
+     -113.494035
+    ],
+    [
+     53.43754,
+     -113.49428
+    ],
+    [
+     53.43741,
+     -113.494502
+    ],
+    [
+     53.4373,
+     -113.494658
+    ],
+    [
+     53.437141,
+     -113.494863
+    ],
+    [
+     53.437008,
+     -113.494998
+    ],
+    [
+     53.436924,
+     -113.495069
+    ],
+    [
+     53.436793,
+     -113.495177
+    ],
+    [
+     53.436642,
+     -113.495273
+    ],
+    [
+     53.436506,
+     -113.495342
+    ],
+    [
+     53.436326,
+     -113.495399
+    ],
+    [
+     53.436131,
+     -113.495429
+    ],
+    [
+     53.435948,
+     -113.495426
+    ],
+    [
+     53.435806,
+     -113.495406
+    ],
+    [
+     53.435697,
+     -113.495373
+    ],
+    [
+     53.435563,
+     -113.495327
+    ],
+    [
+     53.435456,
+     -113.495277
+    ],
+    [
+     53.435339,
+     -113.495206
+    ],
+    [
+     53.435215,
+     -113.495118
+    ],
+    [
+     53.435116,
+     -113.495035
+    ]
+   ],
+   "direction": "south"
+  }
+ ],
+ "approaches": [
+  {
+   "osm_way": 22916431,
+   "part": "approach",
+   "which": "Henday approach from the east, to the H27 flyovers. Mapped as approach, not bridge.",
+   "listed_under": "H27",
+   "plan_length_m": 354.0,
+   "tags": {
+    "highway": "motorway",
+    "lanes": "2",
+    "maxspeed": "100",
+    "name": "Anthony Henday Drive NW",
+    "oneway": "yes",
+    "ref": "216",
+    "surface": "asphalt"
+   },
+   "nodes": [
+    [
+     53.437783,
+     -113.484246
+    ],
+    [
+     53.437771,
+     -113.484658
+    ],
+    [
+     53.437748,
+     -113.48539
+    ],
+    [
+     53.437724,
+     -113.486144
+    ],
+    [
+     53.437668,
+     -113.487364
+    ],
+    [
+     53.437545,
+     -113.489575
+    ]
+   ]
+  },
+  {
+   "osm_way": 22927689,
+   "part": "approach",
+   "which": "Henday approach, eastern side of the H27 flyovers.",
+   "listed_under": "H27",
+   "plan_length_m": 162.3,
+   "tags": {
+    "highway": "motorway",
+    "lanes": "2",
+    "maxspeed": "100",
+    "name": "Anthony Henday Drive NW",
+    "oneway": "yes",
+    "ref": "216",
+    "surface": "asphalt"
+   },
+   "nodes": [
+    [
+     53.43723,
+     -113.489512
+    ],
+    [
+     53.437274,
+     -113.488793
+    ],
+    [
+     53.437333,
+     -113.487789
+    ],
+    [
+     53.437368,
+     -113.487073
+    ]
+   ]
+  },
+  {
+   "osm_way": 1286236613,
+   "part": "approach",
+   "which": "Henday approach, short piece at the west end of the H27 flyovers.",
+   "listed_under": "H27",
+   "plan_length_m": 68.7,
+   "tags": {
+    "highway": "motorway",
+    "lanes": "2",
+    "maxspeed": "100",
+    "name": "Anthony Henday Drive NW",
+    "oneway": "yes",
+    "ref": "216",
+    "surface": "asphalt"
+   },
+   "nodes": [
+    [
+     53.437424,
+     -113.491226
+    ],
+    [
+     53.437337,
+     -113.492253
+    ]
+   ]
+  },
+  {
+   "osm_way": 41985724,
+   "part": "approach",
+   "which": "Henday approach between the H27 flyovers and the Blackmud arches. Also listed on the H28 object as a cross road; placed here because its east end meets the H27 deck at about -113.491.",
+   "listed_under": "H27 (also listed H28)",
+   "plan_length_m": 143.1,
+   "tags": {
+    "highway": "motorway",
+    "lanes": "2",
+    "maxspeed": "100",
+    "name": "Anthony Henday Drive NW",
+    "oneway": "yes",
+    "ref": "216",
+    "surface": "asphalt"
+   },
+   "nodes": [
+    [
+     53.436945,
+     -113.493154
+    ],
+    [
+     53.437072,
+     -113.49176
+    ],
+    [
+     53.437125,
+     -113.491015
+    ]
+   ]
+  },
+  {
+   "osm_way": 186995537,
+   "part": "ramp",
+   "which": "One-lane link between the Blackmud and H27 structures. Also listed on the H28 object as a cross road; placed here as above.",
+   "listed_under": "H27 (also listed H28)",
+   "plan_length_m": 142.6,
+   "tags": {
+    "highway": "motorway_link",
+    "lanes": "1",
+    "oneway": "yes",
+    "surface": "asphalt"
+   },
+   "nodes": [
+    [
+     53.436945,
+     -113.493154
+    ],
+    [
+     53.436974,
+     -113.492263
+    ],
+    [
+     53.437009,
+     -113.491713
+    ],
+    [
+     53.437033,
+     -113.49125
+    ],
+    [
+     53.437048,
+     -113.491009
+    ]
+   ]
+  },
+  {
+   "osm_way": 22927691,
+   "part": "ramp",
+   "which": "Ramp joining H27 link deck 22924969 to the 2 South ramp at 22915670. Also listed on the H28 object; placed here because it joins the H27 deck.",
+   "listed_under": "H27 (also listed H28)",
+   "plan_length_m": 186.1,
+   "tags": {
+    "destination": "Calgary;Edmonton International Airport",
+    "destination:ref": "2 South",
+    "highway": "motorway_link",
+    "lanes": "2",
+    "oneway": "yes",
+    "surface": "asphalt"
+   },
+   "nodes": [
+    [
+     53.438015,
+     -113.491353
+    ],
+    [
+     53.438021,
+     -113.491641
+    ],
+    [
+     53.438013,
+     -113.492349
+    ],
+    [
+     53.437978,
+     -113.492756
+    ],
+    [
+     53.437924,
+     -113.493105
+    ],
+    [
+     53.437863,
+     -113.493396
+    ],
+    [
+     53.437755,
+     -113.493768
+    ],
+    [
+     53.437651,
+     -113.494035
+    ]
+   ]
+  },
+  {
+   "osm_way": 22916429,
+   "part": "ramp",
+   "which": "Ramp to 2 South, east side of the H27 interchange.",
+   "listed_under": "H27",
+   "plan_length_m": 368.2,
+   "tags": {
+    "destination": "Calgary;Edmonton International Airport",
+    "destination:ref": "2 South",
+    "highway": "motorway_link",
+    "lanes": "2",
+    "oneway": "yes",
+    "surface": "asphalt"
+   },
+   "nodes": [
+    [
+     53.437949,
+     -113.484298
+    ],
+    [
+     53.437962,
+     -113.486702
+    ],
+    [
+     53.437989,
+     -113.487839
+    ],
+    [
+     53.437997,
+     -113.489855
+    ]
+   ]
+  },
+  {
+   "osm_way": 137033091,
+   "part": "ramp",
+   "which": "Long link ramp (35 nodes) around the east side of the H27 interchange. Plan only.",
+   "listed_under": "H27",
+   "plan_length_m": 600.1,
+   "tags": {
+    "highway": "motorway_link",
+    "lanes": "1",
+    "oneway": "yes",
+    "surface": "asphalt"
+   },
+   "nodes": [
+    [
+     53.437122,
+     -113.489483
+    ],
+    [
+     53.437129,
+     -113.489086
+    ],
+    [
+     53.437134,
+     -113.488445
+    ],
+    [
+     53.437085,
+     -113.488032
+    ],
+    [
+     53.437018,
+     -113.487725
+    ],
+    [
+     53.436939,
+     -113.487524
+    ],
+    [
+     53.436816,
+     -113.487261
+    ],
+    [
+     53.436691,
+     -113.487125
+    ],
+    [
+     53.436526,
+     -113.486986
+    ],
+    [
+     53.436357,
+     -113.486924
+    ],
+    [
+     53.436187,
+     -113.486925
+    ],
+    [
+     53.436003,
+     -113.486988
+    ],
+    [
+     53.435878,
+     -113.487084
+    ],
+    [
+     53.435751,
+     -113.48722
+    ],
+    [
+     53.435647,
+     -113.487387
+    ],
+    [
+     53.435571,
+     -113.487551
+    ],
+    [
+     53.435506,
+     -113.487758
+    ],
+    [
+     53.435465,
+     -113.487971
+    ],
+    [
+     53.435437,
+     -113.488247
+    ],
+    [
+     53.435443,
+     -113.488527
+    ],
+    [
+     53.435496,
+     -113.488874
+    ],
+    [
+     53.435562,
+     -113.489063
+    ],
+    [
+     53.435635,
+     -113.489207
+    ],
+    [
+     53.435687,
+     -113.489309
+    ],
+    [
+     53.435752,
+     -113.489407
+    ],
+    [
+     53.43582,
+     -113.489488
+    ],
+    [
+     53.435897,
+     -113.489564
+    ],
+    [
+     53.435967,
+     -113.489624
+    ],
+    [
+     53.436045,
+     -113.489668
+    ],
+    [
+     53.436158,
+     -113.489703
+    ],
+    [
+     53.436292,
+     -113.489737
+    ],
+    [
+     53.436431,
+     -113.48976
+    ],
+    [
+     53.436719,
+     -113.489817
+    ],
+    [
+     53.436906,
+     -113.489854
+    ],
+    [
+     53.437042,
+     -113.489891
+    ]
+   ]
+  },
+  {
+   "osm_way": 41985704,
+   "part": "approach",
+   "which": "Henday approach mapped between the two western H28 pieces, across the creek gap. The arch span may be in this way, but OSM does not tag it as a bridge.",
+   "listed_under": "H28",
+   "plan_length_m": 118.4,
+   "tags": {
+    "highway": "motorway",
+    "lanes": "2",
+    "maxspeed": "100",
+    "name": "Anthony Henday Drive NW",
+    "oneway": "yes",
+    "ref": "216",
+    "surface": "asphalt"
+   },
+   "nodes": [
+    [
+     53.437084,
+     -113.494888
+    ],
+    [
+     53.437052,
+     -113.495218
+    ],
+    [
+     53.436997,
+     -113.49571
+    ],
+    [
+     53.436869,
+     -113.496638
+    ]
+   ]
+  },
+  {
+   "osm_way": 41985557,
+   "part": "approach",
+   "which": "Henday approach mapped between the two eastern H28 pieces, across the creek gap. Same caveat as 41985704.",
+   "listed_under": "H28",
+   "plan_length_m": 65.7,
+   "tags": {
+    "highway": "motorway",
+    "lanes": "2",
+    "maxspeed": "100",
+    "name": "Anthony Henday Drive NW",
+    "oneway": "yes",
+    "ref": "216",
+    "surface": "asphalt"
+   },
+   "nodes": [
+    [
+     53.43667,
+     -113.495689
+    ],
+    [
+     53.436703,
+     -113.495412
+    ],
+    [
+     53.436739,
+     -113.495053
+    ],
+    [
+     53.436775,
+     -113.494713
+    ]
+   ]
+  },
+  {
+   "osm_way": 22937780,
+   "part": "approach",
+   "which": "Approach or ramp at the east end of the H28 pieces, between 22901511 and the H27 side.",
+   "listed_under": "H28",
+   "plan_length_m": 108.4,
+   "tags": {
+    "highway": "motorway",
+    "lanes": "2",
+    "maxspeed": "100",
+    "name": "Anthony Henday Drive NW",
+    "oneway": "yes",
+    "ref": "216",
+    "surface": "asphalt"
+   },
+   "nodes": [
+    [
+     53.437337,
+     -113.492253
+    ],
+    [
+     53.437185,
+     -113.49387
+    ]
+   ]
+  },
+  {
+   "osm_way": 1285921472,
+   "part": "approach",
+   "which": "Short Henday approach at the east end of the H28 pieces.",
+   "listed_under": "H28",
+   "plan_length_m": 39.5,
+   "tags": {
+    "highway": "motorway",
+    "lanes": "2",
+    "maxspeed": "100",
+    "name": "Anthony Henday Drive NW",
+    "oneway": "yes",
+    "ref": "216",
+    "surface": "asphalt"
+   },
+   "nodes": [
+    [
+     53.436881,
+     -113.49374
+    ],
+    [
+     53.436945,
+     -113.493154
+    ]
+   ]
+  },
+  {
+   "osm_way": 22901511,
+   "part": "ramp",
+   "which": "One-lane westbound ramp at the east end of the H28 pieces.",
+   "listed_under": "H28",
+   "plan_length_m": 109.7,
+   "tags": {
+    "highway": "motorway_link",
+    "lanes": "1",
+    "oneway": "yes",
+    "surface": "asphalt"
+   },
+   "nodes": [
+    [
+     53.437337,
+     -113.492253
+    ],
+    [
+     53.437328,
+     -113.492977
+    ],
+    [
+     53.437254,
+     -113.493901
+    ]
+   ]
+  },
+  {
+   "osm_way": 22892398,
+   "part": "ramp",
+   "which": "Short one-lane ramp at the H28 east end.",
+   "listed_under": "H28",
+   "plan_length_m": 30.1,
+   "tags": {
+    "highway": "motorway_link",
+    "lanes": "1",
+    "oneway": "yes",
+    "surface": "asphalt"
+   },
+   "nodes": [
+    [
+     53.437163,
+     -113.494926
+    ],
+    [
+     53.437125,
+     -113.495376
+    ]
+   ]
+  },
+  {
+   "osm_way": 22915669,
+   "part": "ramp",
+   "which": "Ramp south of the Henday, continuing from 22915670 to the south. Part of the Calgary Trail 2 South ramp chain.",
+   "listed_under": "H28",
+   "plan_length_m": 332.6,
+   "tags": {
+    "destination": "Calgary;Edmonton International Airport",
+    "destination:ref": "2 South",
+    "highway": "motorway_link",
+    "lanes": "2",
+    "oneway": "yes",
+    "surface": "asphalt"
+   },
+   "nodes": [
+    [
+     53.435116,
+     -113.495035
+    ],
+    [
+     53.435029,
+     -113.494955
+    ],
+    [
+     53.434908,
+     -113.49483
+    ],
+    [
+     53.434436,
+     -113.494269
+    ],
+    [
+     53.434213,
+     -113.494004
+    ],
+    [
+     53.434002,
+     -113.493753
+    ],
+    [
+     53.43387,
+     -113.493608
+    ],
+    [
+     53.433684,
+     -113.493448
+    ],
+    [
+     53.433565,
+     -113.493363
+    ],
+    [
+     53.433431,
+     -113.493283
+    ],
+    [
+     53.433313,
+     -113.493221
+    ],
+    [
+     53.433184,
+     -113.493172
+    ],
+    [
+     53.433039,
+     -113.493136
+    ],
+    [
+     53.432786,
+     -113.493085
+    ],
+    [
+     53.432443,
+     -113.493038
+    ]
+   ]
+  },
+  {
+   "osm_way": 41985538,
+   "part": "approach",
+   "which": "Henday approach on the west side, running west from the H28 pieces. The extract ends at the edge of the download box, so this plan length is clipped.",
+   "listed_under": "H28",
+   "plan_length_m": 707.6,
+   "tags": {
+    "highway": "motorway",
+    "lanes": "2",
+    "maxspeed": "100",
+    "name": "Anthony Henday Drive NW",
+    "oneway": "yes",
+    "ref": "216",
+    "surface": "asphalt"
+   },
+   "nodes": [
+    [
+     53.436686,
+     -113.498077
+    ],
+    [
+     53.435643,
+     -113.505347
+    ],
+    [
+     53.435499,
+     -113.506478
+    ],
+    [
+     53.435278,
+     -113.508492
+    ]
+   ]
+  },
+  {
+   "osm_way": 52431023,
+   "part": "approach",
+   "which": "Henday approach on the west side, south of the carriageways, running west. Clipped at the download box edge.",
+   "listed_under": "H28",
+   "plan_length_m": 390.5,
+   "tags": {
+    "highway": "motorway",
+    "lanes": "2",
+    "maxspeed": "100",
+    "name": "Anthony Henday Drive NW",
+    "oneway": "yes",
+    "ref": "216",
+    "surface": "asphalt"
+   },
+   "nodes": [
+    [
+     53.435707,
+     -113.502675
+    ],
+    [
+     53.436192,
+     -113.49927
+    ],
+    [
+     53.43642,
+     -113.497621
+    ],
+    [
+     53.436516,
+     -113.496938
+    ]
+   ]
+  }
+ ],
+ "cross_roads": [
+  {
+   "osm_way": 37693617,
+   "listed_under": "H27",
+   "name_or_destination": "Calgary Trail SW",
+   "highway": "motorway",
+   "plan_length_m": 120.2
+  },
+  {
+   "osm_way": 537266144,
+   "listed_under": "H27",
+   "name_or_destination": "Calgary Trail NW",
+   "highway": "motorway",
+   "plan_length_m": 644.2
+  },
+  {
+   "osm_way": 610941828,
+   "listed_under": "H27",
+   "name_or_destination": null,
+   "highway": "motorway_link",
+   "plan_length_m": 166.4
+  },
+  {
+   "osm_way": 610941840,
+   "listed_under": "H27",
+   "name_or_destination": null,
+   "highway": "motorway_link",
+   "plan_length_m": 25.7
+  },
+  {
+   "osm_way": 610941842,
+   "listed_under": "H27",
+   "name_or_destination": "Gateway Boulevard SW",
+   "highway": "motorway",
+   "plan_length_m": 93.1
+  },
+  {
+   "osm_way": 610941843,
+   "listed_under": "H27",
+   "name_or_destination": "Gateway Boulevard SW",
+   "highway": "motorway",
+   "plan_length_m": 24.5
+  },
+  {
+   "osm_way": 610941846,
+   "listed_under": "H27",
+   "name_or_destination": "Calgary Trail SW",
+   "highway": "motorway",
+   "plan_length_m": 428.1
+  },
+  {
+   "osm_way": 610941856,
+   "listed_under": "H27",
+   "name_or_destination": "Gateway Boulevard SW",
+   "highway": "motorway",
+   "plan_length_m": 1248.2
+  },
+  {
+   "osm_way": 1285854504,
+   "listed_under": "H27",
+   "name_or_destination": "Gateway Boulevard NW",
+   "highway": "motorway",
+   "plan_length_m": 368.2
+  },
+  {
+   "osm_way": 22892419,
+   "listed_under": "H28",
+   "name_or_destination": "216 East",
+   "highway": "motorway_link",
+   "plan_length_m": 494.8
+  },
+  {
+   "osm_way": 22892473,
+   "listed_under": "H28",
+   "name_or_destination": "Calgary;Edmonton International Airport",
+   "highway": "motorway_link",
+   "plan_length_m": 939.3
+  },
+  {
+   "osm_way": 22916437,
+   "listed_under": "H28",
+   "name_or_destination": "West Edmonton Mall",
+   "highway": "motorway_link",
+   "plan_length_m": 45.4
+  },
+  {
+   "osm_way": 22949438,
+   "listed_under": "H28",
+   "name_or_destination": "West Edmonton Mall",
+   "highway": "motorway_link",
+   "plan_length_m": 382.8
+  },
+  {
+   "osm_way": 428798460,
+   "listed_under": "H28",
+   "name_or_destination": "West Edmonton Mall",
+   "highway": "motorway_link",
+   "plan_length_m": 321.9
+  },
+  {
+   "osm_way": 428798461,
+   "listed_under": "H28",
+   "name_or_destination": "West Edmonton Mall",
+   "highway": "motorway_link",
+   "plan_length_m": 140.0
+  },
+  {
+   "osm_way": 614150571,
+   "listed_under": "H28",
+   "name_or_destination": null,
+   "highway": "motorway_link",
+   "plan_length_m": 538.1
+  }
+ ],
+ "dimensions": {
+  "published": {
+   "H28_structure_length_m_each": {
+    "value": 76,
+    "source": "Canadian Consulting Engineer, 'Three Crossings On Henday' (2008). Each of the three Blackmud Creek structures."
+   },
+   "H28_middle_span_m": {
+    "value": 40,
+    "source": "CCE 2008"
+   },
+   "H28_side_cantilever_m_each": {
+    "value": 18,
+    "source": "CCE 2008"
+   },
+   "H28_structure_skew_deg": {
+    "value": 15,
+    "source": "CCE 2008"
+   },
+   "H28_roadway_skew_deg": {
+    "value": 45,
+    "source": "CCE 2008"
+   },
+   "H28_roadway_elevation_above_creek_bed_m": {
+    "value": 17,
+    "source": "CCE 2008"
+   },
+   "H28_embankment_height_each_side_m": {
+    "value": 16,
+    "source": "CCE 2008 (arch thrust partly supports 16 m embankments)"
+   },
+   "H28_arch_ribs_per_structure": {
+    "value": 2,
+    "source": "CCE 2008"
+   },
+   "H28_arch_rib_span_x_rise_m": {
+    "value": "40 x 7.5",
+    "source": "CCE 2008"
+   },
+   "H28_arch_rib_width_x_thickness_m": {
+    "value": "7.0 x 0.4",
+    "source": "CCE 2008"
+   },
+   "H28_deck_slab_depth_m": {
+    "value": 1.5,
+    "source": "CCE 2008 (1.5 m cellular slab, five cells per bridge, cantilevered top slab up to 4 m out from the main girders)"
+   },
+   "H28_completion": {
+    "value": "September 2005",
+    "source": "CCE 2008"
+   },
+   "H28_contractor": {
+    "value": "PCL Maxam",
+    "source": "CCE 2008"
+   },
+   "H27_trellis_span_m": {
+    "value": 44,
+    "source": "CCE 2008 (chosen over a minimum of about 22 m)"
+   },
+   "H27_trellis_beam_spacing_m": {
+    "value": "8 (normal 6)",
+    "source": "CCE 2008"
+   },
+   "H27_trellis_beam_width_mm": {
+    "value": "600 at bottom, 1000 at underside of top flange; flange width 1300",
+    "source": "CCE 2008"
+   },
+   "H27_trellis_skew_deg": {
+    "value": "50 to 80 on two structures, south to north",
+    "source": "CCE 2008"
+   },
+   "H27_grade_separated_structures": {
+    "value": 4,
+    "source": "CCE 2008"
+   },
+   "H27_supports": {
+    "value": "integral abutments; no piers next to the roadway",
+    "source": "CCE 2008"
+   },
+   "H27_contractor": {
+    "value": "Graham Industrial Services",
+    "source": "CCE 2008"
+   },
+   "owner": {
+    "value": "Alberta Infrastructure & Transportation",
+    "source": "CCE 2008"
+   },
+   "design_engineer": {
+    "value": "Associated Engineering",
+    "source": "CCE 2008"
+   }
+  },
+  "not_published": [
+   "deck elevation above sea level and its datum",
+   "pier count for the H28 arches (the article does not mention piers)",
+   "carriageway width and lane width",
+   "crossfall and longitudinal grade",
+   "approach gradients and where each road meets grade",
+   "H27 trellis-beam overall and individual span lengths beyond the 44 m span",
+   "Alberta Transportation structure inventory lengths (not reached)"
+  ]
+ },
+ "osm_added_2026_11_23": {
+  "note": "All motorway, motorway_link, secondary road, stream and railway ways in the box 53.4285..53.4420, -113.5215..-113.4800, read from the OSM API (api.openstreetmap.org/api/0.6/map) on 2026-11-23 for the model. Nodes outside the box are dropped (clipped=true). The Blackmud Creek arches are Henday ways 25477513 (westbound) and 25477514 (eastbound) and ramp 25477544 + 115754686 at 53.4348, -113.5134, where stream 490629227 crosses; the ways at -113.496 first listed as H28 are the H27 trellis flyovers over ramp 22915670.",
+  "ways": [
+   {
+    "osm_way": 22892398,
+    "tags": {
+     "destination:street": "111 Street",
+     "highway": "motorway_link",
+     "lanes": "1",
+     "lit": "yes",
+     "oneway": "yes",
+     "surface": "asphalt"
+    },
+    "clipped": false,
+    "nodes": [
+     [
+      53.4371769,
+      -113.4947939
+     ],
+     [
+      53.4371248,
+      -113.4953761
+     ]
+    ]
+   },
+   {
+    "osm_way": 22892418,
+    "tags": {
+     "destination": "West Edmonton Mall",
+     "destination:ref": "216 West",
+     "destination:street": "Anthony Henday Drive",
+     "highway": "motorway_link",
+     "lit": "yes",
+     "maxspeed": "80",
+     "oneway": "yes",
+     "source:maxspeed": "sign",
+     "surface": "asphalt"
+    },
+    "clipped": false,
+    "nodes": [
+     [
+      53.4379348,
+      -113.4958764
+     ],
+     [
+      53.4377902,
+      -113.4963664
+     ],
+     [
+      53.4376746,
+      -113.4968308
+     ],
+     [
+      53.4376258,
+      -113.4971424
+     ],
+     [
+      53.4372719,
+      -113.4994978
+     ],
+     [
+      53.437193,
+      -113.4999597
+     ],
+     [
+      53.4370805,
+      -113.5005388
+     ],
+     [
+      53.4369466,
+      -113.5010734
+     ],
+     [
+      53.4365381,
+      -113.5027419
+     ],
+     [
+      53.4363843,
+      -113.503283
+     ]
+    ]
+   },
+   {
+    "osm_way": 22892419,
+    "tags": {
+     "destination:ref": "216 East",
+     "destination:street": "Anthony Henday Drive",
+     "highway": "motorway_link",
+     "lanes": "1",
+     "lit": "yes",
+     "maxspeed:advisory": "60",
+     "oneway": "yes",
+     "surface": "asphalt"
+    },
+    "clipped": false,
+    "nodes": [
+     [
+      53.4385483,
+      -113.4941049
+     ],
+     [
+      53.4382677,
+      -113.4942432
+     ],
+     [
+      53.4378392,
+      -113.494358
+     ],
+     [
+      53.4376381,
+      -113.4943721
+     ],
+     [
+      53.4374536,
+      -113.4943666
+     ],
+     [
+      53.4372719,
+      -113.4943523
+     ],
+     [
+      53.4370765,
+      -113.4943011
+     ],
+     [
+      53.436902,
+      -113.4942478
+     ],
+     [
+      53.4367624,
+      -113.4941707
+     ],
+     [
+      53.436537,
+      -113.4940392
+     ],
+     [
+      53.4362941,
+      -113.4938313
+     ],
+     [
+      53.4361293,
+      -113.4936715
+     ],
+     [
+      53.4359463,
+      -113.493449
+     ],
+     [
+      53.4357949,
+      -113.493236
+     ],
+     [
+      53.4356388,
+      -113.4929727
+     ],
+     [
+      53.4355158,
+      -113.4927387
+     ],
+     [
+      53.4353871,
+      -113.4924372
+     ],
+     [
+      53.4352868,
+      -113.4921886
+     ],
+     [
+      53.4351862,
+      -113.4918641
+     ],
+     [
+      53.4350848,
+      -113.4914535
+     ],
+     [
+      53.4350141,
+      -113.4911055
+     ]
+    ]
+   },
+   {
+    "osm_way": 22892420,
+    "tags": {
+     "destination:street": "111 Street;Ellerslie Road",
+     "highway": "motorway_link",
+     "lanes": "2",
+     "lit": "yes",
+     "oneway": "yes",
+     "source": "Bing"
+    },
+    "clipped": false,
+    "nodes": [
+     [
+      53.4351626,
+      -113.5138404
+     ],
+     [
+      53.4351583,
+      -113.5140365
+     ],
+     [
+      53.4351412,
+      -113.5152035
+     ],
+     [
+      53.4351549,
+      -113.5159787
+     ],
+     [
+      53.4351933,
+      -113.5164177
+     ]
+    ]
+   },
+   {
+    "osm_way": 22892467,
+    "tags": {
+     "destination:street": "111 Street;Ellerslie Road",
+     "highway": "motorway_link",
+     "junction:ref": "2",
+     "lanes": "1",
+     "oneway": "yes"
+    },
+    "clipped": true,
+    "nodes": [
+     [
+      53.4329451,
+      -113.5214163
+     ],
+     [
+      53.4329287,
+      -113.5211521
+     ],
+     [
+      53.4329357,
+      -113.5208037
+     ],
+     [
+      53.4329483,
+      -113.5207214
+     ]
+    ]
+   },
+   {
+    "osm_way": 22892471,
+    "tags": {
+     "destination:ref": "216 East",
+     "destination:street": "Anthony Henday Drive",
+     "highway": "motorway_link",
+     "lanes": "1",
+     "lit": "yes",
+     "oneway": "yes"
+    },
+    "clipped": true,
+    "nodes": [
+     [
+      53.4332357,
+      -113.519881
+     ],
+     [
+      53.4331052,
+      -113.5206313
+     ],
+     [
+      53.4330763,
+      -113.5209547
+     ],
+     [
+      53.4330694,
+      -113.5211969
+     ],
+     [
+      53.4330996,
+      -113.5213997
+     ],
+     [
+      53.4343399,
+      -113.5214888
+     ],
+     [
+      53.4344077,
+      -113.5211181
+     ],
+     [
+      53.4344189,
+      -113.5207324
+     ],
+     [
+      53.4344369,
+      -113.5192129
+     ],
+     [
+      53.4344395,
+      -113.5180891
+     ],
+     [
+      53.4344409,
+      -113.517788
+     ],
+     [
+      53.4344472,
+      -113.5174711
+     ],
+     [
+      53.434457,
+      -113.5169323
+     ],
+     [
+      53.4344583,
+      -113.5166707
+     ],
+     [
+      53.4345534,
+      -113.5156497
+     ]
+    ]
+   },
+   {
+    "osm_way": 22892473,
+    "tags": {
+     "destination": "Calgary;Edmonton International Airport",
+     "destination:ref": "2 South",
+     "highway": "motorway_link",
+     "junction:ref": "78B",
+     "lanes": "2",
+     "lit": "yes",
+     "maxspeed": "90",
+     "oneway": "yes",
+     "source:maxspeed": "sign",
+     "surface": "asphalt"
+    },
+    "clipped": false,
+    "nodes": [
+     [
+      53.4357067,
+      -113.5026752
+     ],
+     [
+      53.4356787,
+      -113.5024276
+     ],
+     [
+      53.4360227,
+      -113.4994107
+     ],
+     [
+      53.4360616,
+      -113.4990441
+     ],
+     [
+      53.4360996,
+      -113.4985765
+     ],
+     [
+      53.4361133,
+      -113.4981911
+     ],
+     [
+      53.4361142,
+      -113.4976968
+     ],
+     [
+      53.436082,
+      -113.497269
+     ],
+     [
+      53.4360063,
+      -113.4967267
+     ],
+     [
+      53.435928,
+      -113.4962964
+     ],
+     [
+      53.4357775,
+      -113.4957208
+     ],
+     [
+      53.435749,
+      -113.4956255
+     ],
+     [
+      53.4356813,
+      -113.495399
+     ],
+     [
+      53.4356491,
+      -113.4953259
+     ],
+     [
+      53.4354458,
+      -113.4948639
+     ],
+     [
+      53.4352491,
+      -113.4945082
+     ],
+     [
+      53.4351192,
+      -113.4942976
+     ],
+     [
+      53.4349791,
+      -113.4940995
+     ],
+     [
+      53.4348383,
+      -113.4939219
+     ],
+     [
+      53.4346601,
+      -113.4937223
+     ],
+     [
+      53.4345259,
+      -113.4935998
+     ],
+     [
+      53.4343485,
+      -113.4934542
+     ],
+     [
+      53.4342155,
+      -113.4933514
+     ],
+     [
+      53.4339998,
+      -113.4932177
+     ],
+     [
+      53.433849,
+      -113.4931472
+     ],
+     [
+      53.4336454,
+      -113.4930647
+     ],
+     [
+      53.4335049,
+      -113.4930247
+     ],
+     [
+      53.4332712,
+      -113.492987
+     ],
+     [
+      53.4330653,
+      -113.4929729
+     ],
+     [
+      53.4326837,
+      -113.4929771
+     ],
+     [
+      53.4324433,
+      -113.493038
+     ],
+     [
+      53.4321886,
+      -113.4930443
+     ]
+    ]
+   },
+   {
+    "osm_way": 22892477,
+    "tags": {
+     "destination": "Calgary",
+     "destination:ref": "2 South",
+     "destination:street": "Gateway Boulevard North",
+     "highway": "motorway_link",
+     "junction:ref": "78",
+     "lanes": "2",
+     "lit": "yes",
+     "oneway": "yes",
+     "surface": "asphalt",
+     "turn:lanes": "through|through;slight_right"
+    },
+    "clipped": true,
+    "nodes": [
+     [
+      53.4378771,
+      -113.4803688
+     ],
+     [
+      53.4379407,
+      -113.4832621
+     ]
+    ]
+   },
+   {
+    "osm_way": 22899983,
+    "tags": {
+     "destination:ref": "216 East",
+     "destination:street": "Anthony Henday Drive",
+     "highway": "motorway_link",
+     "lanes": "2",
+     "lit": "yes",
+     "maxspeed": "80",
+     "oneway": "yes",
+     "source:maxspeed": "sign",
+     "surface": "asphalt"
+    },
+    "clipped": false,
+    "nodes": [
+     [
+      53.4301938,
+      -113.4924729
+     ],
+     [
+      53.4307591,
+      -113.4922766
+     ],
+     [
+      53.4313829,
+      -113.4920578
+     ],
+     [
+      53.4317091,
+      -113.4919117
+     ],
+     [
+      53.4319304,
+      -113.491813
+     ],
+     [
+      53.4321084,
+      -113.4917219
+     ],
+     [
+      53.4322945,
+      -113.4916056
+     ],
+     [
+      53.4325133,
+      -113.4914586
+     ],
+     [
+      53.4326826,
+      -113.4913196
+     ],
+     [
+      53.4328563,
+      -113.4911657
+     ],
+     [
+      53.4330747,
+      -113.4909496
+     ],
+     [
+      53.4332261,
+      -113.4907849
+     ]
+    ]
+   },
+   {
+    "osm_way": 22900056,
+    "tags": {
+     "destination:street": "91 Street",
+     "highway": "motorway_link",
+     "junction:ref": "76",
+     "lanes": "1",
+     "lit": "yes",
+     "maxspeed:advisory": "80",
+     "oneway": "yes",
+     "source": "Bing",
+     "surface": "asphalt"
+    },
+    "clipped": false,
+    "nodes": [
+     [
+      53.4374089,
+      -113.4860901
+     ],
+     [
+      53.4373795,
+      -113.4853642
+     ],
+     [
+      53.4373853,
+      -113.4848785
+     ],
+     [
+      53.4373845,
+      -113.4843858
+     ],
+     [
+      53.4373845,
+      -113.4840508
+     ]
+    ]
+   },
+   {
+    "osm_way": 22901450,
+    "tags": {
+     "destination:ref": "216 East",
+     "destination:street": "Anthony Henday Drive",
+     "highway": "motorway_link",
+     "lanes": "2",
+     "lit": "yes",
+     "maxspeed": "80",
+     "oneway": "yes",
+     "source:maxspeed": "sign",
+     "surface": "asphalt"
+    },
+    "clipped": false,
+    "nodes": [
+     [
+      53.436799,
+      -113.4841306
+     ],
+     [
+      53.4368784,
+      -113.4838363
+     ]
+    ]
+   },
+   {
+    "osm_way": 22901511,
+    "tags": {
+     "destination:street": "111 Street",
+     "highway": "motorway_link",
+     "junction:ref": "2",
+     "lanes": "1",
+     "lit": "yes",
+     "oneway": "yes",
+     "surface": "asphalt"
+    },
+    "clipped": false,
+    "nodes": [
+     [
+      53.4373369,
+      -113.4922532
+     ],
+     [
+      53.4373281,
+      -113.4929772
+     ],
+     [
+      53.4372571,
+      -113.4939042
+     ]
+    ]
+   },
+   {
+    "osm_way": 22915669,
+    "tags": {
+     "destination": "Calgary;Edmonton International Airport",
+     "destination:ref": "2 South",
+     "highway": "motorway_link",
+     "lanes": "2",
+     "lit": "yes",
+     "maxspeed:advisory": "60",
+     "oneway": "yes",
+     "surface": "asphalt"
+    },
+    "clipped": false,
+    "nodes": [
+     [
+      53.4351542,
+      -113.4950669
+     ],
+     [
+      53.4350289,
+      -113.4949547
+     ],
+     [
+      53.4349078,
+      -113.4948296
+     ],
+     [
+      53.4344359,
+      -113.4942691
+     ],
+     [
+      53.4342133,
+      -113.4940036
+     ],
+     [
+      53.4340019,
+      -113.4937527
+     ],
+     [
+      53.4338695,
+      -113.4936081
+     ],
+     [
+      53.4336841,
+      -113.4934484
+     ],
+     [
+      53.433565,
+      -113.4933626
+     ],
+     [
+      53.433431,
+      -113.4932828
+     ],
+     [
+      53.4333133,
+      -113.4932214
+     ],
+     [
+      53.4331841,
+      -113.4931718
+     ],
+     [
+      53.4330385,
+      -113.4931356
+     ],
+     [
+      53.4327861,
+      -113.4930852
+     ],
+     [
+      53.4324433,
+      -113.493038
+     ]
+    ]
+   },
+   {
+    "osm_way": 22915670,
+    "tags": {
+     "bridge": "yes",
+     "destination": "Calgary;Edmonton International Airport",
+     "destination:ref": "2 South",
+     "highway": "motorway_link",
+     "lanes": "2",
+     "layer": "2",
+     "lit": "yes",
+     "maxspeed:advisory": "60",
+     "oneway": "yes",
+     "surface": "asphalt"
+    },
+    "clipped": false,
+    "nodes": [
+     [
+      53.4376007,
+      -113.4941414
+     ],
+     [
+      53.4375399,
+      -113.4942803
+     ],
+     [
+      53.4374103,
+      -113.4945018
+     ],
+     [
+      53.4373003,
+      -113.4946579
+     ],
+     [
+      53.4371411,
+      -113.4948627
+     ],
+     [
+      53.4370077,
+      -113.4949979
+     ],
+     [
+      53.4369238,
+      -113.4950694
+     ],
+     [
+      53.4367928,
+      -113.4951769
+     ],
+     [
+      53.4366424,
+      -113.4952734
+     ],
+     [
+      53.4365059,
+      -113.4953422
+     ],
+     [
+      53.4363255,
+      -113.4953987
+     ],
+     [
+      53.4361306,
+      -113.4954288
+     ],
+     [
+      53.4359477,
+      -113.4954261
+     ],
+     [
+      53.4358058,
+      -113.495406
+     ],
+     [
+      53.4356969,
+      -113.4953727
+     ],
+     [
+      53.4355633,
+      -113.4953272
+     ],
+     [
+      53.4354561,
+      -113.4952769
+     ],
+     [
+      53.4353388,
+      -113.4952064
+     ],
+     [
+      53.4352154,
+      -113.4951182
+     ],
+     [
+      53.4351542,
+      -113.4950669
+     ]
+    ]
+   },
+   {
+    "osm_way": 22916422,
+    "tags": {
+     "bridge": "yes",
+     "destination:ref": "216 East",
+     "destination:street": "Anthony Henday Drive",
+     "highway": "motorway_link",
+     "lanes": "2",
+     "layer": "1",
+     "lit": "yes",
+     "maxspeed": "80",
+     "oneway": "yes",
+     "source:maxspeed": "sign",
+     "surface": "asphalt"
+    },
+    "clipped": false,
+    "nodes": [
+     [
+      53.4368784,
+      -113.4838363
+     ],
+     [
+      53.4369854,
+      -113.4834094
+     ],
+     [
+      53.4370823,
+      -113.4828997
+     ]
+    ]
+   },
+   {
+    "osm_way": 22916425,
+    "tags": {
+     "destination:ref": "216 East",
+     "destination:street": "Anthony Henday Drive",
+     "highway": "motorway_link",
+     "lanes": "2",
+     "lit": "yes",
+     "maxspeed": "80",
+     "oneway": "yes",
+     "source:maxspeed": "sign",
+     "surface": "asphalt"
+    },
+    "clipped": true,
+    "nodes": [
+     [
+      53.4370823,
+      -113.4828997
+     ],
+     [
+      53.4371152,
+      -113.4826618
+     ],
+     [
+      53.4371403,
+      -113.4824663
+     ],
+     [
+      53.4371765,
+      -113.4821317
+     ],
+     [
+      53.437209,
+      -113.4816266
+     ],
+     [
+      53.4372281,
+      -113.4811891
+     ],
+     [
+      53.4372269,
+      -113.4805773
+     ]
+    ]
+   },
+   {
+    "osm_way": 22916426,
+    "tags": {
+     "bridge": "yes",
+     "hazmat": "designated",
+     "hgv": "designated",
+     "highway": "motorway",
+     "lanes": "2",
+     "layer": "1",
+     "lit": "yes",
+     "maxspeed": "100",
+     "name": "Anthony Henday Drive NW",
+     "name:etymology:wikidata": "Q573339",
+     "oneway": "yes",
+     "ref": "216",
+     "surface": "asphalt"
+    },
+    "clipped": false,
+    "nodes": [
+     [
+      53.4374684,
+      -113.4840801
+     ],
+     [
+      53.4374897,
+      -113.4830837
+     ]
+    ]
+   },
+   {
+    "osm_way": 22916429,
+    "tags": {
+     "destination": "Calgary;Edmonton International Airport",
+     "destination:ref": "2 South",
+     "highway": "motorway_link",
+     "lanes": "2",
+     "lit": "yes",
+     "maxspeed:advisory": "60",
+     "oneway": "yes",
+     "surface": "asphalt"
+    },
+    "clipped": false,
+    "nodes": [
+     [
+      53.4379487,
+      -113.4843112
+     ],
+     [
+      53.4379623,
+      -113.4867024
+     ],
+     [
+      53.437989,
+      -113.4878386
+     ],
+     [
+      53.437997,
+      -113.4897822
+     ]
+    ]
+   },
+   {
+    "osm_way": 22916431,
+    "tags": {
+     "hazmat": "designated",
+     "hgv": "designated",
+     "highway": "motorway",
+     "lanes": "2",
+     "lit": "yes",
+     "maxspeed": "100",
+     "name": "Anthony Henday Drive NW",
+     "name:etymology:wikidata": "Q573339",
+     "oneway": "yes",
+     "ref": "216",
+     "surface": "asphalt"
+    },
+    "clipped": false,
+    "nodes": [
+     [
+      53.4377834,
+      -113.4842296
+     ],
+     [
+      53.4377706,
+      -113.4846582
+     ],
+     [
+      53.4377477,
+      -113.4853899
+     ],
+     [
+      53.4377237,
+      -113.4861438
+     ],
+     [
+      53.4376675,
+      -113.4873642
+     ],
+     [
+      53.437541,
+      -113.4896087
+     ]
+    ]
+   },
+   {
+    "osm_way": 22916432,
+    "tags": {
+     "bridge": "yes",
+     "hazmat": "designated",
+     "hgv": "designated",
+     "highway": "motorway",
+     "lanes": "2",
+     "layer": "1",
+     "lit": "yes",
+     "maxspeed": "100",
+     "name": "Anthony Henday Drive NW",
+     "name:etymology:wikidata": "Q573339",
+     "oneway": "yes",
+     "ref": "216",
+     "surface": "asphalt"
+    },
+    "clipped": false,
+    "nodes": [
+     [
+      53.4377988,
+      -113.4832025
+     ],
+     [
+      53.4377834,
+      -113.4842296
+     ]
+    ]
+   },
+   {
+    "osm_way": 22916437,
+    "tags": {
+     "destination": "West Edmonton Mall",
+     "destination:ref": "216 West",
+     "destination:street": "Anthony Henday Drive",
+     "highway": "motorway_link",
+     "lit": "yes",
+     "maxspeed": "80",
+     "oneway": "yes",
+     "surface": "asphalt"
+    },
+    "clipped": false,
+    "nodes": [
+     [
+      53.4363434,
+      -113.4950803
+     ],
+     [
+      53.4364333,
+      -113.4953602
+     ],
+     [
+      53.4364977,
+      -113.4955708
+     ],
+     [
+      53.4365333,
+      -113.4956869
+     ]
+    ]
+   },
+   {
+    "osm_way": 22916446,
+    "tags": {
+     "bridge": "yes",
+     "destination:ref": "216 East",
+     "destination:street": "Anthony Henday Drive",
+     "highway": "motorway_link",
+     "lanes": "1",
+     "layer": "1",
+     "lit": "yes",
+     "oneway": "yes",
+     "surface": "asphalt"
+    },
+    "clipped": false,
+    "nodes": [
+     [
+      53.4350141,
+      -113.4911055
+     ],
+     [
+      53.4349719,
+      -113.4907909
+     ],
+     [
+      53.4349405,
+      -113.4904615
+     ],
+     [
+      53.4349243,
+      -113.4901233
+     ],
+     [
+      53.4349257,
+      -113.4897369
+     ]
+    ]
+   },
+   {
+    "osm_way": 22916447,
+    "tags": {
+     "destination:ref": "216 East",
+     "destination:street": "Anthony Henday Drive",
+     "highway": "motorway_link",
+     "lanes": "1",
+     "lit": "yes",
+     "oneway": "yes",
+     "surface": "asphalt"
+    },
+    "clipped": false,
+    "nodes": [
+     [
+      53.4349257,
+      -113.4897369
+     ],
+     [
+      53.4349367,
+      -113.489423
+     ],
+     [
+      53.434967,
+      -113.4890877
+     ],
+     [
+      53.4349882,
+      -113.488927
+     ],
+     [
+      53.4350094,
+      -113.4887895
+     ],
+     [
+      53.4350331,
+      -113.4886391
+     ],
+     [
+      53.435061,
+      -113.4884904
+     ],
+     [
+      53.4351123,
+      -113.4882675
+     ],
+     [
+      53.4351714,
+      -113.4880304
+     ],
+     [
+      53.4352744,
+      -113.4876878
+     ],
+     [
+      53.4353989,
+      -113.4873655
+     ],
+     [
+      53.4356782,
+      -113.4867724
+     ],
+     [
+      53.435985,
+      -113.4861586
+     ],
+     [
+      53.436121,
+      -113.4858873
+     ],
+     [
+      53.4362715,
+      -113.4855804
+     ],
+     [
+      53.4364082,
+      -113.4852966
+     ],
+     [
+      53.4365377,
+      -113.4849836
+     ],
+     [
+      53.4366317,
+      -113.4847306
+     ],
+     [
+      53.4367298,
+      -113.4844466
+     ],
+     [
+      53.436799,
+      -113.4841306
+     ]
+    ]
+   },
+   {
+    "osm_way": 22916449,
+    "tags": {
+     "bridge": "yes",
+     "destination:street": "Gateway Boulevard North",
+     "highway": "motorway_link",
+     "lanes": "1",
+     "layer": "1",
+     "lit": "yes",
+     "maxspeed:advisory": "40",
+     "oneway": "yes",
+     "source": "Bing",
+     "surface": "asphalt"
+    },
+    "clipped": false,
+    "nodes": [
+     [
+      53.4370417,
+      -113.4910395
+     ],
+     [
+      53.4371219,
+      -113.4895853
+     ]
+    ]
+   },
+   {
+    "osm_way": 22924959,
+    "tags": {
+     "bridge": "yes",
+     "destination": "Calgary;Edmonton International Airport",
+     "destination:ref": "2 South",
+     "highway": "motorway_link",
+     "lanes": "4",
+     "layer": "1",
+     "lit": "yes",
+     "maxspeed": "90",
+     "oneway": "yes",
+     "source:maxspeed": "sign",
+     "surface": "asphalt",
+     "turn:lanes": "none|none|none|merge_to_left"
+    },
+    "clipped": false,
+    "nodes": [
+     [
+      53.4321886,
+      -113.4930443
+     ],
+     [
+      53.4306851,
+      -113.493089
+     ]
+    ]
+   },
+   {
+    "osm_way": 22924964,
+    "tags": {
+     "attribution": "GeoBase\u00ae",
+     "bridge": "yes",
+     "geobase:acquisitionTechnique": "Vector Data",
+     "hazmat": "designated",
+     "hgv": "designated",
+     "highway": "motorway",
+     "lanes": "2",
+     "layer": "1",
+     "lit": "yes",
+     "maxspeed": "100",
+     "name": "Anthony Henday Drive NW",
+     "name:etymology:wikidata": "Q573339",
+     "oneway": "yes",
+     "ref": "216",
+     "surface": "asphalt"
+    },
+    "clipped": false,
+    "nodes": [
+     [
+      53.4371291,
+      -113.4910561
+     ],
+     [
+      53.4371564,
+      -113.4905851
+     ],
+     [
+      53.4372204,
+      -113.489603
+     ]
+    ]
+   },
+   {
+    "osm_way": 22924966,
+    "tags": {
+     "bridge": "yes",
+     "hazmat": "designated",
+     "hgv": "designated",
+     "highway": "motorway",
+     "lanes": "2",
+     "layer": "1",
+     "lit": "yes",
+     "maxspeed": "100",
+     "name": "Anthony Henday Drive NW",
+     "name:etymology:wikidata": "Q573339",
+     "oneway": "yes",
+     "ref": "216",
+     "surface": "asphalt"
+    },
+    "clipped": false,
+    "nodes": [
+     [
+      53.437541,
+      -113.4896087
+     ],
+     [
+      53.4374222,
+      -113.491186
+     ]
+    ]
+   },
+   {
+    "osm_way": 22924969,
+    "tags": {
+     "bridge": "yes",
+     "destination": "Calgary;Edmonton International Airport",
+     "destination:ref": "2 South",
+     "highway": "motorway_link",
+     "lanes": "2",
+     "layer": "1",
+     "lit": "yes",
+     "maxspeed:advisory": "60",
+     "oneway": "yes",
+     "surface": "asphalt"
+    },
+    "clipped": false,
+    "nodes": [
+     [
+      53.437997,
+      -113.4897822
+     ],
+     [
+      53.4380165,
+      -113.4913521
+     ]
+    ]
+   },
+   {
+    "osm_way": 22927648,
+    "tags": {
+     "destination:ref": "216 East",
+     "destination:street": "Anthony Henday Drive",
+     "highway": "motorway_link",
+     "lanes": "2",
+     "lit": "yes",
+     "maxspeed": "80",
+     "oneway": "yes",
+     "surface": "asphalt"
+    },
+    "clipped": false,
+    "nodes": [
+     [
+      53.433738,
+      -113.4901008
+     ],
+     [
+      53.4339486,
+      -113.4897532
+     ],
+     [
+      53.434087,
+      -113.489509
+     ],
+     [
+      53.4353297,
+      -113.4871964
+     ]
+    ]
+   },
+   {
+    "osm_way": 22927649,
+    "tags": {
+     "bridge": "yes",
+     "destination:ref": "216 East",
+     "destination:street": "Anthony Henday Drive",
+     "highway": "motorway_link",
+     "lanes": "2",
+     "layer": "1",
+     "lit": "yes",
+     "maxspeed": "80",
+     "oneway": "yes",
+     "surface": "asphalt"
+    },
+    "clipped": false,
+    "nodes": [
+     [
+      53.4332261,
+      -113.4907849
+     ],
+     [
+      53.4333846,
+      -113.4905955
+     ],
+     [
+      53.4335632,
+      -113.4903623
+     ],
+     [
+      53.433738,
+      -113.4901008
+     ]
+    ]
+   },
+   {
+    "osm_way": 22927689,
+    "tags": {
+     "hazmat": "designated",
+     "hgv": "designated",
+     "highway": "motorway",
+     "lanes": "2",
+     "lit": "yes",
+     "maxspeed": "100",
+     "name": "Anthony Henday Drive NW",
+     "name:etymology:wikidata": "Q573339",
+     "oneway": "yes",
+     "ref": "216",
+     "surface": "asphalt"
+    },
+    "clipped": false,
+    "nodes": [
+     [
+      53.4372204,
+      -113.489603
+     ],
+     [
+      53.4372742,
+      -113.4887928
+     ],
+     [
+      53.4373332,
+      -113.4877887
+     ],
+     [
+      53.4373679,
+      -113.487073
+     ]
+    ]
+   },
+   {
+    "osm_way": 22927691,
+    "tags": {
+     "destination": "Calgary;Edmonton International Airport",
+     "destination:ref": "2 South",
+     "highway": "motorway_link",
+     "lanes": "2",
+     "lit": "yes",
+     "maxspeed:advisory": "60",
+     "oneway": "yes",
+     "surface": "asphalt"
+    },
+    "clipped": false,
+    "nodes": [
+     [
+      53.4380165,
+      -113.4913521
+     ],
+     [
+      53.4380209,
+      -113.491641
+     ],
+     [
+      53.438013,
+      -113.4923489
+     ],
+     [
+      53.4379779,
+      -113.4927558
+     ],
+     [
+      53.4379243,
+      -113.4931051
+     ],
+     [
+      53.4378625,
+      -113.4933962
+     ],
+     [
+      53.4377546,
+      -113.4937676
+     ],
+     [
+      53.4376007,
+      -113.4941414
+     ]
+    ]
+   },
+   {
+    "osm_way": 22937780,
+    "tags": {
+     "hazmat": "designated",
+     "hgv": "designated",
+     "highway": "motorway",
+     "lanes": "2",
+     "lit": "yes",
+     "maxspeed": "100",
+     "name": "Anthony Henday Drive NW",
+     "name:etymology:wikidata": "Q573339",
+     "oneway": "yes",
+     "ref": "216",
+     "surface": "asphalt"
+    },
+    "clipped": false,
+    "nodes": [
+     [
+      53.4373369,
+      -113.4922532
+     ],
+     [
+      53.4371832,
+      -113.4938842
+     ]
+    ]
+   },
+   {
+    "osm_way": 22949436,
+    "tags": {
+     "bridge": "yes",
+     "destination": "West Edmonton Mall",
+     "destination:ref": "216 West",
+     "destination:street": "Anthony Henday Drive",
+     "highway": "motorway_link",
+     "lanes": "2",
+     "layer": "1",
+     "lit": "yes",
+     "maxspeed": "80",
+     "oneway": "yes",
+     "source:maxspeed": "sign",
+     "surface": "asphalt"
+    },
+    "clipped": false,
+    "nodes": [
+     [
+      53.4321782,
+      -113.4920799
+     ],
+     [
+      53.4324702,
+      -113.4920384
+     ],
+     [
+      53.4327919,
+      -113.4920196
+     ],
+     [
+      53.4330956,
+      -113.4920293
+     ],
+     [
+      53.433278,
+      -113.4920684
+     ],
+     [
+      53.4335362,
+      -113.4921162
+     ]
+    ]
+   },
+   {
+    "osm_way": 22949438,
+    "tags": {
+     "destination": "West Edmonton Mall",
+     "destination:ref": "216 West",
+     "destination:street": "Anthony Henday Drive",
+     "highway": "motorway_link",
+     "lanes": "2",
+     "lit": "yes",
+     "maxspeed": "80",
+     "oneway": "yes",
+     "source:maxspeed": "sign",
+     "surface": "asphalt"
+    },
+    "clipped": false,
+    "nodes": [
+     [
+      53.4335362,
+      -113.4921162
+     ],
+     [
+      53.4337994,
+      -113.4921907
+     ],
+     [
+      53.4340368,
+      -113.492265
+     ],
+     [
+      53.434243,
+      -113.4923605
+     ],
+     [
+      53.4344043,
+      -113.4924642
+     ],
+     [
+      53.4345776,
+      -113.4925587
+     ],
+     [
+      53.4348017,
+      -113.4927009
+     ],
+     [
+      53.4350322,
+      -113.4929179
+     ],
+     [
+      53.4352525,
+      -113.493133
+     ],
+     [
+      53.435485,
+      -113.4934224
+     ],
+     [
+      53.4356806,
+      -113.493681
+     ],
+     [
+      53.4359044,
+      -113.4940881
+     ],
+     [
+      53.4360559,
+      -113.4943853
+     ],
+     [
+      53.4362334,
+      -113.4947619
+     ],
+     [
+      53.4363434,
+      -113.4950803
+     ]
+    ]
+   },
+   {
+    "osm_way": 23245771,
+    "tags": {
+     "bridge": "yes",
+     "electrified": "no",
+     "gauge": "1435",
+     "layer": "1",
+     "maxspeed": "55 mph",
+     "name": "Leduc Subdivision",
+     "old_operator": "Calgary & Edmonton Railway",
+     "operator": "Canadian Pacific Kansas City",
+     "operator:wikidata": "Q117706368",
+     "railway": "rail",
+     "railway:traffic_mode": "freight",
+     "reporting_marks": "CPKC",
+     "usage": "main"
+    },
+    "clipped": false,
+    "nodes": [
+     [
+      53.4415407,
+      -113.4862685
+     ],
+     [
+      53.4412733,
+      -113.4860791
+     ]
+    ]
+   },
+   {
+    "osm_way": 25477512,
+    "tags": {
+     "hazmat": "designated",
+     "hgv": "designated",
+     "highway": "motorway",
+     "lanes": "3",
+     "lit": "yes",
+     "maxheight": "5.6",
+     "maxspeed": "100",
+     "name": "Anthony Henday Drive NW",
+     "name:etymology:wikidata": "Q573339",
+     "oneway": "yes",
+     "placement": "left_of:2",
+     "ref": "216",
+     "surface": "asphalt"
+    },
+    "clipped": false,
+    "nodes": [
+     [
+      53.4349124,
+      -113.5139614
+     ],
+     [
+      53.4348929,
+      -113.5146647
+     ],
+     [
+      53.4348761,
+      -113.5158242
+     ],
+     [
+      53.4348742,
+      -113.5191319
+     ],
+     [
+      53.4348853,
+      -113.520072
+     ]
+    ]
+   },
+   {
+    "osm_way": 25477513,
+    "tags": {
+     "bridge": "yes",
+     "hazmat": "designated",
+     "hgv": "designated",
+     "highway": "motorway",
+     "lanes": "3",
+     "layer": "1",
+     "lit": "yes",
+     "maxspeed": "100",
+     "name": "Anthony Henday Drive NW",
+     "name:etymology:wikidata": "Q573339",
+     "oneway": "yes",
+     "placement": "left_of:2",
+     "ref": "216",
+     "surface": "asphalt"
+    },
+    "clipped": false,
+    "nodes": [
+     [
+      53.4349593,
+      -113.5128212
+     ],
+     [
+      53.4349124,
+      -113.5139614
+     ]
+    ]
+   },
+   {
+    "osm_way": 25477514,
+    "tags": {
+     "bridge": "yes",
+     "hazmat": "designated",
+     "hgv": "designated",
+     "highway": "motorway",
+     "lanes": "3",
+     "layer": "1",
+     "lit": "yes",
+     "maxspeed": "100",
+     "name": "Anthony Henday Drive NW",
+     "name:etymology:wikidata": "Q573339",
+     "oneway": "yes",
+     "placement": "left_of:2",
+     "ref": "216",
+     "surface": "asphalt"
+    },
+    "clipped": false,
+    "nodes": [
+     [
+      53.4345965,
+      -113.5140536
+     ],
+     [
+      53.4346276,
+      -113.5130748
+     ],
+     [
+      53.4346382,
+      -113.5128788
+     ]
+    ]
+   },
+   {
+    "osm_way": 25477516,
+    "tags": {
+     "hazmat": "designated",
+     "hgv": "designated",
+     "highway": "motorway",
+     "lanes": "3",
+     "lit": "yes",
+     "maxspeed": "100",
+     "name": "Anthony Henday Drive NW",
+     "name:etymology:wikidata": "Q573339",
+     "oneway": "yes",
+     "placement": "left_of:2",
+     "ref": "216",
+     "surface": "asphalt",
+     "turn:lanes": "none|through;slight_right|slight_right"
+    },
+    "clipped": false,
+    "nodes": [
+     [
+      53.4346382,
+      -113.5128788
+     ],
+     [
+      53.4346766,
+      -113.5122062
+     ],
+     [
+      53.4347196,
+      -113.5114723
+     ],
+     [
+      53.4348384,
+      -113.5098855
+     ],
+     [
+      53.4349458,
+      -113.5086568
+     ],
+     [
+      53.4351912,
+      -113.5063964
+     ],
+     [
+      53.4353509,
+      -113.50517
+     ],
+     [
+      53.4357067,
+      -113.5026752
+     ]
+    ]
+   },
+   {
+    "osm_way": 25477542,
+    "tags": {
+     "destination": "Anthony Henday Drive",
+     "destination:ref": "216 West",
+     "highway": "motorway_link",
+     "lanes": "1",
+     "lit": "yes",
+     "maxspeed": "80",
+     "oneway": "yes",
+     "source": "Bing",
+     "source:maxspeed": "sign"
+    },
+    "clipped": false,
+    "nodes": [
+     [
+      53.43537,
+      -113.5102813
+     ],
+     [
+      53.4352059,
+      -113.5118772
+     ],
+     [
+      53.4351372,
+      -113.5127085
+     ]
+    ]
+   },
+   {
+    "osm_way": 25477544,
+    "tags": {
+     "bridge": "yes",
+     "destination:street": "111 Street;Ellerslie Road",
+     "highway": "motorway_link",
+     "layer": "1",
+     "oneway": "yes"
+    },
+    "clipped": false,
+    "nodes": [
+     [
+      53.4352136,
+      -113.5126761
+     ],
+     [
+      53.4351626,
+      -113.5138404
+     ]
+    ]
+   },
+   {
+    "osm_way": 25500080,
+    "tags": {
+     "expressway": "yes",
+     "foot": "no",
+     "hgv": "designated",
+     "highway": "secondary",
+     "lanes": "2",
+     "maxspeed": "60",
+     "name": "111 Street SW",
+     "oneway": "yes",
+     "sidewalk": "no",
+     "surface": "asphalt"
+    },
+    "clipped": false,
+    "nodes": [
+     [
+      53.4327299,
+      -113.5189992
+     ],
+     [
+      53.4323242,
+      -113.5186912
+     ],
+     [
+      53.4319602,
+      -113.5183549
+     ],
+     [
+      53.431537,
+      -113.5179736
+     ],
+     [
+      53.4313102,
+      -113.5177902
+     ],
+     [
+      53.4310927,
+      -113.5176259
+     ],
+     [
+      53.4308473,
+      -113.5174601
+     ],
+     [
+      53.4305183,
+      -113.5172577
+     ]
+    ]
+   },
+   {
+    "osm_way": 25500106,
+    "tags": {
+     "bridge": "yes",
+     "expressway": "yes",
+     "hgv": "designated",
+     "highway": "secondary",
+     "lanes": "2",
+     "layer": "1",
+     "lit": "yes",
+     "maxspeed": "60",
+     "name": "111 Street NW",
+     "oneway": "yes",
+     "sidewalk": "separate",
+     "surface": "asphalt"
+    },
+    "clipped": false,
+    "nodes": [
+     [
+      53.4342214,
+      -113.5194094
+     ],
+     [
+      53.4346292,
+      -113.5194551
+     ],
+     [
+      53.4348929,
+      -113.5194549
+     ],
+     [
+      53.4351856,
+      -113.5194299
+     ]
+    ]
+   },
+   {
+    "osm_way": 25500123,
+    "tags": {
+     "bridge": "yes",
+     "expressway": "yes",
+     "hgv": "designated",
+     "highway": "secondary",
+     "lanes": "2",
+     "layer": "1",
+     "lit": "yes",
+     "maxspeed": "60",
+     "name": "111 Street NW",
+     "oneway": "yes",
+     "sidewalk": "no",
+     "surface": "asphalt"
+    },
+    "clipped": false,
+    "nodes": [
+     [
+      53.4351933,
+      -113.5196194
+     ],
+     [
+      53.434895,
+      -113.51966
+     ],
+     [
+      53.4346252,
+      -113.5196554
+     ],
+     [
+      53.4342297,
+      -113.5196138
+     ]
+    ]
+   },
+   {
+    "osm_way": 37693617,
+    "tags": {
+     "hazmat": "designated",
+     "hgv": "designated",
+     "highway": "motorway",
+     "lanes": "3",
+     "lit": "yes",
+     "maxheight": "5.9",
+     "maxspeed": "90",
+     "name": "Calgary Trail SW",
+     "oneway": "yes",
+     "placement": "left_of:2",
+     "ref": "2",
+     "surface": "asphalt"
+    },
+    "clipped": false,
+    "nodes": [
+     [
+      53.4380868,
+      -113.4908124
+     ],
+     [
+      53.4379491,
+      -113.4907498
+     ],
+     [
+      53.4378699,
+      -113.4907163
+     ],
+     [
+      53.4377339,
+      -113.4906653
+     ],
+     [
+      53.437563,
+      -113.4906102
+     ],
+     [
+      53.4374076,
+      -113.4905722
+     ],
+     [
+      53.4372223,
+      -113.49053
+     ],
+     [
+      53.4370237,
+      -113.4904937
+     ]
+    ]
+   },
+   {
+    "osm_way": 41985530,
+    "tags": {
+     "bridge": "yes",
+     "hazmat": "designated",
+     "hgv": "designated",
+     "highway": "motorway",
+     "lanes": "2",
+     "layer": "1",
+     "lit": "yes",
+     "maxspeed": "100",
+     "name": "Anthony Henday Drive NW",
+     "name:etymology:wikidata": "Q573339",
+     "oneway": "yes",
+     "ref": "216",
+     "surface": "asphalt"
+    },
+    "clipped": false,
+    "nodes": [
+     [
+      53.4369088,
+      -113.4963994
+     ],
+     [
+      53.4367171,
+      -113.4978114
+     ]
+    ]
+   },
+   {
+    "osm_way": 41985538,
+    "tags": {
+     "hazmat": "designated",
+     "hgv": "designated",
+     "highway": "motorway",
+     "lanes": "2",
+     "lit": "yes",
+     "maxspeed": "100",
+     "name": "Anthony Henday Drive NW",
+     "name:etymology:wikidata": "Q573339",
+     "oneway": "yes",
+     "ref": "216",
+     "surface": "asphalt"
+    },
+    "clipped": false,
+    "nodes": [
+     [
+      53.4367171,
+      -113.4978114
+     ],
+     [
+      53.4356435,
+      -113.5053468
+     ],
+     [
+      53.4354995,
+      -113.5064783
+     ],
+     [
+      53.4352777,
+      -113.5084921
+     ]
+    ]
+   },
+   {
+    "osm_way": 41985557,
+    "tags": {
+     "hazmat": "designated",
+     "hgv": "designated",
+     "highway": "motorway",
+     "lanes": "2",
+     "lit": "yes",
+     "maxspeed": "100",
+     "name": "Anthony Henday Drive NW",
+     "name:etymology:wikidata": "Q573339",
+     "oneway": "yes",
+     "ref": "216",
+     "surface": "asphalt"
+    },
+    "clipped": false,
+    "nodes": [
+     [
+      53.4366971,
+      -113.4954725
+     ],
+     [
+      53.4367031,
+      -113.4954115
+     ],
+     [
+      53.4367393,
+      -113.4950527
+     ],
+     [
+      53.4367732,
+      -113.494739
+     ]
+    ]
+   },
+   {
+    "osm_way": 41985559,
+    "tags": {
+     "bridge": "yes",
+     "hazmat": "designated",
+     "hgv": "designated",
+     "highway": "motorway",
+     "lanes": "2",
+     "layer": "1",
+     "lit": "yes",
+     "maxspeed": "100",
+     "name": "Anthony Henday Drive NW",
+     "name:etymology:wikidata": "Q573339",
+     "oneway": "yes",
+     "ref": "216",
+     "surface": "asphalt"
+    },
+    "clipped": false,
+    "nodes": [
+     [
+      53.4365037,
+      -113.4969775
+     ],
+     [
+      53.4366971,
+      -113.4954725
+     ]
+    ]
+   },
+   {
+    "osm_way": 41985704,
+    "tags": {
+     "hazmat": "designated",
+     "hgv": "designated",
+     "highway": "motorway",
+     "lanes": "2",
+     "lit": "yes",
+     "maxspeed": "100",
+     "name": "Anthony Henday Drive NW",
+     "name:etymology:wikidata": "Q573339",
+     "oneway": "yes",
+     "ref": "216",
+     "surface": "asphalt"
+    },
+    "clipped": false,
+    "nodes": [
+     [
+      53.4370968,
+      -113.4947656
+     ],
+     [
+      53.4370523,
+      -113.4952184
+     ],
+     [
+      53.4369971,
+      -113.4957095
+     ],
+     [
+      53.4369088,
+      -113.4963994
+     ]
+    ]
+   },
+   {
+    "osm_way": 41985706,
+    "tags": {
+     "bridge": "yes",
+     "hazmat": "designated",
+     "hgv": "designated",
+     "highway": "motorway",
+     "lanes": "2",
+     "layer": "1",
+     "lit": "yes",
+     "maxspeed": "100",
+     "name": "Anthony Henday Drive NW",
+     "name:etymology:wikidata": "Q573339",
+     "oneway": "yes",
+     "ref": "216",
+     "surface": "asphalt"
+    },
+    "clipped": false,
+    "nodes": [
+     [
+      53.4371832,
+      -113.4938842
+     ],
+     [
+      53.4370968,
+      -113.4947656
+     ]
+    ]
+   },
+   {
+    "osm_way": 41985724,
+    "tags": {
+     "hazmat": "designated",
+     "hgv": "designated",
+     "highway": "motorway",
+     "lanes": "2",
+     "lit": "yes",
+     "maxspeed": "100",
+     "name": "Anthony Henday Drive NW",
+     "name:etymology:wikidata": "Q573339",
+     "oneway": "yes",
+     "ref": "216",
+     "surface": "asphalt"
+    },
+    "clipped": false,
+    "nodes": [
+     [
+      53.4369451,
+      -113.4931538
+     ],
+     [
+      53.437072,
+      -113.4917597
+     ],
+     [
+      53.4371291,
+      -113.4910561
+     ]
+    ]
+   },
+   {
+    "osm_way": 41985746,
+    "tags": {
+     "bridge": "yes",
+     "hazmat": "designated",
+     "hgv": "designated",
+     "highway": "motorway",
+     "lanes": "2",
+     "layer": "1",
+     "lit": "yes",
+     "maxspeed": "100",
+     "name": "Anthony Henday Drive NW",
+     "name:etymology:wikidata": "Q573339",
+     "oneway": "yes",
+     "ref": "216"
+    },
+    "clipped": false,
+    "nodes": [
+     [
+      53.4367732,
+      -113.494739
+     ],
+     [
+      53.4368792,
+      -113.493755
+     ]
+    ]
+   },
+   {
+    "osm_way": 41986110,
+    "tags": {
+     "bridge": "yes",
+     "destination:street": "111 Street",
+     "highway": "motorway_link",
+     "lanes": "1",
+     "layer": "1",
+     "lit": "yes",
+     "oneway": "yes",
+     "source": "Yahoo",
+     "surface": "asphalt"
+    },
+    "clipped": false,
+    "nodes": [
+     [
+      53.4372571,
+      -113.4939042
+     ],
+     [
+      53.4371769,
+      -113.4947939
+     ]
+    ]
+   },
+   {
+    "osm_way": 42366432,
+    "tags": {
+     "destination:street": "Gateway Boulevard North",
+     "highway": "motorway_link",
+     "lanes": "1",
+     "lit": "yes",
+     "maxspeed:advisory": "70",
+     "oneway": "yes",
+     "surface": "asphalt"
+    },
+    "clipped": false,
+    "nodes": [
+     [
+      53.4379487,
+      -113.4843112
+     ],
+     [
+      53.4380089,
+      -113.4850268
+     ],
+     [
+      53.4380678,
+      -113.4869559
+     ],
+     [
+      53.4380836,
+      -113.4873655
+     ],
+     [
+      53.4381237,
+      -113.4879963
+     ],
+     [
+      53.438187,
+      -113.4884869
+     ],
+     [
+      53.438261,
+      -113.4888734
+     ],
+     [
+      53.4383668,
+      -113.4892068
+     ],
+     [
+      53.4384681,
+      -113.4895324
+     ],
+     [
+      53.4385875,
+      -113.4898052
+     ],
+     [
+      53.438722,
+      -113.4900581
+     ],
+     [
+      53.4389354,
+      -113.4904119
+     ],
+     [
+      53.439166,
+      -113.490682
+     ],
+     [
+      53.4394071,
+      -113.4909119
+     ],
+     [
+      53.439644,
+      -113.4910837
+     ],
+     [
+      53.4398409,
+      -113.4912192
+     ],
+     [
+      53.4402485,
+      -113.4914713
+     ],
+     [
+      53.4410205,
+      -113.4919706
+     ],
+     [
+      53.4412103,
+      -113.4921824
+     ]
+    ]
+   },
+   {
+    "osm_way": 51718578,
+    "tags": {
+     "destination": "111 Street South",
+     "destination:to": "Ellerslie Road",
+     "highway": "motorway_link",
+     "oneway": "yes",
+     "sidewalk": "no"
+    },
+    "clipped": false,
+    "nodes": [
+     [
+      53.4331117,
+      -113.5197696
+     ],
+     [
+      53.4330647,
+      -113.5195264
+     ],
+     [
+      53.4329994,
+      -113.5193032
+     ],
+     [
+      53.4327299,
+      -113.5189992
+     ]
+    ]
+   },
+   {
+    "osm_way": 51718584,
+    "tags": {
+     "destination:ref": "216 East",
+     "destination:street": "Anthony Henday Drive",
+     "highway": "motorway_link",
+     "oneway": "yes",
+     "sidewalk": "no"
+    },
+    "clipped": false,
+    "nodes": [
+     [
+      53.4337035,
+      -113.5194716
+     ],
+     [
+      53.4334386,
+      -113.5195468
+     ],
+     [
+      53.4333431,
+      -113.5196374
+     ],
+     [
+      53.4332357,
+      -113.519881
+     ]
+    ]
+   },
+   {
+    "osm_way": 51718585,
+    "tags": {
+     "destination": "111 Street Noth",
+     "highway": "motorway_link",
+     "oneway": "yes",
+     "sidewalk": "no"
+    },
+    "clipped": false,
+    "nodes": [
+     [
+      53.435524,
+      -113.5184433
+     ],
+     [
+      53.4356436,
+      -113.5187854
+     ],
+     [
+      53.4356909,
+      -113.5188344
+     ],
+     [
+      53.4357789,
+      -113.5189367
+     ]
+    ]
+   },
+   {
+    "osm_way": 51718606,
+    "tags": {
+     "destination:ref": "216 West",
+     "destination:street": "Anthony Henday Drive",
+     "highway": "motorway_link",
+     "oneway": "yes",
+     "sidewalk": "no"
+    },
+    "clipped": false,
+    "nodes": [
+     [
+      53.4362894,
+      -113.5192866
+     ],
+     [
+      53.4359828,
+      -113.519513
+     ],
+     [
+      53.4358376,
+      -113.5196432
+     ],
+     [
+      53.4357197,
+      -113.5198021
+     ],
+     [
+      53.4356323,
+      -113.5199691
+     ],
+     [
+      53.4355681,
+      -113.5201844
+     ]
+    ]
+   },
+   {
+    "osm_way": 52431023,
+    "tags": {
+     "hazmat": "designated",
+     "hgv": "designated",
+     "highway": "motorway",
+     "lanes": "2",
+     "lit": "yes",
+     "maxspeed": "100",
+     "name": "Anthony Henday Drive NW",
+     "name:etymology:wikidata": "Q573339",
+     "oneway": "yes",
+     "ref": "216",
+     "surface": "asphalt"
+    },
+    "clipped": false,
+    "nodes": [
+     [
+      53.4357067,
+      -113.5026752
+     ],
+     [
+      53.4361918,
+      -113.4992702
+     ],
+     [
+      53.4364205,
+      -113.4976211
+     ],
+     [
+      53.4365037,
+      -113.4969775
+     ]
+    ]
+   },
+   {
+    "osm_way": 60093990,
+    "tags": {
+     "attribution": "GeoBase \u00ae",
+     "bridge": "yes",
+     "destination": "Calgary",
+     "destination:ref": "2 South",
+     "destination:street": "Gateway Boulevard North",
+     "geobase:acquisitionTechnique": "Vector Data",
+     "highway": "motorway_link",
+     "junction:ref": "78",
+     "lanes": "2",
+     "layer": "1",
+     "lit": "yes",
+     "oneway": "yes",
+     "source": "Geobase_Import_2010",
+     "surface": "asphalt",
+     "turn:lanes": "through|through;slight_right"
+    },
+    "clipped": false,
+    "nodes": [
+     [
+      53.4379407,
+      -113.4832621
+     ],
+     [
+      53.4379455,
+      -113.4839231
+     ],
+     [
+      53.4379487,
+      -113.4843112
+     ]
+    ]
+   },
+   {
+    "osm_way": 115754669,
+    "tags": {
+     "highway": "motorway_link",
+     "lanes": "1",
+     "lit": "yes",
+     "maxheight": "5.6",
+     "maxspeed": "80",
+     "oneway": "yes",
+     "source": "Bing",
+     "source:maxspeed": "sign"
+    },
+    "clipped": false,
+    "nodes": [
+     [
+      53.435065,
+      -113.5138825
+     ],
+     [
+      53.4350113,
+      -113.5150989
+     ],
+     [
+      53.4349543,
+      -113.5169737
+     ],
+     [
+      53.4349691,
+      -113.5188792
+     ],
+     [
+      53.4348853,
+      -113.520072
+     ]
+    ]
+   },
+   {
+    "osm_way": 115754686,
+    "tags": {
+     "bridge": "yes",
+     "highway": "motorway_link",
+     "lanes": "1",
+     "layer": "1",
+     "lit": "yes",
+     "maxspeed": "80",
+     "oneway": "yes",
+     "source": "Bing",
+     "source:maxspeed": "sign"
+    },
+    "clipped": false,
+    "nodes": [
+     [
+      53.4351372,
+      -113.5127085
+     ],
+     [
+      53.435065,
+      -113.5138825
+     ]
+    ]
+   },
+   {
+    "osm_way": 115758013,
+    "tags": {
+     "destination:street": "91 Street",
+     "highway": "motorway_link",
+     "lane_markings": "yes",
+     "lit": "yes",
+     "maxspeed:advisory": "80",
+     "oneway": "yes",
+     "source": "Bing",
+     "source:maxspeed": "sign",
+     "surface": "asphalt"
+    },
+    "clipped": true,
+    "nodes": [
+     [
+      53.437376,
+      -113.4830306
+     ],
+     [
+      53.4373719,
+      -113.4824804
+     ],
+     [
+      53.4373525,
+      -113.4817883
+     ],
+     [
+      53.4373204,
+      -113.4808088
+     ]
+    ]
+   },
+   {
+    "osm_way": 115758014,
+    "tags": {
+     "bridge": "yes",
+     "destination:street": "91 Street",
+     "highway": "motorway_link",
+     "lane_markings": "yes",
+     "layer": "1",
+     "lit": "yes",
+     "maxspeed:advisory": "80",
+     "oneway": "yes",
+     "source": "Bing",
+     "surface": "asphalt"
+    },
+    "clipped": false,
+    "nodes": [
+     [
+      53.4373845,
+      -113.4840508
+     ],
+     [
+      53.437376,
+      -113.4830306
+     ]
+    ]
+   },
+   {
+    "osm_way": 126754766,
+    "tags": {
+     "hgv": "designated",
+     "highway": "secondary",
+     "lanes": "2",
+     "lit": "yes",
+     "maxspeed": "60",
+     "name": "Parsons Road SW",
+     "sidewalk:left": "no",
+     "sidewalk:right": "separate",
+     "surface": "asphalt"
+    },
+    "clipped": true,
+    "nodes": [
+     [
+      53.4369463,
+      -113.4831921
+     ],
+     [
+      53.4358882,
+      -113.4828835
+     ],
+     [
+      53.4348585,
+      -113.4825787
+     ],
+     [
+      53.4346038,
+      -113.4824953
+     ],
+     [
+      53.4343176,
+      -113.4823767
+     ],
+     [
+      53.4340603,
+      -113.4822359
+     ],
+     [
+      53.4337738,
+      -113.4820595
+     ],
+     [
+      53.4334556,
+      -113.4818124
+     ],
+     [
+      53.4324271,
+      -113.4808706
+     ],
+     [
+      53.432346,
+      -113.4807963
+     ],
+     [
+      53.4320055,
+      -113.4805064
+     ],
+     [
+      53.4317322,
+      -113.4803021
+     ],
+     [
+      53.4314375,
+      -113.4801605
+     ],
+     [
+      53.4310835,
+      -113.4800323
+     ]
+    ]
+   },
+   {
+    "osm_way": 137033091,
+    "tags": {
+     "destination:street": "Gateway Boulevard North",
+     "highway": "motorway_link",
+     "lanes": "1",
+     "lit": "yes",
+     "maxspeed:advisory": "40",
+     "oneway": "yes",
+     "surface": "asphalt"
+    },
+    "clipped": false,
+    "nodes": [
+     [
+      53.4371219,
+      -113.4895853
+     ],
+     [
+      53.4371285,
+      -113.4890861
+     ],
+     [
+      53.4371343,
+      -113.4884448
+     ],
+     [
+      53.4370847,
+      -113.4880322
+     ],
+     [
+      53.437018,
+      -113.4877254
+     ],
+     [
+      53.4369393,
+      -113.4875242
+     ],
+     [
+      53.436816,
+      -113.4872614
+     ],
+     [
+      53.4366911,
+      -113.4871253
+     ],
+     [
+      53.4365255,
+      -113.4869856
+     ],
+     [
+      53.4363568,
+      -113.4869239
+     ],
+     [
+      53.4361866,
+      -113.4869252
+     ],
+     [
+      53.4360033,
+      -113.4869876
+     ],
+     [
+      53.4358782,
+      -113.4870845
+     ],
+     [
+      53.4357512,
+      -113.4872201
+     ],
+     [
+      53.4356472,
+      -113.4873874
+     ],
+     [
+      53.4355707,
+      -113.4875512
+     ],
+     [
+      53.4355064,
+      -113.4877575
+     ],
+     [
+      53.4354652,
+      -113.4879705
+     ],
+     [
+      53.4354374,
+      -113.4882473
+     ],
+     [
+      53.4354428,
+      -113.4885265
+     ],
+     [
+      53.4354965,
+      -113.4888743
+     ],
+     [
+      53.435562,
+      -113.4890633
+     ],
+     [
+      53.4356352,
+      -113.4892074
+     ],
+     [
+      53.4356868,
+      -113.4893092
+     ],
+     [
+      53.4357517,
+      -113.4894067
+     ],
+     [
+      53.4358197,
+      -113.4894884
+     ],
+     [
+      53.4358971,
+      -113.4895636
+     ],
+     [
+      53.4359666,
+      -113.4896243
+     ],
+     [
+      53.4360447,
+      -113.4896676
+     ],
+     [
+      53.4361579,
+      -113.4897025
+     ],
+     [
+      53.4362924,
+      -113.4897373
+     ],
+     [
+      53.4364313,
+      -113.4897596
+     ],
+     [
+      53.4367189,
+      -113.4898167
+     ],
+     [
+      53.4369057,
+      -113.4898541
+     ],
+     [
+      53.4370421,
+      -113.4898911
+     ]
+    ]
+   },
+   {
+    "osm_way": 162597709,
+    "tags": {
+     "destination:ref:to": "2 North",
+     "destination:street": "Gateway Boulevard",
+     "highway": "motorway_link",
+     "lanes": "1",
+     "lit": "yes",
+     "oneway": "yes",
+     "surface": "asphalt"
+    },
+    "clipped": true,
+    "nodes": [
+     [
+      53.4287259,
+      -113.4920148
+     ],
+     [
+      53.4290493,
+      -113.4919272
+     ],
+     [
+      53.4297927,
+      -113.4916795
+     ],
+     [
+      53.4302233,
+      -113.4915333
+     ],
+     [
+      53.4305609,
+      -113.491422
+     ],
+     [
+      53.4312699,
+      -113.4912788
+     ]
+    ]
+   },
+   {
+    "osm_way": 186995537,
+    "tags": {
+     "destination:street": "Gateway Boulevard North",
+     "highway": "motorway_link",
+     "junction:ref": "78A",
+     "lanes": "1",
+     "lit": "yes",
+     "maxspeed:advisory": "40",
+     "oneway": "yes",
+     "source": "Bing",
+     "surface": "asphalt"
+    },
+    "clipped": false,
+    "nodes": [
+     [
+      53.4369451,
+      -113.4931538
+     ],
+     [
+      53.4369741,
+      -113.4922628
+     ],
+     [
+      53.4370091,
+      -113.4917131
+     ],
+     [
+      53.4370325,
+      -113.4912501
+     ],
+     [
+      53.4370417,
+      -113.4910395
+     ]
+    ]
+   },
+   {
+    "osm_way": 216506277,
+    "tags": {
+     "destination": "West Edmonton Mall",
+     "destination:ref": "216 West",
+     "destination:street": "Anthony Henday Drive",
+     "highway": "motorway_link",
+     "lanes": "1",
+     "lit": "yes",
+     "maxspeed": "100",
+     "oneway": "yes",
+     "surface": "asphalt"
+    },
+    "clipped": false,
+    "nodes": [
+     [
+      53.4362188,
+      -113.5024364
+     ],
+     [
+      53.4358351,
+      -113.5047484
+     ],
+     [
+      53.4356831,
+      -113.5057565
+     ],
+     [
+      53.4354979,
+      -113.507099
+     ],
+     [
+      53.4352777,
+      -113.5084921
+     ]
+    ]
+   },
+   {
+    "osm_way": 428668019,
+    "tags": {
+     "electrified": "no",
+     "gauge": "1435",
+     "maxspeed": "55 mph",
+     "name": "Leduc Subdivision",
+     "old_operator": "Calgary & Edmonton Railway",
+     "operator": "Canadian Pacific Kansas City",
+     "operator:wikidata": "Q117706368",
+     "railway": "rail",
+     "railway:traffic_mode": "freight",
+     "reporting_marks": "CPKC",
+     "usage": "main"
+    },
+    "clipped": true,
+    "nodes": [
+     [
+      53.4412733,
+      -113.4860791
+     ],
+     [
+      53.4396951,
+      -113.4850088
+     ],
+     [
+      53.4393453,
+      -113.4847838
+     ],
+     [
+      53.4381836,
+      -113.4841342
+     ],
+     [
+      53.438029,
+      -113.4840571
+     ],
+     [
+      53.4377366,
+      -113.4839188
+     ],
+     [
+      53.437554,
+      -113.4838416
+     ],
+     [
+      53.437392,
+      -113.4837744
+     ],
+     [
+      53.4371956,
+      -113.4836894
+     ],
+     [
+      53.437017,
+      -113.4836142
+     ],
+     [
+      53.4368421,
+      -113.4835581
+     ],
+     [
+      53.4366558,
+      -113.483483
+     ],
+     [
+      53.4359455,
+      -113.4832547
+     ],
+     [
+      53.4355465,
+      -113.4831487
+     ],
+     [
+      53.4351428,
+      -113.483047
+     ],
+     [
+      53.4344844,
+      -113.4829187
+     ],
+     [
+      53.4341837,
+      -113.4828696
+     ],
+     [
+      53.4333882,
+      -113.4827863
+     ],
+     [
+      53.4326115,
+      -113.4827556
+     ],
+     [
+      53.4318338,
+      -113.4827782
+     ],
+     [
+      53.4310527,
+      -113.4828484
+     ],
+     [
+      53.4303942,
+      -113.482946
+     ],
+     [
+      53.4297515,
+      -113.4830782
+     ],
+     [
+      53.429093,
+      -113.4832623
+     ]
+    ]
+   },
+   {
+    "osm_way": 428798460,
+    "tags": {
+     "destination": "West Edmonton Mall",
+     "destination:ref": "216 West",
+     "destination:street": "Anthony Henday Drive",
+     "highway": "motorway_link",
+     "lanes": "2",
+     "lit": "yes",
+     "maxspeed": "100",
+     "oneway": "yes",
+     "surface": "asphalt"
+    },
+    "clipped": false,
+    "nodes": [
+     [
+      53.4368471,
+      -113.4981753
+     ],
+     [
+      53.436847,
+      -113.4983519
+     ],
+     [
+      53.4368223,
+      -113.4989662
+     ],
+     [
+      53.4367679,
+      -113.4995239
+     ],
+     [
+      53.436653,
+      -113.5002017
+     ],
+     [
+      53.4365243,
+      -113.5008726
+     ],
+     [
+      53.4363642,
+      -113.501676
+     ],
+     [
+      53.4362188,
+      -113.5024364
+     ]
+    ]
+   },
+   {
+    "osm_way": 428798461,
+    "tags": {
+     "covered": "colonnade",
+     "destination": "West Edmonton Mall",
+     "destination:ref": "216 West",
+     "destination:street": "Anthony Henday Drive",
+     "highway": "motorway_link",
+     "lanes": "2",
+     "lit": "yes",
+     "maxheight": "5.4",
+     "maxspeed": "80",
+     "oneway": "yes",
+     "surface": "asphalt"
+    },
+    "clipped": false,
+    "nodes": [
+     [
+      53.4365333,
+      -113.4956869
+     ],
+     [
+      53.436666,
+      -113.4962848
+     ],
+     [
+      53.4367454,
+      -113.4967251
+     ],
+     [
+      53.4367513,
+      -113.4967588
+     ],
+     [
+      53.4368361,
+      -113.4977285
+     ]
+    ]
+   },
+   {
+    "osm_way": 428798587,
+    "tags": {
+     "covered": "concrete",
+     "hazmat": "designated",
+     "hgv": "designated",
+     "highway": "motorway",
+     "lanes": "3",
+     "layer": "-1",
+     "lit": "yes",
+     "maxheight": "5.4",
+     "maxspeed": "90",
+     "name": "Calgary Trail SW",
+     "oneway": "yes",
+     "placement": "left_of:2",
+     "ref": "2",
+     "surface": "asphalt",
+     "tunnel": "yes"
+    },
+    "clipped": false,
+    "nodes": [
+     [
+      53.4333055,
+      -113.4917864
+     ],
+     [
+      53.4325964,
+      -113.4923216
+     ]
+    ]
+   },
+   {
+    "osm_way": 428798588,
+    "tags": {
+     "hazmat": "designated",
+     "hgv": "designated",
+     "highway": "motorway",
+     "lanes": "3",
+     "lit": "yes",
+     "maxspeed": "90",
+     "name": "Calgary Trail SW",
+     "oneway": "yes",
+     "placement": "left_of:2",
+     "ref": "2",
+     "surface": "asphalt"
+    },
+    "clipped": false,
+    "nodes": [
+     [
+      53.4325964,
+      -113.4923216
+     ],
+     [
+      53.4323287,
+      -113.4925288
+     ],
+     [
+      53.4320528,
+      -113.4927314
+     ]
+    ]
+   },
+   {
+    "osm_way": 428798589,
+    "tags": {
+     "covered": "concrete",
+     "hazmat": "designated",
+     "hgv": "designated",
+     "highway": "motorway",
+     "lanes": "3",
+     "layer": "-1",
+     "lit": "yes",
+     "maxspeed": "90",
+     "name": "Calgary Trail SW",
+     "oneway": "yes",
+     "placement": "left_of:2",
+     "ref": "2",
+     "surface": "asphalt",
+     "tunnel": "yes"
+    },
+    "clipped": false,
+    "nodes": [
+     [
+      53.4320528,
+      -113.4927314
+     ],
+     [
+      53.4311893,
+      -113.493237
+     ],
+     [
+      53.4307791,
+      -113.4934032
+     ]
+    ]
+   },
+   {
+    "osm_way": 428798590,
+    "tags": {
+     "hazmat": "designated",
+     "hgv": "designated",
+     "highway": "motorway",
+     "lanes": "3",
+     "lit": "yes",
+     "maxheight": "5.9",
+     "maxspeed": "90",
+     "name": "Calgary Trail SW",
+     "oneway": "yes",
+     "placement": "left_of:2",
+     "ref": "2",
+     "surface": "asphalt"
+    },
+    "clipped": true,
+    "nodes": [
+     [
+      53.4299727,
+      -113.4936154
+     ],
+     [
+      53.4296787,
+      -113.4936513
+     ],
+     [
+      53.429356,
+      -113.4936638
+     ],
+     [
+      53.4289254,
+      -113.4936487
+     ],
+     [
+      53.4287705,
+      -113.4936446
+     ]
+    ]
+   },
+   {
+    "osm_way": 450023459,
+    "tags": {
+     "hazmat": "designated",
+     "hgv": "designated",
+     "highway": "motorway",
+     "lanes": "4",
+     "lit": "yes",
+     "maxspeed": "90",
+     "name": "Gateway Boulevard NW",
+     "oneway": "yes",
+     "ref": "2",
+     "surface": "asphalt",
+     "turn:lanes": "|||slight_right"
+    },
+    "clipped": true,
+    "nodes": [
+     [
+      53.4412103,
+      -113.4921824
+     ],
+     [
+      53.4414989,
+      -113.4923254
+     ],
+     [
+      53.4418468,
+      -113.4924612
+     ]
+    ]
+   },
+   {
+    "osm_way": 469458628,
+    "tags": {
+     "destination:street": "Ellerslie Road",
+     "highway": "motorway_link",
+     "lanes": "1",
+     "lit": "yes",
+     "oneway": "yes",
+     "surface": "asphalt"
+    },
+    "clipped": true,
+    "nodes": [
+     [
+      53.4299727,
+      -113.4936154
+     ],
+     [
+      53.4296257,
+      -113.4937935
+     ],
+     [
+      53.4294999,
+      -113.4938175
+     ]
+    ]
+   },
+   {
+    "osm_way": 470226425,
+    "tags": {
+     "expressway": "yes",
+     "foot": "no",
+     "hgv": "designated",
+     "highway": "secondary",
+     "lanes": "2",
+     "maxspeed": "60",
+     "name": "111 Street SW",
+     "oneway": "yes",
+     "sidewalk": "no",
+     "surface": "asphalt"
+    },
+    "clipped": false,
+    "nodes": [
+     [
+      53.4332017,
+      -113.5192646
+     ],
+     [
+      53.432946,
+      -113.5191329
+     ],
+     [
+      53.4327299,
+      -113.5189992
+     ]
+    ]
+   },
+   {
+    "osm_way": 470226426,
+    "tags": {
+     "expressway": "yes",
+     "foot": "no",
+     "hgv": "designated",
+     "highway": "secondary",
+     "lanes": "2",
+     "maxspeed": "60",
+     "name": "111 Street SW",
+     "oneway": "yes",
+     "sidewalk": "no",
+     "surface": "asphalt"
+    },
+    "clipped": false,
+    "nodes": [
+     [
+      53.433306,
+      -113.5193159
+     ],
+     [
+      53.4332017,
+      -113.5192646
+     ]
+    ]
+   },
+   {
+    "osm_way": 470226429,
+    "tags": {
+     "highway": "motorway_link",
+     "oneway": "yes",
+     "sidewalk": "no"
+    },
+    "clipped": false,
+    "nodes": [
+     [
+      53.4332017,
+      -113.5192646
+     ],
+     [
+      53.4332271,
+      -113.5190765
+     ]
+    ]
+   },
+   {
+    "osm_way": 470226430,
+    "tags": {
+     "destination": "111 Street North",
+     "highway": "motorway_link",
+     "oneway": "yes",
+     "sidewalk": "no"
+    },
+    "clipped": false,
+    "nodes": [
+     [
+      53.4331117,
+      -113.5197696
+     ],
+     [
+      53.4332017,
+      -113.5192646
+     ]
+    ]
+   },
+   {
+    "osm_way": 470226432,
+    "tags": {
+     "destination": "Anthony Henday Drive",
+     "destination:ref": "216 East",
+     "highway": "motorway_link",
+     "lanes": "1",
+     "lit": "yes",
+     "oneway": "yes",
+     "sidewalk": "no"
+    },
+    "clipped": false,
+    "nodes": [
+     [
+      53.433306,
+      -113.5193159
+     ],
+     [
+      53.4332808,
+      -113.5195261
+     ],
+     [
+      53.4332357,
+      -113.519881
+     ]
+    ]
+   },
+   {
+    "osm_way": 470226435,
+    "tags": {
+     "highway": "motorway_link",
+     "lanes": "1",
+     "lit": "yes",
+     "oneway": "yes",
+     "sidewalk": "no"
+    },
+    "clipped": false,
+    "nodes": [
+     [
+      53.4333245,
+      -113.5191255
+     ],
+     [
+      53.433306,
+      -113.5193159
+     ]
+    ]
+   },
+   {
+    "osm_way": 470226438,
+    "tags": {
+     "expressway": "yes",
+     "hgv": "designated",
+     "highway": "secondary",
+     "lanes": "2",
+     "maxspeed": "60",
+     "name": "111 Street SW",
+     "oneway": "yes",
+     "sidewalk": "no",
+     "surface": "asphalt"
+    },
+    "clipped": false,
+    "nodes": [
+     [
+      53.4337035,
+      -113.5194716
+     ],
+     [
+      53.433306,
+      -113.5193159
+     ]
+    ]
+   },
+   {
+    "osm_way": 470226439,
+    "tags": {
+     "expressway": "yes",
+     "hgv": "designated",
+     "highway": "secondary",
+     "lanes": "2",
+     "maxspeed": "60",
+     "name": "111 Street SW",
+     "oneway": "yes",
+     "sidewalk": "no",
+     "surface": "asphalt"
+    },
+    "clipped": false,
+    "nodes": [
+     [
+      53.4342297,
+      -113.5196138
+     ],
+     [
+      53.4339657,
+      -113.5195539
+     ],
+     [
+      53.4337035,
+      -113.5194716
+     ]
+    ]
+   },
+   {
+    "osm_way": 470670165,
+    "tags": {
+     "expressway": "yes",
+     "hgv": "no",
+     "highway": "secondary",
+     "lanes": "2",
+     "lit": "yes",
+     "maxspeed": "60",
+     "name": "111 Street NW",
+     "oneway": "yes",
+     "sidewalk:left": "no",
+     "sidewalk:right": "separate",
+     "surface": "asphalt"
+    },
+    "clipped": true,
+    "nodes": [
+     [
+      53.441744,
+      -113.517974
+     ],
+     [
+      53.4413163,
+      -113.5180215
+     ],
+     [
+      53.4409982,
+      -113.5180338
+     ],
+     [
+      53.4407989,
+      -113.5180535
+     ],
+     [
+      53.4403278,
+      -113.5180905
+     ],
+     [
+      53.4397467,
+      -113.5181412
+     ],
+     [
+      53.4394915,
+      -113.5181443
+     ],
+     [
+      53.4394029,
+      -113.518146
+     ]
+    ]
+   },
+   {
+    "osm_way": 470670171,
+    "tags": {
+     "expressway": "yes",
+     "hgv": "no",
+     "highway": "secondary",
+     "lanes": "2",
+     "lit": "yes",
+     "maxspeed": "60",
+     "name": "111 Street NW",
+     "oneway": "yes",
+     "sidewalk": "separate",
+     "surface": "asphalt"
+    },
+    "clipped": false,
+    "nodes": [
+     [
+      53.437353,
+      -113.5186246
+     ],
+     [
+      53.4375328,
+      -113.5185457
+     ],
+     [
+      53.4379486,
+      -113.5183689
+     ],
+     [
+      53.4381542,
+      -113.5182479
+     ],
+     [
+      53.4383727,
+      -113.51817
+     ]
+    ]
+   },
+   {
+    "osm_way": 472497489,
+    "tags": {
+     "expressway": "yes",
+     "hgv": "no",
+     "highway": "secondary",
+     "lanes": "2",
+     "lit": "yes",
+     "maxspeed": "60",
+     "name": "111 Street NW",
+     "oneway": "yes",
+     "sidewalk": "no",
+     "surface": "asphalt"
+    },
+    "clipped": false,
+    "nodes": [
+     [
+      53.4362894,
+      -113.5192866
+     ],
+     [
+      53.4360214,
+      -113.5194037
+     ],
+     [
+      53.4358148,
+      -113.5194812
+     ],
+     [
+      53.4356042,
+      -113.5195389
+     ]
+    ]
+   },
+   {
+    "osm_way": 472497490,
+    "tags": {
+     "expressway": "yes",
+     "hgv": "designated",
+     "highway": "secondary",
+     "lanes": "2",
+     "lit": "yes",
+     "maxspeed": "60",
+     "name": "111 Street NW",
+     "oneway": "yes",
+     "sidewalk": "separate",
+     "surface": "asphalt"
+    },
+    "clipped": false,
+    "nodes": [
+     [
+      53.4351856,
+      -113.5194299
+     ],
+     [
+      53.4353143,
+      -113.5194076
+     ],
+     [
+      53.4355971,
+      -113.5193508
+     ]
+    ]
+   },
+   {
+    "osm_way": 472497491,
+    "tags": {
+     "expressway": "yes",
+     "hgv": "no",
+     "highway": "secondary",
+     "lanes": "2",
+     "lit": "yes",
+     "maxspeed": "60",
+     "name": "111 Street NW",
+     "oneway": "yes",
+     "sidewalk": "separate",
+     "surface": "asphalt"
+    },
+    "clipped": false,
+    "nodes": [
+     [
+      53.4355971,
+      -113.5193508
+     ],
+     [
+      53.4357964,
+      -113.5192931
+     ],
+     [
+      53.4359952,
+      -113.5192195
+     ],
+     [
+      53.4363623,
+      -113.5190619
+     ]
+    ]
+   },
+   {
+    "osm_way": 472497492,
+    "tags": {
+     "expressway": "yes",
+     "hgv": "designated",
+     "highway": "secondary",
+     "lanes": "2",
+     "lit": "yes",
+     "maxspeed": "60",
+     "name": "111 Street NW",
+     "oneway": "yes",
+     "sidewalk": "no",
+     "surface": "asphalt"
+    },
+    "clipped": false,
+    "nodes": [
+     [
+      53.4356042,
+      -113.5195389
+     ],
+     [
+      53.4353212,
+      -113.5195996
+     ],
+     [
+      53.4351933,
+      -113.5196194
+     ]
+    ]
+   },
+   {
+    "osm_way": 472497493,
+    "tags": {
+     "highway": "motorway_link",
+     "lit": "yes",
+     "oneway": "yes",
+     "source": "Bing"
+    },
+    "clipped": false,
+    "nodes": [
+     [
+      53.4355971,
+      -113.5193508
+     ],
+     [
+      53.4356042,
+      -113.5195389
+     ]
+    ]
+   },
+   {
+    "osm_way": 472497494,
+    "tags": {
+     "destination": "Anthony Henday Drive",
+     "destination:ref": "216 West",
+     "highway": "motorway_link",
+     "lit": "yes",
+     "oneway": "yes",
+     "source": "Bing"
+    },
+    "clipped": false,
+    "nodes": [
+     [
+      53.4356042,
+      -113.5195389
+     ],
+     [
+      53.435607,
+      -113.5198797
+     ],
+     [
+      53.4355681,
+      -113.5201844
+     ]
+    ]
+   },
+   {
+    "osm_way": 472497495,
+    "tags": {
+     "destination": "111 Street South",
+     "destination:to": "Ellerslie Road",
+     "highway": "motorway_link",
+     "lanes": "2",
+     "lit": "yes",
+     "oneway": "yes",
+     "sidewalk": "no",
+     "source": "Bing",
+     "turn:lanes": "left|left;through"
+    },
+    "clipped": false,
+    "nodes": [
+     [
+      53.435524,
+      -113.5184433
+     ],
+     [
+      53.4355617,
+      -113.5188138
+     ],
+     [
+      53.4355871,
+      -113.5192232
+     ],
+     [
+      53.4355971,
+      -113.5193508
+     ]
+    ]
+   },
+   {
+    "osm_way": 472497496,
+    "tags": {
+     "destination:ref": "216 West",
+     "destination:street": "Anthony Henday Drive",
+     "highway": "motorway_link",
+     "lanes": "1",
+     "lit": "yes",
+     "oneway": "yes",
+     "source": "Bing"
+    },
+    "clipped": true,
+    "nodes": [
+     [
+      53.4355681,
+      -113.5201844
+     ],
+     [
+      53.4354196,
+      -113.5210169
+     ]
+    ]
+   },
+   {
+    "osm_way": 490629227,
+    "tags": {
+     "name": "Blackmud Creek",
+     "waterway": "stream",
+     "wikidata": "Q4923183",
+     "wikipedia": "en:Blackmud Creek"
+    },
+    "clipped": true,
+    "nodes": [
+     [
+      53.4303185,
+      -113.5119107
+     ],
+     [
+      53.4304172,
+      -113.5120266
+     ],
+     [
+      53.4305157,
+      -113.51218
+     ],
+     [
+      53.430585,
+      -113.5122879
+     ],
+     [
+      53.4306822,
+      -113.5123136
+     ],
+     [
+      53.4307864,
+      -113.5123688
+     ],
+     [
+      53.430863,
+      -113.5123757
+     ],
+     [
+      53.4308902,
+      -113.5122959
+     ],
+     [
+      53.4309481,
+      -113.512113
+     ],
+     [
+      53.4310497,
+      -113.5119022
+     ],
+     [
+      53.4311798,
+      -113.511678
+     ],
+     [
+      53.431306,
+      -113.5115154
+     ],
+     [
+      53.4314911,
+      -113.5115363
+     ],
+     [
+      53.4316091,
+      -113.5116065
+     ],
+     [
+      53.4317113,
+      -113.511833
+     ],
+     [
+      53.4317749,
+      -113.5119676
+     ],
+     [
+      53.4318963,
+      -113.5119891
+     ],
+     [
+      53.432013,
+      -113.5118887
+     ],
+     [
+      53.4320504,
+      -113.5116028
+     ],
+     [
+      53.4320811,
+      -113.5113883
+     ],
+     [
+      53.432114,
+      -113.5112751
+     ],
+     [
+      53.4322469,
+      -113.5112922
+     ],
+     [
+      53.432339,
+      -113.5113952
+     ],
+     [
+      53.4324636,
+      -113.5115063
+     ],
+     [
+      53.4325161,
+      -113.5117579
+     ],
+     [
+      53.432571,
+      -113.5120765
+     ],
+     [
+      53.4325704,
+      -113.5123104
+     ],
+     [
+      53.4326177,
+      -113.5124159
+     ],
+     [
+      53.4326963,
+      -113.5124595
+     ],
+     [
+      53.4328526,
+      -113.5124027
+     ],
+     [
+      53.4328967,
+      -113.5121312
+     ],
+     [
+      53.4328682,
+      -113.5117793
+     ],
+     [
+      53.4327912,
+      -113.5113324
+     ],
+     [
+      53.4327605,
+      -113.511135
+     ],
+     [
+      53.4326973,
+      -113.510744
+     ],
+     [
+      53.4327082,
+      -113.5105578
+     ],
+     [
+      53.4327682,
+      -113.5104972
+     ],
+     [
+      53.4328555,
+      -113.5105026
+     ],
+     [
+      53.4330302,
+      -113.5106034
+     ],
+     [
+      53.4331175,
+      -113.510708
+     ],
+     [
+      53.4331827,
+      -113.5108175
+     ],
+     [
+      53.4332492,
+      -113.5108717
+     ],
+     [
+      53.4333515,
+      -113.5110261
+     ],
+     [
+      53.4334742,
+      -113.5111635
+     ],
+     [
+      53.4336097,
+      -113.5112343
+     ],
+     [
+      53.4337254,
+      -113.5111881
+     ],
+     [
+      53.4338341,
+      -113.5110444
+     ],
+     [
+      53.4339312,
+      -113.5109843
+     ],
+     [
+      53.4340197,
+      -113.5109301
+     ],
+     [
+      53.4341306,
+      -113.5110894
+     ],
+     [
+      53.4341751,
+      -113.5114279
+     ],
+     [
+      53.4341239,
+      -113.5116253
+     ],
+     [
+      53.4340606,
+      -113.511848
+     ],
+     [
+      53.434052,
+      -113.5120733
+     ],
+     [
+      53.4340846,
+      -113.5124176
+     ],
+     [
+      53.4339734,
+      -113.5128367
+     ],
+     [
+      53.4339069,
+      -113.5129311
+     ],
+     [
+      53.4337142,
+      -113.5128704
+     ],
+     [
+      53.4335253,
+      -113.5127256
+     ],
+     [
+      53.4333725,
+      -113.5127991
+     ],
+     [
+      53.4332415,
+      -113.5128591
+     ],
+     [
+      53.4331514,
+      -113.512945
+     ],
+     [
+      53.4330651,
+      -113.5131677
+     ],
+     [
+      53.4330753,
+      -113.5133908
+     ],
+     [
+      53.4331265,
+      -113.5135667
+     ],
+     [
+      53.4332594,
+      -113.5136011
+     ],
+     [
+      53.4334333,
+      -113.5136182
+     ],
+     [
+      53.4335407,
+      -113.5136526
+     ],
+     [
+      53.4336583,
+      -113.5136268
+     ],
+     [
+      53.4338165,
+      -113.5136354
+     ],
+     [
+      53.4339855,
+      -113.5136011
+     ],
+     [
+      53.434158,
+      -113.5136003
+     ],
+     [
+      53.4344239,
+      -113.513518
+     ],
+     [
+      53.4353187,
+      -113.513205
+     ],
+     [
+      53.4354587,
+      -113.5131602
+     ],
+     [
+      53.4355938,
+      -113.5130089
+     ],
+     [
+      53.4357445,
+      -113.5128142
+     ],
+     [
+      53.4358688,
+      -113.5128141
+     ],
+     [
+      53.4360001,
+      -113.5128629
+     ],
+     [
+      53.4361148,
+      -113.5128758
+     ],
+     [
+      53.4362092,
+      -113.5127825
+     ],
+     [
+      53.4363481,
+      -113.5127186
+     ],
+     [
+      53.4363817,
+      -113.512466
+     ],
+     [
+      53.4363938,
+      -113.5122004
+     ],
+     [
+      53.4364478,
+      -113.512017
+     ],
+     [
+      53.4365651,
+      -113.5118168
+     ],
+     [
+      53.4366977,
+      -113.5116602
+     ],
+     [
+      53.4367895,
+      -113.5115197
+     ],
+     [
+      53.4368204,
+      -113.5113389
+     ],
+     [
+      53.4367313,
+      -113.511215
+     ],
+     [
+      53.4366341,
+      -113.5111978
+     ],
+     [
+      53.4365012,
+      -113.5111377
+     ],
+     [
+      53.4363274,
+      -113.5110605
+     ],
+     [
+      53.4361867,
+      -113.511222
+     ],
+     [
+      53.4360768,
+      -113.5111549
+     ],
+     [
+      53.4360666,
+      -113.5109886
+     ],
+     [
+      53.4361024,
+      -113.5106625
+     ],
+     [
+      53.4361228,
+      -113.510508
+     ],
+     [
+      53.4362027,
+      -113.5103663
+     ],
+     [
+      53.4363514,
+      -113.5102472
+     ],
+     [
+      53.4364312,
+      -113.5100686
+     ],
+     [
+      53.4364619,
+      -113.5100005
+     ],
+     [
+      53.4365523,
+      -113.5100391
+     ],
+     [
+      53.4366671,
+      -113.5100847
+     ],
+     [
+      53.4367176,
+      -113.5102462
+     ],
+     [
+      53.4366984,
+      -113.5105401
+     ],
+     [
+      53.436762,
+      -113.5106142
+     ],
+     [
+      53.4369512,
+      -113.5106828
+     ],
+     [
+      53.4371045,
+      -113.5108459
+     ],
+     [
+      53.4372426,
+      -113.5108974
+     ],
+     [
+      53.437318,
+      -113.5109821
+     ],
+     [
+      53.4374452,
+      -113.5109119
+     ],
+     [
+      53.4375193,
+      -113.5108051
+     ],
+     [
+      53.4376155,
+      -113.5107413
+     ],
+     [
+      53.4376717,
+      -113.5106469
+     ],
+     [
+      53.4377053,
+      -113.5104847
+     ],
+     [
+      53.4376948,
+      -113.510317
+     ],
+     [
+      53.437574,
+      -113.510082
+     ],
+     [
+      53.4374267,
+      -113.5099018
+     ],
+     [
+      53.4372666,
+      -113.5097248
+     ],
+     [
+      53.4371729,
+      -113.509493
+     ],
+     [
+      53.4370956,
+      -113.5093198
+     ],
+     [
+      53.4370761,
+      -113.5091513
+     ],
+     [
+      53.4370099,
+      -113.5090242
+     ],
+     [
+      53.4369537,
+      -113.5090242
+     ],
+     [
+      53.4368975,
+      -113.5090842
+     ],
+     [
+      53.436847,
+      -113.509236
+     ],
+     [
+      53.4367265,
+      -113.5094104
+     ],
+     [
+      53.4366421,
+      -113.5094737
+     ],
+     [
+      53.4365159,
+      -113.5094544
+     ],
+     [
+      53.4364041,
+      -113.509258
+     ],
+     [
+      53.4364059,
+      -113.5089742
+     ],
+     [
+      53.4363977,
+      -113.5087452
+     ],
+     [
+      53.4364198,
+      -113.5086739
+     ],
+     [
+      53.4364379,
+      -113.5085842
+     ],
+     [
+      53.4364705,
+      -113.5085027
+     ],
+     [
+      53.4365881,
+      -113.5083826
+     ],
+     [
+      53.4367262,
+      -113.5084169
+     ],
+     [
+      53.4368949,
+      -113.5083826
+     ],
+     [
+      53.4370739,
+      -113.5084169
+     ],
+     [
+      53.4372228,
+      -113.5084516
+     ],
+     [
+      53.4372793,
+      -113.5085875
+     ],
+     [
+      53.4375529,
+      -113.5090472
+     ],
+     [
+      53.4377437,
+      -113.5093181
+     ],
+     [
+      53.4379597,
+      -113.5097076
+     ],
+     [
+      53.4380811,
+      -113.5099704
+     ],
+     [
+      53.4383115,
+      -113.5100643
+     ],
+     [
+      53.4384968,
+      -113.5100005
+     ],
+     [
+      53.4387032,
+      -113.509876
+     ],
+     [
+      53.4388352,
+      -113.5097446
+     ],
+     [
+      53.4390509,
+      -113.509685
+     ],
+     [
+      53.4391851,
+      -113.5096486
+     ],
+     [
+      53.4393481,
+      -113.5096158
+     ],
+     [
+      53.4396044,
+      -113.5095059
+     ],
+     [
+      53.439714,
+      -113.5094742
+     ],
+     [
+      53.4398213,
+      -113.5093713
+     ],
+     [
+      53.4399546,
+      -113.5091904
+     ],
+     [
+      53.4400581,
+      -113.508868
+     ],
+     [
+      53.4401252,
+      -113.5085837
+     ],
+     [
+      53.4401243,
+      -113.5083401
+     ],
+     [
+      53.4401575,
+      -113.5082233
+     ],
+     [
+      53.4402233,
+      -113.5080822
+     ],
+     [
+      53.4403512,
+      -113.5081508
+     ],
+     [
+      53.4404656,
+      -113.5082951
+     ],
+     [
+      53.4405576,
+      -113.5084239
+     ],
+     [
+      53.4407499,
+      -113.508698
+     ],
+     [
+      53.440795,
+      -113.5088536
+     ],
+     [
+      53.4407506,
+      -113.5091073
+     ],
+     [
+      53.4406534,
+      -113.5094163
+     ],
+     [
+      53.4406384,
+      -113.5097676
+     ],
+     [
+      53.440664,
+      -113.5102483
+     ],
+     [
+      53.4406733,
+      -113.5105712
+     ],
+     [
+      53.4408011,
+      -113.5107092
+     ],
+     [
+      53.4409976,
+      -113.510745
+     ],
+     [
+      53.4410909,
+      -113.5106962
+     ],
+     [
+      53.4411794,
+      -113.5106227
+     ],
+     [
+      53.4413306,
+      -113.510634
+     ],
+     [
+      53.4414784,
+      -113.5105616
+     ],
+     [
+      53.4415602,
+      -113.5104071
+     ],
+     [
+      53.4416312,
+      -113.5102086
+     ],
+     [
+      53.4417124,
+      -113.5099989
+     ],
+     [
+      53.441806,
+      -113.5098481
+     ],
+     [
+      53.4419773,
+      -113.5098052
+     ]
+    ]
+   },
+   {
+    "osm_way": 496834128,
+    "tags": {
+     "destination:street": "111 Street",
+     "destination:to": "Ellerslie Road",
+     "highway": "motorway_link",
+     "lanes": "2",
+     "oneway": "yes"
+    },
+    "clipped": false,
+    "nodes": [
+     [
+      53.43537,
+      -113.5102813
+     ],
+     [
+      53.4352788,
+      -113.5114952
+     ],
+     [
+      53.4352506,
+      -113.511947
+     ],
+     [
+      53.4352136,
+      -113.5126761
+     ]
+    ]
+   },
+   {
+    "osm_way": 496849937,
+    "tags": {
+     "destination:ref": "216",
+     "destination:street": "Anthony Henday Drive",
+     "highway": "motorway_link",
+     "lanes": "2",
+     "lit": "yes",
+     "maxspeed:advisory": "70",
+     "oneway": "yes",
+     "surface": "asphalt",
+     "turn:lanes": "|through;slight_right"
+    },
+    "clipped": true,
+    "nodes": [
+     [
+      53.4416499,
+      -113.4930536
+     ],
+     [
+      53.4414199,
+      -113.4930303
+     ],
+     [
+      53.441227,
+      -113.4930155
+     ],
+     [
+      53.4410361,
+      -113.4930142
+     ],
+     [
+      53.4408816,
+      -113.4930154
+     ]
+    ]
+   },
+   {
+    "osm_way": 496849939,
+    "tags": {
+     "destination": "West Edmonton Mall",
+     "destination:ref": "216 West",
+     "destination:street": "Anthony Henday Drive",
+     "highway": "motorway_link",
+     "lanes": "2",
+     "lit": "yes",
+     "maxspeed": "80",
+     "oneway": "yes",
+     "source:maxspeed": "sign",
+     "surface": "asphalt",
+     "turn:lanes": "slight_left;through|none"
+    },
+    "clipped": false,
+    "nodes": [
+     [
+      53.4363843,
+      -113.503283
+     ],
+     [
+      53.4362768,
+      -113.5037582
+     ],
+     [
+      53.436077,
+      -113.5047964
+     ],
+     [
+      53.4358721,
+      -113.5060201
+     ],
+     [
+      53.4356935,
+      -113.5072329
+     ],
+     [
+      53.4355376,
+      -113.5085846
+     ],
+     [
+      53.4353924,
+      -113.510012
+     ],
+     [
+      53.43537,
+      -113.5102813
+     ]
+    ]
+   },
+   {
+    "osm_way": 505170026,
+    "tags": {
+     "hgv": "designated",
+     "highway": "secondary",
+     "lanes": "2",
+     "lit": "yes",
+     "maxheight": "6",
+     "maxspeed": "60",
+     "name": "Parsons Road NW",
+     "sidewalk:left": "no",
+     "sidewalk:right": "separate",
+     "surface": "asphalt"
+    },
+    "clipped": false,
+    "nodes": [
+     [
+      53.4385293,
+      -113.4839392
+     ],
+     [
+      53.4380099,
+      -113.4836999
+     ],
+     [
+      53.4377454,
+      -113.4835689
+     ],
+     [
+      53.4375613,
+      -113.4834661
+     ],
+     [
+      53.4373377,
+      -113.4833553
+     ],
+     [
+      53.4371098,
+      -113.4832569
+     ],
+     [
+      53.4369463,
+      -113.4831921
+     ]
+    ]
+   },
+   {
+    "osm_way": 516596655,
+    "tags": {
+     "destination": "West Edmonton Mall",
+     "destination:ref": "216 West",
+     "destination:street": "Anthony Henday Drive",
+     "highway": "motorway_link",
+     "lanes": "2",
+     "lit": "yes",
+     "maxspeed": "80",
+     "oneway": "yes",
+     "source:maxspeed": "sign",
+     "surface": "asphalt"
+    },
+    "clipped": false,
+    "nodes": [
+     [
+      53.4301938,
+      -113.4924729
+     ],
+     [
+      53.4307487,
+      -113.4923998
+     ],
+     [
+      53.4314216,
+      -113.4922451
+     ],
+     [
+      53.4317094,
+      -113.4921807
+     ],
+     [
+      53.4319911,
+      -113.4921108
+     ],
+     [
+      53.4321782,
+      -113.4920799
+     ]
+    ]
+   },
+   {
+    "osm_way": 537266144,
+    "tags": {
+     "cycleway:both": "shoulder",
+     "cycleway:left:oneway": "-1",
+     "hazmat": "designated",
+     "hgv": "designated",
+     "highway": "motorway",
+     "lanes": "3",
+     "lit": "yes",
+     "maxspeed": "90",
+     "name": "Calgary Trail NW",
+     "oneway": "yes",
+     "oneway:bicycle": "no",
+     "placement": "left_of:2",
+     "ref": "2",
+     "surface": "asphalt"
+    },
+    "clipped": true,
+    "nodes": [
+     [
+      53.4417955,
+      -113.4927832
+     ],
+     [
+      53.4414627,
+      -113.4926796
+     ],
+     [
+      53.4411518,
+      -113.4925538
+     ],
+     [
+      53.4395435,
+      -113.4916289
+     ],
+     [
+      53.4384465,
+      -113.4909981
+     ],
+     [
+      53.4380868,
+      -113.4908124
+     ]
+    ]
+   },
+   {
+    "osm_way": 537450127,
+    "tags": {
+     "expressway": "yes",
+     "hgv": "no",
+     "highway": "secondary",
+     "lanes": "2",
+     "lit": "yes",
+     "maxspeed": "60",
+     "name": "111 Street NW",
+     "oneway": "yes",
+     "sidewalk": "separate"
+    },
+    "clipped": false,
+    "nodes": [
+     [
+      53.4394029,
+      -113.518146
+     ],
+     [
+      53.4393072,
+      -113.5181473
+     ]
+    ]
+   },
+   {
+    "osm_way": 537450130,
+    "tags": {
+     "expressway": "yes",
+     "hgv": "no",
+     "highway": "secondary",
+     "lanes": "2",
+     "lit": "yes",
+     "maxspeed": "60",
+     "name": "111 Street NW",
+     "oneway": "yes",
+     "sidewalk": "separate"
+    },
+    "clipped": false,
+    "nodes": [
+     [
+      53.4394028,
+      -113.517985
+     ],
+     [
+      53.4394926,
+      -113.5179924
+     ],
+     [
+      53.4397623,
+      -113.5180043
+     ]
+    ]
+   },
+   {
+    "osm_way": 537450132,
+    "tags": {
+     "expressway": "yes",
+     "foot": "no",
+     "hgv": "designated",
+     "highway": "secondary",
+     "lanes": "2",
+     "maxspeed": "60",
+     "name": "111 Street SW",
+     "oneway": "yes",
+     "sidewalk": "no",
+     "surface": "asphalt"
+    },
+    "clipped": false,
+    "nodes": [
+     [
+      53.4305183,
+      -113.5172577
+     ],
+     [
+      53.429986,
+      -113.516999
+     ],
+     [
+      53.4295464,
+      -113.51688
+     ]
+    ]
+   },
+   {
+    "osm_way": 537450135,
+    "tags": {
+     "expressway": "yes",
+     "hgv": "designated",
+     "highway": "secondary",
+     "lanes": "2",
+     "maxspeed": "60",
+     "name": "111 Street SW",
+     "oneway": "yes",
+     "sidewalk": "separate",
+     "surface": "asphalt"
+    },
+    "clipped": false,
+    "nodes": [
+     [
+      53.4294275,
+      -113.5164697
+     ],
+     [
+      53.4295423,
+      -113.51649
+     ],
+     [
+      53.4298079,
+      -113.5165437
+     ],
+     [
+      53.4300385,
+      -113.516607
+     ],
+     [
+      53.4303009,
+      -113.5167315
+     ],
+     [
+      53.4305183,
+      -113.5168492
+     ],
+     [
+      53.4307462,
+      -113.5169924
+     ],
+     [
+      53.4309815,
+      -113.5171606
+     ],
+     [
+      53.4311672,
+      -113.5173197
+     ],
+     [
+      53.4313981,
+      -113.5175385
+     ],
+     [
+      53.4315926,
+      -113.517731
+     ],
+     [
+      53.4320393,
+      -113.5182024
+     ],
+     [
+      53.4321993,
+      -113.5183519
+     ]
+    ]
+   },
+   {
+    "osm_way": 539142786,
+    "tags": {
+     "expressway": "yes",
+     "hgv": "no",
+     "highway": "secondary",
+     "lanes": "2",
+     "lit": "yes",
+     "maxspeed": "60",
+     "name": "111 Street NW",
+     "oneway": "yes",
+     "sidewalk": "no",
+     "surface": "asphalt"
+    },
+    "clipped": true,
+    "nodes": [
+     [
+      53.4397623,
+      -113.5180043
+     ],
+     [
+      53.4401076,
+      -113.5179908
+     ],
+     [
+      53.4404902,
+      -113.5179474
+     ],
+     [
+      53.4408563,
+      -113.5179423
+     ],
+     [
+      53.4411874,
+      -113.5179077
+     ],
+     [
+      53.4415866,
+      -113.5178867
+     ]
+    ]
+   },
+   {
+    "osm_way": 539142788,
+    "tags": {
+     "expressway": "yes",
+     "foot": "no",
+     "hgv": "no",
+     "highway": "secondary",
+     "lanes": "2",
+     "lit": "yes",
+     "maxspeed": "60",
+     "name": "111 Street NW",
+     "oneway": "yes",
+     "sidewalk": "no",
+     "surface": "asphalt"
+    },
+    "clipped": false,
+    "nodes": [
+     [
+      53.4393072,
+      -113.5181473
+     ],
+     [
+      53.4389165,
+      -113.518196
+     ],
+     [
+      53.4385398,
+      -113.5182601
+     ],
+     [
+      53.4383441,
+      -113.5183144
+     ],
+     [
+      53.4381875,
+      -113.5183844
+     ],
+     [
+      53.4379688,
+      -113.5185527
+     ],
+     [
+      53.4375561,
+      -113.5187228
+     ],
+     [
+      53.4369389,
+      -113.5189951
+     ],
+     [
+      53.4362894,
+      -113.5192866
+     ]
+    ]
+   },
+   {
+    "osm_way": 539142789,
+    "tags": {
+     "highway": "motorway_link",
+     "oneway": "yes",
+     "sidewalk": "separate"
+    },
+    "clipped": false,
+    "nodes": [
+     [
+      53.4357789,
+      -113.5189367
+     ],
+     [
+      53.4358346,
+      -113.5189871
+     ],
+     [
+      53.4359557,
+      -113.5190394
+     ],
+     [
+      53.4361451,
+      -113.5190654
+     ],
+     [
+      53.4363623,
+      -113.5190619
+     ]
+    ]
+   },
+   {
+    "osm_way": 539142791,
+    "tags": {
+     "hgv": "designated",
+     "highway": "secondary",
+     "lanes": "2",
+     "maxspeed": "60",
+     "name": "111 Street SW",
+     "oneway": "yes",
+     "sidewalk:left": "no",
+     "sidewalk:right": "separate",
+     "surface": "asphalt"
+    },
+    "clipped": true,
+    "nodes": [
+     [
+      53.4294251,
+      -113.5168493
+     ],
+     [
+      53.4293146,
+      -113.5168425
+     ],
+     [
+      53.4289696,
+      -113.5168217
+     ]
+    ]
+   },
+   {
+    "osm_way": 539142795,
+    "tags": {
+     "expressway": "yes",
+     "hgv": "designated",
+     "highway": "secondary",
+     "lanes": "2",
+     "maxspeed": "60",
+     "name": "111 Street SW",
+     "oneway": "yes",
+     "sidewalk": "separate"
+    },
+    "clipped": false,
+    "nodes": [
+     [
+      53.4295464,
+      -113.51688
+     ],
+     [
+      53.4294251,
+      -113.5168493
+     ]
+    ]
+   },
+   {
+    "osm_way": 539144101,
+    "tags": {
+     "hgv": "designated",
+     "highway": "secondary",
+     "lanes": "2",
+     "maxspeed": "60",
+     "name": "111 Street SW",
+     "oneway": "yes",
+     "sidewalk:left": "no",
+     "sidewalk:right": "separate"
+    },
+    "clipped": true,
+    "nodes": [
+     [
+      53.4293239,
+      -113.5164555
+     ],
+     [
+      53.4294275,
+      -113.5164697
+     ]
+    ]
+   },
+   {
+    "osm_way": 542172229,
+    "tags": {
+     "hazmat": "designated",
+     "hgv": "designated",
+     "highway": "motorway",
+     "lanes": "3",
+     "lit": "yes",
+     "maxheight": "5.7",
+     "maxspeed": "100",
+     "name": "Anthony Henday Drive NW",
+     "name:etymology:wikidata": "Q573339",
+     "oneway": "yes",
+     "placement": "left_of:2",
+     "ref": "216",
+     "surface": "asphalt"
+    },
+    "clipped": true,
+    "nodes": [
+     [
+      53.4345773,
+      -113.5211223
+     ],
+     [
+      53.4345516,
+      -113.518322
+     ],
+     [
+      53.4345534,
+      -113.5156497
+     ]
+    ]
+   },
+   {
+    "osm_way": 542172230,
+    "tags": {
+     "expressway": "yes",
+     "hgv": "designated",
+     "highway": "secondary",
+     "lanes": "2",
+     "maxspeed": "60",
+     "name": "111 Street SW",
+     "oneway": "yes",
+     "sidewalk": "separate",
+     "surface": "asphalt"
+    },
+    "clipped": false,
+    "nodes": [
+     [
+      53.4332271,
+      -113.5190765
+     ],
+     [
+      53.4333245,
+      -113.5191255
+     ]
+    ]
+   },
+   {
+    "osm_way": 610941828,
+    "tags": {
+     "destination:street": "Gateway Boulevard North",
+     "highway": "motorway_link",
+     "lanes": "1",
+     "lit": "yes",
+     "maxheight": "5.9",
+     "oneway": "yes",
+     "surface": "asphalt"
+    },
+    "clipped": false,
+    "nodes": [
+     [
+      53.43727,
+      -113.4899554
+     ],
+     [
+      53.4374505,
+      -113.4900187
+     ],
+     [
+      53.4375829,
+      -113.49007
+     ],
+     [
+      53.4378303,
+      -113.4901656
+     ],
+     [
+      53.4379642,
+      -113.4902307
+     ],
+     [
+      53.4380698,
+      -113.490287
+     ],
+     [
+      53.4381213,
+      -113.4903157
+     ],
+     [
+      53.4381696,
+      -113.4903429
+     ],
+     [
+      53.4386905,
+      -113.4907206
+     ]
+    ]
+   },
+   {
+    "osm_way": 610941840,
+    "tags": {
+     "destination:street": "Gateway Boulevard North",
+     "highway": "motorway_link",
+     "lit": "yes",
+     "oneway": "yes",
+     "surface": "asphalt"
+    },
+    "clipped": false,
+    "nodes": [
+     [
+      53.4370421,
+      -113.4898911
+     ],
+     [
+      53.43727,
+      -113.4899554
+     ]
+    ]
+   },
+   {
+    "osm_way": 610941842,
+    "tags": {
+     "hazmat": "designated",
+     "hgv": "designated",
+     "highway": "motorway",
+     "lanes": "3",
+     "lit": "yes",
+     "maxspeed": "90",
+     "name": "Gateway Boulevard SW",
+     "oneway": "yes",
+     "ref": "2",
+     "surface": "asphalt"
+    },
+    "clipped": false,
+    "nodes": [
+     [
+      53.4372575,
+      -113.490098
+     ],
+     [
+      53.437446,
+      -113.4901399
+     ],
+     [
+      53.4375804,
+      -113.4901788
+     ],
+     [
+      53.4377061,
+      -113.4902247
+     ],
+     [
+      53.4379039,
+      -113.4903133
+     ],
+     [
+      53.4379474,
+      -113.4903372
+     ],
+     [
+      53.4380748,
+      -113.4903953
+     ]
+    ]
+   },
+   {
+    "osm_way": 610941843,
+    "tags": {
+     "hazmat": "designated",
+     "hgv": "designated",
+     "highway": "motorway",
+     "lanes": "3",
+     "lit": "yes",
+     "maxheight": "5.6",
+     "maxspeed": "90",
+     "name": "Gateway Boulevard SW",
+     "oneway": "yes",
+     "ref": "2",
+     "surface": "asphalt"
+    },
+    "clipped": false,
+    "nodes": [
+     [
+      53.4370406,
+      -113.4900348
+     ],
+     [
+      53.4372575,
+      -113.490098
+     ]
+    ]
+   },
+   {
+    "osm_way": 610941846,
+    "tags": {
+     "hazmat": "designated",
+     "hgv": "designated",
+     "highway": "motorway",
+     "lanes": "3",
+     "lit": "yes",
+     "maxspeed": "90",
+     "name": "Calgary Trail SW",
+     "oneway": "yes",
+     "placement": "left_of:2",
+     "ref": "2",
+     "surface": "asphalt"
+    },
+    "clipped": false,
+    "nodes": [
+     [
+      53.4370237,
+      -113.4904937
+     ],
+     [
+      53.4367019,
+      -113.4904556
+     ],
+     [
+      53.4362026,
+      -113.4904475
+     ],
+     [
+      53.4357206,
+      -113.490511
+     ],
+     [
+      53.4354363,
+      -113.4905819
+     ],
+     [
+      53.4350695,
+      -113.4906874
+     ],
+     [
+      53.4350112,
+      -113.490714
+     ],
+     [
+      53.4349081,
+      -113.4907609
+     ],
+     [
+      53.4345291,
+      -113.4909336
+     ],
+     [
+      53.4340258,
+      -113.4912413
+     ],
+     [
+      53.4333055,
+      -113.4917864
+     ]
+    ]
+   },
+   {
+    "osm_way": 610941856,
+    "tags": {
+     "hazmat": "designated",
+     "hgv": "designated",
+     "highway": "motorway",
+     "lanes": "3",
+     "lit": "yes",
+     "maxheight": "5.5",
+     "maxspeed": "90",
+     "name": "Gateway Boulevard SW",
+     "oneway": "yes",
+     "ref": "2",
+     "surface": "asphalt"
+    },
+    "clipped": true,
+    "nodes": [
+     [
+      53.4285583,
+      -113.4922725
+     ],
+     [
+      53.4298346,
+      -113.4918174
+     ],
+     [
+      53.4303522,
+      -113.4916182
+     ],
+     [
+      53.4312699,
+      -113.4912788
+     ],
+     [
+      53.4341985,
+      -113.4902052
+     ],
+     [
+      53.4344321,
+      -113.4901263
+     ],
+     [
+      53.4346743,
+      -113.4900532
+     ],
+     [
+      53.4348445,
+      -113.4900103
+     ],
+     [
+      53.4351399,
+      -113.4899455
+     ],
+     [
+      53.4353109,
+      -113.4899206
+     ],
+     [
+      53.435656,
+      -113.4899018
+     ],
+     [
+      53.4359298,
+      -113.4898952
+     ],
+     [
+      53.4361801,
+      -113.4899076
+     ],
+     [
+      53.4364481,
+      -113.4899328
+     ],
+     [
+      53.4366638,
+      -113.4899618
+     ],
+     [
+      53.4368341,
+      -113.4899911
+     ],
+     [
+      53.4370406,
+      -113.4900348
+     ]
+    ]
+   },
+   {
+    "osm_way": 610941857,
+    "tags": {
+     "destination:ref": "216",
+     "destination:street": "Anthony Henday Drive",
+     "highway": "motorway_link",
+     "lanes": "3",
+     "lit": "yes",
+     "maxspeed": "90",
+     "oneway": "yes",
+     "surface": "asphalt",
+     "turn:lanes": "|through;slight_right|slight_right"
+    },
+    "clipped": true,
+    "nodes": [
+     [
+      53.4287302,
+      -113.4927081
+     ],
+     [
+      53.4289802,
+      -113.4926769
+     ],
+     [
+      53.4292176,
+      -113.4926371
+     ],
+     [
+      53.4294823,
+      -113.4925985
+     ],
+     [
+      53.4296974,
+      -113.4925603
+     ],
+     [
+      53.4299556,
+      -113.49252
+     ],
+     [
+      53.4301938,
+      -113.4924729
+     ]
+    ]
+   },
+   {
+    "osm_way": 614150571,
+    "tags": {
+     "destination:street": "111 Street",
+     "highway": "motorway_link",
+     "lanes": "1",
+     "lit": "yes",
+     "oneway": "yes",
+     "surface": "asphalt"
+    },
+    "clipped": false,
+    "nodes": [
+     [
+      53.4371248,
+      -113.4953761
+     ],
+     [
+      53.4371138,
+      -113.4965251
+     ],
+     [
+      53.4371611,
+      -113.4984363
+     ],
+     [
+      53.4371611,
+      -113.4990242
+     ],
+     [
+      53.4371278,
+      -113.499577
+     ],
+     [
+      53.4370733,
+      -113.5000332
+     ],
+     [
+      53.4369777,
+      -113.5006185
+     ],
+     [
+      53.4368562,
+      -113.5011993
+     ],
+     [
+      53.4364978,
+      -113.5027363
+     ],
+     [
+      53.4363843,
+      -113.503283
+     ]
+    ]
+   },
+   {
+    "osm_way": 621847257,
+    "tags": {
+     "destination:ref": "216 East",
+     "destination:street": "Anthony Henday Drive",
+     "highway": "motorway_link",
+     "lanes": "1",
+     "lit": "yes",
+     "maxspeed": "80",
+     "oneway": "yes",
+     "surface": "asphalt"
+    },
+    "clipped": false,
+    "nodes": [
+     [
+      53.4353297,
+      -113.4871964
+     ],
+     [
+      53.4357154,
+      -113.4864939
+     ],
+     [
+      53.4360136,
+      -113.4859211
+     ],
+     [
+      53.4362728,
+      -113.4854334
+     ],
+     [
+      53.4364718,
+      -113.4850011
+     ],
+     [
+      53.4366811,
+      -113.4844656
+     ],
+     [
+      53.436799,
+      -113.4841306
+     ]
+    ]
+   },
+   {
+    "osm_way": 653813500,
+    "tags": {
+     "hgv": "designated",
+     "highway": "secondary",
+     "lanes": "2",
+     "lit": "yes",
+     "maxspeed": "60",
+     "name": "Parsons Road NW",
+     "sidewalk:left": "separate",
+     "sidewalk:right": "no",
+     "surface": "asphalt"
+    },
+    "clipped": false,
+    "nodes": [
+     [
+      53.4410896,
+      -113.4840513
+     ],
+     [
+      53.4411835,
+      -113.4839801
+     ],
+     [
+      53.4412772,
+      -113.4839146
+     ],
+     [
+      53.4413749,
+      -113.4838177
+     ],
+     [
+      53.441454,
+      -113.4837302
+     ],
+     [
+      53.441707,
+      -113.4833973
+     ],
+     [
+      53.4418329,
+      -113.4832184
+     ],
+     [
+      53.4419691,
+      -113.4830247
+     ]
+    ]
+   },
+   {
+    "osm_way": 653813506,
+    "tags": {
+     "hgv": "designated",
+     "highway": "secondary",
+     "lanes": "2",
+     "lit": "yes",
+     "maxspeed": "60",
+     "name": "Parsons Road NW",
+     "oneway": "yes",
+     "surface": "asphalt"
+    },
+    "clipped": false,
+    "nodes": [
+     [
+      53.4385293,
+      -113.4839392
+     ],
+     [
+      53.4391552,
+      -113.4841119
+     ],
+     [
+      53.439367,
+      -113.4842044
+     ],
+     [
+      53.4395353,
+      -113.4843227
+     ]
+    ]
+   },
+   {
+    "osm_way": 654078949,
+    "tags": {
+     "intermittent": "yes",
+     "oneway": "no",
+     "waterway": "stream"
+    },
+    "clipped": true,
+    "nodes": [
+     [
+      53.4418899,
+      -113.4971982
+     ],
+     [
+      53.4418429,
+      -113.4969703
+     ],
+     [
+      53.4418256,
+      -113.4965926
+     ],
+     [
+      53.4418308,
+      -113.4959536
+     ],
+     [
+      53.4419427,
+      -113.4955333
+     ]
+    ]
+   },
+   {
+    "osm_way": 734604272,
+    "tags": {
+     "hgv": "designated",
+     "highway": "secondary",
+     "lanes": "5",
+     "lanes:backward": "2",
+     "lanes:forward": "3",
+     "lit": "yes",
+     "maxspeed": "60",
+     "name": "Parsons Road NW",
+     "sidewalk:left": "separate",
+     "sidewalk:right": "no",
+     "surface": "asphalt",
+     "turn:lanes:forward": "left|through|through;right"
+    },
+    "clipped": false,
+    "nodes": [
+     [
+      53.4395353,
+      -113.4843227
+     ],
+     [
+      53.4398429,
+      -113.4843905
+     ],
+     [
+      53.4400614,
+      -113.4844044
+     ],
+     [
+      53.4402085,
+      -113.484387
+     ],
+     [
+      53.4404204,
+      -113.4843462
+     ],
+     [
+      53.440702,
+      -113.4842584
+     ],
+     [
+      53.440707,
+      -113.4842562
+     ],
+     [
+      53.4409102,
+      -113.4841573
+     ],
+     [
+      53.4409747,
+      -113.4841221
+     ],
+     [
+      53.441001,
+      -113.4841077
+     ],
+     [
+      53.4410896,
+      -113.4840513
+     ]
+    ]
+   },
+   {
+    "osm_way": 734604275,
+    "tags": {
+     "hgv": "designated",
+     "highway": "secondary",
+     "lanes": "2",
+     "lit": "yes",
+     "maxspeed": "60",
+     "name": "Parsons Road NW",
+     "oneway": "yes",
+     "sidewalk:left": "no",
+     "sidewalk:right": "separate",
+     "surface": "asphalt"
+    },
+    "clipped": false,
+    "nodes": [
+     [
+      53.4395353,
+      -113.4843227
+     ],
+     [
+      53.4393605,
+      -113.4843386
+     ],
+     [
+      53.4390554,
+      -113.4842045
+     ],
+     [
+      53.4385293,
+      -113.4839392
+     ]
+    ]
+   },
+   {
+    "osm_way": 757459144,
+    "tags": {
+     "destination:ref": "216 East",
+     "destination:street": "Anthony Henday Drive",
+     "highway": "motorway_link",
+     "lanes": "2",
+     "lit": "yes",
+     "maxspeed:advisory": "60",
+     "oneway": "yes",
+     "surface": "asphalt"
+    },
+    "clipped": false,
+    "nodes": [
+     [
+      53.4408816,
+      -113.4930154
+     ],
+     [
+      53.4406092,
+      -113.4930302
+     ],
+     [
+      53.4403591,
+      -113.4930959
+     ],
+     [
+      53.439875,
+      -113.4933078
+     ],
+     [
+      53.4390858,
+      -113.4937853
+     ],
+     [
+      53.4385483,
+      -113.4941049
+     ]
+    ]
+   },
+   {
+    "osm_way": 1136386751,
+    "tags": {
+     "name": "Blackmud Creek",
+     "waterway": "stream",
+     "wikidata": "Q4923183",
+     "wikipedia": "en:Blackmud Creek"
+    },
+    "clipped": true,
+    "nodes": [
+     [
+      53.428569,
+      -113.4988131
+     ],
+     [
+      53.4286026,
+      -113.4989069
+     ],
+     [
+      53.4285954,
+      -113.4990719
+     ],
+     [
+      53.428545,
+      -113.4991778
+     ],
+     [
+      53.4285147,
+      -113.5020465
+     ],
+     [
+      53.428533,
+      -113.5022423
+     ],
+     [
+      53.4286724,
+      -113.5029495
+     ],
+     [
+      53.4288495,
+      -113.5030872
+     ],
+     [
+      53.4289765,
+      -113.5032213
+     ],
+     [
+      53.4290788,
+      -113.5034345
+     ],
+     [
+      53.4291084,
+      -113.5035995
+     ],
+     [
+      53.4291235,
+      -113.5037912
+     ],
+     [
+      53.4292452,
+      -113.5039365
+     ],
+     [
+      53.4294575,
+      -113.5039817
+     ],
+     [
+      53.4296533,
+      -113.5039414
+     ],
+     [
+      53.4298235,
+      -113.5039361
+     ],
+     [
+      53.4298834,
+      -113.5039468
+     ],
+     [
+      53.4299274,
+      -113.5040018
+     ],
+     [
+      53.4299522,
+      -113.5041212
+     ],
+     [
+      53.4299306,
+      -113.5042606
+     ],
+     [
+      53.4298483,
+      -113.5043827
+     ],
+     [
+      53.4297116,
+      -113.504553
+     ],
+     [
+      53.4295942,
+      -113.5047461
+     ],
+     [
+      53.4294535,
+      -113.5049553
+     ],
+     [
+      53.4292602,
+      -113.5051967
+     ],
+     [
+      53.4291156,
+      -113.5053308
+     ],
+     [
+      53.4290133,
+      -113.5055266
+     ],
+     [
+      53.4289174,
+      -113.5056929
+     ],
+     [
+      53.4288862,
+      -113.5059316
+     ],
+     [
+      53.428895,
+      -113.5062133
+     ],
+     [
+      53.4289462,
+      -113.5064212
+     ],
+     [
+      53.4290668,
+      -113.5066572
+     ],
+     [
+      53.4291715,
+      -113.5067859
+     ],
+     [
+      53.429281,
+      -113.5068462
+     ],
+     [
+      53.4294216,
+      -113.506857
+     ],
+     [
+      53.4295191,
+      -113.5067283
+     ],
+     [
+      53.4296461,
+      -113.5065003
+     ],
+     [
+      53.4298531,
+      -113.5064051
+     ],
+     [
+      53.4300193,
+      -113.5063648
+     ],
+     [
+      53.4301807,
+      -113.5062213
+     ],
+     [
+      53.4303395,
+      -113.5060909
+     ],
+     [
+      53.4303996,
+      -113.5060631
+     ],
+     [
+      53.4304731,
+      -113.5060832
+     ],
+     [
+      53.4305267,
+      -113.5061489
+     ],
+     [
+      53.4305602,
+      -113.5062897
+     ],
+     [
+      53.4305394,
+      -113.50646
+     ],
+     [
+      53.430553,
+      -113.5066853
+     ],
+     [
+      53.4305514,
+      -113.5069589
+     ],
+     [
+      53.4305642,
+      -113.5072204
+     ],
+     [
+      53.4305123,
+      -113.5073572
+     ],
+     [
+      53.4304723,
+      -113.5075168
+     ],
+     [
+      53.4304284,
+      -113.5078199
+     ],
+     [
+      53.430426,
+      -113.5079326
+     ],
+     [
+      53.4304627,
+      -113.5080385
+     ],
+     [
+      53.4304444,
+      -113.5082974
+     ],
+     [
+      53.4304164,
+      -113.5084878
+     ],
+     [
+      53.4303804,
+      -113.5086246
+     ],
+     [
+      53.4303141,
+      -113.5087319
+     ],
+     [
+      53.430231,
+      -113.5087587
+     ],
+     [
+      53.4301299,
+      -113.5086744
+     ],
+     [
+      53.4300161,
+      -113.508473
+     ],
+     [
+      53.4299002,
+      -113.5081887
+     ],
+     [
+      53.4297852,
+      -113.5079326
+     ],
+     [
+      53.4296757,
+      -113.5077743
+     ],
+     [
+      53.4295734,
+      -113.5077421
+     ],
+     [
+      53.4295111,
+      -113.5078347
+     ],
+     [
+      53.4294823,
+      -113.5079728
+     ],
+     [
+      53.4294783,
+      -113.5081096
+     ],
+     [
+      53.4295191,
+      -113.5082504
+     ],
+     [
+      53.4296477,
+      -113.5084261
+     ],
+     [
+      53.429758,
+      -113.508532
+     ],
+     [
+      53.4298147,
+      -113.5087895
+     ],
+     [
+      53.4298587,
+      -113.5090189
+     ],
+     [
+      53.4299889,
+      -113.5093501
+     ],
+     [
+      53.4300688,
+      -113.5094574
+     ],
+     [
+      53.4302374,
+      -113.5095835
+     ],
+     [
+      53.4302893,
+      -113.5096478
+     ],
+     [
+      53.4303437,
+      -113.5097484
+     ],
+     [
+      53.4303756,
+      -113.5098369
+     ],
+     [
+      53.4303988,
+      -113.5099724
+     ],
+     [
+      53.4303964,
+      -113.5101494
+     ],
+     [
+      53.4303884,
+      -113.5102513
+     ],
+     [
+      53.4303764,
+      -113.5103264
+     ],
+     [
+      53.4303285,
+      -113.5104927
+     ],
+     [
+      53.430271,
+      -113.5106161
+     ],
+     [
+      53.4301967,
+      -113.5106832
+     ],
+     [
+      53.4300592,
+      -113.5107797
+     ],
+     [
+      53.4299689,
+      -113.5108602
+     ],
+     [
+      53.4298882,
+      -113.5109675
+     ],
+     [
+      53.4298603,
+      -113.5111432
+     ],
+     [
+      53.429889,
+      -113.511339
+     ],
+     [
+      53.4299426,
+      -113.5115053
+     ],
+     [
+      53.4299969,
+      -113.5115669
+     ],
+     [
+      53.4301324,
+      -113.5116808
+     ]
+    ]
+   },
+   {
+    "osm_way": 1136386752,
+    "tags": {
+     "layer": "-1",
+     "name": "Blackmud Creek",
+     "tunnel": "culvert",
+     "waterway": "stream",
+     "wikidata": "Q4923183",
+     "wikipedia": "en:Blackmud Creek"
+    },
+    "clipped": false,
+    "nodes": [
+     [
+      53.4301324,
+      -113.5116808
+     ],
+     [
+      53.4303185,
+      -113.5119107
+     ]
+    ]
+   },
+   {
+    "osm_way": 1152795644,
+    "tags": {
+     "hazmat": "designated",
+     "hgv": "designated",
+     "highway": "motorway",
+     "lanes": "3",
+     "lit": "yes",
+     "maxspeed": "100",
+     "name": "Anthony Henday Drive NW",
+     "name:etymology:wikidata": "Q573339",
+     "oneway": "yes",
+     "placement": "left_of:2",
+     "ref": "216",
+     "surface": "asphalt"
+    },
+    "clipped": false,
+    "nodes": [
+     [
+      53.4352777,
+      -113.5084921
+     ],
+     [
+      53.4351402,
+      -113.5099483
+     ],
+     [
+      53.4350482,
+      -113.5112641
+     ],
+     [
+      53.4350053,
+      -113.5120019
+     ],
+     [
+      53.4349593,
+      -113.5128212
+     ]
+    ]
+   },
+   {
+    "osm_way": 1266577262,
+    "tags": {
+     "destination": "West Edmonton Mall",
+     "destination:ref": "216 West",
+     "destination:street": "Anthony Henday Drive",
+     "highway": "motorway_link",
+     "lit": "yes",
+     "oneway": "yes",
+     "source:maxspeed": "sign",
+     "surface": "asphalt"
+    },
+    "clipped": false,
+    "nodes": [
+     [
+      53.4408816,
+      -113.4930154
+     ],
+     [
+      53.4406395,
+      -113.4931228
+     ],
+     [
+      53.4404294,
+      -113.4932019
+     ],
+     [
+      53.440006,
+      -113.4934124
+     ],
+     [
+      53.439589,
+      -113.4936672
+     ],
+     [
+      53.4391781,
+      -113.4939645
+     ],
+     [
+      53.4389882,
+      -113.4941246
+     ],
+     [
+      53.4388388,
+      -113.4942874
+     ],
+     [
+      53.4386279,
+      -113.4945621
+     ],
+     [
+      53.4384317,
+      -113.4948389
+     ],
+     [
+      53.4382622,
+      -113.4951489
+     ],
+     [
+      53.4380837,
+      -113.4955303
+     ],
+     [
+      53.4379348,
+      -113.4958764
+     ]
+    ]
+   },
+   {
+    "osm_way": 1275488357,
+    "tags": {
+     "expressway": "yes",
+     "hgv": "no",
+     "highway": "secondary",
+     "lanes": "3",
+     "lit": "yes",
+     "maxspeed": "60",
+     "name": "111 Street NW",
+     "oneway": "yes",
+     "sidewalk": "separate",
+     "surface": "asphalt",
+     "turn:lanes": "||merge_to_left"
+    },
+    "clipped": false,
+    "nodes": [
+     [
+      53.4363623,
+      -113.5190619
+     ],
+     [
+      53.4369231,
+      -113.5188132
+     ],
+     [
+      53.437353,
+      -113.5186246
+     ]
+    ]
+   },
+   {
+    "osm_way": 1275488358,
+    "tags": {
+     "expressway": "yes",
+     "hgv": "no",
+     "highway": "secondary",
+     "lanes": "3",
+     "lit": "yes",
+     "maxspeed": "60",
+     "name": "111 Street NW",
+     "oneway": "yes",
+     "sidewalk": "separate",
+     "turn:lanes": "left||"
+    },
+    "clipped": false,
+    "nodes": [
+     [
+      53.4383727,
+      -113.51817
+     ],
+     [
+      53.4385778,
+      -113.5180886
+     ],
+     [
+      53.4388909,
+      -113.5180198
+     ],
+     [
+      53.4393028,
+      -113.5179787
+     ],
+     [
+      53.4394028,
+      -113.517985
+     ]
+    ]
+   },
+   {
+    "osm_way": 1276011925,
+    "tags": {
+     "destination": "Calgary;Edmonton International Airport",
+     "destination:ref": "2 South",
+     "highway": "motorway_link",
+     "lanes": "4",
+     "lit": "yes",
+     "maxspeed": "90",
+     "oneway": "yes",
+     "surface": "asphalt",
+     "turn:lanes": "none|none|none|merge_to_left"
+    },
+    "clipped": false,
+    "nodes": [
+     [
+      53.4306851,
+      -113.493089
+     ],
+     [
+      53.4303384,
+      -113.4930976
+     ]
+    ]
+   },
+   {
+    "osm_way": 1276011926,
+    "tags": {
+     "destination": "Calgary;Edmonton International Airport",
+     "destination:ref": "2 South",
+     "highway": "motorway_link",
+     "lanes": "3",
+     "lit": "yes",
+     "maxspeed": "90",
+     "oneway": "yes",
+     "surface": "asphalt"
+    },
+    "clipped": false,
+    "nodes": [
+     [
+      53.4303384,
+      -113.4930976
+     ],
+     [
+      53.4299628,
+      -113.4931122
+     ],
+     [
+      53.4295331,
+      -113.4931154
+     ],
+     [
+      53.4292353,
+      -113.4931259
+     ],
+     [
+      53.4288869,
+      -113.4931466
+     ]
+    ]
+   },
+   {
+    "osm_way": 1276011928,
+    "tags": {
+     "hazmat": "designated",
+     "hgv": "designated",
+     "highway": "motorway",
+     "lanes": "4",
+     "lit": "yes",
+     "maxheight": "5.9",
+     "maxspeed": "90",
+     "name": "Calgary Trail SW",
+     "oneway": "yes",
+     "placement": "left_of:2",
+     "ref": "2",
+     "surface": "asphalt",
+     "turn:lanes": "none|none|none|slight_right"
+    },
+    "clipped": false,
+    "nodes": [
+     [
+      53.4307791,
+      -113.4934032
+     ],
+     [
+      53.4305873,
+      -113.4934637
+     ],
+     [
+      53.4299727,
+      -113.4936154
+     ]
+    ]
+   },
+   {
+    "osm_way": 1276313022,
+    "tags": {
+     "expressway": "yes",
+     "hgv": "designated",
+     "highway": "secondary",
+     "lanes": "3",
+     "maxspeed": "60",
+     "name": "111 Street SW",
+     "oneway": "yes",
+     "sidewalk": "separate",
+     "surface": "asphalt",
+     "turn:lanes": "left||"
+    },
+    "clipped": false,
+    "nodes": [
+     [
+      53.4321993,
+      -113.5183519
+     ],
+     [
+      53.4323459,
+      -113.5184889
+     ],
+     [
+      53.4327714,
+      -113.5188131
+     ],
+     [
+      53.4328089,
+      -113.518836
+     ],
+     [
+      53.4329771,
+      -113.5189383
+     ],
+     [
+      53.4332271,
+      -113.5190765
+     ]
+    ]
+   },
+   {
+    "osm_way": 1285854504,
+    "tags": {
+     "hazmat": "designated",
+     "hgv": "designated",
+     "highway": "motorway",
+     "lanes": "3",
+     "lit": "yes",
+     "maxspeed": "90",
+     "name": "Gateway Boulevard NW",
+     "oneway": "yes",
+     "ref": "2",
+     "surface": "asphalt"
+    },
+    "clipped": false,
+    "nodes": [
+     [
+      53.4380748,
+      -113.4903953
+     ],
+     [
+      53.4386905,
+      -113.4907206
+     ],
+     [
+      53.4393557,
+      -113.4910988
+     ],
+     [
+      53.4412103,
+      -113.4921824
+     ]
+    ]
+   },
+   {
+    "osm_way": 1285921472,
+    "tags": {
+     "hazmat": "designated",
+     "hgv": "designated",
+     "highway": "motorway",
+     "lanes": "2",
+     "lit": "yes",
+     "maxspeed": "100",
+     "name": "Anthony Henday Drive NW",
+     "name:etymology:wikidata": "Q573339",
+     "oneway": "yes",
+     "ref": "216",
+     "surface": "asphalt",
+     "turn:lanes": "through|through;slight_right"
+    },
+    "clipped": false,
+    "nodes": [
+     [
+      53.4368792,
+      -113.493755
+     ],
+     [
+      53.4369451,
+      -113.4931538
+     ]
+    ]
+   },
+   {
+    "osm_way": 1286183594,
+    "tags": {
+     "destination:street": "111 Street;Ellerslie Road",
+     "highway": "motorway_link",
+     "lanes": "3",
+     "lit": "yes",
+     "oneway": "yes",
+     "source": "Bing",
+     "turn:lanes": "slight_left|slight_left|slight_right"
+    },
+    "clipped": false,
+    "nodes": [
+     [
+      53.4351933,
+      -113.5164177
+     ],
+     [
+      53.4352428,
+      -113.5168093
+     ],
+     [
+      53.435524,
+      -113.5184433
+     ]
+    ]
+   },
+   {
+    "osm_way": 1286236613,
+    "tags": {
+     "hazmat": "designated",
+     "hgv": "designated",
+     "highway": "motorway",
+     "lanes": "2",
+     "lit": "yes",
+     "maxspeed": "100",
+     "name": "Anthony Henday Drive NW",
+     "name:etymology:wikidata": "Q573339",
+     "oneway": "yes",
+     "ref": "216",
+     "surface": "asphalt",
+     "turn:lanes": "none|through;slight_right"
+    },
+    "clipped": false,
+    "nodes": [
+     [
+      53.4374222,
+      -113.491186
+     ],
+     [
+      53.4373369,
+      -113.4922532
+     ]
+    ]
+   },
+   {
+    "osm_way": 1286251709,
+    "tags": {
+     "hazmat": "designated",
+     "hgv": "designated",
+     "highway": "motorway",
+     "lanes": "2",
+     "lit": "yes",
+     "maxspeed": "100",
+     "name": "Anthony Henday Drive NW",
+     "name:etymology:wikidata": "Q573339",
+     "oneway": "yes",
+     "ref": "216",
+     "surface": "asphalt"
+    },
+    "clipped": false,
+    "nodes": [
+     [
+      53.4374089,
+      -113.4860901
+     ],
+     [
+      53.4374348,
+      -113.4853626
+     ],
+     [
+      53.4374569,
+      -113.4846938
+     ],
+     [
+      53.4374684,
+      -113.4840801
+     ]
+    ]
+   },
+   {
+    "osm_way": 1286251710,
+    "tags": {
+     "hazmat": "designated",
+     "hgv": "designated",
+     "highway": "motorway",
+     "lanes": "3",
+     "lit": "yes",
+     "maxspeed": "100",
+     "name": "Anthony Henday Drive NW",
+     "name:etymology:wikidata": "Q573339",
+     "oneway": "yes",
+     "ref": "216",
+     "surface": "asphalt",
+     "turn:lanes": "none|none|slight_right"
+    },
+    "clipped": false,
+    "nodes": [
+     [
+      53.4373679,
+      -113.487073
+     ],
+     [
+      53.4373798,
+      -113.4868068
+     ],
+     [
+      53.4374089,
+      -113.4860901
+     ]
+    ]
+   },
+   {
+    "osm_way": 1287491492,
+    "tags": {
+     "construction": "light_rail",
+     "construction:railway": "light_rail",
+     "name": "Capital Line South",
+     "railway": "construction"
+    },
+    "clipped": true,
+    "nodes": [
+     [
+      53.437313,
+      -113.5200727
+     ],
+     [
+      53.4375409,
+      -113.519677
+     ],
+     [
+      53.4378684,
+      -113.5191952
+     ],
+     [
+      53.4379849,
+      -113.5190788
+     ],
+     [
+      53.4382108,
+      -113.5188856
+     ],
+     [
+      53.4383716,
+      -113.5187889
+     ],
+     [
+      53.4385426,
+      -113.5187156
+     ],
+     [
+      53.4387661,
+      -113.5186631
+     ],
+     [
+      53.4390391,
+      -113.5185996
+     ],
+     [
+      53.4392254,
+      -113.5185828
+     ],
+     [
+      53.4393084,
+      -113.5185821
+     ],
+     [
+      53.4402769,
+      -113.5185743
+     ],
+     [
+      53.440415,
+      -113.518565
+     ],
+     [
+      53.4405579,
+      -113.5185524
+     ],
+     [
+      53.4408655,
+      -113.518509
+     ]
+    ]
+   },
+   {
+    "osm_way": 1287607127,
+    "tags": {
+     "hazmat": "designated",
+     "hgv": "designated",
+     "highway": "motorway",
+     "lanes": "2",
+     "lit": "yes",
+     "maxspeed": "100",
+     "name": "Anthony Henday Drive NW",
+     "name:etymology:wikidata": "Q573339",
+     "oneway": "yes",
+     "ref": "216",
+     "surface": "asphalt"
+    },
+    "clipped": true,
+    "nodes": [
+     [
+      53.4374897,
+      -113.4830837
+     ],
+     [
+      53.4375,
+      -113.4823868
+     ],
+     [
+      53.4374986,
+      -113.4808871
+     ]
+    ]
+   },
+   {
+    "osm_way": 1288247272,
+    "tags": {
+     "destination:street": "111 Street;Ellerslie Road",
+     "highway": "motorway_link",
+     "junction:ref": "2",
+     "lanes": "3",
+     "oneway": "yes",
+     "turn:lanes": "slight_left|slight_left|slight_right"
+    },
+    "clipped": false,
+    "nodes": [
+     [
+      53.4329483,
+      -113.5207214
+     ],
+     [
+      53.4329886,
+      -113.5204583
+     ],
+     [
+      53.4330876,
+      -113.5199214
+     ],
+     [
+      53.4331117,
+      -113.5197696
+     ]
+    ]
+   },
+   {
+    "osm_way": 1289600458,
+    "tags": {
+     "hazmat": "designated",
+     "hgv": "designated",
+     "highway": "motorway",
+     "lanes": "2",
+     "lit": "yes",
+     "maxspeed": "100",
+     "name": "Anthony Henday Drive NW",
+     "name:etymology:wikidata": "Q573339",
+     "oneway": "yes",
+     "ref": "216",
+     "surface": "asphalt"
+    },
+    "clipped": true,
+    "nodes": [
+     [
+      53.4378158,
+      -113.4808305
+     ],
+     [
+      53.4378132,
+      -113.4817918
+     ],
+     [
+      53.4377988,
+      -113.4832025
+     ]
+    ]
+   },
+   {
+    "osm_way": 1293344243,
+    "tags": {
+     "expressway": "yes",
+     "hgv": "designated",
+     "highway": "secondary",
+     "lanes": "2",
+     "maxspeed": "60",
+     "name": "111 Street SW",
+     "oneway": "yes",
+     "sidewalk": "separate",
+     "surface": "asphalt"
+    },
+    "clipped": false,
+    "nodes": [
+     [
+      53.4333245,
+      -113.5191255
+     ],
+     [
+      53.4335945,
+      -113.5192401
+     ],
+     [
+      53.4338838,
+      -113.5193367
+     ],
+     [
+      53.4342214,
+      -113.5194094
+     ]
+    ]
+   },
+   {
+    "osm_way": 1364169895,
+    "tags": {
+     "hazmat": "designated",
+     "hgv": "designated",
+     "highway": "motorway",
+     "lanes": "3",
+     "lit": "yes",
+     "maxspeed": "100",
+     "name": "Anthony Henday Drive NW",
+     "name:etymology:wikidata": "Q573339",
+     "oneway": "yes",
+     "placement": "left_of:2",
+     "ref": "216",
+     "surface": "asphalt"
+    },
+    "clipped": false,
+    "nodes": [
+     [
+      53.4345534,
+      -113.5156497
+     ],
+     [
+      53.4345965,
+      -113.5140536
+     ]
+    ]
+   },
+   {
+    "osm_way": 1579110124,
+    "tags": {
+     "destination": "West Edmonton Mall",
+     "destination:ref": "216 West",
+     "destination:street": "Anthony Henday Drive",
+     "highway": "motorway_link",
+     "lanes": "2",
+     "lit": "yes",
+     "maxspeed": "80",
+     "oneway": "yes",
+     "surface": "asphalt"
+    },
+    "clipped": false,
+    "nodes": [
+     [
+      53.4368361,
+      -113.4977285
+     ],
+     [
+      53.4368471,
+      -113.4979987
+     ],
+     [
+      53.4368471,
+      -113.4981753
+     ]
+    ]
+   }
+  ]
+ }
+}
