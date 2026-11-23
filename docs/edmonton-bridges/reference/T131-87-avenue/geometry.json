@@ -1,0 +1,527 @@
+{
+ "code": "T131",
+ "name": "87 Avenue elevated guideway, with West Edmonton Mall and Misericordia stations",
+ "centre": [
+  53.5205,
+  -113.618
+ ],
+ "status": "under construction",
+ "stations": {
+  "P163": {
+   "name": "West Edmonton Mall",
+   "centre": [
+    53.5206,
+    -113.624
+   ],
+   "lrt_inventory": "lrt.md P163",
+   "platform_footprint": null
+  },
+  "P164": {
+   "name": "Misericordia",
+   "centre": [
+    53.5197,
+    -113.613
+   ],
+   "lrt_inventory": "lrt.md P164",
+   "platform_footprint": null
+  }
+ },
+ "crs": "EPSG:4326",
+ "coordinate_order": "[lat, lon]",
+ "geometry_source": "docs/edmonton-bridges/lrt-tracks.json (OpenStreetMap construction ways, routes 13 and 14, 2026-10-14 extract); station centres from docs/edmonton-bridges/lrt.md",
+ "geometry_retrieved": "2026-11-23",
+ "plan_length_note": "plan_length_m is horizontal WGS84 length along the stored nodes of each section. It is not a structural length, and the OSM ways are construction ways with no bridge tag. The 178 Street to 165 Street extent is about 1.74 km per track in plan; the published \"nearly 2 km\" and \"2.3 km\" are not reproduced here.",
+ "sections": [
+  {
+   "name": "Track A, 178 Street to West Edmonton Mall station",
+   "osm_way_index": 13,
+   "node_range": [
+    56,
+    83
+   ],
+   "from": "178 Street",
+   "to": "P163 West Edmonton Mall",
+   "plan_length_m": 467.8,
+   "nodes": [
+    [
+     53.521301,
+     -113.631003
+    ],
+    [
+     53.521282,
+     -113.630798
+    ],
+    [
+     53.521259,
+     -113.630549
+    ],
+    [
+     53.521234,
+     -113.630318
+    ],
+    [
+     53.521207,
+     -113.630047
+    ],
+    [
+     53.52118,
+     -113.62979
+    ],
+    [
+     53.521148,
+     -113.629519
+    ],
+    [
+     53.521102,
+     -113.62912
+    ],
+    [
+     53.521071,
+     -113.628866
+    ],
+    [
+     53.521003,
+     -113.628327
+    ],
+    [
+     53.520958,
+     -113.627986
+    ],
+    [
+     53.520906,
+     -113.627627
+    ],
+    [
+     53.520861,
+     -113.627308
+    ],
+    [
+     53.52068,
+     -113.62609
+    ],
+    [
+     53.52063,
+     -113.625761
+    ],
+    [
+     53.520617,
+     -113.625662
+    ],
+    [
+     53.520611,
+     -113.625574
+    ],
+    [
+     53.520608,
+     -113.625465
+    ],
+    [
+     53.520607,
+     -113.62539
+    ],
+    [
+     53.520612,
+     -113.625293
+    ],
+    [
+     53.520618,
+     -113.625192
+    ],
+    [
+     53.520658,
+     -113.624632
+    ],
+    [
+     53.52066,
+     -113.62455
+    ],
+    [
+     53.520661,
+     -113.624471
+    ],
+    [
+     53.520658,
+     -113.624393
+    ],
+    [
+     53.520651,
+     -113.624296
+    ],
+    [
+     53.520639,
+     -113.624197
+    ],
+    [
+     53.520621,
+     -113.624064
+    ]
+   ]
+  },
+  {
+   "name": "Track A, West Edmonton Mall station to Misericordia station",
+   "osm_way_index": 13,
+   "node_range": [
+    83,
+    97
+   ],
+   "from": "P163 West Edmonton Mall",
+   "to": "P164 Misericordia",
+   "plan_length_m": 769.9,
+   "nodes": [
+    [
+     53.520621,
+     -113.624064
+    ],
+    [
+     53.520572,
+     -113.623771
+    ],
+    [
+     53.520288,
+     -113.622072
+    ],
+    [
+     53.520086,
+     -113.6209
+    ],
+    [
+     53.520028,
+     -113.62053
+    ],
+    [
+     53.519973,
+     -113.62016
+    ],
+    [
+     53.519946,
+     -113.619962
+    ],
+    [
+     53.519784,
+     -113.618603
+    ],
+    [
+     53.519751,
+     -113.618042
+    ],
+    [
+     53.519721,
+     -113.617545
+    ],
+    [
+     53.519705,
+     -113.617039
+    ],
+    [
+     53.519705,
+     -113.616539
+    ],
+    [
+     53.519708,
+     -113.616009
+    ],
+    [
+     53.519733,
+     -113.614221
+    ],
+    [
+     53.519744,
+     -113.612606
+    ]
+   ]
+  },
+  {
+   "name": "Track A, Misericordia station to 165 Street",
+   "osm_way_index": 13,
+   "node_range": [
+    97,
+    105
+   ],
+   "from": "P164 Misericordia",
+   "to": "165 Street",
+   "plan_length_m": 498.9,
+   "nodes": [
+    [
+     53.519744,
+     -113.612606
+    ],
+    [
+     53.51974,
+     -113.610979
+    ],
+    [
+     53.51971,
+     -113.610473
+    ],
+    [
+     53.519682,
+     -113.610115
+    ],
+    [
+     53.519641,
+     -113.609757
+    ],
+    [
+     53.519561,
+     -113.609234
+    ],
+    [
+     53.519541,
+     -113.608872
+    ],
+    [
+     53.519534,
+     -113.608509
+    ],
+    [
+     53.51951,
+     -113.605091
+    ]
+   ]
+  },
+  {
+   "name": "Track B, 178 Street to West Edmonton Mall station",
+   "osm_way_index": 14,
+   "node_range": [
+    220,
+    194
+   ],
+   "from": "178 Street",
+   "to": "P163 West Edmonton Mall",
+   "plan_length_m": 464.0,
+   "nodes": [
+    [
+     53.521339,
+     -113.630965
+    ],
+    [
+     53.521325,
+     -113.630806
+    ],
+    [
+     53.521302,
+     -113.630567
+    ],
+    [
+     53.521272,
+     -113.63027
+    ],
+    [
+     53.521244,
+     -113.630013
+    ],
+    [
+     53.521216,
+     -113.629734
+    ],
+    [
+     53.521194,
+     -113.629535
+    ],
+    [
+     53.521154,
+     -113.629197
+    ],
+    [
+     53.521114,
+     -113.628863
+    ],
+    [
+     53.521013,
+     -113.628082
+    ],
+    [
+     53.520967,
+     -113.627737
+    ],
+    [
+     53.520916,
+     -113.627381
+    ],
+    [
+     53.52069,
+     -113.625851
+    ],
+    [
+     53.52067,
+     -113.625722
+    ],
+    [
+     53.520657,
+     -113.625609
+    ],
+    [
+     53.520653,
+     -113.625532
+    ],
+    [
+     53.520651,
+     -113.625393
+    ],
+    [
+     53.520654,
+     -113.625308
+    ],
+    [
+     53.520661,
+     -113.62523
+    ],
+    [
+     53.520695,
+     -113.624758
+    ],
+    [
+     53.520703,
+     -113.624642
+    ],
+    [
+     53.520705,
+     -113.624559
+    ],
+    [
+     53.520706,
+     -113.62448
+    ],
+    [
+     53.520703,
+     -113.624382
+    ],
+    [
+     53.520696,
+     -113.624296
+    ],
+    [
+     53.520687,
+     -113.624207
+    ],
+    [
+     53.520669,
+     -113.624082
+    ]
+   ]
+  },
+  {
+   "name": "Track B, West Edmonton Mall station to Misericordia station",
+   "osm_way_index": 14,
+   "node_range": [
+    194,
+    181
+   ],
+   "from": "P163 West Edmonton Mall",
+   "to": "P164 Misericordia",
+   "plan_length_m": 771.3,
+   "nodes": [
+    [
+     53.520669,
+     -113.624082
+    ],
+    [
+     53.520326,
+     -113.622053
+    ],
+    [
+     53.520097,
+     -113.62068
+    ],
+    [
+     53.520051,
+     -113.62037
+    ],
+    [
+     53.520011,
+     -113.620092
+    ],
+    [
+     53.519979,
+     -113.619862
+    ],
+    [
+     53.519824,
+     -113.618593
+    ],
+    [
+     53.519791,
+     -113.618035
+    ],
+    [
+     53.519761,
+     -113.61754
+    ],
+    [
+     53.519745,
+     -113.617037
+    ],
+    [
+     53.519745,
+     -113.61654
+    ],
+    [
+     53.519748,
+     -113.61601
+    ],
+    [
+     53.519774,
+     -113.614222
+    ],
+    [
+     53.519784,
+     -113.612606
+    ]
+   ]
+  },
+  {
+   "name": "Track B, Misericordia station to 165 Street",
+   "osm_way_index": 14,
+   "node_range": [
+    181,
+    173
+   ],
+   "from": "P164 Misericordia",
+   "to": "165 Street",
+   "plan_length_m": 498.9,
+   "nodes": [
+    [
+     53.519784,
+     -113.612606
+    ],
+    [
+     53.51978,
+     -113.610975
+    ],
+    [
+     53.519751,
+     -113.610465
+    ],
+    [
+     53.519722,
+     -113.610104
+    ],
+    [
+     53.51968,
+     -113.609742
+    ],
+    [
+     53.519601,
+     -113.609222
+    ],
+    [
+     53.519581,
+     -113.608868
+    ],
+    [
+     53.519574,
+     -113.608508
+    ],
+    [
+     53.51955,
+     -113.60509
+    ]
+   ]
+  }
+ ],
+ "track_plan_length_m": {
+  "track_A_route13": 1736.6,
+  "track_B_route14": 1734.2
+ },
+ "dropped_note": "Not included: the rest of routes 13 and 14 outside the 178 Street to 165 Street nodes. West of node 56 (to Lewis Farms) runs past the T132 and H37 area (about 53.5224, -113.6584 and 53.5228, -113.6592) and the P162 Aldergrove/Belmead stop; east of node 105 runs past P165 Meadowlark. Those belong to T132 and to K225/K226 limits, and were not given codes here. No station footprints are in the extract; the extract has no WEM or Misericordia station polygons. No elevations are given anywhere in this file."
+}

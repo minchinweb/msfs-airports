@@ -1,0 +1,42 @@
+{
+  "code": "T135",
+  "name": "Anthony Henday LRT bridge, Heritage Valley",
+  "centre": [
+    53.4354,
+    -113.5237
+  ],
+  "crs": "EPSG:4326",
+  "coordinate_order": "[lat, lon]",
+  "geometry_source": "docs/edmonton-bridges/lrt-tracks.json, routes[12]: one OpenStreetMap construction way (railway, construction; 68 nodes, stored length 4677 m, retrieved 2026-10-14). The file has no OSM way id and no bridge tag on this section. Nodes are indexed from the south end at P178.",
+  "geometry_retrieved": "2026-11-23",
+  "status": "under construction",
+  "plan_length_note": "plan_length_m is the horizontal WGS84 length along the mapped nodes. It is not a structural length. The bracket below is not the deck: the deck ends are not published and not mapped. Node 26 is 4 m from the centre.",
+  "sections": [
+    {
+      "source": "lrt-tracks.json routes[12], nodes 25 to 27 (inclusive)",
+      "part": "T135 crossing bracket",
+      "which": "Guideway around the Anthony Henday Drive crossing. Node 25 is 206 m south-west of the centre, node 26 is 4 m from it, node 27 is 321 m north-east of it. The deck ends lie somewhere inside this bracket; they are not published. The mapped track runs on a bearing of about 49 degrees (node 25 to 27, computed), which is the track direction, not the crossing skew.",
+      "plan_length_m": 526.5,
+      "elevation": null,
+      "nodes": [
+        [
+          53.434235,
+          -113.526109
+        ],
+        [
+          53.435372,
+          -113.523743
+        ],
+        [
+          53.437313,
+          -113.520073
+        ]
+      ]
+    }
+  ],
+  "elevations": "No elevation is given. No deck, soffit, rail or ground height is published in any source checked, and none is computed here.",
+  "dropped_note": "Dropped from T135. routes[12] also carries K204 (T135 to P178: nodes 0 to 26, about 2,152 m computed; lrt.md gives 2,155 m) and K203 (T135 to T134: nodes 26 to 41, about 751 m computed; lrt.md gives 752 m), plus the P177 and P145 sections north of T134. Those are K-code track sections in lrt.md, not T135, so their nodes are not carried into this file. The OpenStreetMap chord from node 19 to node 20 is 698 m with no intermediate node; it lies west of the crossing and outside the bracket. The Blackmud Creek bridge (T134, 53.4409, -113.5185) and the Heritage Valley North stop (P178) are different codes. The 87 Avenue and Valley Line West Henday bridge is a different structure and is not in this file. The stored way length of 4677 m does not match the computed 4671.3 m; the difference is in the file and does not affect the bracket.",
+  "known_gaps": [
+    "Deck length, span lengths and arch positions are not published. The bracket is not a substitute for them."
+  ]
+}

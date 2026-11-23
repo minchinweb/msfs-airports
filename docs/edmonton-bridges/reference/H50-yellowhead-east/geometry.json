@@ -1,0 +1,1132 @@
+{
+  "code": "H50",
+  "name": "Henday / Yellowhead east",
+  "centre": [
+    53.568,
+    -113.345
+  ],
+  "crs": "EPSG:4326",
+  "coordinate_order": "[lat, lon]",
+  "geometry_source": "docs/edmonton-bridges/bridge-geometry.json (OpenStreetMap, retrieved 2026-10-14, H50 object; Y76 object read for exclusions)",
+  "geometry_retrieved": "2026-11-23",
+  "plan_length_note": "plan_length_m is the horizontal WGS84 length along the mapped nodes, to one decimal. It is not a structural length. Approach and ramp lengths stop at the edge of the downloaded box, so they are not the climb to grade. Closed man_made=bridge ways are footprint outlines, so their plan_length_m is the perimeter.",
+  "decks": [
+    {
+      "osm_way": 32833848,
+      "part": "Henday carriageway A",
+      "closed_ring": false,
+      "plan_length_m": 109.4,
+      "plan_length_is": "horizontal length of the mapped way",
+      "which": "Anthony Henday Drive, one carriageway over the Yellowhead, layer 1. Two nodes, so the mapped line is one straight span of the way. Node order runs north to south.",
+      "tags": {
+        "bridge": "yes",
+        "highway": "motorway",
+        "lanes": "3",
+        "layer": "1",
+        "maxspeed": "100",
+        "name": "Anthony Henday Drive",
+        "oneway": "yes",
+        "ref": "216",
+        "surface": "asphalt",
+        "width": "11.1"
+      },
+      "nodes": [
+        [
+          53.570453,
+          -113.345207
+        ],
+        [
+          53.569469,
+          -113.345219
+        ]
+      ]
+    },
+    {
+      "osm_way": 103485475,
+      "part": "ramp bridge, 16 West",
+      "closed_ring": false,
+      "plan_length_m": 66.3,
+      "plan_length_is": "horizontal length of the mapped way",
+      "which": "Motorway link to 16 West, layer 1, three nodes. Short bridge link at the south-west corner of the junction.",
+      "tags": {
+        "bridge": "yes",
+        "destination": "Edmonton",
+        "destination:ref": "16 West",
+        "highway": "motorway_link",
+        "layer": "1",
+        "oneway": "yes"
+      },
+      "nodes": [
+        [
+          53.567697,
+          -113.34296
+        ],
+        [
+          53.567966,
+          -113.342982
+        ],
+        [
+          53.56829,
+          -113.343054
+        ]
+      ]
+    },
+    {
+      "osm_way": 103485477,
+      "part": "flyover, layer 2, 16 West",
+      "closed_ring": false,
+      "plan_length_m": 320.7,
+      "plan_length_is": "horizontal length of the mapped way",
+      "which": "Motorway link to 16 West, layer 2, one lane. The longest tagged bridge link. OSM gives layer 2 as its highest level; the brief's third-level flyover is not tagged here.",
+      "tags": {
+        "bridge": "yes",
+        "destination": "Edmonton",
+        "destination:ref": "16 West",
+        "highway": "motorway_link",
+        "lanes": "1",
+        "layer": "2",
+        "oneway": "yes",
+        "surface": "asphalt"
+      },
+      "nodes": [
+        [
+          53.569294,
+          -113.343723
+        ],
+        [
+          53.569553,
+          -113.34403
+        ],
+        [
+          53.569734,
+          -113.344298
+        ],
+        [
+          53.569881,
+          -113.344537
+        ],
+        [
+          53.570081,
+          -113.344908
+        ],
+        [
+          53.570253,
+          -113.345296
+        ],
+        [
+          53.570361,
+          -113.345614
+        ],
+        [
+          53.570481,
+          -113.34601
+        ],
+        [
+          53.570567,
+          -113.346369
+        ],
+        [
+          53.570635,
+          -113.34674
+        ],
+        [
+          53.570686,
+          -113.347189
+        ],
+        [
+          53.570722,
+          -113.347731
+        ]
+      ]
+    },
+    {
+      "osm_way": 103573720,
+      "part": "ramp bridge, 216 North",
+      "closed_ring": false,
+      "plan_length_m": 114.5,
+      "plan_length_is": "horizontal length of the mapped way",
+      "which": "Motorway link to 216 North, layer 1, two nodes.",
+      "tags": {
+        "bridge": "yes",
+        "destination:ref": "216 North",
+        "highway": "motorway_link",
+        "layer": "1",
+        "oneway": "yes"
+      },
+      "nodes": [
+        [
+          53.569556,
+          -113.344444
+        ],
+        [
+          53.570586,
+          -113.34446
+        ]
+      ]
+    },
+    {
+      "osm_way": 220972750,
+      "part": "Henday carriageway B",
+      "closed_ring": false,
+      "plan_length_m": 116.1,
+      "plan_length_is": "horizontal length of the mapped way",
+      "which": "Anthony Henday Drive, the other carriageway over the Yellowhead, layer 1. Two nodes. Node order runs south to north.",
+      "tags": {
+        "bridge": "yes",
+        "highway": "motorway",
+        "lanes": "3",
+        "layer": "1",
+        "maxspeed": "100",
+        "name": "Anthony Henday Drive",
+        "oneway": "yes",
+        "ref": "216",
+        "surface": "asphalt"
+      },
+      "nodes": [
+        [
+          53.569547,
+          -113.34464
+        ],
+        [
+          53.570591,
+          -113.34462
+        ]
+      ]
+    },
+    {
+      "osm_way": 1494403347,
+      "part": "outline, layer 2",
+      "closed_ring": true,
+      "plan_length_m": 651.1,
+      "plan_length_is": "outline perimeter",
+      "which": "Closed man_made=bridge outline, layer 2. Footprint of a structure in OSM, not a deck line. plan_length_m here is the perimeter of the outline, not a deck length.",
+      "tags": {
+        "bridge": "yes",
+        "layer": "2",
+        "man_made": "bridge"
+      },
+      "nodes": [
+        [
+          53.569327,
+          -113.343661
+        ],
+        [
+          53.569266,
+          -113.343814
+        ],
+        [
+          53.56952,
+          -113.344114
+        ],
+        [
+          53.569689,
+          -113.344345
+        ],
+        [
+          53.569836,
+          -113.34459
+        ],
+        [
+          53.570034,
+          -113.344975
+        ],
+        [
+          53.570193,
+          -113.345329
+        ],
+        [
+          53.570304,
+          -113.345633
+        ],
+        [
+          53.570422,
+          -113.346037
+        ],
+        [
+          53.570512,
+          -113.346401
+        ],
+        [
+          53.570576,
+          -113.346766
+        ],
+        [
+          53.570631,
+          -113.347219
+        ],
+        [
+          53.57066,
+          -113.347652
+        ],
+        [
+          53.570762,
+          -113.34764
+        ],
+        [
+          53.570735,
+          -113.34719
+        ],
+        [
+          53.570678,
+          -113.346734
+        ],
+        [
+          53.570605,
+          -113.346323
+        ],
+        [
+          53.570515,
+          -113.34595
+        ],
+        [
+          53.570392,
+          -113.345536
+        ],
+        [
+          53.570285,
+          -113.34524
+        ],
+        [
+          53.570112,
+          -113.344844
+        ],
+        [
+          53.569891,
+          -113.344424
+        ],
+        [
+          53.569773,
+          -113.34423
+        ],
+        [
+          53.569564,
+          -113.343937
+        ],
+        [
+          53.569327,
+          -113.343661
+        ]
+      ]
+    },
+    {
+      "osm_way": 1494403348,
+      "part": "outline, layer 1",
+      "closed_ring": true,
+      "plan_length_m": 277.9,
+      "plan_length_is": "outline perimeter",
+      "which": "Closed man_made=bridge outline, layer 1. Footprint only. plan_length_m is the outline perimeter.",
+      "tags": {
+        "bridge": "yes",
+        "layer": "1",
+        "man_made": "bridge"
+      },
+      "nodes": [
+        [
+          53.569476,
+          -113.345382
+        ],
+        [
+          53.569478,
+          -113.345107
+        ],
+        [
+          53.570582,
+          -113.345096
+        ],
+        [
+          53.57054,
+          -113.34537
+        ],
+        [
+          53.569476,
+          -113.345382
+        ]
+      ]
+    },
+    {
+      "osm_way": 1494403355,
+      "part": "outline, layer 1, south",
+      "closed_ring": true,
+      "plan_length_m": 153.5,
+      "plan_length_is": "outline perimeter",
+      "which": "Closed man_made=bridge outline, layer 1. Footprint only, near the south approach. plan_length_m is the outline perimeter.",
+      "tags": {
+        "bridge": "yes",
+        "layer": "1",
+        "man_made": "bridge"
+      },
+      "nodes": [
+        [
+          53.567705,
+          -113.342879
+        ],
+        [
+          53.567705,
+          -113.343056
+        ],
+        [
+          53.567962,
+          -113.343079
+        ],
+        [
+          53.568288,
+          -113.34316
+        ],
+        [
+          53.568279,
+          -113.342974
+        ],
+        [
+          53.567966,
+          -113.342902
+        ],
+        [
+          53.567705,
+          -113.342879
+        ]
+      ]
+    },
+    {
+      "osm_way": 1494403358,
+      "part": "outline, layer 1",
+      "closed_ring": true,
+      "plan_length_m": 293.7,
+      "plan_length_is": "outline perimeter",
+      "which": "Closed man_made=bridge outline, layer 1. Footprint only. plan_length_m is the outline perimeter.",
+      "tags": {
+        "bridge": "yes",
+        "layer": "1",
+        "man_made": "bridge"
+      },
+      "nodes": [
+        [
+          53.569479,
+          -113.344748
+        ],
+        [
+          53.569482,
+          -113.344369
+        ],
+        [
+          53.570583,
+          -113.344377
+        ],
+        [
+          53.570581,
+          -113.344736
+        ],
+        [
+          53.569479,
+          -113.344748
+        ]
+      ]
+    }
+  ],
+  "approaches": [
+    {
+      "osm_way": 32832554,
+      "role_in_extract": "approach",
+      "plan_length_m": 409.0,
+      "which": "Anthony Henday Drive, south approach, three lanes, 100 km/h tag. Plan length from the extract's edge node; not the climb to grade.",
+      "tags": {
+        "highway": "motorway",
+        "lanes": "3",
+        "maxspeed": "100",
+        "name": "Anthony Henday Drive",
+        "oneway": "yes",
+        "ref": "216",
+        "surface": "asphalt",
+        "width": "11.1"
+      },
+      "nodes": [
+        [
+          53.569469,
+          -113.345219
+        ],
+        [
+          53.568498,
+          -113.345169
+        ],
+        [
+          53.567963,
+          -113.345098
+        ],
+        [
+          53.567444,
+          -113.345038
+        ],
+        [
+          53.566904,
+          -113.344982
+        ],
+        [
+          53.565798,
+          -113.344841
+        ]
+      ]
+    },
+    {
+      "osm_way": 80312715,
+      "role_in_extract": "ramp",
+      "plan_length_m": 118.5,
+      "which": "Motorway link toward 216 North, one way, from the Yellowhead side of the junction.",
+      "tags": {
+        "destination:ref": "216 North",
+        "highway": "motorway_link",
+        "oneway": "yes"
+      },
+      "nodes": [
+        [
+          53.570586,
+          -113.34446
+        ],
+        [
+          53.571403,
+          -113.34446
+        ],
+        [
+          53.571637,
+          -113.344602
+        ]
+      ]
+    },
+    {
+      "osm_way": 82659900,
+      "role_in_extract": "approach",
+      "plan_length_m": 166.4,
+      "which": "Anthony Henday Drive, north approach, three lanes, 100 km/h tag.",
+      "tags": {
+        "highway": "motorway",
+        "lanes": "3",
+        "maxspeed": "100",
+        "name": "Anthony Henday Drive",
+        "oneway": "yes",
+        "ref": "216",
+        "surface": "asphalt"
+      },
+      "nodes": [
+        [
+          53.570591,
+          -113.34462
+        ],
+        [
+          53.571637,
+          -113.344602
+        ],
+        [
+          53.571932,
+          -113.344592
+        ],
+        [
+          53.572087,
+          -113.344588
+        ]
+      ]
+    },
+    {
+      "osm_way": 103485471,
+      "role_in_extract": "ramp",
+      "plan_length_m": 107.4,
+      "which": "Motorway link toward 16 West, one lane, asphalt.",
+      "tags": {
+        "destination": "Edmonton",
+        "destination:ref": "16 West",
+        "highway": "motorway_link",
+        "lanes": "1",
+        "oneway": "yes",
+        "surface": "asphalt"
+      },
+      "nodes": [
+        [
+          53.570722,
+          -113.347731
+        ],
+        [
+          53.570716,
+          -113.348054
+        ],
+        [
+          53.570717,
+          -113.348306
+        ],
+        [
+          53.570697,
+          -113.348642
+        ],
+        [
+          53.570647,
+          -113.349351
+        ]
+      ]
+    },
+    {
+      "osm_way": 103485476,
+      "role_in_extract": "ramp",
+      "plan_length_m": 120.5,
+      "which": "Motorway link toward 16 West, one lane, asphalt.",
+      "tags": {
+        "destination": "Edmonton",
+        "destination:ref": "16 West",
+        "highway": "motorway_link",
+        "lanes": "1",
+        "oneway": "yes",
+        "surface": "asphalt"
+      },
+      "nodes": [
+        [
+          53.56829,
+          -113.343054
+        ],
+        [
+          53.568657,
+          -113.343226
+        ],
+        [
+          53.568928,
+          -113.343404
+        ],
+        [
+          53.569095,
+          -113.343547
+        ],
+        [
+          53.569294,
+          -113.343723
+        ]
+      ]
+    },
+    {
+      "osm_way": 103485479,
+      "role_in_extract": "ramp",
+      "plan_length_m": 223.9,
+      "which": "Motorway link toward 16 West, one lane, asphalt, south-west side.",
+      "tags": {
+        "destination": "Edmonton",
+        "destination:ref": "16 West",
+        "highway": "motorway_link",
+        "lanes": "1",
+        "oneway": "yes",
+        "surface": "asphalt"
+      },
+      "nodes": [
+        [
+          53.565691,
+          -113.343256
+        ],
+        [
+          53.567098,
+          -113.34303
+        ],
+        [
+          53.567412,
+          -113.342982
+        ],
+        [
+          53.567697,
+          -113.34296
+        ]
+      ]
+    },
+    {
+      "osm_way": 103485482,
+      "role_in_extract": "approach",
+      "plan_length_m": 641.1,
+      "which": "Anthony Henday Drive, north approach, three lanes, 100 km/h tag. Longest mapped approach in this set.",
+      "tags": {
+        "highway": "motorway",
+        "lanes": "3",
+        "maxspeed": "100",
+        "name": "Anthony Henday Drive",
+        "oneway": "yes",
+        "ref": "216",
+        "surface": "asphalt",
+        "width": "11.1"
+      },
+      "nodes": [
+        [
+          53.576216,
+          -113.344965
+        ],
+        [
+          53.575712,
+          -113.344987
+        ],
+        [
+          53.573409,
+          -113.345126
+        ],
+        [
+          53.572763,
+          -113.345127
+        ],
+        [
+          53.57212,
+          -113.345189
+        ],
+        [
+          53.570453,
+          -113.345207
+        ]
+      ]
+    },
+    {
+      "osm_way": 103573710,
+      "role_in_extract": "ramp",
+      "plan_length_m": 1070.3,
+      "which": "Motorway link toward 216 North, one lane, 31 nodes. Long link curving north-west.",
+      "tags": {
+        "destination:ref": "216 North",
+        "highway": "motorway_link",
+        "lanes": "1",
+        "oneway": "yes"
+      },
+      "nodes": [
+        [
+          53.569194,
+          -113.351275
+        ],
+        [
+          53.569265,
+          -113.350222
+        ],
+        [
+          53.569369,
+          -113.349217
+        ],
+        [
+          53.569533,
+          -113.347825
+        ],
+        [
+          53.569593,
+          -113.346974
+        ],
+        [
+          53.569631,
+          -113.34628
+        ],
+        [
+          53.569646,
+          -113.345693
+        ],
+        [
+          53.569658,
+          -113.343103
+        ],
+        [
+          53.569624,
+          -113.342675
+        ],
+        [
+          53.56956,
+          -113.342342
+        ],
+        [
+          53.569446,
+          -113.342018
+        ],
+        [
+          53.56931,
+          -113.341785
+        ],
+        [
+          53.569161,
+          -113.34164
+        ],
+        [
+          53.568978,
+          -113.341567
+        ],
+        [
+          53.568835,
+          -113.341548
+        ],
+        [
+          53.568716,
+          -113.341547
+        ],
+        [
+          53.568582,
+          -113.341581
+        ],
+        [
+          53.568436,
+          -113.341659
+        ],
+        [
+          53.568263,
+          -113.34187
+        ],
+        [
+          53.56811,
+          -113.342145
+        ],
+        [
+          53.568029,
+          -113.342419
+        ],
+        [
+          53.567997,
+          -113.342759
+        ],
+        [
+          53.568013,
+          -113.343102
+        ],
+        [
+          53.568061,
+          -113.343445
+        ],
+        [
+          53.568141,
+          -113.343687
+        ],
+        [
+          53.568255,
+          -113.343894
+        ],
+        [
+          53.568379,
+          -113.344065
+        ],
+        [
+          53.568602,
+          -113.344256
+        ],
+        [
+          53.568845,
+          -113.344367
+        ],
+        [
+          53.569165,
+          -113.344427
+        ],
+        [
+          53.569556,
+          -113.344444
+        ]
+      ]
+    },
+    {
+      "osm_way": 103573724,
+      "role_in_extract": "approach",
+      "plan_length_m": 473.7,
+      "which": "Anthony Henday Drive, south approach, three lanes, 100 km/h tag.",
+      "tags": {
+        "highway": "motorway",
+        "lanes": "3",
+        "maxspeed": "100",
+        "name": "Anthony Henday Drive",
+        "oneway": "yes",
+        "ref": "216",
+        "surface": "asphalt"
+      },
+      "nodes": [
+        [
+          53.565295,
+          -113.344209
+        ],
+        [
+          53.566976,
+          -113.34441
+        ],
+        [
+          53.568107,
+          -113.344546
+        ],
+        [
+          53.568836,
+          -113.344617
+        ],
+        [
+          53.569547,
+          -113.34464
+        ]
+      ]
+    },
+    {
+      "osm_way": 64972380,
+      "role_in_extract": "cross_road",
+      "plan_length_m": 708.3,
+      "which": "Yellowhead Highway (Trail), two lanes one way, cross road through the junction. It runs west from the junction toward the Bridges checkpoint well past H50. Kept as the cross road of this junction; its western part is not separated.",
+      "tags": {
+        "highway": "motorway",
+        "lanes": "2",
+        "maxspeed": "100",
+        "name": "Yellowhead Highway",
+        "official_name": "Yellowhead Trail",
+        "oneway": "yes",
+        "ref": "16"
+      },
+      "nodes": [
+        [
+          53.570234,
+          -113.343573
+        ],
+        [
+          53.5702,
+          -113.346352
+        ],
+        [
+          53.570191,
+          -113.346878
+        ],
+        [
+          53.570175,
+          -113.347469
+        ],
+        [
+          53.570146,
+          -113.348405
+        ],
+        [
+          53.570114,
+          -113.349358
+        ],
+        [
+          53.569974,
+          -113.352515
+        ],
+        [
+          53.569934,
+          -113.353478
+        ],
+        [
+          53.569939,
+          -113.354284
+        ]
+      ]
+    },
+    {
+      "osm_way": 103485474,
+      "role_in_extract": "cross_road",
+      "plan_length_m": 551.7,
+      "which": "Motorway link toward 16 West. The extract labels it cross_road; it is a link road and is kept with the ramps here.",
+      "tags": {
+        "destination": "Edmonton",
+        "destination:ref": "16 West",
+        "highway": "motorway_link",
+        "lanes": "1",
+        "oneway": "yes",
+        "surface": "asphalt",
+        "width": "5"
+      },
+      "nodes": [
+        [
+          53.574456,
+          -113.345435
+        ],
+        [
+          53.57408,
+          -113.345628
+        ],
+        [
+          53.573613,
+          -113.345772
+        ],
+        [
+          53.57314,
+          -113.345867
+        ],
+        [
+          53.572369,
+          -113.346008
+        ],
+        [
+          53.572074,
+          -113.346105
+        ],
+        [
+          53.571849,
+          -113.346232
+        ],
+        [
+          53.571653,
+          -113.346402
+        ],
+        [
+          53.571477,
+          -113.346606
+        ],
+        [
+          53.571328,
+          -113.346818
+        ],
+        [
+          53.571166,
+          -113.347109
+        ],
+        [
+          53.571056,
+          -113.347382
+        ],
+        [
+          53.570938,
+          -113.347763
+        ],
+        [
+          53.570872,
+          -113.348068
+        ],
+        [
+          53.570647,
+          -113.349351
+        ]
+      ]
+    },
+    {
+      "osm_way": 450768170,
+      "role_in_extract": "cross_road",
+      "plan_length_m": 599.2,
+      "which": "Motorway link with destination 17 Street NW and Hayter Road. The extract labels it cross_road. Its far end is on the 17 Street side, which is Y75's road. Kept because it leaves this junction; not split.",
+      "tags": {
+        "destination": "17 Street NW;Hayter Road",
+        "highway": "motorway_link",
+        "oneway": "yes"
+      },
+      "nodes": [
+        [
+          53.570234,
+          -113.343573
+        ],
+        [
+          53.57031,
+          -113.344607
+        ],
+        [
+          53.570331,
+          -113.34759
+        ],
+        [
+          53.570366,
+          -113.348215
+        ],
+        [
+          53.570393,
+          -113.348502
+        ],
+        [
+          53.570606,
+          -113.350008
+        ],
+        [
+          53.570622,
+          -113.35029
+        ],
+        [
+          53.570631,
+          -113.350604
+        ],
+        [
+          53.570631,
+          -113.350893
+        ],
+        [
+          53.570625,
+          -113.351151
+        ],
+        [
+          53.570608,
+          -113.351511
+        ],
+        [
+          53.570519,
+          -113.352577
+        ]
+      ]
+    },
+    {
+      "osm_way": 1286192399,
+      "role_in_extract": "cross_road",
+      "plan_length_m": 379.5,
+      "which": "Yellowhead Highway, four lanes, one way, cross road through the junction. Its east end meets Y76's Yellowhead way at 53.569958, -113.341091.",
+      "tags": {
+        "highway": "motorway",
+        "lanes": "4",
+        "maxspeed": "100",
+        "name": "Yellowhead Highway",
+        "oneway": "yes",
+        "ref": "16"
+      },
+      "nodes": [
+        [
+          53.569874,
+          -113.346836
+        ],
+        [
+          53.569937,
+          -113.342228
+        ],
+        [
+          53.569958,
+          -113.341091
+        ]
+      ]
+    }
+  ],
+  "excluded": [
+    {
+      "osm_way": 103485468,
+      "code_in_extract": "Y76",
+      "plan_length_m": 176.0,
+      "which": "Yellowhead bridge link toward Broadmoor and Sherwood Drive, layer 1"
+    },
+    {
+      "osm_way": 445256282,
+      "code_in_extract": "Y76",
+      "plan_length_m": 212.9,
+      "which": "Yellowhead bridge link toward Lloydminster, layer 1"
+    },
+    {
+      "osm_way": 1494403353,
+      "code_in_extract": "Y76",
+      "plan_length_m": 404.8,
+      "which": "Closed man_made=bridge outline east of the junction, layer 1"
+    },
+    {
+      "osm_way": 103485465,
+      "code_in_extract": "Y76",
+      "plan_length_m": 16.1,
+      "which": "Short ramp toward Broadmoor, 16 m"
+    },
+    {
+      "osm_way": 377313186,
+      "code_in_extract": "Y76",
+      "plan_length_m": 414.0,
+      "which": "Yellowhead east, ramp to Broadmoor Boulevard and Sherwood Drive"
+    },
+    {
+      "osm_way": 444831505,
+      "code_in_extract": "Y76",
+      "plan_length_m": 450.9,
+      "which": "Yellowhead east approach, Y76's road"
+    },
+    {
+      "osm_way": 1286222380,
+      "code_in_extract": "Y76",
+      "plan_length_m": 19.3,
+      "which": "Short ramp toward Lloydminster, 19 m"
+    },
+    {
+      "osm_way": 32831646,
+      "code_in_extract": "Y76",
+      "plan_length_m": 2731.3,
+      "which": "Long ramp from Yellowhead east toward 216 South, 2.7 km, not part of H50's extract; shares no node with H50 ways in this extract"
+    },
+    {
+      "osm_way": 103485466,
+      "code_in_extract": "Y76",
+      "plan_length_m": 312.3,
+      "which": "Ramp toward Lloydminster from the Broadmoor side"
+    },
+    {
+      "osm_way": 103485469,
+      "code_in_extract": "Y76",
+      "plan_length_m": 802.1,
+      "which": "Ramp toward Broadmoor, 60 km/h tag"
+    }
+  ],
+  "dropped_note": "The H50 object in bridge-geometry.json holds 22 ways, all kept here, none of them another code. Ten Yellowhead and Broadmoor/Lloydminster ways from the Y76 object sit within 600 m of this centre; none is in the H50 object and none is copied into decks or approaches. They are listed under excluded for the boundary. Ways 1286192399 and 64972380 stay as H50 cross roads (no other object in the file claims them).",
+  "railway_note": "No railway way appears in the extract within 800 m of the centre. The rail crossing the brief describes (and Wikipedia's wording 'bisected by a railway line') is not in geometry.json. It needs a rail or survey source before it is placed.",
+  "elevations": "None. No elevation or deck height is in this file. Use NOTES.md for the sourced items."
+}

@@ -1,0 +1,35 @@
+# T127 Davies Elevated Guideway and Davies station — sources
+
+Photos in `photos\` are openly licensed (CC BY-SA 4.0). All four saved files are 1,920 px Wikimedia Commons thumbnails. The full-size originals were not fetched. Two of the sources below were read only through search summaries, and the page itself could not be opened. Those rows say so.
+
+## Measurements
+
+| Source | What it supplies | Licence / access |
+| --- | --- | --- |
+| [Wikipedia, Davies station](https://en.wikipedia.org/wiki/Davies_station) | Elevated, opened 4 November 2023. Centre-loading platform, two tracks (infobox, no citation). Architect DIALOG (citing the DIALOG page). Park and ride 1,300 (citing a City page). Wood roof of 15,498 timber pieces, prepared and treated in Edmonton (citing a 2020 TransEd update, archived; not opened). 15 bus bays (citing the Davies Transit Centre map). Davies Transit Centre opened 4 September 2022 (body text, no citation). | CC BY-SA. Text read with WebFetch. Infobox citations not all present. |
+| [Wikipedia, Valley Line Southeast](https://en.wikipedia.org/wiki/Valley_Line_Southeast) | Davies listed as the only elevated stop, opened 4 November 2023. "Just north of Argyll Road, the line is lifted onto an elevated guideway over Davies Industrial." Park and ride: "Davies (to include a bus terminal and park & ride)" (citing the 2016 approved concept plan). Line-wide: 45 piers, 30 of 45 cracked in 2022 (press reports). No Davies span count, pier count, height or clearance. | CC BY-SA. Text read with WebFetch. The 45-pier and 30-cracked figures are line-wide. |
+| [City of Edmonton, Taking Shape: Valley Line Southeast update 4](https://transforming.edmonton.ca/taking-shape-valley-line-southeast-update-4/) | Elevated section starts at 83 Street and Argyll Road, runs through Davies Industrial, returns to ground on 75 Street before McIntyre Road. The span lets trains cross Argyll Road and nearby rail. | City of Edmonton. Not opened. The site returned HTTP 502 when fetched. Read as a search summary only. |
+| [City of Edmonton, Davies Station: a future-focused design](https://transforming.edmonton.ca/davies-station-a-future-focused-design-in-the-industrial-heart-of-south-edmonton/) | Elevated because freight traffic on the CP and CN lines would otherwise hold trains. Station design. | City of Edmonton. Not opened. HTTP 502 when fetched. Read as a search summary only. |
+| [Railway Age, Edmonton Valley Line Southeast opens](https://www.railwayage.com/passenger/light-rail/edmonton-valley-line-southeast-opens/) | Opening on 4 November 2023. Start of the elevated section given as 69A Avenue, crossing Argyll Road, ending just past McIntyre Road on 75 Street (as read through a search summary). | Railway Age. Not opened. HTTP 403 when fetched. Read as a search summary only. |
+| [ELLISDON, Valley Line LRT bridge spans at 75 Street and Whitemud Drive](https://ellisdon.com/news/valley-line-lrt-bridge-spans-installed-at-75-street-and-whitemud-drive) | Search summary only. The summary says the Davies pier shape is a Y and the piers were 6.0 m to 12.7 m high. It is not clear the piers are Davies'. The page returned HTTP 404 when fetched. Not used in `geometry.json`. | ELLISDON. Not opened. |
+| [City of Edmonton, Valley Line Southeast quarterly dashboards](https://www.edmonton.ca/documents/transit/2020Q4_Quarterly_Dashboard.pdf) | Searched for the Davies guideway status (rail fine-tuning listed for Q1 2021). Progress only. | City of Edmonton. Not opened. Read as a search summary only. |
+| `docs/edmonton-bridges/lrt-tracks.json`, extract 2026-10-14 | Routes 4 and 5, kind bridge, 1,493 m and 1,488 m stored, 89 and 83 nodes. Route 27 and 30, surface, about 1,130 m each, south toward T128. Routes 37 and 38, surface, about 5,151 m and 5,154 m, north past P156. Davies station node 53.499883, -113.44415. No elevations. No platform ring. | ODbL. Geometry only. Plan lengths recomputed here by haversine: 1,491.3 m and 1,485.9 m for the bridge ways. |
+| `docs/edmonton-bridges/lrt.md` (project inventory) | 38 spans (2019 progress count). Piers at least 20 m apart. Circular piers through the station. Split shaft elsewhere: shaft at most 0.9 m thick, top width at most 4.5 m, taper 12:1 to 15:1. Girder depth at most 2.5 m, at most 4.5 m over 75 Street. Minimum clearance over 75 Street 6.5 m. Ramps at most 5 m from grade. Station: about 1,200 m² on three levels, steel arch ribs at least 5 m apart, radius at most 12.5 m, heavy-timber soffit. | Project notes. None of these figures was matched to a public source in this pass. |
+| `docs/edmonton-bridges/PRIORITY.md`, section 2 | Matching task line. Says the Davies station is about 2 km off the runway 30 extended centreline. | Project notes. |
+
+No Government of Alberta bridge sheet, Structurae record, or engineering paper for the Davies guideway was found in this pass. Those places were not searched for Davies in this pass. They are still open.
+
+## Photos saved
+
+| File | Shows | Source | Licence |
+| --- | --- | --- | --- |
+| `davies-construction-2017.jpg` | 27 August 2017. Davies LRT station under construction. A V- or Y-shaped concrete pier with a split top stands behind the fence, with a crane. A large formed concrete block with formwork is on the right, not identified. Piers. 1,920 px thumbnail. | [Commons, File:Davies LRT Station construction.jpg, Thankyoubaby](https://commons.wikimedia.org/wiki/File:Davies_LRT_Station_construction.jpg) | CC BY-SA 4.0 |
+| `davies-station-2020-construction.jpg` | 9 October 2020. Davies station under construction from the parking lot. Two guideway sections on columns, glazed upper walls, curved roof. Station and guideway. 1,920 px thumbnail. | [Commons, File:Davies Station.jpg, CplKlinger](https://commons.wikimedia.org/wiki/File:Davies_Station.jpg) | CC BY-SA 4.0 |
+| `davies-station-2023-04.jpg` | 13 April 2023. Davies station and bus side, from the bus area. Curved roof, glass wall, and the elevated guideway in the distance on the left, with V-shaped piers. Station, canopy, guideway. 1,920 px thumbnail. | [Commons, File:Davies LRT station 04-13-2023.jpg, TagaSanPedroAko](https://commons.wikimedia.org/wiki/File:Davies_LRT_station_04-13-2023.jpg) | CC BY-SA 4.0 |
+| `davies-station-2023-11-platform.jpg` | 16 November 2023. Platform under the curved arch roof with a timber soffit. Stair and elevator down to the bus side. Sign reads Transit Centre South, Park and Ride. Canopy. 1,920 px thumbnail. | [Commons, File:Davies LRT station platform facing Mill Woods, 11-16-2023.jpg, TagaSanPedroAko](https://commons.wikimedia.org/wiki/File:Davies_LRT_station_platform_facing_Mill_Woods,_11-16-2023.jpg) | CC BY-SA 4.0 |
+
+## Not downloaded
+
+- Commons, Valley line LRT Edmonton Alberta, 4 November 2023 (two Flickr-sourced files, CC BY 2.0). Checked; not saved here. The file is a line view, not a Davies view, and it was not needed.
+- CTV News Edmonton, Davies LRT station gallery, 17 March 2026. Photographer Dave Mitchell. Licence not stated. Not saved.
+- City of Edmonton design photographs, credited to Scott Bruck and AECOM, on the Davies Station article. Licence not stated. Not saved.

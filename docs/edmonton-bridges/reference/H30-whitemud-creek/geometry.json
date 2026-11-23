@@ -1,0 +1,591 @@
+{
+  "code": "H30",
+  "name": "Whitemud Creek arch",
+  "centre": [
+    53.4286,
+    -113.563
+  ],
+  "centre_estimate": {
+    "value": [
+      53.448,
+      -113.56
+    ],
+    "source": "draw-map.py, estimated_centre true",
+    "offset_from_estimate_m": {
+      "north": -2160.0,
+      "east": -199.0,
+      "distance": 2169.0
+    }
+  },
+  "centre_basis": "Midpoint of the two OSM bridge pieces on the Henday over the creek (ways 1577455878 and 1577455881), rounded to 4 decimal places. Checked against the aerial ortho (City of Edmonton, 2019). Not a control survey.",
+  "crs": "EPSG:4326",
+  "coordinate_order": "[lat, lon]",
+  "geometry_source": "OpenStreetMap API 0.6 map call, bbox -113.578,53.426,-113.536,53.441, retrieved 2026-11-23. Not the bridge-geometry.json cache, which had no way within 1.5 km of the estimate.",
+  "geometry_retrieved": "2026-11-23",
+  "plan_length_note": "plan_length_m is the horizontal WGS84 length of that OSM way along its nodes. Approach ways are complete only where they lie inside the extract box. The far node of an approach is not a grade point, and an approach plan_length_m is not the climb to grade. The bridge pieces are not a structural length.",
+  "decks": [
+    {
+      "osm_way": 1577455878,
+      "part": "eastbound_bridge",
+      "which": "Anthony Henday Drive NW, eastbound carriageway, OSM bridge piece over Whitemud Creek. Two nodes. Continues from way 1577455879 on the west and way 1388870988 on the east.",
+      "plan_length_m": 25.2,
+      "tags": {
+        "bridge": "yes",
+        "highway": "motorway",
+        "lanes": "3",
+        "layer": "2",
+        "maxspeed": "100",
+        "name": "Anthony Henday Drive NW",
+        "oneway": "yes",
+        "ref": "216",
+        "surface": "asphalt",
+        "width": "11.1"
+      },
+      "nodes": [
+        [
+          53.42842,
+          -113.563218
+        ],
+        [
+          53.428454,
+          -113.562841
+        ]
+      ]
+    },
+    {
+      "osm_way": 1577455881,
+      "part": "westbound_bridge",
+      "which": "Anthony Henday Drive NW, westbound carriageway, OSM bridge piece over Whitemud Creek, layer 2. Three nodes. Continues to way 1577455880 on the west. The east end is not in the extract.",
+      "plan_length_m": 44.4,
+      "tags": {
+        "bridge": "yes",
+        "highway": "motorway",
+        "lanes": "3",
+        "layer": "2",
+        "maxspeed": "100",
+        "name": "Anthony Henday Drive NW",
+        "oneway": "yes",
+        "ref": "216",
+        "surface": "asphalt"
+      },
+      "nodes": [
+        [
+          53.428792,
+          -113.562691
+        ],
+        [
+          53.42877,
+          -113.562933
+        ],
+        [
+          53.428735,
+          -113.563354
+        ]
+      ]
+    }
+  ],
+  "approaches": [
+    {
+      "osm_way": 1289815290,
+      "part": "eastbound_approach_far",
+      "which": "Eastbound, far west. Chains to 542172228. OSM maxheight 5.5 on this way.",
+      "plan_length_m": 1011.6,
+      "tags": {
+        "highway": "motorway",
+        "lanes": "3",
+        "maxheight": "5.5",
+        "maxspeed": "100",
+        "name": "Anthony Henday Drive NW",
+        "oneway": "yes",
+        "ref": "216",
+        "surface": "asphalt",
+        "width": "11.1"
+      },
+      "nodes": [
+        [
+          53.432616,
+          -113.588247
+        ],
+        [
+          53.432265,
+          -113.5875
+        ],
+        [
+          53.431851,
+          -113.586561
+        ],
+        [
+          53.431483,
+          -113.585669
+        ],
+        [
+          53.431186,
+          -113.58489
+        ],
+        [
+          53.430866,
+          -113.583999
+        ],
+        [
+          53.43064,
+          -113.583333
+        ],
+        [
+          53.430366,
+          -113.582461
+        ],
+        [
+          53.430152,
+          -113.581727
+        ],
+        [
+          53.429931,
+          -113.580924
+        ],
+        [
+          53.429806,
+          -113.580451
+        ],
+        [
+          53.42961,
+          -113.579655
+        ],
+        [
+          53.429339,
+          -113.578424
+        ],
+        [
+          53.42915,
+          -113.577474
+        ],
+        [
+          53.42901,
+          -113.576723
+        ],
+        [
+          53.428871,
+          -113.575869
+        ],
+        [
+          53.428694,
+          -113.574624
+        ]
+      ]
+    },
+    {
+      "osm_way": 542172228,
+      "part": "eastbound_approach",
+      "which": "Eastbound, west of the bridge. Chains to 1577455879.",
+      "plan_length_m": 589.1,
+      "tags": {
+        "highway": "motorway",
+        "lanes": "3",
+        "maxspeed": "100",
+        "name": "Anthony Henday Drive NW",
+        "oneway": "yes",
+        "ref": "216",
+        "surface": "asphalt",
+        "width": "11.1"
+      },
+      "nodes": [
+        [
+          53.428694,
+          -113.574624
+        ],
+        [
+          53.428589,
+          -113.573769
+        ],
+        [
+          53.428503,
+          -113.572955
+        ],
+        [
+          53.428457,
+          -113.572445
+        ],
+        [
+          53.428388,
+          -113.571665
+        ],
+        [
+          53.428343,
+          -113.570935
+        ],
+        [
+          53.428286,
+          -113.569956
+        ],
+        [
+          53.428267,
+          -113.569608
+        ],
+        [
+          53.428247,
+          -113.569168
+        ],
+        [
+          53.428244,
+          -113.568798
+        ],
+        [
+          53.42824,
+          -113.568239
+        ],
+        [
+          53.428242,
+          -113.567228
+        ],
+        [
+          53.428261,
+          -113.566286
+        ],
+        [
+          53.428274,
+          -113.565789
+        ]
+      ]
+    },
+    {
+      "osm_way": 1577455879,
+      "part": "eastbound_approach",
+      "which": "Eastbound, immediately west of the bridge, not tagged as bridge. Ends at the west node of way 1577455878.",
+      "plan_length_m": 171.2,
+      "tags": {
+        "highway": "motorway",
+        "lanes": "3",
+        "maxspeed": "100",
+        "name": "Anthony Henday Drive NW",
+        "oneway": "yes",
+        "ref": "216",
+        "surface": "asphalt",
+        "width": "11.1"
+      },
+      "nodes": [
+        [
+          53.428274,
+          -113.565789
+        ],
+        [
+          53.428295,
+          -113.565218
+        ],
+        [
+          53.428328,
+          -113.564532
+        ],
+        [
+          53.42836,
+          -113.564068
+        ],
+        [
+          53.428394,
+          -113.563603
+        ],
+        [
+          53.42842,
+          -113.563218
+        ]
+      ]
+    },
+    {
+      "osm_way": 1388870988,
+      "part": "eastbound_approach",
+      "which": "Eastbound, immediately east of the bridge, not tagged as bridge. Starts at the east node of way 1577455878.",
+      "plan_length_m": 458.0,
+      "tags": {
+        "highway": "motorway",
+        "lanes": "3",
+        "maxspeed": "100",
+        "name": "Anthony Henday Drive NW",
+        "oneway": "yes",
+        "ref": "216",
+        "surface": "asphalt",
+        "width": "11.1"
+      },
+      "nodes": [
+        [
+          53.428454,
+          -113.562841
+        ],
+        [
+          53.428505,
+          -113.562302
+        ],
+        [
+          53.428582,
+          -113.561531
+        ],
+        [
+          53.428723,
+          -113.560413
+        ],
+        [
+          53.428874,
+          -113.55936
+        ],
+        [
+          53.429019,
+          -113.558479
+        ],
+        [
+          53.42935,
+          -113.556813
+        ],
+        [
+          53.42949,
+          -113.556164
+        ]
+      ]
+    },
+    {
+      "osm_way": 1577455880,
+      "part": "westbound_approach",
+      "which": "Westbound, immediately west of the bridge, not tagged as bridge. Starts at the west node of way 1577455881.",
+      "plan_length_m": 447.0,
+      "tags": {
+        "highway": "motorway",
+        "lanes": "3",
+        "maxspeed": "100",
+        "name": "Anthony Henday Drive NW",
+        "oneway": "yes",
+        "ref": "216",
+        "surface": "asphalt"
+      },
+      "nodes": [
+        [
+          53.428735,
+          -113.563354
+        ],
+        [
+          53.428722,
+          -113.563506
+        ],
+        [
+          53.428686,
+          -113.563975
+        ],
+        [
+          53.428653,
+          -113.564481
+        ],
+        [
+          53.428615,
+          -113.565091
+        ],
+        [
+          53.428568,
+          -113.566782
+        ],
+        [
+          53.428561,
+          -113.568067
+        ],
+        [
+          53.428561,
+          -113.568481
+        ],
+        [
+          53.428615,
+          -113.570085
+        ]
+      ]
+    },
+    {
+      "osm_way": 758869440,
+      "part": "westbound_approach_far",
+      "which": "Westbound, far west. Chains from 1577455880. OSM maxheight 5.5 on this way.",
+      "plan_length_m": 1097.6,
+      "tags": {
+        "highway": "motorway",
+        "lanes": "3",
+        "maxheight": "5.5",
+        "maxspeed": "100",
+        "name": "Anthony Henday Drive NW",
+        "oneway": "yes",
+        "ref": "216",
+        "surface": "asphalt",
+        "width": "11.1"
+      },
+      "nodes": [
+        [
+          53.428615,
+          -113.570085
+        ],
+        [
+          53.428692,
+          -113.571495
+        ],
+        [
+          53.428769,
+          -113.572389
+        ],
+        [
+          53.428821,
+          -113.572955
+        ],
+        [
+          53.429004,
+          -113.57454
+        ],
+        [
+          53.429173,
+          -113.575684
+        ],
+        [
+          53.429314,
+          -113.576569
+        ],
+        [
+          53.429493,
+          -113.577541
+        ],
+        [
+          53.429825,
+          -113.57911
+        ],
+        [
+          53.430037,
+          -113.580013
+        ],
+        [
+          53.430662,
+          -113.582266
+        ],
+        [
+          53.431171,
+          -113.583826
+        ],
+        [
+          53.431467,
+          -113.58465
+        ],
+        [
+          53.43182,
+          -113.58556
+        ]
+      ]
+    }
+  ],
+  "paths": [
+    {
+      "osm_way": 493371666,
+      "part": "trail_bridge_piece",
+      "which": "OSM cycleway bridge piece, layer -1, at 53.4288-53.4293, -113.5632 to -113.5628, on the north side of the highway. OSM does not say whether this is the path through the arch.",
+      "plan_length_m": 54.9,
+      "tags": {
+        "bridge": "yes",
+        "highway": "cycleway",
+        "layer": "-1",
+        "surface": "concrete"
+      },
+      "nodes": [
+        [
+          53.42929,
+          -113.562794
+        ],
+        [
+          53.428972,
+          -113.563081
+        ],
+        [
+          53.428932,
+          -113.563107
+        ],
+        [
+          53.428898,
+          -113.563128
+        ],
+        [
+          53.428847,
+          -113.563156
+        ]
+      ]
+    },
+    {
+      "osm_way": 493371667,
+      "part": "trail_bridge_piece",
+      "which": "OSM cycleway bridge piece, at 53.4280-53.4283, -113.5630 to -113.5625, on the south side of the highway. OSM does not say whether this is the path through the arch.",
+      "plan_length_m": 49.9,
+      "tags": {
+        "bridge": "yes",
+        "highway": "cycleway",
+        "surface": "concrete"
+      },
+      "nodes": [
+        [
+          53.428302,
+          -113.563
+        ],
+        [
+          53.428245,
+          -113.562927
+        ],
+        [
+          53.428168,
+          -113.562803
+        ],
+        [
+          53.427978,
+          -113.562479
+        ]
+      ]
+    },
+    {
+      "osm_way": 493371668,
+      "part": "trail_bridge_piece",
+      "which": "OSM cycleway bridge piece, layer 1, at 53.4283-53.4288, -113.5632 to -113.5631, between the two carriageway bridge pieces. OSM does not say whether this is the path through the arch.",
+      "plan_length_m": 63.5,
+      "tags": {
+        "bridge": "yes",
+        "highway": "cycleway",
+        "layer": "1",
+        "surface": "concrete"
+      },
+      "nodes": [
+        [
+          53.428847,
+          -113.563156
+        ],
+        [
+          53.428732,
+          -113.563197
+        ],
+        [
+          53.428675,
+          -113.563193
+        ],
+        [
+          53.428598,
+          -113.563179
+        ],
+        [
+          53.428555,
+          -113.563168
+        ],
+        [
+          53.428496,
+          -113.563148
+        ],
+        [
+          53.428426,
+          -113.563114
+        ],
+        [
+          53.428378,
+          -113.563084
+        ],
+        [
+          53.428355,
+          -113.563059
+        ],
+        [
+          53.428302,
+          -113.563
+        ]
+      ]
+    }
+  ],
+  "dropped_note": "Dropped from this structure: 41000027, 115754661, 834783174, 834786589 and 1346605566 (Whitemud Creek stream, waterway); 98223958 (Whitemud Creek Ravine, natural wood); 201661622 (cycleway bridge at 53.4382, -113.5717, a different trail structure); 470636522, 943421976 to 943421986, 1446194273 and 807002012 (Rabbit Hill Road NW, a cross road north of the arch); 691332740, 691332741, 1377303247, 1377303248, 1266613322, 51716544, 51746974 and 1096481450 (motorway_link ramps and Henday ways on another interchange, not this arch). The wider 300 m ravine is not mapped in the extract. Way 1096481450 is the Henday at 53.4340, -113.5340, east of the arch, and is left out.",
+  "ravine_note": "The brief gives a 300 m wide ravine and 18 m depth (Canadian Consulting Engineer, 2005 article). OSM gives two bridge pieces of 25 m and 44 m on the Henday over this crossing. The ravine width and the arch span are not reconciled in any source checked. No elevation is given here."
+}
