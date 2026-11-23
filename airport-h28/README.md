@@ -7,12 +7,12 @@ H28/CEQ4 Whetstone/Del Bonita International Airport
 
 Located astride the 49th parallel (i.e. the border between Canada and the
 United States), the Whetstone/Del Bonita was originally built during World War
-II so the Americans could preserve the appearance of neautrality: the US could
+II so the Americans could preserve the appearance of neutrality: the US could
 land planes here, and the Canadians (or British) could take off in the
 "abandoned" planes already on Canadian soil. There are at least four others like
 this (that straddle the border) that still exist.
 
-Today, the airport serves general availation, and is managed by the State of
+Today, the airport serves general aviation, and is managed by the State of
 Montana, although it retains a Canadian identifier as well. As a bonus, border
 crossing facilities are available on-site, due to the highway crossing right
 there.
@@ -26,13 +26,13 @@ memorial on the Canadian side of the border, the American housing, the border
 monuments on both sides of the road, and the surrounding powerlines.
 
 Not true to life, but hopefully more fun to fly, I also added PAPI lights for
-west approaches, and an RNAV appraoch that brings you to circling over the
+west approaches, and an RNAV approach that brings you to circling over the
 airport. The border crossing's street lights also make it findable at night
 from a distance.
 
 ![night approach](../docs/h28/in-sim/v1.0.0/2026-11-21-16-12-48-crop.jpg)
 
--- CarboardGT, November 23, 2026  
+-- Carboard GT, November 23, 2026  
 <https://github.com/minchinweb/msfs-airports/tree/master/airport-h28>
 
 Other photos:
