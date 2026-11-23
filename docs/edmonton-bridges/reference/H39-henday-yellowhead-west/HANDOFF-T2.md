@@ -43,3 +43,27 @@ H38 (Henday / Stony Plain Road, 53.540) has no reference folder, is 3.7 km south
 ## Rebuilding
 
 `python -I -c "import sys; sys.path.insert(0, 'scenery-edmonton-bridges/tools'); import site_h39; site_h39.sample()"`, then `python -I scenery-edmonton-bridges/tools/gen_bridges.py h39`. The LiDAR clips are gitignored (`_refetch_lidar.py` in this folder re-cuts them); the samples are committed.
+
+## Staging, bridge count and 2018 DSM check (2026-11-23)
+
+- Staging: no "2005 to 2016" text exists in this folder, so nothing was changed on that count. The ring's northwest leg opened 1 November 2011 (Wikipedia, "Alberta Highway 216", CC BY-SA, read in the background search 2026-11-23); this interchange was open to traffic by 24 September 2011 (Global News). The northeast leg (1 October 2016) is H50's side of the ring, not this one. NOTES.md "Staging and bridge count" has the full wording.
+- Bridge count: ten decks, as built. "12 bridges" (Roads & Bridges) is the northeast interchange and is not used.
+- DSM check: the footprint of each deck, sampled from the 2018 DSM (1 m, CGVD2013) at 1 m steps between the abutments, across the deck width less 1 m at each side. Model deck top is the value the model draws (HANDOFF-T2 "Deck tops").
+
+| Deck | DSM p10 | DSM median | DSM p90 | Model top | Model - median |
+| --- | --- | --- | --- | --- | --- |
+| N-1 | 685.30 | 691.49 | 691.75 | 691.5 | +0.01 |
+| S-6 | 692.10 | 692.26 | 692.42 | 692.1 | -0.16 |
+| NW-7 | 691.11 | 691.31 | 691.58 | 691.2 | -0.11 |
+| SE-8 | 692.73 | 693.30 | 693.86 | 693.1 | -0.20 |
+| WS1-9 | 692.99 | 693.82 | 694.62 | 693.8 | -0.02 |
+| WS2-10 | 690.89 | 701.98 | 703.09 | 701.9 | -0.08 |
+| WS3-11 | 690.64 | 696.32 | 698.23 | 696.3 | -0.02 |
+| EN1-12 | 697.58 | 698.02 | 698.44 | 697.9 | -0.12 |
+| EN2-13 | 700.40 | 701.39 | 701.82 | 701.5 | +0.11 |
+| EN3-14 | 690.65 | 692.15 | 693.59 | 691.7 | -0.45 |
+
+- Nine of ten decks are within 0.2 m of the footprint median. The model is 0.12 m under the first returns by design (vehicles and rails).
+- EN3-14 is 0.45 m under the median. Its footprint spread is wide (690.7 to 693.6 m), and the centreline median in elevation/README.md (692.25 m) gives the same level, so the fit is low at the ends. The footprint is the same deck and in the same place, so this is a height offset, not a deck that is missing, extra or misplaced. Not changed. William to check the EN3-14 level in the sim.
+- Deck layout: no 2018 DSM elevated surface was found that the model does not carry (the per-way table in elevation/README.md lists only road chains and the ten decks). The 2019 aerial was checked at build time (see the Tier 2 notes); it was not re-viewed in this pass.
+- Result: no model change.

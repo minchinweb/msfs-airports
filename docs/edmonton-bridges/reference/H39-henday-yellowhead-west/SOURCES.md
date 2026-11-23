@@ -57,3 +57,10 @@ CC BY-NC, or no open licence found. URL only:
 
 - OpenStreetMap API 0.6 `map` read of the box 53.566, -113.672, 53.582, -113.650 (ODbL, OpenStreetMap contributors), made 2026-10-15. Every `highway=motorway` and `motorway_link` way not already in `geometry.json` was stored under `ramps_added_2026_10_15` (34 ways, complete, all nodes). Plan geometry only.
 - Elevations in `elevation/h39-samples.json` were sampled from the 2018 LiDAR clips in `elevation/` (NRCAN HRDEM Edmonton 2018, 1 m, CGVD2013). The 2019 City orthophoto in `aerial/` was used only to check the plan.
+
+## Added 2026-11-23 (staging and count check)
+
+- [Wikipedia, Alberta Highway 216](https://en.wikipedia.org/wiki/Alberta_Highway_216) (CC BY-SA, text only, read in the background search 2026-11-23). Northwest leg, Yellowhead Trail to Manning Drive, opened 1 November 2011 (P3 signed 2008). Northeast leg opened 1 October 2016 (not H39). Yellowhead interchange listed as Exit 25.
+- [Roads & Bridges, flashing ring](https://www.roadsbridges.com/flashing-ring). "12 bridges" refers to the northeast Highway 16 / Henday system interchange. Not used for H39.
+- Commons "Henday Yellowhead 1". The northeast interchange. Not used for H39.
+- Tomlinson, AECOM design alternatives for the Yellowhead and Manning system interchanges, [tac-atc.ca/wp-content/uploads/tomlinson.pdf](https://tac-atc.ca/wp-content/uploads/tomlinson.pdf). Not read in full; no claim is taken from it.
