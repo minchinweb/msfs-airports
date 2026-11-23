@@ -20,6 +20,11 @@ sys.path.insert(0, str(ROOT / "airport-cyxd" / "tools"))
 import gen_buildings as gb  # noqa: E402
 from gen_buildings import Mesh, PALETTE  # noqa: E402
 
+# The bridge swatches start at index 32, straight after the first 32 CYXD swatches. The CYXD palette has grown since (41 entries),
+# so cut it back here, or the bridge indices move and every bridge recolours. bridge_palette.png and the committed models use 32.
+CYXD_SWATCHES = 32
+del PALETTE[CYXD_SWATCHES:]
+
 MODELLIB = ROOT / "scenery-edmonton-bridges" / "PackageSources" / "modelLib"
 NS = uuid.UUID("5d0c6c7e-0c1d-4a53-9b6e-0c7d00000002")
 
