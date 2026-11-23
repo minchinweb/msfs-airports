@@ -24,7 +24,9 @@ Eight-lane concrete girder deck (14 girder lines, haunched over the supports of 
 
 ## Remains
 
-- A span layout drawing from the City or Alberta (the McBride-Ragan 1967 drawings, PIEVC Exhibit 2-4) would settle the span order and pier positions.
+- PIEVC 2008 Exhibit 2-4 (report p. 2-11) was read on 2026-11-23. Its spans (50.10, 54.90 x 3, 53.30, 46.60 m) match the model, and so do the five piers. It does not say which bank holds the 50 m span, so the span order is still assumed. The McBride-Ragan 1967 contract drawings (not found as an open file) would settle it.
+- Model differences left as they are (not in the change rule): the model joins spans 3 and 4 over the fourth pier, where PIEVC has a break between the 164.7 m group and the 53.3 + 46.6 m group. The model draws 14 girder lines; PIEVC says ten before the widening. The model's caps use steel extensions (CISC 2011); PIEVC's caps are post-tensioned (Exhibit 2-5).
+- The `site_r6.py` docstring says 315.7 m. The spans sum to 314.6 m, so the axis is scaled about 0.3 % longer than the spans. This is the existing scaling and was not changed.
 - Night lighting, textures, transparency: none, as for Tier 1.
 
 ## Sim-side checks for William
