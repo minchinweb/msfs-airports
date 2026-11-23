@@ -33,3 +33,10 @@ No Government of Alberta bridge sheet, Structurae record, or engineering paper f
 - Commons, Valley line LRT Edmonton Alberta, 4 November 2023 (two Flickr-sourced files, CC BY 2.0). Checked; not saved here. The file is a line view, not a Davies view, and it was not needed.
 - CTV News Edmonton, Davies LRT station gallery, 17 March 2026. Photographer Dave Mitchell. Licence not stated. Not saved.
 - City of Edmonton design photographs, credited to Scott Bruck and AECOM, on the Davies Station article. Licence not stated. Not saved.
+
+## Added 2026-11-23 for the model
+
+- 2018 LiDAR clips and 2019 City aerial: `fetch-site-data.py T127` (gitignored). The samples the model uses are in `elevation/t127-samples.json`. The LiDAR caught most of the piers standing without their girders.
+- OpenStreetMap API, read 2026-11-23 (ODbL): the station building, platform, bus station and crossing ways, in `geometry.json` `osm_added_2026_11_23`.
+- Mapillary: 4 more frames, in `street/SOURCES.md`.
+- Model notes: `HANDOFF-T2.md`.

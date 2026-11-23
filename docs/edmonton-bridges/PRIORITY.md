@@ -82,7 +82,7 @@ The first four boxes are named fixes on the Edmonton VFR terminal chart. Then th
 
 - [x] **H27 Henday / Calgary Trail / Gateway Boulevard** and **H28 Blackmud Creek arches**, one task. 53.437, -113.491 and 53.4348, -113.5134 (corrected 2026-11-23: the creek is 1.5 km west of the interchange, not at -113.496; built, see `reference/H27-calgary-trail-gateway/HANDOFF-T2.md`). Look 5, Where 4. Three-level interchange, trellis beams at a high skew, twelve bridge ways. The arches are three cast-in-place open-spandrel spans west of it (two Henday carriageways and a ramp), deck about 17 m above the creek, opened 2005. This is the landmark on a north departure from CYEG. The arches without the interchange, or the interchange without the arches, leaves a hole.
 
-- [ ] **T127 Davies Elevated Guideway** and **Davies station**, one task. Centre 53.5003, -113.4486. Station 53.49988, -113.44415. Look 5, Where 3. About 1.49 km per track, from 53.5049, -113.4549 to 53.4956, -113.4423. It clears Argyll Road, the CP and CN tracks, and 75 Street. The 2019 count was 38 spans. Piers through the station are circular; elsewhere the top of the pier is a split shaft. Station is three storeys on the deck, centre platform, curved roof, 1,300-stall park and ride. About 2 km off the runway 30 extended centerline at 8 km, so it is in the side window of a long final and it is large enough to read. First LRT model. Full pier and girder limits are in `lrt.md`.
+- [x] **T127 Davies Elevated Guideway** and **Davies station**, one task (built 2026-11-23, see `reference/T127-davies/HANDOFF-T2.md`). Centre 53.5003, -113.4486. Station 53.49988, -113.44415. Look 5, Where 3. About 1.49 km per track, from 53.5049, -113.4549 to 53.4956, -113.4423. It clears Argyll Road, the CP and CN tracks, and 75 Street. The 2019 count was 38 spans. Piers through the station are circular; elsewhere the top of the pier is a split shaft. Station is three storeys on the deck, centre platform, curved roof, 1,300-stall park and ride. About 2 km off the runway 30 extended centerline at 8 km, so it is in the side window of a long final and it is large enough to read. First LRT model. Full pier and girder limits are in `lrt.md`.
 
 - [ ] **H30 Whitemud Creek arch**. Estimated centre 53.448, -113.560 (`draw-map.py`; OpenStreetMap gave this mainline no bridge centre). Look 5, Where 3. Semi-circular arch on the southwest Henday, between 111 Street and Rabbit Hill Road, over a ravine about 300 m wide and 18 m deep. Survey the centre before placing. Custom. Do not use the Blackmud arch model unchanged; confirm the span count against a photo first.
 
@@ -273,7 +273,7 @@ The order is how close the platform sits to a CYXD final. Kingsway and NAIT are 
 
 ### On a guideway already in this list
 
-- [ ] **P157 Davies** — with T127. Do not open a second task.
+- [x] **P157 Davies** — with T127 (built with it, 2026-11-23). Do not open a second task.
 - [ ] **P163 West Edmonton Mall** and **P164 Misericordia** — with T131.
 
 ### Open, at grade, near CYXD
