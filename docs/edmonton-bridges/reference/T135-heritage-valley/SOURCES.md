@@ -44,4 +44,4 @@ Images with no open licence stated, or not yet found in open form. URL only.
 
 ## Street photos (Mapillary)
 
-2 street-level images in `street/`, list and licence note in `street/SOURCES.md`. Gathered 2026-11-23. Mapillary images are user photos, not necessarily taken of this structure's finished state.
+1 street-level image in `street/`, list and licence note in `street/SOURCES.md`. Gathered 2026-11-23. Mapillary images are user photos, not necessarily taken of this structure's finished state.
