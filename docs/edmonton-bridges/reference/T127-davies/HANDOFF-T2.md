@@ -58,6 +58,18 @@ Clearance under the girders, from the 2018 bare earth:
 - 9 m over 75 Street (338 to 366 m);
 - 11 m over Davies Road and Wagner Road.
 
+## Park and ride (added 2026-11-23)
+
+The two ETS park-and-ride lots in OSM: way 1138132749, south-west of the station, 30,100 m2; and way 1138133499, north of it, 12,800 m2. Their 18 parking aisles and the ways that cut into them are in `geometry.json` `osm_added_2026_11_23` `park_and_ride`.
+
+- **Cars.** Done as at CYXD (`airport-cyxd/tools/gen_parking.py`): 135 `<CarParking>` rows the sim fills with its own parked cars, written by `gen_bridges.py` between the `car parks` markers in `edmonton-bridges.xml`. Each row is 5.5 m deep, one per side of each aisle segment, beside a 6.5 m aisle. The rows are cut back from the footways, cycleways, service roads, grass islands and bus platforms. They come to about 1,490 stalls at 2.6 m; Wikipedia gives 1,300. There is no `carsHeading`, which fails the BGL compiler; the sim lines the cars up with each row's long edge.
+- **Pavement.** This package has no airport, so it cannot use CYXD's Apron pavement. Instead, the lots are a flat asphalt surface in the model, 0.05 m above a flatten polygon at each lot's level. The levels are the median 2018 bare earth inside each lot: 676.49 m and 674.72 m. The 2018 ground was still a building site, so the true graded level may differ by about 1 m.
+
+Sim checks:
+- whether the cars appear (the model's exclusion polygon now covers the lots; if it also removes `CarParking` cars, the rows need cutting out of it);
+- whether the cars face square to the aisles;
+- whether the edges of the flattened lots step against the roads round them.
+
 ## Assumed (flagged in the module docstring)
 
 - Rail top 1.2 m above the LiDAR pier top.

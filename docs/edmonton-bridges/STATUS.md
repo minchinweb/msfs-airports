@@ -24,6 +24,7 @@ T127 Davies guideway and P157 Davies station are modelled by `tools/site_t127.py
 - column piers where the tracks spread;
 - retained fill at both ends;
 - the station on its OSM footprint: centre platform, glazed band, barrel roof with a timber soffit, glass ground floor.
+- the park-and-ride lots: asphalt, flattened terrain and CYXD-style `<CarParking>` rows.
 
 Piers and heights come from the 2018 LiDAR, which caught the piers standing before the girders. The package builds (exit 0). It has not been seen in the sim. Details and the sim checks are in `reference/T127-davies/HANDOFF-T2.md`.
 

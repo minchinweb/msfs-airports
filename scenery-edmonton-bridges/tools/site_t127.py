@@ -23,6 +23,10 @@ a 10 m wide pair of girders, wider than the OSM 4.3 m spacing allows); Y pier si
 height); the ends of the structure (rail top 1.0 m above the ground where the OSM bridge ways end, retained fill until the deck is
 4.5 m up); station heights (ground floor up to the pier caps, glazed band from 1.3 m to 5 m above the rail, roof crest 8.5 m above the rail, 6 m roof
 overhang at both ends); overhead-line masts every 50 m.  No signals, signs or lamps.
+Park and ride (P157): the two ETS lots in OSM (amenity=parking, park_ride=yes; about 42,900 m2 for the 1,300 stalls Wikipedia gives),
+paved in the model (asphalt) at the median 2018 bare earth inside each, with a flatten polygon at that level, and filled with the
+sim's own parked cars by <CarParking> rows beside the OSM parking aisles (the CYXD method, airport-cyxd/tools/gen_parking.py; no
+carsHeading, which fails the BGL compiler).  Row depth 5.5 m and aisle 6.5 m are assumed.
 """
 import json, math, sys
 from bridgelib import *
@@ -79,12 +83,91 @@ def sample():
             top = max(top, dsm.at(la, lo))
         la, lo = fr.ll(*ax.en(s, 0))
         rows.append([s, round(dtm.at(la, lo), 2), round(top, 2)])
+    # park-and-ride lots: median bare earth inside each (the 2018 ground was still a building site; the lots are graded flat)
+    from shapely.geometry import Point
+    lots = {}
+    for w in _geo()["osm_added_2026_11_23"]["park_and_ride"]:
+        if w["role"] != "lot":
+            continue
+        P = _poly(w["nodes"])
+        x0, y0, x1, y1 = P.bounds
+        v = sorted(dtm.at(la, lo) for la in _frange(y0, y1, 0.00005) for lo in _frange(x0, x1, 0.00008) if P.contains(Point(lo, la)))
+        lots[str(w["osm_way"])] = round(v[len(v) // 2], 2)
     out = dict(note="2018 LiDAR (AB-Edmonton / NRCAN 1 m DTM and DSM) along the mean line of the two T127 tracks (site_t127.centreline), "
                     "one row per metre from the south end: [s m, bare earth m, highest first return within 6 m of the axis m]. "
-                    "The flight pre-dates the girders; the first-return spikes are the piers then standing.",
-               rows=rows)
+                    "The flight pre-dates the girders; the first-return spikes are the piers then standing. "
+                    "lots: median bare earth (m) inside each park-and-ride lot polygon, by OSM way id.",
+               rows=rows, lots=lots)
     (REF / "elevation/t127-samples.json").write_text(json.dumps(out, separators=(",", ":")), encoding="utf-8")
     print("wrote", len(rows), "rows")
+
+
+def _frange(a, b, step):
+    v = a
+    while v < b:
+        yield v
+        v += step
+
+
+def _poly(nodes, fr=None):
+    """Shapely polygon of [lat, lon] nodes: (lon, lat), or (east, north) metres with a frame."""
+    from shapely.geometry import Polygon
+    return Polygon([fr.en(la, lo) if fr else (lo, la) for la, lo in nodes])
+
+
+def park_and_ride(fr, levels):
+    """The two ETS park-and-ride lots (OSM, geometry.json `osm_added_2026_11_23` park_and_ride).  Returns
+    (pavement [(polygon e/n, level m)], car rows [(title, polygon e/n)]).  Rows: 5.5 m deep (stall) beside a 6.5 m aisle, one per side of
+    each aisle segment, so the sim (which lines its cars up with a CarParking polygon's longest edge) parks them square to the aisle;
+    cut back from the other aisles' driving lanes, footways and cycleways (1.5 m), service roads (3.5 m), grass islands and bus
+    platforms, and kept 0.5 m inside the lot."""
+    from shapely.geometry import LineString, Polygon
+    from shapely.ops import unary_union
+    ways = _geo()["osm_added_2026_11_23"]["park_and_ride"]
+    lots = [(w, _poly(w["nodes"], fr)) for w in ways if w["role"] == "lot"]
+    aisles = [LineString([fr.en(*p) for p in w["nodes"]]) for w in ways if w["role"] == "aisle"]
+    cut = [a.buffer(3.25, cap_style=2) for a in aisles]
+    islands = []
+    for w in ways:
+        if w["role"] != "obstacle":
+            continue
+        t, pts = w["tags"], [fr.en(*p) for p in w["nodes"]]
+        closed = len(pts) > 3 and pts[0] == pts[-1]
+        if closed and (t.get("landuse") == "grass" or t.get("public_transport") == "platform" or t.get("highway") == "platform"):
+            g = Polygon(pts).buffer(0.5)
+            islands.append(g)
+            cut.append(g)
+        elif t.get("highway") in ("footway", "cycleway"):
+            cut.append(LineString(pts).buffer(1.5, cap_style=2))
+        elif t.get("highway") == "service":
+            cut.append(LineString(pts).buffer(3.5, cap_style=2))
+        elif closed:
+            cut.append(Polygon(pts).buffer(0.5))
+    cut = unary_union(cut)
+    inside = unary_union([P.buffer(-0.5, join_style=2) for _w, P in lots])
+    rows, taken = [], []
+    for k, a in enumerate(aisles):
+        c = list(a.coords)
+        for p, q in zip(c[:-1], c[1:]):
+            seg = LineString([p, q])
+            if seg.length < 6.0:
+                continue
+            for side in ("left", "right"):
+                strip = seg.buffer(8.75, cap_style=2, single_sided=True) if side == "left" else seg.buffer(-8.75, cap_style=2, single_sided=True)
+                band = seg.buffer(3.25 if side == "left" else -3.25, cap_style=2, single_sided=True)
+                g = strip.difference(band).difference(cut).intersection(inside)
+                if taken:
+                    g = g.difference(unary_union(taken))
+                for piece in getattr(g, "geoms", [g]):
+                    if piece.geom_type != "Polygon" or piece.area < 30.0:
+                        continue
+                    piece = piece.simplify(0.3)
+                    if piece.is_empty or piece.geom_type != "Polygon":
+                        continue
+                    rows.append(("Davies park and ride, aisle %d, %s row" % (k + 1, side), piece))
+                    taken.append(piece.buffer(0.2))
+    pave = [(P.difference(unary_union(islands)) if islands else P, levels[str(w["osm_way"])]) for w, P in lots]
+    return pave, rows
 
 
 def _smooth(v, k):
@@ -263,7 +346,23 @@ def build():
 
     _station(m, ax, st0, st1, sw0, sw1, pl0, pl1, y_st, g_st, T)
 
+    # --- park and ride: asphalt at each lot's level (the generator flattens the terrain to it), cars from <CarParking> rows
+    import shapely
+    pave, rows_cp = park_and_ride(fr, d["lots"])
+    terrain_extra, car_parks = [], []
+    for P, lvl in pave:
+        for g in getattr(P, "geoms", [P]):
+            for tri in shapely.constrained_delaunay_triangles(g).geoms:
+                q = list(tri.exterior.coords)[:3]
+                cx, cz = sum(x for x, _ in q) / 3, sum(z for _, z in q) / 3
+                m.poly([(x, lvl - DATUM + 0.05, z) for x, z in q], ASPHALT, (cx, lvl - DATUM - 1.0, cz))
+            ring = list(g.exterior.simplify(0.3).coords)[:-1]
+            terrain_extra.append(("flatten", "%s %s park and ride level" % (CODE, TITLE), lvl, [fr.ll(x, z) for x, z in ring]))
+    for title, g in rows_cp:
+        car_parks.append((title, [fr.ll(x, z) for x, z in list(g.exterior.coords)[:-1]]))
+
     return dict(code=CODE, title=TITLE, lat0=LAT0, lon0=LON0, alt=DATUM, parts=[("br_t127_davies", m)], frame=fr, axis=ax,
+                terrain_extra=terrain_extra, car_parks=car_parks,
                 views=[("a", 120.0, 25.0), ("b", 300.0, 30.0), ("c", 200.0, 60.0)], preview=dict(span=1500.0, water=False),
                 info=dict(piers=piers, lidar=lidar, s_a=s_a, s_b=s_b, st=(st0, st1), y_st=y_st + DATUM, g_st=g_st + DATUM,
                           cross=cross, y=lambda s: Y(s) + DATUM, g=lambda s: G(s) + DATUM, L=L))

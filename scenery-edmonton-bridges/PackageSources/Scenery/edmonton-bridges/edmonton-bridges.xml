@@ -3690,14 +3690,47 @@
 		<Attribute name="ExcludeTIN" guid="{18B58CBF-AE02-4A19-8AA9-3809E8E73400}" type="UINT8" value="1"/>
 		<Attribute name="ExclusionFlags" guid="{4CACC252-E6DC-419A-B20C-16EC601DF70E}" type="UINT32" value="7"/>
 		<Attribute name="ExcludeRocks" guid="{F104723A-D6D1-4B2E-9B44-ACCD8AB372DC}" type="UINT8" value="1"/>
+		<Vertex lat="53.49984043" lon="-113.44335520"/>
+		<Vertex lat="53.49983175" lon="-113.44329041"/>
+		<Vertex lat="53.49989980" lon="-113.44310880"/>
+		<Vertex lat="53.50126583" lon="-113.44309457"/>
+		<Vertex lat="53.50130083" lon="-113.44317279"/>
+		<Vertex lat="53.50136311" lon="-113.44320398"/>
+		<Vertex lat="53.50128592" lon="-113.44523193"/>
+		<Vertex lat="53.50111728" lon="-113.44535740"/>
+		<Vertex lat="53.50061523" lon="-113.44475721"/>
+		<Vertex lat="53.50059702" lon="-113.44428644"/>
+	</Polygon>
+	<Polygon version="0.4.0" displayName="Bridges exclusion: T127 Davies guideway and station (2)" parentGroupID="6" altitude="670.000">
+		<Attribute name="UniqueGUID" guid="{359C73E8-06BE-4FB2-ABCB-EC942F7761D0}" type="GUID" value="{3D20771B-9AE9-53B5-A5C3-AF52C6C5BAF1}"/>
+		<Attribute name="ExcludeDetectedBuildings" guid="{5C1A2387-1F07-47DF-A569-962CF6258E55}" type="UINT8" value="1"/>
+		<Attribute name="ExcludeOSMBuildings" guid="{F3C2635D-9F2F-458F-8663-90B3837BED09}" type="UINT8" value="1"/>
+		<Attribute name="ExcludeMSBuildings" guid="{F78A3074-8AD5-4B8B-92C4-C1C948BB7AA5}" type="UINT8" value="1"/>
+		<Attribute name="VegetationScale" guid="{6A043F59-E6F2-4117-A2E4-D510E7317C29}" type="UINT32" value="0"/>
+		<Attribute name="VegetationDensity" guid="{41EFF715-C392-4B31-A457-50A504353A90}" type="UINT32" value="0"/>
+		<Attribute name="ExcludeTIN" guid="{18B58CBF-AE02-4A19-8AA9-3809E8E73400}" type="UINT8" value="1"/>
+		<Attribute name="ExclusionFlags" guid="{4CACC252-E6DC-419A-B20C-16EC601DF70E}" type="UINT32" value="7"/>
+		<Attribute name="ExcludeRocks" guid="{F104723A-D6D1-4B2E-9B44-ACCD8AB372DC}" type="UINT8" value="1"/>
 		<Vertex lat="53.50031699" lon="-113.44490402"/>
 		<Vertex lat="53.50018867" lon="-113.44480037"/>
-		<Vertex lat="53.49949697" lon="-113.44397012"/>
-		<Vertex lat="53.49940485" lon="-113.44380931"/>
-		<Vertex lat="53.49866276" lon="-113.44290236"/>
+		<Vertex lat="53.49952898" lon="-113.44400875"/>
+		<Vertex lat="53.49913637" lon="-113.44347994"/>
+		<Vertex lat="53.49919054" lon="-113.44360132"/>
+		<Vertex lat="53.49905330" lon="-113.44399887"/>
+		<Vertex lat="53.49958664" lon="-113.44463185"/>
+		<Vertex lat="53.49935627" lon="-113.44523484"/>
+		<Vertex lat="53.49934400" lon="-113.44552346"/>
+		<Vertex lat="53.49858573" lon="-113.44554735"/>
+		<Vertex lat="53.49813063" lon="-113.44591742"/>
+		<Vertex lat="53.49804351" lon="-113.44591536"/>
+		<Vertex lat="53.49734210" lon="-113.44512658"/>
+		<Vertex lat="53.49735292" lon="-113.44501163"/>
+		<Vertex lat="53.49730378" lon="-113.44493983"/>
+		<Vertex lat="53.49775798" lon="-113.44315041"/>
+		<Vertex lat="53.49778956" lon="-113.44311648"/>
+		<Vertex lat="53.49883546" lon="-113.44311065"/>
 		<Vertex lat="53.49849505" lon="-113.44272908"/>
-		<Vertex lat="53.49827472" lon="-113.44258670"/>
-		<Vertex lat="53.49802889" lon="-113.44252607"/>
+		<Vertex lat="53.49812636" lon="-113.44253987"/>
 		<Vertex lat="53.49563538" lon="-113.44254782"/>
 		<Vertex lat="53.49560202" lon="-113.44250214"/>
 		<Vertex lat="53.49560260" lon="-113.44232024"/>
@@ -3709,8 +3742,8 @@
 		<Vertex lat="53.49887355" lon="-113.44268521"/>
 		<Vertex lat="53.50031385" lon="-113.44437444"/>
 	</Polygon>
-	<Polygon version="0.4.0" displayName="Bridges exclusion: T127 Davies guideway and station (2)" parentGroupID="6" altitude="670.000">
-		<Attribute name="UniqueGUID" guid="{359C73E8-06BE-4FB2-ABCB-EC942F7761D0}" type="GUID" value="{3D20771B-9AE9-53B5-A5C3-AF52C6C5BAF1}"/>
+	<Polygon version="0.4.0" displayName="Bridges exclusion: T127 Davies guideway and station (3)" parentGroupID="6" altitude="670.000">
+		<Attribute name="UniqueGUID" guid="{359C73E8-06BE-4FB2-ABCB-EC942F7761D0}" type="GUID" value="{C4B4447A-EDCA-5897-A91F-6671A8DE2158}"/>
 		<Attribute name="ExcludeDetectedBuildings" guid="{5C1A2387-1F07-47DF-A569-962CF6258E55}" type="UINT8" value="1"/>
 		<Attribute name="ExcludeOSMBuildings" guid="{F3C2635D-9F2F-458F-8663-90B3837BED09}" type="UINT8" value="1"/>
 		<Attribute name="ExcludeMSBuildings" guid="{F78A3074-8AD5-4B8B-92C4-C1C948BB7AA5}" type="UINT8" value="1"/>
@@ -4461,6 +4494,68 @@
 		<Vertex lat="53.50482609" lon="-113.56612415"/>
 		<Vertex lat="53.50540506" lon="-113.56617029"/>
 	</Polygon>
+	<Polygon version="0.4.0" displayName="Bridges flatten: T127 Davies guideway and station park and ride level" parentGroupID="6" altitude="676.490">
+		<Attribute name="UniqueGUID" guid="{359C73E8-06BE-4FB2-ABCB-EC942F7761D0}" type="GUID" value="{D543F1B8-9FDD-50B0-BC58-C56C6D099608}"/>
+		<Attribute name="FlattenMode" guid="{065E9D4D-6984-4D2A-91FD-3C33C4F53B22}" type="UINT8" value="1"/>
+		<Attribute name="ExcludeDetectedBuildings" guid="{5C1A2387-1F07-47DF-A569-962CF6258E55}" type="UINT8" value="1"/>
+		<Attribute name="ExcludeOSMBuildings" guid="{F3C2635D-9F2F-458F-8663-90B3837BED09}" type="UINT8" value="1"/>
+		<Attribute name="ExcludeMSBuildings" guid="{F78A3074-8AD5-4B8B-92C4-C1C948BB7AA5}" type="UINT8" value="1"/>
+		<Attribute name="VegetationScale" guid="{6A043F59-E6F2-4117-A2E4-D510E7317C29}" type="UINT32" value="0"/>
+		<Attribute name="VegetationDensity" guid="{41EFF715-C392-4B31-A457-50A504353A90}" type="UINT32" value="0"/>
+		<Attribute name="ExcludeTIN" guid="{18B58CBF-AE02-4A19-8AA9-3809E8E73400}" type="UINT8" value="1"/>
+		<Attribute name="ExclusionFlags" guid="{4CACC252-E6DC-419A-B20C-16EC601DF70E}" type="UINT32" value="7"/>
+		<Attribute name="ExcludeRocks" guid="{F104723A-D6D1-4B2E-9B44-ACCD8AB372DC}" type="UINT8" value="1"/>
+		<Attribute name="PreciseTerraforming" guid="{4D2A51D4-91AC-412F-833E-212CC10E5FBC}" type="UINT8" value="1"/>
+		<Attribute name="AffectRocks" guid="{F60DBBC7-DE6F-4FEA-BE7E-AFB1D73D57E7}" type="UINT8" value="1"/>
+		<Attribute name="ForceElevation" guid="{9460843D-964B-4E45-AC49-634856FB6E1C}" type="UINT8" value="1"/>
+		<Vertex lat="53.49741060" lon="-113.44499540"/>
+		<Vertex lat="53.49736540" lon="-113.44507960"/>
+		<Vertex lat="53.49805200" lon="-113.44585600"/>
+		<Vertex lat="53.49811800" lon="-113.44586010"/>
+		<Vertex lat="53.49857740" lon="-113.44548630"/>
+		<Vertex lat="53.49931420" lon="-113.44548830"/>
+		<Vertex lat="53.49932030" lon="-113.44521510"/>
+		<Vertex lat="53.49955088" lon="-113.44464354"/>
+		<Vertex lat="53.49900571" lon="-113.44401794"/>
+		<Vertex lat="53.49900524" lon="-113.44400964"/>
+		<Vertex lat="53.49904190" lon="-113.44391773"/>
+		<Vertex lat="53.49915510" lon="-113.44358720"/>
+		<Vertex lat="53.49908690" lon="-113.44350000"/>
+		<Vertex lat="53.49911750" lon="-113.44341380"/>
+		<Vertex lat="53.49888650" lon="-113.44317140"/>
+		<Vertex lat="53.49779060" lon="-113.44317750"/>
+		<Vertex lat="53.49759020" lon="-113.44401350"/>
+		<Vertex lat="53.49733970" lon="-113.44492960"/>
+	</Polygon>
+	<Polygon version="0.4.0" displayName="Bridges flatten: T127 Davies guideway and station park and ride level" parentGroupID="6" altitude="674.720">
+		<Attribute name="UniqueGUID" guid="{359C73E8-06BE-4FB2-ABCB-EC942F7761D0}" type="GUID" value="{45EE399A-8742-5C68-8D6D-02928D36A7DF}"/>
+		<Attribute name="FlattenMode" guid="{065E9D4D-6984-4D2A-91FD-3C33C4F53B22}" type="UINT8" value="1"/>
+		<Attribute name="ExcludeDetectedBuildings" guid="{5C1A2387-1F07-47DF-A569-962CF6258E55}" type="UINT8" value="1"/>
+		<Attribute name="ExcludeOSMBuildings" guid="{F3C2635D-9F2F-458F-8663-90B3837BED09}" type="UINT8" value="1"/>
+		<Attribute name="ExcludeMSBuildings" guid="{F78A3074-8AD5-4B8B-92C4-C1C948BB7AA5}" type="UINT8" value="1"/>
+		<Attribute name="VegetationScale" guid="{6A043F59-E6F2-4117-A2E4-D510E7317C29}" type="UINT32" value="0"/>
+		<Attribute name="VegetationDensity" guid="{41EFF715-C392-4B31-A457-50A504353A90}" type="UINT32" value="0"/>
+		<Attribute name="ExcludeTIN" guid="{18B58CBF-AE02-4A19-8AA9-3809E8E73400}" type="UINT8" value="1"/>
+		<Attribute name="ExclusionFlags" guid="{4CACC252-E6DC-419A-B20C-16EC601DF70E}" type="UINT32" value="7"/>
+		<Attribute name="ExcludeRocks" guid="{F104723A-D6D1-4B2E-9B44-ACCD8AB372DC}" type="UINT8" value="1"/>
+		<Attribute name="PreciseTerraforming" guid="{4D2A51D4-91AC-412F-833E-212CC10E5FBC}" type="UINT8" value="1"/>
+		<Attribute name="AffectRocks" guid="{F60DBBC7-DE6F-4FEA-BE7E-AFB1D73D57E7}" type="UINT8" value="1"/>
+		<Attribute name="ForceElevation" guid="{9460843D-964B-4E45-AC49-634856FB6E1C}" type="UINT8" value="1"/>
+		<Vertex lat="53.50125840" lon="-113.44519200"/>
+		<Vertex lat="53.50133440" lon="-113.44324150"/>
+		<Vertex lat="53.50126240" lon="-113.44322610"/>
+		<Vertex lat="53.50126500" lon="-113.44315560"/>
+		<Vertex lat="53.49992150" lon="-113.44315780"/>
+		<Vertex lat="53.49986593" lon="-113.44331156"/>
+		<Vertex lat="53.50064591" lon="-113.44427131"/>
+		<Vertex lat="53.50064611" lon="-113.44427980"/>
+		<Vertex lat="53.50061836" lon="-113.44433753"/>
+		<Vertex lat="53.50063590" lon="-113.44443780"/>
+		<Vertex lat="53.50063560" lon="-113.44457250"/>
+		<Vertex lat="53.50066470" lon="-113.44464260"/>
+		<Vertex lat="53.50063710" lon="-113.44470840"/>
+		<Vertex lat="53.50113270" lon="-113.44530210"/>
+	</Polygon>
 	<Polygon version="0.4.0" displayName="Bridges flatten: R8 Groat Road Bridge river" parentGroupID="6" altitude="616.110">
 		<Attribute name="UniqueGUID" guid="{359C73E8-06BE-4FB2-ABCB-EC942F7761D0}" type="GUID" value="{944C5B1B-857F-54A1-AE19-ACBCB3CDD514}"/>
 		<Attribute name="FlattenMode" guid="{065E9D4D-6984-4D2A-91FD-3C33C4F53B22}" type="UINT8" value="1"/>
@@ -4481,4 +4576,1278 @@
 		<Vertex lat="53.53589398" lon="-113.53925177"/>
 	</Polygon>
 	<!-- END exclusions -->
+	<!-- BEGIN car parks (generated by scenery-edmonton-bridges/tools/gen_bridges.py) -->
+	<!-- car park: Davies park and ride, aisle 1, left row -->
+	<SceneryObject lat="53.49805366" lon="-113.44321935" alt="0.000000" pitch="0.000000" bank="0.000000" heading="0.000000" imageComplexity="VERY_SPARSE" altitudeIsAgl="TRUE" snapToGround="TRUE" snapToNormal="FALSE">
+		<CarParking>
+			<Vertex lat="53.49796938" lon="-113.44325572"/>
+			<Vertex lat="53.49813830" lon="-113.44325455"/>
+			<Vertex lat="53.49813778" lon="-113.44318310"/>
+			<Vertex lat="53.49796920" lon="-113.44318404"/>
+		</CarParking>
+	</SceneryObject>
+	<!-- car park: Davies park and ride, aisle 1, right row -->
+	<SceneryObject lat="53.49813618" lon="-113.44339396" alt="0.000000" pitch="0.000000" bank="0.000000" heading="0.000000" imageComplexity="VERY_SPARSE" altitudeIsAgl="TRUE" snapToGround="TRUE" snapToNormal="FALSE">
+		<CarParking>
+			<Vertex lat="53.49817007" lon="-113.44335228"/>
+			<Vertex lat="53.49806530" lon="-113.44335301"/>
+			<Vertex lat="53.49813893" lon="-113.44343538"/>
+			<Vertex lat="53.49817043" lon="-113.44343516"/>
+		</CarParking>
+	</SceneryObject>
+	<!-- car park: Davies park and ride, aisle 1, left row -->
+	<SceneryObject lat="53.49790030" lon="-113.44322294" alt="0.000000" pitch="0.000000" bank="0.000000" heading="0.000000" imageComplexity="VERY_SPARSE" altitudeIsAgl="TRUE" snapToGround="TRUE" snapToNormal="FALSE">
+		<CarParking>
+			<Vertex lat="53.49796758" lon="-113.44325582"/>
+			<Vertex lat="53.49796585" lon="-113.44318406"/>
+			<Vertex lat="53.49783263" lon="-113.44318480"/>
+			<Vertex lat="53.49783512" lon="-113.44326709"/>
+		</CarParking>
+	</SceneryObject>
+	<!-- car park: Davies park and ride, aisle 1, right row -->
+	<SceneryObject lat="53.49792078" lon="-113.44339266" alt="0.000000" pitch="0.000000" bank="0.000000" heading="0.000000" imageComplexity="VERY_SPARSE" altitudeIsAgl="TRUE" snapToGround="TRUE" snapToNormal="FALSE">
+		<CarParking>
+			<Vertex lat="53.49796133" lon="-113.44335443"/>
+			<Vertex lat="53.49785727" lon="-113.44336328"/>
+			<Vertex lat="53.49784046" lon="-113.44344356"/>
+			<Vertex lat="53.49797348" lon="-113.44343639"/>
+			<Vertex lat="53.49797134" lon="-113.44336563"/>
+		</CarParking>
+	</SceneryObject>
+	<!-- car park: Davies park and ride, aisle 1, left row -->
+	<SceneryObject lat="53.49777381" lon="-113.44335992" alt="0.000000" pitch="0.000000" bank="0.000000" heading="0.000000" imageComplexity="VERY_SPARSE" altitudeIsAgl="TRUE" snapToGround="TRUE" snapToNormal="FALSE">
+		<CarParking>
+			<Vertex lat="53.49780923" lon="-113.44329892"/>
+			<Vertex lat="53.49777192" lon="-113.44327562"/>
+			<Vertex lat="53.49773726" lon="-113.44342021"/>
+			<Vertex lat="53.49777683" lon="-113.44344492"/>
+		</CarParking>
+	</SceneryObject>
+	<!-- car park: Davies park and ride, aisle 1, left row -->
+	<SceneryObject lat="53.49772787" lon="-113.44355909" alt="0.000000" pitch="0.000000" bank="0.000000" heading="0.000000" imageComplexity="VERY_SPARSE" altitudeIsAgl="TRUE" snapToGround="TRUE" snapToNormal="FALSE">
+		<CarParking>
+			<Vertex lat="53.49772119" lon="-113.44369600"/>
+			<Vertex lat="53.49777621" lon="-113.44344774"/>
+			<Vertex lat="53.49773659" lon="-113.44342301"/>
+			<Vertex lat="53.49767748" lon="-113.44366959"/>
+		</CarParking>
+	</SceneryObject>
+	<!-- car park: Davies park and ride, aisle 1, right row -->
+	<SceneryObject lat="53.49782240" lon="-113.44363942" alt="0.000000" pitch="0.000000" bank="0.000000" heading="0.000000" imageComplexity="VERY_SPARSE" altitudeIsAgl="TRUE" snapToGround="TRUE" snapToNormal="FALSE">
+		<CarParking>
+			<Vertex lat="53.49778380" lon="-113.44369464"/>
+			<Vertex lat="53.49782600" lon="-113.44374210"/>
+			<Vertex lat="53.49786104" lon="-113.44358399"/>
+			<Vertex lat="53.49781874" lon="-113.44353695"/>
+		</CarParking>
+	</SceneryObject>
+	<!-- car park: Davies park and ride, aisle 1, left row -->
+	<SceneryObject lat="53.49766568" lon="-113.44382205" alt="0.000000" pitch="0.000000" bank="0.000000" heading="0.000000" imageComplexity="VERY_SPARSE" altitudeIsAgl="TRUE" snapToGround="TRUE" snapToNormal="FALSE">
+		<CarParking>
+			<Vertex lat="53.49765380" lon="-113.44397265"/>
+			<Vertex lat="53.49772051" lon="-113.44369879"/>
+			<Vertex lat="53.49767681" lon="-113.44367239"/>
+			<Vertex lat="53.49761162" lon="-113.44394436"/>
+		</CarParking>
+	</SceneryObject>
+	<!-- car park: Davies park and ride, aisle 1, right row -->
+	<SceneryObject lat="53.49776036" lon="-113.44390378" alt="0.000000" pitch="0.000000" bank="0.000000" heading="0.000000" imageComplexity="VERY_SPARSE" altitudeIsAgl="TRUE" snapToGround="TRUE" snapToNormal="FALSE">
+		<CarParking>
+			<Vertex lat="53.49776189" lon="-113.44378793"/>
+			<Vertex lat="53.49771683" lon="-113.44397289"/>
+			<Vertex lat="53.49775892" lon="-113.44401923"/>
+			<Vertex lat="53.49780379" lon="-113.44383505"/>
+		</CarParking>
+	</SceneryObject>
+	<!-- car park: Davies park and ride, aisle 1, left row -->
+	<SceneryObject lat="53.49791495" lon="-113.44435777" alt="0.000000" pitch="0.000000" bank="0.000000" heading="0.000000" imageComplexity="VERY_SPARSE" altitudeIsAgl="TRUE" snapToGround="TRUE" snapToNormal="FALSE">
+		<CarParking>
+			<Vertex lat="53.49769363" lon="-113.44406452"/>
+			<Vertex lat="53.49767357" lon="-113.44414159"/>
+			<Vertex lat="53.49813249" lon="-113.44464685"/>
+			<Vertex lat="53.49816011" lon="-113.44457811"/>
+		</CarParking>
+	</SceneryObject>
+	<!-- car park: Davies park and ride, aisle 1, right row -->
+	<SceneryObject lat="53.49798828" lon="-113.44422218" alt="0.000000" pitch="0.000000" bank="0.000000" heading="0.000000" imageComplexity="VERY_SPARSE" altitudeIsAgl="TRUE" snapToGround="TRUE" snapToNormal="FALSE">
+		<CarParking>
+			<Vertex lat="53.49776042" lon="-113.44402089"/>
+			<Vertex lat="53.49819277" lon="-113.44449690"/>
+			<Vertex lat="53.49822043" lon="-113.44442820"/>
+			<Vertex lat="53.49777950" lon="-113.44394274"/>
+		</CarParking>
+	</SceneryObject>
+	<!-- car park: Davies park and ride, aisle 1, left row -->
+	<SceneryObject lat="53.49845972" lon="-113.44496151" alt="0.000000" pitch="0.000000" bank="0.000000" heading="0.000000" imageComplexity="VERY_SPARSE" altitudeIsAgl="TRUE" snapToGround="TRUE" snapToNormal="FALSE">
+		<CarParking>
+			<Vertex lat="53.49824732" lon="-113.44467507"/>
+			<Vertex lat="53.49822023" lon="-113.44474439"/>
+			<Vertex lat="53.49867186" lon="-113.44524767"/>
+			<Vertex lat="53.49869946" lon="-113.44517892"/>
+		</CarParking>
+	</SceneryObject>
+	<!-- car park: Davies park and ride, aisle 1, right row -->
+	<SceneryObject lat="53.49851968" lon="-113.44481121" alt="0.000000" pitch="0.000000" bank="0.000000" heading="0.000000" imageComplexity="VERY_SPARSE" altitudeIsAgl="TRUE" snapToGround="TRUE" snapToNormal="FALSE">
+		<CarParking>
+			<Vertex lat="53.49873207" lon="-113.44509765"/>
+			<Vertex lat="53.49875965" lon="-113.44502888"/>
+			<Vertex lat="53.49830732" lon="-113.44452482"/>
+			<Vertex lat="53.49827966" lon="-113.44459351"/>
+		</CarParking>
+	</SceneryObject>
+	<!-- car park: Davies park and ride, aisle 1, left row -->
+	<SceneryObject lat="53.49873344" lon="-113.44526656" alt="0.000000" pitch="0.000000" bank="0.000000" heading="0.000000" imageComplexity="VERY_SPARSE" altitudeIsAgl="TRUE" snapToGround="TRUE" snapToNormal="FALSE">
+		<CarParking>
+			<Vertex lat="53.49872191" lon="-113.44520394"/>
+			<Vertex lat="53.49869431" lon="-113.44527270"/>
+			<Vertex lat="53.49871526" lon="-113.44529605"/>
+			<Vertex lat="53.49880227" lon="-113.44529354"/>
+		</CarParking>
+	</SceneryObject>
+	<!-- car park: Davies park and ride, aisle 1, right row -->
+	<SceneryObject lat="53.49885958" lon="-113.44519781" alt="0.000000" pitch="0.000000" bank="0.000000" heading="0.000000" imageComplexity="VERY_SPARSE" altitudeIsAgl="TRUE" snapToGround="TRUE" snapToNormal="FALSE">
+		<CarParking>
+			<Vertex lat="53.49890556" lon="-113.44529109"/>
+			<Vertex lat="53.49891568" lon="-113.44529141"/>
+			<Vertex lat="53.49894003" lon="-113.44522999"/>
+			<Vertex lat="53.49878210" lon="-113.44505390"/>
+			<Vertex lat="53.49875452" lon="-113.44512268"/>
+		</CarParking>
+	</SceneryObject>
+	<!-- car park: Davies park and ride, aisle 1, left row -->
+	<SceneryObject lat="53.49903549" lon="-113.44543451" alt="0.000000" pitch="0.000000" bank="0.000000" heading="0.000000" imageComplexity="VERY_SPARSE" altitudeIsAgl="TRUE" snapToGround="TRUE" snapToNormal="FALSE">
+		<CarParking>
+			<Vertex lat="53.49889648" lon="-113.44538878"/>
+			<Vertex lat="53.49889506" lon="-113.44547164"/>
+			<Vertex lat="53.49917476" lon="-113.44548024"/>
+			<Vertex lat="53.49917566" lon="-113.44539737"/>
+		</CarParking>
+	</SceneryObject>
+	<!-- car park: Davies park and ride, aisle 1, right row -->
+	<SceneryObject lat="53.49897593" lon="-113.44524771" alt="0.000000" pitch="0.000000" bank="0.000000" heading="0.000000" imageComplexity="VERY_SPARSE" altitudeIsAgl="TRUE" snapToGround="TRUE" snapToNormal="FALSE">
+		<CarParking>
+			<Vertex lat="53.49891782" lon="-113.44529147"/>
+			<Vertex lat="53.49908316" lon="-113.44529655"/>
+			<Vertex lat="53.49901260" lon="-113.44521149"/>
+			<Vertex lat="53.49892424" lon="-113.44520877"/>
+			<Vertex lat="53.49894182" lon="-113.44523028"/>
+		</CarParking>
+	</SceneryObject>
+	<!-- car park: Davies park and ride, aisle 1, left row -->
+	<SceneryObject lat="53.49920911" lon="-113.44543910" alt="0.000000" pitch="0.000000" bank="0.000000" heading="0.000000" imageComplexity="VERY_SPARSE" altitudeIsAgl="TRUE" snapToGround="TRUE" snapToNormal="FALSE">
+		<CarParking>
+			<Vertex lat="53.49917746" lon="-113.44539739"/>
+			<Vertex lat="53.49917656" lon="-113.44548027"/>
+			<Vertex lat="53.49924103" lon="-113.44548057"/>
+			<Vertex lat="53.49924139" lon="-113.44539818"/>
+		</CarParking>
+	</SceneryObject>
+	<!-- car park: Davies park and ride, aisle 1, right row -->
+	<SceneryObject lat="53.49920818" lon="-113.44526352" alt="0.000000" pitch="0.000000" bank="0.000000" heading="0.000000" imageComplexity="VERY_SPARSE" altitudeIsAgl="TRUE" snapToGround="TRUE" snapToNormal="FALSE">
+		<CarParking>
+			<Vertex lat="53.49918570" lon="-113.44529954"/>
+			<Vertex lat="53.49922596" lon="-113.44530003"/>
+			<Vertex lat="53.49924199" lon="-113.44525929"/>
+			<Vertex lat="53.49924217" lon="-113.44521734"/>
+			<Vertex lat="53.49917677" lon="-113.44521654"/>
+			<Vertex lat="53.49917646" lon="-113.44528840"/>
+		</CarParking>
+	</SceneryObject>
+	<!-- car park: Davies park and ride, aisle 1, right row -->
+	<SceneryObject lat="53.49931642" lon="-113.44499733" alt="0.000000" pitch="0.000000" bank="0.000000" heading="0.000000" imageComplexity="VERY_SPARSE" altitudeIsAgl="TRUE" snapToGround="TRUE" snapToNormal="FALSE">
+		<CarParking>
+			<Vertex lat="53.49930638" lon="-113.44509652"/>
+			<Vertex lat="53.49936701" lon="-113.44494554"/>
+			<Vertex lat="53.49932645" lon="-113.44489819"/>
+			<Vertex lat="53.49926586" lon="-113.44504904"/>
+		</CarParking>
+	</SceneryObject>
+	<!-- car park: Davies park and ride, aisle 1, right row -->
+	<SceneryObject lat="53.49940724" lon="-113.44477089" alt="0.000000" pitch="0.000000" bank="0.000000" heading="0.000000" imageComplexity="VERY_SPARSE" altitudeIsAgl="TRUE" snapToGround="TRUE" snapToNormal="FALSE">
+		<CarParking>
+			<Vertex lat="53.49945539" lon="-113.44472497"/>
+			<Vertex lat="53.49941490" lon="-113.44467742"/>
+			<Vertex lat="53.49935904" lon="-113.44481690"/>
+			<Vertex lat="53.49939961" lon="-113.44486426"/>
+		</CarParking>
+	</SceneryObject>
+	<!-- car park: Davies park and ride, aisle 1, left row -->
+	<SceneryObject lat="53.49934597" lon="-113.44444327" alt="0.000000" pitch="0.000000" bank="0.000000" heading="0.000000" imageComplexity="VERY_SPARSE" altitudeIsAgl="TRUE" snapToGround="TRUE" snapToNormal="FALSE">
+		<CarParking>
+			<Vertex lat="53.49953290" lon="-113.44462305"/>
+			<Vertex lat="53.49917787" lon="-113.44421838"/>
+			<Vertex lat="53.49916075" lon="-113.44425938"/>
+			<Vertex lat="53.49951235" lon="-113.44467228"/>
+		</CarParking>
+	</SceneryObject>
+	<!-- car park: Davies park and ride, aisle 1, right row -->
+	<SceneryObject lat="53.49926908" lon="-113.44455676" alt="0.000000" pitch="0.000000" bank="0.000000" heading="0.000000" imageComplexity="VERY_SPARSE" altitudeIsAgl="TRUE" snapToGround="TRUE" snapToNormal="FALSE">
+		<CarParking>
+			<Vertex lat="53.49915199" lon="-113.44436868"/>
+			<Vertex lat="53.49912502" lon="-113.44443818"/>
+			<Vertex lat="53.49938587" lon="-113.44474451"/>
+			<Vertex lat="53.49941343" lon="-113.44467569"/>
+		</CarParking>
+	</SceneryObject>
+	<!-- car park: Davies park and ride, aisle 1, left row -->
+	<SceneryObject lat="53.49901719" lon="-113.44404383" alt="0.000000" pitch="0.000000" bank="0.000000" heading="0.000000" imageComplexity="VERY_SPARSE" altitudeIsAgl="TRUE" snapToGround="TRUE" snapToNormal="FALSE">
+		<CarParking>
+			<Vertex lat="53.49911435" lon="-113.44414368"/>
+			<Vertex lat="53.49900323" lon="-113.44401550"/>
+			<Vertex lat="53.49900931" lon="-113.44399776"/>
+			<Vertex lat="53.49895029" lon="-113.44393154"/>
+			<Vertex lat="53.49892772" lon="-113.44398832"/>
+			<Vertex lat="53.49909821" lon="-113.44418619"/>
+		</CarParking>
+	</SceneryObject>
+	<!-- car park: Davies park and ride, aisle 1, right row -->
+	<SceneryObject lat="53.49895445" lon="-113.44418886" alt="0.000000" pitch="0.000000" bank="0.000000" heading="0.000000" imageComplexity="VERY_SPARSE" altitudeIsAgl="TRUE" snapToGround="TRUE" snapToNormal="FALSE">
+		<CarParking>
+			<Vertex lat="53.49906603" lon="-113.44426796"/>
+			<Vertex lat="53.49887088" lon="-113.44404148"/>
+			<Vertex lat="53.49884276" lon="-113.44410963"/>
+			<Vertex lat="53.49903812" lon="-113.44433636"/>
+		</CarParking>
+	</SceneryObject>
+	<!-- car park: Davies park and ride, aisle 1, left row -->
+	<SceneryObject lat="53.49876119" lon="-113.44376047" alt="0.000000" pitch="0.000000" bank="0.000000" heading="0.000000" imageComplexity="VERY_SPARSE" altitudeIsAgl="TRUE" snapToGround="TRUE" snapToNormal="FALSE">
+		<CarParking>
+			<Vertex lat="53.49887938" lon="-113.44393334"/>
+			<Vertex lat="53.49890176" lon="-113.44387707"/>
+			<Vertex lat="53.49864324" lon="-113.44358688"/>
+			<Vertex lat="53.49862036" lon="-113.44364461"/>
+		</CarParking>
+	</SceneryObject>
+	<!-- car park: Davies park and ride, aisle 1, right row -->
+	<SceneryObject lat="53.49872706" lon="-113.44393092" alt="0.000000" pitch="0.000000" bank="0.000000" heading="0.000000" imageComplexity="VERY_SPARSE" altitudeIsAgl="TRUE" snapToGround="TRUE" snapToNormal="FALSE">
+		<CarParking>
+			<Vertex lat="53.49861242" lon="-113.44375337"/>
+			<Vertex lat="53.49858517" lon="-113.44382251"/>
+			<Vertex lat="53.49884126" lon="-113.44410798"/>
+			<Vertex lat="53.49886938" lon="-113.44403981"/>
+		</CarParking>
+	</SceneryObject>
+	<!-- car park: Davies park and ride, aisle 1, left row -->
+	<SceneryObject lat="53.49848462" lon="-113.44345115" alt="0.000000" pitch="0.000000" bank="0.000000" heading="0.000000" imageComplexity="VERY_SPARSE" altitudeIsAgl="TRUE" snapToGround="TRUE" snapToNormal="FALSE">
+		<CarParking>
+			<Vertex lat="53.49843342" lon="-113.44335146"/>
+			<Vertex lat="53.49835818" lon="-113.44335227"/>
+			<Vertex lat="53.49856182" lon="-113.44357929"/>
+			<Vertex lat="53.49858506" lon="-113.44352157"/>
+		</CarParking>
+	</SceneryObject>
+	<!-- car park: Davies park and ride, aisle 1, right row -->
+	<SceneryObject lat="53.49834922" lon="-113.44350201" alt="0.000000" pitch="0.000000" bank="0.000000" heading="0.000000" imageComplexity="VERY_SPARSE" altitudeIsAgl="TRUE" snapToGround="TRUE" snapToNormal="FALSE">
+		<CarParking>
+			<Vertex lat="53.49852915" lon="-113.44366050"/>
+			<Vertex lat="53.49825349" lon="-113.44335318"/>
+			<Vertex lat="53.49824307" lon="-113.44335307"/>
+			<Vertex lat="53.49821888" lon="-113.44341411"/>
+			<Vertex lat="53.49850152" lon="-113.44372922"/>
+		</CarParking>
+	</SceneryObject>
+	<!-- car park: Davies park and ride, aisle 1, left row -->
+	<SceneryObject lat="53.49823183" lon="-113.44321878" alt="0.000000" pitch="0.000000" bank="0.000000" heading="0.000000" imageComplexity="VERY_SPARSE" altitudeIsAgl="TRUE" snapToGround="TRUE" snapToNormal="FALSE">
+		<CarParking>
+			<Vertex lat="53.49820120" lon="-113.44325466"/>
+			<Vertex lat="53.49826259" lon="-113.44325532"/>
+			<Vertex lat="53.49826287" lon="-113.44318241"/>
+			<Vertex lat="53.49820067" lon="-113.44318275"/>
+		</CarParking>
+	</SceneryObject>
+	<!-- car park: Davies park and ride, aisle 1, right row -->
+	<SceneryObject lat="53.49820745" lon="-113.44339816" alt="0.000000" pitch="0.000000" bank="0.000000" heading="0.000000" imageComplexity="VERY_SPARSE" altitudeIsAgl="TRUE" snapToGround="TRUE" snapToNormal="FALSE">
+		<CarParking>
+			<Vertex lat="53.49824092" lon="-113.44335304"/>
+			<Vertex lat="53.49817186" lon="-113.44335230"/>
+			<Vertex lat="53.49817222" lon="-113.44343519"/>
+			<Vertex lat="53.49823515" lon="-113.44343587"/>
+			<Vertex lat="53.49821709" lon="-113.44341442"/>
+		</CarParking>
+	</SceneryObject>
+	<!-- car park: Davies park and ride, aisle 2, right row -->
+	<SceneryObject lat="53.49833920" lon="-113.44321825" alt="0.000000" pitch="0.000000" bank="0.000000" heading="0.000000" imageComplexity="VERY_SPARSE" altitudeIsAgl="TRUE" snapToGround="TRUE" snapToNormal="FALSE">
+		<CarParking>
+			<Vertex lat="53.49826439" lon="-113.44325530"/>
+			<Vertex lat="53.49841402" lon="-113.44325372"/>
+			<Vertex lat="53.49841375" lon="-113.44318157"/>
+			<Vertex lat="53.49826467" lon="-113.44318240"/>
+		</CarParking>
+	</SceneryObject>
+	<!-- car park: Davies park and ride, aisle 2, left row -->
+	<SceneryObject lat="53.49855531" lon="-113.44338535" alt="0.000000" pitch="0.000000" bank="0.000000" heading="0.000000" imageComplexity="VERY_SPARSE" altitudeIsAgl="TRUE" snapToGround="TRUE" snapToNormal="FALSE">
+		<CarParking>
+			<Vertex lat="53.49857399" lon="-113.44334988"/>
+			<Vertex lat="53.49848142" lon="-113.44335092"/>
+			<Vertex lat="53.49855457" lon="-113.44343298"/>
+			<Vertex lat="53.49858343" lon="-113.44343266"/>
+			<Vertex lat="53.49858314" lon="-113.44336032"/>
+		</CarParking>
+	</SceneryObject>
+	<!-- car park: Davies park and ride, aisle 2, right row -->
+	<SceneryObject lat="53.49849912" lon="-113.44321693" alt="0.000000" pitch="0.000000" bank="0.000000" heading="0.000000" imageComplexity="VERY_SPARSE" altitudeIsAgl="TRUE" snapToGround="TRUE" snapToNormal="FALSE">
+		<CarParking>
+			<Vertex lat="53.49858270" lon="-113.44325182"/>
+			<Vertex lat="53.49858242" lon="-113.44318063"/>
+			<Vertex lat="53.49841554" lon="-113.44318156"/>
+			<Vertex lat="53.49841581" lon="-113.44325370"/>
+		</CarParking>
+	</SceneryObject>
+	<!-- car park: Davies park and ride, aisle 2, left row -->
+	<SceneryObject lat="53.49880582" lon="-113.44338270" alt="0.000000" pitch="0.000000" bank="0.000000" heading="0.000000" imageComplexity="VERY_SPARSE" altitudeIsAgl="TRUE" snapToGround="TRUE" snapToNormal="FALSE">
+		<CarParking>
+			<Vertex lat="53.49886152" lon="-113.44334668"/>
+			<Vertex lat="53.49867678" lon="-113.44334873"/>
+			<Vertex lat="53.49874866" lon="-113.44343082"/>
+			<Vertex lat="53.49887122" lon="-113.44342946"/>
+			<Vertex lat="53.49887094" lon="-113.44335782"/>
+		</CarParking>
+	</SceneryObject>
+	<!-- car park: Davies park and ride, aisle 2, right row -->
+	<SceneryObject lat="53.49872736" lon="-113.44321502" alt="0.000000" pitch="0.000000" bank="0.000000" heading="0.000000" imageComplexity="VERY_SPARSE" altitudeIsAgl="TRUE" snapToGround="TRUE" snapToNormal="FALSE">
+		<CarParking>
+			<Vertex lat="53.49887051" lon="-113.44324862"/>
+			<Vertex lat="53.49887023" lon="-113.44317903"/>
+			<Vertex lat="53.49858422" lon="-113.44318062"/>
+			<Vertex lat="53.49858450" lon="-113.44325180"/>
+		</CarParking>
+	</SceneryObject>
+	<!-- car park: Davies park and ride, aisle 2, left row -->
+	<SceneryObject lat="53.49892700" lon="-113.44347891" alt="0.000000" pitch="0.000000" bank="0.000000" heading="0.000000" imageComplexity="VERY_SPARSE" altitudeIsAgl="TRUE" snapToGround="TRUE" snapToNormal="FALSE">
+		<CarParking>
+			<Vertex lat="53.49903462" lon="-113.44355152"/>
+			<Vertex lat="53.49887274" lon="-113.44335996"/>
+			<Vertex lat="53.49887281" lon="-113.44343086"/>
+			<Vertex lat="53.49884851" lon="-113.44343272"/>
+			<Vertex lat="53.49900632" lon="-113.44361947"/>
+		</CarParking>
+	</SceneryObject>
+	<!-- car park: Davies park and ride, aisle 2, right row -->
+	<SceneryObject lat="53.49899809" lon="-113.44334325" alt="0.000000" pitch="0.000000" bank="0.000000" heading="0.000000" imageComplexity="VERY_SPARSE" altitudeIsAgl="TRUE" snapToGround="TRUE" snapToNormal="FALSE">
+		<CarParking>
+			<Vertex lat="53.49908484" lon="-113.44349107"/>
+			<Vertex lat="53.49911020" lon="-113.44341964"/>
+			<Vertex lat="53.49890978" lon="-113.44320471"/>
+			<Vertex lat="53.49888754" lon="-113.44325758"/>
+		</CarParking>
+	</SceneryObject>
+	<!-- car park: Davies park and ride, aisle 2, right row -->
+	<SceneryObject lat="53.49909923" lon="-113.44363980" alt="0.000000" pitch="0.000000" bank="0.000000" heading="0.000000" imageComplexity="VERY_SPARSE" altitudeIsAgl="TRUE" snapToGround="TRUE" snapToNormal="FALSE">
+		<CarParking>
+			<Vertex lat="53.49905824" lon="-113.44366587"/>
+			<Vertex lat="53.49909990" lon="-113.44371058"/>
+			<Vertex lat="53.49913966" lon="-113.44361510"/>
+			<Vertex lat="53.49909914" lon="-113.44356764"/>
+		</CarParking>
+	</SceneryObject>
+	<!-- car park: Davies park and ride, aisle 2, right row -->
+	<SceneryObject lat="53.49904589" lon="-113.44376781" alt="0.000000" pitch="0.000000" bank="0.000000" heading="0.000000" imageComplexity="VERY_SPARSE" altitudeIsAgl="TRUE" snapToGround="TRUE" snapToNormal="FALSE">
+		<CarParking>
+			<Vertex lat="53.49900802" lon="-113.44378632"/>
+			<Vertex lat="53.49904832" lon="-113.44383428"/>
+			<Vertex lat="53.49908444" lon="-113.44374767"/>
+			<Vertex lat="53.49904279" lon="-113.44370296"/>
+		</CarParking>
+	</SceneryObject>
+	<!-- car park: Davies park and ride, aisle 2, right row -->
+	<SceneryObject lat="53.49900648" lon="-113.44386490" alt="0.000000" pitch="0.000000" bank="0.000000" heading="0.000000" imageComplexity="VERY_SPARSE" altitudeIsAgl="TRUE" snapToGround="TRUE" snapToNormal="FALSE">
+		<CarParking>
+			<Vertex lat="53.49896525" lon="-113.44389393"/>
+			<Vertex lat="53.49900632" lon="-113.44394002"/>
+			<Vertex lat="53.49904734" lon="-113.44383680"/>
+			<Vertex lat="53.49900702" lon="-113.44378883"/>
+		</CarParking>
+	</SceneryObject>
+	<!-- car park: Davies park and ride, aisle 3, left row -->
+	<SceneryObject lat="53.49889271" lon="-113.44354518" alt="0.000000" pitch="0.000000" bank="0.000000" heading="0.000000" imageComplexity="VERY_SPARSE" altitudeIsAgl="TRUE" snapToGround="TRUE" snapToNormal="FALSE">
+		<CarParking>
+			<Vertex lat="53.49875127" lon="-113.44343380"/>
+			<Vertex lat="53.49897650" lon="-113.44369100"/>
+			<Vertex lat="53.49900483" lon="-113.44362307"/>
+			<Vertex lat="53.49883823" lon="-113.44343284"/>
+		</CarParking>
+	</SceneryObject>
+	<!-- car park: Davies park and ride, aisle 3, right row -->
+	<SceneryObject lat="53.49878374" lon="-113.44363900" alt="0.000000" pitch="0.000000" bank="0.000000" heading="0.000000" imageComplexity="VERY_SPARSE" altitudeIsAgl="TRUE" snapToGround="TRUE" snapToNormal="FALSE">
+		<CarParking>
+			<Vertex lat="53.49894356" lon="-113.44377189"/>
+			<Vertex lat="53.49865113" lon="-113.44343795"/>
+			<Vertex lat="53.49862354" lon="-113.44350671"/>
+			<Vertex lat="53.49891671" lon="-113.44383945"/>
+		</CarParking>
+	</SceneryObject>
+	<!-- car park: Davies park and ride, aisle 4, left row -->
+	<SceneryObject lat="53.49814914" lon="-113.44361804" alt="0.000000" pitch="0.000000" bank="0.000000" heading="0.000000" imageComplexity="VERY_SPARSE" altitudeIsAgl="TRUE" snapToGround="TRUE" snapToNormal="FALSE">
+		<CarParking>
+			<Vertex lat="53.49797320" lon="-113.44336772"/>
+			<Vertex lat="53.49797502" lon="-113.44343795"/>
+			<Vertex lat="53.49794939" lon="-113.44344070"/>
+			<Vertex lat="53.49841023" lon="-113.44395628"/>
+			<Vertex lat="53.49843786" lon="-113.44388756"/>
+		</CarParking>
+	</SceneryObject>
+	<!-- car park: Davies park and ride, aisle 4, right row -->
+	<SceneryObject lat="53.49833533" lon="-113.44360530" alt="0.000000" pitch="0.000000" bank="0.000000" heading="0.000000" imageComplexity="VERY_SPARSE" altitudeIsAgl="TRUE" snapToGround="TRUE" snapToNormal="FALSE">
+		<CarParking>
+			<Vertex lat="53.49847051" lon="-113.44380635"/>
+			<Vertex lat="53.49849814" lon="-113.44373763"/>
+			<Vertex lat="53.49823107" lon="-113.44343884"/>
+			<Vertex lat="53.49814160" lon="-113.44343837"/>
+		</CarParking>
+	</SceneryObject>
+	<!-- car park: Davies park and ride, aisle 4, left row -->
+	<SceneryObject lat="53.49873538" lon="-113.44427030" alt="0.000000" pitch="0.000000" bank="0.000000" heading="0.000000" imageComplexity="VERY_SPARSE" altitudeIsAgl="TRUE" snapToGround="TRUE" snapToNormal="FALSE">
+		<CarParking>
+			<Vertex lat="53.49852229" lon="-113.44398204"/>
+			<Vertex lat="53.49849504" lon="-113.44405118"/>
+			<Vertex lat="53.49894832" lon="-113.44455838"/>
+			<Vertex lat="53.49897589" lon="-113.44448960"/>
+		</CarParking>
+	</SceneryObject>
+	<!-- car park: Davies park and ride, aisle 4, right row -->
+	<SceneryObject lat="53.49879538" lon="-113.44412004" alt="0.000000" pitch="0.000000" bank="0.000000" heading="0.000000" imageComplexity="VERY_SPARSE" altitudeIsAgl="TRUE" snapToGround="TRUE" snapToNormal="FALSE">
+		<CarParking>
+			<Vertex lat="53.49900868" lon="-113.44440853"/>
+			<Vertex lat="53.49903659" lon="-113.44434012"/>
+			<Vertex lat="53.49858175" lon="-113.44383118"/>
+			<Vertex lat="53.49855450" lon="-113.44390032"/>
+		</CarParking>
+	</SceneryObject>
+	<!-- car park: Davies park and ride, aisle 4, left row -->
+	<SceneryObject lat="53.49918069" lon="-113.44477855" alt="0.000000" pitch="0.000000" bank="0.000000" heading="0.000000" imageComplexity="VERY_SPARSE" altitudeIsAgl="TRUE" snapToGround="TRUE" snapToNormal="FALSE">
+		<CarParking>
+			<Vertex lat="53.49906426" lon="-113.44459217"/>
+			<Vertex lat="53.49903617" lon="-113.44466035"/>
+			<Vertex lat="53.49929736" lon="-113.44496522"/>
+			<Vertex lat="53.49932497" lon="-113.44489647"/>
+		</CarParking>
+	</SceneryObject>
+	<!-- car park: Davies park and ride, aisle 4, right row -->
+	<SceneryObject lat="53.49924076" lon="-113.44462859" alt="0.000000" pitch="0.000000" bank="0.000000" heading="0.000000" imageComplexity="VERY_SPARSE" altitudeIsAgl="TRUE" snapToGround="TRUE" snapToNormal="FALSE">
+		<CarParking>
+			<Vertex lat="53.49935757" lon="-113.44481518"/>
+			<Vertex lat="53.49938487" lon="-113.44474701"/>
+			<Vertex lat="53.49912379" lon="-113.44444133"/>
+			<Vertex lat="53.49909682" lon="-113.44451083"/>
+		</CarParking>
+	</SceneryObject>
+	<!-- car park: Davies park and ride, aisle 5, left row -->
+	<SceneryObject lat="53.49914759" lon="-113.44485991" alt="0.000000" pitch="0.000000" bank="0.000000" heading="0.000000" imageComplexity="VERY_SPARSE" altitudeIsAgl="TRUE" snapToGround="TRUE" snapToNormal="FALSE">
+		<CarParking>
+			<Vertex lat="53.49926439" lon="-113.44504732"/>
+			<Vertex lat="53.49929200" lon="-113.44497857"/>
+			<Vertex lat="53.49903104" lon="-113.44467278"/>
+			<Vertex lat="53.49900294" lon="-113.44474096"/>
+		</CarParking>
+	</SceneryObject>
+	<!-- car park: Davies park and ride, aisle 5, right row -->
+	<SceneryObject lat="53.49914919" lon="-113.44509453" alt="0.000000" pitch="0.000000" bank="0.000000" heading="0.000000" imageComplexity="VERY_SPARSE" altitudeIsAgl="TRUE" snapToGround="TRUE" snapToNormal="FALSE">
+		<CarParking>
+			<Vertex lat="53.49927396" lon="-113.44517803"/>
+			<Vertex lat="53.49897014" lon="-113.44482201"/>
+			<Vertex lat="53.49894271" lon="-113.44489098"/>
+			<Vertex lat="53.49921841" lon="-113.44521404"/>
+			<Vertex lat="53.49924318" lon="-113.44521485"/>
+			<Vertex lat="53.49924673" lon="-113.44524723"/>
+		</CarParking>
+	</SceneryObject>
+	<!-- car park: Davies park and ride, aisle 5, left row -->
+	<SceneryObject lat="53.49870261" lon="-113.44435276" alt="0.000000" pitch="0.000000" bank="0.000000" heading="0.000000" imageComplexity="VERY_SPARSE" altitudeIsAgl="TRUE" snapToGround="TRUE" snapToNormal="FALSE">
+		<CarParking>
+			<Vertex lat="53.49846204" lon="-113.44413491"/>
+			<Vertex lat="53.49891576" lon="-113.44463956"/>
+			<Vertex lat="53.49894334" lon="-113.44457078"/>
+			<Vertex lat="53.49848929" lon="-113.44406577"/>
+		</CarParking>
+	</SceneryObject>
+	<!-- car park: Davies park and ride, aisle 5, right row -->
+	<SceneryObject lat="53.49864279" lon="-113.44450321" alt="0.000000" pitch="0.000000" bank="0.000000" heading="0.000000" imageComplexity="VERY_SPARSE" altitudeIsAgl="TRUE" snapToGround="TRUE" snapToNormal="FALSE">
+		<CarParking>
+			<Vertex lat="53.49888317" lon="-113.44472085"/>
+			<Vertex lat="53.49842983" lon="-113.44421662"/>
+			<Vertex lat="53.49840257" lon="-113.44428576"/>
+			<Vertex lat="53.49885559" lon="-113.44478963"/>
+		</CarParking>
+	</SceneryObject>
+	<!-- car park: Davies park and ride, aisle 5, left row -->
+	<SceneryObject lat="53.49813805" lon="-113.44372484" alt="0.000000" pitch="0.000000" bank="0.000000" heading="0.000000" imageComplexity="VERY_SPARSE" altitudeIsAgl="TRUE" snapToGround="TRUE" snapToNormal="FALSE">
+		<CarParking>
+			<Vertex lat="53.49837660" lon="-113.44403990"/>
+			<Vertex lat="53.49840423" lon="-113.44397118"/>
+			<Vertex lat="53.49792832" lon="-113.44344184"/>
+			<Vertex lat="53.49784304" lon="-113.44344643"/>
+		</CarParking>
+	</SceneryObject>
+	<!-- car park: Davies park and ride, aisle 5, right row -->
+	<SceneryObject lat="53.49809193" lon="-113.44389054" alt="0.000000" pitch="0.000000" bank="0.000000" heading="0.000000" imageComplexity="VERY_SPARSE" altitudeIsAgl="TRUE" snapToGround="TRUE" snapToNormal="FALSE">
+		<CarParking>
+			<Vertex lat="53.49786258" lon="-113.44358570"/>
+			<Vertex lat="53.49784490" lon="-113.44366549"/>
+			<Vertex lat="53.49831632" lon="-113.44418984"/>
+			<Vertex lat="53.49834394" lon="-113.44412112"/>
+		</CarParking>
+	</SceneryObject>
+	<!-- car park: Davies park and ride, aisle 6, left row -->
+	<SceneryObject lat="53.49907997" lon="-113.44511688" alt="0.000000" pitch="0.000000" bank="0.000000" heading="0.000000" imageComplexity="VERY_SPARSE" altitudeIsAgl="TRUE" snapToGround="TRUE" snapToNormal="FALSE">
+		<CarParking>
+			<Vertex lat="53.49891164" lon="-113.44496913"/>
+			<Vertex lat="53.49917467" lon="-113.44528624"/>
+			<Vertex lat="53.49917519" lon="-113.44521510"/>
+			<Vertex lat="53.49919926" lon="-113.44521381"/>
+			<Vertex lat="53.49893907" lon="-113.44490013"/>
+		</CarParking>
+	</SceneryObject>
+	<!-- car park: Davies park and ride, aisle 6, right row -->
+	<SceneryObject lat="53.49890349" lon="-113.44513098" alt="0.000000" pitch="0.000000" bank="0.000000" heading="0.000000" imageComplexity="VERY_SPARSE" altitudeIsAgl="TRUE" snapToGround="TRUE" snapToNormal="FALSE">
+		<CarParking>
+			<Vertex lat="53.49885466" lon="-113.44502107"/>
+			<Vertex lat="53.49882581" lon="-113.44508837"/>
+			<Vertex lat="53.49892344" lon="-113.44520607"/>
+			<Vertex lat="53.49901004" lon="-113.44520840"/>
+		</CarParking>
+	</SceneryObject>
+	<!-- car park: Davies park and ride, aisle 6, left row -->
+	<SceneryObject lat="53.49861324" lon="-113.44457752" alt="0.000000" pitch="0.000000" bank="0.000000" heading="0.000000" imageComplexity="VERY_SPARSE" altitudeIsAgl="TRUE" snapToGround="TRUE" snapToNormal="FALSE">
+		<CarParking>
+			<Vertex lat="53.49837396" lon="-113.44435832"/>
+			<Vertex lat="53.49882510" lon="-113.44486567"/>
+			<Vertex lat="53.49885268" lon="-113.44479689"/>
+			<Vertex lat="53.49840122" lon="-113.44428919"/>
+		</CarParking>
+	</SceneryObject>
+	<!-- car park: Davies park and ride, aisle 6, right row -->
+	<SceneryObject lat="53.49855321" lon="-113.44472774" alt="0.000000" pitch="0.000000" bank="0.000000" heading="0.000000" imageComplexity="VERY_SPARSE" altitudeIsAgl="TRUE" snapToGround="TRUE" snapToNormal="FALSE">
+		<CarParking>
+			<Vertex lat="53.49834152" lon="-113.44443978"/>
+			<Vertex lat="53.49831389" lon="-113.44450849"/>
+			<Vertex lat="53.49876493" lon="-113.44501572"/>
+			<Vertex lat="53.49879251" lon="-113.44494695"/>
+		</CarParking>
+	</SceneryObject>
+	<!-- car park: Davies park and ride, aisle 6, left row -->
+	<SceneryObject lat="53.49806866" lon="-113.44396646" alt="0.000000" pitch="0.000000" bank="0.000000" heading="0.000000" imageComplexity="VERY_SPARSE" altitudeIsAgl="TRUE" snapToGround="TRUE" snapToNormal="FALSE">
+		<CarParking>
+			<Vertex lat="53.49828763" lon="-113.44426120"/>
+			<Vertex lat="53.49831526" lon="-113.44419248"/>
+			<Vertex lat="53.49784425" lon="-113.44366839"/>
+			<Vertex lat="53.49782749" lon="-113.44374378"/>
+		</CarParking>
+	</SceneryObject>
+	<!-- car park: Davies park and ride, aisle 6, right row -->
+	<SceneryObject lat="53.49801846" lon="-113.44412634" alt="0.000000" pitch="0.000000" bank="0.000000" heading="0.000000" imageComplexity="VERY_SPARSE" altitudeIsAgl="TRUE" snapToGround="TRUE" snapToNormal="FALSE">
+		<CarParking>
+			<Vertex lat="53.49825497" lon="-113.44434240"/>
+			<Vertex lat="53.49780531" lon="-113.44383677"/>
+			<Vertex lat="53.49778623" lon="-113.44391510"/>
+			<Vertex lat="53.49822731" lon="-113.44441110"/>
+		</CarParking>
+	</SceneryObject>
+	<!-- car park: Davies park and ride, aisle 7, right row -->
+	<SceneryObject lat="53.49878959" lon="-113.44543332" alt="0.000000" pitch="0.000000" bank="0.000000" heading="0.000000" imageComplexity="VERY_SPARSE" altitudeIsAgl="TRUE" snapToGround="TRUE" snapToNormal="FALSE">
+		<CarParking>
+			<Vertex lat="53.49889469" lon="-113.44538884"/>
+			<Vertex lat="53.49868505" lon="-113.44539489"/>
+			<Vertex lat="53.49868534" lon="-113.44547778"/>
+			<Vertex lat="53.49889327" lon="-113.44547177"/>
+		</CarParking>
+	</SceneryObject>
+	<!-- car park: Davies park and ride, aisle 7, right row -->
+	<SceneryObject lat="53.49858935" lon="-113.44544019" alt="0.000000" pitch="0.000000" bank="0.000000" heading="0.000000" imageComplexity="VERY_SPARSE" altitudeIsAgl="TRUE" snapToGround="TRUE" snapToNormal="FALSE">
+		<CarParking>
+			<Vertex lat="53.49862321" lon="-113.44539677"/>
+			<Vertex lat="53.49855466" lon="-113.44540345"/>
+			<Vertex lat="53.49855547" lon="-113.44548164"/>
+			<Vertex lat="53.49862406" lon="-113.44547889"/>
+		</CarParking>
+	</SceneryObject>
+	<!-- car park: Davies park and ride, aisle 7, left row -->
+	<SceneryObject lat="53.49844841" lon="-113.44533195" alt="0.000000" pitch="0.000000" bank="0.000000" heading="0.000000" imageComplexity="VERY_SPARSE" altitudeIsAgl="TRUE" snapToGround="TRUE" snapToNormal="FALSE">
+		<CarParking>
+			<Vertex lat="53.49842608" lon="-113.44539629"/>
+			<Vertex lat="53.49853694" lon="-113.44530920"/>
+			<Vertex lat="53.49848944" lon="-113.44525499"/>
+			<Vertex lat="53.49839015" lon="-113.44533299"/>
+			<Vertex lat="53.49839945" lon="-113.44536627"/>
+		</CarParking>
+	</SceneryObject>
+	<!-- car park: Davies park and ride, aisle 7, right row -->
+	<SceneryObject lat="53.49851359" lon="-113.44548800" alt="0.000000" pitch="0.000000" bank="0.000000" heading="0.000000" imageComplexity="VERY_SPARSE" altitudeIsAgl="TRUE" snapToGround="TRUE" snapToNormal="FALSE">
+		<CarParking>
+			<Vertex lat="53.49843601" lon="-113.44549666"/>
+			<Vertex lat="53.49845685" lon="-113.44557181"/>
+			<Vertex lat="53.49856845" lon="-113.44548413"/>
+			<Vertex lat="53.49855376" lon="-113.44548257"/>
+			<Vertex lat="53.49855287" lon="-113.44540485"/>
+		</CarParking>
+	</SceneryObject>
+	<!-- car park: Davies park and ride, aisle 7, left row -->
+	<SceneryObject lat="53.49827677" lon="-113.44546853" alt="0.000000" pitch="0.000000" bank="0.000000" heading="0.000000" imageComplexity="VERY_SPARSE" altitudeIsAgl="TRUE" snapToGround="TRUE" snapToNormal="FALSE">
+		<CarParking>
+			<Vertex lat="53.49825535" lon="-113.44553333"/>
+			<Vertex lat="53.49836483" lon="-113.44544527"/>
+			<Vertex lat="53.49831724" lon="-113.44539163"/>
+			<Vertex lat="53.49821880" lon="-113.44547081"/>
+			<Vertex lat="53.49822761" lon="-113.44550161"/>
+		</CarParking>
+	</SceneryObject>
+	<!-- car park: Davies park and ride, aisle 7, right row -->
+	<SceneryObject lat="53.49836046" lon="-113.44560338" alt="0.000000" pitch="0.000000" bank="0.000000" heading="0.000000" imageComplexity="VERY_SPARSE" altitudeIsAgl="TRUE" snapToGround="TRUE" snapToNormal="FALSE">
+		<CarParking>
+			<Vertex lat="53.49843439" lon="-113.44549796"/>
+			<Vertex lat="53.49826543" lon="-113.44563386"/>
+			<Vertex lat="53.49828680" lon="-113.44570859"/>
+			<Vertex lat="53.49845523" lon="-113.44557312"/>
+		</CarParking>
+	</SceneryObject>
+	<!-- car park: Davies park and ride, aisle 7, left row -->
+	<SceneryObject lat="53.49809310" lon="-113.44561303" alt="0.000000" pitch="0.000000" bank="0.000000" heading="0.000000" imageComplexity="VERY_SPARSE" altitudeIsAgl="TRUE" snapToGround="TRUE" snapToNormal="FALSE">
+		<CarParking>
+			<Vertex lat="53.49807135" lon="-113.44567571"/>
+			<Vertex lat="53.49816660" lon="-113.44560517"/>
+			<Vertex lat="53.49814665" lon="-113.44552937"/>
+			<Vertex lat="53.49803615" lon="-113.44561117"/>
+			<Vertex lat="53.49804472" lon="-113.44564373"/>
+		</CarParking>
+	</SceneryObject>
+	<!-- car park: Davies park and ride, aisle 7, right row -->
+	<SceneryObject lat="53.49813197" lon="-113.44578290" alt="0.000000" pitch="0.000000" bank="0.000000" heading="0.000000" imageComplexity="VERY_SPARSE" altitudeIsAgl="TRUE" snapToGround="TRUE" snapToNormal="FALSE">
+		<CarParking>
+			<Vertex lat="53.49807969" lon="-113.44577661"/>
+			<Vertex lat="53.49809938" lon="-113.44585140"/>
+			<Vertex lat="53.49818578" lon="-113.44578867"/>
+			<Vertex lat="53.49816302" lon="-113.44571492"/>
+		</CarParking>
+	</SceneryObject>
+	<!-- car park: Davies park and ride, aisle 7, left row -->
+	<SceneryObject lat="53.49800589" lon="-113.44555175" alt="0.000000" pitch="0.000000" bank="0.000000" heading="0.000000" imageComplexity="VERY_SPARSE" altitudeIsAgl="TRUE" snapToGround="TRUE" snapToNormal="FALSE">
+		<CarParking>
+			<Vertex lat="53.49804185" lon="-113.44564028"/>
+			<Vertex lat="53.49803485" lon="-113.44560909"/>
+			<Vertex lat="53.49807550" lon="-113.44557875"/>
+			<Vertex lat="53.49795217" lon="-113.44543063"/>
+			<Vertex lat="53.49792507" lon="-113.44550003"/>
+		</CarParking>
+	</SceneryObject>
+	<!-- car park: Davies park and ride, aisle 7, right row -->
+	<SceneryObject lat="53.49794802" lon="-113.44568910" alt="0.000000" pitch="0.000000" bank="0.000000" heading="0.000000" imageComplexity="VERY_SPARSE" altitudeIsAgl="TRUE" snapToGround="TRUE" snapToNormal="FALSE">
+		<CarParking>
+			<Vertex lat="53.49786830" lon="-113.44555232"/>
+			<Vertex lat="53.49784329" lon="-113.44561090"/>
+			<Vertex lat="53.49802958" lon="-113.44582156"/>
+			<Vertex lat="53.49805090" lon="-113.44577162"/>
+		</CarParking>
+	</SceneryObject>
+	<!-- car park: Davies park and ride, aisle 7, right row -->
+	<SceneryObject lat="53.49782613" lon="-113.44554672" alt="0.000000" pitch="0.000000" bank="0.000000" heading="0.000000" imageComplexity="VERY_SPARSE" altitudeIsAgl="TRUE" snapToGround="TRUE" snapToNormal="FALSE">
+		<CarParking>
+			<Vertex lat="53.49786685" lon="-113.44555055"/>
+			<Vertex lat="53.49781138" lon="-113.44548266"/>
+			<Vertex lat="53.49778451" lon="-113.44554443"/>
+			<Vertex lat="53.49784180" lon="-113.44560922"/>
+		</CarParking>
+	</SceneryObject>
+	<!-- car park: Davies park and ride, aisle 7, left row -->
+	<SceneryObject lat="53.49766093" lon="-113.44513105" alt="0.000000" pitch="0.000000" bank="0.000000" heading="0.000000" imageComplexity="VERY_SPARSE" altitudeIsAgl="TRUE" snapToGround="TRUE" snapToNormal="FALSE">
+		<CarParking>
+			<Vertex lat="53.49783397" lon="-113.44538934"/>
+			<Vertex lat="53.49786162" lon="-113.44532061"/>
+			<Vertex lat="53.49748417" lon="-113.44486831"/>
+			<Vertex lat="53.49746394" lon="-113.44494593"/>
+		</CarParking>
+	</SceneryObject>
+	<!-- car park: Davies park and ride, aisle 7, right row -->
+	<SceneryObject lat="53.49761093" lon="-113.44530202" alt="0.000000" pitch="0.000000" bank="0.000000" heading="0.000000" imageComplexity="VERY_SPARSE" altitudeIsAgl="TRUE" snapToGround="TRUE" snapToNormal="FALSE">
+		<CarParking>
+			<Vertex lat="53.49741199" lon="-113.44500407"/>
+			<Vertex lat="53.49738200" lon="-113.44506999"/>
+			<Vertex lat="53.49766771" lon="-113.44541236"/>
+			<Vertex lat="53.49778302" lon="-113.44554275"/>
+			<Vertex lat="53.49780992" lon="-113.44548091"/>
+		</CarParking>
+	</SceneryObject>
+	<!-- car park: Davies park and ride, aisle 7, right row -->
+	<SceneryObject lat="53.49741010" lon="-113.44480448" alt="0.000000" pitch="0.000000" bank="0.000000" heading="0.000000" imageComplexity="VERY_SPARSE" altitudeIsAgl="TRUE" snapToGround="TRUE" snapToNormal="FALSE">
+		<CarParking>
+			<Vertex lat="53.49746454" lon="-113.44469908"/>
+			<Vertex lat="53.49741926" lon="-113.44466588"/>
+			<Vertex lat="53.49735566" lon="-113.44490988"/>
+			<Vertex lat="53.49740094" lon="-113.44494308"/>
+		</CarParking>
+	</SceneryObject>
+	<!-- car park: Davies park and ride, aisle 7, left row -->
+	<SceneryObject lat="53.49756866" lon="-113.44464762" alt="0.000000" pitch="0.000000" bank="0.000000" heading="0.000000" imageComplexity="VERY_SPARSE" altitudeIsAgl="TRUE" snapToGround="TRUE" snapToNormal="FALSE">
+		<CarParking>
+			<Vertex lat="53.49752775" lon="-113.44470111"/>
+			<Vertex lat="53.49756930" lon="-113.44474863"/>
+			<Vertex lat="53.49760963" lon="-113.44459387"/>
+			<Vertex lat="53.49756795" lon="-113.44454688"/>
+		</CarParking>
+	</SceneryObject>
+	<!-- car park: Davies park and ride, aisle 7, right row -->
+	<SceneryObject lat="53.49747435" lon="-113.44455860" alt="0.000000" pitch="0.000000" bank="0.000000" heading="0.000000" imageComplexity="VERY_SPARSE" altitudeIsAgl="TRUE" snapToGround="TRUE" snapToNormal="FALSE">
+		<CarParking>
+			<Vertex lat="53.49752844" lon="-113.44445389"/>
+			<Vertex lat="53.49748369" lon="-113.44442108"/>
+			<Vertex lat="53.49741998" lon="-113.44466312"/>
+			<Vertex lat="53.49746526" lon="-113.44469632"/>
+		</CarParking>
+	</SceneryObject>
+	<!-- car park: Davies park and ride, aisle 7, left row -->
+	<SceneryObject lat="53.49763511" lon="-113.44439258" alt="0.000000" pitch="0.000000" bank="0.000000" heading="0.000000" imageComplexity="VERY_SPARSE" altitudeIsAgl="TRUE" snapToGround="TRUE" snapToNormal="FALSE">
+		<CarParking>
+			<Vertex lat="53.49759172" lon="-113.44445565"/>
+			<Vertex lat="53.49763340" lon="-113.44450265"/>
+			<Vertex lat="53.49767844" lon="-113.44432972"/>
+			<Vertex lat="53.49763687" lon="-113.44428229"/>
+		</CarParking>
+	</SceneryObject>
+	<!-- car park: Davies park and ride, aisle 7, right row -->
+	<SceneryObject lat="53.49754165" lon="-113.44430419" alt="0.000000" pitch="0.000000" bank="0.000000" heading="0.000000" imageComplexity="VERY_SPARSE" altitudeIsAgl="TRUE" snapToGround="TRUE" snapToNormal="FALSE">
+		<CarParking>
+			<Vertex lat="53.49759744" lon="-113.44418899"/>
+			<Vertex lat="53.49755555" lon="-113.44415830"/>
+			<Vertex lat="53.49748444" lon="-113.44441834"/>
+			<Vertex lat="53.49752916" lon="-113.44445113"/>
+		</CarParking>
+	</SceneryObject>
+	<!-- car park: Davies park and ride, aisle 7, left row -->
+	<SceneryObject lat="53.49786660" lon="-113.44459452" alt="0.000000" pitch="0.000000" bank="0.000000" heading="0.000000" imageComplexity="VERY_SPARSE" altitudeIsAgl="TRUE" snapToGround="TRUE" snapToNormal="FALSE">
+		<CarParking>
+			<Vertex lat="53.49767996" lon="-113.44433145"/>
+			<Vertex lat="53.49765983" lon="-113.44440873"/>
+			<Vertex lat="53.49804950" lon="-113.44485331"/>
+			<Vertex lat="53.49807713" lon="-113.44478459"/>
+		</CarParking>
+	</SceneryObject>
+	<!-- car park: Davies park and ride, aisle 7, right row -->
+	<SceneryObject lat="53.49789370" lon="-113.44442202" alt="0.000000" pitch="0.000000" bank="0.000000" heading="0.000000" imageComplexity="VERY_SPARSE" altitudeIsAgl="TRUE" snapToGround="TRUE" snapToNormal="FALSE">
+		<CarParking>
+			<Vertex lat="53.49766068" lon="-113.44419098"/>
+			<Vertex lat="53.49810978" lon="-113.44470337"/>
+			<Vertex lat="53.49813149" lon="-113.44464935"/>
+			<Vertex lat="53.49767284" lon="-113.44414439"/>
+		</CarParking>
+	</SceneryObject>
+	<!-- car park: Davies park and ride, aisle 7, left row -->
+	<SceneryObject lat="53.49830669" lon="-113.44509662" alt="0.000000" pitch="0.000000" bank="0.000000" heading="0.000000" imageComplexity="VERY_SPARSE" altitudeIsAgl="TRUE" snapToGround="TRUE" snapToNormal="FALSE">
+		<CarParking>
+			<Vertex lat="53.49816524" lon="-113.44488512"/>
+			<Vertex lat="53.49813815" lon="-113.44495445"/>
+			<Vertex lat="53.49843567" lon="-113.44529390"/>
+			<Vertex lat="53.49848771" lon="-113.44525302"/>
+		</CarParking>
+	</SceneryObject>
+	<!-- car park: Davies park and ride, aisle 7, right row -->
+	<SceneryObject lat="53.49847115" lon="-113.44507809" alt="0.000000" pitch="0.000000" bank="0.000000" heading="0.000000" imageComplexity="VERY_SPARSE" altitudeIsAgl="TRUE" snapToGround="TRUE" snapToNormal="FALSE">
+		<CarParking>
+			<Vertex lat="53.49819726" lon="-113.44480318"/>
+			<Vertex lat="53.49863145" lon="-113.44529855"/>
+			<Vertex lat="53.49864282" lon="-113.44529820"/>
+			<Vertex lat="53.49866496" lon="-113.44524360"/>
+			<Vertex lat="53.49821924" lon="-113.44474691"/>
+		</CarParking>
+	</SceneryObject>
+	<!-- car park: Davies park and ride, aisle 8, left row -->
+	<SceneryObject lat="53.49829077" lon="-113.44519915" alt="0.000000" pitch="0.000000" bank="0.000000" heading="0.000000" imageComplexity="VERY_SPARSE" altitudeIsAgl="TRUE" snapToGround="TRUE" snapToNormal="FALSE">
+		<CarParking>
+			<Vertex lat="53.49839655" lon="-113.44536301"/>
+			<Vertex lat="53.49838882" lon="-113.44533096"/>
+			<Vertex lat="53.49842870" lon="-113.44529938"/>
+			<Vertex lat="53.49813343" lon="-113.44496653"/>
+			<Vertex lat="53.49810634" lon="-113.44503586"/>
+		</CarParking>
+	</SceneryObject>
+	<!-- car park: Davies park and ride, aisle 8, right row -->
+	<SceneryObject lat="53.49817523" lon="-113.44528146" alt="0.000000" pitch="0.000000" bank="0.000000" heading="0.000000" imageComplexity="VERY_SPARSE" altitudeIsAgl="TRUE" snapToGround="TRUE" snapToNormal="FALSE">
+		<CarParking>
+			<Vertex lat="53.49807433" lon="-113.44511779"/>
+			<Vertex lat="53.49804725" lon="-113.44518713"/>
+			<Vertex lat="53.49826381" lon="-113.44543126"/>
+			<Vertex lat="53.49831551" lon="-113.44538968"/>
+		</CarParking>
+	</SceneryObject>
+	<!-- car park: Davies park and ride, aisle 8, left row -->
+	<SceneryObject lat="53.49783776" lon="-113.44468308" alt="0.000000" pitch="0.000000" bank="0.000000" heading="0.000000" imageComplexity="VERY_SPARSE" altitudeIsAgl="TRUE" snapToGround="TRUE" snapToNormal="FALSE">
+		<CarParking>
+			<Vertex lat="53.49801674" lon="-113.44493478"/>
+			<Vertex lat="53.49804437" lon="-113.44486607"/>
+			<Vertex lat="53.49765503" lon="-113.44442716"/>
+			<Vertex lat="53.49763489" lon="-113.44450433"/>
+		</CarParking>
+	</SceneryObject>
+	<!-- car park: Davies park and ride, aisle 8, right row -->
+	<SceneryObject lat="53.49778569" lon="-113.44484227" alt="0.000000" pitch="0.000000" bank="0.000000" heading="0.000000" imageComplexity="VERY_SPARSE" altitudeIsAgl="TRUE" snapToGround="TRUE" snapToNormal="FALSE">
+		<CarParking>
+			<Vertex lat="53.49798409" lon="-113.44501600"/>
+			<Vertex lat="53.49761115" lon="-113.44459558"/>
+			<Vertex lat="53.49759103" lon="-113.44467277"/>
+			<Vertex lat="53.49795647" lon="-113.44508473"/>
+		</CarParking>
+	</SceneryObject>
+	<!-- car park: Davies park and ride, aisle 9, left row -->
+	<SceneryObject lat="53.49815264" lon="-113.44537150" alt="0.000000" pitch="0.000000" bank="0.000000" heading="0.000000" imageComplexity="VERY_SPARSE" altitudeIsAgl="TRUE" snapToGround="TRUE" snapToNormal="FALSE">
+		<CarParking>
+			<Vertex lat="53.49822465" lon="-113.44549823"/>
+			<Vertex lat="53.49821747" lon="-113.44546879"/>
+			<Vertex lat="53.49825794" lon="-113.44543598"/>
+			<Vertex lat="53.49804512" lon="-113.44519258"/>
+			<Vertex lat="53.49801804" lon="-113.44526192"/>
+		</CarParking>
+	</SceneryObject>
+	<!-- car park: Davies park and ride, aisle 9, right row -->
+	<SceneryObject lat="53.49804586" lon="-113.44546247" alt="0.000000" pitch="0.000000" bank="0.000000" heading="0.000000" imageComplexity="VERY_SPARSE" altitudeIsAgl="TRUE" snapToGround="TRUE" snapToNormal="FALSE">
+		<CarParking>
+			<Vertex lat="53.49798603" lon="-113.44534388"/>
+			<Vertex lat="53.49795896" lon="-113.44541323"/>
+			<Vertex lat="53.49809260" lon="-113.44556609"/>
+			<Vertex lat="53.49814585" lon="-113.44552667"/>
+		</CarParking>
+	</SceneryObject>
+	<!-- car park: Davies park and ride, aisle 9, left row -->
+	<SceneryObject lat="53.49776072" lon="-113.44491822" alt="0.000000" pitch="0.000000" bank="0.000000" heading="0.000000" imageComplexity="VERY_SPARSE" altitudeIsAgl="TRUE" snapToGround="TRUE" snapToNormal="FALSE">
+		<CarParking>
+			<Vertex lat="53.49792709" lon="-113.44515785"/>
+			<Vertex lat="53.49795471" lon="-113.44508912"/>
+			<Vertex lat="53.49759030" lon="-113.44467558"/>
+			<Vertex lat="53.49757078" lon="-113.44475033"/>
+		</CarParking>
+	</SceneryObject>
+	<!-- car park: Davies park and ride, aisle 9, right row -->
+	<SceneryObject lat="53.49768751" lon="-113.44505121" alt="0.000000" pitch="0.000000" bank="0.000000" heading="0.000000" imageComplexity="VERY_SPARSE" altitudeIsAgl="TRUE" snapToGround="TRUE" snapToNormal="FALSE">
+		<CarParking>
+			<Vertex lat="53.49750395" lon="-113.44479245"/>
+			<Vertex lat="53.49748489" lon="-113.44486555"/>
+			<Vertex lat="53.49786679" lon="-113.44530777"/>
+			<Vertex lat="53.49789443" lon="-113.44523906"/>
+		</CarParking>
+	</SceneryObject>
+	<!-- car park: Davies park and ride, aisle 10, right row -->
+	<SceneryObject lat="53.49789700" lon="-113.44535290" alt="0.000000" pitch="0.000000" bank="0.000000" heading="0.000000" imageComplexity="VERY_SPARSE" altitudeIsAgl="TRUE" snapToGround="TRUE" snapToNormal="FALSE">
+		<CarParking>
+			<Vertex lat="53.49785584" lon="-113.44541581"/>
+			<Vertex lat="53.49787770" lon="-113.44544256"/>
+			<Vertex lat="53.49793778" lon="-113.44528867"/>
+			<Vertex lat="53.49791670" lon="-113.44526454"/>
+		</CarParking>
+	</SceneryObject>
+	<!-- car park: Davies park and ride, aisle 10, right row -->
+	<SceneryObject lat="53.49798787" lon="-113.44512360" alt="0.000000" pitch="0.000000" bank="0.000000" heading="0.000000" imageComplexity="VERY_SPARSE" altitudeIsAgl="TRUE" snapToGround="TRUE" snapToNormal="FALSE">
+		<CarParking>
+			<Vertex lat="53.49794935" lon="-113.44518333"/>
+			<Vertex lat="53.49796978" lon="-113.44520671"/>
+			<Vertex lat="53.49802587" lon="-113.44506313"/>
+			<Vertex lat="53.49800646" lon="-113.44504123"/>
+		</CarParking>
+	</SceneryObject>
+	<!-- car park: Davies park and ride, aisle 12, right row -->
+	<SceneryObject lat="53.50125320" lon="-113.44446268" alt="0.000000" pitch="0.000000" bank="0.000000" heading="0.000000" imageComplexity="VERY_SPARSE" altitudeIsAgl="TRUE" snapToGround="TRUE" snapToNormal="FALSE">
+		<CarParking>
+			<Vertex lat="53.50122657" lon="-113.44452807"/>
+			<Vertex lat="53.50127593" lon="-113.44453209"/>
+			<Vertex lat="53.50127983" lon="-113.44439729"/>
+			<Vertex lat="53.50123047" lon="-113.44439327"/>
+		</CarParking>
+	</SceneryObject>
+	<!-- car park: Davies park and ride, aisle 12, left row -->
+	<SceneryObject lat="53.50114151" lon="-113.44460356" alt="0.000000" pitch="0.000000" bank="0.000000" heading="0.000000" imageComplexity="VERY_SPARSE" altitudeIsAgl="TRUE" snapToGround="TRUE" snapToNormal="FALSE">
+		<CarParking>
+			<Vertex lat="53.50116748" lon="-113.44454937"/>
+			<Vertex lat="53.50114517" lon="-113.44452147"/>
+			<Vertex lat="53.50111887" lon="-113.44451933"/>
+			<Vertex lat="53.50111413" lon="-113.44468394"/>
+			<Vertex lat="53.50116188" lon="-113.44474370"/>
+		</CarParking>
+	</SceneryObject>
+	<!-- car park: Davies park and ride, aisle 12, right row -->
+	<SceneryObject lat="53.50124670" lon="-113.44468773" alt="0.000000" pitch="0.000000" bank="0.000000" heading="0.000000" imageComplexity="VERY_SPARSE" altitudeIsAgl="TRUE" snapToGround="TRUE" snapToNormal="FALSE">
+		<CarParking>
+			<Vertex lat="53.50122648" lon="-113.44453108"/>
+			<Vertex lat="53.50121757" lon="-113.44484036"/>
+			<Vertex lat="53.50126693" lon="-113.44484437"/>
+			<Vertex lat="53.50127584" lon="-113.44453510"/>
+		</CarParking>
+	</SceneryObject>
+	<!-- car park: Davies park and ride, aisle 12, left row -->
+	<SceneryObject lat="53.50113273" lon="-113.44496004" alt="0.000000" pitch="0.000000" bank="0.000000" heading="0.000000" imageComplexity="VERY_SPARSE" altitudeIsAgl="TRUE" snapToGround="TRUE" snapToNormal="FALSE">
+		<CarParking>
+			<Vertex lat="53.50115194" lon="-113.44509022"/>
+			<Vertex lat="53.50115849" lon="-113.44486167"/>
+			<Vertex lat="53.50113621" lon="-113.44483379"/>
+			<Vertex lat="53.50110987" lon="-113.44483167"/>
+			<Vertex lat="53.50110362" lon="-113.44504998"/>
+			<Vertex lat="53.50113626" lon="-113.44509289"/>
+		</CarParking>
+	</SceneryObject>
+	<!-- car park: Davies park and ride, aisle 12, right row -->
+	<SceneryObject lat="53.50123732" lon="-113.44499216" alt="0.000000" pitch="0.000000" bank="0.000000" heading="0.000000" imageComplexity="VERY_SPARSE" altitudeIsAgl="TRUE" snapToGround="TRUE" snapToNormal="FALSE">
+		<CarParking>
+			<Vertex lat="53.50120907" lon="-113.44513705"/>
+			<Vertex lat="53.50125589" lon="-113.44514082"/>
+			<Vertex lat="53.50126684" lon="-113.44484738"/>
+			<Vertex lat="53.50121748" lon="-113.44484337"/>
+		</CarParking>
+	</SceneryObject>
+	<!-- car park: Davies park and ride, aisle 12, left row -->
+	<SceneryObject lat="53.50090527" lon="-113.44474642" alt="0.000000" pitch="0.000000" bank="0.000000" heading="0.000000" imageComplexity="VERY_SPARSE" altitudeIsAgl="TRUE" snapToGround="TRUE" snapToNormal="FALSE">
+		<CarParking>
+			<Vertex lat="53.50071443" lon="-113.44453489"/>
+			<Vertex lat="53.50086133" lon="-113.44473149"/>
+			<Vertex lat="53.50110188" lon="-113.44504770"/>
+			<Vertex lat="53.50110479" lon="-113.44494622"/>
+			<Vertex lat="53.50074390" lon="-113.44447182"/>
+		</CarParking>
+	</SceneryObject>
+	<!-- car park: Davies park and ride, aisle 12, right row -->
+	<SceneryObject lat="53.50088813" lon="-113.44495045" alt="0.000000" pitch="0.000000" bank="0.000000" heading="0.000000" imageComplexity="VERY_SPARSE" altitudeIsAgl="TRUE" snapToGround="TRUE" snapToNormal="FALSE">
+		<CarParking>
+			<Vertex lat="53.50067739" lon="-113.44461415"/>
+			<Vertex lat="53.50065197" lon="-113.44468604"/>
+			<Vertex lat="53.50091714" lon="-113.44503461"/>
+			<Vertex lat="53.50108465" lon="-113.44523529"/>
+			<Vertex lat="53.50110949" lon="-113.44518215"/>
+		</CarParking>
+	</SceneryObject>
+	<!-- car park: Davies park and ride, aisle 12, left row -->
+	<SceneryObject lat="53.50072431" lon="-113.44446539" alt="0.000000" pitch="0.000000" bank="0.000000" heading="0.000000" imageComplexity="VERY_SPARSE" altitudeIsAgl="TRUE" snapToGround="TRUE" snapToNormal="FALSE">
+		<CarParking>
+			<Vertex lat="53.50070457" lon="-113.44441752"/>
+			<Vertex lat="53.50070263" lon="-113.44450457"/>
+			<Vertex lat="53.50070884" lon="-113.44452054"/>
+			<Vertex lat="53.50071856" lon="-113.44452115"/>
+			<Vertex lat="53.50074287" lon="-113.44446935"/>
+			<Vertex lat="53.50075264" lon="-113.44447948"/>
+			<Vertex lat="53.50075426" lon="-113.44440663"/>
+			<Vertex lat="53.50071008" lon="-113.44440386"/>
+		</CarParking>
+	</SceneryObject>
+	<!-- car park: Davies park and ride, aisle 12, right row -->
+	<SceneryObject lat="53.50064794" lon="-113.44429620" alt="0.000000" pitch="0.000000" bank="0.000000" heading="0.000000" imageComplexity="VERY_SPARSE" altitudeIsAgl="TRUE" snapToGround="TRUE" snapToNormal="FALSE">
+		<CarParking>
+			<Vertex lat="53.50064868" lon="-113.44427430"/>
+			<Vertex lat="53.50063038" lon="-113.44431388"/>
+			<Vertex lat="53.50062653" lon="-113.44434364"/>
+			<Vertex lat="53.50065151" lon="-113.44437428"/>
+			<Vertex lat="53.50069056" lon="-113.44427735"/>
+			<Vertex lat="53.50065031" lon="-113.44422922"/>
+			<Vertex lat="53.50063762" lon="-113.44426070"/>
+		</CarParking>
+	</SceneryObject>
+	<!-- car park: Davies park and ride, aisle 12, left row -->
+	<SceneryObject lat="53.50072792" lon="-113.44415083" alt="0.000000" pitch="0.000000" bank="0.000000" heading="0.000000" imageComplexity="VERY_SPARSE" altitudeIsAgl="TRUE" snapToGround="TRUE" snapToNormal="FALSE">
+		<CarParking>
+			<Vertex lat="53.50074765" lon="-113.44422532"/>
+			<Vertex lat="53.50077634" lon="-113.44415783"/>
+			<Vertex lat="53.50070846" lon="-113.44407666"/>
+			<Vertex lat="53.50067924" lon="-113.44414352"/>
+		</CarParking>
+	</SceneryObject>
+	<!-- car park: Davies park and ride, aisle 12, left row -->
+	<SceneryObject lat="53.50029359" lon="-113.44363660" alt="0.000000" pitch="0.000000" bank="0.000000" heading="0.000000" imageComplexity="VERY_SPARSE" altitudeIsAgl="TRUE" snapToGround="TRUE" snapToNormal="FALSE">
+		<CarParking>
+			<Vertex lat="53.50001560" lon="-113.44335073"/>
+			<Vertex lat="53.50065729" lon="-113.44411728"/>
+			<Vertex lat="53.50068650" lon="-113.44405042"/>
+			<Vertex lat="53.50008533" lon="-113.44333228"/>
+			<Vertex lat="53.50002321" lon="-113.44333228"/>
+		</CarParking>
+	</SceneryObject>
+	<!-- car park: Davies park and ride, aisle 12, right row -->
+	<SceneryObject lat="53.50034270" lon="-113.44388314" alt="0.000000" pitch="0.000000" bank="0.000000" heading="0.000000" imageComplexity="VERY_SPARSE" altitudeIsAgl="TRUE" snapToGround="TRUE" snapToNormal="FALSE">
+		<CarParking>
+			<Vertex lat="53.49995196" lon="-113.44341733"/>
+			<Vertex lat="53.50056703" lon="-113.44416853"/>
+			<Vertex lat="53.50061352" lon="-113.44423106"/>
+			<Vertex lat="53.50062274" lon="-113.44419628"/>
+			<Vertex lat="53.49995826" lon="-113.44340249"/>
+		</CarParking>
+	</SceneryObject>
+	<!-- car park: Davies park and ride, aisle 12, right row -->
+	<SceneryObject lat="53.49994721" lon="-113.44327152" alt="0.000000" pitch="0.000000" bank="0.000000" heading="0.000000" imageComplexity="VERY_SPARSE" altitudeIsAgl="TRUE" snapToGround="TRUE" snapToNormal="FALSE">
+		<CarParking>
+			<Vertex lat="53.49998388" lon="-113.44325544"/>
+			<Vertex lat="53.49994324" lon="-113.44320830"/>
+			<Vertex lat="53.49991054" lon="-113.44328760"/>
+			<Vertex lat="53.49995118" lon="-113.44333474"/>
+		</CarParking>
+	</SceneryObject>
+	<!-- car park: Davies park and ride, aisle 12, left row -->
+	<SceneryObject lat="53.50016989" lon="-113.44336785" alt="0.000000" pitch="0.000000" bank="0.000000" heading="0.000000" imageComplexity="VERY_SPARSE" altitudeIsAgl="TRUE" snapToGround="TRUE" snapToNormal="FALSE">
+		<CarParking>
+			<Vertex lat="53.50019461" lon="-113.44333228"/>
+			<Vertex lat="53.50008843" lon="-113.44333228"/>
+			<Vertex lat="53.50015781" lon="-113.44341516"/>
+			<Vertex lat="53.50020430" lon="-113.44341516"/>
+			<Vertex lat="53.50020430" lon="-113.44334440"/>
+		</CarParking>
+	</SceneryObject>
+	<!-- car park: Davies park and ride, aisle 12, right row -->
+	<SceneryObject lat="53.50010610" lon="-113.44319968" alt="0.000000" pitch="0.000000" bank="0.000000" heading="0.000000" imageComplexity="VERY_SPARSE" altitudeIsAgl="TRUE" snapToGround="TRUE" snapToNormal="FALSE">
+		<CarParking>
+			<Vertex lat="53.50020430" lon="-113.44323432"/>
+			<Vertex lat="53.50020430" lon="-113.44316487"/>
+			<Vertex lat="53.50000790" lon="-113.44316519"/>
+			<Vertex lat="53.50000790" lon="-113.44323432"/>
+		</CarParking>
+	</SceneryObject>
+	<!-- car park: Davies park and ride, aisle 12, right row -->
+	<SceneryObject lat="53.50027920" lon="-113.44319954" alt="0.000000" pitch="0.000000" bank="0.000000" heading="0.000000" imageComplexity="VERY_SPARSE" altitudeIsAgl="TRUE" snapToGround="TRUE" snapToNormal="FALSE">
+		<CarParking>
+			<Vertex lat="53.50035230" lon="-113.44323432"/>
+			<Vertex lat="53.50035230" lon="-113.44316463"/>
+			<Vertex lat="53.50020610" lon="-113.44316487"/>
+			<Vertex lat="53.50020610" lon="-113.44323432"/>
+		</CarParking>
+	</SceneryObject>
+	<!-- car park: Davies park and ride, aisle 12, left row -->
+	<SceneryObject lat="53.50069539" lon="-113.44336805" alt="0.000000" pitch="0.000000" bank="0.000000" heading="0.000000" imageComplexity="VERY_SPARSE" altitudeIsAgl="TRUE" snapToGround="TRUE" snapToNormal="FALSE">
+		<CarParking>
+			<Vertex lat="53.50075207" lon="-113.44333228"/>
+			<Vertex lat="53.50056807" lon="-113.44333228"/>
+			<Vertex lat="53.50063261" lon="-113.44341516"/>
+			<Vertex lat="53.50076210" lon="-113.44341516"/>
+			<Vertex lat="53.50076210" lon="-113.44334539"/>
+		</CarParking>
+	</SceneryObject>
+	<!-- car park: Davies park and ride, aisle 12, right row -->
+	<SceneryObject lat="53.50062200" lon="-113.44319926" alt="0.000000" pitch="0.000000" bank="0.000000" heading="0.000000" imageComplexity="VERY_SPARSE" altitudeIsAgl="TRUE" snapToGround="TRUE" snapToNormal="FALSE">
+		<CarParking>
+			<Vertex lat="53.50076210" lon="-113.44323432"/>
+			<Vertex lat="53.50076210" lon="-113.44316396"/>
+			<Vertex lat="53.50048190" lon="-113.44316442"/>
+			<Vertex lat="53.50048190" lon="-113.44323432"/>
+		</CarParking>
+	</SceneryObject>
+	<!-- car park: Davies park and ride, aisle 12, left row -->
+	<SceneryObject lat="53.50090678" lon="-113.44337372" alt="0.000000" pitch="0.000000" bank="0.000000" heading="0.000000" imageComplexity="VERY_SPARSE" altitudeIsAgl="TRUE" snapToGround="TRUE" snapToNormal="FALSE">
+		<CarParking>
+			<Vertex lat="53.50084708" lon="-113.44333228"/>
+			<Vertex lat="53.50091050" lon="-113.44341516"/>
+			<Vertex lat="53.50093400" lon="-113.44341516"/>
+			<Vertex lat="53.50093552" lon="-113.44333228"/>
+		</CarParking>
+	</SceneryObject>
+	<!-- car park: Davies park and ride, aisle 12, right row -->
+	<SceneryObject lat="53.50084935" lon="-113.44319907" alt="0.000000" pitch="0.000000" bank="0.000000" heading="0.000000" imageComplexity="VERY_SPARSE" altitudeIsAgl="TRUE" snapToGround="TRUE" snapToNormal="FALSE">
+		<CarParking>
+			<Vertex lat="53.50093547" lon="-113.44323432"/>
+			<Vertex lat="53.50093412" lon="-113.44316368"/>
+			<Vertex lat="53.50076390" lon="-113.44316396"/>
+			<Vertex lat="53.50076390" lon="-113.44323432"/>
+		</CarParking>
+	</SceneryObject>
+	<!-- car park: Davies park and ride, aisle 12, left row -->
+	<SceneryObject lat="53.50108646" lon="-113.44337372" alt="0.000000" pitch="0.000000" bank="0.000000" heading="0.000000" imageComplexity="VERY_SPARSE" altitudeIsAgl="TRUE" snapToGround="TRUE" snapToNormal="FALSE">
+		<CarParking>
+			<Vertex lat="53.50096249" lon="-113.44333228"/>
+			<Vertex lat="53.50096097" lon="-113.44341516"/>
+			<Vertex lat="53.50120956" lon="-113.44341516"/>
+			<Vertex lat="53.50121281" lon="-113.44333228"/>
+		</CarParking>
+	</SceneryObject>
+	<!-- car park: Davies park and ride, aisle 12, right row -->
+	<SceneryObject lat="53.50110288" lon="-113.44319886" alt="0.000000" pitch="0.000000" bank="0.000000" heading="0.000000" imageComplexity="VERY_SPARSE" altitudeIsAgl="TRUE" snapToGround="TRUE" snapToNormal="FALSE">
+		<CarParking>
+			<Vertex lat="53.50124400" lon="-113.44323432"/>
+			<Vertex lat="53.50124400" lon="-113.44316317"/>
+			<Vertex lat="53.50096109" lon="-113.44316363"/>
+			<Vertex lat="53.50096244" lon="-113.44323432"/>
+		</CarParking>
+	</SceneryObject>
+	<!-- car park: Davies park and ride, aisle 12, left row -->
+	<SceneryObject lat="53.50117805" lon="-113.44358717" alt="0.000000" pitch="0.000000" bank="0.000000" heading="0.000000" imageComplexity="VERY_SPARSE" altitudeIsAgl="TRUE" snapToGround="TRUE" snapToNormal="FALSE">
+		<CarParking>
+			<Vertex lat="53.50120944" lon="-113.44341817"/>
+			<Vertex lat="53.50115992" lon="-113.44341817"/>
+			<Vertex lat="53.50114787" lon="-113.44372539"/>
+			<Vertex lat="53.50119498" lon="-113.44378696"/>
+		</CarParking>
+	</SceneryObject>
+	<!-- car park: Davies park and ride, aisle 12, right row -->
+	<SceneryObject lat="53.50128604" lon="-113.44358879" alt="0.000000" pitch="0.000000" bank="0.000000" heading="0.000000" imageComplexity="VERY_SPARSE" altitudeIsAgl="TRUE" snapToGround="TRUE" snapToNormal="FALSE">
+		<CarParking>
+			<Vertex lat="53.50124964" lon="-113.44388562"/>
+			<Vertex lat="53.50129895" lon="-113.44389106"/>
+			<Vertex lat="53.50132245" lon="-113.44329196"/>
+			<Vertex lat="53.50127314" lon="-113.44328652"/>
+		</CarParking>
+	</SceneryObject>
+	<!-- car park: Davies park and ride, aisle 12, left row -->
+	<SceneryObject lat="53.50116351" lon="-113.44396712" alt="0.000000" pitch="0.000000" bank="0.000000" heading="0.000000" imageComplexity="VERY_SPARSE" altitudeIsAgl="TRUE" snapToGround="TRUE" snapToNormal="FALSE">
+		<CarParking>
+			<Vertex lat="53.50119034" lon="-113.44390507"/>
+			<Vertex lat="53.50116859" lon="-113.44387665"/>
+			<Vertex lat="53.50114205" lon="-113.44387370"/>
+			<Vertex lat="53.50113472" lon="-113.44405982"/>
+			<Vertex lat="53.50118186" lon="-113.44412034"/>
+		</CarParking>
+	</SceneryObject>
+	<!-- car park: Davies park and ride, aisle 12, right row -->
+	<SceneryObject lat="53.50126768" lon="-113.44405605" alt="0.000000" pitch="0.000000" bank="0.000000" heading="0.000000" imageComplexity="VERY_SPARSE" altitudeIsAgl="TRUE" snapToGround="TRUE" snapToNormal="FALSE">
+		<CarParking>
+			<Vertex lat="53.50123654" lon="-113.44421803"/>
+			<Vertex lat="53.50128585" lon="-113.44422350"/>
+			<Vertex lat="53.50129883" lon="-113.44389406"/>
+			<Vertex lat="53.50124952" lon="-113.44388862"/>
+		</CarParking>
+	</SceneryObject>
+	<!-- car park: Davies park and ride, aisle 12, left row -->
+	<SceneryObject lat="53.50115204" lon="-113.44425447" alt="0.000000" pitch="0.000000" bank="0.000000" heading="0.000000" imageComplexity="VERY_SPARSE" altitudeIsAgl="TRUE" snapToGround="TRUE" snapToNormal="FALSE">
+		<CarParking>
+			<Vertex lat="53.50117723" lon="-113.44423774"/>
+			<Vertex lat="53.50115479" lon="-113.44420894"/>
+			<Vertex lat="53.50112895" lon="-113.44420606"/>
+			<Vertex lat="53.50112495" lon="-113.44430706"/>
+			<Vertex lat="53.50117426" lon="-113.44431255"/>
+		</CarParking>
+	</SceneryObject>
+	<!-- car park: Davies park and ride, aisle 13, left row -->
+	<SceneryObject lat="53.50093864" lon="-113.44441261" alt="0.000000" pitch="0.000000" bank="0.000000" heading="0.000000" imageComplexity="VERY_SPARSE" altitudeIsAgl="TRUE" snapToGround="TRUE" snapToNormal="FALSE">
+		<CarParking>
+			<Vertex lat="53.50111239" lon="-113.44468177"/>
+			<Vertex lat="53.50111527" lon="-113.44458196"/>
+			<Vertex lat="53.50077779" lon="-113.44415961"/>
+			<Vertex lat="53.50074910" lon="-113.44422711"/>
+		</CarParking>
+	</SceneryObject>
+	<!-- car park: Davies park and ride, aisle 13, right row -->
+	<SceneryObject lat="53.50090106" lon="-113.44459432" alt="0.000000" pitch="0.000000" bank="0.000000" heading="0.000000" imageComplexity="VERY_SPARSE" altitudeIsAgl="TRUE" snapToGround="TRUE" snapToNormal="FALSE">
+		<CarParking>
+			<Vertex lat="53.50073776" lon="-113.44433515"/>
+			<Vertex lat="53.50071126" lon="-113.44440091"/>
+			<Vertex lat="53.50075532" lon="-113.44440419"/>
+			<Vertex lat="53.50075487" lon="-113.44445997"/>
+			<Vertex lat="53.50110613" lon="-113.44489956"/>
+			<Vertex lat="53.50110843" lon="-113.44482988"/>
+			<Vertex lat="53.50113363" lon="-113.44483057"/>
+		</CarParking>
+	</SceneryObject>
+	<!-- car park: Davies park and ride, aisle 14, left row -->
+	<SceneryObject lat="53.50104646" lon="-113.44420767" alt="0.000000" pitch="0.000000" bank="0.000000" heading="0.000000" imageComplexity="VERY_SPARSE" altitudeIsAgl="TRUE" snapToGround="TRUE" snapToNormal="FALSE">
+		<CarParking>
+			<Vertex lat="53.50117089" lon="-113.44443144"/>
+			<Vertex lat="53.50117373" lon="-113.44433158"/>
+			<Vertex lat="53.50115962" lon="-113.44431394"/>
+			<Vertex lat="53.50112386" lon="-113.44430945"/>
+			<Vertex lat="53.50112461" lon="-113.44427015"/>
+			<Vertex lat="53.50080084" lon="-113.44386511"/>
+			<Vertex lat="53.50077165" lon="-113.44393199"/>
+		</CarParking>
+	</SceneryObject>
+	<!-- car park: Davies park and ride, aisle 14, right row -->
+	<SceneryObject lat="53.50096441" lon="-113.44433987" alt="0.000000" pitch="0.000000" bank="0.000000" heading="0.000000" imageComplexity="VERY_SPARSE" altitudeIsAgl="TRUE" snapToGround="TRUE" snapToNormal="FALSE">
+		<CarParking>
+			<Vertex lat="53.50073714" lon="-113.44401102"/>
+			<Vertex lat="53.50070952" lon="-113.44407423"/>
+			<Vertex lat="53.50111537" lon="-113.44457833"/>
+			<Vertex lat="53.50111743" lon="-113.44451754"/>
+			<Vertex lat="53.50114260" lon="-113.44451824"/>
+		</CarParking>
+	</SceneryObject>
+	<!-- car park: Davies park and ride, aisle 14, left row -->
+	<SceneryObject lat="53.50054913" lon="-113.44360190" alt="0.000000" pitch="0.000000" bank="0.000000" heading="0.000000" imageComplexity="VERY_SPARSE" altitudeIsAgl="TRUE" snapToGround="TRUE" snapToNormal="FALSE">
+		<CarParking>
+			<Vertex lat="53.50075004" lon="-113.44390496"/>
+			<Vertex lat="53.50077923" lon="-113.44383808"/>
+			<Vertex lat="53.50037494" lon="-113.44333228"/>
+			<Vertex lat="53.50029229" lon="-113.44333228"/>
+		</CarParking>
+	</SceneryObject>
+	<!-- car park: Davies park and ride, aisle 14, right row -->
+	<SceneryObject lat="53.50039914" lon="-113.44364268" alt="0.000000" pitch="0.000000" bank="0.000000" heading="0.000000" imageComplexity="VERY_SPARSE" altitudeIsAgl="TRUE" snapToGround="TRUE" snapToNormal="FALSE">
+		<CarParking>
+			<Vertex lat="53.50071553" lon="-113.44398399"/>
+			<Vertex lat="53.50020610" lon="-113.44334665"/>
+			<Vertex lat="53.50020588" lon="-113.44341658"/>
+			<Vertex lat="53.50018062" lon="-113.44341817"/>
+			<Vertex lat="53.50068756" lon="-113.44404799"/>
+		</CarParking>
+	</SceneryObject>
+	<!-- car park: Davies park and ride, aisle 15, left row -->
+	<SceneryObject lat="53.50100792" lon="-113.44384488" alt="0.000000" pitch="0.000000" bank="0.000000" heading="0.000000" imageComplexity="VERY_SPARSE" altitudeIsAgl="TRUE" snapToGround="TRUE" snapToNormal="FALSE">
+		<CarParking>
+			<Vertex lat="53.50113300" lon="-113.44405762"/>
+			<Vertex lat="53.50113692" lon="-113.44395828"/>
+			<Vertex lat="53.50089550" lon="-113.44364838"/>
+			<Vertex lat="53.50086627" lon="-113.44371524"/>
+		</CarParking>
+	</SceneryObject>
+	<!-- car park: Davies park and ride, aisle 15, right row -->
+	<SceneryObject lat="53.50100776" lon="-113.44406637" alt="0.000000" pitch="0.000000" bank="0.000000" heading="0.000000" imageComplexity="VERY_SPARSE" altitudeIsAgl="TRUE" snapToGround="TRUE" snapToNormal="FALSE">
+		<CarParking>
+			<Vertex lat="53.50083175" lon="-113.44379427"/>
+			<Vertex lat="53.50080256" lon="-113.44386117"/>
+			<Vertex lat="53.50112476" lon="-113.44426656"/>
+			<Vertex lat="53.50112753" lon="-113.44420422"/>
+			<Vertex lat="53.50115221" lon="-113.44420563"/>
+		</CarParking>
+	</SceneryObject>
+	<!-- car park: Davies park and ride, aisle 15, left row -->
+	<SceneryObject lat="53.50076754" lon="-113.44353625" alt="0.000000" pitch="0.000000" bank="0.000000" heading="0.000000" imageComplexity="VERY_SPARSE" altitudeIsAgl="TRUE" snapToGround="TRUE" snapToNormal="FALSE">
+		<CarParking>
+			<Vertex lat="53.50084487" lon="-113.44368775"/>
+			<Vertex lat="53.50087409" lon="-113.44362089"/>
+			<Vertex lat="53.50071624" lon="-113.44341817"/>
+			<Vertex lat="53.50063496" lon="-113.44341817"/>
+		</CarParking>
+	</SceneryObject>
+	<!-- car park: Davies park and ride, aisle 15, right row -->
+	<SceneryObject lat="53.50059143" lon="-113.44353060" alt="0.000000" pitch="0.000000" bank="0.000000" heading="0.000000" imageComplexity="VERY_SPARSE" altitudeIsAgl="TRUE" snapToGround="TRUE" snapToNormal="FALSE">
+		<CarParking>
+			<Vertex lat="53.50081035" lon="-113.44376678"/>
+			<Vertex lat="53.50047200" lon="-113.44333228"/>
+			<Vertex lat="53.50045954" lon="-113.44333228"/>
+			<Vertex lat="53.50043410" lon="-113.44338799"/>
+			<Vertex lat="53.50078115" lon="-113.44383368"/>
+		</CarParking>
+	</SceneryObject>
+	<!-- car park: Davies park and ride, aisle 16, left row -->
+	<SceneryObject lat="53.50102944" lon="-113.44351632" alt="0.000000" pitch="0.000000" bank="0.000000" heading="0.000000" imageComplexity="VERY_SPARSE" altitudeIsAgl="TRUE" snapToGround="TRUE" snapToNormal="FALSE">
+		<CarParking>
+			<Vertex lat="53.50096050" lon="-113.44344125"/>
+			<Vertex lat="53.50095550" lon="-113.44347397"/>
+			<Vertex lat="53.50114616" lon="-113.44372315"/>
+			<Vertex lat="53.50115008" lon="-113.44362319"/>
+			<Vertex lat="53.50099321" lon="-113.44341817"/>
+			<Vertex lat="53.50097122" lon="-113.44341817"/>
+		</CarParking>
+	</SceneryObject>
+	<!-- car park: Davies park and ride, aisle 16, right row -->
+	<SceneryObject lat="53.50105498" lon="-113.44377655" alt="0.000000" pitch="0.000000" bank="0.000000" heading="0.000000" imageComplexity="VERY_SPARSE" altitudeIsAgl="TRUE" snapToGround="TRUE" snapToNormal="FALSE">
+		<CarParking>
+			<Vertex lat="53.50092858" lon="-113.44356296"/>
+			<Vertex lat="53.50090206" lon="-113.44363338"/>
+			<Vertex lat="53.50113759" lon="-113.44394121"/>
+			<Vertex lat="53.50114063" lon="-113.44387187"/>
+			<Vertex lat="53.50116606" lon="-113.44387334"/>
+		</CarParking>
+	</SceneryObject>
+	<!-- car park: Davies park and ride, aisle 16, right row -->
+	<SceneryObject lat="53.50081052" lon="-113.44346460" alt="0.000000" pitch="0.000000" bank="0.000000" heading="0.000000" imageComplexity="VERY_SPARSE" altitudeIsAgl="TRUE" snapToGround="TRUE" snapToNormal="FALSE">
+		<CarParking>
+			<Vertex lat="53.50090691" lon="-113.44353465"/>
+			<Vertex lat="53.50076390" lon="-113.44334774"/>
+			<Vertex lat="53.50076359" lon="-113.44341683"/>
+			<Vertex lat="53.50073739" lon="-113.44341817"/>
+			<Vertex lat="53.50088079" lon="-113.44360558"/>
+		</CarParking>
+	</SceneryObject>
+	<!-- car park: Davies park and ride, aisle 17, right row -->
+	<SceneryObject lat="53.49759130" lon="-113.44411825" alt="0.000000" pitch="0.000000" bank="0.000000" heading="0.000000" imageComplexity="VERY_SPARSE" altitudeIsAgl="TRUE" snapToGround="TRUE" snapToNormal="FALSE">
+		<CarParking>
+			<Vertex lat="53.49762574" lon="-113.44408059"/>
+			<Vertex lat="53.49758499" lon="-113.44405062"/>
+			<Vertex lat="53.49755630" lon="-113.44415556"/>
+			<Vertex lat="53.49759816" lon="-113.44418623"/>
+		</CarParking>
+	</SceneryObject>
+	<!-- car park: Davies park and ride, aisle 17, right row -->
+	<SceneryObject lat="53.49761906" lon="-113.44401207" alt="0.000000" pitch="0.000000" bank="0.000000" heading="0.000000" imageComplexity="VERY_SPARSE" altitudeIsAgl="TRUE" snapToGround="TRUE" snapToNormal="FALSE">
+		<CarParking>
+			<Vertex lat="53.49762646" lon="-113.44407783"/>
+			<Vertex lat="53.49765308" lon="-113.44397541"/>
+			<Vertex lat="53.49761095" lon="-113.44394715"/>
+			<Vertex lat="53.49758574" lon="-113.44404788"/>
+		</CarParking>
+	</SceneryObject>
+	<!-- END car parks -->
 </FSData>
