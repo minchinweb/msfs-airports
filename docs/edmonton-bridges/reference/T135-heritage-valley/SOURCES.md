@@ -41,3 +41,7 @@ Images with no open licence stated, or not yet found in open form. URL only.
 - [City girder notice, rendering and aerial maps](https://www.edmonton.ca/sites/default/files/public-files/documents/construction-notice-off-peak-ahd-closures-girder-steel-delivery.pdf). Shows the staging area and a rendering of the bridge. Construction-stage and concept. No licence stated.
 - [City median notice map](https://www.edmonton.ca/sites/default/files/public-files/documents/construction-notice-off-peak-adh-lane-median-closures.pdf). Aerial with the median work area. Construction stage. No licence stated.
 - Capital Line South project page and EarlyWorks page on edmonton.ca. Not read (HTTP 502). Project photos, timelapse, and arch-steel images may be there. Licence not known.
+
+## Street photos (Mapillary)
+
+2 street-level images in `street/`, list and licence note in `street/SOURCES.md`. Gathered 2026-11-23. Mapillary images are user photos, not necessarily taken of this structure's finished state.

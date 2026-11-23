@@ -29,3 +29,7 @@ None. `photos\` is empty.
 | Commons search results "Whitemud Creek park" (several) | Park, not the arch. | [Commons search](https://commons.wikimedia.org/w/index.php?search=Whitemud+Creek+Edmonton&title=Special:MediaSearch&type=image) | Not checked | Park views of the creek, not the arch. |
 
 Still needed for the photo rules: an open photo of the arch from the highway side, one of the deck, one of the ravine, and both approaches. None was found in the sources checked.
+
+## Street photos (Mapillary)
+
+6 street-level images in `street/`, list and licence note in `street/SOURCES.md`. Gathered 2026-11-23. Mapillary images are user photos, not necessarily taken of this structure's finished state.

@@ -45,3 +45,7 @@ Not openly licensed, or no open licence found. URL only:
 - [Transforming Edmonton, 20 April 2022](https://transforming.edmonton.ca/valley-line-southeast-101-an-insiders-guide-to-the-low-floor-urban-style-lrt-experience/). The March 2022 testing photograph at this stop was not saved.
 - [Edmonton Arts Council, Best Fronds](https://www.edmontonarts.ca/blog/best-fronds-letting-the-community-be-part-of-the-art).
 - City of Edmonton project-agreement PDFs and the 2013 assessment. Figures were not extracted.
+
+## Street photos (Mapillary)
+
+6 street-level images in `street/`, list and licence note in `street/SOURCES.md`. Gathered 2026-11-23. Mapillary images are user photos, not necessarily taken of this structure's finished state.

@@ -26,3 +26,7 @@ No open licence found. URL only:
 - Photographs on the [City Wellington Bridge page](https://www.edmonton.ca/projects_plans/roads/wellington-bridge), including shoring, a crack, rebar, and 2024 condition. No open licence stated.
 - The April 2024 drawing in [Document 239816](https://pub-edmonton.escribemeetings.com/filestream.ashx?DocumentId=239816). Marked not for construction. Not extracted.
 - [Groat bridge after accident](https://commons.wikimedia.org/wiki/File:Groat_bridge_after_accident.jpg), 22 October 1919, public domain. The streetcar trestle. Wellington's arch is 1932 on the City page, and 1910 on the Alberta row. That frame is not this bridge.
+
+## Street photos (Mapillary)
+
+No usable Mapillary street frames within 250 m on 2026-11-23, so there is no `street/` folder. Gathered 2026-11-23. Mapillary images are user photos, not necessarily taken of this structure's finished state.

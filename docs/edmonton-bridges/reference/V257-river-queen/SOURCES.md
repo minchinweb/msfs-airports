@@ -52,3 +52,7 @@ Not openly licensed, or no open licence found. URL only:
 - [CBC, 21 March 2024](https://www.cbc.ca/news/canada/edmonton/edmonton-riverboat-queen-for-sale-1.7150975), [CBC, 15 June 2018](https://www.cbc.ca/news/canada/edmonton/edmonton-queen-riverboat-1.4709079), and [CBC, 17 July 2022](https://www.cbc.ca/news/canada/edmonton/edmonton-riverboat-north-saskatchewan-river-1.6523493).
 - The Century Services auction pictures. No open licence stated.
 - No openly licensed frame was found with the boat, the Low Level, and the Tawatinâ together.
+
+## Street photos (Mapillary)
+
+6 street-level images in `street/`, list and licence note in `street/SOURCES.md`. Gathered 2026-11-23. Mapillary images are user photos, not necessarily taken of this structure's finished state.

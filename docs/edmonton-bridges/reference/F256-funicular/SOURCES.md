@@ -58,3 +58,7 @@ Not openly licensed, or no open licence found. URL only:
 - [CBC, 9 December 2017, Zoe Todd](https://www.cbc.ca/news/canada/edmonton/edmonton-funicular-launch-river-valley-stairs-accessible-1.4441601).
 - [SkyriseCities, 5 March 2020](https://edmonton.skyrisecities.com/news/2020/03/throwback-thursday-mechanized-river-valley-access-project.41637). Construction photographs. No open licence stated.
 - No openly licensed aerial was found. The City orthophoto repository was not extracted into `photos\`.
+
+## Street photos (Mapillary)
+
+6 street-level images in `street/`, list and licence note in `street/SOURCES.md`. Gathered 2026-11-23. Mapillary images are user photos, not necessarily taken of this structure's finished state.

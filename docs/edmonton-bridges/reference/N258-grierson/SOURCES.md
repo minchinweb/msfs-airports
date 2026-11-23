@@ -44,3 +44,7 @@ Not openly licensed, or no open licence found. URL only:
 - City of Edmonton project photographs referred to by Mack Male on 16 June 2012. The page was not retrieved.
 - City of Edmonton Orthophoto Repository 2025, tile 33183E593382N, 7.5 cm, September–October 2025. The tile covers this coordinate. It was not extracted into `photos\`. Open Government Licence – Edmonton applies to that open-data set. No measurement was taken from it.
 - No openly licensed frame was found that shows this deck and McDougall Hill Road underneath it.
+
+## Street photos (Mapillary)
+
+6 street-level images in `street/`, list and licence note in `street/SOURCES.md`. Gathered 2026-11-23. Mapillary images are user photos, not necessarily taken of this structure's finished state.

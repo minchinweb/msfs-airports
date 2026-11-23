@@ -44,3 +44,7 @@ Listed with the URL only, because the licence is not open or was not stated.
 | Global News rendering of the Misericordia station, credited to the City | Rendering. | Not stated | Not downloaded. Not finished-structure photo. |
 
 Wikimedia Commons search for "Valley Line West 87 Avenue" returned nothing relevant. A Commons category page for Valley Line West LRT returned 404.
+
+## Street photos (Mapillary)
+
+6 street-level images in `street/`, list and licence note in `street/SOURCES.md`. Gathered 2026-11-23. Mapillary images are user photos, not necessarily taken of this structure's finished state.

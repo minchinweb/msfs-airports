@@ -25,3 +25,7 @@ None.
 No openly licensed elevation or deck was found. City and council photographs of the rehabilitation, if any are on the pages above, have no open licence stated and were not saved.
 
 - [Groat bridge after accident](https://commons.wikimedia.org/wiki/File:Groat_bridge_after_accident.jpg), 22 October 1919, public domain. The streetcar trestle. This overpass is 1967. That frame is not this deck.
+
+## Street photos (Mapillary)
+
+6 street-level images in `street/`, list and licence note in `street/SOURCES.md`. Gathered 2026-11-23. Mapillary images are user photos, not necessarily taken of this structure's finished state.

@@ -45,3 +45,7 @@ Not openly licensed, or no open licence found. URL only:
 - [Alberco, job 9, photograph 5](https://www.alberco.com/job_photos/9/5.jpg). No open licence stated.
 - City of Edmonton Orthophoto Repository 2025. A tile was not extracted into `photos\`. No measurement was taken from it.
 - No openly licensed aerial of this deck was found. No openly licensed frame was found that shows this soffit, McDougall Hill Road underneath it, and the Low Level truss in the same view.
+
+## Street photos (Mapillary)
+
+6 street-level images in `street/`, list and licence note in `street/SOURCES.md`. Gathered 2026-11-23. Mapillary images are user photos, not necessarily taken of this structure's finished state.

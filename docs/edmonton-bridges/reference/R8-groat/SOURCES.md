@@ -54,3 +54,7 @@ No open licence found. URL only:
 - DIALOG opening photograph. No open licence stated.
 - Transforming Edmonton construction photographs. No open licence stated.
 - No openly licensed frame of either approach meeting grade was found. No openly licensed frame that resolves the three pier-base collars was found.
+
+## Street photos (Mapillary)
+
+6 street-level images in `street/`, list and licence note in `street/SOURCES.md`. Gathered 2026-11-23. Mapillary images are user photos, not necessarily taken of this structure's finished state.

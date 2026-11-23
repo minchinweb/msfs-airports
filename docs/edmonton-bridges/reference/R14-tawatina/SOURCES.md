@@ -56,3 +56,7 @@ Not openly licensed, or no open licence found. URL only:
 - [TransEd closure note](https://transedlrt.ca/valley-line-southeast-milestone-the-tawatina-bridge-is-connected/).
 - [DIALOG closure note](https://dialogdesign.ca/news-events/major-milestone-reached-for-edmontons-valley-line-lrt-tawatina-bridge-connected/).
 - City of Edmonton project-agreement PDFs and the 2013 assessment. Figures were not extracted.
+
+## Street photos (Mapillary)
+
+6 street-level images in `street/`, list and licence note in `street/SOURCES.md`. Gathered 2026-11-23. Mapillary images are user photos, not necessarily taken of this structure's finished state.

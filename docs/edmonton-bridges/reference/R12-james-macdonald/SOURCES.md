@@ -57,3 +57,7 @@ No open licence found, or no open photo licence stated. URL only:
 - [Lorac Construction](https://loracconstruction.ca/james-macdonald-bridge-bearing-repairs/). No open photo licence stated.
 
 No openly licensed close photograph of the river-span deck, or of the Rossdale approach, was found.
+
+## Street photos (Mapillary)
+
+6 street-level images in `street/`, list and licence note in `street/SOURCES.md`. Gathered 2026-11-23. Mapillary images are user photos, not necessarily taken of this structure's finished state.

@@ -34,3 +34,7 @@ No open licence found. URL only:
 - Transforming Edmonton construction photographs. No open licence stated.
 - EIA plate 2, the old bridge with piers, 31 July 2018. No open licence stated. That span was demolished.
 - [Groat bridge after accident](https://commons.wikimedia.org/wiki/File:Groat_bridge_after_accident.jpg), 22 October 1919, public domain. The streetcar trestle. The Alberta year for the demolished road bridge is 1954. That frame is not this deck.
+
+## Street photos (Mapillary)
+
+6 street-level images in `street/`, list and licence note in `street/SOURCES.md`. Gathered 2026-11-23. Mapillary images are user photos, not necessarily taken of this structure's finished state.

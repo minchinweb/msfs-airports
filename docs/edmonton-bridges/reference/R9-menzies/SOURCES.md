@@ -46,3 +46,7 @@ Not openly licensed, or no open licence found. URL only:
 - [City of Edmonton Archives, EA-596-1805](https://cityarchives.gov.edmonton.ab.ca/dudley-b-menzies-bridge-from-south-bank), "Dudley B. Menzies Bridge; from south bank". The page did not load (a browser check stopped it), so the file was not downloaded and no dimension was taken from it.
 - LinkedIn photographs attached to the Malik pier description, linked above.
 - Structurae media for this structure. No open licence stated on the public page.
+
+## Street photos (Mapillary)
+
+6 street-level images in `street/`, list and licence note in `street/SOURCES.md`. Gathered 2026-11-23. Mapillary images are user photos, not necessarily taken of this structure's finished state.

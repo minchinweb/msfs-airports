@@ -64,3 +64,7 @@ CC BY-NC, or no open licence found. URL only:
 - [Roads & Bridges, flashing ring](https://www.roadsbridges.com/flashing-ring). "12 bridges" refers to the northeast Highway 16 / Henday system interchange. Not used for H39.
 - Commons "Henday Yellowhead 1". The northeast interchange. Not used for H39.
 - Tomlinson, AECOM design alternatives for the Yellowhead and Manning system interchanges, [tac-atc.ca/wp-content/uploads/tomlinson.pdf](https://tac-atc.ca/wp-content/uploads/tomlinson.pdf). Not read in full; no claim is taken from it.
+
+## Street photos (Mapillary)
+
+6 street-level images in `street/`, list and licence note in `street/SOURCES.md`. Gathered 2026-11-23. Mapillary images are user photos, not necessarily taken of this structure's finished state.

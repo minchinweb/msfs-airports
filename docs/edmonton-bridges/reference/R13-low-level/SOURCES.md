@@ -64,3 +64,7 @@ CC BY-NC, or no open licence found. URL only:
 - City of Edmonton project page and the council PDFs. No open photo licence stated.
 - Figures in the [2008 CSCE paper](https://studylib.net/doc/8911448/rehabilitation-of-a-100-year-old-steel-truss-bridge). No open licence stated.
 - [Structurae media gallery](https://structurae.net/en/structures/low-level-bridge/media). No open licence confirmed.
+
+## Street photos (Mapillary)
+
+6 street-level images in `street/`, list and licence note in `street/SOURCES.md`. Gathered 2026-11-23. Mapillary images are user photos, not necessarily taken of this structure's finished state.

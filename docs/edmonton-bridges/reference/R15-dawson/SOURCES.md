@@ -47,3 +47,7 @@ CC BY-NC, or no open licence found. URL only:
 - City of Edmonton project page, construction bulletin, and the sketch on the archives page. No open photo licence stated.
 - Figures and photographs in the [2011 TAC paper](https://www.tac-atc.ca/wp-content/uploads/lima.pdf) and the [award PDF](https://www.canadianconsultingengineer.com/awards/pdfs/B-14_DawsonBridgeRehab.pdf). No open licence stated. The award PDF includes an aerial. It was not saved.
 - No openly licensed underside or aerial was found.
+
+## Street photos (Mapillary)
+
+4 street-level images in `street/`, list and licence note in `street/SOURCES.md`. Gathered 2026-11-23. Mapillary images are user photos, not necessarily taken of this structure's finished state.

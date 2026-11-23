@@ -37,3 +37,7 @@ Three photos were saved. They are the only open-licence photos found for this ju
 
 - Commons category "Anthony Henday Drive and Yellowhead Trail east interchange". Other files in that category were not reviewed for licence or view. Check the category before adding more photos.
 - Commons "Henday Yellowhead 1" (Wikipedia file, `File:Henday_Yellowhead_1.jpg`). It appeared in search. Not fetched. Its licence and framing were not checked.
+
+## Street photos (Mapillary)
+
+6 street-level images in `street/`, list and licence note in `street/SOURCES.md`. Gathered 2026-11-23. Mapillary images are user photos, not necessarily taken of this structure's finished state.

@@ -57,3 +57,7 @@ CC BY-NC, or no open licence found. URL only:
 | --- | --- | --- |
 | OpenStreetMap API 0.6 `map` read of box 53.507, -113.355, 53.519, -113.333, 2026-10-15 | Complete ways added to `geometry.json` under `ramps_added_2026_10_15`: the two Henday carriageways (245395446, 430222934), the flyover chain and loops, the collector ramps and the west westbound continuation 505630336. Overpass returned HTTP 502/500 that day, so the OSM API was used. | ODbL. Plan geometry only. |
 | `elevation/h52-samples.json` | DTM crown, side ground and DSM every 6 m along every modelled axis, Henday pavement and ground at the piers, from the 2018 clips. | Derived from OGL-Canada data. |
+
+## Street photos (Mapillary)
+
+6 street-level images in `street/`, list and licence note in `street/SOURCES.md`. Gathered 2026-11-23. Mapillary images are user photos, not necessarily taken of this structure's finished state.

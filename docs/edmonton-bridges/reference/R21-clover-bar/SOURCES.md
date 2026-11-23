@@ -46,3 +46,7 @@ CC BY-NC, or no open licence found. URL only:
 | The 2019 orthophoto in `aerial/` | Pier stations and bent stations (R22), end joints and plan check for all three | City of Edmonton Pictometry clip, measuring reference only, gitignored |
 | The photographs in `photos/` | Pier layout and shape, deck depth, railing colour (R20 and R22), truss depth (R22), read at scale from the known deck or locomotive length | As in the table above |
 | Web search (Wikipedia, Structurae, City and Alberta project pages, news) | No span, pier, girder or drawing data found | |
+
+## Street photos (Mapillary)
+
+5 street-level images in `street/`, list and licence note in `street/SOURCES.md`. Gathered 2026-11-23. Mapillary images are user photos, not necessarily taken of this structure's finished state.

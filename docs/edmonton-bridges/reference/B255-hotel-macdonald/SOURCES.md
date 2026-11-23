@@ -62,3 +62,7 @@ Thumbnails only (about 450 px wide; the full-size files are behind a bot check).
 | `ingenium-56095-1.jpg` | 56095-1 | 1964 | Aerial view of Edmonton. |
 | `ingenium-56095-5.jpg` | 56095-5 | 1964 | Aerial view of Edmonton. |
 | `ingenium-56095-6.jpg` | 56095-6 | 1964 | Aerial view of Edmonton. |
+
+## Street photos (Mapillary)
+
+6 street-level images in `street/`, list and licence note in `street/SOURCES.md`. Gathered 2026-11-23. Mapillary images are user photos, not necessarily taken of this structure's finished state.

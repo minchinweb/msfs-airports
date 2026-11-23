@@ -64,3 +64,7 @@ Not openly licensed, or no open licence found. URL only:
 | File | Shows | Source | Licence |
 | --- | --- | --- | --- |
 | `photos/pa-cl3-train-high-level-bridge-c1925.jpg` | "Train crossing the High Level Bridge, Edmonton", c.1925 (PAA CL3). The Flickr page gives no other description. | [Flickr alberta_archives/31560061158](https://www.flickr.com/photos/alberta_archives/31560061158/) | Provincial Archives of Alberta, "No known copyright restrictions" (Flickr Commons) |
+
+## Street photos (Mapillary)
+
+6 street-level images in `street/`, list and licence note in `street/SOURCES.md`. Gathered 2026-11-23. Mapillary images are user photos, not necessarily taken of this structure's finished state.

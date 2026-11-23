@@ -57,3 +57,7 @@ CC BY-NC, or no open licence found. URL only:
 | `street/` frames (read 2026-10-15) | Loop ramp: single lane, yellow left edge, white right, wide paved shoulders, grass slopes, no guardrail, curved davit lamps | CC BY-SA 4.0 |
 
 `aerial/ortho-2019.jpg` is entirely black: the City of Edmonton 2019 Pictometry service has no coverage in Strathcona County. The plan check used the LiDAR first-return image instead. No other openly licensed aerial was found or tried.
+
+## Street photos (Mapillary)
+
+6 street-level images in `street/`, list and licence note in `street/SOURCES.md`. Gathered 2026-11-23. Mapillary images are user photos, not necessarily taken of this structure's finished state.

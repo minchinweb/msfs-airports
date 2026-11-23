@@ -42,3 +42,7 @@ Not openly licensed, or no open licence found. URL only:
 - City of Edmonton orthophoto repository. A tile covers this coordinate. It was not extracted into `photos\`.
 - The ConstructConnect listing and the City council PDFs. No open photo licence stated.
 - No openly licensed frame was found that isolates the Scona Road span from the 98 Avenue spans and from the Low Level truss.
+
+## Street photos (Mapillary)
+
+5 street-level images in `street/`, list and licence note in `street/SOURCES.md`. Gathered 2026-11-23. Mapillary images are user photos, not necessarily taken of this structure's finished state.

@@ -43,3 +43,7 @@ CC BY-NC, or no open licence found. URL only:
 | Web search (2026-10-15): "Campbell Bridge Fox Drive Whitemud Creek Edmonton spans length rehabilitation" | Nothing on spans, type, piers or the 2008 rehabilitation. Wikipedia Fox Drive only. | None found. |
 | `elevation/profiles.csv`, `scenery-edmonton-bridges/tools/lidar_pil.py` | 25 m LiDAR profiles on every mapped way. Creek bed about 618.4 m at 50 m along the south way; banks 627.9 m at the ends. | Derived from the gitignored 2018 clips. |
 | 2019 orthophoto measurements (`aerial/`, 0.2 m/px) | Overall deck width (about 33.5 m), joint lines, deck length about 85 m between the visible joints. Used for measuring only. | City 2019 Pictometry, licence not confirmed. |
+
+## Street photos (Mapillary)
+
+4 street-level images in `street/`, list and licence note in `street/SOURCES.md`. Gathered 2026-11-23. Mapillary images are user photos, not necessarily taken of this structure's finished state.

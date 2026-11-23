@@ -8,3 +8,5 @@ Mapillary frames, 2048 px, licence CC BY-SA 4.0 (credit the creator). Daytime on
 | `mly-655552812510174.jpg` | 2018-07-21 | lvl5 | 15 | 3 | https://www.mapillary.com/app/?pKey=655552812510174 |
 | `mly-920842832035962.jpg` | 2018-08-09 | lvl5 | 16 | 17 | https://www.mapillary.com/app/?pKey=920842832035962 |
 | `mly-1176865879401738.jpg` | 2018-07-21 | lvl5 | 2 | 13 | https://www.mapillary.com/app/?pKey=1176865879401738 |
+| `mly-890765248446619.jpg` | 2018-08-09 | lvl5 | 24 | 8 | https://www.mapillary.com/app/?pKey=890765248446619 |
+| `mly-518753345833013.jpg` | 2018-07-21 | lvl5 | 2 | 17 | https://www.mapillary.com/app/?pKey=518753345833013 |

@@ -31,3 +31,7 @@ No open licence found. URL only:
 - Edmonton Journal photographs of 7 March 2018 and 20 April 2018. No open licence stated.
 - Global News photograph of 20 April 2018. No open licence stated.
 - [Groat bridge after accident](https://commons.wikimedia.org/wiki/File:Groat_bridge_after_accident.jpg), McDermid Studio, 22 October 1919, public domain. That frame is the streetcar trestle. It is not this 1966 bridge.
+
+## Street photos (Mapillary)
+
+6 street-level images in `street/`, list and licence note in `street/SOURCES.md`. Gathered 2026-11-23. Mapillary images are user photos, not necessarily taken of this structure's finished state.

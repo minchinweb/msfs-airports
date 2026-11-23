@@ -60,3 +60,7 @@ Not openly licensed, or no open licence found. URL only:
 - City of Edmonton project page, yearbook, and project-update PDFs. No open photo licence stated.
 - Figures in the [2014 design paper](https://www.aisc.org/media/niomyn3k/montgomery-2014-wsbs-final.pdf) and the [2019 award PDF](https://www.canadianconsultingengineer.com/awards/pdfs/2019/B-06_DIALOGWalterdale.pdf). No open licence stated.
 - No openly licensed aerial or orthophoto of the finished bridge was found.
+
+## Street photos (Mapillary)
+
+6 street-level images in `street/`, list and licence note in `street/SOURCES.md`. Gathered 2026-11-23. Mapillary images are user photos, not necessarily taken of this structure's finished state.

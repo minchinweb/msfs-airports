@@ -40,3 +40,7 @@ No open licence found. URL only:
 - ENR photographs of the buckled girders. No open licence stated.
 - EIA plate photographs. No open licence stated.
 - No openly licensed side elevation was found.
+
+## Street photos (Mapillary)
+
+6 street-level images in `street/`, list and licence note in `street/SOURCES.md`. Gathered 2026-11-23. Mapillary images are user photos, not necessarily taken of this structure's finished state.

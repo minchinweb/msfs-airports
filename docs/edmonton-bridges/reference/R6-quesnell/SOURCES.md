@@ -56,3 +56,7 @@ CC BY-NC, or no open licence found. URL only:
 | 2019 orthophoto measurements (`aerial/`, 0.2 m/px) | Overall deck width, median, 4.2 m path, Fox Drive merge widening. Used for measuring only. | City 2019 Pictometry, licence not confirmed. |
 
 Web searches for a span layout, girder depth or a bridge sheet found none beyond the table above.
+
+## Street photos (Mapillary)
+
+5 street-level images in `street/`, list and licence note in `street/SOURCES.md`. Gathered 2026-11-23. Mapillary images are user photos, not necessarily taken of this structure's finished state.
