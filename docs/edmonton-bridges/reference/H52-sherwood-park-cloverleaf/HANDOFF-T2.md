@@ -10,7 +10,7 @@ Yes, at the Y79 standard. The 2018 LiDAR clips cover every way. Missing and coll
 
 - E-7 (eastbound, 3 lanes) and W-8 (westbound, 4 lanes): welded-girder decks over Henday, one pier on the Henday median (4 and 5 columns, cap beam), abutments 65.5 m and 63.0 m either side of it along the travel direction.
 - EN1-9 (flyover over Henday) and EN2-10 (flyover over the freeway, concrete girders), both on one flyover chain from the freeway west of Henday, up over Henday, over the freeway east of it, to northbound Henday.
-- Freeway and Wye Road approaches (up to 1 km each side, 4:1 grass slopes, inner slopes cut short and skirted so the two carriageways do not run through each other), the flyover chain, four loops (SW, NW, NE, and the SW loop chain), collector ramps.
+- Freeway and Wye Road approaches (up to 1 km each side, 4:1 grass slopes, inner slopes cut short and skirted so the two carriageways do not run through each other), the flyover chain, three loop ramps (SW, NW, NE; the SW loop is three ways in one chain), collector ramps. With the eastbound-to-northbound flyover that is four left turns, which matches Wikipedia's "other three left turns are loop ramps".
 - Not modelled: Henday itself (the sim draws it), at-grade Henday collector links, guardrail, signs, sign gantries.
 
 ## Sourced / assumed
@@ -33,3 +33,7 @@ Yes, at the Y79 standard. The 2018 LiDAR clips cover every way. Missing and coll
 ## Rebuilding
 
 `python -I -c "import sys; sys.path.insert(0, 'scenery-edmonton-bridges/tools'); import site_h52; site_h52.sample()"`, then `gen_bridges.py h52`.
+
+## Checked against the Summer 2013 update (2026-11-23)
+
+No model change. The two freeway decks, the flyover over Henday and the flyover over the freeway match the 2013 update and the 2018 DSM (see NOTES.md, last section). The three loop ramps were miscounted as four in the Built section above and are now corrected. The update's two-bridges-of-three-lanes wording conflicts with its own four-lane westbound text, and the model keeps W-8 at four lanes. The name decision is in NOTES.md.
