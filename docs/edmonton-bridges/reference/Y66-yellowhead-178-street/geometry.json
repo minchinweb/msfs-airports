@@ -1,0 +1,352 @@
+{
+  "code": "Y66",
+  "name": "Yellowhead / 178 Street",
+  "centre": [
+    53.572,
+    -113.631
+  ],
+  "crs": "EPSG:4326",
+  "coordinate_order": "[lat, lon]",
+  "geometry_source": "docs/edmonton-bridges/bridge-geometry.json (Y66 object, OpenStreetMap extract, retrieved 2026-10-14)",
+  "geometry_retrieved": "2026-11-23",
+  "plan_length_note": "plan_length_m is the horizontal WGS84 length of each OSM way, from its nodes, to one decimal. Connected approach and ramp ways in the extract stop at the edge of the downloaded box, so an approach plan_length_m is not a climb to grade and is not a structural length. No 178 Street way is in this object.",
+  "decks": [
+    {
+      "osm_way": 23226555,
+      "part": "road_deck",
+      "which": "Yellowhead Trail NW (Highway 16), bridge=yes, layer=1, one-way. Node order is west to east for way 23226555 and east to west for way 61513664 as they are stored. Mapped Yellowhead, not 178 Street. See the NOTES.md on which road this is.",
+      "plan_length_m": 135.7,
+      "tags": {
+        "alt_name": "Yellowhead Highway",
+        "bridge": "yes",
+        "highway": "motorway",
+        "lanes": "3",
+        "layer": "1",
+        "maxspeed": "90",
+        "name": "Yellowhead Trail NW",
+        "oneway": "yes",
+        "ref": "16",
+        "surface": "asphalt",
+        "width": "11.1"
+      },
+      "nodes": [
+        [
+          53.571903,
+          -113.632379
+        ],
+        [
+          53.571694,
+          -113.630354
+        ]
+      ]
+    },
+    {
+      "osm_way": 61513664,
+      "part": "road_deck",
+      "which": "Yellowhead Trail NW (Highway 16), bridge=yes, layer=1, one-way. Node order is west to east for way 23226555 and east to west for way 61513664 as they are stored. Mapped Yellowhead, not 178 Street. See the NOTES.md on which road this is.",
+      "plan_length_m": 152.9,
+      "tags": {
+        "alt_name": "Yellowhead Highway",
+        "bridge": "yes",
+        "highway": "motorway",
+        "lanes": "4",
+        "layer": "1",
+        "maxspeed": "90",
+        "name": "Yellowhead Trail NW",
+        "oneway": "yes",
+        "ref": "16",
+        "surface": "asphalt",
+        "width": "14.6"
+      },
+      "nodes": [
+        [
+          53.571846,
+          -113.629539
+        ],
+        [
+          53.572078,
+          -113.631821
+        ]
+      ]
+    },
+    {
+      "osm_way": 273839599,
+      "part": "bridge_link_ramp",
+      "which": "Motorway link ramp on the Yellowhead bridge box, bridge=yes, layer=1, one lane. Plan geometry only. Its direction is in its node order, not confirmed against a source.",
+      "plan_length_m": 142.1,
+      "tags": {
+        "bridge": "yes",
+        "highway": "motorway_link",
+        "lanes": "1",
+        "layer": "1",
+        "oneway": "yes",
+        "width": "4.8"
+      },
+      "nodes": [
+        [
+          53.571841,
+          -113.632675
+        ],
+        [
+          53.571645,
+          -113.630548
+        ]
+      ]
+    }
+  ],
+  "approaches": [
+    {
+      "osm_way": 23226554,
+      "part": "approach",
+      "which": "Yellowhead Trail NW, 3 lanes, one-way, approach on the west (node order from the bridge end out)",
+      "plan_length_m": 37.2,
+      "tags": {
+        "alt_name": "Yellowhead Highway",
+        "highway": "motorway",
+        "lanes": "3",
+        "maxspeed": "90",
+        "name": "Yellowhead Trail NW",
+        "oneway": "yes",
+        "ref": "16",
+        "surface": "asphalt",
+        "width": "11.1"
+      },
+      "nodes": [
+        [
+          53.571694,
+          -113.630354
+        ],
+        [
+          53.571638,
+          -113.629799
+        ]
+      ]
+    },
+    {
+      "osm_way": 60064980,
+      "part": "approach",
+      "which": "Yellowhead Trail NW, 3 lanes, one-way, long approach to the west. The far node is 723 m of plan length from the bridge end, and that is not a grade point.",
+      "plan_length_m": 723.3,
+      "tags": {
+        "alt_name": "Yellowhead Highway",
+        "highway": "motorway",
+        "lanes": "3",
+        "maxspeed": "90",
+        "name": "Yellowhead Trail NW",
+        "oneway": "yes",
+        "ref": "16",
+        "surface": "asphalt",
+        "width": "11.1"
+      },
+      "nodes": [
+        [
+          53.572979,
+          -113.643182
+        ],
+        [
+          53.572874,
+          -113.641977
+        ],
+        [
+          53.57279,
+          -113.641097
+        ],
+        [
+          53.572679,
+          -113.63997
+        ],
+        [
+          53.572474,
+          -113.638015
+        ],
+        [
+          53.572301,
+          -113.63629
+        ],
+        [
+          53.572127,
+          -113.634597
+        ],
+        [
+          53.571926,
+          -113.632623
+        ],
+        [
+          53.571903,
+          -113.632379
+        ]
+      ]
+    },
+    {
+      "osm_way": 61431875,
+      "part": "approach",
+      "which": "Yellowhead Trail NW, 4 lanes, one-way, short approach at the east end of way 61513664",
+      "plan_length_m": 45.0,
+      "tags": {
+        "alt_name": "Yellowhead Highway",
+        "highway": "motorway",
+        "lanes": "4",
+        "maxspeed": "90",
+        "name": "Yellowhead Trail NW",
+        "oneway": "yes",
+        "ref": "16",
+        "surface": "asphalt",
+        "width": "14.6"
+      },
+      "nodes": [
+        [
+          53.572078,
+          -113.631821
+        ],
+        [
+          53.57214,
+          -113.632495
+        ]
+      ]
+    },
+    {
+      "osm_way": 61513652,
+      "part": "approach",
+      "which": "Yellowhead Trail NW, 4 lanes, one-way, approach on the east side",
+      "plan_length_m": 221.4,
+      "tags": {
+        "alt_name": "Yellowhead Highway",
+        "highway": "motorway",
+        "lanes": "4",
+        "maxspeed": "90",
+        "name": "Yellowhead Trail NW",
+        "oneway": "yes",
+        "ref": "16",
+        "surface": "asphalt",
+        "width": "14.6"
+      },
+      "nodes": [
+        [
+          53.571621,
+          -113.626213
+        ],
+        [
+          53.571621,
+          -113.626604
+        ],
+        [
+          53.571643,
+          -113.627271
+        ],
+        [
+          53.571688,
+          -113.627885
+        ],
+        [
+          53.571746,
+          -113.628553
+        ],
+        [
+          53.571813,
+          -113.629213
+        ],
+        [
+          53.571846,
+          -113.629539
+        ]
+      ]
+    }
+  ],
+  "ramps": [
+    {
+      "osm_way": 186928079,
+      "part": "ramp",
+      "which": "Motorway link ramp, no bridge tag, one lane. Plan geometry only.",
+      "plan_length_m": 449.8,
+      "tags": {
+        "highway": "motorway_link",
+        "lanes": "1",
+        "oneway": "yes",
+        "surface": "asphalt",
+        "width": "4.8"
+      },
+      "nodes": [
+        [
+          53.570607,
+          -113.638983
+        ],
+        [
+          53.570713,
+          -113.638592
+        ],
+        [
+          53.571527,
+          -113.636074
+        ],
+        [
+          53.571673,
+          -113.635592
+        ],
+        [
+          53.571762,
+          -113.635192
+        ],
+        [
+          53.57184,
+          -113.63472
+        ],
+        [
+          53.571887,
+          -113.634226
+        ],
+        [
+          53.571897,
+          -113.633973
+        ],
+        [
+          53.571901,
+          -113.63376
+        ],
+        [
+          53.571899,
+          -113.633533
+        ],
+        [
+          53.571885,
+          -113.633238
+        ],
+        [
+          53.571866,
+          -113.632958
+        ],
+        [
+          53.571841,
+          -113.632675
+        ]
+      ]
+    },
+    {
+      "osm_way": 273839600,
+      "part": "ramp",
+      "which": "Motorway link ramp, no bridge tag, one lane. Plan geometry only.",
+      "plan_length_m": 49.5,
+      "tags": {
+        "highway": "motorway_link",
+        "lanes": "1",
+        "oneway": "yes",
+        "width": "4.8"
+      },
+      "nodes": [
+        [
+          53.571645,
+          -113.630548
+        ],
+        [
+          53.571638,
+          -113.629799
+        ]
+      ]
+    }
+  ],
+  "dropped_ways": [
+    25531583,
+    279661272,
+    279661273
+  ],
+  "dropped_note": "Dropped OSM ways 25531583, 279661272 and 279661273 (role cross_road in the extract). They are Yellowhead Trail NW carriageways and a motorway link that touch the bridge ends but are not tagged as the bridge, so they are not deck, approach or ramp of this crossing. No way with another structure code is in the Y66 object. No OSM way named 178 Street NW is in the Y66 object: the 178 Street ways in bridge-geometry.json belong to Whitemud / 178 Street (object at about line 16169), not this structure. Deck elevations are not in the source and none is given here."
+}
