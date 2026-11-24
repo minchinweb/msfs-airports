@@ -1,0 +1,2339 @@
+{
+  "code": "Y71",
+  "name": "Yellowhead / 82 Street",
+  "centre": [
+    53.582152,
+    -113.467305
+  ],
+  "centre_note": "Alberta Structure-Export.csv record 41170 (82 STREET - YELLOWHEAD TRAIL (B224)), LATITUDE 53.5821522814449, LONGITUDE -113.467305324759. Used because the record is found and the point sits on the crossing (about 2 m from an OSM node where three ramp ways meet at the 82 Street and Yellowhead ramp junction). The PRIORITY.md and bridge-geometry.json estimate, 53.578, -113.462, is about 579 m south-east of this point and was not used. The cached Y71 object (retrieved 2026-10-14) was centred on that estimate; its bridge ways are Capital Line light rail and a disused rail yard about 1.3 km south-south-east, so it does not describe this crossing.",
+  "crs": "EPSG:4326",
+  "coordinate_order": "[lat, lon]",
+  "geometry_source": "Live OpenStreetMap API 0.6 map call, bbox -113.4823,53.5722,-113.4523,53.5922 (centred on the record point, not clipped), retrieved 2026-11-23. The cached Y71 object in docs/edmonton-bridges/bridge-geometry.json was not edited and was not used for geometry.",
+  "geometry_retrieved": "2026-11-23",
+  "plan_length_note": "plan_length_m is the horizontal WGS84 length of each OSM way, computed along its nodes with a spherical (haversine) formula. Approach, ramp and road-beneath lengths are plan lengths of whole ways. They are not the climb to grade and not a structural length. The published nominal span is 34.2 m (Alberta record 41170).",
+  "dropped_note": "Dropped: CN rail bridge ways 23427569, 37831895, 37831899, 37831900, 37831901 (CNR over 82 Street, record 41690, a different structure about 165 m north). Yellowhead frontage roads (unclassified, named Yellowhead Trail NW) 256516545 and 46894694. Service roads, alleys and a long cycleway beyond the footprint. No way was dropped for carrying a different Y-code; the extract has none.",
+  "decks": [
+    {
+      "osm_way": 472538991,
+      "part": "road_deck_nb",
+      "which": "82 Street NW northbound carriageway over the Yellowhead underpass. No bridge=yes or layer tag on this way or on any 82 Street way at the crossing in the extract. Picked by position: both endpoints within 10 m of the record point. Node order is south to north.",
+      "plan_length_m": 21.8,
+      "tags": {
+        "highway": "secondary",
+        "lanes": "3",
+        "maxspeed": "50",
+        "name": "82 Street NW",
+        "oneway": "yes"
+      },
+      "nodes": [
+        [
+          53.582211,
+          -113.467221
+        ],
+        [
+          53.582407,
+          -113.467222
+        ]
+      ],
+      "nearest_m_to_centre": 9,
+      "farthest_m_to_centre": 29
+    },
+    {
+      "osm_way": 473274207,
+      "part": "road_deck_nb",
+      "which": "82 Street NW northbound, southern piece of the crossing. No bridge tag. Node order is south to north. The northbound crossing is this way plus 472538991.",
+      "plan_length_m": 19.9,
+      "tags": {
+        "highway": "secondary",
+        "lanes": "3",
+        "maxspeed": "50",
+        "name": "82 Street NW",
+        "oneway": "yes"
+      },
+      "nodes": [
+        [
+          53.582033,
+          -113.467214
+        ],
+        [
+          53.582063,
+          -113.467215
+        ],
+        [
+          53.582211,
+          -113.467221
+        ]
+      ],
+      "nearest_m_to_centre": 9,
+      "farthest_m_to_centre": 15
+    },
+    {
+      "osm_way": 473274206,
+      "part": "road_deck_sb",
+      "which": "82 Street NW southbound carriageway over the Yellowhead underpass, northern piece. No bridge tag. Node order is north to south. The southbound crossing is this way plus 473274205.",
+      "plan_length_m": 21.1,
+      "tags": {
+        "highway": "secondary",
+        "lanes": "3",
+        "maxspeed": "50",
+        "name": "82 Street NW",
+        "oneway": "yes"
+      },
+      "nodes": [
+        [
+          53.582406,
+          -113.467402
+        ],
+        [
+          53.582216,
+          -113.467392
+        ]
+      ],
+      "nearest_m_to_centre": 9,
+      "farthest_m_to_centre": 29
+    },
+    {
+      "osm_way": 473274205,
+      "part": "road_deck_sb",
+      "which": "82 Street NW southbound carriageway over the Yellowhead underpass, southern piece. No bridge tag. Node order is north to south.",
+      "plan_length_m": 21.0,
+      "tags": {
+        "highway": "secondary",
+        "lanes": "3",
+        "maxspeed": "50",
+        "name": "82 Street NW",
+        "oneway": "yes"
+      },
+      "nodes": [
+        [
+          53.582216,
+          -113.467392
+        ],
+        [
+          53.582026,
+          -113.467394
+        ]
+      ],
+      "nearest_m_to_centre": 9,
+      "farthest_m_to_centre": 15
+    }
+  ],
+  "approaches": [
+    {
+      "osm_way": 46894306,
+      "part": "approach_nb_south",
+      "which": "82 Street NW northbound, south of the deck. Lanes tagged 4 with a left-turn lane. Node order south to north. Way starts about 80 m south of the record point.",
+      "plan_length_m": 69.5,
+      "tags": {
+        "highway": "secondary",
+        "lanes": "4",
+        "maxspeed": "50",
+        "name": "82 Street NW",
+        "oneway": "yes",
+        "turn:lanes": "left|none|none|none"
+      },
+      "nodes": [
+        [
+          53.581408,
+          -113.467215
+        ],
+        [
+          53.581699,
+          -113.467204
+        ],
+        [
+          53.582033,
+          -113.467214
+        ]
+      ],
+      "nearest_m_to_centre": 15,
+      "farthest_m_to_centre": 83
+    },
+    {
+      "osm_way": 440558308,
+      "part": "approach_sb_south",
+      "which": "82 Street NW southbound, south of the deck. Lanes tagged 3. Node order north to south.",
+      "plan_length_m": 67.6,
+      "tags": {
+        "highway": "secondary",
+        "lanes": "3",
+        "maxspeed": "50",
+        "name": "82 Street NW",
+        "oneway": "yes"
+      },
+      "nodes": [
+        [
+          53.582026,
+          -113.467394
+        ],
+        [
+          53.581704,
+          -113.46739
+        ],
+        [
+          53.581418,
+          -113.467411
+        ]
+      ],
+      "nearest_m_to_centre": 15,
+      "farthest_m_to_centre": 82
+    },
+    {
+      "osm_way": 472538989,
+      "part": "approach_nb_north",
+      "which": "82 Street NW northbound, first piece north of the deck. Lanes tagged 3. Node order south to north.",
+      "plan_length_m": 50.0,
+      "tags": {
+        "highway": "secondary",
+        "lanes": "3",
+        "maxspeed": "60",
+        "name": "82 Street NW",
+        "oneway": "yes",
+        "sidewalk:right": "separate"
+      },
+      "nodes": [
+        [
+          53.582407,
+          -113.467222
+        ],
+        [
+          53.582475,
+          -113.46722
+        ],
+        [
+          53.582857,
+          -113.467212
+        ]
+      ],
+      "nearest_m_to_centre": 29,
+      "farthest_m_to_centre": 79
+    },
+    {
+      "osm_way": 472538993,
+      "part": "approach_nb_north",
+      "which": "82 Street NW northbound, second piece north of the deck, running on past the CNR overpass (record 41690). Lanes tagged 3. Node order south to north.",
+      "plan_length_m": 100.7,
+      "tags": {
+        "highway": "secondary",
+        "lanes": "3",
+        "maxspeed": "60",
+        "name": "82 Street NW",
+        "oneway": "yes",
+        "sidewalk:right": "separate"
+      },
+      "nodes": [
+        [
+          53.582857,
+          -113.467212
+        ],
+        [
+          53.583762,
+          -113.467208
+        ]
+      ],
+      "nearest_m_to_centre": 79,
+      "farthest_m_to_centre": 179
+    },
+    {
+      "osm_way": 472538995,
+      "part": "approach_sb_north",
+      "which": "82 Street NW southbound, first piece north of the deck. Lanes tagged 4 with a left-turn lane. Node order north to south.",
+      "plan_length_m": 75.8,
+      "tags": {
+        "highway": "secondary",
+        "lanes": "4",
+        "maxspeed": "60",
+        "name": "82 Street NW",
+        "oneway": "yes",
+        "sidewalk:right": "separate",
+        "turn:lanes": "left|none|none|none"
+      },
+      "nodes": [
+        [
+          53.583087,
+          -113.467413
+        ],
+        [
+          53.582474,
+          -113.467402
+        ],
+        [
+          53.582406,
+          -113.467402
+        ]
+      ],
+      "nearest_m_to_centre": 29,
+      "farthest_m_to_centre": 104
+    },
+    {
+      "osm_way": 1513039275,
+      "part": "approach_sb_north",
+      "which": "82 Street NW southbound, second piece north of the deck. Lanes tagged 5. maxheight=4.2 on this way is a mapper tag, not a published clearance. Node order north to south.",
+      "plan_length_m": 36.9,
+      "tags": {
+        "highway": "secondary",
+        "lanes": "5",
+        "maxheight": "4.2",
+        "maxspeed": "60",
+        "name": "82 Street NW",
+        "oneway": "yes",
+        "sidewalk:right": "separate",
+        "turn:lanes": "left|none|none|none|right"
+      },
+      "nodes": [
+        [
+          53.583419,
+          -113.467414
+        ],
+        [
+          53.583087,
+          -113.467413
+        ]
+      ],
+      "nearest_m_to_centre": 104,
+      "farthest_m_to_centre": 141
+    },
+    {
+      "osm_way": 472538997,
+      "part": "approach_sb_north",
+      "which": "82 Street NW southbound, third piece north of the deck, running past the CNR overpass. Lanes tagged 3. maxheight=4.2 is a mapper tag, not a published clearance. Node order north to south.",
+      "plan_length_m": 163.9,
+      "tags": {
+        "highway": "secondary",
+        "lanes": "3",
+        "maxheight": "4.2",
+        "maxspeed": "60",
+        "name": "82 Street NW",
+        "oneway": "yes",
+        "sidewalk:right": "separate"
+      },
+      "nodes": [
+        [
+          53.584894,
+          -113.46742
+        ],
+        [
+          53.584826,
+          -113.46742
+        ],
+        [
+          53.584707,
+          -113.46742
+        ],
+        [
+          53.583419,
+          -113.467414
+        ]
+      ],
+      "nearest_m_to_centre": 141,
+      "farthest_m_to_centre": 305
+    }
+  ],
+  "road_beneath": [
+    {
+      "osm_way": 80402688,
+      "part": "road_beneath_eb_underpass",
+      "which": "Yellowhead Trail NW (Highway 16) eastbound carriageway beneath the 82 Street deck. Tagged layer -1 and tunnel=yes; in OSM those tags mark an underpass, not a tunnel. maxheight=5.2 on this way matches the Alberta theoretical vertical clearance under the structure (5.2 m, record 41170). That is a theoretical figure, not a measured one. Node order west to east.",
+      "plan_length_m": 60.8,
+      "tags": {
+        "highway": "motorway",
+        "lanes": "3",
+        "layer": "-1",
+        "maxheight": "5.2",
+        "maxspeed": "70",
+        "name": "Yellowhead Trail NW",
+        "oneway": "yes",
+        "ref": "16",
+        "surface": "asphalt",
+        "tunnel": "yes",
+        "width": "11.1"
+      },
+      "nodes": [
+        [
+          53.582121,
+          -113.467784
+        ],
+        [
+          53.582155,
+          -113.466864
+        ]
+      ],
+      "nearest_m_to_centre": 29,
+      "farthest_m_to_centre": 32
+    },
+    {
+      "osm_way": 80402686,
+      "part": "road_beneath_wb_underpass",
+      "which": "Yellowhead Trail NW (Highway 16) westbound carriageway beneath the 82 Street deck. Tagged layer -1 and tunnel=yes; underpass in OSM terms. No maxheight tag. Node order east to west.",
+      "plan_length_m": 56.9,
+      "tags": {
+        "highway": "motorway",
+        "lanes": "3",
+        "layer": "-1",
+        "maxspeed": "70",
+        "name": "Yellowhead Trail NW",
+        "oneway": "yes",
+        "ref": "16",
+        "tunnel": "yes"
+      },
+      "nodes": [
+        [
+          53.582301,
+          -113.466916
+        ],
+        [
+          53.582271,
+          -113.467776
+        ]
+      ],
+      "nearest_m_to_centre": 31,
+      "farthest_m_to_centre": 34
+    },
+    {
+      "osm_way": 1285856992,
+      "part": "road_beneath_eb_at_grade",
+      "which": "Yellowhead Trail NW eastbound at grade, west of the underpass. Whole way; the far node is about 330 m west. Plan length only.",
+      "plan_length_m": 333.4,
+      "tags": {
+        "highway": "motorway",
+        "lanes": "3",
+        "maxspeed": "70",
+        "name": "Yellowhead Trail NW",
+        "oneway": "yes",
+        "ref": "16",
+        "surface": "asphalt",
+        "width": "11.1"
+      },
+      "nodes": [
+        [
+          53.581239,
+          -113.472576
+        ],
+        [
+          53.581291,
+          -113.471935
+        ],
+        [
+          53.581363,
+          -113.471499
+        ],
+        [
+          53.581433,
+          -113.47116
+        ],
+        [
+          53.581511,
+          -113.470819
+        ],
+        [
+          53.581596,
+          -113.470507
+        ],
+        [
+          53.581695,
+          -113.470147
+        ],
+        [
+          53.581885,
+          -113.469435
+        ],
+        [
+          53.581955,
+          -113.469109
+        ],
+        [
+          53.582012,
+          -113.46882
+        ],
+        [
+          53.582058,
+          -113.468535
+        ],
+        [
+          53.582093,
+          -113.468226
+        ],
+        [
+          53.582121,
+          -113.467784
+        ]
+      ],
+      "nearest_m_to_centre": 32,
+      "farthest_m_to_centre": 362
+    },
+    {
+      "osm_way": 61345250,
+      "part": "road_beneath_eb_at_grade",
+      "which": "Yellowhead Trail NW eastbound at grade, east of the underpass. Whole way; far node about 400 m east. Width tag 11.1 m is an OSM mapper tag, not a published width.",
+      "plan_length_m": 414.2,
+      "tags": {
+        "highway": "motorway",
+        "lanes": "3",
+        "maxspeed": "70",
+        "name": "Yellowhead Trail NW",
+        "oneway": "yes",
+        "ref": "16",
+        "surface": "asphalt",
+        "width": "11.1"
+      },
+      "nodes": [
+        [
+          53.582155,
+          -113.466864
+        ],
+        [
+          53.582285,
+          -113.461721
+        ],
+        [
+          53.582308,
+          -113.460595
+        ]
+      ],
+      "nearest_m_to_centre": 29,
+      "farthest_m_to_centre": 443
+    },
+    {
+      "osm_way": 61480209,
+      "part": "road_beneath_wb_at_grade",
+      "which": "Yellowhead Trail NW westbound at grade, west of the underpass. Whole way, which runs well past the 150 m footprint. Plan length only.",
+      "plan_length_m": 690.8,
+      "tags": {
+        "highway": "motorway",
+        "lanes": "3",
+        "maxspeed": "70",
+        "name": "Yellowhead Trail NW",
+        "oneway": "yes",
+        "ref": "16",
+        "sidewalk": "no",
+        "surface": "asphalt"
+      },
+      "nodes": [
+        [
+          53.582271,
+          -113.467776
+        ],
+        [
+          53.582255,
+          -113.467999
+        ],
+        [
+          53.582233,
+          -113.468257
+        ],
+        [
+          53.582201,
+          -113.468575
+        ],
+        [
+          53.582153,
+          -113.468885
+        ],
+        [
+          53.582094,
+          -113.469189
+        ],
+        [
+          53.582028,
+          -113.469502
+        ],
+        [
+          53.581639,
+          -113.470947
+        ],
+        [
+          53.58157,
+          -113.471243
+        ],
+        [
+          53.581504,
+          -113.471597
+        ],
+        [
+          53.581443,
+          -113.471976
+        ],
+        [
+          53.581387,
+          -113.472597
+        ],
+        [
+          53.581376,
+          -113.473141
+        ],
+        [
+          53.581376,
+          -113.477986
+        ]
+      ],
+      "nearest_m_to_centre": 34,
+      "farthest_m_to_centre": 710
+    },
+    {
+      "osm_way": 1289101911,
+      "part": "road_beneath_wb_at_grade",
+      "which": "Yellowhead Trail NW westbound at grade, east of the underpass. Whole way; far node about 400 m east. Plan length only.",
+      "plan_length_m": 318.4,
+      "tags": {
+        "highway": "motorway",
+        "lanes": "3",
+        "maxspeed": "70",
+        "name": "Yellowhead Trail NW",
+        "oneway": "yes",
+        "ref": "16",
+        "surface": "asphalt"
+      },
+      "nodes": [
+        [
+          53.582416,
+          -113.462096
+        ],
+        [
+          53.582301,
+          -113.466916
+        ]
+      ],
+      "nearest_m_to_centre": 31,
+      "farthest_m_to_centre": 345
+    }
+  ],
+  "ramps": [
+    {
+      "osm_way": 472539009,
+      "part": "ramp",
+      "which": "Interchange ramp (motorway_link) within 150 m of the record point. Destination tag: \"82 Street South\". Plan reference only; not part of the 82 Street deck.",
+      "plan_length_m": 10.4,
+      "tags": {
+        "destination:street": "82 Street South",
+        "highway": "motorway_link",
+        "lanes": "1",
+        "oneway": "yes"
+      },
+      "nodes": [
+        [
+          53.582211,
+          -113.467221
+        ],
+        [
+          53.582182,
+          -113.467256
+        ],
+        [
+          53.582155,
+          -113.467284
+        ],
+        [
+          53.582133,
+          -113.467307
+        ]
+      ],
+      "nearest_m_to_centre": 1,
+      "farthest_m_to_centre": 9
+    },
+    {
+      "osm_way": 472539015,
+      "part": "ramp",
+      "which": "Interchange ramp (motorway_link) within 150 m of the record point. Destination tag: \"Yellowhead Trail\". Plan reference only; not part of the 82 Street deck.",
+      "plan_length_m": 12.7,
+      "tags": {
+        "destination:ref": "16 West",
+        "destination:street": "Yellowhead Trail",
+        "highway": "motorway_link",
+        "lanes": "1",
+        "oneway": "yes"
+      },
+      "nodes": [
+        [
+          53.582033,
+          -113.467214
+        ],
+        [
+          53.582096,
+          -113.467272
+        ],
+        [
+          53.582133,
+          -113.467307
+        ]
+      ],
+      "nearest_m_to_centre": 2,
+      "farthest_m_to_centre": 15
+    },
+    {
+      "osm_way": 473269762,
+      "part": "ramp",
+      "which": "Interchange ramp (motorway_link) within 150 m of the record point. Destination tag: \"Yellowhead Trail\". Plan reference only; not part of the 82 Street deck.",
+      "plan_length_m": 10.8,
+      "tags": {
+        "destination:ref": "16 West",
+        "destination:street": "Yellowhead Trail",
+        "highway": "motorway_link",
+        "lanes": "1",
+        "oneway": "yes"
+      },
+      "nodes": [
+        [
+          53.582133,
+          -113.467307
+        ],
+        [
+          53.58219,
+          -113.467363
+        ],
+        [
+          53.582216,
+          -113.467392
+        ]
+      ],
+      "nearest_m_to_centre": 2,
+      "farthest_m_to_centre": 9
+    },
+    {
+      "osm_way": 473269763,
+      "part": "ramp",
+      "which": "Interchange ramp (motorway_link) within 150 m of the record point. Destination tag: \"82 Street South\". Plan reference only; not part of the 82 Street deck.",
+      "plan_length_m": 13.2,
+      "tags": {
+        "destination:street": "82 Street South",
+        "highway": "motorway_link",
+        "lanes": "1",
+        "oneway": "yes"
+      },
+      "nodes": [
+        [
+          53.582133,
+          -113.467307
+        ],
+        [
+          53.582068,
+          -113.467361
+        ],
+        [
+          53.582026,
+          -113.467394
+        ]
+      ],
+      "nearest_m_to_centre": 2,
+      "farthest_m_to_centre": 15
+    },
+    {
+      "osm_way": 472539005,
+      "part": "ramp",
+      "which": "Interchange ramp (motorway_link) within 150 m of the record point. Destination tag: \"82 Street North\". Plan reference only; not part of the 82 Street deck.",
+      "plan_length_m": 35.9,
+      "tags": {
+        "destination:street": "82 Street North",
+        "highway": "motorway_link",
+        "lanes": "2",
+        "oneway": "yes"
+      },
+      "nodes": [
+        [
+          53.582036,
+          -113.46784
+        ],
+        [
+          53.58211,
+          -113.467599
+        ],
+        [
+          53.58213,
+          -113.467558
+        ],
+        [
+          53.582184,
+          -113.467445
+        ],
+        [
+          53.582216,
+          -113.467392
+        ]
+      ],
+      "nearest_m_to_centre": 9,
+      "farthest_m_to_centre": 38
+    },
+    {
+      "osm_way": 472539006,
+      "part": "ramp",
+      "which": "Interchange ramp (motorway_link) within 150 m of the record point. Destination tag: \"82 Street South\". Plan reference only; not part of the 82 Street deck.",
+      "plan_length_m": 35.6,
+      "tags": {
+        "destination:street": "82 Street South",
+        "highway": "motorway_link",
+        "lanes": "1",
+        "oneway": "yes"
+      },
+      "nodes": [
+        [
+          53.582413,
+          -113.466812
+        ],
+        [
+          53.582346,
+          -113.466996
+        ],
+        [
+          53.582311,
+          -113.467085
+        ],
+        [
+          53.5823,
+          -113.467101
+        ],
+        [
+          53.582257,
+          -113.467166
+        ],
+        [
+          53.582211,
+          -113.467221
+        ]
+      ],
+      "nearest_m_to_centre": 9,
+      "farthest_m_to_centre": 44
+    },
+    {
+      "osm_way": 472539010,
+      "part": "ramp",
+      "which": "Interchange ramp (motorway_link) within 150 m of the record point. Destination tag: \"Yellowhead Trail\". Plan reference only; not part of the 82 Street deck.",
+      "plan_length_m": 42.5,
+      "tags": {
+        "destination:ref": "16 West",
+        "destination:street": "Yellowhead Trail",
+        "highway": "motorway_link",
+        "lanes": "1",
+        "oneway": "yes"
+      },
+      "nodes": [
+        [
+          53.582216,
+          -113.467392
+        ],
+        [
+          53.582265,
+          -113.467466
+        ],
+        [
+          53.582307,
+          -113.467558
+        ],
+        [
+          53.582332,
+          -113.467634
+        ],
+        [
+          53.582358,
+          -113.467765
+        ],
+        [
+          53.582394,
+          -113.467947
+        ]
+      ],
+      "nearest_m_to_centre": 9,
+      "farthest_m_to_centre": 50
+    },
+    {
+      "osm_way": 472539013,
+      "part": "ramp",
+      "which": "Interchange ramp (motorway_link) within 150 m of the record point. Destination tag: \"Yellowhead Trail\". Plan reference only; not part of the 82 Street deck.",
+      "plan_length_m": 38.5,
+      "tags": {
+        "destination": "Yellowhead Trail",
+        "destination:ref": "16 East",
+        "highway": "motorway_link",
+        "lanes": "1",
+        "oneway": "yes"
+      },
+      "nodes": [
+        [
+          53.582211,
+          -113.467221
+        ],
+        [
+          53.582169,
+          -113.467163
+        ],
+        [
+          53.582137,
+          -113.467103
+        ],
+        [
+          53.58212,
+          -113.467072
+        ],
+        [
+          53.582092,
+          -113.466997
+        ],
+        [
+          53.582069,
+          -113.466887
+        ],
+        [
+          53.582061,
+          -113.466725
+        ]
+      ],
+      "nearest_m_to_centre": 9,
+      "farthest_m_to_centre": 40
+    },
+    {
+      "osm_way": 473269764,
+      "part": "ramp",
+      "which": "Interchange ramp (motorway_link) within 150 m of the record point. Destination tag: \"\". Plan reference only; not part of the 82 Street deck.",
+      "plan_length_m": 9.4,
+      "tags": {
+        "highway": "motorway_link",
+        "lanes": "1",
+        "oneway": "yes"
+      },
+      "nodes": [
+        [
+          53.582277,
+          -113.467312
+        ],
+        [
+          53.582265,
+          -113.467296
+        ],
+        [
+          53.582249,
+          -113.467277
+        ],
+        [
+          53.582234,
+          -113.467257
+        ],
+        [
+          53.582211,
+          -113.467221
+        ]
+      ],
+      "nearest_m_to_centre": 9,
+      "farthest_m_to_centre": 14
+    },
+    {
+      "osm_way": 473269765,
+      "part": "ramp",
+      "which": "Interchange ramp (motorway_link) within 150 m of the record point. Destination tag: \"82 Street North\". Plan reference only; not part of the 82 Street deck.",
+      "plan_length_m": 8.6,
+      "tags": {
+        "destination:street": "82 Street North",
+        "highway": "motorway_link",
+        "lanes": "2",
+        "oneway": "yes"
+      },
+      "nodes": [
+        [
+          53.582216,
+          -113.467392
+        ],
+        [
+          53.582277,
+          -113.467312
+        ]
+      ],
+      "nearest_m_to_centre": 9,
+      "farthest_m_to_centre": 14
+    },
+    {
+      "osm_way": 472539007,
+      "part": "ramp",
+      "which": "Interchange ramp (motorway_link) within 150 m of the record point. Destination tag: \"82 Street North\". Plan reference only; not part of the 82 Street deck.",
+      "plan_length_m": 15.7,
+      "tags": {
+        "destination:street": "82 Street North",
+        "highway": "motorway_link",
+        "lanes": "2",
+        "oneway": "yes"
+      },
+      "nodes": [
+        [
+          53.582277,
+          -113.467312
+        ],
+        [
+          53.582299,
+          -113.467287
+        ],
+        [
+          53.582339,
+          -113.467254
+        ],
+        [
+          53.582407,
+          -113.467222
+        ]
+      ],
+      "nearest_m_to_centre": 14,
+      "farthest_m_to_centre": 29
+    },
+    {
+      "osm_way": 472539016,
+      "part": "ramp",
+      "which": "Interchange ramp (motorway_link) within 150 m of the record point. Destination tag: \"\". Plan reference only; not part of the 82 Street deck.",
+      "plan_length_m": 15.5,
+      "tags": {
+        "highway": "motorway_link",
+        "lanes": "1",
+        "oneway": "yes"
+      },
+      "nodes": [
+        [
+          53.582406,
+          -113.467402
+        ],
+        [
+          53.58234,
+          -113.467363
+        ],
+        [
+          53.582309,
+          -113.467342
+        ],
+        [
+          53.582277,
+          -113.467312
+        ]
+      ],
+      "nearest_m_to_centre": 14,
+      "farthest_m_to_centre": 29
+    },
+    {
+      "osm_way": 80402689,
+      "part": "ramp",
+      "which": "Interchange ramp (motorway_link) within 150 m of the record point. Destination tag: \"\". Plan reference only; not part of the 82 Street deck.",
+      "plan_length_m": 47.2,
+      "tags": {
+        "highway": "motorway_link",
+        "lanes": "1",
+        "oneway": "yes"
+      },
+      "nodes": [
+        [
+          53.582413,
+          -113.466812
+        ],
+        [
+          53.582359,
+          -113.466923
+        ],
+        [
+          53.582328,
+          -113.466954
+        ],
+        [
+          53.582266,
+          -113.466986
+        ],
+        [
+          53.582224,
+          -113.46699
+        ],
+        [
+          53.58217,
+          -113.466972
+        ],
+        [
+          53.582114,
+          -113.466921
+        ],
+        [
+          53.58209,
+          -113.466874
+        ],
+        [
+          53.582073,
+          -113.466812
+        ]
+      ],
+      "nearest_m_to_centre": 22,
+      "farthest_m_to_centre": 44
+    },
+    {
+      "osm_way": 80402690,
+      "part": "ramp",
+      "which": "Interchange ramp (motorway_link) within 150 m of the record point. Destination tag: \"\". Plan reference only; not part of the 82 Street deck.",
+      "plan_length_m": 55.4,
+      "tags": {
+        "highway": "motorway_link",
+        "lanes": "1",
+        "oneway": "yes"
+      },
+      "nodes": [
+        [
+          53.582036,
+          -113.46784
+        ],
+        [
+          53.582092,
+          -113.467714
+        ],
+        [
+          53.582155,
+          -113.467657
+        ],
+        [
+          53.582188,
+          -113.467641
+        ],
+        [
+          53.582225,
+          -113.467644
+        ],
+        [
+          53.582263,
+          -113.467655
+        ],
+        [
+          53.582297,
+          -113.467685
+        ],
+        [
+          53.582329,
+          -113.467732
+        ],
+        [
+          53.582394,
+          -113.467947
+        ]
+      ],
+      "nearest_m_to_centre": 23,
+      "farthest_m_to_centre": 50
+    },
+    {
+      "osm_way": 46894666,
+      "part": "ramp",
+      "which": "Interchange ramp (motorway_link) within 150 m of the record point. Destination tag: \"Yellowhead Trail\". Plan reference only; not part of the 82 Street deck.",
+      "plan_length_m": 55.0,
+      "tags": {
+        "destination:ref": "16 East",
+        "destination:street": "Yellowhead Trail",
+        "highway": "motorway_link",
+        "oneway": "yes"
+      },
+      "nodes": [
+        [
+          53.581699,
+          -113.467204
+        ],
+        [
+          53.581872,
+          -113.467124
+        ],
+        [
+          53.581938,
+          -113.467069
+        ],
+        [
+          53.581978,
+          -113.467009
+        ],
+        [
+          53.581986,
+          -113.466997
+        ],
+        [
+          53.58203,
+          -113.466834
+        ],
+        [
+          53.582061,
+          -113.466725
+        ]
+      ],
+      "nearest_m_to_centre": 27,
+      "farthest_m_to_centre": 51
+    },
+    {
+      "osm_way": 472539000,
+      "part": "ramp",
+      "which": "Interchange ramp (motorway_link) within 150 m of the record point. Destination tag: \"Yellowhead Trail\". Plan reference only; not part of the 82 Street deck.",
+      "plan_length_m": 11.9,
+      "tags": {
+        "destination:ref": "16 West",
+        "destination:street": "Yellowhead Trail",
+        "highway": "motorway_link",
+        "lanes": "2",
+        "oneway": "yes"
+      },
+      "nodes": [
+        [
+          53.582407,
+          -113.467222
+        ],
+        [
+          53.582406,
+          -113.467402
+        ]
+      ],
+      "nearest_m_to_centre": 29,
+      "farthest_m_to_centre": 29
+    },
+    {
+      "osm_way": 472539002,
+      "part": "ramp",
+      "which": "Interchange ramp (motorway_link) within 150 m of the record point. Destination tag: \"Yellowhead Trail\". Plan reference only; not part of the 82 Street deck.",
+      "plan_length_m": 36.0,
+      "tags": {
+        "destination:ref": "16 West",
+        "destination:street": "Yellowhead Trail",
+        "highway": "motorway_link",
+        "lanes": "2",
+        "oneway": "yes"
+      },
+      "nodes": [
+        [
+          53.582406,
+          -113.467402
+        ],
+        [
+          53.582405,
+          -113.467556
+        ],
+        [
+          53.582404,
+          -113.467792
+        ],
+        [
+          53.582394,
+          -113.467947
+        ]
+      ],
+      "nearest_m_to_centre": 29,
+      "farthest_m_to_centre": 50
+    },
+    {
+      "osm_way": 1513037541,
+      "part": "ramp",
+      "which": "Interchange ramp (motorway_link) within 150 m of the record point. Destination tag: \"Yellowhead Trail\". Plan reference only; not part of the 82 Street deck.",
+      "plan_length_m": 27.1,
+      "tags": {
+        "destination:ref": "16 West",
+        "destination:street": "Yellowhead Trail",
+        "highway": "motorway_link",
+        "lanes": "2",
+        "oneway": "yes"
+      },
+      "nodes": [
+        [
+          53.582413,
+          -113.466812
+        ],
+        [
+          53.58241,
+          -113.4671
+        ],
+        [
+          53.582407,
+          -113.467222
+        ]
+      ],
+      "nearest_m_to_centre": 29,
+      "farthest_m_to_centre": 44
+    },
+    {
+      "osm_way": 472539003,
+      "part": "ramp",
+      "which": "Interchange ramp (motorway_link) within 150 m of the record point. Destination tag: \"Yellowhead Trail\". Plan reference only; not part of the 82 Street deck.",
+      "plan_length_m": 411.7,
+      "tags": {
+        "destination:ref": "16 East",
+        "destination:street": "Yellowhead Trail",
+        "highway": "motorway_link",
+        "lanes": "1",
+        "oneway": "yes"
+      },
+      "nodes": [
+        [
+          53.582073,
+          -113.466812
+        ],
+        [
+          53.582061,
+          -113.466725
+        ],
+        [
+          53.582151,
+          -113.463087
+        ],
+        [
+          53.582308,
+          -113.460595
+        ]
+      ],
+      "nearest_m_to_centre": 34,
+      "farthest_m_to_centre": 443
+    },
+    {
+      "osm_way": 46894664,
+      "part": "ramp",
+      "which": "Interchange ramp (motorway_link) within 150 m of the record point. Destination tag: \"82 Street South\". Plan reference only; not part of the 82 Street deck.",
+      "plan_length_m": 99.6,
+      "tags": {
+        "destination:street": "82 Street South",
+        "highway": "motorway_link",
+        "oneway": "yes"
+      },
+      "nodes": [
+        [
+          53.581918,
+          -113.468713
+        ],
+        [
+          53.581935,
+          -113.468296
+        ],
+        [
+          53.581942,
+          -113.467915
+        ],
+        [
+          53.58194,
+          -113.467827
+        ],
+        [
+          53.581932,
+          -113.467754
+        ],
+        [
+          53.58192,
+          -113.467693
+        ],
+        [
+          53.581891,
+          -113.467614
+        ],
+        [
+          53.581868,
+          -113.467567
+        ],
+        [
+          53.581835,
+          -113.467518
+        ],
+        [
+          53.581704,
+          -113.46739
+        ]
+      ],
+      "nearest_m_to_centre": 36,
+      "farthest_m_to_centre": 97
+    },
+    {
+      "osm_way": 517632450,
+      "part": "ramp",
+      "which": "Interchange ramp (motorway_link) within 150 m of the record point. Destination tag: \"82 Street North\". Plan reference only; not part of the 82 Street deck.",
+      "plan_length_m": 59.2,
+      "tags": {
+        "destination:street": "82 Street North",
+        "highway": "motorway_link",
+        "lanes": "2",
+        "oneway": "yes",
+        "turn:lanes": "reverse;left|left"
+      },
+      "nodes": [
+        [
+          53.581918,
+          -113.468713
+        ],
+        [
+          53.582004,
+          -113.468036
+        ],
+        [
+          53.582017,
+          -113.46793
+        ],
+        [
+          53.582036,
+          -113.46784
+        ]
+      ],
+      "nearest_m_to_centre": 38,
+      "farthest_m_to_centre": 97
+    },
+    {
+      "osm_way": 472538998,
+      "part": "ramp",
+      "which": "Interchange ramp (motorway_link) within 150 m of the record point. Destination tag: \"Yellowhead Trail\". Plan reference only; not part of the 82 Street deck.",
+      "plan_length_m": 37.9,
+      "tags": {
+        "destination:ref": "16 West",
+        "destination:street": "Yellowhead Trail",
+        "highway": "motorway_link",
+        "lanes": "2",
+        "oneway": "yes"
+      },
+      "nodes": [
+        [
+          53.58243,
+          -113.466238
+        ],
+        [
+          53.582413,
+          -113.466812
+        ]
+      ],
+      "nearest_m_to_centre": 44,
+      "farthest_m_to_centre": 77
+    },
+    {
+      "osm_way": 46894633,
+      "part": "ramp",
+      "which": "Interchange ramp (motorway_link) within 150 m of the record point. Destination tag: \"Yellowhead Trail\". Plan reference only; not part of the 82 Street deck.",
+      "plan_length_m": 89.1,
+      "tags": {
+        "destination:ref": "16 West",
+        "destination:street": "Yellowhead Trail",
+        "highway": "motorway_link",
+        "oneway": "yes"
+      },
+      "nodes": [
+        [
+          53.583087,
+          -113.467413
+        ],
+        [
+          53.582801,
+          -113.467532
+        ],
+        [
+          53.582729,
+          -113.467552
+        ],
+        [
+          53.582664,
+          -113.467577
+        ],
+        [
+          53.582553,
+          -113.467643
+        ],
+        [
+          53.582507,
+          -113.46768
+        ],
+        [
+          53.582475,
+          -113.467721
+        ],
+        [
+          53.58245,
+          -113.467771
+        ],
+        [
+          53.582426,
+          -113.467836
+        ],
+        [
+          53.582394,
+          -113.467947
+        ]
+      ],
+      "nearest_m_to_centre": 45,
+      "farthest_m_to_centre": 104
+    },
+    {
+      "osm_way": 821666377,
+      "part": "ramp",
+      "which": "Interchange ramp (motorway_link) within 150 m of the record point. Destination tag: \"Yellowhead Trail\". Plan reference only; not part of the 82 Street deck.",
+      "plan_length_m": 32.2,
+      "tags": {
+        "destination:ref": "16 West",
+        "destination:street": "Yellowhead Trail",
+        "highway": "motorway_link",
+        "lanes": "2",
+        "oneway": "yes"
+      },
+      "nodes": [
+        [
+          53.582394,
+          -113.467947
+        ],
+        [
+          53.58237,
+          -113.468215
+        ],
+        [
+          53.582345,
+          -113.468428
+        ]
+      ],
+      "nearest_m_to_centre": 50,
+      "farthest_m_to_centre": 77
+    },
+    {
+      "osm_way": 46889817,
+      "part": "ramp",
+      "which": "Interchange ramp (motorway_link) within 150 m of the record point. Destination tag: \"82 Street North\". Plan reference only; not part of the 82 Street deck.",
+      "plan_length_m": 87.4,
+      "tags": {
+        "destination:street": "82 Street North",
+        "highway": "motorway_link",
+        "lanes": "2",
+        "oneway": "yes"
+      },
+      "nodes": [
+        [
+          53.58243,
+          -113.466238
+        ],
+        [
+          53.582466,
+          -113.466549
+        ],
+        [
+          53.582508,
+          -113.466785
+        ],
+        [
+          53.582585,
+          -113.466998
+        ],
+        [
+          53.582597,
+          -113.467014
+        ],
+        [
+          53.582643,
+          -113.467074
+        ],
+        [
+          53.582698,
+          -113.467129
+        ],
+        [
+          53.582857,
+          -113.467212
+        ]
+      ],
+      "nearest_m_to_centre": 52,
+      "farthest_m_to_centre": 79
+    },
+    {
+      "osm_way": 821666378,
+      "part": "ramp",
+      "which": "Interchange ramp (motorway_link) within 150 m of the record point. Destination tag: \"82 Street\". Plan reference only; not part of the 82 Street deck.",
+      "plan_length_m": 70.7,
+      "tags": {
+        "destination:street": "82 Street",
+        "highway": "motorway_link",
+        "maxspeed:advisory": "60",
+        "oneway": "yes"
+      },
+      "nodes": [
+        [
+          53.582465,
+          -113.46517
+        ],
+        [
+          53.58243,
+          -113.466238
+        ]
+      ],
+      "nearest_m_to_centre": 77,
+      "farthest_m_to_centre": 145
+    },
+    {
+      "osm_way": 1286222183,
+      "part": "ramp",
+      "which": "Interchange ramp (motorway_link) within 150 m of the record point. Destination tag: \"Yellowhead Trail\". Plan reference only; not part of the 82 Street deck.",
+      "plan_length_m": 52.8,
+      "tags": {
+        "destination:ref": "16 West",
+        "destination:street": "Yellowhead Trail",
+        "highway": "motorway_link",
+        "lanes": "2",
+        "oneway": "yes",
+        "turn:lanes": "|right"
+      },
+      "nodes": [
+        [
+          53.582345,
+          -113.468428
+        ],
+        [
+          53.582274,
+          -113.468886
+        ],
+        [
+          53.582214,
+          -113.469197
+        ]
+      ],
+      "nearest_m_to_centre": 77,
+      "farthest_m_to_centre": 125
+    },
+    {
+      "osm_way": 1285921496,
+      "part": "ramp",
+      "which": "Interchange ramp (motorway_link) within 150 m of the record point. Destination tag: \"82 Street\". Plan reference only; not part of the 82 Street deck.",
+      "plan_length_m": 73.2,
+      "tags": {
+        "destination": "Business Area Delton",
+        "destination:street": "82 Street",
+        "highway": "motorway_link",
+        "junction:ref": "391",
+        "lanes": "2",
+        "maxspeed:advisory": "60",
+        "oneway": "yes",
+        "turn:lanes": "|through;slight_right"
+      },
+      "nodes": [
+        [
+          53.581692,
+          -113.469754
+        ],
+        [
+          53.581881,
+          -113.468922
+        ],
+        [
+          53.5819,
+          -113.468823
+        ],
+        [
+          53.581918,
+          -113.468713
+        ]
+      ],
+      "nearest_m_to_centre": 97,
+      "farthest_m_to_centre": 170
+    },
+    {
+      "osm_way": 1288167145,
+      "part": "ramp",
+      "which": "Interchange ramp (motorway_link) within 150 m of the record point. Destination tag: \"Yellowhead Trail\". Plan reference only; not part of the 82 Street deck.",
+      "plan_length_m": 6.5,
+      "tags": {
+        "destination:ref": "16 West",
+        "destination:street": "Yellowhead Trail",
+        "highway": "motorway_link",
+        "lanes": "2",
+        "oneway": "yes",
+        "turn:lanes": "|right"
+      },
+      "nodes": [
+        [
+          53.582214,
+          -113.469197
+        ],
+        [
+          53.582196,
+          -113.469291
+        ]
+      ],
+      "nearest_m_to_centre": 125,
+      "farthest_m_to_centre": 131
+    },
+    {
+      "osm_way": 22914430,
+      "part": "ramp",
+      "which": "Interchange ramp (motorway_link) within 150 m of the record point. Destination tag: \"Yellowhead Trail\". Plan reference only; not part of the 82 Street deck.",
+      "plan_length_m": 270.8,
+      "tags": {
+        "destination:ref": "16 West",
+        "destination:street": "Yellowhead Trail",
+        "highway": "motorway_link",
+        "lanes": "1",
+        "oneway": "yes"
+      },
+      "nodes": [
+        [
+          53.582196,
+          -113.469291
+        ],
+        [
+          53.582128,
+          -113.469609
+        ],
+        [
+          53.582049,
+          -113.469915
+        ],
+        [
+          53.582039,
+          -113.469958
+        ],
+        [
+          53.581893,
+          -113.470488
+        ],
+        [
+          53.581718,
+          -113.471125
+        ],
+        [
+          53.581617,
+          -113.471582
+        ],
+        [
+          53.5815,
+          -113.472334
+        ],
+        [
+          53.581376,
+          -113.473141
+        ]
+      ],
+      "nearest_m_to_centre": 131,
+      "farthest_m_to_centre": 395
+    },
+    {
+      "osm_way": 1123665750,
+      "part": "ramp",
+      "which": "Interchange ramp (motorway_link) within 150 m of the record point. Destination tag: \"\". Plan reference only; not part of the 82 Street deck.",
+      "plan_length_m": 39.8,
+      "tags": {
+        "highway": "motorway_link",
+        "oneway": "yes"
+      },
+      "nodes": [
+        [
+          53.582196,
+          -113.469291
+        ],
+        [
+          53.582223,
+          -113.469399
+        ],
+        [
+          53.582242,
+          -113.46946
+        ],
+        [
+          53.582277,
+          -113.469517
+        ],
+        [
+          53.582317,
+          -113.469546
+        ],
+        [
+          53.582367,
+          -113.469567
+        ],
+        [
+          53.58247,
+          -113.469575
+        ]
+      ],
+      "nearest_m_to_centre": 131,
+      "farthest_m_to_centre": 154
+    },
+    {
+      "osm_way": 112517214,
+      "part": "ramp",
+      "which": "Interchange ramp (motorway_link) within 150 m of the record point. Destination tag: \"\". Plan reference only; not part of the 82 Street deck.",
+      "plan_length_m": 39.4,
+      "tags": {
+        "highway": "motorway_link",
+        "oneway": "yes"
+      },
+      "nodes": [
+        [
+          53.582704,
+          -113.464737
+        ],
+        [
+          53.582633,
+          -113.464819
+        ],
+        [
+          53.582575,
+          -113.464923
+        ],
+        [
+          53.582529,
+          -113.465048
+        ],
+        [
+          53.582465,
+          -113.46517
+        ]
+      ],
+      "nearest_m_to_centre": 145,
+      "farthest_m_to_centre": 180
+    },
+    {
+      "osm_way": 472539012,
+      "part": "ramp",
+      "which": "Interchange ramp (motorway_link) within 150 m of the record point. Destination tag: \"82 Street\". Plan reference only; not part of the 82 Street deck.",
+      "plan_length_m": 205.3,
+      "tags": {
+        "destination": "Business Areas;Fort Road West;Delton",
+        "destination:street": "82 Street",
+        "highway": "motorway_link",
+        "junction:ref": "391",
+        "maxspeed:advisory": "60",
+        "oneway": "yes"
+      },
+      "nodes": [
+        [
+          53.582416,
+          -113.462096
+        ],
+        [
+          53.582506,
+          -113.462392
+        ],
+        [
+          53.582476,
+          -113.464251
+        ],
+        [
+          53.582472,
+          -113.46437
+        ],
+        [
+          53.582465,
+          -113.46517
+        ]
+      ],
+      "nearest_m_to_centre": 145,
+      "farthest_m_to_centre": 345
+    }
+  ],
+  "paths": [
+    {
+      "osm_way": 844014415,
+      "part": "path_at_grade",
+      "which": "Footway crossing with traffic signals at the 82 Street ramp junction, at grade (footway=crossing). Not on the deck.",
+      "plan_length_m": 80.4,
+      "tags": {
+        "crossing": "traffic_signals",
+        "footway": "crossing",
+        "highway": "footway"
+      },
+      "nodes": [
+        [
+          53.58202,
+          -113.467559
+        ],
+        [
+          53.58213,
+          -113.467558
+        ],
+        [
+          53.582307,
+          -113.467558
+        ],
+        [
+          53.582405,
+          -113.467556
+        ],
+        [
+          53.582475,
+          -113.467553
+        ],
+        [
+          53.582474,
+          -113.467402
+        ],
+        [
+          53.582475,
+          -113.46722
+        ],
+        [
+          53.582475,
+          -113.4671
+        ]
+      ],
+      "nearest_m_to_centre": 17,
+      "farthest_m_to_centre": 39
+    },
+    {
+      "osm_way": 844014413,
+      "part": "path_at_grade",
+      "which": "Designated cycleway and footpath beside the 82 Street northbound carriageway, at grade. No bridge tag.",
+      "plan_length_m": 95.7,
+      "tags": {
+        "bicycle": "designated",
+        "foot": "designated",
+        "highway": "cycleway",
+        "segregated": "no",
+        "surface": "asphalt"
+      },
+      "nodes": [
+        [
+          53.581854,
+          -113.467089
+        ],
+        [
+          53.581906,
+          -113.467053
+        ],
+        [
+          53.581955,
+          -113.466973
+        ],
+        [
+          53.581978,
+          -113.467009
+        ],
+        [
+          53.582037,
+          -113.467104
+        ],
+        [
+          53.582137,
+          -113.467103
+        ],
+        [
+          53.5823,
+          -113.467101
+        ],
+        [
+          53.58241,
+          -113.4671
+        ],
+        [
+          53.582475,
+          -113.4671
+        ],
+        [
+          53.582542,
+          -113.467101
+        ],
+        [
+          53.582597,
+          -113.467014
+        ],
+        [
+          53.582628,
+          -113.466965
+        ]
+      ],
+      "nearest_m_to_centre": 13,
+      "farthest_m_to_centre": 57
+    },
+    {
+      "osm_way": 845929658,
+      "part": "path_at_grade",
+      "which": "Designated cycleway and footpath, paved, at grade, near the ramp junction. No bridge tag.",
+      "plan_length_m": 44.3,
+      "tags": {
+        "bicycle": "designated",
+        "foot": "designated",
+        "highway": "cycleway",
+        "surface": "paved"
+      },
+      "nodes": [
+        [
+          53.58192,
+          -113.467693
+        ],
+        [
+          53.58202,
+          -113.467559
+        ],
+        [
+          53.582026,
+          -113.467394
+        ],
+        [
+          53.582033,
+          -113.467214
+        ],
+        [
+          53.582037,
+          -113.467104
+        ]
+      ],
+      "nearest_m_to_centre": 15,
+      "farthest_m_to_centre": 36
+    },
+    {
+      "osm_way": 1254955168,
+      "part": "path_at_grade",
+      "which": "Designated cycleway and footpath, asphalt, at grade, running east from the ramp junction. No bridge tag.",
+      "plan_length_m": 92.7,
+      "tags": {
+        "bicycle": "designated",
+        "foot": "designated",
+        "highway": "cycleway",
+        "segregated": "no",
+        "surface": "asphalt"
+      },
+      "nodes": [
+        [
+          53.581951,
+          -113.465705
+        ],
+        [
+          53.58195,
+          -113.466243
+        ],
+        [
+          53.581942,
+          -113.466354
+        ],
+        [
+          53.58193,
+          -113.466438
+        ],
+        [
+          53.581882,
+          -113.466747
+        ],
+        [
+          53.581853,
+          -113.466921
+        ],
+        [
+          53.581854,
+          -113.467089
+        ]
+      ],
+      "nearest_m_to_centre": 36,
+      "farthest_m_to_centre": 108
+    },
+    {
+      "osm_way": 844014416,
+      "part": "path_at_grade",
+      "which": "Sidewalk (footway=sidewalk) east of 82 Street north of the crossing. At grade.",
+      "plan_length_m": 237.8,
+      "tags": {
+        "footway": "sidewalk",
+        "highway": "footway"
+      },
+      "nodes": [
+        [
+          53.582563,
+          -113.467677
+        ],
+        [
+          53.582567,
+          -113.467687
+        ],
+        [
+          53.582644,
+          -113.467641
+        ],
+        [
+          53.582732,
+          -113.467604
+        ],
+        [
+          53.582811,
+          -113.467588
+        ],
+        [
+          53.582875,
+          -113.467584
+        ],
+        [
+          53.58332,
+          -113.46758
+        ],
+        [
+          53.583356,
+          -113.467573
+        ],
+        [
+          53.583395,
+          -113.467559
+        ],
+        [
+          53.583453,
+          -113.467545
+        ],
+        [
+          53.584595,
+          -113.467519
+        ],
+        [
+          53.584647,
+          -113.467532
+        ],
+        [
+          53.584682,
+          -113.467568
+        ]
+      ],
+      "nearest_m_to_centre": 52,
+      "farthest_m_to_centre": 282
+    },
+    {
+      "osm_way": 1254955169,
+      "part": "path_at_grade",
+      "which": "Concrete footway running west from the 82 Street east side across the north side of the ramp junction. At grade.",
+      "plan_length_m": 99.9,
+      "tags": {
+        "highway": "footway",
+        "surface": "concrete"
+      },
+      "nodes": [
+        [
+          53.582567,
+          -113.467687
+        ],
+        [
+          53.582569,
+          -113.467718
+        ],
+        [
+          53.58256,
+          -113.467795
+        ],
+        [
+          53.582551,
+          -113.46781
+        ],
+        [
+          53.582539,
+          -113.467822
+        ],
+        [
+          53.582516,
+          -113.467851
+        ],
+        [
+          53.582502,
+          -113.467878
+        ],
+        [
+          53.582493,
+          -113.467904
+        ],
+        [
+          53.58249,
+          -113.467929
+        ],
+        [
+          53.582489,
+          -113.467984
+        ],
+        [
+          53.582487,
+          -113.468015
+        ],
+        [
+          53.582482,
+          -113.468049
+        ],
+        [
+          53.58243,
+          -113.468294
+        ],
+        [
+          53.582426,
+          -113.46833
+        ],
+        [
+          53.582425,
+          -113.468364
+        ],
+        [
+          53.582409,
+          -113.469033
+        ],
+        [
+          53.582467,
+          -113.469033
+        ]
+      ],
+      "nearest_m_to_centre": 53,
+      "farthest_m_to_centre": 119
+    },
+    {
+      "osm_way": 1528627071,
+      "part": "path_at_grade",
+      "which": "Footway traffic island at the ramp junction, at grade.",
+      "plan_length_m": 9.3,
+      "tags": {
+        "footway": "traffic_island",
+        "highway": "footway"
+      },
+      "nodes": [
+        [
+          53.582475,
+          -113.467553
+        ],
+        [
+          53.582529,
+          -113.467557
+        ],
+        [
+          53.58254,
+          -113.467602
+        ]
+      ],
+      "nearest_m_to_centre": 39,
+      "farthest_m_to_centre": 47
+    },
+    {
+      "osm_way": 1528627070,
+      "part": "path_at_grade",
+      "which": "Zebra crossing on the ramp junction footway, at grade.",
+      "plan_length_m": 5.6,
+      "tags": {
+        "crossing": "uncontrolled",
+        "crossing:markings": "zebra",
+        "crossing:signals": "no",
+        "footway": "crossing",
+        "highway": "footway"
+      },
+      "nodes": [
+        [
+          53.58254,
+          -113.467602
+        ],
+        [
+          53.582553,
+          -113.467643
+        ],
+        [
+          53.582563,
+          -113.467677
+        ]
+      ],
+      "nearest_m_to_centre": 47,
+      "farthest_m_to_centre": 52
+    }
+  ],
+  "dropped": [
+    {
+      "osm_way": 23427569,
+      "tags": {
+        "bridge": "yes",
+        "layer": "1",
+        "railway": "rail",
+        "service": "yard"
+      },
+      "nearest_m_to_centre": 170,
+      "reason": "CN rail bridge way (railway=rail, bridge=yes) about 170 m from the record point. Matches CNR over 82 Street (Alberta record 41690, CNR/82 ST B095, 53.583615, -113.467296), a different structure about 165 m north. Not used."
+    },
+    {
+      "osm_way": 37831899,
+      "tags": {
+        "bridge": "yes",
+        "layer": "1",
+        "name": "Wainwright Subdivision",
+        "railway": "rail"
+      },
+      "nearest_m_to_centre": 156,
+      "reason": "CN main line (Wainwright Subdivision) bridge way about 156 m from the record point. Part of the CNR over 82 Street structure (record 41690). Not used."
+    },
+    {
+      "osm_way": 37831895,
+      "tags": {
+        "bridge": "yes",
+        "layer": "1",
+        "railway": "rail",
+        "service": "yard"
+      },
+      "nearest_m_to_centre": 174,
+      "reason": "CN yard bridge way about 174 m from the record point. Part of the CNR structure (41690). Not used."
+    },
+    {
+      "osm_way": 37831900,
+      "tags": {
+        "bridge": "yes",
+        "layer": "1",
+        "railway": "rail",
+        "service": "yard"
+      },
+      "nearest_m_to_centre": 166,
+      "reason": "CN yard bridge way about 166 m from the record point. Part of the CNR structure (41690). Not used."
+    },
+    {
+      "osm_way": 37831901,
+      "tags": {
+        "bridge": "yes",
+        "layer": "1",
+        "railway": "rail",
+        "service": "yard"
+      },
+      "nearest_m_to_centre": 161,
+      "reason": "CN yard bridge way about 161 m from the record point. Part of the CNR structure (41690). Not used."
+    },
+    {
+      "osm_way": 256516545,
+      "tags": {
+        "highway": "unclassified",
+        "name": "Yellowhead Trail NW"
+      },
+      "nearest_m_to_centre": 101,
+      "reason": "Yellowhead Trail NW tagged highway=unclassified, about 101 m away. Frontage road, not the trunk carriageway. Not used."
+    },
+    {
+      "osm_way": 46894694,
+      "tags": {
+        "highway": "unclassified",
+        "name": "Yellowhead Trail NW"
+      },
+      "nearest_m_to_centre": 166,
+      "reason": "Yellowhead Trail NW tagged highway=unclassified, about 166 m away. Frontage road. Not used."
+    },
+    {
+      "osm_way": 844014412,
+      "tags": {
+        "highway": "cycleway"
+      },
+      "nearest_m_to_centre": 108,
+      "reason": "Long designated cycleway (805.8 m) running east and west beyond the footprint. Not used."
+    },
+    {
+      "osm_way": 844014411,
+      "tags": {
+        "highway": "service",
+        "service": "alley"
+      },
+      "nearest_m_to_centre": 62,
+      "reason": "Service alley, 62 m away. Not used."
+    },
+    {
+      "osm_way": 1260556850,
+      "tags": {
+        "highway": "service"
+      },
+      "nearest_m_to_centre": 74,
+      "reason": "Service road, 74 m away. Not used."
+    },
+    {
+      "osm_way": 1551034403,
+      "tags": {
+        "highway": "service"
+      },
+      "nearest_m_to_centre": 75,
+      "reason": "Service road, 75 m away. Not used."
+    },
+    {
+      "osm_way": 1260556851,
+      "tags": {
+        "highway": "service",
+        "service": "parking_aisle"
+      },
+      "nearest_m_to_centre": 86,
+      "reason": "Service parking aisle, 86 m away. Not used."
+    },
+    {
+      "osm_way": 46889743,
+      "tags": {
+        "highway": "service",
+        "service": "alley"
+      },
+      "nearest_m_to_centre": 100,
+      "reason": "Alley, 100 m away, running south. Not used."
+    },
+    {
+      "osm_way": 1551034402,
+      "tags": {
+        "highway": "service"
+      },
+      "nearest_m_to_centre": 130,
+      "reason": "Service road, 130 m away. Not used."
+    },
+    {
+      "osm_way": 1551034401,
+      "tags": {
+        "highway": "service"
+      },
+      "nearest_m_to_centre": 139,
+      "reason": "Service road, 139 m away. Not used."
+    }
+  ]
+}
