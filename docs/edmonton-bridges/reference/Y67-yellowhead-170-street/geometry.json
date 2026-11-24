@@ -1,0 +1,1170 @@
+{
+  "code": "Y67",
+  "name": "Yellowhead / 170 Street",
+  "centre": [
+    53.573,
+    -113.615
+  ],
+  "crs": "EPSG:4326",
+  "coordinate_order": "[lat, lon]",
+  "geometry_source": "docs/edmonton-bridges/bridge-geometry.json, Y67 object (OpenStreetMap map API 0.6, retrieved 2026-10-14). The Y67 object centre is 53.5733, -113.6153; this file uses the brief centre.",
+  "geometry_retrieved": "2026-11-23",
+  "plan_length_note": "plan_length_m is the horizontal WGS84 length of that OSM way along its nodes. An approach plan_length_m stops at the edge of the download box or at the next junction; it is not a climb to grade. The deck plan_length_m is not the structural length. Alberta records a nominal length of 66.6 m for the two spans (see dimensions).",
+  "dropped_note": "No way in the Y67 object is listed under another code in bridge-geometry.json, so none were dropped on that basis. Bridge-tagged ways over the CNR (22939116, 31684375), the bridge footway over the CNR (1543946731), and the links north of the Yellowhead deck belong to the separate 170 Street over CNR structures (Alberta STRU 40718 and 40719), so they are listed under excluded. Footways 1543946730, 1543946732, 1543946734 and 1543946736 are not bridge-tagged and are also listed under excluded.",
+  "decks": [
+    {
+      "osm_way": 22916254,
+      "part": "road_deck_west_carriageway",
+      "which": "Yellowhead underpass deck, the one-way carriageway on the west line (lon -113.6154). Three lanes in OpenStreetMap, width tag 14.6. Node order is north to south, so the one-way is southbound. Carries 170 Street NW over Highway 16. Alberta records two spans over both Highway 16 carriageways (R1 km 2.415, L1 km 2.406).",
+      "plan_length_m": 68.6,
+      "tags": {
+        "bridge": "yes",
+        "highway": "primary",
+        "lanes": "3",
+        "layer": "1",
+        "maxspeed": "60",
+        "name": "170 Street NW",
+        "oneway": "yes",
+        "width": "14.6"
+      },
+      "nodes": [
+        [
+          53.573623,
+          -113.615441
+        ],
+        [
+          53.573006,
+          -113.615441
+        ]
+      ]
+    },
+    {
+      "osm_way": 153737331,
+      "part": "road_deck_east_carriageway",
+      "which": "Second one-way carriageway of the same crossing, on the east line (lon -113.6152). Four lanes in OpenStreetMap, width tag 14.6. Node order south to north, so the one-way is northbound. The two lines are about 16 m apart on the plan.",
+      "plan_length_m": 68.8,
+      "tags": {
+        "bridge": "yes",
+        "highway": "primary",
+        "lanes": "4",
+        "layer": "1",
+        "maxspeed": "60",
+        "name": "170 Street NW",
+        "oneway": "yes",
+        "width": "14.6"
+      },
+      "nodes": [
+        [
+          53.573059,
+          -113.615192
+        ],
+        [
+          53.573678,
+          -113.615185
+        ]
+      ]
+    },
+    {
+      "osm_way": 1543946733,
+      "part": "east_sidewalk_path",
+      "which": "Footway tagged bridge=yes on the Yellowhead deck, east side of the carriageways. Concrete surface. Node order south to north. No width tag.",
+      "plan_length_m": 66.9,
+      "tags": {
+        "bridge": "yes",
+        "highway": "footway",
+        "layer": "1",
+        "surface": "concrete"
+      },
+      "nodes": [
+        [
+          53.573096,
+          -113.615042
+        ],
+        [
+          53.573698,
+          -113.61504
+        ]
+      ]
+    }
+  ],
+  "approaches": [
+    {
+      "osm_way": 472597643,
+      "part": "south_approach_west",
+      "which": "170 Street NW leaving the south end of the west carriageway, south of the Highway 16 underpass. Node order north to south, southbound. Primary, three lanes, one-way, sidewalk tagged no.",
+      "plan_length_m": 27.2,
+      "tags": {
+        "highway": "primary",
+        "lanes": "3",
+        "maxspeed": "60",
+        "name": "170 Street NW",
+        "oneway": "yes",
+        "sidewalk": "no",
+        "width": "14.6"
+      },
+      "nodes": [
+        [
+          53.573006,
+          -113.615441
+        ],
+        [
+          53.572761,
+          -113.615438
+        ]
+      ]
+    },
+    {
+      "osm_way": 472597648,
+      "part": "south_approach_east",
+      "which": "170 Street NW leaving the south end of the east carriageway. Node order south to north, northbound. Primary, four lanes, one-way, sidewalk tagged no.",
+      "plan_length_m": 27.7,
+      "tags": {
+        "highway": "primary",
+        "lanes": "4",
+        "maxspeed": "60",
+        "name": "170 Street NW",
+        "oneway": "yes",
+        "sidewalk": "no",
+        "width": "14.6"
+      },
+      "nodes": [
+        [
+          53.57281,
+          -113.615199
+        ],
+        [
+          53.573059,
+          -113.615192
+        ]
+      ]
+    },
+    {
+      "osm_way": 127496991,
+      "part": "north_approach_west",
+      "which": "Short link from the north end of the west carriageway to the north bank of the Highway 16 underpass. Node order north to south, southbound. Primary, three lanes.",
+      "plan_length_m": 29.5,
+      "tags": {
+        "highway": "primary",
+        "lanes": "3",
+        "maxspeed": "60",
+        "name": "170 Street NW",
+        "oneway": "yes",
+        "width": "14.6"
+      },
+      "nodes": [
+        [
+          53.573888,
+          -113.615442
+        ],
+        [
+          53.573623,
+          -113.615441
+        ]
+      ]
+    },
+    {
+      "osm_way": 502009507,
+      "part": "north_approach_east",
+      "which": "Short link from the north end of the east carriageway. Node order south to north, northbound. Primary, four lanes, layer 1.",
+      "plan_length_m": 29.7,
+      "tags": {
+        "highway": "primary",
+        "lanes": "4",
+        "layer": "1",
+        "maxspeed": "60",
+        "name": "170 Street NW",
+        "oneway": "yes",
+        "width": "14.6"
+      },
+      "nodes": [
+        [
+          53.573678,
+          -113.615185
+        ],
+        [
+          53.573945,
+          -113.615194
+        ]
+      ]
+    }
+  ],
+  "cross_road_continuation": [
+    {
+      "osm_way": 472597645,
+      "part": "south_continuation_west",
+      "which": "Cross-road in the extract: 170 Street NW continuing south from the south approach, primary, three lanes. Plan extent only.",
+      "plan_length_m": 70.5,
+      "tags": {
+        "highway": "primary",
+        "lanes": "3",
+        "maxspeed": "60",
+        "name": "170 Street NW",
+        "oneway": "yes",
+        "sidewalk": "no",
+        "surface": "asphalt",
+        "width": "11.1"
+      },
+      "nodes": [
+        [
+          53.572761,
+          -113.615438
+        ],
+        [
+          53.572127,
+          -113.615435
+        ]
+      ]
+    },
+    {
+      "osm_way": 472597646,
+      "part": "south_continuation_west_far",
+      "which": "Cross-road in the extract: 170 Street NW further south, primary, three lanes. Clipped at the download box.",
+      "plan_length_m": 97.3,
+      "tags": {
+        "highway": "primary",
+        "lanes": "3",
+        "maxspeed": "60",
+        "name": "170 Street NW",
+        "oneway": "yes",
+        "sidewalk": "no",
+        "surface": "asphalt",
+        "width": "11.1"
+      },
+      "nodes": [
+        [
+          53.571935,
+          -113.615211
+        ],
+        [
+          53.57281,
+          -113.615199
+        ]
+      ]
+    }
+  ],
+  "ramps": [
+    {
+      "osm_way": 472597652,
+      "part": "ramp_link_north_end",
+      "which": "Motorway link at the north end of the underpass (two lanes, OSM).",
+      "plan_length_m": 17.6,
+      "tags": {
+        "highway": "motorway_link",
+        "lanes": "2",
+        "oneway": "yes",
+        "surface": "asphalt",
+        "width": "8.3"
+      },
+      "nodes": [
+        [
+          53.573945,
+          -113.615194
+        ],
+        [
+          53.573888,
+          -113.615442
+        ]
+      ]
+    },
+    {
+      "osm_way": 472597653,
+      "part": "ramp_link_south_end",
+      "which": "Motorway link at the south end of the underpass (two lanes, OSM).",
+      "plan_length_m": 16.7,
+      "tags": {
+        "highway": "motorway_link",
+        "lanes": "2",
+        "oneway": "yes",
+        "surface": "asphalt",
+        "width": "8.3"
+      },
+      "nodes": [
+        [
+          53.572761,
+          -113.615438
+        ],
+        [
+          53.57281,
+          -113.615199
+        ]
+      ]
+    },
+    {
+      "osm_way": 472597654,
+      "part": "ramp_to_16_east",
+      "which": "Motorway link toward Yellowhead Trail 16 East, from the south end of the east carriageway.",
+      "plan_length_m": 102.2,
+      "tags": {
+        "destination": "Yellowhead Trail",
+        "destination:ref": "16 East",
+        "highway": "motorway_link",
+        "lanes": "2",
+        "oneway": "yes",
+        "surface": "asphalt",
+        "width": "8.3"
+      },
+      "nodes": [
+        [
+          53.57281,
+          -113.615199
+        ],
+        [
+          53.572854,
+          -113.614967
+        ],
+        [
+          53.572905,
+          -113.61458
+        ],
+        [
+          53.573001,
+          -113.614175
+        ],
+        [
+          53.573132,
+          -113.613758
+        ]
+      ]
+    },
+    {
+      "osm_way": 472597656,
+      "part": "ramp_from_16_west",
+      "which": "Motorway link from the west (St. Albert, Animal Care centre), joining the south approach.",
+      "plan_length_m": 127.8,
+      "tags": {
+        "destination": "St. Albert;Animal Care of Control center",
+        "highway": "motorway_link",
+        "lanes": "2",
+        "oneway": "yes",
+        "surface": "asphalt",
+        "width": "8.3"
+      },
+      "nodes": [
+        [
+          53.572494,
+          -113.617317
+        ],
+        [
+          53.572573,
+          -113.61655
+        ],
+        [
+          53.572659,
+          -113.615985
+        ],
+        [
+          53.572761,
+          -113.615438
+        ]
+      ]
+    },
+    {
+      "osm_way": 22914492,
+      "part": "ramp_to_16_west",
+      "which": "Motorway link toward Yellowhead Trail 16 West, from the north end of the west carriageway.",
+      "plan_length_m": 97.9,
+      "tags": {
+        "destination": "Yellowhead Trail",
+        "destination:ref": "16 West",
+        "highway": "motorway_link",
+        "lanes": "2",
+        "oneway": "yes",
+        "surface": "asphalt",
+        "width": "8.3"
+      },
+      "nodes": [
+        [
+          53.573888,
+          -113.615442
+        ],
+        [
+          53.573712,
+          -113.616228
+        ],
+        [
+          53.57367,
+          -113.616386
+        ],
+        [
+          53.573626,
+          -113.61654
+        ],
+        [
+          53.573542,
+          -113.616803
+        ]
+      ]
+    },
+    {
+      "osm_way": 31682488,
+      "part": "ramp_to_16_west_2",
+      "which": "Motorway link toward Yellowhead Trail 16 West, from the north approach.",
+      "plan_length_m": 132.5,
+      "tags": {
+        "destination": "Yellowhead Trail",
+        "destination:ref": "16 West",
+        "highway": "motorway_link",
+        "lanes": "1",
+        "oneway": "yes",
+        "surface": "asphalt",
+        "width": "5"
+      },
+      "nodes": [
+        [
+          53.574381,
+          -113.615436
+        ],
+        [
+          53.574194,
+          -113.615595
+        ],
+        [
+          53.574129,
+          -113.615651
+        ],
+        [
+          53.574065,
+          -113.615722
+        ],
+        [
+          53.573984,
+          -113.615829
+        ],
+        [
+          53.573902,
+          -113.615969
+        ],
+        [
+          53.573816,
+          -113.61615
+        ],
+        [
+          53.573725,
+          -113.616373
+        ],
+        [
+          53.573542,
+          -113.616803
+        ]
+      ]
+    },
+    {
+      "osm_way": 31673987,
+      "part": "ramp_to_animal_care",
+      "which": "Motorway link toward the Animal Care and Control centre, north-east of the interchange.",
+      "plan_length_m": 109.9,
+      "tags": {
+        "destination": "Animal Care & Control center",
+        "highway": "motorway_link",
+        "lanes": "1",
+        "oneway": "yes",
+        "surface": "asphalt",
+        "width": "5"
+      },
+      "nodes": [
+        [
+          53.574259,
+          -113.613664
+        ],
+        [
+          53.574227,
+          -113.61413
+        ],
+        [
+          53.574207,
+          -113.614354
+        ],
+        [
+          53.574196,
+          -113.614542
+        ],
+        [
+          53.574205,
+          -113.614667
+        ],
+        [
+          53.57422,
+          -113.614779
+        ],
+        [
+          53.574242,
+          -113.614882
+        ],
+        [
+          53.574255,
+          -113.61493
+        ],
+        [
+          53.574265,
+          -113.614966
+        ],
+        [
+          53.574307,
+          -113.615053
+        ],
+        [
+          53.574357,
+          -113.61512
+        ],
+        [
+          53.574414,
+          -113.615188
+        ]
+      ]
+    },
+    {
+      "osm_way": 472597659,
+      "part": "ramp_to_business_areas",
+      "which": "Motorway link toward business areas, Carleton Square and West Edmonton Mall.",
+      "plan_length_m": 106.9,
+      "tags": {
+        "destination": "Business Areas;Carleton Square;Edmiston;West Edmonton Mall",
+        "highway": "motorway_link",
+        "lanes": "2",
+        "oneway": "yes",
+        "surface": "asphalt",
+        "width": "8.3"
+      },
+      "nodes": [
+        [
+          53.574259,
+          -113.613664
+        ],
+        [
+          53.574155,
+          -113.614244
+        ],
+        [
+          53.573982,
+          -113.615024
+        ],
+        [
+          53.573945,
+          -113.615194
+        ]
+      ]
+    }
+  ],
+  "road_beneath": [
+    {
+      "osm_way": 61433293,
+      "part": "road_beneath_west",
+      "which": "Yellowhead Trail NW (Highway 16), motorway, three lanes, maxheight tag 6.4 (a mapper tag, not a clearance). Plan extent only. This is the road under the structure.",
+      "plan_length_m": 1003.8,
+      "tags": {
+        "alt_name": "Yellowhead Highway",
+        "highway": "motorway",
+        "lanes": "3",
+        "maxheight": "6.4",
+        "maxspeed": "90",
+        "name": "Yellowhead Trail NW",
+        "oneway": "yes",
+        "ref": "16",
+        "surface": "asphalt",
+        "width": "11.1"
+      },
+      "nodes": [
+        [
+          53.575267,
+          -113.607723
+        ],
+        [
+          53.574491,
+          -113.61079
+        ],
+        [
+          53.574049,
+          -113.612542
+        ],
+        [
+          53.573905,
+          -113.613116
+        ],
+        [
+          53.573751,
+          -113.613744
+        ],
+        [
+          53.573622,
+          -113.614294
+        ],
+        [
+          53.573488,
+          -113.614875
+        ],
+        [
+          53.573256,
+          -113.615933
+        ],
+        [
+          53.573026,
+          -113.617038
+        ],
+        [
+          53.572818,
+          -113.618111
+        ],
+        [
+          53.572601,
+          -113.619275
+        ],
+        [
+          53.572383,
+          -113.620438
+        ],
+        [
+          53.5721,
+          -113.621946
+        ]
+      ]
+    },
+    {
+      "osm_way": 61599226,
+      "part": "road_beneath_east",
+      "which": "Yellowhead Trail NW (Highway 16), motorway, three lanes, maxheight tag 6.4 (mapper tag). Plan extent only.",
+      "plan_length_m": 1365.5,
+      "tags": {
+        "alt_name": "Yellowhead Highway",
+        "highway": "motorway",
+        "lanes": "3",
+        "maxheight": "6.4",
+        "maxspeed": "90",
+        "name": "Yellowhead Trail NW",
+        "oneway": "yes",
+        "ref": "16",
+        "surface": "asphalt",
+        "width": "11.1"
+      },
+      "nodes": [
+        [
+          53.571889,
+          -113.622144
+        ],
+        [
+          53.572003,
+          -113.621499
+        ],
+        [
+          53.57223,
+          -113.620327
+        ],
+        [
+          53.572444,
+          -113.619192
+        ],
+        [
+          53.572653,
+          -113.618069
+        ],
+        [
+          53.572877,
+          -113.61692
+        ],
+        [
+          53.573105,
+          -113.615823
+        ],
+        [
+          53.57333,
+          -113.614797
+        ],
+        [
+          53.573454,
+          -113.61425
+        ],
+        [
+          53.573599,
+          -113.613623
+        ],
+        [
+          53.573742,
+          -113.613044
+        ],
+        [
+          53.573898,
+          -113.612425
+        ],
+        [
+          53.574336,
+          -113.610697
+        ],
+        [
+          53.575175,
+          -113.607391
+        ],
+        [
+          53.575958,
+          -113.604306
+        ],
+        [
+          53.576319,
+          -113.602874
+        ]
+      ]
+    }
+  ],
+  "excluded": [
+    {
+      "osm_way": 22939116,
+      "part": "excluded_cnr_overpass_bridge",
+      "which": "Bridge-tagged 170 Street way over the CNR, not over Yellowhead. Alberta STRU 40719 and 40718 (170 Street over CNR, 1983, about 257 to 260 m north of the centre). Separate structure.",
+      "plan_length_m": 173.8,
+      "tags": {
+        "bridge": "yes",
+        "highway": "secondary",
+        "lanes": "3",
+        "layer": "1",
+        "maxspeed": "70",
+        "name": "170 Street NW",
+        "oneway": "yes",
+        "width": "11.1"
+      },
+      "nodes": [
+        [
+          53.576022,
+          -113.615436
+        ],
+        [
+          53.574459,
+          -113.615436
+        ]
+      ]
+    },
+    {
+      "osm_way": 31684375,
+      "part": "excluded_cnr_overpass_bridge",
+      "which": "Bridge-tagged 170 Street way over the CNR, not over Yellowhead. Same CNR structure as way 22939116.",
+      "plan_length_m": 175.1,
+      "tags": {
+        "bridge": "yes",
+        "highway": "secondary",
+        "lanes": "3",
+        "layer": "1",
+        "maxspeed": "70",
+        "name": "170 Street NW",
+        "oneway": "yes",
+        "width": "11.1"
+      },
+      "nodes": [
+        [
+          53.574507,
+          -113.61519
+        ],
+        [
+          53.576082,
+          -113.615177
+        ]
+      ]
+    },
+    {
+      "osm_way": 1543946731,
+      "part": "excluded_cnr_overpass_path",
+      "which": "Footway bridge-tagged over the CNR overpass, north of Highway 16. Not this structure.",
+      "plan_length_m": 173.1,
+      "tags": {
+        "bridge": "yes",
+        "highway": "footway",
+        "layer": "1",
+        "surface": "concrete"
+      },
+      "nodes": [
+        [
+          53.574547,
+          -113.615038
+        ],
+        [
+          53.574633,
+          -113.615038
+        ],
+        [
+          53.576104,
+          -113.61506
+        ]
+      ]
+    },
+    {
+      "osm_way": 97935569,
+      "part": "excluded_north_of_cnr",
+      "which": "Secondary 170 Street north of the CNR overpass. Not this structure.",
+      "plan_length_m": 253.5,
+      "tags": {
+        "highway": "secondary",
+        "lanes": "3",
+        "maxspeed": "70",
+        "name": "170 Street NW",
+        "oneway": "yes",
+        "surface": "asphalt",
+        "width": "11.1"
+      },
+      "nodes": [
+        [
+          53.576082,
+          -113.615177
+        ],
+        [
+          53.576692,
+          -113.615192
+        ],
+        [
+          53.577788,
+          -113.615199
+        ],
+        [
+          53.578362,
+          -113.615201
+        ]
+      ]
+    },
+    {
+      "osm_way": 838029572,
+      "part": "excluded_north_of_cnr",
+      "which": "Secondary 170 Street further north. Not this structure.",
+      "plan_length_m": 255.9,
+      "tags": {
+        "highway": "secondary",
+        "lanes": "3",
+        "maxspeed": "70",
+        "name": "170 Street NW",
+        "oneway": "yes",
+        "surface": "asphalt",
+        "width": "11.1"
+      },
+      "nodes": [
+        [
+          53.578323,
+          -113.615407
+        ],
+        [
+          53.577815,
+          -113.61541
+        ],
+        [
+          53.576022,
+          -113.615436
+        ]
+      ]
+    },
+    {
+      "osm_way": 241143868,
+      "part": "excluded_between_structures",
+      "which": "Short link between the north approach and the CNR overpass. Not Y67.",
+      "plan_length_m": 8.7,
+      "tags": {
+        "highway": "secondary",
+        "lanes": "3",
+        "maxspeed": "70",
+        "name": "170 Street NW",
+        "oneway": "yes",
+        "width": "11.1"
+      },
+      "nodes": [
+        [
+          53.574459,
+          -113.615436
+        ],
+        [
+          53.574381,
+          -113.615436
+        ]
+      ]
+    },
+    {
+      "osm_way": 472597650,
+      "part": "excluded_between_structures",
+      "which": "Short link between the north approach and the CNR overpass. Not Y67.",
+      "plan_length_m": 10.3,
+      "tags": {
+        "highway": "secondary",
+        "lanes": "3",
+        "maxspeed": "70",
+        "name": "170 Street NW",
+        "oneway": "yes",
+        "width": "11.1"
+      },
+      "nodes": [
+        [
+          53.574414,
+          -113.615188
+        ],
+        [
+          53.574507,
+          -113.61519
+        ]
+      ]
+    },
+    {
+      "osm_way": 127496993,
+      "part": "excluded_between_structures",
+      "which": "Secondary link between the Yellowhead north end and the CNR overpass. Not Y67.",
+      "plan_length_m": 52.2,
+      "tags": {
+        "highway": "secondary",
+        "lanes": "3",
+        "maxspeed": "70",
+        "name": "170 Street NW",
+        "oneway": "yes",
+        "width": "11.1"
+      },
+      "nodes": [
+        [
+          53.573945,
+          -113.615194
+        ],
+        [
+          53.574414,
+          -113.615188
+        ]
+      ]
+    },
+    {
+      "osm_way": 472597642,
+      "part": "excluded_between_structures",
+      "which": "Secondary link between the Yellowhead north end and the CNR overpass. Not Y67.",
+      "plan_length_m": 54.8,
+      "tags": {
+        "highway": "secondary",
+        "lanes": "3",
+        "maxspeed": "70",
+        "name": "170 Street NW",
+        "oneway": "yes",
+        "width": "11.1"
+      },
+      "nodes": [
+        [
+          53.574381,
+          -113.615436
+        ],
+        [
+          53.573888,
+          -113.615442
+        ]
+      ]
+    },
+    {
+      "osm_way": 1543946730,
+      "part": "excluded_north_footway",
+      "which": "Footway north of the CNR overpass, not bridge-tagged. Not this structure.",
+      "plan_length_m": 243.4,
+      "tags": {
+        "highway": "footway",
+        "surface": "concrete"
+      },
+      "nodes": [
+        [
+          53.576104,
+          -113.61506
+        ],
+        [
+          53.577345,
+          -113.615078
+        ],
+        [
+          53.577395,
+          -113.615074
+        ],
+        [
+          53.577453,
+          -113.615064
+        ],
+        [
+          53.57768,
+          -113.615031
+        ],
+        [
+          53.577729,
+          -113.615027
+        ],
+        [
+          53.577776,
+          -113.615024
+        ],
+        [
+          53.577822,
+          -113.615025
+        ],
+        [
+          53.578216,
+          -113.615026
+        ],
+        [
+          53.578241,
+          -113.615021
+        ],
+        [
+          53.57826,
+          -113.61501
+        ],
+        [
+          53.578277,
+          -113.614995
+        ],
+        [
+          53.578285,
+          -113.614983
+        ]
+      ]
+    },
+    {
+      "osm_way": 1543946732,
+      "part": "excluded_between_structures",
+      "which": "Footway between the Yellowhead north end and the CNR overpass. Not Y67.",
+      "plan_length_m": 31.1,
+      "tags": {
+        "highway": "footway",
+        "surface": "concrete"
+      },
+      "nodes": [
+        [
+          53.574287,
+          -113.614913
+        ],
+        [
+          53.57431,
+          -113.614905
+        ],
+        [
+          53.574318,
+          -113.614903
+        ],
+        [
+          53.574323,
+          -113.614904
+        ],
+        [
+          53.574331,
+          -113.614908
+        ],
+        [
+          53.57437,
+          -113.614959
+        ],
+        [
+          53.574391,
+          -113.614981
+        ],
+        [
+          53.574408,
+          -113.614995
+        ],
+        [
+          53.574429,
+          -113.615006
+        ],
+        [
+          53.574468,
+          -113.61502
+        ],
+        [
+          53.574501,
+          -113.61503
+        ],
+        [
+          53.574547,
+          -113.615038
+        ]
+      ]
+    },
+    {
+      "osm_way": 1543946734,
+      "part": "excluded_south_footway",
+      "which": "Footway beside the south end of the Yellowhead deck, not bridge-tagged. Not a deck path.",
+      "plan_length_m": 22.8,
+      "tags": {
+        "highway": "footway",
+        "surface": "concrete"
+      },
+      "nodes": [
+        [
+          53.572925,
+          -113.614968
+        ],
+        [
+          53.572925,
+          -113.614989
+        ],
+        [
+          53.572927,
+          -113.615014
+        ],
+        [
+          53.57293,
+          -113.615029
+        ],
+        [
+          53.572936,
+          -113.615037
+        ],
+        [
+          53.572943,
+          -113.615042
+        ],
+        [
+          53.572951,
+          -113.615042
+        ],
+        [
+          53.573096,
+          -113.615042
+        ]
+      ]
+    },
+    {
+      "osm_way": 1543946736,
+      "part": "excluded_north_footway",
+      "which": "Footway beside the north end of the Yellowhead deck, not bridge-tagged. Not a deck path.",
+      "plan_length_m": 26.6,
+      "tags": {
+        "highway": "footway",
+        "surface": "concrete"
+      },
+      "nodes": [
+        [
+          53.573698,
+          -113.61504
+        ],
+        [
+          53.573911,
+          -113.615039
+        ],
+        [
+          53.573919,
+          -113.615035
+        ],
+        [
+          53.573924,
+          -113.615024
+        ],
+        [
+          53.573928,
+          -113.61501
+        ]
+      ]
+    }
+  ],
+  "dimensions": {
+    "source": "Alberta Transportation Structure-Export.csv, STRU_ID 41091 (file 79483, name 170 STREET - YHT (B185)), retrieved 2026-11-23. Units are not labelled in the file.",
+    "spans_m": [
+      31.0,
+      35.6
+    ],
+    "nominal_bridge_length_m": 66.6,
+    "max_span_m": 35.6,
+    "gross_deck_width_m": 37.8,
+    "total_clear_roadway_m": 33.0,
+    "theoretical_vertical_clearance_under_m": 5.8,
+    "theoretical_horizontal_clearance_under_m": 5.8,
+    "deck_height_m": null,
+    "deck_material": "precast concrete (DECK_MATERIAL_DESCRIPTION); wearing surface concrete, high density",
+    "pier_cap_material": "concrete",
+    "pier_shaft_material": null,
+    "skew_degrees": null,
+    "first_in_service_year": 1983,
+    "span_type_code": "FM (no label in the file)",
+    "bounds": {
+      "lat0": 53.571935,
+      "lat1": 53.573945,
+      "lon0": -113.615442,
+      "lon1": -113.61504
+    }
+  }
+}
