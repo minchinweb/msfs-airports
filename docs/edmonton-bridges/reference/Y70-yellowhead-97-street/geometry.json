@@ -1,0 +1,1211 @@
+{
+ "code": "Y70",
+ "name": "Yellowhead / 97 Street",
+ "centre": [
+  53.581278,
+  -113.492106
+ ],
+ "centre_note": "Alberta Structure-Export.csv record 41052 (97 STREET - YELLOWHEAD TRAIL (B186)), LATITUDE 53.581277908045, LONGITUDE -113.492105999669. Used because the record is found and the point is on the structure. The Y70 estimate in bridge-geometry.json and PRIORITY.md (53.578, -113.489) is 418 m south-east of this point. Estimate not used as centre.",
+ "crs": "EPSG:4326",
+ "coordinate_order": "[lat, lon]",
+ "geometry_source": "Live OpenStreetMap API 0.6 map call, bbox -113.5070,53.5740,-113.4770,53.5900, retrieved 2026-11-23. Cached Y70 object in docs/edmonton-bridges/bridge-geometry.json was thin (no ways; estimated centre). Not edited.",
+ "geometry_retrieved": "2026-11-23",
+ "plan_length_note": "plan_length_m is the horizontal WGS84 length of each OSM way, computed along its nodes. Approach and ramp lengths are plan lengths of whole ways. They are not the climb to grade and not a structural length. The published span is 27.9 m (Alberta record 41052).",
+ "dropped_note": "Dropped: CNR underpass way 80403111 (different structure, CNR over 97 Street, records 39678 and 41618), a footway bridge at 380 m (198706326), a motorway link at 270 m (61241743), and all Yellowhead through-ways outside the 150 m interchange footprint, which are road alignment, not this structure. No way was dropped for having a different Y-code.",
+ "decks": [
+  {
+   "osm_way": 472577432,
+   "part": "road_deck",
+   "which": "97 Street NW over Yellowhead Trail (Highway 16). The only way in the extract that carries the crossing itself. Two-way, 97 Street NW, lanes tagged 7 (3 forward, 3 backward, 1 reversible). Node order is south to north. No bridge=yes tag on this way or any way at this crossing in the extract. Plan length is 24.6 m. The Alberta record gives a 27.9 m span and a 30 m theoretical length; the two are not the same measure and neither is this plan length.",
+   "plan_length_m": 24.6,
+   "tags": {
+    "highway": "primary",
+    "lanes": "7",
+    "maxspeed": "60",
+    "name": "97 Street NW",
+    "sidewalk:both": "separate",
+    "source": "Canvec V6 - Alberta",
+    "surface": "asphalt"
+   },
+   "nodes": [
+    [
+     53.581409,
+     -113.492137
+    ],
+    [
+     53.58163,
+     -113.492105
+    ]
+   ]
+  }
+ ],
+ "approaches": [
+  {
+   "osm_way": 472577429,
+   "part": "approach_south",
+   "which": "97 Street NW south of the deck, from the deck end south. Sidewalks tagged separate on both sides. Way ends at the deck. Extends beyond 97 Street south ramps; far node is about 125 m from the deck.",
+   "plan_length_m": 124.7,
+   "tags": {
+    "highway": "secondary",
+    "lanes": "7",
+    "maxspeed": "60",
+    "name": "97 Street NW",
+    "sidewalk:both": "separate",
+    "surface": "asphalt"
+   },
+   "nodes": [
+    [
+     53.580291,
+     -113.492276
+    ],
+    [
+     53.580704,
+     -113.492243
+    ],
+    [
+     53.581015,
+     -113.492191
+    ],
+    [
+     53.581409,
+     -113.492137
+    ]
+   ]
+  },
+  {
+   "osm_way": 476073031,
+   "part": "approach_south_far",
+   "which": "97 Street NW south of way 472577429, further south. Complete in the extract (far node at 53.57674 is inside the download box). Not the climb to grade.",
+   "plan_length_m": 395.4,
+   "tags": {
+    "highway": "secondary",
+    "lanes": "7",
+    "maxspeed": "60",
+    "name": "97 Street NW",
+    "surface": "asphalt"
+   },
+   "nodes": [
+    [
+     53.576736,
+     -113.492295
+    ],
+    [
+     53.576833,
+     -113.492297
+    ],
+    [
+     53.578308,
+     -113.492289
+    ],
+    [
+     53.579358,
+     -113.492294
+    ],
+    [
+     53.579442,
+     -113.492294
+    ],
+    [
+     53.579575,
+     -113.492294
+    ],
+    [
+     53.580291,
+     -113.492276
+    ]
+   ]
+  },
+  {
+   "osm_way": 472577426,
+   "part": "approach_north",
+   "which": "97 Street NW north of the deck, starting at the north deck end. Sidewalks tagged separate on both sides.",
+   "plan_length_m": 45.6,
+   "tags": {
+    "highway": "primary",
+    "lanes": "7",
+    "maxspeed": "60",
+    "name": "97 Street NW",
+    "sidewalk:both": "separate",
+    "source": "Canvec V6 - Alberta",
+    "surface": "asphalt"
+   },
+   "nodes": [
+    [
+     53.58163,
+     -113.492105
+    ],
+    [
+     53.581713,
+     -113.492093
+    ],
+    [
+     53.582039,
+     -113.492052
+    ]
+   ]
+  },
+  {
+   "osm_way": 62232309,
+   "part": "approach_north_far",
+   "which": "97 Street NW north, further north, tagged ref 28 (Highway 28). Plan length only.",
+   "plan_length_m": 118.9,
+   "tags": {
+    "highway": "primary",
+    "lanes": "7",
+    "maxspeed": "60",
+    "name": "97 Street NW",
+    "ref": "28",
+    "source": "Canvec V6 - Alberta",
+    "surface": "asphalt"
+   },
+   "nodes": [
+    [
+     53.582039,
+     -113.492052
+    ],
+    [
+     53.582274,
+     -113.492029
+    ],
+    [
+     53.582691,
+     -113.492024
+    ],
+    [
+     53.583108,
+     -113.492019
+    ]
+   ]
+  }
+ ],
+ "road_beneath": [
+  {
+   "osm_way": 22916204,
+   "part": "road_beneath",
+   "which": "Yellowhead Trail NW (Highway 16) eastbound or westbound segment beneath the 97 Street deck. Tagged layer -1 and tunnel=yes. These tags mark an underpass in OSM; they are not evidence of a tunnel. Plan length is 59.5 m. Two-node way.",
+   "plan_length_m": 59.5,
+   "tags": {
+    "highway": "motorway",
+    "lanes": "3",
+    "layer": "-1",
+    "maxspeed": "70",
+    "name": "Yellowhead Trail NW",
+    "oneway": "yes",
+    "ref": "16",
+    "surface": "asphalt",
+    "tunnel": "yes",
+    "width": "11.1"
+   },
+   "nodes": [
+    [
+     53.581358,
+     -113.4926
+    ],
+    [
+     53.581345,
+     -113.491699
+    ]
+   ]
+  },
+  {
+   "osm_way": 80403108,
+   "part": "road_beneath",
+   "which": "Yellowhead Trail NW (Highway 16) segment beneath the 97 Street deck, opposite carriageway to 22916204. Tagged layer -1 and tunnel=yes, as above. Plan length 54.4 m.",
+   "plan_length_m": 54.4,
+   "tags": {
+    "highway": "motorway",
+    "lanes": "3",
+    "layer": "-1",
+    "maxspeed": "70",
+    "name": "Yellowhead Trail NW",
+    "oneway": "yes",
+    "ref": "16",
+    "source": "NRN - Alberta V7.0",
+    "surface": "asphalt",
+    "tunnel": "yes"
+   },
+   "nodes": [
+    [
+     53.581466,
+     -113.49173
+    ],
+    [
+     53.581479,
+     -113.492554
+    ]
+   ]
+  }
+ ],
+ "ramps": [
+  {
+   "osm_way": 472577443,
+   "part": "ramp",
+   "which": "interchange ramp at 97 Street and Yellowhead Trail, within 150 m of the record point; belongs to the interchange, not to the 97 Street deck. Kept for plan reference only.",
+   "plan_length_m": 42.4,
+   "tags": {
+    "destination": "Yellowhead Trail",
+    "highway": "motorway_link",
+    "oneway": "yes",
+    "surface": "asphalt"
+   },
+   "nodes": [
+    [
+     53.581409,
+     -113.492137
+    ],
+    [
+     53.581316,
+     -113.491946
+    ],
+    [
+     53.581303,
+     -113.491911
+    ],
+    [
+     53.581268,
+     -113.491816
+    ],
+    [
+     53.581257,
+     -113.491712
+    ],
+    [
+     53.581256,
+     -113.491575
+    ]
+   ],
+   "nearest_m_to_centre": 11
+  },
+  {
+   "osm_way": 1262842932,
+   "part": "ramp",
+   "which": "interchange ramp at 97 Street and Yellowhead Trail, within 150 m of the record point; belongs to the interchange, not to the 97 Street deck. Kept for plan reference only.",
+   "plan_length_m": 35.1,
+   "tags": {
+    "destination:street": "97 Street",
+    "highway": "motorway_link",
+    "oneway": "yes",
+    "surface": "asphalt"
+   },
+   "nodes": [
+    [
+     53.581273,
+     -113.492604
+    ],
+    [
+     53.5813,
+     -113.492398
+    ],
+    [
+     53.581352,
+     -113.492252
+    ],
+    [
+     53.581409,
+     -113.492137
+    ]
+   ],
+   "nearest_m_to_centre": 13
+  },
+  {
+   "osm_way": 1011265900,
+   "part": "ramp",
+   "which": "interchange ramp at 97 Street and Yellowhead Trail, within 150 m of the record point; belongs to the interchange, not to the 97 Street deck. Kept for plan reference only.",
+   "plan_length_m": 27.7,
+   "tags": {
+    "destination:street": "97 Street South",
+    "highway": "motorway_link",
+    "oneway": "yes",
+    "surface": "asphalt"
+   },
+   "nodes": [
+    [
+     53.581531,
+     -113.491771
+    ],
+    [
+     53.581496,
+     -113.491884
+    ],
+    [
+     53.581409,
+     -113.492137
+    ]
+   ],
+   "nearest_m_to_centre": 15
+  },
+  {
+   "osm_way": 1011265901,
+   "part": "ramp",
+   "which": "interchange ramp at 97 Street and Yellowhead Trail, within 150 m of the record point; belongs to the interchange, not to the 97 Street deck. Kept for plan reference only.",
+   "plan_length_m": 40.9,
+   "tags": {
+    "destination:street": "Yellowhead Trail East",
+    "highway": "motorway_link",
+    "lanes": "1",
+    "oneway": "yes",
+    "surface": "asphalt"
+   },
+   "nodes": [
+    [
+     53.581531,
+     -113.491771
+    ],
+    [
+     53.581494,
+     -113.491816
+    ],
+    [
+     53.581445,
+     -113.491836
+    ],
+    [
+     53.581404,
+     -113.491839
+    ],
+    [
+     53.581367,
+     -113.491828
+    ],
+    [
+     53.581329,
+     -113.491791
+    ],
+    [
+     53.581291,
+     -113.491716
+    ],
+    [
+     53.581256,
+     -113.491575
+    ]
+   ],
+   "nearest_m_to_centre": 21
+  },
+  {
+   "osm_way": 80403107,
+   "part": "ramp",
+   "which": "interchange ramp at 97 Street and Yellowhead Trail, within 150 m of the record point; belongs to the interchange, not to the 97 Street deck. Kept for plan reference only.",
+   "plan_length_m": 52.5,
+   "tags": {
+    "highway": "motorway_link",
+    "lanes": "1",
+    "oneway": "yes",
+    "surface": "asphalt"
+   },
+   "nodes": [
+    [
+     53.581273,
+     -113.492604
+    ],
+    [
+     53.581307,
+     -113.492539
+    ],
+    [
+     53.581344,
+     -113.492488
+    ],
+    [
+     53.581391,
+     -113.492454
+    ],
+    [
+     53.581436,
+     -113.492449
+    ],
+    [
+     53.581488,
+     -113.492469
+    ],
+    [
+     53.581534,
+     -113.492513
+    ],
+    [
+     53.581574,
+     -113.492582
+    ],
+    [
+     53.581634,
+     -113.492745
+    ]
+   ],
+   "nearest_m_to_centre": 26
+  },
+  {
+   "osm_way": 80403105,
+   "part": "ramp",
+   "which": "interchange ramp at 97 Street and Yellowhead Trail, within 150 m of the record point; belongs to the interchange, not to the 97 Street deck. Kept for plan reference only.",
+   "plan_length_m": 138.8,
+   "tags": {
+    "destination": "Yellowhead Trail",
+    "highway": "motorway_link",
+    "oneway": "yes",
+    "surface": "asphalt"
+   },
+   "nodes": [
+    [
+     53.580291,
+     -113.492276
+    ],
+    [
+     53.580617,
+     -113.492023
+    ],
+    [
+     53.580801,
+     -113.49197
+    ],
+    [
+     53.580885,
+     -113.491939
+    ],
+    [
+     53.58097,
+     -113.491903
+    ],
+    [
+     53.581034,
+     -113.491863
+    ],
+    [
+     53.581101,
+     -113.491783
+    ],
+    [
+     53.581147,
+     -113.491703
+    ],
+    [
+     53.581184,
+     -113.491599
+    ],
+    [
+     53.581214,
+     -113.491472
+    ],
+    [
+     53.581255,
+     -113.491212
+    ]
+   ],
+   "nearest_m_to_centre": 29
+  },
+  {
+   "osm_way": 22914469,
+   "part": "ramp",
+   "which": "interchange ramp at 97 Street and Yellowhead Trail, within 150 m of the record point; belongs to the interchange, not to the 97 Street deck. Kept for plan reference only.",
+   "plan_length_m": 44.3,
+   "tags": {
+    "destination:street": "97 Street",
+    "highway": "motorway_link",
+    "lanes": "2",
+    "oneway": "yes",
+    "surface": "asphalt"
+   },
+   "nodes": [
+    [
+     53.581257,
+     -113.493272
+    ],
+    [
+     53.581254,
+     -113.492897
+    ],
+    [
+     53.581257,
+     -113.492725
+    ],
+    [
+     53.581273,
+     -113.492604
+    ]
+   ],
+   "nearest_m_to_centre": 33
+  },
+  {
+   "osm_way": 1099451563,
+   "part": "ramp",
+   "which": "interchange ramp at 97 Street and Yellowhead Trail, within 150 m of the record point; belongs to the interchange, not to the 97 Street deck. Kept for plan reference only.",
+   "plan_length_m": 24.0,
+   "tags": {
+    "destination:street": "Yellowhead Trail",
+    "highway": "motorway_link",
+    "oneway": "yes",
+    "surface": "asphalt"
+   },
+   "nodes": [
+    [
+     53.581256,
+     -113.491575
+    ],
+    [
+     53.581255,
+     -113.491212
+    ]
+   ],
+   "nearest_m_to_centre": 35
+  },
+  {
+   "osm_way": 80403106,
+   "part": "ramp",
+   "which": "interchange ramp at 97 Street and Yellowhead Trail, within 150 m of the record point; belongs to the interchange, not to the 97 Street deck. Kept for plan reference only.",
+   "plan_length_m": 23.5,
+   "tags": {
+    "destination:street": "97 Street South;Yellowhead Trail East",
+    "highway": "motorway_link",
+    "lanes": "1",
+    "oneway": "yes",
+    "surface": "asphalt"
+   },
+   "nodes": [
+    [
+     53.581616,
+     -113.49145
+    ],
+    [
+     53.581594,
+     -113.49158
+    ],
+    [
+     53.581573,
+     -113.491671
+    ],
+    [
+     53.581531,
+     -113.491771
+    ]
+   ],
+   "nearest_m_to_centre": 36
+  },
+  {
+   "osm_way": 250841617,
+   "part": "ramp",
+   "which": "interchange ramp at 97 Street and Yellowhead Trail, within 150 m of the record point; belongs to the interchange, not to the 97 Street deck. Kept for plan reference only.",
+   "plan_length_m": 49.1,
+   "tags": {
+    "highway": "motorway_link",
+    "lanes": "1",
+    "oneway": "yes",
+    "surface": "asphalt"
+   },
+   "nodes": [
+    [
+     53.580531,
+     -113.491879
+    ],
+    [
+     53.580739,
+     -113.491864
+    ],
+    [
+     53.580866,
+     -113.491867
+    ],
+    [
+     53.58097,
+     -113.491903
+    ]
+   ],
+   "nearest_m_to_centre": 37
+  },
+  {
+   "osm_way": 61241344,
+   "part": "ramp",
+   "which": "interchange ramp at 97 Street and Yellowhead Trail, within 150 m of the record point; belongs to the interchange, not to the 97 Street deck. Kept for plan reference only.",
+   "plan_length_m": 142.3,
+   "tags": {
+    "destination:street": "97 Street South",
+    "highway": "motorway_link",
+    "lanes": "1",
+    "oneway": "yes",
+    "source": "Canvec V6 - Alberta",
+    "surface": "asphalt"
+   },
+   "nodes": [
+    [
+     53.581257,
+     -113.493272
+    ],
+    [
+     53.581161,
+     -113.49275
+    ],
+    [
+     53.581122,
+     -113.492638
+    ],
+    [
+     53.58108,
+     -113.492555
+    ],
+    [
+     53.58103,
+     -113.492501
+    ],
+    [
+     53.58098,
+     -113.492461
+    ],
+    [
+     53.580903,
+     -113.492418
+    ],
+    [
+     53.580291,
+     -113.492276
+    ]
+   ],
+   "nearest_m_to_centre": 37
+  },
+  {
+   "osm_way": 472577436,
+   "part": "ramp",
+   "which": "interchange ramp at 97 Street and Yellowhead Trail, within 150 m of the record point; belongs to the interchange, not to the 97 Street deck. Kept for plan reference only.",
+   "plan_length_m": 42.3,
+   "tags": {
+    "destination:street": "Yellowhead Trail",
+    "highway": "motorway_link",
+    "oneway": "yes",
+    "surface": "asphalt"
+   },
+   "nodes": [
+    [
+     53.58163,
+     -113.492105
+    ],
+    [
+     53.58163,
+     -113.492356
+    ],
+    [
+     53.581634,
+     -113.492745
+    ]
+   ],
+   "nearest_m_to_centre": 39
+  },
+  {
+   "osm_way": 475852953,
+   "part": "ramp",
+   "which": "interchange ramp at 97 Street and Yellowhead Trail, within 150 m of the record point; belongs to the interchange, not to the 97 Street deck. Kept for plan reference only.",
+   "plan_length_m": 43.3,
+   "tags": {
+    "destination:street": "97 Street North;Yellowhead Trail West",
+    "highway": "motorway_link",
+    "lanes": "2",
+    "oneway": "yes",
+    "surface": "asphalt"
+   },
+   "nodes": [
+    [
+     53.581616,
+     -113.49145
+    ],
+    [
+     53.581625,
+     -113.49185
+    ],
+    [
+     53.58163,
+     -113.492105
+    ]
+   ],
+   "nearest_m_to_centre": 39
+  },
+  {
+   "osm_way": 46894779,
+   "part": "ramp",
+   "which": "interchange ramp at 97 Street and Yellowhead Trail, within 150 m of the record point; belongs to the interchange, not to the 97 Street deck. Kept for plan reference only.",
+   "plan_length_m": 80.3,
+   "tags": {
+    "destination": "Yellowhead Trail",
+    "highway": "motorway_link",
+    "oneway": "yes",
+    "source": "Bing",
+    "surface": "asphalt"
+   },
+   "nodes": [
+    [
+     53.582039,
+     -113.492052
+    ],
+    [
+     53.581921,
+     -113.492228
+    ],
+    [
+     53.581837,
+     -113.492315
+    ],
+    [
+     53.581768,
+     -113.492392
+    ],
+    [
+     53.581733,
+     -113.492437
+    ],
+    [
+     53.5817,
+     -113.492519
+    ],
+    [
+     53.581674,
+     -113.492598
+    ],
+    [
+     53.581655,
+     -113.492689
+    ],
+    [
+     53.581634,
+     -113.492974
+    ]
+   ],
+   "nearest_m_to_centre": 54
+  },
+  {
+   "osm_way": 472577438,
+   "part": "ramp",
+   "which": "interchange ramp at 97 Street and Yellowhead Trail, within 150 m of the record point; belongs to the interchange, not to the 97 Street deck. Kept for plan reference only.",
+   "plan_length_m": 62.9,
+   "tags": {
+    "destination:street": "97 Street South;Yellowhead Trail West",
+    "highway": "motorway_link",
+    "lanes": "2",
+    "oneway": "yes",
+    "surface": "asphalt"
+   },
+   "nodes": [
+    [
+     53.581592,
+     -113.490498
+    ],
+    [
+     53.5816,
+     -113.490809
+    ],
+    [
+     53.581616,
+     -113.49145
+    ]
+   ],
+   "nearest_m_to_centre": 57
+  },
+  {
+   "osm_way": 472577435,
+   "part": "ramp",
+   "which": "interchange ramp at 97 Street and Yellowhead Trail, within 150 m of the record point; belongs to the interchange, not to the 97 Street deck. Kept for plan reference only.",
+   "plan_length_m": 15.1,
+   "tags": {
+    "destination:street": "Yellowhead Trail",
+    "highway": "motorway_link",
+    "lanes": "1",
+    "oneway": "yes",
+    "surface": "asphalt"
+   },
+   "nodes": [
+    [
+     53.581634,
+     -113.492745
+    ],
+    [
+     53.581634,
+     -113.492974
+    ]
+   ],
+   "nearest_m_to_centre": 58
+  },
+  {
+   "osm_way": 475852954,
+   "part": "ramp",
+   "which": "interchange ramp at 97 Street and Yellowhead Trail, within 150 m of the record point; belongs to the interchange, not to the 97 Street deck. Kept for plan reference only.",
+   "plan_length_m": 332.6,
+   "tags": {
+    "destination:street": "Yellowhead Trail",
+    "highway": "motorway_link",
+    "lanes": "1",
+    "oneway": "yes",
+    "surface": "asphalt"
+   },
+   "nodes": [
+    [
+     53.581255,
+     -113.491212
+    ],
+    [
+     53.581218,
+     -113.488884
+    ],
+    [
+     53.581221,
+     -113.48712
+    ],
+    [
+     53.581264,
+     -113.486178
+    ]
+   ],
+   "nearest_m_to_centre": 59
+  },
+  {
+   "osm_way": 821666379,
+   "part": "ramp",
+   "which": "interchange ramp at 97 Street and Yellowhead Trail, within 150 m of the record point; belongs to the interchange, not to the 97 Street deck. Kept for plan reference only.",
+   "plan_length_m": 70.2,
+   "tags": {
+    "destination:street": "Yellowhead Trail",
+    "highway": "motorway_link",
+    "lanes": "2",
+    "oneway": "yes",
+    "surface": "asphalt"
+   },
+   "nodes": [
+    [
+     53.581634,
+     -113.492974
+    ],
+    [
+     53.581618,
+     -113.494037
+    ]
+   ],
+   "nearest_m_to_centre": 70
+  },
+  {
+   "osm_way": 61333618,
+   "part": "ramp",
+   "which": "interchange ramp at 97 Street and Yellowhead Trail, within 150 m of the record point; belongs to the interchange, not to the 97 Street deck. Kept for plan reference only.",
+   "plan_length_m": 192.6,
+   "tags": {
+    "destination:street": "97 Street",
+    "highway": "motorway_link",
+    "lanes": "3",
+    "oneway": "yes",
+    "source": "Canvec V6 - Alberta",
+    "surface": "asphalt"
+   },
+   "nodes": [
+    [
+     53.581319,
+     -113.496188
+    ],
+    [
+     53.581296,
+     -113.495639
+    ],
+    [
+     53.581272,
+     -113.494084
+    ],
+    [
+     53.581257,
+     -113.493272
+    ]
+   ],
+   "nearest_m_to_centre": 77
+  },
+  {
+   "osm_way": 472577440,
+   "part": "ramp",
+   "which": "interchange ramp at 97 Street and Yellowhead Trail, within 150 m of the record point; belongs to the interchange, not to the 97 Street deck. Kept for plan reference only.",
+   "plan_length_m": 399.6,
+   "tags": {
+    "destination": "Business Area;Delton;Kingsway",
+    "destination:street": "97 Street",
+    "highway": "motorway_link",
+    "lanes": "1",
+    "oneway": "yes",
+    "surface": "asphalt"
+   },
+   "nodes": [
+    [
+     53.581376,
+     -113.484459
+    ],
+    [
+     53.581483,
+     -113.485848
+    ],
+    [
+     53.581522,
+     -113.487465
+    ],
+    [
+     53.581523,
+     -113.488164
+    ],
+    [
+     53.581592,
+     -113.490498
+    ]
+   ],
+   "nearest_m_to_centre": 112
+  },
+  {
+   "osm_way": 631818984,
+   "part": "ramp",
+   "which": "interchange ramp at 97 Street and Yellowhead Trail, within 150 m of the record point; belongs to the interchange, not to the 97 Street deck. Kept for plan reference only.",
+   "plan_length_m": 31.3,
+   "tags": {
+    "destination:street": "Yellowhead Trail",
+    "highway": "motorway_link",
+    "oneway": "yes",
+    "surface": "asphalt"
+   },
+   "nodes": [
+    [
+     53.581662,
+     -113.490041
+    ],
+    [
+     53.581629,
+     -113.490167
+    ],
+    [
+     53.581592,
+     -113.490498
+    ]
+   ],
+   "nearest_m_to_centre": 112
+  },
+  {
+   "osm_way": 821666380,
+   "part": "ramp",
+   "which": "interchange ramp at 97 Street and Yellowhead Trail, within 150 m of the record point; belongs to the interchange, not to the 97 Street deck. Kept for plan reference only.",
+   "plan_length_m": 137.5,
+   "tags": {
+    "destination:street": "Yellowhead Trail",
+    "highway": "motorway_link",
+    "lanes": "2",
+    "oneway": "yes",
+    "surface": "asphalt"
+   },
+   "nodes": [
+    [
+     53.581618,
+     -113.494037
+    ],
+    [
+     53.581618,
+     -113.494076
+    ],
+    [
+     53.581624,
+     -113.494907
+    ],
+    [
+     53.581635,
+     -113.49612
+    ]
+   ],
+   "nearest_m_to_centre": 133
+  },
+  {
+   "osm_way": 46894769,
+   "part": "ramp",
+   "which": "interchange ramp at 97 Street and Yellowhead Trail, within 150 m of the record point; belongs to the interchange, not to the 97 Street deck. Kept for plan reference only.",
+   "plan_length_m": 60.9,
+   "tags": {
+    "destination:street": "Yellowhead Trail",
+    "highway": "motorway_link",
+    "oneway": "yes",
+    "surface": "asphalt"
+   },
+   "nodes": [
+    [
+     53.581748,
+     -113.489151
+    ],
+    [
+     53.581756,
+     -113.489526
+    ],
+    [
+     53.581739,
+     -113.489764
+    ],
+    [
+     53.581716,
+     -113.489877
+    ],
+    [
+     53.581662,
+     -113.490041
+    ]
+   ],
+   "nearest_m_to_centre": 143
+  },
+  {
+   "osm_way": 46894771,
+   "part": "ramp",
+   "which": "interchange ramp at 97 Street and Yellowhead Trail, within 150 m of the record point; belongs to the interchange, not to the 97 Street deck. Kept for plan reference only.",
+   "plan_length_m": 54.2,
+   "tags": {
+    "destination:street": "Yellowhead Trail",
+    "highway": "motorway_link",
+    "oneway": "yes"
+   },
+   "nodes": [
+    [
+     53.582107,
+     -113.489849
+    ],
+    [
+     53.581966,
+     -113.489789
+    ],
+    [
+     53.581885,
+     -113.48982
+    ],
+    [
+     53.581802,
+     -113.489884
+    ],
+    [
+     53.581758,
+     -113.489933
+    ],
+    [
+     53.581662,
+     -113.490041
+    ]
+   ],
+   "nearest_m_to_centre": 143
+  }
+ ],
+ "paths": [
+  {
+   "osm_way": 819661429,
+   "part": "path_at_grade",
+   "which": "footway crossing with traffic signals at the ramp terminal, at grade, not on the deck",
+   "plan_length_m": 38.1,
+   "tags": {
+    "crossing": "traffic_signals",
+    "footway": "crossing",
+    "highway": "footway",
+    "surface": "asphalt"
+   },
+   "nodes": [
+    [
+     53.581561,
+     -113.491874
+    ],
+    [
+     53.581496,
+     -113.491884
+    ],
+    [
+     53.581303,
+     -113.491911
+    ],
+    [
+     53.581221,
+     -113.491924
+    ]
+   ]
+  },
+  {
+   "osm_way": 1379180987,
+   "part": "path_at_grade",
+   "which": "footway sidewalk beside the ramp terminal, at grade",
+   "plan_length_m": 22.3,
+   "tags": {
+    "footway": "sidewalk",
+    "highway": "footway",
+    "surface": "concrete"
+   },
+   "nodes": [
+    [
+     53.581221,
+     -113.491924
+    ],
+    [
+     53.581043,
+     -113.491953
+    ],
+    [
+     53.581041,
+     -113.491916
+    ]
+   ]
+  },
+  {
+   "osm_way": 1379180984,
+   "part": "path_at_grade",
+   "which": "footway crossing with traffic signals, bicycle and foot designated, at grade",
+   "plan_length_m": 13.8,
+   "tags": {
+    "bicycle": "designated",
+    "crossing": "traffic_signals",
+    "foot": "designated",
+    "footway": "crossing",
+    "highway": "footway",
+    "source": "city website (text)",
+    "surface": "concrete"
+   },
+   "nodes": [
+    [
+     53.58125,
+     -113.492407
+    ],
+    [
+     53.5813,
+     -113.492398
+    ],
+    [
+     53.581373,
+     -113.492383
+    ]
+   ]
+  },
+  {
+   "osm_way": 1379180979,
+   "part": "path_at_grade",
+   "which": "path beside the ramp terminal, bicycle and foot designated, at grade",
+   "plan_length_m": 17.3,
+   "tags": {
+    "bicycle": "designated",
+    "foot": "designated",
+    "highway": "path",
+    "source": "city website (text)",
+    "surface": "concrete"
+   },
+   "nodes": [
+    [
+     53.581144,
+     -113.4926
+    ],
+    [
+     53.58125,
+     -113.492407
+    ]
+   ]
+  }
+ ],
+ "dropped": [
+  {
+   "osm_way": 80403111,
+   "code": "CNR",
+   "reason": "97 Street NW tagged layer -1 tunnel=yes, about 200 m north at 53.5831 to 53.5840. This is the 97 Street underpass beneath the CN rail overpass (Alberta records 39678 and 41618, CNR over 97 Street, B071 and B070), not this structure."
+  },
+  {
+   "osm_way": 198706326,
+   "code": "other",
+   "reason": "Footway bridge at about 380 m (bridge=yes, access=no, foot=private). Not over Yellowhead at this point and not used."
+  },
+  {
+   "osm_way": 61241743,
+   "code": "other",
+   "reason": "Motorway link about 270 m from the record point. Outside the interchange footprint. Not used."
+  },
+  {
+   "osm_way": 22914474,
+   "code": "other",
+   "reason": "Motorway link about 270 m from the record point, outside the interchange footprint. Not used."
+  }
+ ]
+}
