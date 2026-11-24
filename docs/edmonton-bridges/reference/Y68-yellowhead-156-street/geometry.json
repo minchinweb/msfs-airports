@@ -1,0 +1,990 @@
+{
+  "code": "Y68",
+  "name": "Yellowhead / 156 Street",
+  "centre": [
+    53.5789116,
+    -113.5906984
+  ],
+  "crs": "EPSG:4326",
+  "coordinate_order": "[lat, lon]",
+  "centre_note": "Centre is the Alberta Structure-Export.csv point for STRU_ID 148330, 156 Street grade separation over Yellowhead Trail (Highway 16), LATITUDE 53.5789116080445, LONGITUDE -113.590698399705. The PRIORITY.md and bridge-geometry.json estimate 53.578, -113.596 is about 364 m west of it and is not used. The OSM way 25532547 starts within about 1 m of the Alberta point.",
+  "geometry_source": "OpenStreetMap API 0.6 map call, bbox -113.6040,53.5752,-113.5775,53.5826, retrieved 2026-11-23 (live). Way 25532547 last edited 2024-05-14 (version 12); way 38071214 last edited 2026-06-15 (version 6). Alberta point from docs-cited Structure-Export.csv, retrieved 2026-11-23.",
+  "geometry_retrieved": "2026-11-23",
+  "plan_length_note": "plan_length_m is the horizontal WGS84 length along the stored nodes, one decimal. For a closed way it is the perimeter. Approach chains are cut at the extract box or at the last node of each way; their far end is not a grade point or a clearance point. A plan_length_m is not a structural length.",
+  "dropped_note": "Dropped as a different structure: way 25532561 (156 Street over CNR, STRU 148332, bridge=yes, 46.0 m) and way 31686844 (bridge=yes, 49.5 m, same CN overpass). Also closed way 1505477440 (bridge:structure=beam, 166.5 m perimeter) and footway 1543142509 (bridge=yes, 51.4 m) which sit on the CN overpass. Way 61333604 (19.9 m, 156 Street NW, two lanes, between the deck and the CN overpass area) is not assigned to either structure and is left out. Y67 (170 Street) and Y69 (St Albert Trail) ways are not in this extract. Bridge_ways in the earlier Y68 object of bridge-geometry.json were empty; the live extract has the ways above, so that object is out of date.",
+  "decks": [
+    {
+      "osm_way": 25532547,
+      "part": "deck_northbound",
+      "which": "156 Street NW, northbound carriageway over Yellowhead Trail. Three lanes, one-way, bridge=yes, layer=1. Node order south to north. Plan length 64.5 m against the 63.5 m nominal span length in the Alberta record; plan length is not a structural length. Mapper tags only, no width tag.",
+      "plan_length_m": 64.5,
+      "tags": {
+        "bridge": "yes",
+        "highway": "secondary",
+        "lanes": "3",
+        "layer": "1",
+        "lit": "yes",
+        "maxspeed": "60",
+        "name": "156 Street NW",
+        "oneway": "yes"
+      },
+      "nodes": [
+        [
+          53.5789207,
+          -113.5906673
+        ],
+        [
+          53.5794909,
+          -113.5908464
+        ]
+      ]
+    },
+    {
+      "osm_way": 38071214,
+      "part": "deck_southbound",
+      "which": "156 Street NW, southbound carriageway over Yellowhead Trail. Two lanes tagged (the northbound carriageway is tagged three), one-way, bridge=yes, layer=1. Node order north to south. Plan length 64.0 m.",
+      "plan_length_m": 64.0,
+      "tags": {
+        "bridge": "yes",
+        "highway": "secondary",
+        "lanes": "2",
+        "layer": "1",
+        "maxspeed": "60",
+        "name": "156 Street NW",
+        "oneway": "yes"
+      },
+      "nodes": [
+        [
+          53.5794329,
+          -113.5910811
+        ],
+        [
+          53.5788696,
+          -113.5908852
+        ]
+      ]
+    },
+    {
+      "osm_way": 1137993242,
+      "part": "deck_footprint_outline",
+      "which": "Closed way tagged bridge:structure=beam, layer=1, no highway tag. Outline of the 156 Street deck over Yellowhead, enclosing both carriageways. Its length is the perimeter, not a carriageway length. Its extent is about 74 m north to south and about 42 m east to west, from the stored nodes. Not a published width; the Alberta gross deck width is 30.8 m.",
+      "plan_length_m": 190.8,
+      "tags": {
+        "bridge:structure": "beam",
+        "layer": "1"
+      },
+      "nodes": [
+        [
+          53.5788465,
+          -113.5910226
+        ],
+        [
+          53.5789428,
+          -113.5905853
+        ],
+        [
+          53.5795138,
+          -113.590774
+        ],
+        [
+          53.579413,
+          -113.591213
+        ],
+        [
+          53.5788465,
+          -113.5910226
+        ]
+      ]
+    },
+    {
+      "osm_way": 1529521611,
+      "part": "footway_bridge",
+      "which": "Footway tagged bridge=yes, layer=1, 65.0 m, on the west side of the southbound carriageway (about 8 m west of way 38071214 by longitude). Plan position only. Its surface and width are not tagged.",
+      "plan_length_m": 65.0,
+      "tags": {
+        "bridge": "yes",
+        "footway": "sidewalk",
+        "highway": "footway",
+        "layer": "1"
+      },
+      "nodes": [
+        [
+          53.5788468,
+          -113.5910017
+        ],
+        [
+          53.57942,
+          -113.5911948
+        ]
+      ]
+    }
+  ],
+  "approaches_north": [
+    {
+      "osm_way": 1282837620,
+      "part": "approach_north_chain_to_deck_northbound",
+      "which": "Northbound approach to the deck, south to north, 156 Street NW. Chain of ways in node order. The first way starts at about 53.5753 N, where the extract box edge is, so the chain may continue south in ways not fetched.",
+      "plan_length_m": 108.5,
+      "tags": {
+        "foot": "yes",
+        "highway": "secondary",
+        "lanes": "3",
+        "lit": "yes",
+        "maxspeed": "60",
+        "name": "156 Street NW",
+        "oneway": "yes",
+        "sidewalk": "no",
+        "surface": "asphalt"
+      },
+      "nodes": [
+        [
+          53.5753157,
+          -113.5902626
+        ],
+        [
+          53.575806,
+          -113.5902295
+        ],
+        [
+          53.5762913,
+          -113.5902207
+        ]
+      ]
+    },
+    {
+      "osm_way": 1282837621,
+      "part": "approach_north_chain_to_deck_northbound",
+      "which": "Northbound approach to the deck, south to north, 156 Street NW. Chain of ways in node order. The first way starts at about 53.5753 N, where the extract box edge is, so the chain may continue south in ways not fetched.",
+      "plan_length_m": 70.7,
+      "tags": {
+        "foot": "yes",
+        "highway": "secondary",
+        "lanes": "4",
+        "lit": "yes",
+        "maxspeed": "60",
+        "name": "156 Street NW",
+        "oneway": "yes",
+        "sidewalk": "no",
+        "surface": "asphalt"
+      },
+      "nodes": [
+        [
+          53.5762913,
+          -113.5902207
+        ],
+        [
+          53.5769269,
+          -113.5902214
+        ]
+      ]
+    },
+    {
+      "osm_way": 1282837623,
+      "part": "approach_north_chain_to_deck_northbound",
+      "which": "Northbound approach to the deck, south to north, 156 Street NW. Chain of ways in node order. The first way starts at about 53.5753 N, where the extract box edge is, so the chain may continue south in ways not fetched.",
+      "plan_length_m": 72.3,
+      "tags": {
+        "foot": "yes",
+        "highway": "secondary",
+        "lanes": "4",
+        "lit": "yes",
+        "maxspeed": "60",
+        "name": "156 Street NW",
+        "oneway": "yes",
+        "sidewalk": "no",
+        "surface": "asphalt"
+      },
+      "nodes": [
+        [
+          53.5769269,
+          -113.5902214
+        ],
+        [
+          53.5774367,
+          -113.5902421
+        ],
+        [
+          53.5775769,
+          -113.5902484
+        ]
+      ]
+    },
+    {
+      "osm_way": 1282837624,
+      "part": "approach_north_chain_to_deck_northbound",
+      "which": "Northbound approach to the deck, south to north, 156 Street NW. Chain of ways in node order. The first way starts at about 53.5753 N, where the extract box edge is, so the chain may continue south in ways not fetched.",
+      "plan_length_m": 10.9,
+      "tags": {
+        "foot": "yes",
+        "highway": "secondary",
+        "lit": "yes",
+        "maxspeed": "60",
+        "name": "156 Street NW",
+        "oneway": "yes",
+        "sidewalk": "no",
+        "surface": "asphalt"
+      },
+      "nodes": [
+        [
+          53.5775769,
+          -113.5902484
+        ],
+        [
+          53.5776141,
+          -113.59025
+        ],
+        [
+          53.5776742,
+          -113.5902643
+        ]
+      ]
+    },
+    {
+      "osm_way": 1282837625,
+      "part": "approach_north_chain_to_deck_northbound",
+      "which": "Northbound approach to the deck, south to north, 156 Street NW. Chain of ways in node order. The first way starts at about 53.5753 N, where the extract box edge is, so the chain may continue south in ways not fetched.",
+      "plan_length_m": 66.3,
+      "tags": {
+        "foot": "yes",
+        "highway": "secondary",
+        "lanes": "2",
+        "lit": "yes",
+        "maxspeed": "60",
+        "name": "156 Street NW",
+        "oneway": "yes",
+        "sidewalk": "no",
+        "surface": "asphalt"
+      },
+      "nodes": [
+        [
+          53.5776742,
+          -113.5902643
+        ],
+        [
+          53.5777463,
+          -113.5902815
+        ],
+        [
+          53.5779004,
+          -113.5903189
+        ],
+        [
+          53.5782616,
+          -113.5904372
+        ]
+      ]
+    },
+    {
+      "osm_way": 38110082,
+      "part": "approach_north_chain_to_deck_northbound",
+      "which": "Northbound approach to the deck, south to north, 156 Street NW. Chain of ways in node order. The first way starts at about 53.5753 N, where the extract box edge is, so the chain may continue south in ways not fetched.",
+      "plan_length_m": 74.8,
+      "tags": {
+        "foot": "yes",
+        "highway": "secondary",
+        "lanes": "3",
+        "lit": "yes",
+        "maxspeed": "60",
+        "name": "156 Street NW",
+        "oneway": "yes",
+        "sidewalk": "no",
+        "surface": "asphalt"
+      },
+      "nodes": [
+        [
+          53.5782616,
+          -113.5904372
+        ],
+        [
+          53.5789207,
+          -113.5906673
+        ]
+      ]
+    }
+  ],
+  "between_north": [
+    {
+      "osm_way": 25532551,
+      "part": "between_deck_and_cn_rail_overpass_north",
+      "which": "156 Street NW between the Yellowhead deck and the CN rail overpass to the north (STRU 148332). Not a grade point. Belongs to the approach chain but ends at the CN structure.",
+      "plan_length_m": 18.8,
+      "tags": {
+        "highway": "secondary",
+        "lanes": "3",
+        "maxspeed": "60",
+        "name": "156 Street NW",
+        "oneway": "yes",
+        "surface": "asphalt"
+      },
+      "nodes": [
+        [
+          53.5794909,
+          -113.5908464
+        ],
+        [
+          53.5796573,
+          -113.5908974
+        ]
+      ]
+    },
+    {
+      "osm_way": 61333603,
+      "part": "between_deck_and_cn_rail_overpass_north",
+      "which": "156 Street NW between the Yellowhead deck and the CN rail overpass to the north (STRU 148332). Not a grade point. Belongs to the approach chain but ends at the CN structure.",
+      "plan_length_m": 90.8,
+      "tags": {
+        "highway": "secondary",
+        "maxspeed": "60",
+        "name": "156 Street NW",
+        "oneway": "yes"
+      },
+      "nodes": [
+        [
+          53.5796573,
+          -113.5908974
+        ],
+        [
+          53.5797185,
+          -113.5909222
+        ],
+        [
+          53.5799443,
+          -113.5909844
+        ],
+        [
+          53.5801792,
+          -113.5910238
+        ],
+        [
+          53.5804672,
+          -113.5910653
+        ]
+      ]
+    },
+    {
+      "osm_way": 38071215,
+      "part": "between_deck_and_cn_rail_overpass_north",
+      "which": "156 Street NW between the Yellowhead deck and the CN rail overpass to the north (STRU 148332). Not a grade point. Belongs to the approach chain but ends at the CN structure.",
+      "plan_length_m": 32.3,
+      "tags": {
+        "highway": "secondary",
+        "lanes": "3",
+        "maxspeed": "60",
+        "name": "156 Street NW",
+        "oneway": "yes",
+        "surface": "asphalt"
+      },
+      "nodes": [
+        [
+          53.5804672,
+          -113.5910653
+        ],
+        [
+          53.5807572,
+          -113.5910521
+        ]
+      ]
+    }
+  ],
+  "approaches_south": [
+    {
+      "osm_way": 472627675,
+      "part": "approach_south_chain_from_deck_southbound",
+      "which": "Southbound approach from the deck, north to south, 156 Street NW. Chain of ways in node order. The last way ends at about 53.5744 N, outside the extract box, at its own last node, not at a grade point.",
+      "plan_length_m": 64.4,
+      "tags": {
+        "highway": "secondary",
+        "lanes": "2",
+        "lit": "yes",
+        "maxspeed": "60",
+        "name": "156 Street NW",
+        "oneway": "yes"
+      },
+      "nodes": [
+        [
+          53.5788696,
+          -113.5908852
+        ],
+        [
+          53.5782998,
+          -113.5907115
+        ]
+      ]
+    },
+    {
+      "osm_way": 472627674,
+      "part": "approach_south_chain_from_deck_southbound",
+      "which": "Southbound approach from the deck, north to south, 156 Street NW. Chain of ways in node order. The last way ends at about 53.5744 N, outside the extract box, at its own last node, not at a grade point.",
+      "plan_length_m": 70.9,
+      "tags": {
+        "highway": "secondary",
+        "lanes": "2",
+        "lit": "yes",
+        "maxspeed": "60",
+        "name": "156 Street NW",
+        "oneway": "yes"
+      },
+      "nodes": [
+        [
+          53.5782998,
+          -113.5907115
+        ],
+        [
+          53.5777359,
+          -113.5905102
+        ],
+        [
+          53.5776758,
+          -113.5904902
+        ]
+      ]
+    },
+    {
+      "osm_way": 1339751354,
+      "part": "approach_south_chain_from_deck_southbound",
+      "which": "Southbound approach from the deck, north to south, 156 Street NW. Chain of ways in node order. The last way ends at about 53.5744 N, outside the extract box, at its own last node, not at a grade point.",
+      "plan_length_m": 11.0,
+      "tags": {
+        "foot": "yes",
+        "highway": "secondary",
+        "lanes": "2",
+        "lit": "yes",
+        "maxspeed": "60",
+        "name": "156 Street NW",
+        "oneway": "yes",
+        "sidewalk": "no",
+        "surface": "asphalt"
+      },
+      "nodes": [
+        [
+          53.5776758,
+          -113.5904902
+        ],
+        [
+          53.5775788,
+          -113.5904593
+        ]
+      ]
+    },
+    {
+      "osm_way": 38071213,
+      "part": "approach_south_chain_from_deck_southbound",
+      "which": "Southbound approach from the deck, north to south, 156 Street NW. Chain of ways in node order. The last way ends at about 53.5744 N, outside the extract box, at its own last node, not at a grade point.",
+      "plan_length_m": 356.7,
+      "tags": {
+        "foot": "yes",
+        "highway": "secondary",
+        "lanes": "2",
+        "lit": "yes",
+        "maxspeed": "60",
+        "name": "156 Street NW",
+        "oneway": "yes",
+        "sidewalk": "no",
+        "surface": "asphalt"
+      },
+      "nodes": [
+        [
+          53.5775788,
+          -113.5904593
+        ],
+        [
+          53.5774413,
+          -113.5904591
+        ],
+        [
+          53.5762553,
+          -113.5904618
+        ],
+        [
+          53.5746681,
+          -113.5904697
+        ],
+        [
+          53.5743735,
+          -113.5904075
+        ]
+      ]
+    }
+  ],
+  "road_beneath": [
+    {
+      "osm_way": 937503510,
+      "part": "road_beneath_yellowhead_trail",
+      "which": "Yellowhead Trail NW (Highway 16) mainline under the 156 Street deck. Eastbound and westbound carriageways are separate ways. Mapper tags only; maxheight is an OSM tag, not a published clearance.",
+      "plan_length_m": 654.1,
+      "tags": {
+        "highway": "motorway",
+        "lanes": "3",
+        "lit": "yes",
+        "maxheight": "5.6",
+        "maxspeed": "90",
+        "name": "Yellowhead Trail NW",
+        "oneway": "yes",
+        "ref": "16",
+        "surface": "asphalt",
+        "width": "11.1"
+      },
+      "nodes": [
+        [
+          53.5772934,
+          -113.5988727
+        ],
+        [
+          53.5776669,
+          -113.5972424
+        ],
+        [
+          53.5787279,
+          -113.592545
+        ],
+        [
+          53.5790081,
+          -113.5912975
+        ],
+        [
+          53.5793878,
+          -113.5896146
+        ]
+      ]
+    },
+    {
+      "osm_way": 937503512,
+      "part": "road_beneath_yellowhead_trail",
+      "which": "Yellowhead Trail NW (Highway 16) mainline under the 156 Street deck. Eastbound and westbound carriageways are separate ways. Mapper tags only; maxheight is an OSM tag, not a published clearance.",
+      "plan_length_m": 464.2,
+      "tags": {
+        "highway": "motorway",
+        "lanes": "3",
+        "lit": "yes",
+        "maxheight": "5.6",
+        "maxspeed": "90",
+        "name": "Yellowhead Trail NW",
+        "oneway": "yes",
+        "ref": "16",
+        "surface": "asphalt",
+        "width": "11.1"
+      },
+      "nodes": [
+        [
+          53.5806227,
+          -113.58485
+        ],
+        [
+          53.5804449,
+          -113.5856313
+        ],
+        [
+          53.5799908,
+          -113.5876458
+        ],
+        [
+          53.5795185,
+          -113.5897464
+        ],
+        [
+          53.5791418,
+          -113.5914243
+        ]
+      ]
+    },
+    {
+      "osm_way": 1379042187,
+      "part": "road_beneath_yellowhead_trail",
+      "which": "Yellowhead Trail NW (Highway 16) mainline under the 156 Street deck. Eastbound and westbound carriageways are separate ways. Mapper tags only; maxheight is an OSM tag, not a published clearance.",
+      "plan_length_m": 416.7,
+      "tags": {
+        "highway": "motorway",
+        "lanes": "3",
+        "lit": "yes",
+        "maxspeed": "90",
+        "name": "Yellowhead Trail NW",
+        "oneway": "yes",
+        "ref": "16",
+        "surface": "asphalt",
+        "width": "11.1"
+      },
+      "nodes": [
+        [
+          53.5791418,
+          -113.5914243
+        ],
+        [
+          53.5788746,
+          -113.5926037
+        ],
+        [
+          53.5778106,
+          -113.5973241
+        ]
+      ]
+    }
+  ],
+  "ramps_interchange": [
+    {
+      "osm_way": 31677787,
+      "part": "ramp_interchange",
+      "which": "Interchange ramp or link near the 156 Street junction. Not part of this structure; kept for the plan picture only.",
+      "plan_length_m": 81.9,
+      "tags": {
+        "highway": "motorway_link",
+        "lanes": "1",
+        "oneway": "yes",
+        "width": "5"
+      },
+      "nodes": [
+        [
+          53.5801323,
+          -113.5912206
+        ],
+        [
+          53.5798933,
+          -113.5912829
+        ],
+        [
+          53.5797763,
+          -113.5913244
+        ],
+        [
+          53.5797188,
+          -113.5913549
+        ],
+        [
+          53.579664,
+          -113.5913988
+        ],
+        [
+          53.579615,
+          -113.5914696
+        ],
+        [
+          53.5795541,
+          -113.5915685
+        ],
+        [
+          53.5794964,
+          -113.5917169
+        ]
+      ]
+    },
+    {
+      "osm_way": 31678905,
+      "part": "ramp_interchange",
+      "which": "Interchange ramp or link near the 156 Street junction. Not part of this structure; kept for the plan picture only.",
+      "plan_length_m": 115.4,
+      "tags": {
+        "highway": "secondary_link",
+        "lanes": "1",
+        "oneway": "yes"
+      },
+      "nodes": [
+        [
+          53.5798265,
+          -113.5900421
+        ],
+        [
+          53.5798161,
+          -113.5903608
+        ],
+        [
+          53.5798174,
+          -113.5904593
+        ],
+        [
+          53.5798347,
+          -113.5905608
+        ],
+        [
+          53.5798457,
+          -113.5906028
+        ],
+        [
+          53.5798643,
+          -113.5906546
+        ],
+        [
+          53.5798914,
+          -113.5907186
+        ],
+        [
+          53.5799346,
+          -113.5907751
+        ],
+        [
+          53.579996,
+          -113.5908372
+        ],
+        [
+          53.5800759,
+          -113.5908884
+        ],
+        [
+          53.5804672,
+          -113.5910653
+        ]
+      ]
+    },
+    {
+      "osm_way": 472906612,
+      "part": "ramp_interchange",
+      "which": "Interchange ramp or link near the 156 Street junction. Not part of this structure; kept for the plan picture only.",
+      "plan_length_m": 40.7,
+      "tags": {
+        "highway": "motorway_link",
+        "lanes": "1",
+        "oneway": "yes",
+        "surface": "asphalt",
+        "width": "4.8"
+      },
+      "nodes": [
+        [
+          53.5796092,
+          -113.59113
+        ],
+        [
+          53.5795827,
+          -113.591274
+        ],
+        [
+          53.5794964,
+          -113.5917169
+        ]
+      ]
+    },
+    {
+      "osm_way": 472906616,
+      "part": "ramp_interchange",
+      "which": "Interchange ramp or link near the 156 Street junction. Not part of this structure; kept for the plan picture only.",
+      "plan_length_m": 16.3,
+      "tags": {
+        "highway": "secondary",
+        "lanes": "2",
+        "lit": "yes",
+        "maxspeed": "60",
+        "name": "Yellowhead Trail NW",
+        "oneway": "yes",
+        "surface": "asphalt",
+        "width": "7"
+      },
+      "nodes": [
+        [
+          53.5796573,
+          -113.5908974
+        ],
+        [
+          53.5796092,
+          -113.59113
+        ]
+      ]
+    },
+    {
+      "osm_way": 472906620,
+      "part": "ramp_interchange",
+      "which": "Interchange ramp or link near the 156 Street junction. Not part of this structure; kept for the plan picture only.",
+      "plan_length_m": 59.5,
+      "tags": {
+        "highway": "secondary",
+        "lanes": "2",
+        "lit": "yes",
+        "maxspeed": "60",
+        "name": "Yellowhead Trail NW",
+        "oneway": "yes",
+        "surface": "asphalt",
+        "width": "7"
+      },
+      "nodes": [
+        [
+          53.5798265,
+          -113.5900421
+        ],
+        [
+          53.5797911,
+          -113.5902549
+        ],
+        [
+          53.5797535,
+          -113.5904552
+        ],
+        [
+          53.5796573,
+          -113.5908974
+        ]
+      ]
+    },
+    {
+      "osm_way": 937503500,
+      "part": "ramp_interchange",
+      "which": "Interchange ramp or link near the 156 Street junction. Not part of this structure; kept for the plan picture only.",
+      "plan_length_m": 65.8,
+      "tags": {
+        "highway": "secondary",
+        "lanes": "2",
+        "lit": "yes",
+        "maxspeed": "60",
+        "name": "Yellowhead Trail NW",
+        "oneway": "yes",
+        "surface": "asphalt",
+        "width": "10.5"
+      },
+      "nodes": [
+        [
+          53.5799947,
+          -113.5890872
+        ],
+        [
+          53.5798946,
+          -113.5896457
+        ],
+        [
+          53.5798265,
+          -113.5900421
+        ]
+      ]
+    },
+    {
+      "osm_way": 61241727,
+      "part": "ramp_interchange",
+      "which": "Interchange ramp or link near the 156 Street junction. Not part of this structure; kept for the plan picture only.",
+      "plan_length_m": 351.4,
+      "tags": {
+        "highway": "motorway_link",
+        "lanes": "1",
+        "maxheight": "5.3",
+        "oneway": "yes",
+        "surface": "asphalt",
+        "width": "4.8"
+      },
+      "nodes": [
+        [
+          53.5776901,
+          -113.5913745
+        ],
+        [
+          53.577699,
+          -113.5916271
+        ],
+        [
+          53.5777263,
+          -113.5919006
+        ],
+        [
+          53.5777612,
+          -113.5920447
+        ],
+        [
+          53.5778127,
+          -113.5921852
+        ],
+        [
+          53.5778774,
+          -113.5922995
+        ],
+        [
+          53.5779343,
+          -113.5923777
+        ],
+        [
+          53.5780149,
+          -113.5924519
+        ],
+        [
+          53.57811,
+          -113.5925039
+        ],
+        [
+          53.5782116,
+          -113.5925246
+        ],
+        [
+          53.5782942,
+          -113.5925147
+        ],
+        [
+          53.5783866,
+          -113.5924758
+        ],
+        [
+          53.578475,
+          -113.5924048
+        ],
+        [
+          53.5785407,
+          -113.5923343
+        ],
+        [
+          53.5786026,
+          -113.5922442
+        ],
+        [
+          53.5786593,
+          -113.5921439
+        ],
+        [
+          53.5787096,
+          -113.5920254
+        ],
+        [
+          53.5787592,
+          -113.5918944
+        ],
+        [
+          53.5787993,
+          -113.5917706
+        ],
+        [
+          53.5789518,
+          -113.5911616
+        ],
+        [
+          53.5792276,
+          -113.5900255
+        ],
+        [
+          53.5793878,
+          -113.5896146
+        ]
+      ]
+    },
+    {
+      "osm_way": 1221701940,
+      "part": "ramp_interchange",
+      "which": "Interchange ramp or link near the 156 Street junction. Not part of this structure; kept for the plan picture only.",
+      "plan_length_m": 419.7,
+      "tags": {
+        "highway": "motorway_link",
+        "maxheight": "5.6",
+        "oneway": "yes",
+        "surface": "asphalt"
+      },
+      "nodes": [
+        [
+          53.5806236,
+          -113.5855864
+        ],
+        [
+          53.5803231,
+          -113.5868919
+        ],
+        [
+          53.5802191,
+          -113.5873124
+        ],
+        [
+          53.5798058,
+          -113.5890562
+        ],
+        [
+          53.5796241,
+          -113.5898164
+        ],
+        [
+          53.5794012,
+          -113.5906806
+        ],
+        [
+          53.5791418,
+          -113.5914243
+        ]
+      ]
+    }
+  ]
+}
