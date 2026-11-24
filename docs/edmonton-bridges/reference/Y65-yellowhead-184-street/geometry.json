@@ -1,0 +1,789 @@
+{
+  "code": "Y65",
+  "name": "Yellowhead / 184 Street",
+  "centre": [
+    53.573,
+    -113.639
+  ],
+  "centre_note": "Project centre from the brief, as [lat, lon]. bridge-geometry.json plots Y65 at [53.5727, -113.6392] (OSM-derived, list left_off). The Alberta export point for structure file 85130 is [53.572236, -113.639383]. Brief centre to that point: about 89 m.",
+  "crs": "EPSG:4326",
+  "coordinate_order": "[lat, lon]",
+  "geometry_source": "docs/edmonton-bridges/bridge-geometry.json (OpenStreetMap, retrieved 2026-10-14); dimensions from the Alberta Structure-Export.csv, retrieved 2026-11-23",
+  "geometry_retrieved": "2026-11-23",
+  "plan_length_note": "plan_length_m is the horizontal WGS84 length along the OSM nodes, summed by haversine. The extract stops at the edge of its download box, so an approach or path plan_length_m is not the climb to grade and is not the structural length. The deck length is the export's nominal bridge length, 87 m.",
+  "dropped_note": "No way was dropped as a different code. Two freeway carriageways (60064980, 279661272) are also in the Y66 object; they are kept here only as the road beneath. The Alberta export lists a second structure at the same place, file 85131 (B294, 184 Street over the CNR at 118 Avenue, about 301 m south of 85130). It has no deck in the OSM extract for Y65, so no way was removed for it. The south approach ways end at 53.5704 in the extract, about 90 m north of the B294 point.",
+  "decks": [
+    {
+      "osm_way": 25531561,
+      "part": "deck_northbound",
+      "which": "184 Street NW deck, northbound (one-way; node order south to north, matching the oneway tag). Export: 87 m nominal length.",
+      "plan_length_m": 87.4,
+      "tags": {
+        "bridge": "yes",
+        "highway": "secondary",
+        "lanes": "2",
+        "layer": "1",
+        "maxspeed": "60",
+        "name": "184 Street NW",
+        "oneway": "yes",
+        "surface": "asphalt"
+      },
+      "nodes": [
+        [
+          53.572334,
+          -113.639347
+        ],
+        [
+          53.573109,
+          -113.639126
+        ]
+      ]
+    },
+    {
+      "osm_way": 31680388,
+      "part": "deck_southbound",
+      "which": "184 Street NW deck, southbound (one-way; node order north to south).",
+      "plan_length_m": 88.1,
+      "tags": {
+        "bridge": "yes",
+        "highway": "secondary",
+        "lanes": "2",
+        "layer": "1",
+        "maxspeed": "60",
+        "name": "184 Street NW",
+        "oneway": "yes",
+        "surface": "asphalt"
+      },
+      "nodes": [
+        [
+          53.573133,
+          -113.639314
+        ],
+        [
+          53.572352,
+          -113.639537
+        ]
+      ]
+    },
+    {
+      "osm_way": 234183148,
+      "part": "deck_cycleway",
+      "which": "Cycleway on the deck, tagged bridge=yes, cycleway. Lies outside the southbound line in plan (about 7.6 m from it, about 19 m from the northbound line). Not confirmed as the export's left sidewalk.",
+      "plan_length_m": 101.0,
+      "tags": {
+        "bicycle": "designated",
+        "bridge": "yes",
+        "foot": "designated",
+        "highway": "cycleway",
+        "layer": "1",
+        "surface": "asphalt"
+      },
+      "nodes": [
+        [
+          53.572288,
+          -113.639655
+        ],
+        [
+          53.573183,
+          -113.639392
+        ]
+      ]
+    }
+  ],
+  "approaches": [
+    {
+      "osm_way": 25531566,
+      "part": "south_approach_northbound",
+      "which": "184 Street NW, northbound onto the deck from the south. Extract edge at 53.570495, -113.639874. Continues south of the extract.",
+      "plan_length_m": 207.4,
+      "tags": {
+        "highway": "secondary",
+        "lanes": "2",
+        "maxspeed": "60",
+        "name": "184 Street NW",
+        "oneway": "yes",
+        "surface": "asphalt"
+      },
+      "nodes": [
+        [
+          53.570495,
+          -113.639874
+        ],
+        [
+          53.570944,
+          -113.639746
+        ],
+        [
+          53.571655,
+          -113.639539
+        ],
+        [
+          53.572334,
+          -113.639347
+        ]
+      ]
+    },
+    {
+      "osm_way": 31686096,
+      "part": "south_approach_southbound",
+      "which": "184 Street NW, southbound off the deck to the south. Extract edge at 53.570385, -113.640097.",
+      "plan_length_m": 221.8,
+      "tags": {
+        "highway": "secondary",
+        "lanes": "2",
+        "maxspeed": "60",
+        "name": "184 Street NW",
+        "oneway": "yes",
+        "surface": "asphalt"
+      },
+      "nodes": [
+        [
+          53.572352,
+          -113.639537
+        ],
+        [
+          53.57062,
+          -113.640039
+        ],
+        [
+          53.570462,
+          -113.64008
+        ],
+        [
+          53.570385,
+          -113.640097
+        ]
+      ]
+    },
+    {
+      "osm_way": 472626783,
+      "part": "north_approach_northbound",
+      "which": "184 Street NW, northbound off the north end of the deck.",
+      "plan_length_m": 67.5,
+      "tags": {
+        "highway": "secondary",
+        "lanes": "2",
+        "maxspeed": "60",
+        "name": "184 Street NW",
+        "oneway": "yes",
+        "surface": "asphalt"
+      },
+      "nodes": [
+        [
+          53.573109,
+          -113.639126
+        ],
+        [
+          53.573707,
+          -113.638949
+        ]
+      ]
+    },
+    {
+      "osm_way": 1553048483,
+      "part": "north_approach_southbound",
+      "which": "184 Street NW, southbound onto the deck from the north. Extract edge at 53.576939, -113.638845.",
+      "plan_length_m": 425.6,
+      "tags": {
+        "highway": "secondary",
+        "lanes": "2",
+        "maxspeed": "60",
+        "name": "184 Street NW",
+        "oneway": "yes",
+        "surface": "asphalt"
+      },
+      "nodes": [
+        [
+          53.576939,
+          -113.638845
+        ],
+        [
+          53.576719,
+          -113.638819
+        ],
+        [
+          53.576325,
+          -113.638804
+        ],
+        [
+          53.575704,
+          -113.638793
+        ],
+        [
+          53.575455,
+          -113.63881
+        ],
+        [
+          53.575187,
+          -113.63884
+        ],
+        [
+          53.574722,
+          -113.638906
+        ],
+        [
+          53.574583,
+          -113.638935
+        ],
+        [
+          53.574515,
+          -113.638949
+        ],
+        [
+          53.574128,
+          -113.639033
+        ],
+        [
+          53.573133,
+          -113.639314
+        ]
+      ]
+    }
+  ],
+  "paths": [
+    {
+      "osm_way": 234183149,
+      "part": "south_path",
+      "which": "Cycleway south of the cycleway bridge, meeting its south end. Extract edge at 53.570534, -113.640293.",
+      "plan_length_m": 199.9,
+      "tags": {
+        "bicycle": "designated",
+        "foot": "designated",
+        "highway": "cycleway",
+        "surface": "asphalt"
+      },
+      "nodes": [
+        [
+          53.570534,
+          -113.640293
+        ],
+        [
+          53.570648,
+          -113.640219
+        ],
+        [
+          53.571333,
+          -113.640007
+        ],
+        [
+          53.571497,
+          -113.639917
+        ],
+        [
+          53.571752,
+          -113.639825
+        ],
+        [
+          53.572288,
+          -113.639655
+        ]
+      ]
+    },
+    {
+      "osm_way": 234183141,
+      "part": "north_path",
+      "which": "Cycleway north of the cycleway bridge, meeting its north end. Extract edge at 53.576805, -113.639566.",
+      "plan_length_m": 411.9,
+      "tags": {
+        "bicycle": "designated",
+        "foot": "designated",
+        "highway": "cycleway",
+        "surface": "asphalt"
+      },
+      "nodes": [
+        [
+          53.573183,
+          -113.639392
+        ],
+        [
+          53.573281,
+          -113.639366
+        ],
+        [
+          53.573352,
+          -113.639376
+        ],
+        [
+          53.573424,
+          -113.639384
+        ],
+        [
+          53.573479,
+          -113.63938
+        ],
+        [
+          53.57363,
+          -113.639362
+        ],
+        [
+          53.573781,
+          -113.639349
+        ],
+        [
+          53.57403,
+          -113.639326
+        ],
+        [
+          53.574166,
+          -113.639303
+        ],
+        [
+          53.574306,
+          -113.639261
+        ],
+        [
+          53.574426,
+          -113.639225
+        ],
+        [
+          53.574503,
+          -113.639215
+        ],
+        [
+          53.574596,
+          -113.639217
+        ],
+        [
+          53.574664,
+          -113.639242
+        ],
+        [
+          53.57474,
+          -113.639288
+        ],
+        [
+          53.574934,
+          -113.639443
+        ],
+        [
+          53.574997,
+          -113.63948
+        ],
+        [
+          53.57504,
+          -113.639487
+        ],
+        [
+          53.576089,
+          -113.639471
+        ],
+        [
+          53.576697,
+          -113.639468
+        ],
+        [
+          53.576803,
+          -113.639491
+        ],
+        [
+          53.576805,
+          -113.639566
+        ]
+      ]
+    }
+  ],
+  "interchange_ramps": [
+    {
+      "osm_way": 25531590,
+      "part": "interchange_ramp",
+      "which": "Motorway link ramp at the interchange, tagged motorway_link. Not a 184 Street approach. Part of the Yellowhead junction. Extract edge at 53.573707, -113.638949 and 53.573228, -113.643438.",
+      "plan_length_m": 730.3,
+      "tags": {
+        "destination:ref": "16 West",
+        "highway": "motorway_link",
+        "lanes": "1",
+        "oneway": "yes",
+        "sidewalk": "no",
+        "surface": "asphalt",
+        "width": "4.8"
+      },
+      "nodes": [
+        [
+          53.573707,
+          -113.638949
+        ],
+        [
+          53.574092,
+          -113.638757
+        ],
+        [
+          53.574141,
+          -113.638717
+        ],
+        [
+          53.574234,
+          -113.638624
+        ],
+        [
+          53.574307,
+          -113.638509
+        ],
+        [
+          53.574358,
+          -113.638373
+        ],
+        [
+          53.574398,
+          -113.638143
+        ],
+        [
+          53.574401,
+          -113.63795
+        ],
+        [
+          53.574366,
+          -113.637684
+        ],
+        [
+          53.574356,
+          -113.637601
+        ],
+        [
+          53.57429,
+          -113.637371
+        ],
+        [
+          53.574189,
+          -113.63715
+        ],
+        [
+          53.574089,
+          -113.636979
+        ],
+        [
+          53.573955,
+          -113.636864
+        ],
+        [
+          53.573861,
+          -113.636803
+        ],
+        [
+          53.573734,
+          -113.636759
+        ],
+        [
+          53.573619,
+          -113.636761
+        ],
+        [
+          53.573497,
+          -113.636785
+        ],
+        [
+          53.573383,
+          -113.636845
+        ],
+        [
+          53.573268,
+          -113.636941
+        ],
+        [
+          53.573164,
+          -113.637065
+        ],
+        [
+          53.573073,
+          -113.637222
+        ],
+        [
+          53.573014,
+          -113.637371
+        ],
+        [
+          53.572959,
+          -113.637564
+        ],
+        [
+          53.57292,
+          -113.637763
+        ],
+        [
+          53.572896,
+          -113.638015
+        ],
+        [
+          53.572892,
+          -113.63825
+        ],
+        [
+          53.572904,
+          -113.638558
+        ],
+        [
+          53.57292,
+          -113.638773
+        ],
+        [
+          53.573088,
+          -113.640687
+        ],
+        [
+          53.573203,
+          -113.642046
+        ],
+        [
+          53.573247,
+          -113.642557
+        ],
+        [
+          53.573228,
+          -113.643438
+        ]
+      ]
+    },
+    {
+      "osm_way": 25531594,
+      "part": "interchange_ramp",
+      "which": "Motorway link ramp at the interchange, tagged motorway_link. Extract edge at 53.572979, -113.643182 and 53.57125, -113.637671.",
+      "plan_length_m": 470.0,
+      "tags": {
+        "destination": "St. Albert; Access CN Rail",
+        "highway": "motorway_link",
+        "lanes": "1",
+        "maxheight": "5.6",
+        "oneway": "yes",
+        "surface": "asphalt",
+        "width": "4.8"
+      },
+      "nodes": [
+        [
+          53.572979,
+          -113.643182
+        ],
+        [
+          53.572838,
+          -113.642251
+        ],
+        [
+          53.57266,
+          -113.640841
+        ],
+        [
+          53.572544,
+          -113.63981
+        ],
+        [
+          53.572451,
+          -113.639082
+        ],
+        [
+          53.572428,
+          -113.638886
+        ],
+        [
+          53.572401,
+          -113.638725
+        ],
+        [
+          53.572362,
+          -113.638533
+        ],
+        [
+          53.572325,
+          -113.638354
+        ],
+        [
+          53.572277,
+          -113.638223
+        ],
+        [
+          53.572222,
+          -113.638093
+        ],
+        [
+          53.572168,
+          -113.637952
+        ],
+        [
+          53.572083,
+          -113.637831
+        ],
+        [
+          53.572007,
+          -113.637731
+        ],
+        [
+          53.571892,
+          -113.637621
+        ],
+        [
+          53.571784,
+          -113.637573
+        ],
+        [
+          53.571652,
+          -113.637543
+        ],
+        [
+          53.571482,
+          -113.637561
+        ],
+        [
+          53.571373,
+          -113.637587
+        ],
+        [
+          53.57125,
+          -113.637671
+        ]
+      ]
+    }
+  ],
+  "road_beneath": [
+    {
+      "osm_way": 60064980,
+      "part": "road_beneath",
+      "which": "Yellowhead Trail NW motorway carriageway (Hwy 16) under the 184 Street deck. Also listed under Y66 in bridge-geometry.json (shared way). Kept here as the road beneath only, not as an approach.",
+      "plan_length_m": 723.3,
+      "tags": {
+        "alt_name": "Yellowhead Highway",
+        "highway": "motorway",
+        "lanes": "3",
+        "maxspeed": "90",
+        "name": "Yellowhead Trail NW",
+        "oneway": "yes",
+        "ref": "16",
+        "surface": "asphalt",
+        "width": "11.1"
+      },
+      "nodes": [
+        [
+          53.572979,
+          -113.643182
+        ],
+        [
+          53.572874,
+          -113.641977
+        ],
+        [
+          53.57279,
+          -113.641097
+        ],
+        [
+          53.572679,
+          -113.63997
+        ],
+        [
+          53.572474,
+          -113.638015
+        ],
+        [
+          53.572301,
+          -113.63629
+        ],
+        [
+          53.572127,
+          -113.634597
+        ],
+        [
+          53.571926,
+          -113.632623
+        ],
+        [
+          53.571903,
+          -113.632379
+        ]
+      ]
+    },
+    {
+      "osm_way": 279661272,
+      "part": "road_beneath",
+      "which": "Yellowhead Trail NW motorway carriageway (Hwy 16) under the 184 Street deck. Also listed under Y66 (shared way). Kept here as the road beneath only.",
+      "plan_length_m": 732.6,
+      "tags": {
+        "alt_name": "Yellowhead Highway",
+        "highway": "motorway",
+        "lanes": "3",
+        "maxspeed": "90",
+        "name": "Yellowhead Trail NW",
+        "oneway": "yes",
+        "ref": "16",
+        "surface": "asphalt",
+        "width": "11.1"
+      },
+      "nodes": [
+        [
+          53.57214,
+          -113.632495
+        ],
+        [
+          53.572344,
+          -113.634523
+        ],
+        [
+          53.57252,
+          -113.636236
+        ],
+        [
+          53.572694,
+          -113.637949
+        ],
+        [
+          53.573006,
+          -113.641026
+        ],
+        [
+          53.573101,
+          -113.641957
+        ],
+        [
+          53.573228,
+          -113.643438
+        ]
+      ]
+    }
+  ],
+  "excluded": [],
+  "dimensions": {
+    "structure_file_number": "85130 (STRU_ID 146057; structure name 184 STREET - YELLOWHEAD TRAIL (B291); export Structure 1 of file 85130)",
+    "structural_type": null,
+    "span_type_code": "WG (as listed in the export; the code is not expanded here)",
+    "number_of_spans": 2,
+    "span_lengths_m": [
+      45,
+      42
+    ],
+    "max_span_m": 45,
+    "nominal_bridge_length_m": 87,
+    "theoretical_bridge_length_m": 87,
+    "skew_deg": null,
+    "girder_or_truss_depth_m": null,
+    "pier_count": null,
+    "pier_count_note": "Two spans imply one interior support. The export does not state a pier count.",
+    "pier_shaft_type": "RECTANGLE",
+    "pier_cap_material": "PCONC (concrete)",
+    "deck_material": "PCONC (concrete)",
+    "wear_surface": "ACP PM (polymer-modified asphalt)",
+    "located_over": "Highway 16 (Yellowhead Trail), control section 17, carriageways R1 at 0.784 km and L1 at 0.790 km",
+    "gross_deck_width_m": 27.2,
+    "total_clear_roadway_m": 18.8,
+    "left_sidewalk_width_m": 2.5,
+    "left_sidewalk_note": "Export value 2500, read as mm. The export does not say which side of the deck is left.",
+    "first_in_service_year": 2004,
+    "structure_status_date": "2004-07-05",
+    "lanes_osm": "two per one-way deck way (OSM lanes=2), so four lanes on the deck in OSM. Not a published lane count.",
+    "posted_speed_kmh_osm": 60,
+    "deck_elevation_asl_m": null,
+    "deck_elevation_datum": null,
+    "clearance_under_deck_m": null,
+    "navigation_clearance_m": null,
+    "deck_thickness_m": null,
+    "crossfall": null,
+    "longitudinal_grade": null,
+    "lane_width_m": null,
+    "shoulder_width_m": null,
+    "crossfall_note": "Not published.",
+    "north_approach_length_m": null,
+    "north_approach_gradient": null,
+    "north_approach_elevation_change_m": null,
+    "north_approach_meets_grade": null,
+    "south_approach_length_m": null,
+    "south_approach_gradient": null,
+    "south_approach_elevation_change_m": null,
+    "south_approach_meets_grade": null,
+    "estimated_aadts": 19300,
+    "estimated_aadts_year": 2014,
+    "rehabilitation": "2026 rehabilitation, closed about three months from August 2026 per CTV; reopened 16 Oct 2026, two weeks ahead of schedule per CTV. Scope per City summary (not fetched)."
+  }
+}
