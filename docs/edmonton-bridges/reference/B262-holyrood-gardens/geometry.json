@@ -1,0 +1,116 @@
+{
+  "code": "B262",
+  "name": "Holyrood Gardens Tower",
+  "centre": [
+    53.52574,
+    -113.45657
+  ],
+  "centre_note": "Centre of the OSM building outline (way 1209666933), at the south end of the site on the 85 Street / Connors Road circle. The City permit geocode for 9009 85 Street NW (53.52652, -113.45658) is an address point about 87 m north of it, not the building.",
+  "crs": "EPSG:4326",
+  "coordinate_order": "[lat, lon]",
+  "geometry_source": "OpenStreetMap API, ways 1209666933 and 1221215089 (full) and 556925041 (site), read 2026-11-23; Mapillary image positions in street/SOURCES.md",
+  "geometry_retrieved": "2026-11-23",
+  "plan_length_note": "plan_length_m is the horizontal WGS84 perimeter of the OSM way, computed from its nodes. The way is the site, not the tower, so the length is not a building dimension.",
+  "footprint": [
+    {
+      "osm_way": 1209666933,
+      "tags": {
+        "addr:housenumber": "9009",
+        "addr:street": "85 Street NW",
+        "building": "apartments",
+        "building:levels": "6",
+        "name": "The Beacon Apartments at East Junction"
+      },
+      "role": "Whole building outline, 'The Beacon Apartments at East Junction', 9009 85 Street NW: an L of the tower square (west) and the low wing (east, back). Tagged building:levels 6, which is the wing, not the tower. Way version 3, edited 2026-07-26; first mapped 2023-09-21.",
+      "nodes": [
+        [
+          53.5258689,
+          -113.4569239
+        ],
+        [
+          53.525871,
+          -113.4564595
+        ],
+        [
+          53.525872,
+          -113.4562129
+        ],
+        [
+          53.5256774,
+          -113.4562104
+        ],
+        [
+          53.5256763,
+          -113.456457
+        ],
+        [
+          53.5255997,
+          -113.456456
+        ],
+        [
+          53.5255976,
+          -113.4569203
+        ],
+        [
+          53.5258689,
+          -113.4569239
+        ]
+      ]
+    },
+    {
+      "osm_way": 1221215089,
+      "tags": {
+        "building:levels": "26",
+        "building:part": "yes",
+        "height": "86"
+      },
+      "role": "Tower part: the west square of the building, on 85 Street. Tagged building:levels 26, height 86. Mapped 2023-11-05.",
+      "nodes": [
+        [
+          53.5255997,
+          -113.456456
+        ],
+        [
+          53.5256763,
+          -113.456457
+        ],
+        [
+          53.525871,
+          -113.4564595
+        ],
+        [
+          53.5258689,
+          -113.4569239
+        ],
+        [
+          53.5255976,
+          -113.4569203
+        ],
+        [
+          53.5255997,
+          -113.456456
+        ]
+      ]
+    }
+  ],
+  "site_context": [
+    {
+      "osm_way": 556925041,
+      "tags": {
+        "landuse": "residential",
+        "name": "Holyrood Gardens",
+        "residential": "apartments"
+      },
+      "role": "Whole Holyrood Gardens site, one closed polygon with 19 nodes. A strip on the east side of 85 Street. Its west nodes sit on the 85 Street line. It runs from about 53.5254 (south) to 53.5306 (north), about 580 m, and is about 85 m wide. Not the tower footprint.",
+      "plan_length_m": 1303.3,
+      "bbox": {
+        "min_lat": 53.5254005,
+        "max_lat": 53.5306233,
+        "min_lon": -113.4572162,
+        "max_lon": -113.4560055
+      }
+    }
+  ],
+  "dropped_note": "The tower and its wing are mapped in OSM (ways 1209666933 and 1221215089, added 2023). The other Holyrood Gardens buildings are not mapped within the bounding box -113.4590, 53.5250 to -113.4545, 53.5285 (OSM API map call, 2026-11-23); way 844928472 is a landuse=construction area further north.",
+  "heights": "OSM way 1221215089: height 86, building:levels 26 (no source tag). Agrees with the DC2 ceiling (86.0 m) and the permit's 26 floors. See NOTES.md."
+}

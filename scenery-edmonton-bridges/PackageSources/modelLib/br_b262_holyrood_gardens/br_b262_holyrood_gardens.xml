@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ModelInfo guid="{9C939703-4C03-59F2-A314-566F954CE1F5}" version="1.1">
+	<LODS>
+		<LOD minSize="0" ModelFile="br_b262_holyrood_gardens.gltf"/>
+	</LODS>
+</ModelInfo>
