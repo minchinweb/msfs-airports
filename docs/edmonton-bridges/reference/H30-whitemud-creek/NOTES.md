@@ -21,7 +21,7 @@ Numbers below are cited. Where sources disagree, both are given. A blank in "Sti
 
 The two sources agree the highway is above and the creek and path are below. Neither says which carriageway or lane is over which part of the arch.
 
-The user confirmed on 2026-11-23 that the highway is carried over the ravine. That is the user's observation, not a published source. It settles the direction of the wording above: the highway is the deck and the arch is below it.
+The user confirmed on 2026-11-23 that the highway is carried over the ravine. That is the user's observation, not a published source. It settles the direction of the wording above: the highway is above and the arch is below it. On 2026-11-23 the user also read the Commons photo (`photos/henday-over-whitemud-creek-2012.jpg`): the highway is carried on fill, not on a deck. The photo shows a grass embankment over the arch portal. The 2018 LiDAR agrees: road 678.3-679.7 m, creek bed 658.1-658.3 m, about 20 m of fill. The model is in `HANDOFF-T2.md`.
 
 **Arch depth, soffit, deck above the creek.** The path is 7 m above the creek (CCE, discoverAPEGA). The highway deck above the arch is not given in either source. The highway deck height above the creek is missing.
 
@@ -63,7 +63,7 @@ The OSM extract gives both carriageways as separate ways, chained through the br
 
 ## Still missing
 
-- The highway deck type and depth over the arch. Whether it is a deck on the arch or fill on the arch. The sources say "beneath the highway," not how the highway is carried. The user confirms the highway is carried over the ravine; the structural form of that carrying is still unpublished.
+- The depth of fill over the arch crown. The highway is on fill (photo, user, 2018 LiDAR); with a semicircular 20 m arch springing at the path level, the cover is about 1-2 m, but no drawing gives it.
 - Arch rise and soffit height.
 - Clearance under the highway.
 - Deck elevation above sea level, with the datum.

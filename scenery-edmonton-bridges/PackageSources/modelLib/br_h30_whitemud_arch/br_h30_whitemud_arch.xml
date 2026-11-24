@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ModelInfo guid="{CBAB2064-880D-56E1-9556-419DE1455C1C}" version="1.1">
+	<LODS>
+		<LOD minSize="0" ModelFile="br_h30_whitemud_arch.gltf"/>
+	</LODS>
+</ModelInfo>

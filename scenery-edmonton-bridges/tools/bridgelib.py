@@ -499,7 +499,7 @@ def preview(m, out, az=210.0, el=22.0, width=1800, height=900, span=None, centre
         d = (Q[:, 0] - cen[0]) * f[0] + (Q[:, 2] - cen[2]) * f[1]
         x = (Q[:, 0] - cen[0]) * r[0] + (Q[:, 2] - cen[2]) * r[1]
         y = (Q[:, 1] - cen[1]) * math.cos(e_) - d * math.sin(e_)
-        w = d * math.cos(e_) + (Q[:, 1] - cen[1]) * math.sin(e_)
+        w = d * math.cos(e_) - (Q[:, 1] - cen[1]) * math.sin(e_)   # distance from the camera: higher points are nearer
         return x, y, w
     x, y, w = proj(P)
     sp = span or max(x.max() - x.min(), (y.max() - y.min()) * width / height) * 1.06

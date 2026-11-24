@@ -16,6 +16,18 @@ Built on 2026-10-14 with the sim closed (the 0.1.0 text follows; 0.2.0 compiled 
 
 Three inventories. `docs/edmonton-bridges/bridges.md` is the North Saskatchewan crossings from Devon to Scotford. `docs/edmonton-bridges/freeway-bridges.md` is the freeway structures on VFR lines among CYXD, CYED, CYEG, CZVL, CFB6, and CEZ3. `docs/edmonton-bridges/lrt.md` is the above-ground LRT stations, viaducts, and extension bridges. The freeway list names the cross road on the QE2, Yellowhead, Henday, Whitemud, and Sherwood Park Freeway decks, and records the Henday, Whitemud, Terwillegar, Groat, and Capilano bridges left off. Highway 16 west of the Henday, Highway 21, and the other crossings added on 14 October are plotted as crosses and still left off the include list. Deck, approach, ramp, and cross-road geometry for every plotted road and river bridge is in `bridge-geometry.json`. Above-ground LRT centreline geometry, including construction and unfunded alignments, is in `lrt-tracks.json`. The build order is `docs/edmonton-bridges/PRIORITY.md`. It ranks every included and excluded bridge, viaduct, and station by how it reads from the air, whether it falls on a VFR approach, and whether it is a named fix on the Edmonton VFR terminal chart or the City Centre helicopter chart. First box is the High Level Bridge and the Dudley B. Menzies Bridge together. Reference briefs for R8–R15, the Groat ravine decks G116, G117, Z125, T133, and G119, P152 and B254, N258, N259, N260, F256, and V257 are in `docs/edmonton-bridges/reference/`. Numbers are unique across every prefix. Bridge codes use 1–136. Stops are P137–P189, at-grade track is K190–K253, and the later codes are listed in `lrt.md` and `bridges.md`. The prompt for the next reference subagent is `docs/edmonton-bridges/reference-prompt.md`. Fill the braces and send one structure at a time. The named checkpoints Bridges, Quesnell, Bremner Cloverleaf, and Sherwood Park Cloverleaf come next. Do not place anything inside the `CYXD Airport Area` polygon; NAIT and Blatchford Gate are inside it.
 
+## 2026-11-23 H30 built
+
+H30 Whitemud Creek arch is modelled by `tools/site_h30.py`. It is not a deck: the Henday runs on fill, and the creek and a path pass under it through a 20 m semi-circular arch tunnel. The model has:
+
+- the shell, cut to a D at each portal and holed for the 14 m oculus in the median;
+- walls, beams and white collars;
+- stepped retaining walls;
+- the path bridge on crosshead piers;
+- flatten polygons so the terrain does not fill the openings.
+
+The highway itself is left to the sim's terrain and road. The centre is 53.4286, -113.5630, 2.2 km south of the old estimate. Heights are from the 2018 LiDAR (`reference/H30-whitemud-creek/elevation/h30-samples.json`). The package builds (exit 0) once Gaming Services was restarted; it has not been seen in the sim. Details and the sim checks are in `reference/H30-whitemud-creek/HANDOFF-T2.md`. `bridgelib.preview` had its depth sort inverted for the height term (high views drew low faces on top); it is fixed. This changes previews only, not models.
+
 ## 2026-11-23 T127 / P157 built
 
 T127 Davies guideway and P157 Davies station are modelled by `tools/site_t127.py`. It has:
@@ -52,7 +64,7 @@ Street photos (Mapillary) are in `street/` for every reference folder except Z12
 
 1. Open the sim and look: terrain clipping at piers, the datum, the High Level ridge (`MODEL-NOTES.md`, last section). Then fix what shows, by changing the site modules and rerunning `tools/gen_bridges.py`.
 2. `build.bat bridges` (clear `gamingservicesui` and `gamelaunchhelper` first if it says NO BUILD), then `python -I scenery-edmonton-bridges/tools/make_layout.py` if `Packages/.../layout.json` is missing.
-3. Next boxes in `PRIORITY.md` (its first unticked box is H30): section 2 open landmarks (H30, H50, T135, T131), then section 3 Yellowhead exchanges, then section 4 R8 Groat with the ravine decks G116, G117, G119, T133 and Z125. Tier 2 sites R20, R21, R22, R6, Y79, H52, H39, H27, H28 and T127 (with P157) are modelled (ticked in `PRIORITY.md`); none has been seen in the sim.
+3. Next boxes in `PRIORITY.md` (its first unticked box is H50): section 2 open landmarks (H50, T135, T131), then section 3 Yellowhead exchanges, then section 4 R8 Groat with the ravine decks G116, G117, G119, T133 and Z125. Tier 2 sites R20, R21, R22, R6, Y79, H52, H39, H27, H28, T127 (with P157) and H30 are modelled (ticked in `PRIORITY.md`); none has been seen in the sim.
 4. Night lighting and transparent glass are not done for any model.
 
 ## 2026-10-19 changes (built, exit 0; not seen in the sim)
