@@ -1,0 +1,1367 @@
+{
+  "code": "Y69",
+  "name": "Yellowhead / St. Albert Trail",
+  "centre": [
+    53.580893,
+    -113.556664
+  ],
+  "centre_note": "Alberta Structure-Export record point for STRU 40995 (ST. ALBERT TRAIL (B187)). Not the PRIORITY estimate 53.578, -113.548, which is about 0.66 km south-east of this point and has no bridge ways in the cached object. The estimate was used only to search. See NOTES.md section 1.",
+  "crs": "EPSG:4326",
+  "coordinate_order": "[lat, lon]",
+  "geometry_source": "Live OpenStreetMap API 0.6 map call, bbox -113.5720,53.5730,-113.5420,53.5890, retrieved 2026-11-23 (same day as the Alberta CSV). Cached docs/edmonton-bridges/bridge-geometry.json Y69 object (retrieved 2026-10-14) was empty and was not used. Alberta Structure-Export.csv for span, width, and clearance figures.",
+  "geometry_retrieved": "2026-11-23",
+  "plan_length_note": "plan_length_m is the horizontal WGS84 length of that OSM way along its nodes, computed here, one decimal. Deck ways are carriageway centrelines, not the 46 m nominal bridge length in Alberta. Approach plan_length_m values are not climbs to grade and not structural lengths. Ways are complete in the map call, not clipped at the bbox edge.",
+  "structure_records": {
+    "deck_stru_id": "40995 (file 79068-1, structure number 1, ST ALBERT TRAIL (B187)), in service 1982, City of Edmonton",
+    "separate_ped_stru_id": "233733 (file 79068-2, ST ALBERT TRAIL (B403), pedestrian trail, 2010), listed in paths",
+    "road_beneath": "Yellowhead Trail, Highway 16, control section 17, km 6.466 (LOCATED_OVER). Not part of this structure."
+  },
+  "decks": [
+    {
+      "osm_way": 22916210,
+      "osm_version": 16,
+      "osm_last_edit": "2026-05-05",
+      "part": "st_albert_deck_northbound",
+      "which": "Deck carriageway, northbound (oneway; node order south to north). OSM: bridge=yes, layer=1, 4 lanes, 60 km/h, primary. Plan length 39.2 m, shorter than the 46 m nominal length in Alberta; not reconciled.",
+      "plan_length_m": 39.2,
+      "tags": {
+        "bridge": "yes",
+        "dual_carriageway": "yes",
+        "hazmat": "designated",
+        "hgv": "designated",
+        "highway": "primary",
+        "lanes": "4",
+        "layer": "1",
+        "maxspeed": "60",
+        "name": "St. Albert Trail NW",
+        "name:etymology:wikidata": "Q939127",
+        "oneway": "yes",
+        "ref": "2",
+        "source:maxspeed": "sign",
+        "turn:lanes": "left|||"
+      },
+      "nodes": [
+        [
+          53.580973,
+          -113.556749
+        ],
+        [
+          53.581298,
+          -113.556984
+        ]
+      ]
+    },
+    {
+      "osm_way": 127496980,
+      "osm_version": 11,
+      "osm_last_edit": "2026-05-05",
+      "part": "st_albert_deck_southbound",
+      "which": "Deck carriageway, southbound (oneway; node order north to south). OSM: bridge=yes, layer=1, 4 lanes, 60 km/h, primary, source Yahoo imagery. Plan length 34.7 m.",
+      "plan_length_m": 34.7,
+      "tags": {
+        "bridge": "yes",
+        "hazmat": "designated",
+        "hgv": "designated",
+        "highway": "primary",
+        "lanes": "4",
+        "layer": "1",
+        "maxspeed": "60",
+        "name": "St. Albert Trail NW",
+        "name:etymology:wikidata": "Q939127",
+        "oneway": "yes",
+        "ref": "2",
+        "source": "Yahoo imagery",
+        "source:maxspeed": "sign",
+        "turn:lanes": "left|left||"
+      },
+      "nodes": [
+        [
+          53.581234,
+          -113.557263
+        ],
+        [
+          53.580947,
+          -113.557049
+        ]
+      ]
+    }
+  ],
+  "paths": [
+    {
+      "osm_way": 765809798,
+      "osm_version": 6,
+      "osm_last_edit": "2025-07-16",
+      "part": "ped_cycle_bridge_over_yellowhead",
+      "which": "Separate cycleway bridge over Yellowhead, bridge=yes, layer=1, concrete. Matches Alberta STRU 233733 (B403, pedestrian trail, two 23 m spans, nominal 46 m, separate structure). Kept because it crosses the same road at the same point. Not a deck of STRU 40995.",
+      "plan_length_m": 46.9,
+      "tags": {
+        "bicycle": "designated",
+        "bridge": "yes",
+        "foot": "designated",
+        "highway": "cycleway",
+        "layer": "1",
+        "segregated": "no",
+        "surface": "concrete"
+      },
+      "nodes": [
+        [
+          53.581321,
+          -113.557436
+        ],
+        [
+          53.580933,
+          -113.557148
+        ]
+      ]
+    }
+  ],
+  "approaches": [
+    {
+      "osm_way": 22916211,
+      "osm_version": 21,
+      "osm_last_edit": "2026-05-05",
+      "part": "approach_or_ramp_or_at_grade",
+      "which": "Road or ramp within 110 m of the deck. Plan geometry only; not a structural element and no elevation in this source.",
+      "plan_length_m": 29.4,
+      "tags": {
+        "dual_carriageway": "yes",
+        "hazmat": "designated",
+        "hgv": "designated",
+        "highway": "primary",
+        "lanes": "4",
+        "maxspeed": "60",
+        "name": "St. Albert Trail NW",
+        "name:etymology:wikidata": "Q939127",
+        "oneway": "yes",
+        "ref": "2",
+        "source:maxspeed": "sign"
+      },
+      "nodes": [
+        [
+          53.580686,
+          -113.556545
+        ],
+        [
+          53.58093,
+          -113.556722
+        ]
+      ]
+    },
+    {
+      "osm_way": 25420875,
+      "osm_version": 29,
+      "osm_last_edit": "2026-06-29",
+      "part": "approach_or_ramp_or_at_grade",
+      "which": "Road or ramp within 110 m of the deck. Plan geometry only; not a structural element and no elevation in this source.",
+      "plan_length_m": 125.1,
+      "tags": {
+        "dual_carriageway": "yes",
+        "foot": "no",
+        "hgv": "no",
+        "highway": "secondary",
+        "lanes": "2",
+        "lit": "yes",
+        "maxspeed": "60",
+        "name": "St. Albert Trail NW",
+        "name:etymology:wikidata": "Q939127",
+        "oneway": "yes",
+        "surface": "asphalt"
+      },
+      "nodes": [
+        [
+          53.579045,
+          -113.555597
+        ],
+        [
+          53.579542,
+          -113.555834
+        ],
+        [
+          53.580123,
+          -113.556174
+        ]
+      ]
+    },
+    {
+      "osm_way": 37692443,
+      "osm_version": 14,
+      "osm_last_edit": "2026-05-05",
+      "part": "approach_or_ramp_or_at_grade",
+      "which": "Road or ramp within 110 m of the deck. Plan geometry only; not a structural element and no elevation in this source.",
+      "plan_length_m": 43.1,
+      "tags": {
+        "frontage_road": "yes",
+        "hazmat": "designated",
+        "hgv": "designated",
+        "highway": "primary",
+        "lanes": "1",
+        "lit": "yes",
+        "maxspeed": "60",
+        "name": "Yellowhead Trail NW",
+        "name:etymology:wikidata": "Q22647683",
+        "oneway": "yes",
+        "ref": "2",
+        "surface": "asphalt"
+      },
+      "nodes": [
+        [
+          53.580624,
+          -113.557469
+        ],
+        [
+          53.580612,
+          -113.557268
+        ],
+        [
+          53.580609,
+          -113.556963
+        ],
+        [
+          53.580625,
+          -113.556821
+        ]
+      ]
+    },
+    {
+      "osm_way": 37692445,
+      "osm_version": 15,
+      "osm_last_edit": "2026-10-31",
+      "part": "approach_or_ramp_or_at_grade",
+      "which": "Road or ramp within 110 m of the deck. Plan geometry only; not a structural element and no elevation in this source.",
+      "plan_length_m": 97.1,
+      "tags": {
+        "destination:ref": "16 East",
+        "destination:street": "Yellowhead Trail",
+        "hazmat": "designated",
+        "hgv": "designated",
+        "highway": "trunk_link",
+        "lanes": "2",
+        "oneway": "yes"
+      },
+      "nodes": [
+        [
+          53.580759,
+          -113.555232
+        ],
+        [
+          53.580798,
+          -113.555041
+        ],
+        [
+          53.580856,
+          -113.554819
+        ],
+        [
+          53.580958,
+          -113.554435
+        ],
+        [
+          53.580976,
+          -113.554352
+        ],
+        [
+          53.580996,
+          -113.55425
+        ],
+        [
+          53.58101,
+          -113.554147
+        ],
+        [
+          53.581021,
+          -113.554013
+        ],
+        [
+          53.581035,
+          -113.553847
+        ]
+      ]
+    },
+    {
+      "osm_way": 52431035,
+      "osm_version": 14,
+      "osm_last_edit": "2026-05-05",
+      "part": "approach_or_ramp_or_at_grade",
+      "which": "Road or ramp within 110 m of the deck. Plan geometry only; not a structural element and no elevation in this source.",
+      "plan_length_m": 15.8,
+      "tags": {
+        "dual_carriageway": "yes",
+        "hazmat": "designated",
+        "hgv": "designated",
+        "highway": "primary",
+        "lanes": "4",
+        "lit": "yes",
+        "maxspeed": "60",
+        "name": "St. Albert Trail NW",
+        "name:etymology:wikidata": "Q939127",
+        "oneway": "yes",
+        "ref": "2",
+        "source:maxspeed": "sign",
+        "turn:lanes": "left|||"
+      },
+      "nodes": [
+        [
+          53.581396,
+          -113.557054
+        ],
+        [
+          53.581528,
+          -113.557146
+        ]
+      ]
+    },
+    {
+      "osm_way": 80403676,
+      "osm_version": 9,
+      "osm_last_edit": "2025-07-16",
+      "part": "approach_or_ramp_or_at_grade",
+      "which": "Road or ramp within 110 m of the deck. Plan geometry only; not a structural element and no elevation in this source.",
+      "plan_length_m": 69.3,
+      "tags": {
+        "destination:ref": "16 East",
+        "destination:street": "Yellowhead Trail",
+        "highway": "trunk_link",
+        "oneway": "yes",
+        "surface": "asphalt"
+      },
+      "nodes": [
+        [
+          53.580123,
+          -113.556174
+        ],
+        [
+          53.580324,
+          -113.556164
+        ],
+        [
+          53.580443,
+          -113.556116
+        ],
+        [
+          53.580566,
+          -113.556052
+        ],
+        [
+          53.580722,
+          -113.555921
+        ]
+      ]
+    },
+    {
+      "osm_way": 127496977,
+      "osm_version": 11,
+      "osm_last_edit": "2026-05-05",
+      "part": "approach_or_ramp_or_at_grade",
+      "which": "Road or ramp within 110 m of the deck. Plan geometry only; not a structural element and no elevation in this source.",
+      "plan_length_m": 25.9,
+      "tags": {
+        "dual_carriageway": "yes",
+        "hazmat": "designated",
+        "hgv": "designated",
+        "highway": "primary",
+        "lanes": "4",
+        "maxspeed": "60",
+        "name": "St. Albert Trail NW",
+        "name:etymology:wikidata": "Q939127",
+        "oneway": "yes",
+        "ref": "2",
+        "source": "Yahoo imagery",
+        "source:maxspeed": "sign",
+        "turn:lanes": "left|left||"
+      },
+      "nodes": [
+        [
+          53.580947,
+          -113.557049
+        ],
+        [
+          53.580731,
+          -113.556899
+        ]
+      ]
+    },
+    {
+      "osm_way": 127496982,
+      "osm_version": 12,
+      "osm_last_edit": "2026-06-29",
+      "part": "approach_or_ramp_or_at_grade",
+      "which": "Road or ramp within 110 m of the deck. Plan geometry only; not a structural element and no elevation in this source.",
+      "plan_length_m": 71.2,
+      "tags": {
+        "dual_carriageway": "yes",
+        "hazmat": "designated",
+        "hgv": "designated",
+        "highway": "primary",
+        "lanes": "4",
+        "maxspeed": "60",
+        "name": "St. Albert Trail NW",
+        "name:etymology:wikidata": "Q939127",
+        "oneway": "yes",
+        "ref": "2",
+        "sidewalk:left": "no",
+        "sidewalk:right": "separate",
+        "source": "Yahoo imagery",
+        "source:maxspeed": "sign",
+        "surface": "asphalt"
+      },
+      "nodes": [
+        [
+          53.58209,
+          -113.557878
+        ],
+        [
+          53.5816,
+          -113.557523
+        ],
+        [
+          53.581577,
+          -113.557506
+        ],
+        [
+          53.5815,
+          -113.557447
+        ]
+      ]
+    },
+    {
+      "osm_way": 368643274,
+      "osm_version": 17,
+      "osm_last_edit": "2026-07-06",
+      "part": "approach_or_ramp_or_at_grade",
+      "which": "Road or ramp within 110 m of the deck. Plan geometry only; not a structural element and no elevation in this source.",
+      "plan_length_m": 192.6,
+      "tags": {
+        "dual_carriageway": "yes",
+        "foot": "no",
+        "hgv": "no",
+        "highway": "secondary",
+        "lanes": "2",
+        "lit": "yes",
+        "maxspeed": "60",
+        "name": "St. Albert Trail NW",
+        "name:etymology:wikidata": "Q939127",
+        "oneway": "yes",
+        "sidewalk:left": "no",
+        "sidewalk:right": "separate",
+        "surface": "asphalt"
+      },
+      "nodes": [
+        [
+          53.580625,
+          -113.556821
+        ],
+        [
+          53.58057,
+          -113.556782
+        ],
+        [
+          53.57999,
+          -113.556376
+        ],
+        [
+          53.579499,
+          -113.555965
+        ],
+        [
+          53.579045,
+          -113.555597
+        ]
+      ]
+    },
+    {
+      "osm_way": 438389251,
+      "osm_version": 6,
+      "osm_last_edit": "2025-07-16",
+      "part": "approach_or_ramp_or_at_grade",
+      "which": "Road or ramp within 110 m of the deck. Plan geometry only; not a structural element and no elevation in this source.",
+      "plan_length_m": 38.4,
+      "tags": {
+        "destination:street": "St. Albert Trail South",
+        "hazmat": "designated",
+        "hgv": "designated",
+        "highway": "primary_link",
+        "lanes": "1",
+        "oneway": "yes",
+        "surface": "asphalt"
+      },
+      "nodes": [
+        [
+          53.581547,
+          -113.55653
+        ],
+        [
+          53.581396,
+          -113.557054
+        ]
+      ]
+    },
+    {
+      "osm_way": 472589236,
+      "osm_version": 4,
+      "osm_last_edit": "2025-04-21",
+      "part": "approach_or_ramp_or_at_grade",
+      "which": "Road or ramp within 110 m of the deck. Plan geometry only; not a structural element and no elevation in this source.",
+      "plan_length_m": 39.6,
+      "tags": {
+        "destination:ref": "2 North",
+        "hazmat": "designated",
+        "hgv": "designated",
+        "highway": "primary_link",
+        "oneway": "yes"
+      },
+      "nodes": [
+        [
+          53.580624,
+          -113.557469
+        ],
+        [
+          53.580698,
+          -113.557008
+        ],
+        [
+          53.580731,
+          -113.556899
+        ]
+      ]
+    },
+    {
+      "osm_way": 472589239,
+      "osm_version": 4,
+      "osm_last_edit": "2025-04-21",
+      "part": "approach_or_ramp_or_at_grade",
+      "which": "Road or ramp within 110 m of the deck. Plan geometry only; not a structural element and no elevation in this source.",
+      "plan_length_m": 26.4,
+      "tags": {
+        "destination:ref": "2 North",
+        "hazmat": "designated",
+        "hgv": "designated",
+        "highway": "primary_link",
+        "oneway": "yes"
+      },
+      "nodes": [
+        [
+          53.580731,
+          -113.556899
+        ],
+        [
+          53.580756,
+          -113.556828
+        ],
+        [
+          53.580808,
+          -113.556766
+        ],
+        [
+          53.58084,
+          -113.556743
+        ],
+        [
+          53.58093,
+          -113.556722
+        ]
+      ]
+    },
+    {
+      "osm_way": 472589242,
+      "osm_version": 7,
+      "osm_last_edit": "2026-05-05",
+      "part": "approach_or_ramp_or_at_grade",
+      "which": "Road or ramp within 110 m of the deck. Plan geometry only; not a structural element and no elevation in this source.",
+      "plan_length_m": 12.7,
+      "tags": {
+        "dual_carriageway": "yes",
+        "hazmat": "designated",
+        "hgv": "designated",
+        "highway": "primary",
+        "maxspeed": "60",
+        "name": "St. Albert Trail NW",
+        "name:etymology:wikidata": "Q939127",
+        "oneway": "yes",
+        "ref": "2",
+        "source": "Yahoo imagery",
+        "source:maxspeed": "sign"
+      },
+      "nodes": [
+        [
+          53.580731,
+          -113.556899
+        ],
+        [
+          53.580625,
+          -113.556821
+        ]
+      ]
+    },
+    {
+      "osm_way": 472589243,
+      "osm_version": 13,
+      "osm_last_edit": "2026-06-29",
+      "part": "approach_or_ramp_or_at_grade",
+      "which": "Road or ramp within 110 m of the deck. Plan geometry only; not a structural element and no elevation in this source.",
+      "plan_length_m": 66.9,
+      "tags": {
+        "dual_carriageway": "yes",
+        "hgv": "no",
+        "highway": "secondary",
+        "lanes": "4",
+        "lit": "yes",
+        "maxspeed": "60",
+        "name": "St. Albert Trail NW",
+        "name:etymology:wikidata": "Q939127",
+        "oneway": "yes",
+        "surface": "asphalt"
+      },
+      "nodes": [
+        [
+          53.580123,
+          -113.556174
+        ],
+        [
+          53.580595,
+          -113.556483
+        ],
+        [
+          53.580686,
+          -113.556545
+        ]
+      ]
+    },
+    {
+      "osm_way": 472589246,
+      "osm_version": 7,
+      "osm_last_edit": "2026-05-05",
+      "part": "approach_or_ramp_or_at_grade",
+      "which": "Road or ramp within 110 m of the deck. Plan geometry only; not a structural element and no elevation in this source.",
+      "plan_length_m": 31.9,
+      "tags": {
+        "dual_carriageway": "yes",
+        "hazmat": "designated",
+        "hgv": "designated",
+        "highway": "primary",
+        "lanes": "4",
+        "maxspeed": "60",
+        "name": "St. Albert Trail NW",
+        "name:etymology:wikidata": "Q939127",
+        "oneway": "yes",
+        "ref": "2",
+        "source": "Yahoo imagery",
+        "source:maxspeed": "sign"
+      },
+      "nodes": [
+        [
+          53.5815,
+          -113.557447
+        ],
+        [
+          53.581234,
+          -113.557263
+        ]
+      ]
+    },
+    {
+      "osm_way": 472589249,
+      "osm_version": 7,
+      "osm_last_edit": "2025-07-16",
+      "part": "approach_or_ramp_or_at_grade",
+      "which": "Road or ramp within 110 m of the deck. Plan geometry only; not a structural element and no elevation in this source.",
+      "plan_length_m": 41.5,
+      "tags": {
+        "hazmat": "designated",
+        "hgv": "designated",
+        "highway": "trunk_link",
+        "lanes": "2",
+        "oneway": "yes",
+        "surface": "asphalt"
+      },
+      "nodes": [
+        [
+          53.580686,
+          -113.556545
+        ],
+        [
+          53.580701,
+          -113.556353
+        ],
+        [
+          53.580709,
+          -113.556239
+        ],
+        [
+          53.580717,
+          -113.556129
+        ],
+        [
+          53.58072,
+          -113.556043
+        ],
+        [
+          53.580722,
+          -113.555921
+        ]
+      ]
+    },
+    {
+      "osm_way": 472589250,
+      "osm_version": 5,
+      "osm_last_edit": "2025-07-16",
+      "part": "approach_or_ramp_or_at_grade",
+      "which": "Road or ramp within 110 m of the deck. Plan geometry only; not a structural element and no elevation in this source.",
+      "plan_length_m": 40.8,
+      "tags": {
+        "destination:ref": "2 North",
+        "destination:street": "Saint Albert Trail",
+        "hazmat": "designated",
+        "hgv": "designated",
+        "highway": "primary_link",
+        "lanes": "2",
+        "oneway": "yes",
+        "surface": "asphalt"
+      },
+      "nodes": [
+        [
+          53.581547,
+          -113.55653
+        ],
+        [
+          53.581528,
+          -113.557146
+        ]
+      ]
+    },
+    {
+      "osm_way": 472589254,
+      "osm_version": 10,
+      "osm_last_edit": "2026-06-29",
+      "part": "approach_or_ramp_or_at_grade",
+      "which": "Road or ramp within 110 m of the deck. Plan geometry only; not a structural element and no elevation in this source.",
+      "plan_length_m": 49.8,
+      "tags": {
+        "frontage_road": "yes",
+        "hazmat": "designated",
+        "hgv": "designated",
+        "highway": "primary",
+        "lanes": "1",
+        "lit": "yes",
+        "maxspeed": "60",
+        "name": "Yellowhead Trail NW",
+        "name:etymology:wikidata": "Q22647683",
+        "oneway": "yes",
+        "ref": "2",
+        "sidewalk:left": "no",
+        "sidewalk:right": "separate",
+        "surface": "asphalt"
+      },
+      "nodes": [
+        [
+          53.5815,
+          -113.557447
+        ],
+        [
+          53.581496,
+          -113.557642
+        ],
+        [
+          53.581479,
+          -113.5582
+        ]
+      ]
+    },
+    {
+      "osm_way": 472589255,
+      "osm_version": 10,
+      "osm_last_edit": "2026-06-29",
+      "part": "approach_or_ramp_or_at_grade",
+      "which": "Road or ramp within 110 m of the deck. Plan geometry only; not a structural element and no elevation in this source.",
+      "plan_length_m": 20.1,
+      "tags": {
+        "frontage_road": "yes",
+        "hazmat": "designated",
+        "hgv": "designated",
+        "highway": "primary",
+        "lit": "yes",
+        "maxspeed": "60",
+        "name": "Yellowhead Trail NW",
+        "name:etymology:wikidata": "Q22647683",
+        "oneway": "yes",
+        "sidewalk:left": "no",
+        "sidewalk:right": "separate"
+      },
+      "nodes": [
+        [
+          53.581528,
+          -113.557146
+        ],
+        [
+          53.5815,
+          -113.557447
+        ]
+      ]
+    },
+    {
+      "osm_way": 472589258,
+      "osm_version": 4,
+      "osm_last_edit": "2025-04-21",
+      "part": "approach_or_ramp_or_at_grade",
+      "which": "Road or ramp within 110 m of the deck. Plan geometry only; not a structural element and no elevation in this source.",
+      "plan_length_m": 23.7,
+      "tags": {
+        "destination:street": "St. Albert Trail South",
+        "hazmat": "designated",
+        "hgv": "designated",
+        "highway": "primary_link",
+        "oneway": "yes"
+      },
+      "nodes": [
+        [
+          53.581396,
+          -113.557054
+        ],
+        [
+          53.581362,
+          -113.557141
+        ],
+        [
+          53.581346,
+          -113.557174
+        ],
+        [
+          53.581316,
+          -113.557219
+        ],
+        [
+          53.581234,
+          -113.557263
+        ]
+      ]
+    },
+    {
+      "osm_way": 472906427,
+      "osm_version": 6,
+      "osm_last_edit": "2026-05-05",
+      "part": "approach_or_ramp_or_at_grade",
+      "which": "Road or ramp within 110 m of the deck. Plan geometry only; not a structural element and no elevation in this source.",
+      "plan_length_m": 5.1,
+      "tags": {
+        "hazmat": "designated",
+        "hgv": "designated",
+        "highway": "primary",
+        "lanes": "4",
+        "maxspeed": "60",
+        "name": "St. Albert Trail NW",
+        "name:etymology:wikidata": "Q939127",
+        "oneway": "yes",
+        "ref": "2",
+        "source:maxspeed": "sign",
+        "turn:lanes": "left|||"
+      },
+      "nodes": [
+        [
+          53.58093,
+          -113.556722
+        ],
+        [
+          53.580973,
+          -113.556749
+        ]
+      ]
+    },
+    {
+      "osm_way": 693609901,
+      "osm_version": 8,
+      "osm_last_edit": "2026-05-05",
+      "part": "approach_or_ramp_or_at_grade",
+      "which": "Road or ramp within 110 m of the deck. Plan geometry only; not a structural element and no elevation in this source.",
+      "plan_length_m": 19.4,
+      "tags": {
+        "frontage_road": "yes",
+        "hazmat": "designated",
+        "hgv": "designated",
+        "highway": "primary",
+        "lanes": "1",
+        "lit": "yes",
+        "maxspeed": "60",
+        "name": "Yellowhead Trail NW",
+        "name:etymology:wikidata": "Q22647683",
+        "oneway": "yes",
+        "ref": "2",
+        "surface": "asphalt"
+      },
+      "nodes": [
+        [
+          53.580625,
+          -113.556821
+        ],
+        [
+          53.580686,
+          -113.556545
+        ]
+      ]
+    },
+    {
+      "osm_way": 1011265891,
+      "osm_version": 4,
+      "osm_last_edit": "2026-10-22",
+      "part": "approach_or_ramp_or_at_grade",
+      "which": "Road or ramp within 110 m of the deck. Plan geometry only; not a structural element and no elevation in this source.",
+      "plan_length_m": 54.3,
+      "tags": {
+        "hazmat": "designated",
+        "hgv": "designated",
+        "highway": "primary_link",
+        "lanes": "3",
+        "maxspeed:advisory": "60",
+        "oneway": "yes",
+        "surface": "asphalt",
+        "turn:lanes": "left||",
+        "width": "5"
+      },
+      "nodes": [
+        [
+          53.581536,
+          -113.55571
+        ],
+        [
+          53.581546,
+          -113.555927
+        ],
+        [
+          53.581554,
+          -113.556095
+        ],
+        [
+          53.581547,
+          -113.55653
+        ]
+      ]
+    },
+    {
+      "osm_way": 1011265893,
+      "osm_version": 5,
+      "osm_last_edit": "2026-10-31",
+      "part": "approach_or_ramp_or_at_grade",
+      "which": "Road or ramp within 110 m of the deck. Plan geometry only; not a structural element and no elevation in this source.",
+      "plan_length_m": 125.7,
+      "tags": {
+        "hazmat": "designated",
+        "hgv": "designated",
+        "highway": "primary_link",
+        "lanes": "3",
+        "maxspeed": "50",
+        "maxspeed:type": "sign",
+        "name": "Yellowhead Trail NW",
+        "name:etymology:wikidata": "Q22647683",
+        "oneway": "yes",
+        "surface": "asphalt",
+        "width": "5"
+      },
+      "nodes": [
+        [
+          53.58143,
+          -113.553816
+        ],
+        [
+          53.581519,
+          -113.555361
+        ],
+        [
+          53.581536,
+          -113.55571
+        ]
+      ]
+    },
+    {
+      "osm_way": 1225664562,
+      "osm_version": 7,
+      "osm_last_edit": "2026-05-05",
+      "part": "approach_or_ramp_or_at_grade",
+      "which": "Road or ramp within 110 m of the deck. Plan geometry only; not a structural element and no elevation in this source.",
+      "plan_length_m": 192.9,
+      "tags": {
+        "frontage_road": "yes",
+        "hazmat": "designated",
+        "hgv": "designated",
+        "highway": "primary",
+        "junction:ref": "385",
+        "lanes": "2",
+        "lit": "yes",
+        "maxspeed": "60",
+        "name": "Yellowhead Trail NW",
+        "name:etymology:wikidata": "Q22647683",
+        "oneway": "yes",
+        "ref": "2",
+        "surface": "asphalt",
+        "width": "5.5"
+      },
+      "nodes": [
+        [
+          53.580875,
+          -113.560355
+        ],
+        [
+          53.580831,
+          -113.559853
+        ],
+        [
+          53.580665,
+          -113.558218
+        ],
+        [
+          53.580631,
+          -113.557795
+        ],
+        [
+          53.580624,
+          -113.557469
+        ]
+      ]
+    },
+    {
+      "osm_way": 1276415925,
+      "osm_version": 4,
+      "osm_last_edit": "2026-05-05",
+      "part": "approach_or_ramp_or_at_grade",
+      "which": "Road or ramp within 110 m of the deck. Plan geometry only; not a structural element and no elevation in this source.",
+      "plan_length_m": 11.8,
+      "tags": {
+        "dual_carriageway": "yes",
+        "hazmat": "designated",
+        "hgv": "designated",
+        "highway": "primary",
+        "lanes": "4",
+        "lit": "yes",
+        "maxspeed": "60",
+        "name": "St. Albert Trail NW",
+        "name:etymology:wikidata": "Q939127",
+        "oneway": "yes",
+        "ref": "2",
+        "source:maxspeed": "sign",
+        "surface": "asphalt",
+        "turn:lanes": "left|||"
+      },
+      "nodes": [
+        [
+          53.581298,
+          -113.556984
+        ],
+        [
+          53.581396,
+          -113.557054
+        ]
+      ]
+    },
+    {
+      "osm_way": 1278054549,
+      "osm_version": 7,
+      "osm_last_edit": "2026-06-29",
+      "part": "approach_or_ramp_or_at_grade",
+      "which": "Road or ramp within 110 m of the deck. Plan geometry only; not a structural element and no elevation in this source.",
+      "plan_length_m": 152.1,
+      "tags": {
+        "dual_carriageway": "yes",
+        "fixme": "check lanes",
+        "hazmat": "designated",
+        "hgv": "designated",
+        "highway": "primary",
+        "lanes": "3",
+        "lit": "yes",
+        "maxspeed": "60",
+        "name": "St. Albert Trail NW",
+        "name:etymology:wikidata": "Q939127",
+        "oneway": "yes",
+        "ref": "2",
+        "sidewalk:left": "no",
+        "sidewalk:right": "separate",
+        "source:maxspeed": "sign",
+        "surface": "asphalt"
+      },
+      "nodes": [
+        [
+          53.581528,
+          -113.557146
+        ],
+        [
+          53.581612,
+          -113.557207
+        ],
+        [
+          53.581952,
+          -113.557458
+        ],
+        [
+          53.582135,
+          -113.557598
+        ],
+        [
+          53.582772,
+          -113.558126
+        ]
+      ]
+    },
+    {
+      "osm_way": 1573830421,
+      "osm_version": 1,
+      "osm_last_edit": "2026-10-31",
+      "part": "approach_or_ramp_or_at_grade",
+      "which": "Road or ramp within 110 m of the deck. Plan geometry only; not a structural element and no elevation in this source.",
+      "plan_length_m": 108.5,
+      "tags": {
+        "destination:ref": "16 East",
+        "destination:street": "Yellowhead Trail",
+        "hazmat": "designated",
+        "hgv": "designated",
+        "highway": "trunk_link",
+        "lanes": "2",
+        "oneway": "yes"
+      },
+      "nodes": [
+        [
+          53.580759,
+          -113.555232
+        ],
+        [
+          53.580832,
+          -113.554429
+        ],
+        [
+          53.580863,
+          -113.554147
+        ],
+        [
+          53.580905,
+          -113.553609
+        ]
+      ]
+    },
+    {
+      "osm_way": 1573830422,
+      "osm_version": 1,
+      "osm_last_edit": "2026-10-31",
+      "part": "approach_or_ramp_or_at_grade",
+      "which": "Road or ramp within 110 m of the deck. Plan geometry only; not a structural element and no elevation in this source.",
+      "plan_length_m": 45.7,
+      "tags": {
+        "destination:ref": "16 East",
+        "destination:street": "Yellowhead Trail",
+        "hazmat": "designated",
+        "hgv": "designated",
+        "highway": "trunk_link",
+        "lanes": "2",
+        "oneway": "yes"
+      },
+      "nodes": [
+        [
+          53.580722,
+          -113.555921
+        ],
+        [
+          53.580743,
+          -113.555558
+        ],
+        [
+          53.580759,
+          -113.555232
+        ]
+      ]
+    }
+  ],
+  "road_beneath": [
+    {
+      "osm_way": 61339638,
+      "osm_version": 27,
+      "osm_last_edit": "2026-10-31",
+      "part": "road_beneath_yellowhead",
+      "which": "Yellowhead Trail (Highway 16), motorway, passes under the St. Albert Trail deck. Not part of this structure. Kept for the clearance check.",
+      "plan_length_m": 246.6,
+      "tags": {
+        "alt_name": "Yellowhead Highway",
+        "alt_name:en": "Yellowhead Highway",
+        "alt_name:fr": "Route Yellowhead",
+        "attribution": "GeoBase\u00ae",
+        "geobase:acquisitionTechnique": "GPS;Orthoimage",
+        "geobase:roadsegmentid": "76027;325608;196315;372491;321009;24628;141255;287155;177250",
+        "hazmat": "designated",
+        "hgv": "designated",
+        "highway": "motorway",
+        "lanes": "3",
+        "lit": "yes",
+        "maxheight": "5.3",
+        "maxspeed": "80",
+        "name": "Yellowhead Trail NW",
+        "name:etymology:wikidata": "Q22647683",
+        "nat_name": "Trans-Canada Highway",
+        "nat_name:en": "Trans-Canada Highway",
+        "nat_name:fr": "Route Transcanadienne",
+        "NHS": "yes",
+        "note": "Tagged dual carriageway and expressway until freeway conversion complete",
+        "oneway": "yes",
+        "placement": "right_of:2",
+        "ref": "16",
+        "source": "NRN - Alberta V7.0",
+        "surface": "asphalt",
+        "width": "11.1"
+      },
+      "nodes": [
+        [
+          53.581064,
+          -113.557578
+        ],
+        [
+          53.581055,
+          -113.556305
+        ],
+        [
+          53.581035,
+          -113.553847
+        ]
+      ]
+    },
+    {
+      "osm_way": 61433967,
+      "osm_version": 19,
+      "osm_last_edit": "2026-05-05",
+      "part": "road_beneath_yellowhead",
+      "which": "Yellowhead Trail (Highway 16), motorway, passes under the St. Albert Trail deck. Not part of this structure. Kept for the clearance check.",
+      "plan_length_m": 397.6,
+      "tags": {
+        "addr:housenumber:first:right": "13063",
+        "addr:housenumber:last:right": "14147",
+        "alt_name": "Yellowhead Highway",
+        "alt_name:en": "Yellowhead Highway",
+        "alt_name:fr": "Route Yellowhead",
+        "attribution": "GeoBase\u00ae",
+        "geobase:acquisitionTechnique": "Orthoimage;GPS",
+        "geobase:roadsegmentid": "325608;35805",
+        "hazmat": "designated",
+        "hgv": "designated",
+        "highway": "motorway",
+        "lanes": "3",
+        "lit": "yes",
+        "maxspeed": "80",
+        "name": "Yellowhead Trail NW",
+        "name:etymology:wikidata": "Q22647683",
+        "nat_name": "Trans-Canada Highway",
+        "nat_name:en": "Trans-Canada Highway",
+        "nat_name:fr": "Route Transcanadienne",
+        "NHS": "yes",
+        "oneway": "yes",
+        "placement": "right_of:2",
+        "ref": "16",
+        "source": "NRN - Alberta V7.0;Canvec V6 - Alberta",
+        "surface": "asphalt",
+        "width": "11.1"
+      },
+      "nodes": [
+        [
+          53.581112,
+          -113.563593
+        ],
+        [
+          53.581064,
+          -113.557578
+        ]
+      ]
+    },
+    {
+      "osm_way": 61434018,
+      "osm_version": 23,
+      "osm_last_edit": "2026-05-05",
+      "part": "road_beneath_yellowhead",
+      "which": "Yellowhead Trail (Highway 16), motorway, passes under the St. Albert Trail deck. Not part of this structure. Kept for the clearance check.",
+      "plan_length_m": 215.5,
+      "tags": {
+        "alt_name": "Yellowhead Highway",
+        "alt_name:en": "Yellowhead Highway",
+        "alt_name:fr": "Route Yellowhead",
+        "attribution": "GeoBase\u00ae",
+        "geobase:acquisitionTechnique": "GPS",
+        "geobase:roadsegmentid": "324895",
+        "hazmat": "designated",
+        "hgv": "designated",
+        "highway": "motorway",
+        "lanes": "3",
+        "lit": "yes",
+        "maxheight": "5.3",
+        "maxspeed": "80",
+        "name": "Yellowhead Trail NW",
+        "name:etymology:wikidata": "Q22647683",
+        "nat_name": "Trans-Canada Highway",
+        "nat_name:en": "Trans-Canada Highway",
+        "nat_name:fr": "Route Transcanadienne",
+        "NHS": "yes",
+        "note": "Tagged dual carriageway and expressway until freeway conversion complete",
+        "oneway": "yes",
+        "placement": "left_of:2",
+        "ref": "16",
+        "source": "Canvec V6 - Alberta",
+        "surface": "asphalt",
+        "width": "11.1"
+      },
+      "nodes": [
+        [
+          53.581188,
+          -113.554157
+        ],
+        [
+          53.581205,
+          -113.556888
+        ],
+        [
+          53.581207,
+          -113.55719
+        ],
+        [
+          53.581213,
+          -113.557417
+        ]
+      ]
+    },
+    {
+      "osm_way": 279661281,
+      "osm_version": 16,
+      "osm_last_edit": "2026-05-05",
+      "part": "road_beneath_yellowhead",
+      "which": "Yellowhead Trail (Highway 16), motorway, passes under the St. Albert Trail deck. Not part of this structure. Kept for the clearance check.",
+      "plan_length_m": 153.5,
+      "tags": {
+        "alt_name": "Yellowhead Highway",
+        "alt_name:en": "Yellowhead Highway",
+        "alt_name:fr": "Route Yellowhead",
+        "attribution": "GeoBase\u00ae",
+        "geobase:acquisitionTechnique": "GPS",
+        "geobase:roadsegmentid": "324895",
+        "hazmat": "designated",
+        "hgv": "designated",
+        "highway": "motorway",
+        "lanes": "4",
+        "lit": "yes",
+        "maxspeed": "80",
+        "name": "Yellowhead Trail NW",
+        "name:etymology:wikidata": "Q22647683",
+        "nat_name": "Trans-Canada Highway",
+        "nat_name:en": "Trans-Canada Highway",
+        "nat_name:fr": "Route Transcanadienne",
+        "NHS": "yes",
+        "note": "Tagged dual carriageway and expressway until freeway conversion complete",
+        "oneway": "yes",
+        "placement": "left_of:2",
+        "ref": "16",
+        "source": "Canvec V6 - Alberta",
+        "surface": "asphalt",
+        "turn:lanes": "through|through|through|slight_right",
+        "width": "14.8"
+      },
+      "nodes": [
+        [
+          53.581213,
+          -113.557417
+        ],
+        [
+          53.581232,
+          -113.55974
+        ]
+      ]
+    }
+  ],
+  "dropped_note": "Dropped 57 ways within 400 m that are not this structure. 30 are railway ways (Edson Subdivision, CN and CP lines, Bonaventure Lead and others), which are not over Yellowhead Trail at this point. The nearest Alberta rail records are STRU 40108 (B096, CNR, 56.6 m, over local roads, about 0.33 km north-north-west) and STRU 39842 (CPR over 127 Street, about 1.0 km east). The other 27 are local streets, footways, service roads, and cycleways not on the St. Albert Trail or Yellowhead alignment (for example 124 Avenue NW, 133 Street NW, 134 Street NW, St Albert Trail NW residential way 31689229). Ways kept as approaches are primary, secondary, trunk, and link roads within 110 m of the centre. Some Yellowhead ways in OSM carry ref=2 (the Highway 2 ref) although Alberta and the other tags give Highway 16; the ref is left as mapped.",
+  "height_note": "No heights are invented here. Alberta gives a theoretical vertical clearance under the structure of 5.4 m and no deck elevation. OSM maxheight=5.3 on the Yellowhead motorway ways is a mapper tag, not a published clearance. Both are recorded in NOTES.md. No deck elevation is published."
+}
