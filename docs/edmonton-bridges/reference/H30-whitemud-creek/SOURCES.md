@@ -1,6 +1,6 @@
 # H30 Whitemud Creek arch: sources
 
-No open-licence photo was downloaded. Wikimedia returned HTTP 429 (rate limit) for every size tried. The photo below is listed as "Not downloaded" with its URL. `photos\` is empty.
+One open-licence photo is saved: `henday-over-whitemud-creek-2012.jpg`, a Wikimedia Commons file under CC BY-SA 2.0 (Kurt Bauschardt, 2012). It shows the semi-circular arch with its oculus, the creek, and the highway deck above. The 1920 px thumbnail was used. Still needed: a view from the highway side, one of the ravine, and both approaches.
 
 ## Measurements
 
@@ -19,16 +19,15 @@ No source gives the arch rise, the highway deck elevation, the ravine elevation,
 
 ## Photos saved
 
-None. `photos\` is empty.
+| File | Shows | Source | Licence |
+| --- | --- | --- | --- |
+| `henday-over-whitemud-creek-2012.jpg` | Semi-circular arch with its oculus on the right, a railed concrete deck on piers running left from the arch, the creek in the foreground, and the sloped ravine walls behind. The photo does not show whether that deck is the highway or a path. 1920 px thumbnail. | [Commons, Kurt Bauschardt, 1 April 2012](https://commons.wikimedia.org/wiki/File:Henday_Whitemud_Creek.jpg) | CC BY-SA 2.0 |
 
 ## Not downloaded
 
-| File | Shows | Source | Licence | Reason |
-| --- | --- | --- | --- | --- |
-| `Henday_Whitemud_Creek.jpg` (Commons), 1 April 2012, 2048 x 1356 | "Anthony Henday Drive bridges over Whitemud Creek in southwest Edmonton, Alberta." The description does not describe the structure. Whether the arch is visible is unconfirmed. Use 1280 px: https://upload.wikimedia.org/wikipedia/commons/thumb/6/60/Henday_Whitemud_Creek.jpg/1280px-Henday_Whitemud_Creek.jpg | [Commons, Kurt Bauschardt (Flickr: Kurayba)](https://commons.wikimedia.org/wiki/File:Henday_Whitemud_Creek.jpg) | CC BY-SA 2.0 | HTTP 429 on the 1280 px and 960 px thumbnails. Retry later. |
-| Commons search results "Whitemud Creek park" (several) | Park, not the arch. | [Commons search](https://commons.wikimedia.org/w/index.php?search=Whitemud+Creek+Edmonton&title=Special:MediaSearch&type=image) | Not checked | Park views of the creek, not the arch. |
+Commons search results "Whitemud Creek park" (several). Park views of the creek, not the arch. Not checked.
 
-Still needed for the photo rules: an open photo of the arch from the highway side, one of the deck, one of the ravine, and both approaches. None was found in the sources checked.
+Still needed for the photo rules: an open photo of the arch from the highway side, one of the ravine, and both approaches. None was found in the sources checked.
 
 ## Street photos (Mapillary)
 

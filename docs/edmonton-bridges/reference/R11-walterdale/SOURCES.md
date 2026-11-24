@@ -1,6 +1,6 @@
 # R11 Walterdale Bridge — sources
 
-Photos in `photos\` are openly licensed. A file that was useful but not openly licensed is listed under "Not downloaded" with the URL only. Six of the saved files are 1,920 px Wikimedia thumbnails: the full-size originals were refused with HTTP 429. The other four are the full-size files.
+Photos in `photos\` are openly licensed, except `night-from-under-truss-friend.jpg`, a personal photo supplied by a friend and marked as not openly licensed in the table below. A file that was useful but not openly licensed is listed under "Not downloaded" with the URL only. Six of the saved files are 1,920 px Wikimedia thumbnails: the full-size originals were refused with HTTP 429. The other four are the full-size files.
 
 This folder is the 2017 arch. Photographs of the 1913 truss were not saved.
 
@@ -40,6 +40,7 @@ No Government of Alberta bridge sheet with a deck elevation or a navigation clea
 | `thrust-block-support-leg.jpg` | Arch rib landing on the concrete support leg at the riverbank, with the group of anchor bars. The buried thrust block is below this leg. 1,920 px thumbnail. | [Commons, Chris Woodrich, 27 September 2026](https://commons.wikimedia.org/wiki/File:Walterdale_Bridge,_Edmonton,_Alberta,_2026-09-27_07.jpg) | CC BY-SA 4.0 |
 | `abutment-flood-markers.jpg` | Abutment wall under the deck soffit, gabion walls, and flood lines marked 1915 and 1986. The lines are dates, not elevations. 1,920 px thumbnail. | [Commons, Rhododendrites](https://commons.wikimedia.org/wiki/File:Flood_markers_under_the_Walterdale_Bridge_(70408).jpg) | CC BY-SA 4.0 |
 | `struts-from-north-bank.jpg` | Portal from the north bank. Struts between the two ribs, hangers, and the path at the abutment. 1,920 px thumbnail. | [Commons, Aude, 23 September 2026](https://commons.wikimedia.org/wiki/File:Walterdale_Bridge_in_Edmonton.jpg) | CC BY-SA 4.0 |
+| `night-from-under-truss-friend.jpg` | Night view from beneath a steel truss, down the river to the arch, with the deck, hangers, and lit arch rib. Rossdale power plant on the left, downtown towers beyond the arch. Full resolution, not scaled. | Personal photo from a friend of the project owner, supplied directly. Not from a public source. | **Not openly licensed.** Used with permission for this reference only. Do not publish or reuse outside the repo. |
 
 ## Not downloaded
 
