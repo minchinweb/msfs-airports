@@ -1,6 +1,6 @@
 # Open questions, merged 2026-10-14
 
-The "Ask before building" list in `CURSOR-HANDOFF.md` (another session's review, commit c5f3a92) re-checked against the data added since: LiDAR heights and measurements (`elevation/README.md`, `elevation/MEASUREMENTS.md`, `../../MEASUREMENTS.md`), the 2019 aerial, Mapillary street frames (`street/`, read in `../../STREET-READINGS.md` for ten sites) and the river gauge (`../../RIVER-LEVEL.md`). Status words: **Answered** (a value is now held), **Partly** (a value or bound is held, a gap remains), **Open, measurable** (can be done from files we hold, not done yet), **Open, needs source** (a document, photo or survey is needed), **Sim** (only William can test it).
+The "Ask before building" list in another session's review (`CURSOR-HANDOFF.md`, commit c5f3a92, removed 2026-11-23; its "Do not invent" list is kept at the end of this file) re-checked against the data added since: LiDAR heights and measurements (`elevation/README.md`, `elevation/MEASUREMENTS.md`, `../../MEASUREMENTS.md`), the 2019 aerial, Mapillary street frames (`street/`, read in `../../STREET-READINGS.md` for ten sites) and the river gauge (`../../RIVER-LEVEL.md`). Status words: **Answered** (a value is now held), **Partly** (a value or bound is held, a gap remains), **Open, measurable** (can be done from files we hold, not done yet), **Open, needs source** (a document, photo or survey is needed), **Sim** (only William can test it).
 
 Elevations are CGVD2013 metres from the 2018 LiDAR. Deck tops are first returns (rails, traffic and catenary can add up to 1 m) and the sim's datum is not yet checked. "Rise" is deck top above the ground or water under it, not the clear height: take off the deck depth (1 to 2.5 m).
 
@@ -11,4 +11,10 @@ Elevations are CGVD2013 metres from the 2018 LiDAR. Deck tops are first returns 
 5. **Outer steel 11.89 m or 43 ft: Partly.** LiDAR raised width at deck level 11.0 m (plus or minus 1 m), agreeing with the 11.89 m deck; the 43 ft overall width is not tested.
 6. **Sim:** the High Level was treated in the sim as a solid ridge, so the terrain under the span needs lowering or cutting (`BLOCKERS.md` section 3).
 
-The review's "Do not invent" list still applies: keep the conflicting published figures separate and unaveraged, as the review set out, and do not turn a mapped plan length into a structural length. Where its "Photos" section says none are saved, check `street/` and `night/` first.
+## Do not invent
+
+From the review, unchanged. It was written before the LiDAR, so where it forbids a deck, ground or water elevation, use the measured CGVD2013 values above; still do not take an elevation from a published or mapped figure. Keep conflicting published figures separate and unaveraged, and do not turn a mapped plan length into a structural length.
+
+Deck elevation above sea level, the datum, or the elevation of the mean-water surface used for the 156 ft figure. A single as-built river-pier height (the folder records about 125 ft, nearly 100 ft, and a 1910 proposal of 138 ft). Present north and south approach gradients, lengths, elevation changes, and where each meets grade. The 1914 and 1910 figures predate the 1931 and 1971 approach rebuilds. Lengths for the 10 spans the designation does not itemize. Do not assign the unitemized remainder. Do not swap the decks. Do not build the old three-track upper deck. Do not build the Dudley B. Menzies Bridge. Pier count also disagrees (32 concrete piers and pedestals, or four river piers plus 62 smaller piers). The designation already gives four river piers and south tower spans on steel legs. Do not choose the other count.
+
+Where a photo is missing, check `street/` and `night/` first.

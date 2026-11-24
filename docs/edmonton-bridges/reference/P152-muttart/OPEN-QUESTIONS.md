@@ -1,6 +1,6 @@
 # Open questions, merged 2026-10-14
 
-The "Ask before building" list in `CURSOR-HANDOFF.md` (another session's review, commit c5f3a92) re-checked against the data added since: LiDAR heights and measurements (`elevation/README.md`, `elevation/MEASUREMENTS.md`, `../../MEASUREMENTS.md`), the 2019 aerial, Mapillary street frames (`street/`, read in `../../STREET-READINGS.md` for ten sites) and the river gauge (`../../RIVER-LEVEL.md`). Status words: **Answered** (a value is now held), **Partly** (a value or bound is held, a gap remains), **Open, measurable** (can be done from files we hold, not done yet), **Open, needs source** (a document, photo or survey is needed), **Sim** (only William can test it).
+The "Ask before building" list in another session's review (`CURSOR-HANDOFF.md`, commit c5f3a92, removed 2026-11-23; its "Do not invent" list is kept at the end of this file) re-checked against the data added since: LiDAR heights and measurements (`elevation/README.md`, `elevation/MEASUREMENTS.md`, `../../MEASUREMENTS.md`), the 2019 aerial, Mapillary street frames (`street/`, read in `../../STREET-READINGS.md` for ten sites) and the river gauge (`../../RIVER-LEVEL.md`). Status words: **Answered** (a value is now held), **Partly** (a value or bound is held, a gap remains), **Open, measurable** (can be done from files we hold, not done yet), **Open, needs source** (a document, photo or survey is needed), **Sim** (only William can test it).
 
 Elevations are CGVD2013 metres from the 2018 LiDAR. Deck tops are first returns (rails, traffic and catenary can add up to 1 m) and the sim's datum is not yet checked. "Rise" is deck top above the ground or water under it, not the clear height: take off the deck depth (1 to 2.5 m).
 
@@ -10,4 +10,10 @@ Elevations are CGVD2013 metres from the 2018 LiDAR. Deck tops are first returns 
 4. **Join with the ramp: Partly.** The R14 ramp ways end at the platform edge: 53.536207, -113.480002 and 53.536104, -113.4801. William's decision stands (R14 owns the ramp).
 5. **Sim:** the heading check (49 degrees true, within 2 degrees).
 
-The review's "Do not invent" list still applies: keep the conflicting published figures separate and unaveraged, as the review set out, and do not turn a mapped plan length into a structural length. Where its "Photos" section says none are saved, check `street/` and `night/` first.
+## Do not invent
+
+From the review, unchanged. It was written before the LiDAR, so where it forbids a deck, ground or water elevation, use the measured CGVD2013 values above; still do not take an elevation from a published or mapped figure. Keep conflicting published figures separate and unaveraged, and do not turn a mapped plan length into a structural length.
+
+Platform elevation above sea level, and the vertical datum. A surveyed platform length that reconciles the 90 m minimum with the mapped 103.8 m and 103.6 m sides. The canopy footprint. The agreement states at least 125 m² under canopy on each side platform, an underside at most 3.8 m above the platform, and columns at least 3,000 mm on centre. Those are requirements. Best Fronds is two sections, each 30 feet long and 4 feet high. Those feet are the artwork. Whether the storage track conceived in 2013 on the northwest side was built. That siding was not found as its own way.
+
+Where a photo is missing, check `street/` and `night/` first.

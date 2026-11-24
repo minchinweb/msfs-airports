@@ -1,6 +1,6 @@
 # Bridges: remaining blocking items
 
-Written 2026-10-14, revised 2026-11-23 after the data refetch (NRCAN gap-fill, DEMs and aerials on disk for every reference folder), and after the LiDAR measurements, the street-photo readings and the merge of the other session's review (`CURSOR-HANDOFF.md`). Per-site detail, item by item, is in `reference/<site>/OPEN-QUESTIONS.md` (21 files); this file ranks what is left by who or what can clear it. Codes are those in `PRIORITY.md`. Companion files: `DATA-SOURCES.md`, `RIVER-LEVEL.md`, `ELEVATION.md`, `MEASUREMENTS.md`, `STREET-READINGS.md`.
+Written 2026-10-14, revised 2026-11-23 after the data refetch (NRCAN gap-fill, DEMs and aerials on disk for every reference folder), and after the LiDAR measurements, the street-photo readings and the merge of the other session's review (commit c5f3a92; the note was removed 2026-11-23). Per-site detail, item by item, is in `reference/<site>/OPEN-QUESTIONS.md` (21 files); this file ranks what is left by who or what can clear it. Codes are those in `PRIORITY.md`. Companion files: `DATA-SOURCES.md`, `RIVER-LEVEL.md`, `ELEVATION.md`, `MEASUREMENTS.md`, `STREET-READINGS.md`.
 
 ## 1. Cleared by the data
 

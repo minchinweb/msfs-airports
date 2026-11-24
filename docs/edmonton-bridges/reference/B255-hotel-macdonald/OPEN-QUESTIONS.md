@@ -1,6 +1,6 @@
 # Open questions, merged 2026-10-14
 
-The "Ask before building" list in `CURSOR-HANDOFF.md` (another session's review, commit c5f3a92) re-checked against the data added since: LiDAR heights and measurements (`elevation/README.md`, `elevation/MEASUREMENTS.md`, `../../MEASUREMENTS.md`), the 2019 aerial, Mapillary street frames (`street/`, read in `../../STREET-READINGS.md` for ten sites) and the river gauge (`../../RIVER-LEVEL.md`). Status words: **Answered** (a value is now held), **Partly** (a value or bound is held, a gap remains), **Open, measurable** (can be done from files we hold, not done yet), **Open, needs source** (a document, photo or survey is needed), **Sim** (only William can test it).
+The "Ask before building" list in another session's review (`CURSOR-HANDOFF.md`, commit c5f3a92, removed 2026-11-23; its "Do not invent" list is kept at the end of this file) re-checked against the data added since: LiDAR heights and measurements (`elevation/README.md`, `elevation/MEASUREMENTS.md`, `../../MEASUREMENTS.md`), the 2019 aerial, Mapillary street frames (`street/`, read in `../../STREET-READINGS.md` for ten sites) and the river gauge (`../../RIVER-LEVEL.md`). Status words: **Answered** (a value is now held), **Partly** (a value or bound is held, a gap remains), **Open, measurable** (can be done from files we hold, not done yet), **Open, needs source** (a document, photo or survey is needed), **Sim** (only William can test it).
 
 Elevations are CGVD2013 metres from the 2018 LiDAR. Deck tops are first returns (rails, traffic and catenary can add up to 1 m) and the sim's datum is not yet checked. "Rise" is deck top above the ground or water under it, not the clear height: take off the deck depth (1 to 2.5 m).
 
@@ -10,4 +10,10 @@ Elevations are CGVD2013 metres from the 2018 LiDAR. Deck tops are first returns 
 4. **Turret count and roof masses: Open, needs source.** The 1 m DSM gives the peak heights above but cannot separate turrets from chimneys and dormers; the designation does not give a count.
 5. **Copper colour as a specification: Open, needs source.** The night photo shows a floodlit warm facade only.
 
-The review's "Do not invent" list still applies: keep the conflicting published figures separate and unaveraged, as the review set out, and do not turn a mapped plan length into a structural length. Where its "Photos" section says none are saved, check `street/` and `night/` first.
+## Do not invent
+
+From the review, unchanged. It was written before the LiDAR, so where it forbids a deck, ground or water elevation, use the measured CGVD2013 values above; still do not take an elevation from a published or mapped figure. Keep conflicting published figures separate and unaveraged, and do not turn a mapped plan length into a structural length.
+
+A height from grade to the ridge, and a height from grade to the top of the tallest turret. Wikipedia's 47.7 m (156 ft) does not say which point it reaches. Emporis states 155.51 ft architectural and 167.49 ft tip, and does not say ridge or turret. The OpenStreetMap `height=47` tag was not used. A published plan length and width. A surveyed outline. A turret count. The present colour of the copper. The survey compilation says the roof was blackened with age. The 8 October 2011 frame shows green. Those were not averaged. Elevation of the ridge, of the grade at 100 Street, and the datum.
+
+Where a photo is missing, check `street/` and `night/` first.
