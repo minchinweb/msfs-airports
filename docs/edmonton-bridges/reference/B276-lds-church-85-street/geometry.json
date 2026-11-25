@@ -1,0 +1,799 @@
+{
+  "code": "B276",
+  "name": "The Church of Jesus Christ of Latter-day Saints, 9010 85 Street NW",
+  "centre": [
+    53.525858,
+    -113.458448
+  ],
+  "centre_note": "Centre of the OSM church outline (way 322965284, read 2026-11-24). Matches PRIORITY.md. Not the parcel centroid.",
+  "crs": "EPSG:4326",
+  "coordinate_order": "[lat, lon]",
+  "geometry_source": "OpenStreetMap API: way 322965284 (church, full), way 594346540 (landuse=religious parcel, context), way 182082894 (85 Street NW centreline, context). Read 2026-11-24. Mapillary positions in street/SOURCES.md.",
+  "geometry_retrieved": "2026-11-24",
+  "plan_length_note": "plan_length_m is the horizontal WGS84 perimeter of the OSM way. The way has a stepped plan with several wings, so the length is a check only.",
+  "footprint": [
+    {
+      "osm_way": 322965284,
+      "tags": {
+        "addr:housenumber": "9010",
+        "addr:street": "85 Street NW",
+        "amenity": "place_of_worship",
+        "building": "church",
+        "denomination": "mormon",
+        "name": "The Church of Jesus Christ of Latter-day Saints",
+        "religion": "christian"
+      },
+      "role": "Whole church building outline, one closed way with 31 nodes and no building:part or height tags. Stepped plan: several wings, read as masses in the model. Not split in OSM.",
+      "plan_length_m": 282.4,
+      "nodes": [
+        [
+          53.5259234,
+          -113.4589644
+        ],
+        [
+          53.5260643,
+          -113.4585662
+        ],
+        [
+          53.5260545,
+          -113.4585565
+        ],
+        [
+          53.5260864,
+          -113.4584665
+        ],
+        [
+          53.5259172,
+          -113.458298
+        ],
+        [
+          53.5259637,
+          -113.4581668
+        ],
+        [
+          53.5260378,
+          -113.4582406
+        ],
+        [
+          53.5260162,
+          -113.4583016
+        ],
+        [
+          53.5260936,
+          -113.4583787
+        ],
+        [
+          53.526134,
+          -113.4582644
+        ],
+        [
+          53.5261276,
+          -113.4582581
+        ],
+        [
+          53.5261455,
+          -113.4582075
+        ],
+        [
+          53.5261283,
+          -113.4581904
+        ],
+        [
+          53.5261419,
+          -113.4581519
+        ],
+        [
+          53.5261175,
+          -113.4581276
+        ],
+        [
+          53.526126,
+          -113.4581036
+        ],
+        [
+          53.5258846,
+          -113.457863
+        ],
+        [
+          53.5258323,
+          -113.4580106
+        ],
+        [
+          53.5258483,
+          -113.4580265
+        ],
+        [
+          53.5257689,
+          -113.4582511
+        ],
+        [
+          53.5257773,
+          -113.4582594
+        ],
+        [
+          53.5257653,
+          -113.4582932
+        ],
+        [
+          53.5257288,
+          -113.4582569
+        ],
+        [
+          53.5257005,
+          -113.458337
+        ],
+        [
+          53.525649,
+          -113.4583048
+        ],
+        [
+          53.5255941,
+          -113.4584565
+        ],
+        [
+          53.5256373,
+          -113.4585162
+        ],
+        [
+          53.5255714,
+          -113.4587152
+        ],
+        [
+          53.5258899,
+          -113.4590321
+        ],
+        [
+          53.5259163,
+          -113.4589574
+        ],
+        [
+          53.5259234,
+          -113.4589644
+        ]
+      ]
+    }
+  ],
+  "context": [
+    {
+      "osm_way": 594346540,
+      "tags": {
+        "landuse": "religious"
+      },
+      "role": "Church parcel (religious landuse), 24 nodes. Site context only, not the building.",
+      "nodes": [
+        [
+          53.5259249,
+          -113.4596066
+        ],
+        [
+          53.5260142,
+          -113.459443
+        ],
+        [
+          53.5261545,
+          -113.4592767
+        ],
+        [
+          53.5262219,
+          -113.459213
+        ],
+        [
+          53.5262199,
+          -113.4583514
+        ],
+        [
+          53.5267596,
+          -113.4583723
+        ],
+        [
+          53.5267589,
+          -113.4582445
+        ],
+        [
+          53.5267565,
+          -113.4577631
+        ],
+        [
+          53.5260655,
+          -113.4577538
+        ],
+        [
+          53.5255746,
+          -113.4577482
+        ],
+        [
+          53.5255296,
+          -113.4577477
+        ],
+        [
+          53.5254706,
+          -113.4578086
+        ],
+        [
+          53.5254196,
+          -113.4579307
+        ],
+        [
+          53.5253718,
+          -113.4580902
+        ],
+        [
+          53.525323,
+          -113.4582711
+        ],
+        [
+          53.5253229,
+          -113.4582791
+        ],
+        [
+          53.5253225,
+          -113.4583147
+        ],
+        [
+          53.5253213,
+          -113.4584226
+        ],
+        [
+          53.5253318,
+          -113.4585929
+        ],
+        [
+          53.5253666,
+          -113.4587677
+        ],
+        [
+          53.5254309,
+          -113.4589478
+        ],
+        [
+          53.5257727,
+          -113.4595766
+        ],
+        [
+          53.5258282,
+          -113.4594864
+        ],
+        [
+          53.5259249,
+          -113.4596066
+        ]
+      ]
+    },
+    {
+      "osm_way": 182082894,
+      "tags": {
+        "highway": "secondary",
+        "name": "85 Street NW"
+      },
+      "role": "85 Street NW centreline, the road the church faces. Holyrood Gardens lies on the far (east) side. Context only.",
+      "nodes": [
+        [
+          53.5260692,
+          -113.4576095
+        ],
+        [
+          53.5258857,
+          -113.4576299
+        ],
+        [
+          53.5257278,
+          -113.4576234
+        ],
+        [
+          53.5256409,
+          -113.4576119
+        ],
+        [
+          53.525569,
+          -113.4576023
+        ],
+        [
+          53.5253295,
+          -113.4575144
+        ],
+        [
+          53.5252141,
+          -113.457466
+        ]
+      ]
+    }
+  ],
+  "parking": [
+    {
+      "id": "nearest_osm_south",
+      "osm_way": 1389212268,
+      "centre": [
+        53.524705,
+        -113.459384
+      ],
+      "note": "Private surface lot 110 m south (OSM, amenity=parking, access=private). Not the church lot."
+    }
+  ],
+  "parking_note": "Positions from the 2019 aerial, projected through the ortho-2019.json bounds and checked against the church centre (about 3 m). The lots are not tagged in OSM. Their extent and surfacing are not confirmed.",
+  "parking_plan_2015": {
+    "plan_source": "Gowling and Gibb SD1.0, Oct 2015, proposed. Reference only. Georeferenced by overlay onto the 2019 aerial positions and the OSM church outline.",
+    "calibration": {
+      "anchor": "church centre 53.525858, -113.458448 at plan px (770,640)",
+      "scale_px_per_m": 6.05,
+      "orientation": "plan up = east, plan left = north (checked against 85 Street, LRT, 92 Avenue and the OSM footprint)",
+      "accuracy_note": "About 5 m where the plan and OSM outline agree. Lot edges are traced by eye, about 10 m."
+    },
+    "parking_lots_2015_proposed": [
+      {
+        "id": "west_lot_rows_6_to_14A",
+        "rows": [
+          "6",
+          "10",
+          "12",
+          "13",
+          "14A"
+        ],
+        "note": "Main west lot. Rows 6, 10, 12, 13, 14A on the sheet. Stalls in two banks, facing an aisle that runs north-south at the centre.",
+        "polygon": [
+          [
+            53.5267162,
+            -113.4577586
+          ],
+          [
+            53.5262589,
+            -113.4577586
+          ],
+          [
+            53.5262589,
+            -113.4583781
+          ],
+          [
+            53.5267162,
+            -113.4583781
+          ]
+        ]
+      },
+      {
+        "id": "north_strip_row_16",
+        "rows": [
+          "16"
+        ],
+        "note": "Narrow strip of perpendicular stalls between the north lawn and the building's west side. Row 16.",
+        "polygon": [
+          [
+            53.5262025,
+            -113.4578485
+          ],
+          [
+            53.5261401,
+            -113.4578485
+          ],
+          [
+            53.5261401,
+            -113.4585779
+          ],
+          [
+            53.5261995,
+            -113.4585779
+          ]
+        ]
+      },
+      {
+        "id": "south_strip_row_10",
+        "rows": [
+          "10"
+        ],
+        "note": "Strip of stalls along the south-west parcel edge. Row 10.",
+        "polygon": [
+          [
+            53.5261847,
+            -113.4588227
+          ],
+          [
+            53.5261371,
+            -113.4588227
+          ],
+          [
+            53.5261371,
+            -113.4592223
+          ],
+          [
+            53.5261876,
+            -113.4592223
+          ]
+        ]
+      },
+      {
+        "id": "south_diagonal_banks",
+        "rows": [
+          "15",
+          "20"
+        ],
+        "note": "Two diagonal banks on either side of an aisle on the south-west side of the building. Rows 15 and 20 are at the south end.",
+        "polygon": [
+          [
+            53.5261327,
+            -113.4588476
+          ],
+          [
+            53.5260733,
+            -113.4586978
+          ],
+          [
+            53.5258907,
+            -113.4590175
+          ],
+          [
+            53.5258283,
+            -113.4591973
+          ],
+          [
+            53.5259025,
+            -113.4593472
+          ],
+          [
+            53.5259397,
+            -113.4594596
+          ],
+          [
+            53.5261371,
+            -113.4589725
+          ]
+        ]
+      },
+      {
+        "id": "east_curve_lot",
+        "rows": [
+          "8",
+          "11",
+          "15"
+        ],
+        "note": "Perpendicular stalls along the curved drive on the east side, between the drive aisle and the outer kerb. Rows 8, 11, 15.",
+        "polygon": [
+          [
+            53.5255091,
+            -113.4577037
+          ],
+          [
+            53.5253829,
+            -113.4579485
+          ],
+          [
+            53.5253086,
+            -113.4582482
+          ],
+          [
+            53.5253056,
+            -113.4585479
+          ],
+          [
+            53.5253235,
+            -113.4586228
+          ],
+          [
+            53.5253829,
+            -113.4586728
+          ],
+          [
+            53.5254794,
+            -113.4589226
+          ],
+          [
+            53.5255016,
+            -113.4590599
+          ],
+          [
+            53.525561,
+            -113.4590475
+          ],
+          [
+            53.5255165,
+            -113.4589226
+          ],
+          [
+            53.5254571,
+            -113.4586728
+          ],
+          [
+            53.5254467,
+            -113.458423
+          ],
+          [
+            53.5254645,
+            -113.4581732
+          ],
+          [
+            53.5255165,
+            -113.4577361
+          ]
+        ]
+      }
+    ],
+    "trees_and_planting_2015_proposed": [
+      {
+        "at": [
+          53.5266791,
+          -113.4578485
+        ],
+        "kind": "deciduous",
+        "note": "Cluster of round crowns, NW corner of the west lot",
+        "size_m": "~5 m"
+      },
+      {
+        "at": [
+          53.5266746,
+          -113.457941
+        ],
+        "kind": "conifer",
+        "note": "Starburst symbol, row of four along the west edge of row 6",
+        "size_m": null
+      },
+      {
+        "at": [
+          53.5266746,
+          -113.4579734
+        ],
+        "kind": "conifer",
+        "note": "Starburst symbol, row of four along the west edge of row 6",
+        "size_m": null
+      },
+      {
+        "at": [
+          53.5266746,
+          -113.4580334
+        ],
+        "kind": "conifer",
+        "note": "Starburst symbol, row of four along the west edge of row 6",
+        "size_m": null
+      },
+      {
+        "at": [
+          53.5266746,
+          -113.4580883
+        ],
+        "kind": "conifer",
+        "note": "Starburst symbol, row of four along the west edge of row 6",
+        "size_m": null
+      },
+      {
+        "at": [
+          53.5265232,
+          -113.4580034
+        ],
+        "kind": "shrub or small tree",
+        "note": "Column of circles down the middle of the west lot",
+        "size_m": "~2 m"
+      },
+      {
+        "at": [
+          53.5265232,
+          -113.4580334
+        ],
+        "kind": "shrub or small tree",
+        "note": "Column of circles down the middle of the west lot",
+        "size_m": "~2 m"
+      },
+      {
+        "at": [
+          53.5265232,
+          -113.4580633
+        ],
+        "kind": "shrub or small tree",
+        "note": "Column of circles down the middle of the west lot",
+        "size_m": "~2 m"
+      },
+      {
+        "at": [
+          53.5265232,
+          -113.4580933
+        ],
+        "kind": "shrub or small tree",
+        "note": "Column of circles down the middle of the west lot",
+        "size_m": "~2 m"
+      },
+      {
+        "at": [
+          53.5265232,
+          -113.4581233
+        ],
+        "kind": "shrub or small tree",
+        "note": "Column of circles down the middle of the west lot",
+        "size_m": "~2 m"
+      },
+      {
+        "at": [
+          53.5265232,
+          -113.4581533
+        ],
+        "kind": "shrub or small tree",
+        "note": "Column of circles down the middle of the west lot",
+        "size_m": "~2 m"
+      },
+      {
+        "at": [
+          53.5266821,
+          -113.4583156
+        ],
+        "kind": "deciduous",
+        "note": "Large circle, SW of the west lot",
+        "size_m": "~5 m"
+      },
+      {
+        "at": [
+          53.5266346,
+          -113.4582981
+        ],
+        "kind": "conifer",
+        "note": "Starburst beside the west lot entry",
+        "size_m": "~2 m"
+      },
+      {
+        "at": [
+          53.5262856,
+          -113.4577536
+        ],
+        "kind": "shrub",
+        "note": "NE corner shrub row (approximate)",
+        "size_m": null
+      },
+      {
+        "at": [
+          53.5261624,
+          -113.4577786
+        ],
+        "kind": "conifer",
+        "note": "Three starbursts on the north lawn by 85 Street",
+        "size_m": "~3 m"
+      },
+      {
+        "at": [
+          53.5260881,
+          -113.4577786
+        ],
+        "kind": "conifer",
+        "note": "Three starbursts on the north lawn by 85 Street",
+        "size_m": "~3 m"
+      },
+      {
+        "at": [
+          53.5260213,
+          -113.4577861
+        ],
+        "kind": "conifer",
+        "note": "Three starbursts on the north lawn by 85 Street",
+        "size_m": "~3 m"
+      },
+      {
+        "at": [
+          53.5261149,
+          -113.4579235
+        ],
+        "kind": "deciduous",
+        "note": "Large circle, NW lawn beside the building",
+        "size_m": "~5 m"
+      },
+      {
+        "at": [
+          53.5258135,
+          -113.4579235
+        ],
+        "kind": "shrub",
+        "note": "Shrub bed beside the NE building corner",
+        "size_m": null
+      },
+      {
+        "at": [
+          53.5257392,
+          -113.4581358
+        ],
+        "kind": "shrub",
+        "note": "Shrub bed beside the east building wall",
+        "size_m": null
+      },
+      {
+        "at": [
+          53.5255685,
+          -113.4583481
+        ],
+        "kind": "shrub",
+        "note": "Shrub bed with two starbursts",
+        "size_m": null
+      },
+      {
+        "at": [
+          53.5256279,
+          -113.4582856
+        ],
+        "kind": "conifer",
+        "note": "Starburst inside the east shrub bed",
+        "size_m": "~2 m"
+      },
+      {
+        "at": [
+          53.5255655,
+          -113.4584605
+        ],
+        "kind": "conifer",
+        "note": "Starburst inside the east shrub bed",
+        "size_m": "~2 m"
+      },
+      {
+        "at": [
+          53.5255536,
+          -113.4585979
+        ],
+        "kind": "shrub",
+        "note": "Shrub bed on the east wall",
+        "size_m": null
+      },
+      {
+        "at": [
+          53.5257749,
+          -113.4590599
+        ],
+        "kind": "conifer or grass",
+        "note": "Starburst planter in the south-east lawn, round bed about 6 m across",
+        "size_m": "~2 m"
+      },
+      {
+        "at": [
+          53.5256679,
+          -113.4588926
+        ],
+        "kind": "deciduous",
+        "note": "Large circle beside the south-east drive",
+        "size_m": "~5 m"
+      },
+      {
+        "at": [
+          53.5261253,
+          -113.4588851
+        ],
+        "kind": "conifer",
+        "note": "Starburst pair in the south-west strip",
+        "size_m": null
+      },
+      {
+        "at": [
+          53.5261253,
+          -113.4589176
+        ],
+        "kind": "conifer",
+        "note": "Starburst pair in the south-west strip",
+        "size_m": null
+      },
+      {
+        "at": [
+          53.5261253,
+          -113.4590475
+        ],
+        "kind": "conifer",
+        "note": "Starburst pair in the south-west strip",
+        "size_m": null
+      },
+      {
+        "at": [
+          53.5261164,
+          -113.4590774
+        ],
+        "kind": "conifer",
+        "note": "Starburst pair in the south-west strip",
+        "size_m": null
+      },
+      {
+        "at": [
+          53.5258135,
+          -113.4593222
+        ],
+        "kind": "shrub",
+        "note": "Shrub cluster beside row 20",
+        "size_m": null
+      },
+      {
+        "at": [
+          53.5259545,
+          -113.4594721
+        ],
+        "kind": "shrub",
+        "note": "Shrub cluster at the south tip beside row 15",
+        "size_m": null
+      }
+    ],
+    "tree_symbol_note": "The sheet has no legend. Starburst symbols are read as conifers. Circle clusters are read as deciduous shrubs or small trees. Sizes are estimates. These are 2015 proposals; current planting may differ."
+  }
+}
