@@ -16,6 +16,30 @@ Built on 2026-10-14 with the sim closed (the 0.1.0 text follows; 0.2.0 compiled 
 
 Three inventories. `docs/edmonton-bridges/bridges.md` is the North Saskatchewan crossings from Devon to Scotford. `docs/edmonton-bridges/freeway-bridges.md` is the freeway structures on VFR lines among CYXD, CYED, CYEG, CZVL, CFB6, and CEZ3. `docs/edmonton-bridges/lrt.md` is the above-ground LRT stations, viaducts, and extension bridges. The freeway list names the cross road on the QE2, Yellowhead, Henday, Whitemud, and Sherwood Park Freeway decks, and records the Henday, Whitemud, Terwillegar, Groat, and Capilano bridges left off. Highway 16 west of the Henday, Highway 21, and the other crossings added on 14 October are plotted as crosses and still left off the include list. Deck, approach, ramp, and cross-road geometry for every plotted road and river bridge is in `bridge-geometry.json`. Above-ground LRT centreline geometry, including construction and unfunded alignments, is in `lrt-tracks.json`. The build order is `docs/edmonton-bridges/PRIORITY.md`. It ranks every included and excluded bridge, viaduct, and station by how it reads from the air, whether it falls on a VFR approach, and whether it is a named fix on the Edmonton VFR terminal chart or the City Centre helicopter chart. First box is the High Level Bridge and the Dudley B. Menzies Bridge together. Reference briefs for R8–R15, the Groat ravine decks G116, G117, Z125, T133, and G119, P152 and B254, N258, N259, N260, F256, and V257 are in `docs/edmonton-bridges/reference/`. Numbers are unique across every prefix. Bridge codes use 1–136. Stops are P137–P189, at-grade track is K190–K253, and the later codes are listed in `lrt.md` and `bridges.md`. The prompt for the next reference subagent is `docs/edmonton-bridges/reference-prompt.md`. Fill the braces and send one structure at a time. The named checkpoints Bridges, Quesnell, Bremner Cloverleaf, and Sherwood Park Cloverleaf come next. Do not place anything inside the `CYXD Airport Area` polygon; NAIT and Blatchford Gate are inside it.
 
+## 2026-11-24 B276 built
+
+B276, the Latter-day Saints church at 9010 85 Street NW (across from B262), is modelled by `tools/site_b276.py`. Details are in `reference/B276-lds-church-85-street/NOTES.md` under "Model".
+
+- **Plan:** OSM way 322965284.
+- **Heights:** 2018 DSM minus grade. Wings 3.3 m, cultural hall 7.2 m, chapel 7.8 m, spire 15 m plus an estimated needle to 18.6 m.
+- **Form:** from the owner's photos.
+
+It is the first site in this package with these features:
+
+- **Night lighting.** `bridgelib.BMesh.mat` selects night-only emissive materials (`bridgelib.NIGHT`, plus CYXD's `glow`). `BMesh.lights` adds `ASOBO_street_light` nodes, as in H28. Models without either are written exactly as before; a full regeneration left every other model unchanged.
+- **Placed library objects.** A site's `objects` (stock MSFS trees here, GUIDs from `fs24-asobo-modellib-vegetation`) go in the placement block at ground level.
+- **Car parks:** from the 2015 site plan and the 2019 aerial.
+- **Clearing:** a parcel-wide exclusion removes the sim's own trees and buildings.
+
+A new palette swatch, `BUFF` (index 54), took the first padding slot.
+
+The package builds (exit 0, `_RPTErrors.xml` empty). Not seen in the sim. To check there:
+
+- The lights shine the right way (down from the canopy and wall packs, up at the spire and chapel).
+- The emissive levels.
+- The stock tree sizes against the 2018 crown heights.
+- That cars fill the curved front rows sensibly.
+
 ## 2026-11-23 B262 built
 
 B262 Holyrood Gardens tower ("The Beacon Apartments at East Junction", 9009 85 Street NW) is modelled by `tools/site_b262.py`. It is the first building in this package that is not a bridge or station. Plan: OSM ways 1221215089 (the tower square, 26 levels, 86 m) and 1209666933 (the outline with the six-storey back wing). Form and colours: the developer's 2018 rendering. Ground: the 2018 DTM, fetched for B262 with `fetch-site-data.py`. The package builds (exit 0). It has not been seen in the sim. Details are in `reference/B262-holyrood-gardens/NOTES.md`.

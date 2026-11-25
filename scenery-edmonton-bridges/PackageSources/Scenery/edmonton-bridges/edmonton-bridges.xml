@@ -138,6 +138,118 @@
 	<SceneryObject lat="53.52573756" lon="-113.45652000" alt="664.560" pitch="0.000000" bank="0.000000" heading="0.000000" imageComplexity="VERY_SPARSE" altitudeIsAgl="FALSE" snapToGround="FALSE" snapToNormal="FALSE">
 		<LibraryObject name="{9C939703-4C03-59F2-A314-566F954CE1F5}" scale="1.000000"/>
 	</SceneryObject>
+	<!-- B276 Latter-day Saints church, 85 Street (br_b276_lds_church) -->
+	<SceneryObject lat="53.52585800" lon="-113.45844800" alt="665.110" pitch="0.000000" bank="0.000000" heading="0.000000" imageComplexity="VERY_SPARSE" altitudeIsAgl="FALSE" snapToGround="FALSE" snapToNormal="FALSE">
+		<LibraryObject name="{3DBF634F-D3F2-5F27-97AD-7E5540614EB0}" scale="1.000000"/>
+	</SceneryObject>
+	<!-- B276 tree (stock MSFS tree; 2018 crown 13 m) -->
+	<SceneryObject lat="53.52664620" lon="-113.45837000" alt="0.000000" pitch="0.000000" bank="0.000000" heading="0.000000" imageComplexity="VERY_SPARSE" altitudeIsAgl="TRUE" snapToGround="TRUE" snapToNormal="FALSE">
+		<LibraryObject name="{191FAD7E-E94C-40A3-ADC0-902A5A1F3CB7}" scale="1.000000"/>
+	</SceneryObject>
+	<!-- B276 tree (stock MSFS tree; 2018 crown 10 m) -->
+	<SceneryObject lat="53.52667570" lon="-113.45809720" alt="0.000000" pitch="0.000000" bank="0.000000" heading="137.000000" imageComplexity="VERY_SPARSE" altitudeIsAgl="TRUE" snapToGround="TRUE" snapToNormal="FALSE">
+		<LibraryObject name="{F05B3BD0-1C1E-4865-A904-45F9DF37EBDF}" scale="1.000000"/>
+	</SceneryObject>
+	<!-- B276 tree (stock MSFS tree; 2018 crown 10 m) -->
+	<SceneryObject lat="53.52667910" lon="-113.45797110" alt="0.000000" pitch="0.000000" bank="0.000000" heading="274.000000" imageComplexity="VERY_SPARSE" altitudeIsAgl="TRUE" snapToGround="TRUE" snapToNormal="FALSE">
+		<LibraryObject name="{60E021B9-9D85-4C59-B106-EC430025816A}" scale="1.000000"/>
+	</SceneryObject>
+	<!-- B276 tree (stock MSFS tree; 2018 crown 11 m) -->
+	<SceneryObject lat="53.52671040" lon="-113.45779500" alt="0.000000" pitch="0.000000" bank="0.000000" heading="51.000000" imageComplexity="VERY_SPARSE" altitudeIsAgl="TRUE" snapToGround="TRUE" snapToNormal="FALSE">
+		<LibraryObject name="{8F8A023D-380F-4CB3-8ED8-25D1595AF998}" scale="1.000000"/>
+	</SceneryObject>
+	<!-- B276 tree (stock MSFS tree; 2018 crown 16 m) -->
+	<SceneryObject lat="53.52646180" lon="-113.45838950" alt="0.000000" pitch="0.000000" bank="0.000000" heading="188.000000" imageComplexity="VERY_SPARSE" altitudeIsAgl="TRUE" snapToGround="TRUE" snapToNormal="FALSE">
+		<LibraryObject name="{5269E5F0-4CB5-4E81-828A-61169D850DF4}" scale="1.000000"/>
+	</SceneryObject>
+	<!-- B276 tree (stock MSFS tree; 2018 crown 9 m) -->
+	<SceneryObject lat="53.52620340" lon="-113.45877130" alt="0.000000" pitch="0.000000" bank="0.000000" heading="325.000000" imageComplexity="VERY_SPARSE" altitudeIsAgl="TRUE" snapToGround="TRUE" snapToNormal="FALSE">
+		<LibraryObject name="{48EF1351-F046-406D-BF0E-94524662991D}" scale="1.000000"/>
+	</SceneryObject>
+	<!-- B276 tree (stock MSFS tree; 2018 crown 9 m) -->
+	<SceneryObject lat="53.52625110" lon="-113.45823590" alt="0.000000" pitch="0.000000" bank="0.000000" heading="102.000000" imageComplexity="VERY_SPARSE" altitudeIsAgl="TRUE" snapToGround="TRUE" snapToNormal="FALSE">
+		<LibraryObject name="{81D19B30-F45D-47CB-9787-2BEF376C64CA}" scale="1.000000"/>
+	</SceneryObject>
+	<!-- B276 tree (stock MSFS tree; 2018 crown 11 m) -->
+	<SceneryObject lat="53.52600910" lon="-113.45948880" alt="0.000000" pitch="0.000000" bank="0.000000" heading="239.000000" imageComplexity="VERY_SPARSE" altitudeIsAgl="TRUE" snapToGround="TRUE" snapToNormal="FALSE">
+		<LibraryObject name="{4A576EEF-CFA0-47DB-91F9-526718AE5950}" scale="1.000000"/>
+	</SceneryObject>
+	<!-- B276 tree (stock MSFS tree; 2018 crown 10 m) -->
+	<SceneryObject lat="53.52628140" lon="-113.45785170" alt="0.000000" pitch="0.000000" bank="0.000000" heading="16.000000" imageComplexity="VERY_SPARSE" altitudeIsAgl="TRUE" snapToGround="TRUE" snapToNormal="FALSE">
+		<LibraryObject name="{2C5B485B-06A8-4E8E-B86D-23711DB64A8D}" scale="1.000000"/>
+	</SceneryObject>
+	<!-- B276 tree (stock MSFS tree; 2018 crown 10 m) -->
+	<SceneryObject lat="53.52614200" lon="-113.45842090" alt="0.000000" pitch="0.000000" bank="0.000000" heading="153.000000" imageComplexity="VERY_SPARSE" altitudeIsAgl="TRUE" snapToGround="TRUE" snapToNormal="FALSE">
+		<LibraryObject name="{191FAD7E-E94C-40A3-ADC0-902A5A1F3CB7}" scale="1.000000"/>
+	</SceneryObject>
+	<!-- B276 tree (stock MSFS tree; 2018 crown 10 m) -->
+	<SceneryObject lat="53.52622990" lon="-113.45787380" alt="0.000000" pitch="0.000000" bank="0.000000" heading="290.000000" imageComplexity="VERY_SPARSE" altitudeIsAgl="TRUE" snapToGround="TRUE" snapToNormal="FALSE">
+		<LibraryObject name="{81D19B30-F45D-47CB-9787-2BEF376C64CA}" scale="1.000000"/>
+	</SceneryObject>
+	<!-- B276 tree (stock MSFS tree; 2018 crown 9 m) -->
+	<SceneryObject lat="53.52588690" lon="-113.45958730" alt="0.000000" pitch="0.000000" bank="0.000000" heading="67.000000" imageComplexity="VERY_SPARSE" altitudeIsAgl="TRUE" snapToGround="TRUE" snapToNormal="FALSE">
+		<LibraryObject name="{4A576EEF-CFA0-47DB-91F9-526718AE5950}" scale="1.000000"/>
+	</SceneryObject>
+	<!-- B276 tree (stock MSFS tree; 2018 crown 12 m) -->
+	<SceneryObject lat="53.52616270" lon="-113.45798390" alt="0.000000" pitch="0.000000" bank="0.000000" heading="204.000000" imageComplexity="VERY_SPARSE" altitudeIsAgl="TRUE" snapToGround="TRUE" snapToNormal="FALSE">
+		<LibraryObject name="{70080A01-E271-45DC-9F70-3488BA9DDA6C}" scale="1.000000"/>
+	</SceneryObject>
+	<!-- B276 tree (stock MSFS tree; 2018 crown 19 m) -->
+	<SceneryObject lat="53.52616510" lon="-113.45780940" alt="0.000000" pitch="0.000000" bank="0.000000" heading="341.000000" imageComplexity="VERY_SPARSE" altitudeIsAgl="TRUE" snapToGround="TRUE" snapToNormal="FALSE">
+		<LibraryObject name="{F05B3BD0-1C1E-4865-A904-45F9DF37EBDF}" scale="1.000000"/>
+	</SceneryObject>
+	<!-- B276 tree (stock MSFS tree; 2018 crown 8 m) -->
+	<SceneryObject lat="53.52582650" lon="-113.45944520" alt="0.000000" pitch="0.000000" bank="0.000000" heading="118.000000" imageComplexity="VERY_SPARSE" altitudeIsAgl="TRUE" snapToGround="TRUE" snapToNormal="FALSE">
+		<LibraryObject name="{2C5B485B-06A8-4E8E-B86D-23711DB64A8D}" scale="1.000000"/>
+	</SceneryObject>
+	<!-- B276 tree (stock MSFS tree; 2018 crown 18 m) -->
+	<SceneryObject lat="53.52610140" lon="-113.45779340" alt="0.000000" pitch="0.000000" bank="0.000000" heading="255.000000" imageComplexity="VERY_SPARSE" altitudeIsAgl="TRUE" snapToGround="TRUE" snapToNormal="FALSE">
+		<LibraryObject name="{60E021B9-9D85-4C59-B106-EC430025816A}" scale="1.000000"/>
+	</SceneryObject>
+	<!-- B276 tree (stock MSFS tree; 2018 crown 10 m) -->
+	<SceneryObject lat="53.52577660" lon="-113.45940420" alt="0.000000" pitch="0.000000" bank="0.000000" heading="32.000000" imageComplexity="VERY_SPARSE" altitudeIsAgl="TRUE" snapToGround="TRUE" snapToNormal="FALSE">
+		<LibraryObject name="{8F8A023D-380F-4CB3-8ED8-25D1595AF998}" scale="1.000000"/>
+	</SceneryObject>
+	<!-- B276 tree (stock MSFS tree; 2018 crown 9 m) -->
+	<SceneryObject lat="53.52578090" lon="-113.45932650" alt="0.000000" pitch="0.000000" bank="0.000000" heading="169.000000" imageComplexity="VERY_SPARSE" altitudeIsAgl="TRUE" snapToGround="TRUE" snapToNormal="FALSE">
+		<LibraryObject name="{191FAD7E-E94C-40A3-ADC0-902A5A1F3CB7}" scale="1.000000"/>
+	</SceneryObject>
+	<!-- B276 tree (stock MSFS tree; 2018 crown 18 m) -->
+	<SceneryObject lat="53.52580700" lon="-113.45917980" alt="0.000000" pitch="0.000000" bank="0.000000" heading="306.000000" imageComplexity="VERY_SPARSE" altitudeIsAgl="TRUE" snapToGround="TRUE" snapToNormal="FALSE">
+		<LibraryObject name="{48EF1351-F046-406D-BF0E-94524662991D}" scale="1.000000"/>
+	</SceneryObject>
+	<!-- B276 tree (stock MSFS tree; 2018 crown 10 m) -->
+	<SceneryObject lat="53.52575040" lon="-113.45939110" alt="0.000000" pitch="0.000000" bank="0.000000" heading="83.000000" imageComplexity="VERY_SPARSE" altitudeIsAgl="TRUE" snapToGround="TRUE" snapToNormal="FALSE">
+		<LibraryObject name="{81D19B30-F45D-47CB-9787-2BEF376C64CA}" scale="1.000000"/>
+	</SceneryObject>
+	<!-- B276 tree (stock MSFS tree; 2018 crown 18 m) -->
+	<SceneryObject lat="53.52603230" lon="-113.45780680" alt="0.000000" pitch="0.000000" bank="0.000000" heading="220.000000" imageComplexity="VERY_SPARSE" altitudeIsAgl="TRUE" snapToGround="TRUE" snapToNormal="FALSE">
+		<LibraryObject name="{F05B3BD0-1C1E-4865-A904-45F9DF37EBDF}" scale="1.000000"/>
+	</SceneryObject>
+	<!-- B276 tree (stock MSFS tree; 2018 crown 17 m) -->
+	<SceneryObject lat="53.52579130" lon="-113.45910800" alt="0.000000" pitch="0.000000" bank="0.000000" heading="357.000000" imageComplexity="VERY_SPARSE" altitudeIsAgl="TRUE" snapToGround="TRUE" snapToNormal="FALSE">
+		<LibraryObject name="{60E021B9-9D85-4C59-B106-EC430025816A}" scale="1.000000"/>
+	</SceneryObject>
+	<!-- B276 tree (stock MSFS tree; 2018 crown 10 m) -->
+	<SceneryObject lat="53.52568720" lon="-113.45894390" alt="0.000000" pitch="0.000000" bank="0.000000" heading="134.000000" imageComplexity="VERY_SPARSE" altitudeIsAgl="TRUE" snapToGround="TRUE" snapToNormal="FALSE">
+		<LibraryObject name="{8F8A023D-380F-4CB3-8ED8-25D1595AF998}" scale="1.000000"/>
+	</SceneryObject>
+	<!-- B276 tree (stock MSFS tree; 2018 crown 14 m) -->
+	<SceneryObject lat="53.52562290" lon="-113.45828860" alt="0.000000" pitch="0.000000" bank="0.000000" heading="271.000000" imageComplexity="VERY_SPARSE" altitudeIsAgl="TRUE" snapToGround="TRUE" snapToNormal="FALSE">
+		<LibraryObject name="{D49B152B-463B-4654-A7B0-9AEA48A27215}" scale="1.000000"/>
+	</SceneryObject>
+	<!-- B276 tree (stock MSFS tree; 2018 crown 13 m) -->
+	<SceneryObject lat="53.52556270" lon="-113.45846620" alt="0.000000" pitch="0.000000" bank="0.000000" heading="48.000000" imageComplexity="VERY_SPARSE" altitudeIsAgl="TRUE" snapToGround="TRUE" snapToNormal="FALSE">
+		<LibraryObject name="{48EF1351-F046-406D-BF0E-94524662991D}" scale="1.000000"/>
+	</SceneryObject>
+	<!-- B276 tree (stock MSFS tree; 2018 crown 6 m) -->
+	<SceneryObject lat="53.52542940" lon="-113.45889460" alt="0.000000" pitch="0.000000" bank="0.000000" heading="185.000000" imageComplexity="VERY_SPARSE" altitudeIsAgl="TRUE" snapToGround="TRUE" snapToNormal="FALSE">
+		<LibraryObject name="{4A576EEF-CFA0-47DB-91F9-526718AE5950}" scale="1.000000"/>
+	</SceneryObject>
+	<!-- B276 tree (stock MSFS tree; 2018 crown 7 m) -->
+	<SceneryObject lat="53.52538640" lon="-113.45876130" alt="0.000000" pitch="0.000000" bank="0.000000" heading="322.000000" imageComplexity="VERY_SPARSE" altitudeIsAgl="TRUE" snapToGround="TRUE" snapToNormal="FALSE">
+		<LibraryObject name="{2C5B485B-06A8-4E8E-B86D-23711DB64A8D}" scale="1.000000"/>
+	</SceneryObject>
 	<!-- END bridges -->
 	<!-- BEGIN exclusions (generated by scenery-edmonton-bridges/tools/gen_bridges.py) -->
 	<Polygon version="0.4.0" displayName="Bridges exclusion: R10 High Level Bridge" parentGroupID="6" altitude="614.910">
@@ -3843,6 +3955,45 @@
 		<Vertex lat="53.52590273" lon="-113.45695382"/>
 		<Vertex lat="53.52561980" lon="-113.45698497"/>
 	</Polygon>
+	<Polygon version="0.4.0" displayName="Bridges exclusion: B276 Latter-day Saints church, 85 Street (1)" parentGroupID="6" altitude="665.110">
+		<Attribute name="UniqueGUID" guid="{359C73E8-06BE-4FB2-ABCB-EC942F7761D0}" type="GUID" value="{D2F7B366-DB6E-5E4B-BE7B-DE35DCF58C49}"/>
+		<Attribute name="ExcludeDetectedBuildings" guid="{5C1A2387-1F07-47DF-A569-962CF6258E55}" type="UINT8" value="1"/>
+		<Attribute name="ExcludeOSMBuildings" guid="{F3C2635D-9F2F-458F-8663-90B3837BED09}" type="UINT8" value="1"/>
+		<Attribute name="ExcludeMSBuildings" guid="{F78A3074-8AD5-4B8B-92C4-C1C948BB7AA5}" type="UINT8" value="1"/>
+		<Attribute name="VegetationScale" guid="{6A043F59-E6F2-4117-A2E4-D510E7317C29}" type="UINT32" value="0"/>
+		<Attribute name="VegetationDensity" guid="{41EFF715-C392-4B31-A457-50A504353A90}" type="UINT32" value="0"/>
+		<Attribute name="ExcludeTIN" guid="{18B58CBF-AE02-4A19-8AA9-3809E8E73400}" type="UINT8" value="1"/>
+		<Attribute name="ExclusionFlags" guid="{4CACC252-E6DC-419A-B20C-16EC601DF70E}" type="UINT32" value="7"/>
+		<Attribute name="ExcludeRocks" guid="{F104723A-D6D1-4B2E-9B44-ACCD8AB372DC}" type="UINT8" value="1"/>
+		<Vertex lat="53.52553500" lon="-113.45871537"/>
+		<Vertex lat="53.52559070" lon="-113.45853091"/>
+		<Vertex lat="53.52555890" lon="-113.45844077"/>
+		<Vertex lat="53.52561749" lon="-113.45827014"/>
+		<Vertex lat="53.52569077" lon="-113.45817836"/>
+		<Vertex lat="53.52575449" lon="-113.45817151"/>
+		<Vertex lat="53.52582479" lon="-113.45790493"/>
+		<Vertex lat="53.52588489" lon="-113.45780193"/>
+		<Vertex lat="53.52597827" lon="-113.45788167"/>
+		<Vertex lat="53.52597827" lon="-113.45893620"/>
+		<Vertex lat="53.52591449" lon="-113.45907721"/>
+		<Vertex lat="53.52587210" lon="-113.45908539"/>
+	</Polygon>
+	<Polygon version="0.4.0" displayName="Bridges exclusion: B276 Latter-day Saints church, 85 Street (2)" parentGroupID="6" altitude="665.110">
+		<Attribute name="UniqueGUID" guid="{359C73E8-06BE-4FB2-ABCB-EC942F7761D0}" type="GUID" value="{27384B98-93D7-56E6-8259-9EA93D95DCA9}"/>
+		<Attribute name="ExcludeDetectedBuildings" guid="{5C1A2387-1F07-47DF-A569-962CF6258E55}" type="UINT8" value="1"/>
+		<Attribute name="ExcludeOSMBuildings" guid="{F3C2635D-9F2F-458F-8663-90B3837BED09}" type="UINT8" value="1"/>
+		<Attribute name="ExcludeMSBuildings" guid="{F78A3074-8AD5-4B8B-92C4-C1C948BB7AA5}" type="UINT8" value="1"/>
+		<Attribute name="VegetationScale" guid="{6A043F59-E6F2-4117-A2E4-D510E7317C29}" type="UINT32" value="0"/>
+		<Attribute name="VegetationDensity" guid="{41EFF715-C392-4B31-A457-50A504353A90}" type="UINT32" value="0"/>
+		<Attribute name="ExcludeTIN" guid="{18B58CBF-AE02-4A19-8AA9-3809E8E73400}" type="UINT8" value="1"/>
+		<Attribute name="ExclusionFlags" guid="{4CACC252-E6DC-419A-B20C-16EC601DF70E}" type="UINT32" value="7"/>
+		<Attribute name="ExcludeRocks" guid="{F104723A-D6D1-4B2E-9B44-ACCD8AB372DC}" type="UINT8" value="1"/>
+		<Vertex lat="53.52597827" lon="-113.45788167"/>
+		<Vertex lat="53.52615036" lon="-113.45805813"/>
+		<Vertex lat="53.52618190" lon="-113.45821023"/>
+		<Vertex lat="53.52609730" lon="-113.45859210"/>
+		<Vertex lat="53.52597923" lon="-113.45893316"/>
+	</Polygon>
 	<Polygon version="0.4.0" displayName="Bridges flatten: R10 High Level Bridge river" parentGroupID="6" altitude="614.910">
 		<Attribute name="UniqueGUID" guid="{359C73E8-06BE-4FB2-ABCB-EC942F7761D0}" type="GUID" value="{8B4A0506-24AA-509F-B2D0-770CA9BC9E0D}"/>
 		<Attribute name="FlattenMode" guid="{065E9D4D-6984-4D2A-91FD-3C33C4F53B22}" type="UINT8" value="1"/>
@@ -4735,6 +4886,40 @@
 		<Vertex lat="53.42894834" lon="-113.56299204"/>
 		<Vertex lat="53.42896414" lon="-113.56299425"/>
 		<Vertex lat="53.42898194" lon="-113.56299836"/>
+	</Polygon>
+	<Polygon version="0.4.0" displayName="Bridges exclude: B276 Latter-day Saints church, 85 Street parcel (sim " parentGroupID="6" altitude="665.110">
+		<Attribute name="UniqueGUID" guid="{359C73E8-06BE-4FB2-ABCB-EC942F7761D0}" type="GUID" value="{80BDF25C-B0EA-56E6-A5E2-41F23D281467}"/>
+		<Attribute name="ExcludeDetectedBuildings" guid="{5C1A2387-1F07-47DF-A569-962CF6258E55}" type="UINT8" value="1"/>
+		<Attribute name="ExcludeOSMBuildings" guid="{F3C2635D-9F2F-458F-8663-90B3837BED09}" type="UINT8" value="1"/>
+		<Attribute name="ExcludeMSBuildings" guid="{F78A3074-8AD5-4B8B-92C4-C1C948BB7AA5}" type="UINT8" value="1"/>
+		<Attribute name="VegetationScale" guid="{6A043F59-E6F2-4117-A2E4-D510E7317C29}" type="UINT32" value="0"/>
+		<Attribute name="VegetationDensity" guid="{41EFF715-C392-4B31-A457-50A504353A90}" type="UINT32" value="0"/>
+		<Attribute name="ExcludeTIN" guid="{18B58CBF-AE02-4A19-8AA9-3809E8E73400}" type="UINT8" value="1"/>
+		<Attribute name="ExclusionFlags" guid="{4CACC252-E6DC-419A-B20C-16EC601DF70E}" type="UINT32" value="7"/>
+		<Attribute name="ExcludeRocks" guid="{F104723A-D6D1-4B2E-9B44-ACCD8AB372DC}" type="UINT8" value="1"/>
+		<Vertex lat="53.52592490" lon="-113.45960660"/>
+		<Vertex lat="53.52601420" lon="-113.45944300"/>
+		<Vertex lat="53.52615450" lon="-113.45927670"/>
+		<Vertex lat="53.52622190" lon="-113.45921300"/>
+		<Vertex lat="53.52621990" lon="-113.45835140"/>
+		<Vertex lat="53.52675960" lon="-113.45837230"/>
+		<Vertex lat="53.52675890" lon="-113.45824450"/>
+		<Vertex lat="53.52675650" lon="-113.45776310"/>
+		<Vertex lat="53.52606550" lon="-113.45775380"/>
+		<Vertex lat="53.52557460" lon="-113.45774820"/>
+		<Vertex lat="53.52552960" lon="-113.45774770"/>
+		<Vertex lat="53.52547060" lon="-113.45780860"/>
+		<Vertex lat="53.52541960" lon="-113.45793070"/>
+		<Vertex lat="53.52537180" lon="-113.45809020"/>
+		<Vertex lat="53.52532300" lon="-113.45827110"/>
+		<Vertex lat="53.52532290" lon="-113.45827910"/>
+		<Vertex lat="53.52532250" lon="-113.45831470"/>
+		<Vertex lat="53.52532130" lon="-113.45842260"/>
+		<Vertex lat="53.52533180" lon="-113.45859290"/>
+		<Vertex lat="53.52536660" lon="-113.45876770"/>
+		<Vertex lat="53.52543090" lon="-113.45894780"/>
+		<Vertex lat="53.52577270" lon="-113.45957660"/>
+		<Vertex lat="53.52582820" lon="-113.45948640"/>
 	</Polygon>
 	<Polygon version="0.4.0" displayName="Bridges flatten: R8 Groat Road Bridge river" parentGroupID="6" altitude="616.110">
 		<Attribute name="UniqueGUID" guid="{359C73E8-06BE-4FB2-ABCB-EC942F7761D0}" type="GUID" value="{944C5B1B-857F-54A1-AE19-ACBCB3CDD514}"/>
@@ -6027,6 +6212,117 @@
 			<Vertex lat="53.49765308" lon="-113.44397541"/>
 			<Vertex lat="53.49761095" lon="-113.44394715"/>
 			<Vertex lat="53.49758574" lon="-113.44404788"/>
+		</CarParking>
+	</SceneryObject>
+	<!-- car park: B276 west lot rows 6 to 14A -->
+	<SceneryObject lat="53.52648755" lon="-113.45806835" alt="0.000000" pitch="0.000000" bank="0.000000" heading="0.000000" imageComplexity="VERY_SPARSE" altitudeIsAgl="TRUE" snapToGround="TRUE" snapToNormal="FALSE">
+		<CarParking>
+			<Vertex lat="53.52671620" lon="-113.45775860"/>
+			<Vertex lat="53.52625890" lon="-113.45775860"/>
+			<Vertex lat="53.52625890" lon="-113.45837810"/>
+			<Vertex lat="53.52671620" lon="-113.45837810"/>
+		</CarParking>
+	</SceneryObject>
+	<!-- car park: B276 north strip row 16 -->
+	<SceneryObject lat="53.52617055" lon="-113.45843756" alt="0.000000" pitch="0.000000" bank="0.000000" heading="0.000000" imageComplexity="VERY_SPARSE" altitudeIsAgl="TRUE" snapToGround="TRUE" snapToNormal="FALSE">
+		<CarParking>
+			<Vertex lat="53.52620250" lon="-113.45829721"/>
+			<Vertex lat="53.52614010" lon="-113.45829721"/>
+			<Vertex lat="53.52614010" lon="-113.45857790"/>
+			<Vertex lat="53.52619950" lon="-113.45857790"/>
+		</CarParking>
+	</SceneryObject>
+	<!-- car park: B276 south strip row 10 -->
+	<SceneryObject lat="53.52616163" lon="-113.45902250" alt="0.000000" pitch="0.000000" bank="0.000000" heading="0.000000" imageComplexity="VERY_SPARSE" altitudeIsAgl="TRUE" snapToGround="TRUE" snapToNormal="FALSE">
+		<CarParking>
+			<Vertex lat="53.52618470" lon="-113.45882270"/>
+			<Vertex lat="53.52613710" lon="-113.45882270"/>
+			<Vertex lat="53.52613710" lon="-113.45922230"/>
+			<Vertex lat="53.52618760" lon="-113.45922230"/>
+		</CarParking>
+	</SceneryObject>
+	<!-- car park: B276 south diagonal banks -->
+	<SceneryObject lat="53.52598633" lon="-113.45907707" alt="0.000000" pitch="0.000000" bank="0.000000" heading="0.000000" imageComplexity="VERY_SPARSE" altitudeIsAgl="TRUE" snapToGround="TRUE" snapToNormal="FALSE">
+		<CarParking>
+			<Vertex lat="53.52613270" lon="-113.45884760"/>
+			<Vertex lat="53.52607330" lon="-113.45869780"/>
+			<Vertex lat="53.52589070" lon="-113.45901750"/>
+			<Vertex lat="53.52582830" lon="-113.45919730"/>
+			<Vertex lat="53.52590250" lon="-113.45934720"/>
+			<Vertex lat="53.52593970" lon="-113.45945960"/>
+			<Vertex lat="53.52613710" lon="-113.45897250"/>
+		</CarParking>
+	</SceneryObject>
+	<!-- car park: B276 front drive inner row 1 -->
+	<SceneryObject lat="53.52546850" lon="-113.45849851" alt="0.000000" pitch="0.000000" bank="0.000000" heading="0.000000" imageComplexity="VERY_SPARSE" altitudeIsAgl="TRUE" snapToGround="TRUE" snapToNormal="FALSE">
+		<CarParking>
+			<Vertex lat="53.52548732" lon="-113.45866163"/>
+			<Vertex lat="53.52549900" lon="-113.45834045"/>
+			<Vertex lat="53.52544968" lon="-113.45833540"/>
+			<Vertex lat="53.52543800" lon="-113.45865658"/>
+		</CarParking>
+	</SceneryObject>
+	<!-- car park: B276 front drive inner row 2 -->
+	<SceneryObject lat="53.52549860" lon="-113.45822710" alt="0.000000" pitch="0.000000" bank="0.000000" heading="0.000000" imageComplexity="VERY_SPARSE" altitudeIsAgl="TRUE" snapToGround="TRUE" snapToNormal="FALSE">
+		<CarParking>
+			<Vertex lat="53.52549753" lon="-113.45835222"/>
+			<Vertex lat="53.52554605" lon="-113.45813057"/>
+			<Vertex lat="53.52549966" lon="-113.45810197"/>
+			<Vertex lat="53.52545115" lon="-113.45832363"/>
+		</CarParking>
+	</SceneryObject>
+	<!-- car park: B276 front drive inner row 3 -->
+	<SceneryObject lat="53.52555251" lon="-113.45805595" alt="0.000000" pitch="0.000000" bank="0.000000" heading="0.000000" imageComplexity="VERY_SPARSE" altitudeIsAgl="TRUE" snapToGround="TRUE" snapToNormal="FALSE">
+		<CarParking>
+			<Vertex lat="53.52554192" lon="-113.45814266"/>
+			<Vertex lat="53.52560122" lon="-113.45802203"/>
+			<Vertex lat="53.52556310" lon="-113.45796925"/>
+			<Vertex lat="53.52550380" lon="-113.45808988"/>
+		</CarParking>
+	</SceneryObject>
+	<!-- car park: B276 front drive inner row 4 -->
+	<SceneryObject lat="53.52560911" lon="-113.45795040" alt="0.000000" pitch="0.000000" bank="0.000000" heading="0.000000" imageComplexity="VERY_SPARSE" altitudeIsAgl="TRUE" snapToGround="TRUE" snapToNormal="FALSE">
+		<CarParking>
+			<Vertex lat="53.52559963" lon="-113.45802496"/>
+			<Vertex lat="53.52565354" lon="-113.45793449"/>
+			<Vertex lat="53.52561860" lon="-113.45787585"/>
+			<Vertex lat="53.52556469" lon="-113.45796632"/>
+		</CarParking>
+	</SceneryObject>
+	<!-- car park: B276 front drive inner row 5 -->
+	<SceneryObject lat="53.52567515" lon="-113.45786521" alt="0.000000" pitch="0.000000" bank="0.000000" heading="0.000000" imageComplexity="VERY_SPARSE" altitudeIsAgl="TRUE" snapToGround="TRUE" snapToNormal="FALSE">
+		<CarParking>
+			<Vertex lat="53.52564892" lon="-113.45794058"/>
+			<Vertex lat="53.52572709" lon="-113.45786066"/>
+			<Vertex lat="53.52570138" lon="-113.45778984"/>
+			<Vertex lat="53.52562321" lon="-113.45786975"/>
+		</CarParking>
+	</SceneryObject>
+	<!-- car park: B276 front drive outer row 1 -->
+	<SceneryObject lat="53.52535765" lon="-113.45848181" alt="0.000000" pitch="0.000000" bank="0.000000" heading="0.000000" imageComplexity="VERY_SPARSE" altitudeIsAgl="TRUE" snapToGround="TRUE" snapToNormal="FALSE">
+		<CarParking>
+			<Vertex lat="53.52537512" lon="-113.45867035"/>
+			<Vertex lat="53.52538950" lon="-113.45829864"/>
+			<Vertex lat="53.52534019" lon="-113.45829326"/>
+			<Vertex lat="53.52532580" lon="-113.45866497"/>
+		</CarParking>
+	</SceneryObject>
+	<!-- car park: B276 front drive outer row 2 -->
+	<SceneryObject lat="53.52539666" lon="-113.45815502" alt="0.000000" pitch="0.000000" bank="0.000000" heading="0.000000" imageComplexity="VERY_SPARSE" altitudeIsAgl="TRUE" snapToGround="TRUE" snapToNormal="FALSE">
+		<CarParking>
+			<Vertex lat="53.52538795" lon="-113.45831064"/>
+			<Vertex lat="53.52545159" lon="-113.45802878"/>
+			<Vertex lat="53.52540538" lon="-113.45799939"/>
+			<Vertex lat="53.52534174" lon="-113.45828126"/>
+		</CarParking>
+	</SceneryObject>
+	<!-- car park: B276 front drive outer row 3 -->
+	<SceneryObject lat="53.52544718" lon="-113.45797505" alt="0.000000" pitch="0.000000" bank="0.000000" heading="0.000000" imageComplexity="VERY_SPARSE" altitudeIsAgl="TRUE" snapToGround="TRUE" snapToNormal="FALSE">
+		<CarParking>
+			<Vertex lat="53.52544774" lon="-113.45804006"/>
+			<Vertex lat="53.52548513" lon="-113.45796198"/>
+			<Vertex lat="53.52544661" lon="-113.45791003"/>
+			<Vertex lat="53.52540922" lon="-113.45798811"/>
 		</CarParking>
 	</SceneryObject>
 	<!-- END car parks -->

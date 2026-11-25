@@ -17,7 +17,7 @@ The OSM outline is the only footprint source. The aerial shows an irregular plan
 3. **Long brick wing.** A one-storey-looking brick wing with horizontal windows and the church name in raised letters on its east face, running along the road.
 4. **Lower flat-roofed wings and entrance canopy.** Lower roofs on the south and back of the plan, and a canopy at the front entrance. The aerial shows a flat roof with a pale membrane, so there are no pitched roofs.
 
-**Heights.** Not measured. The street frames show the spire well above the main roofs. The grey block is taller than the brick wing. Storey counts and metre heights are not in any source checked. Do not model storeys from the photos alone without a metre reference. The 2019 aerial shows shadows, which could help, but was not measured in this session.
+**Heights.** Measured 2026-11-24 from the 2018 DSM minus the grade (665.45 m), on a 2 m grid aligned with the building: wings 3 m, cultural hall 7 m (8 m on its north edge), chapel 7 to 8 m, spire peak 14.8 m. Proportions in the 2024 photo agree (chapel about 2.4 times the wing). The needle above the spire is too thin for the LiDAR; scaled from the photos it is about 3.6 m.
 
 **Materials, as seen.** Brown brick on the wings and spire, grey vertical-panel cladding on the chapel block. Roofs look flat and light on the aerial. Not checked against a close photo.
 
@@ -83,7 +83,7 @@ Also useful from the B262 folder: `B262-holyrood-gardens/street/mly-124252547287
 
 ## Still missing
 
-- Heights in metres, and storey counts. The aerial shadows or a survey would settle the spire height.
+- The needle height (estimated from the photos), and window counts and positions.
 - Whether the spire is a separate mass. The OSM outline does not split it.
 - Parking lot extents, and whether the north lot is part of the church parcel.
 - Night frames. None were downloaded.
@@ -91,3 +91,31 @@ Also useful from the B262 folder: `B262-holyrood-gardens/street/mly-124252547287
 ## Holyrood Gardens check (B262)
 
 The B262 street frames are not all useful here, but two of them show the church. They are listed above under Street frames. The B262 brief says the tower sits "on 85 Street". The OSM geometry does not agree: the 85 Street centreline (about -113.4576) lies about 40 m west of the tower's west face (about -113.4569). The tower is set back from the road. This does not change the church, but it should be checked before the B262 model is changed.
+
+## Model (2026-11-24)
+
+`scenery-edmonton-bridges/tools/site_b276.py`, model `br_b276_lds_church`, placed at the outline centre with heading 0.
+
+- **Datum and grade.** Datum 665.11 m, the lowest DTM cell under the footprint. Grade is 0.34 m above it.
+- **Building frame.** The walls run 30.6° off the compass. The model works in u (toward 85 Street, bearing 59.4) and v (bearing 329.4). The front, which faces the curved lot and Connors Road, is at -v.
+- **Masses.**
+  - The whole outline, to 3.3 m: buff brick, a brown fascia, and window bands between brick piers.
+  - The cultural hall, u -24.5 to 5 and v -4.5 to 17, to 7.2 m.
+  - The chapel, u -18.5 to -3 and v -18.8 to -4.5, with its front bay out to v -25, to 7.8 m. The bay's face has beige panels, white pilasters and brick corner piers.
+  - The spire: three brick fins with stepped tops, 15 m, with a needle to 18.6 m. It stands at u 3.9 to 6.1 and v -17.9 to -15.3, where the DSM peak is.
+  - The entrance: glazing and a flat canopy.
+  - The lettering panel at the east end of the front, 0.5 m higher than the wing.
+- **Night.** These follow the 2026 night photo, except the wall packs.
+  - Emissive at night only: the spire (floodlit), the chapel face (wall-washed), the lobby, the canopy soffit, and about half the windows.
+  - 17 `ASOBO_street_light` lights: two canopy downlights, two uplights at the spire, three uplights on the chapel face, and ten wall packs. The wall packs are on the walls facing the lots and walks; their number and places are assumed.
+- **Car parks.** Sim `CarParking` polygons:
+  - The plan's north lot, west lot and strips. The north strip is cut back to its paved west end.
+  - Two rows along the curved front drive. The inner row follows the cars on the 2019 aerial. The outer row is 12.5 m further out, from the stall lines in the 2024 photo. The plan draws this lot about 5 m too far out, so its polygon is not used.
+- **Trees.** 27 stock MSFS trees at the 2018 DSM crowns on the parcel. Species:
+  - Pine stands in for the spruces: the north lot's north row, the trees by 85 Street, and those west of and in front of the chapel.
+  - Cypress for the columnar tree at the chapel's east corner.
+  - Birch or poplar for the broadleaf trees.
+
+  The shrub island and the plan's shrub beds are left out. The stock trees are not scaled, so their size against the 6 to 19 m crowns is unchecked.
+- **Exclusions.** The model footprint plus 4 m, as for every site. A second polygon over the parcel (OSM way 594346540) removes the sim's own trees and buildings there.
+- **Status.** Built with exit 0. Not seen in the sim.

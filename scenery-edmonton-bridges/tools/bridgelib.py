@@ -56,6 +56,7 @@ _NEW = [
     ("DKGREEN", (44, 76, 56)),
     ("DAWSONBLUE", (96, 128, 156)),  # Dawson truss steel-blue
     ("PIERBEIGE", (190, 182, 166)),
+    ("BUFF", (184, 132, 86)),       # buff-orange brick (B276 church; was a padding slot)
 ]
 for _i, (_n, _rgb) in enumerate(_NEW):
     globals()[_n] = len(PALETTE)
@@ -384,16 +385,33 @@ def through_truss_span(m, ax, s0, s1, tt, ybot, npan, h_fn, kind="pratt", sub=Fa
 
 
 # saving ------------------------------------------------------------------------------------------
+# Night-lit materials (palette colour by day, emissive at night only; ASOBO_material_day_night_switch, as CYXD's office windows, which
+# work in the sim).  key -> emissiveFactor.  Set BMesh.mat to a key to draw with it.  Registered in the CYXD GLOW table so Mesh.poly
+# gives them palette UVs.  "glow" (warm windows) is CYXD's own; the rest are the buildings' (not yet seen in the sim).
+NIGHT = {"glow_flood": [34.0, 24.0, 14.0],     # floodlit brick (B276 spire)
+         "glow_wash": [20.0, 20.0, 18.0],      # wall-washed light panels (B276 chapel face)
+         "glow_lamp": [400.0, 360.0, 300.0]}   # lamp lenses (canopy downlights, wall packs)
+for _k, _v in NIGHT.items():
+    gb.GLOW.setdefault(_k, _v)
+DOWN, UP = [0.70710678, 0.0, 0.0, 0.70710678], [-0.70710678, 0.0, 0.0, 0.70710678]
+
+
 class BMesh(Mesh):
-    """Mesh that remembers where each polygon starts so it can be split into model chunks."""
+    """Mesh that remembers where each polygon starts so it can be split into model chunks.
+
+    mat: None (palette) or a gb.GLOW key for the polygons drawn next.  lights: MSFS 2024 street lights (ASOBO_street_light, night only)
+    as (x, y, z, intensity cd, cone deg, flare only, rotation) in the unmirrored site frame; rotation DOWN or UP (an MSFS light shines
+    along node +Z, see airport-h28/tools/gen_port.py).  They go on the first chunk."""
 
     def __init__(self):
         super().__init__(textured=False)
         self.pstart = []
+        self.mat: str | None = None
+        self.lights = []
 
     def poly(self, pts, sw, centre):
         self.pstart.append((len(self.pos), len(self.tri_mat)))
-        super().poly(pts, sw, centre)
+        super().poly(pts, sw, centre, tex=self.mat)
 
     def add_to(self, other):
         """Copy this mesh into `other` (keeps polygon boundaries)."""
@@ -411,13 +429,14 @@ class BMesh(Mesh):
         marks = self.pstart + [(len(self.pos), len(self.tri_mat))]
         for (v0, t0), (v1, t1) in zip(marks[:-1], marks[1:]):
             if cur is None or len(cur["pos"]) + (v1 - v0) > limit:
-                cur = {"pos": [], "nrm": [], "uv": [], "idx": []}
+                cur = {"pos": [], "nrm": [], "uv": [], "idx": [], "mat": []}
                 out.append(cur)
             base = len(cur["pos"])
             cur["pos"] += self.pos[v0:v1]
             cur["nrm"] += self.nrm[v0:v1]
             cur["uv"] += self.uv[v0:v1]
             cur["idx"] += [i - v0 + base for i in self.idx[3 * t0:3 * t1]]
+            cur["mat"] += self.tri_mat[t0:t1]
         return out
 
 
@@ -428,6 +447,7 @@ def write_palette():
 def save_chunks(m, name, prune=True):
     """Mirror once, write the chunks as <name>_1, <name>_2 ... and return [(model name, guid)]."""
     m.mirror_x()
+    lights = [(-x, *rest) for x, *rest in m.lights]
     folder_names = []
     parts = m.chunks()
     for k, ch in enumerate(parts, 1):
@@ -439,11 +459,21 @@ def save_chunks(m, name, prune=True):
         pos = b"".join(struct.pack("<3f", *p) for p in ch["pos"])
         nrm = b"".join(struct.pack("<3f", *p) for p in ch["nrm"])
         uv = b"".join(struct.pack("<2f", *p) for p in ch["uv"])
+        mn = [min(p[i] for p in ch["pos"]) for i in range(3)]
+        mx = [max(p[i] for p in ch["pos"]) for i in range(3)]
+        keys = ["flat"] + [g_ for g_ in gb.GLOW if g_ in ch["mat"]]
+        lit = lights if k == 1 else []
+        if len(keys) > 1 or lit:
+            _save_lit(folder, nm, ch, pos, nrm, uv, mn, mx, keys, lit)
+            guid = "{" + str(uuid.uuid5(NS, nm)).upper() + "}"
+            (folder / f"{nm}.xml").write_text(
+                f'<?xml version="1.0" encoding="utf-8"?>\n<ModelInfo guid="{guid}" version="1.1">\n'
+                f'\t<LODS>\n\t\t<LOD minSize="0" ModelFile="{nm}.gltf"/>\n\t</LODS>\n</ModelInfo>\n')
+            folder_names.append((nm, guid))
+            continue
         ib = b"".join(struct.pack("<H", i) for i in ch["idx"])
         pad = (-len(ib)) % 4
         blob = pos + nrm + uv + ib + b"\x00" * pad
-        mn = [min(p[i] for p in ch["pos"]) for i in range(3)]
-        mx = [max(p[i] for p in ch["pos"]) for i in range(3)]
         views = [{"buffer": 0, "byteOffset": 0, "byteLength": len(pos)},
                  {"buffer": 0, "byteOffset": len(pos), "byteLength": len(nrm)},
                  {"buffer": 0, "byteOffset": len(pos) + len(nrm), "byteLength": len(uv)},
@@ -478,6 +508,63 @@ def save_chunks(m, name, prune=True):
     return folder_names
 
 
+def _save_lit(folder, nm, ch, pos, nrm, uv, mn, mx, keys, lights):
+    """glTF for a chunk with night-lit materials or lights: one primitive per material (palette, then each GLOW key), and the lights as
+    child nodes (ASOBO_street_light, as airport-h28/tools/gen_port.py)."""
+    n = len(ch["pos"])
+    blob = pos + nrm + uv
+    views = [{"buffer": 0, "byteOffset": 0, "byteLength": len(pos)},
+             {"buffer": 0, "byteOffset": len(pos), "byteLength": len(nrm)},
+             {"buffer": 0, "byteOffset": len(pos) + len(nrm), "byteLength": len(uv)}]
+    accs = [{"bufferView": 0, "componentType": 5126, "count": n, "type": "VEC3", "min": mn, "max": mx},
+            {"bufferView": 1, "componentType": 5126, "count": n, "type": "VEC3"},
+            {"bufferView": 2, "componentType": 5126, "count": n, "type": "VEC2"}]
+    prims, mats = [], []
+    for key in keys:
+        ib = b"".join(struct.pack("<H", i) for t, mk in enumerate(ch["mat"]) if mk == key for i in ch["idx"][3 * t:3 * t + 3])
+        if not ib:
+            continue
+        views.append({"buffer": 0, "byteOffset": len(blob), "byteLength": len(ib)})
+        accs.append({"bufferView": len(views) - 1, "componentType": 5123, "count": len(ib) // 2, "type": "SCALAR"})
+        blob += ib + b"\x00" * ((-len(ib)) % 4)
+        mat = {"name": "bridge_palette" if key == "flat" else "bridge_" + key, "pbrMetallicRoughness": {
+            "baseColorTexture": {"index": 0}, "metallicFactor": 0.0, "roughnessFactor": 0.9},
+            "extensions": {"ASOBO_tags": {"tags": ["Collision", "Road"]}}}
+        if key != "flat":
+            mat["emissiveFactor"] = gb.GLOW[key]
+            mat["extensions"]["ASOBO_material_day_night_switch"] = {"enabled": True}
+        mats.append(mat)
+        prims.append({"attributes": {"POSITION": 0, "NORMAL": 1, "TEXCOORD_0": 2}, "indices": len(accs) - 1, "mode": 4,
+                      "material": len(mats) - 1})
+    root = {"mesh": 0, "name": nm}
+    if lights:
+        root["children"] = list(range(1, len(lights) + 1))
+    nodes = [root] + [{"name": f"{nm}_light{j}", "translation": [x, y, z], "rotation": rot,
+                       "extensions": {"ASOBO_street_light": {
+                           "color": [1.0, 0.9, 0.75], "intensity": inten, "cone_angle": cone, "has_symmetry": False,
+                           "flash_frequency": 0.0, "flash_duration": 0.2, "flash_phase": 0.0, "rotation_phase": 0.0,
+                           "rotation_speed": 0.0, "random_phase": False, "day_night_cycle": True,
+                           "flare_enabled": True, "flare_only": flare}}}
+                      for j, (x, y, z, inten, cone, flare, rot) in enumerate(lights)]
+    used = ["ASOBO_normal_map_convention", "ASOBO_tags"] + (["ASOBO_material_day_night_switch"] if len(mats) > 1 else []) \
+        + (["ASOBO_street_light"] if lights else [])
+    g = {
+        "asset": {"version": "2.0", "generator": "scenery-edmonton-bridges/tools/bridgelib.py",
+                  "extensions": {"ASOBO_normal_map_convention": {"tangent_space_convention": "DirectX"}}},
+        "extensionsUsed": used,
+        "scene": 0, "scenes": [{"nodes": [0]}],
+        "nodes": nodes,
+        "meshes": [{"name": nm, "primitives": prims}],
+        "materials": mats,
+        "textures": [{"sampler": 0, "source": 0}],
+        "samplers": [{"magFilter": 9728, "minFilter": 9728}],
+        "images": [{"uri": "bridge_palette.png"}],
+        "accessors": accs, "bufferViews": views, "buffers": [{"uri": f"{nm}.bin", "byteLength": len(blob)}],
+    }
+    (folder / f"{nm}.bin").write_bytes(blob)
+    (folder / f"{nm}.gltf").write_text(json.dumps(g, indent=1))
+
+
 # preview -----------------------------------------------------------------------------------------
 def preview(m, out, az=210.0, el=22.0, width=1800, height=900, span=None, centre=None, water=True, y_water=0.0, zoom=1.0, light=(0.4, 0.8, 0.45)):
     """Orthographic painter's-algorithm render of an UNMIRRORED mesh (x east, y up, z north) to a PNG.  az = compass bearing the
@@ -498,7 +585,7 @@ def preview(m, out, az=210.0, el=22.0, width=1800, height=900, span=None, centre
     def proj(Q):
         d = (Q[:, 0] - cen[0]) * f[0] + (Q[:, 2] - cen[2]) * f[1]
         x = (Q[:, 0] - cen[0]) * r[0] + (Q[:, 2] - cen[2]) * r[1]
-        y = (Q[:, 1] - cen[1]) * math.cos(e_) - d * math.sin(e_)
+        y = (Q[:, 1] - cen[1]) * math.cos(e_) + d * math.sin(e_)
         w = d * math.cos(e_) - (Q[:, 1] - cen[1]) * math.sin(e_)   # distance from the camera: higher points are nearer
         return x, y, w
     x, y, w = proj(P)
