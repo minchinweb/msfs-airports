@@ -341,6 +341,7 @@ def save(m, name):
         mat["name"] = TEX
         mat["pbrMetallicRoughness"]["roughnessFactor"] = 0.85
     gltf.write_text(json.dumps(g, indent=1))
+    gp.add_lods(folder, name)  # again, so the LODs carry the texture atlas too
     return guid
 
 

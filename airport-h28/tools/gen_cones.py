@@ -19,6 +19,7 @@ from pathlib import Path
 
 sys.path.insert(0, str(Path(__file__).resolve().parent))
 import gen_field as gf  # noqa: E402
+from model_lods import add_lods  # noqa: E402  (on the path through gen_port)
 
 ROOT = Path(__file__).resolve().parents[2]
 MODELLIB = ROOT / "airport-h28/PackageSources/modelLib"
@@ -134,6 +135,7 @@ class Mesh:
         (folder / f"{name}.xml").write_text(
             '<?xml version="1.0" encoding="utf-8"?>\n'
             f'<ModelInfo guid="{guid}" version="1.1">\n\t<LODS>\n\t\t<LOD minSize="0" ModelFile="{name}.gltf"/>\n\t</LODS>\n</ModelInfo>\n')
+        add_lods(folder, name)  # lower LODs so it is drawn far out (tools/model_lods.py)
         return guid
 
 

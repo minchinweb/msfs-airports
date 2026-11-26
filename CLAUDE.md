@@ -8,7 +8,7 @@ Prefix commit messages with 🤖.
 
 ## 3D models: LODs, draw distance, stock objects
 
-Every scenery model we generate needs a last LOD under 1,000 vertices, or MSFS 2024 holds it back until it is large on screen (B262 popped in at 0.5 nm). `bridgelib.save_chunks` (bridges) adds them automatically, and so does `tools/model_lods.add_lods`, which CYXD's `gen_buildings.Mesh.save` and H28's `gen_port.py` call after each save; call it from any other model writer too (H28's other `gen_*.py` do not yet). Never let two overlapping faces share a plane (they z-fight). Scale stock trees to their real height: their own sizes are 18 to 62 m. The details, the vertex-count table and how to read a stock object's size are in `docs/edmonton-bridges/MODEL-NOTES.md`, "Standard practice: LODs and draw distance". These apply to the airport packages too.
+Every scenery model we generate needs a last LOD under 1,000 vertices, or MSFS 2024 holds it back until it is large on screen (B262 popped in at 0.5 nm). `bridgelib.save_chunks` (bridges) adds them automatically, and so does `tools/model_lods.add_lods`, which CYXD's `gen_buildings.Mesh.save` and every H28 `gen_*.py` call after each save; call it from any new model writer too (after any later rewrite of the glTF). Never let two overlapping faces share a plane (they z-fight). Scale stock trees to their real height: their own sizes are 18 to 62 m. The details, the vertex-count table and how to read a stock object's size are in `docs/edmonton-bridges/MODEL-NOTES.md`, "Standard practice: LODs and draw distance". These apply to the airport packages too.
 
 ## MSFS SDK docs MCP server
 

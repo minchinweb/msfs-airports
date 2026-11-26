@@ -356,6 +356,7 @@ def save(m):
         mat["name"] = "h28_sign"
         mat["pbrMetallicRoughness"]["roughnessFactor"] = 0.85
     gltf.write_text(json.dumps(g, indent=1))
+    gp.add_lods(folder, NAME)  # again, so the LODs carry the sign texture too
     return guid
 
 
