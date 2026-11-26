@@ -4,7 +4,6 @@ Files: `dtm-2018-1m.tif` (bare earth), `dsm-2018-1m.tif` (surface incl. bridges,
 
 River surface in this clip: **609.84 m** (2,000.8 ft), valid.
 Lowest DTM pixel: 609.59 m.
-DTM ground at the project centre (53.573, -113.372): **609.96 m**.
 
 | Part | Samples | DSM p10 | DSM median | DSM p90 | Median above river |
 | --- | --- | --- | --- | --- | --- |

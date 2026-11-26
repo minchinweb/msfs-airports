@@ -322,6 +322,652 @@
    }
   ]
  },
+ "H39-henday-yellowhead-west": {
+  "dem_min_m": 667.6400146484375,
+  "water_surface_mode_m": 671.19,
+  "water_pixels_within_0.1m": 134884,
+  "decks": [
+   {
+    "part": "henday_nb_over_yellowhead",
+    "samples": 32,
+    "dsm_p10": 691.42,
+    "dsm_median": 691.54,
+    "dsm_p90": 691.59,
+    "median_above_water_m": 20.35
+   },
+   {
+    "part": "henday_sb_over_yellowhead",
+    "samples": 35,
+    "dsm_p10": 692.13,
+    "dsm_median": 692.2,
+    "dsm_p90": 692.23,
+    "median_above_water_m": 21.01
+   },
+   {
+    "part": "nw_ramp_over_yellowhead",
+    "samples": 35,
+    "dsm_p10": 691.08,
+    "dsm_median": 691.27,
+    "dsm_p90": 691.31,
+    "median_above_water_m": 20.08
+   },
+   {
+    "part": "se_ramp_over_yellowhead",
+    "samples": 34,
+    "dsm_p10": 692.57,
+    "dsm_median": 693.23,
+    "dsm_p90": 693.87,
+    "median_above_water_m": 22.04
+   },
+   {
+    "part": "ws2_flyover_over_henday",
+    "samples": 40,
+    "dsm_p10": 701.34,
+    "dsm_median": 702.29,
+    "dsm_p90": 703.03,
+    "median_above_water_m": 31.1
+   },
+   {
+    "part": "en2_flyover_over_henday",
+    "samples": 45,
+    "dsm_p10": 701.01,
+    "dsm_median": 701.56,
+    "dsm_p90": 701.74,
+    "median_above_water_m": 30.37
+   },
+   {
+    "part": "ws3_over_yellowhead",
+    "samples": 36,
+    "dsm_p10": 694.64,
+    "dsm_median": 696.69,
+    "dsm_p90": 698.44,
+    "median_above_water_m": 25.5
+   },
+   {
+    "part": "en3_over_yellowhead",
+    "samples": 28,
+    "dsm_p10": 690.49,
+    "dsm_median": 692.25,
+    "dsm_p90": 693.63,
+    "median_above_water_m": 21.06
+   },
+   {
+    "part": "ws1_over_en_ramp",
+    "samples": 22,
+    "dsm_p10": 692.99,
+    "dsm_median": 693.94,
+    "dsm_p90": 694.91,
+    "median_above_water_m": 22.75
+   },
+   {
+    "part": "en1_over_ws_ramp",
+    "samples": 15,
+    "dsm_p10": 697.63,
+    "dsm_median": 698.13,
+    "dsm_p90": 698.61,
+    "median_above_water_m": 26.94
+   },
+   {
+    "part": "north_sb_road",
+    "samples": 108,
+    "dsm_p10": 688.35,
+    "dsm_median": 690.75,
+    "dsm_p90": 692.03,
+    "median_above_water_m": 19.56
+   },
+   {
+    "part": "south_sb_road",
+    "samples": 52,
+    "dsm_p10": 690.9,
+    "dsm_median": 691.67,
+    "dsm_p90": 692.0,
+    "median_above_water_m": 20.48
+   },
+   {
+    "part": "south_nb_road",
+    "samples": 261,
+    "dsm_p10": 680.63,
+    "dsm_median": 684.51,
+    "dsm_p90": 690.85,
+    "median_above_water_m": 13.32
+   },
+   {
+    "part": "north_nb_road",
+    "samples": 344,
+    "dsm_p10": 678.9,
+    "dsm_median": 683.59,
+    "dsm_p90": 690.56,
+    "median_above_water_m": 12.4
+   },
+   {
+    "part": "south_to_nw_ramp",
+    "samples": 198,
+    "dsm_p10": 682.08,
+    "dsm_median": 685.59,
+    "dsm_p90": 690.88,
+    "median_above_water_m": 14.4
+   },
+   {
+    "part": "north_to_se_ramp",
+    "samples": 95,
+    "dsm_p10": 689.05,
+    "dsm_median": 690.63,
+    "dsm_p90": 692.22,
+    "median_above_water_m": 19.44
+   },
+   {
+    "part": "se_ramp_eastbound",
+    "samples": 287,
+    "dsm_p10": 681.69,
+    "dsm_median": 685.85,
+    "dsm_p90": 694.02,
+    "median_above_water_m": 14.66
+   },
+   {
+    "part": "nw_ramp_loop",
+    "samples": 246,
+    "dsm_p10": 682.26,
+    "dsm_median": 685.59,
+    "dsm_p90": 690.79,
+    "median_above_water_m": 14.4
+   },
+   {
+    "part": "added_22911977",
+    "samples": 360,
+    "dsm_p10": 681.1,
+    "dsm_median": 682.56,
+    "dsm_p90": 685.0,
+    "median_above_water_m": 11.37
+   },
+   {
+    "part": "added_22916292",
+    "samples": 153,
+    "dsm_p10": 682.0,
+    "dsm_median": 685.47,
+    "dsm_p90": 689.95,
+    "median_above_water_m": 14.28
+   },
+   {
+    "part": "added_43531499",
+    "samples": 80,
+    "dsm_p10": 694.89,
+    "dsm_median": 698.35,
+    "dsm_p90": 700.62,
+    "median_above_water_m": 27.16
+   },
+   {
+    "part": "added_60064623",
+    "samples": 377,
+    "dsm_p10": 684.4,
+    "dsm_median": 686.13,
+    "dsm_p90": 688.5,
+    "median_above_water_m": 14.94
+   },
+   {
+    "part": "added_61423533",
+    "samples": 169,
+    "dsm_p10": 681.25,
+    "dsm_median": 681.49,
+    "dsm_p90": 681.81,
+    "median_above_water_m": 10.3
+   },
+   {
+    "part": "added_61513669",
+    "samples": 61,
+    "dsm_p10": 681.37,
+    "dsm_median": 681.44,
+    "dsm_p90": 681.49,
+    "median_above_water_m": 10.25
+   },
+   {
+    "part": "added_132978477",
+    "samples": 154,
+    "dsm_p10": 683.83,
+    "dsm_median": 688.46,
+    "dsm_p90": 695.84,
+    "median_above_water_m": 17.27
+   },
+   {
+    "part": "added_135719195",
+    "samples": 332,
+    "dsm_p10": 684.49,
+    "dsm_median": 687.97,
+    "dsm_p90": 688.99,
+    "median_above_water_m": 16.78
+   },
+   {
+    "part": "added_135927518",
+    "samples": 103,
+    "dsm_p10": 681.14,
+    "dsm_median": 683.41,
+    "dsm_p90": 685.65,
+    "median_above_water_m": 12.22
+   },
+   {
+    "part": "added_153725850",
+    "samples": 52,
+    "dsm_p10": 695.72,
+    "dsm_median": 698.49,
+    "dsm_p90": 700.35,
+    "median_above_water_m": 27.3
+   },
+   {
+    "part": "added_153725852",
+    "samples": 132,
+    "dsm_p10": 681.33,
+    "dsm_median": 685.3,
+    "dsm_p90": 691.11,
+    "median_above_water_m": 14.11
+   },
+   {
+    "part": "added_153725854",
+    "samples": 100,
+    "dsm_p10": 699.86,
+    "dsm_median": 702.66,
+    "dsm_p90": 703.18,
+    "median_above_water_m": 31.47
+   },
+   {
+    "part": "added_153725855",
+    "samples": 155,
+    "dsm_p10": 684.69,
+    "dsm_median": 686.58,
+    "dsm_p90": 692.73,
+    "median_above_water_m": 15.39
+   },
+   {
+    "part": "added_153725874",
+    "samples": 256,
+    "dsm_p10": 680.21,
+    "dsm_median": 682.17,
+    "dsm_p90": 688.44,
+    "median_above_water_m": 10.98
+   },
+   {
+    "part": "added_153725888",
+    "samples": 66,
+    "dsm_p10": 699.16,
+    "dsm_median": 700.71,
+    "dsm_p90": 701.4,
+    "median_above_water_m": 29.52
+   },
+   {
+    "part": "added_256516539",
+    "samples": 182,
+    "dsm_p10": 681.19,
+    "dsm_median": 681.53,
+    "dsm_p90": 682.84,
+    "median_above_water_m": 10.34
+   },
+   {
+    "part": "added_256516540",
+    "samples": 332,
+    "dsm_p10": 680.34,
+    "dsm_median": 681.93,
+    "dsm_p90": 683.55,
+    "median_above_water_m": 10.74
+   },
+   {
+    "part": "added_279472325",
+    "samples": 116,
+    "dsm_p10": 681.45,
+    "dsm_median": 682.03,
+    "dsm_p90": 683.09,
+    "median_above_water_m": 10.84
+   },
+   {
+    "part": "added_313692014",
+    "samples": 85,
+    "dsm_p10": 683.89,
+    "dsm_median": 685.64,
+    "dsm_p90": 692.11,
+    "median_above_water_m": 14.45
+   },
+   {
+    "part": "added_431012835",
+    "samples": 261,
+    "dsm_p10": 683.79,
+    "dsm_median": 685.23,
+    "dsm_p90": 686.56,
+    "median_above_water_m": 14.04
+   },
+   {
+    "part": "added_499079876",
+    "samples": 43,
+    "dsm_p10": 680.1,
+    "dsm_median": 680.29,
+    "dsm_p90": 680.79,
+    "median_above_water_m": 9.1
+   },
+   {
+    "part": "added_499789126",
+    "samples": 61,
+    "dsm_p10": 681.85,
+    "dsm_median": 681.94,
+    "dsm_p90": 681.99,
+    "median_above_water_m": 10.75
+   },
+   {
+    "part": "added_601916868",
+    "samples": 211,
+    "dsm_p10": 679.56,
+    "dsm_median": 680.2,
+    "dsm_p90": 681.36,
+    "median_above_water_m": 9.01
+   },
+   {
+    "part": "added_641722671",
+    "samples": 108,
+    "dsm_p10": 680.47,
+    "dsm_median": 682.04,
+    "dsm_p90": 683.79,
+    "median_above_water_m": 10.85
+   },
+   {
+    "part": "added_847002313",
+    "samples": 100,
+    "dsm_p10": 679.9,
+    "dsm_median": 680.07,
+    "dsm_p90": 680.97,
+    "median_above_water_m": 8.88
+   },
+   {
+    "part": "added_847002329",
+    "samples": 134,
+    "dsm_p10": 680.11,
+    "dsm_median": 680.49,
+    "dsm_p90": 681.22,
+    "median_above_water_m": 9.3
+   },
+   {
+    "part": "added_1025356482",
+    "samples": 145,
+    "dsm_p10": 681.27,
+    "dsm_median": 684.15,
+    "dsm_p90": 687.05,
+    "median_above_water_m": 12.96
+   },
+   {
+    "part": "added_1280799949",
+    "samples": 75,
+    "dsm_p10": 678.62,
+    "dsm_median": 678.77,
+    "dsm_p90": 679.0,
+    "median_above_water_m": 7.58
+   },
+   {
+    "part": "added_1280799950",
+    "samples": 11,
+    "dsm_p10": 679.13,
+    "dsm_median": 679.2,
+    "dsm_p90": 679.31,
+    "median_above_water_m": 8.01
+   },
+   {
+    "part": "added_1285934488",
+    "samples": 22,
+    "dsm_p10": 680.72,
+    "dsm_median": 680.98,
+    "dsm_p90": 681.28,
+    "median_above_water_m": 9.79
+   },
+   {
+    "part": "added_1286221278",
+    "samples": 59,
+    "dsm_p10": 686.42,
+    "dsm_median": 687.39,
+    "dsm_p90": 688.51,
+    "median_above_water_m": 16.2
+   },
+   {
+    "part": "added_1286248798",
+    "samples": 31,
+    "dsm_p10": 681.32,
+    "dsm_median": 681.52,
+    "dsm_p90": 681.82,
+    "median_above_water_m": 10.33
+   },
+   {
+    "part": "added_1287655151",
+    "samples": 256,
+    "dsm_p10": 684.24,
+    "dsm_median": 686.22,
+    "dsm_p90": 687.23,
+    "median_above_water_m": 15.03
+   },
+   {
+    "part": "added_1289580009",
+    "samples": 20,
+    "dsm_p10": 680.09,
+    "dsm_median": 680.1,
+    "dsm_p90": 680.17,
+    "median_above_water_m": 8.91
+   }
+  ]
+ },
+ "H52-sherwood-park-cloverleaf": {
+  "dem_min_m": 688.2100219726562,
+  "water_surface_mode_m": 693.76,
+  "water_pixels_within_0.1m": 39173,
+  "decks": [
+   {
+    "part": "eastbound_overpass",
+    "samples": 49,
+    "dsm_p10": 717.29,
+    "dsm_median": 717.86,
+    "dsm_p90": 717.99,
+    "median_above_water_m": 24.1
+   },
+   {
+    "part": "westbound_overpass",
+    "samples": 46,
+    "dsm_p10": 717.4,
+    "dsm_median": 717.86,
+    "dsm_p90": 717.93,
+    "median_above_water_m": 24.1
+   },
+   {
+    "part": "en_ramp1_over_henday",
+    "samples": 47,
+    "dsm_p10": 719.39,
+    "dsm_median": 721.4,
+    "dsm_p90": 722.95,
+    "median_above_water_m": 27.64
+   },
+   {
+    "part": "en_ramp2_over_freeway",
+    "samples": 29,
+    "dsm_p10": 724.62,
+    "dsm_median": 724.84,
+    "dsm_p90": 724.96,
+    "median_above_water_m": 31.08
+   },
+   {
+    "part": "west_eastbound_stub",
+    "samples": 7,
+    "dsm_p10": 716.74,
+    "dsm_median": 716.91,
+    "dsm_p90": 717.09,
+    "median_above_water_m": 23.15
+   },
+   {
+    "part": "west_eastbound_road",
+    "samples": 211,
+    "dsm_p10": 699.2,
+    "dsm_median": 706.43,
+    "dsm_p90": 715.3,
+    "median_above_water_m": 12.67
+   },
+   {
+    "part": "west_westbound_road",
+    "samples": 25,
+    "dsm_p10": 716.04,
+    "dsm_median": 716.62,
+    "dsm_p90": 717.16,
+    "median_above_water_m": 22.86
+   },
+   {
+    "part": "east_westbound_road",
+    "samples": 218,
+    "dsm_p10": 712.56,
+    "dsm_median": 713.62,
+    "dsm_p90": 717.52,
+    "median_above_water_m": 19.86
+   },
+   {
+    "part": "east_eastbound_road",
+    "samples": 176,
+    "dsm_p10": 712.65,
+    "dsm_median": 713.54,
+    "dsm_p90": 717.73,
+    "median_above_water_m": 19.78
+   },
+   {
+    "part": "south_to_westbound_ramp",
+    "samples": 345,
+    "dsm_p10": 708.69,
+    "dsm_median": 710.85,
+    "dsm_p90": 717.02,
+    "median_above_water_m": 17.09
+   },
+   {
+    "part": "southwest_loop",
+    "samples": 116,
+    "dsm_p10": 708.57,
+    "dsm_median": 711.8,
+    "dsm_p90": 715.65,
+    "median_above_water_m": 18.04
+   },
+   {
+    "part": "north_to_loop",
+    "samples": 57,
+    "dsm_p10": 708.31,
+    "dsm_median": 708.43,
+    "dsm_p90": 717.35,
+    "median_above_water_m": 14.67
+   },
+   {
+    "part": "added_245395446",
+    "samples": 675,
+    "dsm_p10": 708.84,
+    "dsm_median": 710.45,
+    "dsm_p90": 713.32,
+    "median_above_water_m": 16.69
+   },
+   {
+    "part": "added_430222934",
+    "samples": 787,
+    "dsm_p10": 708.87,
+    "dsm_median": 711.1,
+    "dsm_p90": 714.77,
+    "median_above_water_m": 17.34
+   },
+   {
+    "part": "added_505630336",
+    "samples": 180,
+    "dsm_p10": 700.03,
+    "dsm_median": 706.49,
+    "dsm_p90": 714.37,
+    "median_above_water_m": 12.73
+   },
+   {
+    "part": "added_38001208",
+    "samples": 107,
+    "dsm_p10": 708.42,
+    "dsm_median": 710.27,
+    "dsm_p90": 714.73,
+    "median_above_water_m": 16.51
+   },
+   {
+    "part": "added_103485440",
+    "samples": 277,
+    "dsm_p10": 700.57,
+    "dsm_median": 708.72,
+    "dsm_p90": 708.82,
+    "median_above_water_m": 14.96
+   },
+   {
+    "part": "added_103485442",
+    "samples": 161,
+    "dsm_p10": 711.11,
+    "dsm_median": 717.17,
+    "dsm_p90": 723.72,
+    "median_above_water_m": 23.41
+   },
+   {
+    "part": "added_103485444",
+    "samples": 283,
+    "dsm_p10": 711.69,
+    "dsm_median": 713.1,
+    "dsm_p90": 715.15,
+    "median_above_water_m": 19.34
+   },
+   {
+    "part": "added_103485445",
+    "samples": 288,
+    "dsm_p10": 710.49,
+    "dsm_median": 711.63,
+    "dsm_p90": 712.65,
+    "median_above_water_m": 17.87
+   },
+   {
+    "part": "added_103485449",
+    "samples": 44,
+    "dsm_p10": 723.4,
+    "dsm_median": 724.35,
+    "dsm_p90": 724.77,
+    "median_above_water_m": 30.59
+   },
+   {
+    "part": "added_333132008",
+    "samples": 241,
+    "dsm_p10": 709.28,
+    "dsm_median": 711.8,
+    "dsm_p90": 713.92,
+    "median_above_water_m": 18.04
+   },
+   {
+    "part": "added_430222935",
+    "samples": 123,
+    "dsm_p10": 707.81,
+    "dsm_median": 712.39,
+    "dsm_p90": 717.44,
+    "median_above_water_m": 18.63
+   },
+   {
+    "part": "added_496863877",
+    "samples": 133,
+    "dsm_p10": 709.77,
+    "dsm_median": 710.0,
+    "dsm_p90": 711.36,
+    "median_above_water_m": 16.24
+   },
+   {
+    "part": "added_496863878",
+    "samples": 121,
+    "dsm_p10": 698.27,
+    "dsm_median": 702.04,
+    "dsm_p90": 705.89,
+    "median_above_water_m": 8.28
+   },
+   {
+    "part": "added_1261356104",
+    "samples": 36,
+    "dsm_p10": 710.06,
+    "dsm_median": 710.13,
+    "dsm_p90": 710.33,
+    "median_above_water_m": 16.37
+   },
+   {
+    "part": "added_1262002013",
+    "samples": 144,
+    "dsm_p10": 708.61,
+    "dsm_median": 708.89,
+    "dsm_p90": 708.96,
+    "median_above_water_m": 15.13
+   }
+  ]
+ },
  "N258-grierson": {
   "dem_min_m": 613.489990234375,
   "water_surface_mode_m": 613.74,
@@ -1455,6 +2101,218 @@
    }
   ]
  },
+ "R20-beverly": {
+  "dem_min_m": 609.7000122070312,
+  "water_surface_mode_m": 610.14,
+  "water_pixels_within_0.1m": 172058,
+  "decks": [
+   {
+    "part": "road_deck",
+    "samples": 106,
+    "dsm_p10": 632.2,
+    "dsm_median": 632.42,
+    "dsm_p90": 632.99,
+    "median_above_water_m": 22.28
+   },
+   {
+    "part": "bridge_outline",
+    "samples": 236,
+    "dsm_p10": 617.25,
+    "dsm_median": 630.41,
+    "dsm_p90": 633.3,
+    "median_above_water_m": 20.27
+   },
+   {
+    "part": "northwest_road",
+    "samples": 44,
+    "dsm_p10": 633.01,
+    "dsm_median": 633.72,
+    "dsm_p90": 634.46,
+    "median_above_water_m": 23.58
+   },
+   {
+    "part": "southeast_road",
+    "samples": 143,
+    "dsm_p10": 634.22,
+    "dsm_median": 638.62,
+    "dsm_p90": 644.32,
+    "median_above_water_m": 28.48
+   }
+  ]
+ },
+ "R21-clover-bar": {
+  "dem_min_m": 609.6199951171875,
+  "water_surface_mode_m": 610.07,
+  "water_pixels_within_0.1m": 166200,
+  "decks": [
+   {
+    "part": "road_deck",
+    "samples": 117,
+    "dsm_p10": 632.91,
+    "dsm_median": 634.1,
+    "dsm_p90": 635.11,
+    "median_above_water_m": 24.03
+   },
+   {
+    "part": "bridge_outline",
+    "samples": 237,
+    "dsm_p10": 625.1,
+    "dsm_median": 633.47,
+    "dsm_p90": 635.39,
+    "median_above_water_m": 23.4
+   },
+   {
+    "part": "northwest_road",
+    "samples": 50,
+    "dsm_p10": 635.44,
+    "dsm_median": 635.98,
+    "dsm_p90": 636.44,
+    "median_above_water_m": 25.91
+   },
+   {
+    "part": "southeast_road",
+    "samples": 131,
+    "dsm_p10": 632.62,
+    "dsm_median": 637.61,
+    "dsm_p90": 644.91,
+    "median_above_water_m": 27.54
+   }
+  ]
+ },
+ "R22-clover-bar-railway": {
+  "dem_min_m": 609.5900268554688,
+  "water_surface_mode_m": 609.84,
+  "water_pixels_within_0.1m": 227903,
+  "decks": [
+   {
+    "part": "rail_deck",
+    "samples": 169,
+    "dsm_p10": 651.35,
+    "dsm_median": 651.45,
+    "dsm_p90": 651.54,
+    "median_above_water_m": 41.61
+   },
+   {
+    "part": "bridge_outline",
+    "samples": 341,
+    "dsm_p10": 615.74,
+    "dsm_median": 650.02,
+    "dsm_p90": 651.72,
+    "median_above_water_m": 40.18
+   },
+   {
+    "part": "northwest_rail",
+    "samples": 186,
+    "dsm_p10": 651.48,
+    "dsm_median": 651.66,
+    "dsm_p90": 651.79,
+    "median_above_water_m": 41.82
+   },
+   {
+    "part": "southeast_rail",
+    "samples": 365,
+    "dsm_p10": 652.19,
+    "dsm_median": 656.78,
+    "dsm_p90": 658.24,
+    "median_above_water_m": 46.94
+   }
+  ]
+ },
+ "R6-quesnell": {
+  "dem_min_m": 617.8900146484375,
+  "water_surface_mode_m": 618.44,
+  "water_pixels_within_0.1m": 186313,
+  "decks": [
+   {
+    "part": "west_road_deck",
+    "samples": 102,
+    "dsm_p10": 636.82,
+    "dsm_median": 637.8,
+    "dsm_p90": 638.81,
+    "median_above_water_m": 19.36
+   },
+   {
+    "part": "east_road_deck_south",
+    "samples": 33,
+    "dsm_p10": 636.99,
+    "dsm_median": 637.31,
+    "dsm_p90": 637.62,
+    "median_above_water_m": 18.87
+   },
+   {
+    "part": "east_road_deck_mid",
+    "samples": 24,
+    "dsm_p10": 637.77,
+    "dsm_median": 637.96,
+    "dsm_p90": 638.19,
+    "median_above_water_m": 19.52
+   },
+   {
+    "part": "east_road_deck_north",
+    "samples": 47,
+    "dsm_p10": 638.35,
+    "dsm_median": 638.81,
+    "dsm_p90": 639.27,
+    "median_above_water_m": 20.37
+   },
+   {
+    "part": "fox_drive_ramp_on_deck",
+    "samples": 34,
+    "dsm_p10": 636.96,
+    "dsm_median": 637.46,
+    "dsm_p90": 637.68,
+    "median_above_water_m": 19.02
+   },
+   {
+    "part": "east_shared_use_path",
+    "samples": 102,
+    "dsm_p10": 637.4,
+    "dsm_median": 638.74,
+    "dsm_p90": 639.95,
+    "median_above_water_m": 20.3
+   },
+   {
+    "part": "south_east_road",
+    "samples": 31,
+    "dsm_p10": 636.65,
+    "dsm_median": 636.72,
+    "dsm_p90": 636.86,
+    "median_above_water_m": 18.28
+   },
+   {
+    "part": "south_west_road",
+    "samples": 32,
+    "dsm_p10": 636.3,
+    "dsm_median": 636.43,
+    "dsm_p90": 637.3,
+    "median_above_water_m": 17.99
+   },
+   {
+    "part": "south_fox_drive_ramp",
+    "samples": 70,
+    "dsm_p10": 628.27,
+    "dsm_median": 632.35,
+    "dsm_p90": 636.31,
+    "median_above_water_m": 13.91
+   },
+   {
+    "part": "north_east_road",
+    "samples": 155,
+    "dsm_p10": 639.78,
+    "dsm_median": 644.79,
+    "dsm_p90": 651.01,
+    "median_above_water_m": 26.35
+   },
+   {
+    "part": "north_west_road",
+    "samples": 219,
+    "dsm_p10": 639.74,
+    "dsm_median": 647.78,
+    "dsm_p90": 655.79,
+    "median_above_water_m": 29.34
+   }
+  ]
+ },
  "R8-groat": {
   "dem_min_m": 615.6599731445312,
   "water_surface_mode_m": 616.31,
@@ -1756,19 +2614,19 @@
    },
    {
     "part": "lrt_approach",
-    "samples": 382,
-    "dsm_p10": 666.3,
-    "dsm_median": 667.32,
-    "dsm_p90": 669.06,
-    "median_above_water_m": 50.5
+    "samples": 512,
+    "dsm_p10": 666.4,
+    "dsm_median": 668.54,
+    "dsm_p90": 671.99,
+    "median_above_water_m": 51.72
    },
    {
     "part": "lrt_approach",
-    "samples": 383,
-    "dsm_p10": 666.26,
-    "dsm_median": 667.43,
-    "dsm_p90": 670.6,
-    "median_above_water_m": 50.61
+    "samples": 513,
+    "dsm_p10": 666.34,
+    "dsm_median": 668.68,
+    "dsm_p90": 673.73,
+    "median_above_water_m": 51.86
    },
    {
     "part": "lrt_approach",
@@ -1856,6 +2714,260 @@
     "dsm_median": 617.48,
     "dsm_p90": 619.87,
     "median_above_water_m": 3.82
+   }
+  ]
+ },
+ "W85-fox-drive": {
+  "dem_min_m": 617.9400024414062,
+  "water_surface_mode_m": 618.09,
+  "water_pixels_within_0.1m": 45340,
+  "decks": [
+   {
+    "part": "south_road_deck",
+    "samples": 28,
+    "dsm_p10": 628.02,
+    "dsm_median": 628.2,
+    "dsm_p90": 628.39,
+    "median_above_water_m": 10.11
+   },
+   {
+    "part": "north_road_deck_east",
+    "samples": 22,
+    "dsm_p10": 627.98,
+    "dsm_median": 628.12,
+    "dsm_p90": 628.23,
+    "median_above_water_m": 10.03
+   },
+   {
+    "part": "north_road_deck_west",
+    "samples": 8,
+    "dsm_p10": 627.86,
+    "dsm_median": 627.88,
+    "dsm_p90": 627.95,
+    "median_above_water_m": 9.79
+   },
+   {
+    "part": "north_shared_use_path",
+    "samples": 28,
+    "dsm_p10": 627.93,
+    "dsm_median": 628.68,
+    "dsm_p90": 629.07,
+    "median_above_water_m": 10.59
+   },
+   {
+    "part": "south_sidewalk",
+    "samples": 30,
+    "dsm_p10": 628.65,
+    "dsm_median": 628.91,
+    "dsm_p90": 629.17,
+    "median_above_water_m": 10.82
+   },
+   {
+    "part": "west_south_road",
+    "samples": 18,
+    "dsm_p10": 627.82,
+    "dsm_median": 627.84,
+    "dsm_p90": 627.92,
+    "median_above_water_m": 9.75
+   },
+   {
+    "part": "west_north_road",
+    "samples": 18,
+    "dsm_p10": 627.69,
+    "dsm_median": 627.72,
+    "dsm_p90": 627.8,
+    "median_above_water_m": 9.63
+   },
+   {
+    "part": "east_south_road",
+    "samples": 36,
+    "dsm_p10": 628.46,
+    "dsm_median": 628.69,
+    "dsm_p90": 628.9,
+    "median_above_water_m": 10.6
+   },
+   {
+    "part": "east_north_road",
+    "samples": 55,
+    "dsm_p10": 628.36,
+    "dsm_median": 628.68,
+    "dsm_p90": 629.03,
+    "median_above_water_m": 10.59
+   }
+  ]
+ },
+ "Y79-bremner": {
+  "dem_min_m": 657.3699951171875,
+  "water_surface_mode_m": 667.12,
+  "water_pixels_within_0.1m": 70283,
+  "decks": [
+   {
+    "part": "east_overpass",
+    "samples": 29,
+    "dsm_p10": 677.21,
+    "dsm_median": 677.27,
+    "dsm_p90": 677.31,
+    "median_above_water_m": 10.15
+   },
+   {
+    "part": "west_overpass",
+    "samples": 30,
+    "dsm_p10": 677.62,
+    "dsm_median": 677.7,
+    "dsm_p90": 677.72,
+    "median_above_water_m": 10.58
+   },
+   {
+    "part": "north_west_road",
+    "samples": 269,
+    "dsm_p10": 675.8,
+    "dsm_median": 676.98,
+    "dsm_p90": 677.36,
+    "median_above_water_m": 9.86
+   },
+   {
+    "part": "north_east_road",
+    "samples": 28,
+    "dsm_p10": 677.18,
+    "dsm_median": 677.25,
+    "dsm_p90": 677.73,
+    "median_above_water_m": 10.13
+   },
+   {
+    "part": "south_east_road",
+    "samples": 41,
+    "dsm_p10": 676.88,
+    "dsm_median": 676.98,
+    "dsm_p90": 677.13,
+    "median_above_water_m": 9.86
+   },
+   {
+    "part": "south_west_road",
+    "samples": 33,
+    "dsm_p10": 677.16,
+    "dsm_median": 677.3,
+    "dsm_p90": 677.52,
+    "median_above_water_m": 10.18
+   },
+   {
+    "part": "northeast_loop",
+    "samples": 87,
+    "dsm_p10": 670.64,
+    "dsm_median": 673.78,
+    "dsm_p90": 677.03,
+    "median_above_water_m": 6.66
+   },
+   {
+    "part": "southeast_loop",
+    "samples": 131,
+    "dsm_p10": 670.1,
+    "dsm_median": 673.27,
+    "dsm_p90": 677.18,
+    "median_above_water_m": 6.15
+   },
+   {
+    "part": "ramp_se_out_16e",
+    "samples": 286,
+    "dsm_p10": 676.63,
+    "dsm_median": 680.48,
+    "dsm_p90": 685.86,
+    "median_above_water_m": 13.36
+   },
+   {
+    "part": "ramp_sw_16e_to_21s",
+    "samples": 230,
+    "dsm_p10": 670.95,
+    "dsm_median": 672.71,
+    "dsm_p90": 676.39,
+    "median_above_water_m": 5.59
+   },
+   {
+    "part": "ramp_ne_a",
+    "samples": 42,
+    "dsm_p10": 675.87,
+    "dsm_median": 675.99,
+    "dsm_p90": 676.81,
+    "median_above_water_m": 8.87
+   },
+   {
+    "part": "ramp_sw_stub",
+    "samples": 14,
+    "dsm_p10": 676.6,
+    "dsm_median": 676.82,
+    "dsm_p90": 677.04,
+    "median_above_water_m": 9.7
+   },
+   {
+    "part": "ramp_nw_21s_to_16w",
+    "samples": 268,
+    "dsm_p10": 670.64,
+    "dsm_median": 675.23,
+    "dsm_p90": 677.1,
+    "median_above_water_m": 8.11
+   },
+   {
+    "part": "ramp_16w_to_ne",
+    "samples": 212,
+    "dsm_p10": 675.62,
+    "dsm_median": 678.68,
+    "dsm_p90": 681.07,
+    "median_above_water_m": 11.56
+   },
+   {
+    "part": "north_east_road_2",
+    "samples": 210,
+    "dsm_p10": 676.73,
+    "dsm_median": 677.03,
+    "dsm_p90": 677.48,
+    "median_above_water_m": 9.91
+   },
+   {
+    "part": "ramp_nw_stub",
+    "samples": 17,
+    "dsm_p10": 677.04,
+    "dsm_median": 677.22,
+    "dsm_p90": 677.46,
+    "median_above_water_m": 10.1
+   },
+   {
+    "part": "ramp_se_21n_to_16e_a",
+    "samples": 65,
+    "dsm_p10": 675.43,
+    "dsm_median": 675.46,
+    "dsm_p90": 676.28,
+    "median_above_water_m": 8.34
+   },
+   {
+    "part": "ramp_21n_to_16e_b",
+    "samples": 165,
+    "dsm_p10": 675.37,
+    "dsm_median": 675.67,
+    "dsm_p90": 676.45,
+    "median_above_water_m": 8.55
+   },
+   {
+    "part": "ramp_ne_b",
+    "samples": 74,
+    "dsm_p10": 675.85,
+    "dsm_median": 676.17,
+    "dsm_p90": 676.59,
+    "median_above_water_m": 9.05
+   },
+   {
+    "part": "south_east_road_2",
+    "samples": 109,
+    "dsm_p10": 676.39,
+    "dsm_median": 676.61,
+    "dsm_p90": 676.81,
+    "median_above_water_m": 9.49
+   },
+   {
+    "part": "south_west_road_2",
+    "samples": 74,
+    "dsm_p10": 676.39,
+    "dsm_median": 676.65,
+    "dsm_p90": 676.96,
+    "median_above_water_m": 9.53
    }
   ]
  },

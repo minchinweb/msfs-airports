@@ -7,12 +7,14 @@ and prints river-surface and deck statistics. Re-runnable.
 import glob, io, json, math, os, sys, urllib.request
 import numpy as np, rasterio
 from rasterio.windows import from_bounds
+from rasterio.warp import reproject, Resampling
 from pyproj import Transformer
 from PIL import Image
 
 HERE = os.path.dirname(os.path.abspath(__file__))
 ORTHO = "https://gis.edmonton.ca/site1/rest/services/Imagery_Public/2019_RGB_Pictometry/ImageServer/exportImage"
-DEM = "https://canelevation-dem.s3.ca-central-1.amazonaws.com/hrdem-lidar/AB-Edmonton-1m-%s.tif"
+DEM_AB = "https://canelevation-dem.s3.ca-central-1.amazonaws.com/hrdem-lidar/AB-Edmonton-1m-%s.tif"
+DEM_NRCAN = "https://canelevation-dem.s3.ca-central-1.amazonaws.com/hrdem-lidar/NRCAN-Edmonton_2018-1m-%s.tif"
 to3979 = Transformer.from_crs(4326, 3979, always_xy=True)
 to3776 = Transformer.from_crs(4326, 3776, always_xy=True)
 MARGIN, MINHALF, RES = 120.0, 250.0, 0.2
@@ -49,6 +51,25 @@ def fetch_ortho(x0, y0, x1, y1, out, RES=RES):
     img.save(out, quality=82)
     return w, h
 
+def read_dem(k, bx):
+    """AB-Edmonton-1m clip; its nodata cells (outside the city limit) are filled from NRCAN-Edmonton_2018-1m.
+    The two agree to about 0.005 m where both have data (DATA-SOURCES.md)."""
+    with rasterio.open(DEM_AB % k) as ab:
+        win = from_bounds(*bx, ab.transform).round_offsets().round_lengths()
+        a = ab.read(1, window=win)
+        nod = ab.nodata
+        prof = dict(driver="GTiff", height=a.shape[0], width=a.shape[1], count=1, dtype="float32", crs=ab.crs,
+                    transform=ab.window_transform(win), nodata=nod, compress="deflate", predictor=3)
+    holes = (a == nod) if nod is not None else np.zeros(a.shape, bool)
+    if holes.any():
+        with rasterio.open(DEM_NRCAN % k) as nr:
+            fill = np.full(a.shape, nod if nod is not None else 0, dtype="float32")
+            reproject(source=rasterio.band(nr, 1), destination=fill, src_nodata=nr.nodata,
+                      dst_transform=prof["transform"], dst_crs=prof["crs"], dst_nodata=nod,
+                      resampling=Resampling.nearest)
+        a[holes] = fill[holes]
+    return a, prof
+
 def main():
     want = sys.argv[1:]
     folders = sorted(set(os.path.dirname(f) for f in glob.glob(os.path.join(HERE, "reference", "**", "geometry.json"), recursive=True)))
@@ -71,14 +92,12 @@ def main():
         corners = [to3979.transform(*to3776.transform(x, y, direction="INVERSE")) for x in (x0, x1) for y in (y0, y1)]
         bx = (min(c[0] for c in corners), min(c[1] for c in corners), max(c[0] for c in corners), max(c[1] for c in corners))
         for k in ("dtm", "dsm"):
-            with rasterio.open(DEM % k) as ds:
-                win = from_bounds(*bx, ds.transform).round_offsets().round_lengths()
-                a = ds.read(1, window=win)
-                prof = dict(driver="GTiff", height=a.shape[0], width=a.shape[1], count=1, dtype="float32", crs=ds.crs,
-                            transform=ds.window_transform(win), nodata=ds.nodata, compress="deflate", predictor=3)
-                with rasterio.open(os.path.join(folder, "elevation", f"{k}-2018-1m.tif"), "w", **prof) as o:
-                    o.write(a, 1)
-        print(name, "ortho", w, h, "dem", a.shape, flush=True)
+            a, prof = read_dem(k, bx)
+            with rasterio.open(os.path.join(folder, "elevation", f"{k}-2018-1m.tif"), "w", **prof) as o:
+                o.write(a, 1)
+            left = int((a == prof["nodata"]).sum()) if prof["nodata"] is not None else 0
+            print(name, k, "dem", a.shape, "nodata left", left, flush=True)
+        print(name, "ortho", w, h, flush=True)
 
 if __name__ == "__main__":
     main()

@@ -2,11 +2,10 @@
 
 Files: `dtm-2018-1m.tif` (bare earth), `dsm-2018-1m.tif` (surface incl. bridges, buildings, trees). EPSG:3979, 1 m, float32 metres, nodata -32767. Source: NRCan HRDEM `AB-Edmonton-1m` (City of Edmonton 2018 LiDAR), Open Government Licence - Canada.
 
-Water surface in this clip: **618.09 m** (2,027.8 ft), valid. The clip holds a water reach at the Whitemud Creek mouth.
+River surface in this clip: **618.09 m** (2,027.9 ft), valid.
 Lowest DTM pixel: 617.94 m.
-DTM ground at the project centre (53.5032, -113.5610): **618.37 m**.
 
-| Part | Samples | DSM p10 | DSM median | DSM p90 | Median above water |
+| Part | Samples | DSM p10 | DSM median | DSM p90 | Median above river |
 | --- | --- | --- | --- | --- | --- |
 | south_road_deck | 28 | 628.02 | 628.20 | 628.39 | 10.11 |
 | north_road_deck_east | 22 | 627.98 | 628.12 | 628.23 | 10.03 |

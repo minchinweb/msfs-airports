@@ -11,6 +11,8 @@ River surface = the commonest flat DTM height in the clip's lowest 6 m. It is on
 | G116-hawrelak | 616.26 (yes) | 635.23 | 18.97 | road_deck |
 | G117-102-avenue | 616.81 (yes) | 662.50 | 45.69 | road_deck |
 | G119-107-avenue | 661.86 (NO) | 667.94 | 6.08 (meaningless) | road_deck |
+| H39-henday-yellowhead-west | 671.19 (yes) | 691.54 | 20.35 | henday_nb_over_yellowhead |
+| H52-sherwood-park-cloverleaf | 693.76 (yes) | 717.86 | 24.10 | eastbound_overpass |
 | N258-grierson | 613.74 (yes) | 630.80 | 17.06 | road_deck |
 | N259-rossdale-mcdougall | 613.74 (yes) | 636.19 | 22.45 | road_deck |
 | N260-scona-connors | 613.66 (yes) | 631.53 | 17.87 | scona_over_connors |
@@ -22,10 +24,16 @@ River surface = the commonest flat DTM height in the clip's lowest 6 m. It is on
 | R13-low-level | 613.74 (yes) | 630.96 | 17.22 | road_deck |
 | R14-tawatina | 613.26 (yes) | 628.19 | 14.93 | lrt_track_west |
 | R15-dawson | 612.83 (yes) | 631.01 | 18.18 | road_deck |
+| R20-beverly | 610.14 (yes) | 632.42 | 22.28 | road_deck |
+| R21-clover-bar | 610.07 (yes) | 634.10 | 24.03 | road_deck |
+| R22-clover-bar-railway | 609.84 (yes) | 651.45 | 41.61 | rail_deck |
+| R6-quesnell | 618.44 (yes) | 637.80 | 19.36 | west_road_deck |
 | R8-groat | 616.31 (yes) | 631.83 | 15.52 | road_deck |
 | R9-menzies | 614.92 (yes) | 638.28 | 23.36 | east_track |
 | T133-stony-plain | 616.82 (yes) | 665.73 | 48.91 | road_deck |
 | V257-river-queen | 613.66 (yes) | 614.40 | 0.74 | pier |
+| W85-fox-drive | 618.09 (yes) | 628.20 | 10.11 | south_road_deck |
+| Y79-bremner | 667.12 (yes) | 677.27 | 10.15 | east_overpass |
 | Z125-wellington | 637.95 (NO) | 664.35 | 26.40 (meaningless) | road_deck |
 
 **Built after the survey, so these rows are not the finished structure:** R14 Tawatina (the 2018 LiDAR predates the bridge; its row is not a deck), P152 (the stop was built on the ground read here), F256 (finished 2018), and T133 and Z125 (the rows show the old bridges that were replaced). See `reference/<site>/OPEN-QUESTIONS.md` and `BLOCKERS.md` section 2.
