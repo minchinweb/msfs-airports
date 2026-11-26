@@ -1,6 +1,9 @@
 <?xml version="1.0" encoding="utf-8"?>
 <ModelInfo guid="{5B58D002-9BD1-539B-BA67-CEED4254F558}" version="1.1">
 	<LODS>
-		<LOD minSize="0" ModelFile="cyxd_south_fence.gltf"/>
+		<LOD minSize="23.2" ModelFile="cyxd_south_fence.gltf"/>
+		<LOD minSize="4" ModelFile="cyxd_south_fence_lod1.gltf"/>
+		<LOD minSize="1" ModelFile="cyxd_south_fence_lod2.gltf"/>
+		<LOD minSize="0" ModelFile="cyxd_south_fence_lod3.gltf"/>
 	</LODS>
 </ModelInfo>

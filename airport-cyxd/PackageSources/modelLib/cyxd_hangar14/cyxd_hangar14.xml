@@ -1,6 +1,9 @@
 <?xml version="1.0" encoding="utf-8"?>
 <ModelInfo guid="{29B358ED-E096-5E29-A73B-86C051B06B22}" version="1.1">
 	<LODS>
-		<LOD minSize="0" ModelFile="cyxd_hangar14.gltf"/>
+		<LOD minSize="7.1" ModelFile="cyxd_hangar14.gltf"/>
+		<LOD minSize="4" ModelFile="cyxd_hangar14_lod1.gltf"/>
+		<LOD minSize="0.9" ModelFile="cyxd_hangar14_lod2.gltf"/>
+		<LOD minSize="0" ModelFile="cyxd_hangar14_lod3.gltf"/>
 	</LODS>
 </ModelInfo>

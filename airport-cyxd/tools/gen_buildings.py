@@ -11,10 +11,12 @@ Run:  python -I airport-cyxd/tools/gen_buildings.py   (from the repo root)
 Model frame: origin on the ground at the footprint centre, Y up, +Z = object heading direction.
 Hotels (Edmonton Inn, Chateau Louis) are skipped on purpose.
 """
-import json, math, re, struct, uuid, zlib
+import json, math, re, struct, sys, uuid, zlib
 from pathlib import Path
 
 ROOT = Path(__file__).resolve().parents[2]
+sys.path.insert(0, str(ROOT / "tools"))
+from model_lods import add_lods  # noqa: E402
 SRC = ROOT / "docs/cyxd/historic-buildings-genericbuilding.xml"
 CYXD = ROOT / "airport-cyxd/PackageSources/Scenery/airport-cyxd/CYXD.xml"
 MODELLIB = ROOT / "airport-cyxd/PackageSources/modelLib"
@@ -360,6 +362,7 @@ class Mesh:
         (folder / f"{name}.xml").write_text(
             f'<?xml version="1.0" encoding="utf-8"?>\n<ModelInfo guid="{guid}" version="1.1">\n'
             f'\t<LODS>\n\t\t<LOD minSize="0" ModelFile="{name}.gltf"/>\n\t</LODS>\n</ModelInfo>\n')
+        add_lods(folder, name)  # lower LODs so it is drawn far out (tools/model_lods.py)
         return guid
 
 
