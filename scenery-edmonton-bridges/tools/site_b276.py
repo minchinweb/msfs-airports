@@ -47,6 +47,11 @@ POPULUS = ("{5269E5F0-4CB5-4E81-828A-61169D850DF4}", "{70080A01-E271-45DC-9F70-3
 BETULA = ("{191FAD7E-E94C-40A3-ADC0-902A5A1F3CB7}", "{81D19B30-F45D-47CB-9787-2BEF376C64CA}", "{4A576EEF-CFA0-47DB-91F9-526718AE5950}",
           "{2C5B485B-06A8-4E8E-B86D-23711DB64A8D}")
 CUPRESSUS = ("{D49B152B-463B-4654-A7B0-9AEA48A27215}",)
+# Each stock tree's own size in m (bglindex.bout record, tag 0x21, a float; read 2026-11-25).  Placed at scale 1 they stood 2 to 5 times
+# their crowns in the sim (the cypress about 60 m, as its 62.5 here), so the field is taken as the model's height and each tree is
+# scaled to its 2018 crown.
+SIZE = {PINUS[0]: 41.5, PINUS[1]: 19.9, PINUS[2]: 34.0, PINUS[3]: 30.6, POPULUS[0]: 26.2, POPULUS[1]: 25.4,
+        BETULA[0]: 28.5, BETULA[1]: 28.9, BETULA[2]: 18.4, BETULA[3]: 30.4, CUPRESSUS[0]: 62.5}
 # 2018 DSM crowns on the parcel: (lat, lon, crown height m above the DTM, species).  Spruces (pine stand-ins): the row on the north lot's
 # north edge and the trees by 85 Street (the plan's starbursts there; the tall spruces right of the wing in the 2024 photo), the big pair
 # west of the chapel and the blue spruces in front of it (2024 photo).  Columnar: the tree at the chapel's east corner (two columnar
@@ -79,6 +84,24 @@ def to_xz(u, v):
 def to_uv(x, z):
     c, s = math.cos(TH), math.sin(TH)
     return (x * c + z * s, -x * s + z * c)
+
+
+# the chapel's front bay, (u, v): back east, front east, front west, back west.  The OSM bump (outline nodes 23 to 26: (-2.59, -18.84),
+# (-3.67, -24.86), (-15.44, -24.99), (-16.40, -18.84)) narrows toward the front; this is it squared at the front (v -25.0, the face) and
+# set 3 to 8 cm outside it, back to the chapel's front wall at v -18.8.
+BAY = [(-2.52, -18.8), (-3.72, -25.0), (-15.48, -25.0), (-16.44, -18.8)]
+
+
+def bay_u(a, b, v):
+    """u on the line a -> b at v."""
+    return a[0] + (b[0] - a[0]) * (v - a[1]) / (b[1] - a[1])
+
+
+def out_of(a, b):
+    """Outward unit normal (u, v) of a bay edge a -> b (edges run clockwise in u, v, as the front from west to east)."""
+    du, dv = b[0] - a[0], b[1] - a[1]
+    ln = math.hypot(du, dv)
+    return (dv / ln, -du / ln)
 
 
 def solid(m, uv, y0, y1, sw, sw_top=None):
@@ -192,7 +215,6 @@ def build():
         L = math.hypot(b[0] - a[0], b[1] - a[1])
         out = (sgn * (b[1] - a[1]) / L, -sgn * (b[0] - a[0]) / L)
         edges.append((a, b, out, L))
-        face_quad(m, a, b, LOW - 0.45, LOW, out, 0.12, BRONZE)
 
     def in_box(a, b, u0, u1, v0, v1):
         mu, mv = (a[0] + b[0]) / 2, (a[1] + b[1]) / 2
@@ -204,6 +226,9 @@ def build():
             continue
         if L >= 6.0:
             window_band(m, a, b, out)
+    for a, b, out, L in edges:                              # the low roof's fascia, except round the bay (inside the chapel there)
+        if not in_box(a, b, -16.5, -2.5, -25.2, -18.7):
+            face_quad(m, a, b, LOW - 0.45, LOW, out, 0.12, BRONZE)
 
     # lettering panel at the east end of the front: 0.5 m higher, two lines of bronze letters (a strip each) on its -v face
     ubox(m, 23.5, 34.8, -17.2, -12.0, -1.0, LOW + 0.5, BUFF, sw_top=LROOF)
@@ -222,20 +247,26 @@ def build():
 
     # chapel: main block and front bay, buff brick; the bay's front is beige panels between white pilasters, brick piers at the corners
     ubox(m, -18.5, -3.0, -18.8, -4.5, 0.0, CHAPEL, BUFF, sw_top=LROOF)
-    ubox(m, -15.4, -3.7, -25.0, -18.0, -2.0, CHAPEL, BUFF, sw_top=LROOF)
+    # the bay follows the OSM bump, which narrows toward the front (its sides splay out to the chapel), and stops at the chapel's front
+    # wall.  A rectangle here let the low roof's splayed walls and fascia show through its sides and front, ran 0.8 m into the chapel,
+    # and the canopy ran into it.  It is set a few cm outside the bump so the low roof's walls there stay hidden.
+    solid(m, BAY, -2.0, CHAPEL, BUFF, sw_top=LROOF)
     m.mat = "glow_wash"
     face_quad(m, (-14.2, -25.0), (-4.9, -25.0), G, CHAPEL - 0.6, (0, -1), 0.05, CREAM)
     for k in range(6):
         uu = -14.2 + k * (9.3 / 5)
         face_quad(m, (uu - 0.12, -25.0), (uu + 0.12, -25.0), G, CHAPEL - 0.6, (0, -1), 0.09, WHITE)
     m.mat = None
-    for a, b, out in (((-15.4, -25.0), (-3.7, -25.0), (0, -1)), ((-3.7, -25.0), (-3.7, -18.0), (1, 0)), ((-15.4, -18.0), (-15.4, -25.0), (-1, 0)),
-                      ((-18.5, -4.5), (-3.0, -4.5), (0, 1)), ((-3.0, -18.8), (-3.0, -4.5), (1, 0)), ((-18.5, -18.8), (-18.5, -4.5), (-1, 0))):
+    bay_e, bay_w = (BAY[1], BAY[0]), (BAY[3], BAY[2])       # front to back on the east side, back to front on the west
+    for a, b, out in ((BAY[2], BAY[1], (0, -1)), (*bay_e, out_of(*bay_e)), (*bay_w, out_of(*bay_w)),
+                      ((-18.5, -4.5), (-3.0, -4.5), (0, 1)), ((-3.0, -18.8), (-3.0, -4.5), (1, 0)), ((-18.5, -18.8), (-18.5, -4.5), (-1, 0)),
+                      ((-18.5, -18.8), BAY[3], (0, -1))):
         face_quad(m, a, b, CHAPEL - 0.6, CHAPEL, out, 0.1, BRONZE)
     # tall narrow windows on the bay's east side (Mapillary 2018) and a clerestory row on the main block's east wall above the low roof
     m.mat = "glow"
     for vv in (-23.6, -20.6):
-        face_quad(m, (-3.7, vv), (-3.7, vv + 0.9), G + 1.0, CHAPEL - 1.2, (1, 0), 0.04, GLASS)
+        face_quad(m, (bay_u(BAY[1], BAY[0], vv), vv), (bay_u(BAY[1], BAY[0], vv + 0.9), vv + 0.9), G + 1.0, CHAPEL - 1.2,
+                  out_of(*bay_e), 0.04, GLASS)
     for vv in (-16.5, -13.0, -9.5, -6.0):
         face_quad(m, (-3.0, vv), (-3.0, vv + 1.2), LOW + 0.8, CHAPEL - 1.0, (1, 0), 0.04, GLASS)
     m.mat = None
@@ -246,11 +277,14 @@ def build():
     m.mat = None
     face_quad(m, (-2.2, -18.8), (3.2, -18.8), G + 2.6, G + 2.75, (0, -1), 0.06, WHITE)
     face_quad(m, (-0.2, -18.8), (1.2, -18.8), G + 2.15, G + 2.45, (0, -1), 0.08, DARK)     # address board
+    # the canopy's west edge runs along the bay's splayed east wall, 3 cm off it (it ran 0.3 m into the bay as a rectangle)
     cy0, cy1 = G + 3.0, G + 3.45
-    ubox(m, -3.4, 3.6, -21.8, -18.8, cy0, cy1, WHITE, sw_top=LROOF)
-    face_quad(m, (-3.4, -21.8), (3.6, -21.8), cy0, cy1, (0, -1), 0.04, BRONZE)
+    cw0, cw1 = bay_u(BAY[1], BAY[0], -21.8) + 0.03, bay_u(BAY[1], BAY[0], -18.8) + 0.03
+    solid(m, [(cw0, -21.8), (3.6, -21.8), (3.6, -18.8), (cw1, -18.8)], cy0, cy1, WHITE, sw_top=LROOF)
+    face_quad(m, (cw0, -21.8), (3.6, -21.8), cy0, cy1, (0, -1), 0.04, BRONZE)
     m.mat = "glow"
-    pts = [to_xz(u, v) for u, v in ((-3.2, -21.6), (3.4, -21.6), (3.4, -18.9), (-3.2, -18.9))]
+    pts = [to_xz(u, v) for u, v in ((bay_u(BAY[1], BAY[0], -21.6) + 0.2, -21.6), (3.4, -21.6), (3.4, -18.9),
+                                    (bay_u(BAY[1], BAY[0], -18.9) + 0.2, -18.9))]
     m.poly([(x, cy0 - 0.02, z) for x, z in pts], WHITE, (pts[0][0], cy0 + 1.0, pts[0][1]))
     m.mat = "glow_lamp"
     for uu in (-1.0, 2.0):
@@ -258,7 +292,7 @@ def build():
         m.poly([(x, cy0 - 0.04, z) for x, z in pts], WHITE, (pts[0][0], cy0 + 1.0, pts[0][1]))
         light(m, uu, -20.3, cy0 - 0.1, 2500.0, 130.0)
     m.mat = None
-    for uu in (-3.2, 3.4):                                                     # canopy posts
+    for uu in (bay_u(BAY[1], BAY[0], -21.6) + 0.3, 3.4):                      # canopy posts, the west one clear of the bay
         ubox(m, uu - 0.1, uu + 0.1, -21.7, -21.5, G, cy0, WHITE)
 
     # spire: a brick shaft of three fins with stepped tops (photos), floodlit at night, a steel needle on the middle fin
@@ -292,7 +326,7 @@ def build():
     car_parks += bands(fr, CURVE, 2.75, "front drive inner row")
     car_parks += bands(fr, offset(CURVE[:OUTER_TO + 1], 12.5), 2.75, "front drive outer row")
 
-    objects = [("%s tree (stock MSFS tree; 2018 crown %.0f m)" % (CODE, h), la, lo, float((k * 137) % 360), guid)
+    objects = [("%s tree (stock MSFS tree; 2018 crown %.0f m)" % (CODE, h), la, lo, float((k * 137) % 360), guid, round(h / SIZE[guid], 3))
                for k, (la, lo, h, guid) in enumerate(TREES)]
     parcel = find_way(F, 594346540)[:-1]
     extra = [("exclude", "%s %s parcel (sim trees and buildings)" % (CODE, TITLE), DATUM, parcel)]

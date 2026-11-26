@@ -1,0 +1,147 @@
+{
+ "asset": {
+  "version": "2.0",
+  "generator": "scenery-edmonton-bridges/tools/bridgelib.py",
+  "extensions": {
+   "ASOBO_normal_map_convention": {
+    "tangent_space_convention": "DirectX"
+   }
+  }
+ },
+ "extensionsUsed": [
+  "ASOBO_normal_map_convention",
+  "ASOBO_tags"
+ ],
+ "scene": 0,
+ "scenes": [
+  {
+   "nodes": [
+    0
+   ]
+  }
+ ],
+ "nodes": [
+  {
+   "mesh": 0,
+   "name": "br_h27_calgary_trail_1_lod1"
+  }
+ ],
+ "meshes": [
+  {
+   "name": "br_h27_calgary_trail_1_lod1",
+   "primitives": [
+    {
+     "attributes": {
+      "POSITION": 0,
+      "NORMAL": 1,
+      "TEXCOORD_0": 2
+     },
+     "indices": 3,
+     "mode": 4,
+     "material": 0
+    }
+   ]
+  }
+ ],
+ "materials": [
+  {
+   "name": "bridge_palette",
+   "pbrMetallicRoughness": {
+    "baseColorTexture": {
+     "index": 0
+    },
+    "metallicFactor": 0.0,
+    "roughnessFactor": 0.9
+   },
+   "extensions": {
+    "ASOBO_tags": {
+     "tags": [
+      "Collision",
+      "Road"
+     ]
+    }
+   }
+  }
+ ],
+ "textures": [
+  {
+   "sampler": 0,
+   "source": 0
+  }
+ ],
+ "samplers": [
+  {
+   "magFilter": 9728,
+   "minFilter": 9728
+  }
+ ],
+ "images": [
+  {
+   "uri": "bridge_palette.png"
+  }
+ ],
+ "accessors": [
+  {
+   "bufferView": 0,
+   "componentType": 5126,
+   "count": 10000,
+   "type": "VEC3",
+   "min": [
+    -100.99220451924774,
+    0.10477499999990414,
+    -660.3852001070433
+   ],
+   "max": [
+    477.6652158737086,
+    20.52477212162521,
+    175.51365415283786
+   ]
+  },
+  {
+   "bufferView": 1,
+   "componentType": 5126,
+   "count": 10000,
+   "type": "VEC3"
+  },
+  {
+   "bufferView": 2,
+   "componentType": 5126,
+   "count": 10000,
+   "type": "VEC2"
+  },
+  {
+   "bufferView": 3,
+   "componentType": 5123,
+   "count": 15000,
+   "type": "SCALAR"
+  }
+ ],
+ "bufferViews": [
+  {
+   "buffer": 0,
+   "byteOffset": 0,
+   "byteLength": 120000
+  },
+  {
+   "buffer": 0,
+   "byteOffset": 120000,
+   "byteLength": 120000
+  },
+  {
+   "buffer": 0,
+   "byteOffset": 240000,
+   "byteLength": 80000
+  },
+  {
+   "buffer": 0,
+   "byteOffset": 320000,
+   "byteLength": 30000
+  }
+ ],
+ "buffers": [
+  {
+   "uri": "br_h27_calgary_trail_1_lod1.bin",
+   "byteLength": 350000
+  }
+ ]
+}

@@ -65,6 +65,25 @@ def balcony(m, x0, x1, z0, z1, y, open_sides):
         box(m, x0, x1, z1 - t, z1, y, y + h, GLASSLT)
 
 
+def parapet(m, x0, x1, z0, z1, y0, top, sw, sides="wens", t=0.3, off=0.1, rise=0.4):
+    """Parapet round the roof of the block x0..x1 / z0..z1 whose roof is at `top`: edge walls `t` thick, `off` proud of the faces, from
+    y0 to `rise` above the roof, on the given sides.  No face lies in the roof plane (the solid caps this replaces had their tops in
+    it and z-fought with the roof from above in the sim)."""
+    y1 = top + rise
+    zw0 = z0 - off if "s" in sides else z0
+    zw1 = z1 + off if "n" in sides else z1
+    if "w" in sides:
+        box(m, x0 - off, x0 + t, zw0, zw1, y0, y1, sw)
+    if "e" in sides:
+        box(m, x1 - t, x1 + off, zw0, zw1, y0, y1, sw)
+    xs0 = x0 + t if "w" in sides else x0
+    xs1 = x1 - t if "e" in sides else x1
+    if "s" in sides:
+        box(m, xs0, xs1, z0 - off, z0 + t, y0, y1, sw)
+    if "n" in sides:
+        box(m, xs0, xs1, z1 - t, z1 + off, y0, y1, sw)
+
+
 def build():
     whole = find_way(F, 1209666933)
     tower = find_way(F, 1221215089)
@@ -79,14 +98,28 @@ def build():
     wx1 = max(p[0] for p in we)
     wz0 = min(p[1] for p in we if p[0] > tx1 + 1.0)
     wz1 = max(p[1] for p in we if p[0] > tx1 + 1.0)
+    g = (tx0, tx1, tz0, tz1, wx1, wz0, wz1)
+    # Lower LODs keep the tower in view from the downtown approaches, 5 nm and more.  MSFS 2024 holds a model back until it fills a
+    # share of the screen set by its vertex count: the full model (about 11,000 vertices) needs about 4 %, about 1 nm out, which is
+    # where it popped in.  LOD 1 (no balcony rails) needs about 2 %.  LOD 2 is under 1,000 vertices, which has no floor.
+    lods = [(2.0, model(*g, lod=1)), (0.0, model(*g, lod=2))]
+    return dict(code=CODE, title=TITLE, lat0=lat0, lon0=lon0, alt=DATUM, parts=[("br_b262_holyrood_gardens", model(*g), lods, 4.0)],
+                frame=fr, axis=Axis([(tx0, 0.0), (wx1, 0.0)]),
+                views=[("a", 225.0, 12.0), ("b", 60.0, 18.0), ("c", 300.0, 45.0)])
 
+
+def model(tx0, tx1, tz0, tz1, wx1, wz0, wz1, lod=0):
+    """The building at LOD 0 (full), 1 (balcony slabs without their glass rails, which are most of the vertices) or 2 (far: the
+    masses, the crown frame, the stripes and parapets; no balconies, window bands or accent panels)."""
+    far = lod >= 2
     m = BMesh()
     # podium: the tower square, two storeys, storefront / townhouse bands
     box(m, tx0, tx1, tz0, tz1, -2.0, POD, METAL, sw_top=LROOF)
-    ring_bands(m, tx0, tx1, tz0, tz1, G + 0.6, G + L1 - 0.8, SLATE)
-    ring_bands(m, tx0, tx1, tz0, tz1, G + L1 + 0.7, G + L1 + 2.4, SLATE)
-    for zz in (tz0 + 4.0, tz0 + 13.0, tz0 + 22.0):        # brick townhouse bays on the street face
-        box(m, tx0 - 0.3, tx0 + 0.2, zz, zz + 4.0, G, POD - 0.4, BRICK)
+    if not far:
+        ring_bands(m, tx0, tx1, tz0, tz1, G + 0.6, G + L1 - 0.8, SLATE)
+        ring_bands(m, tx0, tx1, tz0, tz1, G + L1 + 0.7, G + L1 + 2.4, SLATE)
+        for zz in (tz0 + 4.0, tz0 + 13.0, tz0 + 22.0):        # brick townhouse bays on the street face
+            box(m, tx0 - 0.3, tx0 + 0.2, zz, zz + 4.0, G, POD - 0.4, BRICK)
 
     # shaft core: 1.5 m in from the street, south and north faces (balconies reach the OSM line), 3.5 m in at the back
     cx0, cx1, cz0, cz1 = tx0 + BAL, tx1 - 3.5, tz0 + BAL, tz1 - BAL
@@ -102,7 +135,7 @@ def build():
         faces = "we" + ("s" if key == "s" else "") + ("n" if key == "n" else "")
         for k in range(3, NFL + 1):
             y = floor_y(k)
-            if y + 2.2 > top:
+            if far or y + 2.2 > top:
                 break
             if y >= split - 0.1:
                 ring_bands(m, cx0, cx1, z0, z1, y - 0.25, y + 0.35, WHITEST, faces=faces)     # white slab edges on the glass
@@ -113,28 +146,31 @@ def build():
         if key == "c":
             for zz in (z0, z1 - 1.2):
                 box(m, cx0 - 0.15, cx1 + 0.15, zz, zz + 1.2, POD, TOP_C, WHITEST)
-            for x0, x1 in ((cx0 - 0.15, cx0 + 1.2), (cx1 - 1.2, cx1 + 0.15)):        # lintels over the open west and east faces
-                box(m, x0, x1, z0, z1, TOP_C - 0.8, TOP_C, WHITEST)
+            for x0, x1 in ((cx0 - 0.15, cx0 + 1.2), (cx1 - 1.2, cx1 + 0.15)):        # lintels over the open west and east faces,
+                box(m, x0, x1, z0 + 1.2, z1 - 1.2, TOP_C - 0.8, TOP_C, WHITEST)         # between the pilasters (no shared top)
             box(m, cx0 + 3.0, cx0 + 3.3, z0 + 2.5, z1 - 2.5, TOP_C - 4.0, TOP_C - 0.8, YELLOW)
             box(m, cx1 - 3.3, cx1 - 3.0, z0 + 2.5, z1 - 2.5, TOP_C - 4.0, TOP_C - 0.8, YELLOW)
             box(m, cx0 + 6.0, cx1 - 6.0, z0 + 1.5, z1 - 1.5, TOP_C - 4.0, TOP_C - 1.5, METAL, sw_top=ROOF)   # plant room
         else:
-            box(m, cx0 - 0.1, cx1 + 0.1, z0, z1, top - 1.6, top, WHITEST if key == "n" else METAL)          # parapet cap
+            # parapet cap on the exposed faces, 0.4 m above the roof; the face against the white centre is left out (the south mass is
+            # level with the centre's roof, the north mass below it)
+            parapet(m, cx0, cx1, z0, z1, top - 1.6, top, WHITEST if key == "n" else METAL, sides=faces)
     # blue stripes in the two joints, street and back faces
     for zz in (zs, zn):
         for x0, x1 in ((cx0 - 0.25, cx0 + 0.3), (cx1 - 0.3, cx1 + 0.25)):
             box(m, x0, x1, zz - 0.6, zz + 0.6, POD, TOP_S - 2.0, BLUE)
 
     # balconies, storeys 3 to 25: wrapped round the four corners of the shaft, plus a stack on the street face of the centre
-    for k in range(3, NFL):
+    bal = balcony if lod == 0 else (lambda m_, x0, x1, z0, z1, y_, _sides: box(m_, x0, x1, z0, z1, y_ - 0.25, y_, WHITEST))
+    for k in range(3, NFL if not far else 3):
         y = floor_y(k)
-        balcony(m, tx0, cx0, tz0, cz0 + 7.0, y, "ws")              # south-west corner
-        balcony(m, cx0, cx0 + 8.0, tz0, cz0, y, "s")
-        balcony(m, tx0, cx0, cz1 - 6.0, tz1, y, "wn")              # north-west corner
-        balcony(m, cx0, cx0 + 7.0, cz1, tz1, y, "n")
-        balcony(m, cx1 - 8.0, cx1, tz0, cz0, y, "s")               # back corners (south-east, north-east)
-        balcony(m, cx1 - 7.0, cx1, cz1, tz1, y, "n")
-        balcony(m, tx0, cx0, zs + 2.2, zn - 2.2, y, "w")           # centre stack, street face
+        bal(m, tx0, cx0, tz0, cz0 + 7.0, y, "ws")              # south-west corner
+        bal(m, cx0, cx0 + 8.0, tz0, cz0, y, "s")
+        bal(m, tx0, cx0, cz1 - 6.0, tz1, y, "wn")              # north-west corner
+        bal(m, cx0, cx0 + 7.0, cz1, tz1, y, "n")
+        bal(m, cx1 - 8.0, cx1, tz0, cz0, y, "s")               # back corners (south-east, north-east)
+        bal(m, cx1 - 7.0, cx1, cz1, tz1, y, "n")
+        bal(m, tx0, cx0, zs + 2.2, zn - 2.2, y, "w")           # centre stack, street face
         # yellow accent panels: every second storey, on the corner panels next to the south-west and north-east balconies
         if k % 2:
             box(m, cx0 + 8.3, cx0 + 9.9, cz0 - 0.12, cz0, y + 0.6, y + 2.4, YELLOW)
@@ -142,16 +178,15 @@ def build():
 
     # the six-storey wing at the back (east): white, a grey band and a blue stripe, window bands, yellow balcony panels
     box(m, tx1, wx1, wz0, wz1, -2.0, WING, WHITEST, sw_top=ROOF)
-    box(m, tx1, wx1, wz0 - 0.08, wz1 + 0.08, G, G + L1 - 0.5, METAL)
-    for k in range(2, 7):
-        y = floor_y(k)
-        ring_bands(m, tx1, wx1, wz0, wz1, y + 0.7, y + 2.4, SLATE, faces="ens")
-    box(m, tx1 + 7.4, tx1 + 8.6, wz0 - 0.25, wz0 + 0.3, G, WING, BLUE)
-    for k in (3, 5):
-        y = floor_y(k)
-        box(m, wx1 - 4.6, wx1 - 1.0, wz0 - 0.25, wz0 + 0.3, y + 0.5, y + 2.5, YELLOW)
-    box(m, tx1 - 0.1, wx1 + 0.1, wz0 - 0.1, wz1 + 0.1, WING - 1.0, WING, METAL)
-
-    return dict(code=CODE, title=TITLE, lat0=lat0, lon0=lon0, alt=DATUM, parts=[("br_b262_holyrood_gardens", m)], frame=fr,
-                axis=Axis([(tx0, 0.0), (wx1, 0.0)]),
-                views=[("a", 225.0, 12.0), ("b", 60.0, 18.0), ("c", 300.0, 45.0)])
+    box(m, tx1, wx1 + 0.08, wz0 - 0.08, wz1 + 0.08, G, G + L1 - 0.5, METAL)          # proud of the east face too, not in its plane
+    if not far:
+        for k in range(2, 7):
+            y = floor_y(k)
+            ring_bands(m, tx1, wx1, wz0, wz1, y + 0.7, y + 2.4, SLATE, faces="ens")
+    box(m, tx1 + 7.4, tx1 + 8.6, wz0 - 0.25, wz0 + 0.3, G, WING - 1.0, BLUE)         # up to the parapet, clear of the roof
+    if not far:
+        for k in (3, 5):
+            y = floor_y(k)
+            box(m, wx1 - 4.6, wx1 - 1.0, wz0 - 0.25, wz0 + 0.3, y + 0.5, y + 2.5, YELLOW)
+    parapet(m, tx1, wx1, wz0, wz1, WING - 1.0, WING, METAL)
+    return m

@@ -1,6 +1,9 @@
 <?xml version="1.0" encoding="utf-8"?>
 <ModelInfo guid="{BD5AD88E-08A8-5EDE-90A1-043BDBECC17F}" version="1.1">
 	<LODS>
-		<LOD minSize="0" ModelFile="br_w85_fox_drive.gltf"/>
+		<LOD minSize="10.4" ModelFile="br_w85_fox_drive.gltf"/>
+		<LOD minSize="4" ModelFile="br_w85_fox_drive_lod1.gltf"/>
+		<LOD minSize="1" ModelFile="br_w85_fox_drive_lod2.gltf"/>
+		<LOD minSize="0" ModelFile="br_w85_fox_drive_lod3.gltf"/>
 	</LODS>
 </ModelInfo>

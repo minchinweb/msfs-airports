@@ -1,6 +1,6 @@
 # Edmonton bridges status
 
-Last updated: 2026-11-23 (reference data refetched; see the 2026-11-23 section). Package: `scenery-edmonton-bridges/` (project `scenery-edmonton-bridges.xml`, definition `PackageDefinitions/cardboardgt-scenery-edmonton-bridges.xml`, version 0.1.0).
+Last updated: 2026-11-25 (B262 and B276 fixes; see the 2026-11-25 section). Package: `scenery-edmonton-bridges/` (project `scenery-edmonton-bridges.xml`, definition `PackageDefinitions/cardboardgt-scenery-edmonton-bridges.xml`, version 0.1.0).
 
 ## What this is
 
@@ -15,6 +15,21 @@ Built on 2026-10-14 with the sim closed (the 0.1.0 text follows; 0.2.0 compiled 
 ## What to model
 
 Three inventories. `docs/edmonton-bridges/bridges.md` is the North Saskatchewan crossings from Devon to Scotford. `docs/edmonton-bridges/freeway-bridges.md` is the freeway structures on VFR lines among CYXD, CYED, CYEG, CZVL, CFB6, and CEZ3. `docs/edmonton-bridges/lrt.md` is the above-ground LRT stations, viaducts, and extension bridges. The freeway list names the cross road on the QE2, Yellowhead, Henday, Whitemud, and Sherwood Park Freeway decks, and records the Henday, Whitemud, Terwillegar, Groat, and Capilano bridges left off. Highway 16 west of the Henday, Highway 21, and the other crossings added on 14 October are plotted as crosses and still left off the include list. Deck, approach, ramp, and cross-road geometry for every plotted road and river bridge is in `bridge-geometry.json`. Above-ground LRT centreline geometry, including construction and unfunded alignments, is in `lrt-tracks.json`. The build order is `docs/edmonton-bridges/PRIORITY.md`. It ranks every included and excluded bridge, viaduct, and station by how it reads from the air, whether it falls on a VFR approach, and whether it is a named fix on the Edmonton VFR terminal chart or the City Centre helicopter chart. First box is the High Level Bridge and the Dudley B. Menzies Bridge together. Reference briefs for R8–R15, the Groat ravine decks G116, G117, Z125, T133, and G119, P152 and B254, N258, N259, N260, F256, and V257 are in `docs/edmonton-bridges/reference/`. Numbers are unique across every prefix. Bridge codes use 1–136. Stops are P137–P189, at-grade track is K190–K253, and the later codes are listed in `lrt.md` and `bridges.md`. The prompt for the next reference subagent is `docs/edmonton-bridges/reference-prompt.md`. Fill the braces and send one structure at a time. The named checkpoints Bridges, Quesnell, Bremner Cloverleaf, and Sherwood Park Cloverleaf come next. Do not place anything inside the `CYXD Airport Area` polygon; NAIT and Blatchford Gate are inside it.
+
+## 2026-11-25 automatic LODs on every model
+
+Every model except B262 had one LOD. A 60,000-vertex chunk (R10, R6, H27, H39, H52, T127) was not drawn until it filled about 24 % of the screen height on High, and Walterdale (17,800 vertices) not until about 7 %. `bridgelib.save_chunks` now gives every chunk over 1,000 vertices automatic lower LODs of 10,000, 2,500 and 950 vertices (its largest polygons, undersides dropped first). B262 keeps its hand-built LODs. Every model now ends in an LOD under 1,000 vertices. The full-detail models are unchanged; only the ModelInfo XMLs and the new `_lod` files are new. Built (exit 0), not seen in the sim. Check that the big bridges stay in view from the downtown approaches and that the LOD switches are not distracting. Details: `MODEL-NOTES.md`, "Standard practice: LODs and draw distance".
+
+## 2026-11-25 B262 and B276 fixes from the sim
+
+William's sim checks, and the fixes. All are built (exit 0) but not yet seen in the sim again.
+
+- **B262 z-fighting from above.** The parapet caps on the south mass, the north mass and the back wing were solid boxes, and their tops lay in the roof plane (800 m2 of coplanar faces). They are now edge parapets that rise 0.4 m above the roofs. A coplanar-face check finds none left.
+- **B262 popped in at about 0.5 nm.** MSFS 2024 holds a model back until it fills a share of the screen set by its vertex count, and B262 had one 11,000-vertex LOD. It now has three LODs: 11,072 vertices (minSize 4), 6,104 (2) and 696 (0). The last has no vertex floor, so the tower should stay in view past 5 nm. `bridgelib.save_chunks` takes `lods` now. **This is standard practice for every model from here on**: `MODEL-NOTES.md`, "Standard practice: LODs and draw distance".
+- **B276 chapel bay ("left portico").** The bay was a rectangle, but the OSM bump narrows toward the front. The low roof's splayed walls and its bronze fascia showed through the bay's sides and face, the bay ran 0.8 m into the chapel, and the entrance canopy ran 0.3 m into the bay. The bay now follows the bump and stops at the chapel's front wall. The canopy's west edge follows the bay wall, and the fascia skips the bay.
+- **B276 trees too large.** The stock trees stood at their own size, 18 to 62 m. Each is now scaled to its 2018 crown height (scale 0.22 to 0.92). Sizes are from the vegetation package's `bglindex.bout` (see `MODEL-NOTES.md`).
+- **B275 Sir William Place** is already in the sim and is not modelled (moved to `PRIORITY.md` section 9).
+- To check in the sim: B262's roof from above and its far-view LOD switch, the B276 front, and the tree heights.
 
 ## 2026-11-24 B276 built
 

@@ -1,0 +1,904 @@
+{
+ "asset": {
+  "version": "2.0",
+  "generator": "scenery-edmonton-bridges/tools/bridgelib.py",
+  "extensions": {
+   "ASOBO_normal_map_convention": {
+    "tangent_space_convention": "DirectX"
+   }
+  }
+ },
+ "extensionsUsed": [
+  "ASOBO_normal_map_convention",
+  "ASOBO_tags",
+  "ASOBO_material_day_night_switch",
+  "ASOBO_street_light"
+ ],
+ "scene": 0,
+ "scenes": [
+  {
+   "nodes": [
+    0
+   ]
+  }
+ ],
+ "nodes": [
+  {
+   "mesh": 0,
+   "name": "br_b276_lds_church_lod1",
+   "children": [
+    1,
+    2,
+    3,
+    4,
+    5,
+    6,
+    7,
+    8,
+    9,
+    10,
+    11,
+    12,
+    13,
+    14,
+    15,
+    16,
+    17
+   ]
+  },
+  {
+   "name": "br_b276_lds_church_lod1_light0",
+   "translation": [
+    -9.472798712728594,
+    3.2399999999999998,
+    -17.982104563930427
+   ],
+   "rotation": [
+    0.70710678,
+    0.0,
+    0.0,
+    0.70710678
+   ],
+   "extensions": {
+    "ASOBO_street_light": {
+     "color": [
+      1.0,
+      0.9,
+      0.75
+     ],
+     "intensity": 2500.0,
+     "cone_angle": 130.0,
+     "has_symmetry": false,
+     "flash_frequency": 0.0,
+     "flash_duration": 0.2,
+     "flash_phase": 0.0,
+     "rotation_phase": 0.0,
+     "rotation_speed": 0.0,
+     "random_phase": false,
+     "day_night_cycle": true,
+     "flare_enabled": true,
+     "flare_only": false
+    }
+   }
+  },
+  {
+   "name": "br_b276_lds_church_lod1_light1",
+   "translation": [
+    -12.055024793740426,
+    3.2399999999999998,
+    -16.454980316679315
+   ],
+   "rotation": [
+    0.70710678,
+    0.0,
+    0.0,
+    0.70710678
+   ],
+   "extensions": {
+    "ASOBO_street_light": {
+     "color": [
+      1.0,
+      0.9,
+      0.75
+     ],
+     "intensity": 2500.0,
+     "cone_angle": 130.0,
+     "has_symmetry": false,
+     "flash_frequency": 0.0,
+     "flash_duration": 0.2,
+     "flash_phase": 0.0,
+     "rotation_phase": 0.0,
+     "rotation_speed": 0.0,
+     "random_phase": false,
+     "day_night_cycle": true,
+     "flare_enabled": true,
+     "flare_only": false
+    }
+   }
+  },
+  {
+   "name": "br_b276_lds_church_lod1_light2",
+   "translation": [
+    -13.08328684637347,
+    0.54,
+    -13.871827756121794
+   ],
+   "rotation": [
+    -0.70710678,
+    0.0,
+    0.0,
+    0.70710678
+   ],
+   "extensions": {
+    "ASOBO_street_light": {
+     "color": [
+      1.0,
+      0.9,
+      0.75
+     ],
+     "intensity": 3000.0,
+     "cone_angle": 25.0,
+     "has_symmetry": false,
+     "flash_frequency": 0.0,
+     "flash_duration": 0.2,
+     "flash_phase": 0.0,
+     "rotation_phase": 0.0,
+     "rotation_speed": 0.0,
+     "random_phase": false,
+     "day_night_cycle": true,
+     "flare_enabled": true,
+     "flare_only": false
+    }
+   }
+  },
+  {
+   "name": "br_b276_lds_church_lod1_light3",
+   "translation": [
+    -14.46047408957978,
+    0.54,
+    -13.057361490921199
+   ],
+   "rotation": [
+    -0.70710678,
+    0.0,
+    0.0,
+    0.70710678
+   ],
+   "extensions": {
+    "ASOBO_street_light": {
+     "color": [
+      1.0,
+      0.9,
+      0.75
+     ],
+     "intensity": 3000.0,
+     "cone_angle": 25.0,
+     "has_symmetry": false,
+     "flash_frequency": 0.0,
+     "flash_duration": 0.2,
+     "flash_phase": 0.0,
+     "rotation_phase": 0.0,
+     "rotation_speed": 0.0,
+     "random_phase": false,
+     "day_night_cycle": true,
+     "flare_enabled": true,
+     "flare_only": false
+    }
+   }
+  },
+  {
+   "name": "br_b276_lds_church_lod1_light4",
+   "translation": [
+    -2.5776097551104318,
+    0.54,
+    -28.914458804382964
+   ],
+   "rotation": [
+    -0.70710678,
+    0.0,
+    0.0,
+    0.70710678
+   ],
+   "extensions": {
+    "ASOBO_street_light": {
+     "color": [
+      1.0,
+      0.9,
+      0.75
+     ],
+     "intensity": 1500.0,
+     "cone_angle": 40.0,
+     "has_symmetry": false,
+     "flash_frequency": 0.0,
+     "flash_duration": 0.2,
+     "flash_phase": 0.0,
+     "rotation_phase": 0.0,
+     "rotation_speed": 0.0,
+     "random_phase": false,
+     "day_night_cycle": true,
+     "flare_enabled": true,
+     "flare_only": false
+    }
+   }
+  },
+  {
+   "name": "br_b276_lds_church_lod1_light5",
+   "translation": [
+    -5.159835836122262,
+    0.54,
+    -27.38733455713185
+   ],
+   "rotation": [
+    -0.70710678,
+    0.0,
+    0.0,
+    0.70710678
+   ],
+   "extensions": {
+    "ASOBO_street_light": {
+     "color": [
+      1.0,
+      0.9,
+      0.75
+     ],
+     "intensity": 1500.0,
+     "cone_angle": 40.0,
+     "has_symmetry": false,
+     "flash_frequency": 0.0,
+     "flash_duration": 0.2,
+     "flash_phase": 0.0,
+     "rotation_phase": 0.0,
+     "rotation_speed": 0.0,
+     "random_phase": false,
+     "day_night_cycle": true,
+     "flare_enabled": true,
+     "flare_only": false
+    }
+   }
+  },
+  {
+   "name": "br_b276_lds_church_lod1_light6",
+   "translation": [
+    -7.742061917134094,
+    0.54,
+    -25.860210309880735
+   ],
+   "rotation": [
+    -0.70710678,
+    0.0,
+    0.0,
+    0.70710678
+   ],
+   "extensions": {
+    "ASOBO_street_light": {
+     "color": [
+      1.0,
+      0.9,
+      0.75
+     ],
+     "intensity": 1500.0,
+     "cone_angle": 40.0,
+     "has_symmetry": false,
+     "flash_frequency": 0.0,
+     "flash_duration": 0.2,
+     "flash_phase": 0.0,
+     "rotation_phase": 0.0,
+     "rotation_speed": 0.0,
+     "random_phase": false,
+     "day_night_cycle": true,
+     "flare_enabled": true,
+     "flare_only": false
+    }
+   }
+  },
+  {
+   "name": "br_b276_lds_church_lod1_light7",
+   "translation": [
+    27.543744864126197,
+    2.6399999999999997,
+    -16.289325304011882
+   ],
+   "rotation": [
+    0.70710678,
+    0.0,
+    0.0,
+    0.70710678
+   ],
+   "extensions": {
+    "ASOBO_street_light": {
+     "color": [
+      1.0,
+      0.9,
+      0.75
+     ],
+     "intensity": 1500.0,
+     "cone_angle": 120.0,
+     "has_symmetry": false,
+     "flash_frequency": 0.0,
+     "flash_duration": 0.2,
+     "flash_phase": 0.0,
+     "rotation_phase": 0.0,
+     "rotation_speed": 0.0,
+     "random_phase": false,
+     "day_night_cycle": true,
+     "flare_enabled": true,
+     "flare_only": false
+    }
+   }
+  },
+  {
+   "name": "br_b276_lds_church_lod1_light8",
+   "translation": [
+    34.670324684631396,
+    2.6399999999999997,
+    -4.238936925956672
+   ],
+   "rotation": [
+    0.70710678,
+    0.0,
+    0.0,
+    0.70710678
+   ],
+   "extensions": {
+    "ASOBO_street_light": {
+     "color": [
+      1.0,
+      0.9,
+      0.75
+     ],
+     "intensity": 1500.0,
+     "cone_angle": 120.0,
+     "has_symmetry": false,
+     "flash_frequency": 0.0,
+     "flash_duration": 0.2,
+     "flash_phase": 0.0,
+     "rotation_phase": 0.0,
+     "rotation_speed": 0.0,
+     "random_phase": false,
+     "day_night_cycle": true,
+     "flare_enabled": true,
+     "flare_only": false
+    }
+   }
+  },
+  {
+   "name": "br_b276_lds_church_lod1_light9",
+   "translation": [
+    24.369190639214196,
+    2.6399999999999997,
+    13.703377232990235
+   ],
+   "rotation": [
+    0.70710678,
+    0.0,
+    0.0,
+    0.70710678
+   ],
+   "extensions": {
+    "ASOBO_street_light": {
+     "color": [
+      1.0,
+      0.9,
+      0.75
+     ],
+     "intensity": 1500.0,
+     "cone_angle": 120.0,
+     "has_symmetry": false,
+     "flash_frequency": 0.0,
+     "flash_duration": 0.2,
+     "flash_phase": 0.0,
+     "rotation_phase": 0.0,
+     "rotation_speed": 0.0,
+     "random_phase": false,
+     "day_night_cycle": true,
+     "flare_enabled": true,
+     "flare_only": false
+    }
+   }
+  },
+  {
+   "name": "br_b276_lds_church_lod1_light10",
+   "translation": [
+    12.318802261158986,
+    2.6399999999999997,
+    20.829957053495434
+   ],
+   "rotation": [
+    0.70710678,
+    0.0,
+    0.0,
+    0.70710678
+   ],
+   "extensions": {
+    "ASOBO_street_light": {
+     "color": [
+      1.0,
+      0.9,
+      0.75
+     ],
+     "intensity": 1500.0,
+     "cone_angle": 120.0,
+     "has_symmetry": false,
+     "flash_frequency": 0.0,
+     "flash_duration": 0.2,
+     "flash_phase": 0.0,
+     "rotation_phase": 0.0,
+     "rotation_speed": 0.0,
+     "random_phase": false,
+     "day_night_cycle": true,
+     "flare_enabled": true,
+     "flare_only": false
+    }
+   }
+  },
+  {
+   "name": "br_b276_lds_church_lod1_light11",
+   "translation": [
+    -32.42035921624069,
+    2.6399999999999997,
+    14.526193867972333
+   ],
+   "rotation": [
+    0.70710678,
+    0.0,
+    0.0,
+    0.70710678
+   ],
+   "extensions": {
+    "ASOBO_street_light": {
+     "color": [
+      1.0,
+      0.9,
+      0.75
+     ],
+     "intensity": 1500.0,
+     "cone_angle": 120.0,
+     "has_symmetry": false,
+     "flash_frequency": 0.0,
+     "flash_duration": 0.2,
+     "flash_phase": 0.0,
+     "rotation_phase": 0.0,
+     "rotation_speed": 0.0,
+     "random_phase": false,
+     "day_night_cycle": true,
+     "flare_enabled": true,
+     "flare_only": false
+    }
+   }
+  },
+  {
+   "name": "br_b276_lds_church_lod1_light12",
+   "translation": [
+    -26.311862227236237,
+    2.6399999999999997,
+    24.855098192019657
+   ],
+   "rotation": [
+    0.70710678,
+    0.0,
+    0.0,
+    0.70710678
+   ],
+   "extensions": {
+    "ASOBO_street_light": {
+     "color": [
+      1.0,
+      0.9,
+      0.75
+     ],
+     "intensity": 1500.0,
+     "cone_angle": 120.0,
+     "has_symmetry": false,
+     "flash_frequency": 0.0,
+     "flash_duration": 0.2,
+     "flash_phase": 0.0,
+     "rotation_phase": 0.0,
+     "rotation_speed": 0.0,
+     "random_phase": false,
+     "day_night_cycle": true,
+     "flare_enabled": true,
+     "flare_only": false
+    }
+   }
+  },
+  {
+   "name": "br_b276_lds_church_lod1_light13",
+   "translation": [
+    -18.320854551328154,
+    2.6399999999999997,
+    -7.405152834957459
+   ],
+   "rotation": [
+    0.70710678,
+    0.0,
+    0.0,
+    0.70710678
+   ],
+   "extensions": {
+    "ASOBO_street_light": {
+     "color": [
+      1.0,
+      0.9,
+      0.75
+     ],
+     "intensity": 1500.0,
+     "cone_angle": 120.0,
+     "has_symmetry": false,
+     "flash_frequency": 0.0,
+     "flash_duration": 0.2,
+     "flash_phase": 0.0,
+     "rotation_phase": 0.0,
+     "rotation_speed": 0.0,
+     "random_phase": false,
+     "day_night_cycle": true,
+     "flare_enabled": true,
+     "flare_only": false
+    }
+   }
+  },
+  {
+   "name": "br_b276_lds_church_lod1_light14",
+   "translation": [
+    -25.206790767359703,
+    2.6399999999999997,
+    -3.3328215089544884
+   ],
+   "rotation": [
+    0.70710678,
+    0.0,
+    0.0,
+    0.70710678
+   ],
+   "extensions": {
+    "ASOBO_street_light": {
+     "color": [
+      1.0,
+      0.9,
+      0.75
+     ],
+     "intensity": 1500.0,
+     "cone_angle": 120.0,
+     "has_symmetry": false,
+     "flash_frequency": 0.0,
+     "flash_duration": 0.2,
+     "flash_phase": 0.0,
+     "rotation_phase": 0.0,
+     "rotation_speed": 0.0,
+     "random_phase": false,
+     "day_night_cycle": true,
+     "flare_enabled": true,
+     "flare_only": false
+    }
+   }
+  },
+  {
+   "name": "br_b276_lds_church_lod1_light15",
+   "translation": [
+    -12.378951108407108,
+    2.6399999999999997,
+    7.553248933781172
+   ],
+   "rotation": [
+    0.70710678,
+    0.0,
+    0.0,
+    0.70710678
+   ],
+   "extensions": {
+    "ASOBO_street_light": {
+     "color": [
+      1.0,
+      0.9,
+      0.75
+     ],
+     "intensity": 1500.0,
+     "cone_angle": 120.0,
+     "has_symmetry": false,
+     "flash_frequency": 0.0,
+     "flash_duration": 0.2,
+     "flash_phase": 0.0,
+     "rotation_phase": 0.0,
+     "rotation_speed": 0.0,
+     "random_phase": false,
+     "day_night_cycle": true,
+     "flare_enabled": true,
+     "flare_only": false
+    }
+   }
+  },
+  {
+   "name": "br_b276_lds_church_lod1_light16",
+   "translation": [
+    11.846763775841536,
+    2.6399999999999997,
+    -29.080133906834213
+   ],
+   "rotation": [
+    0.70710678,
+    0.0,
+    0.0,
+    0.70710678
+   ],
+   "extensions": {
+    "ASOBO_street_light": {
+     "color": [
+      1.0,
+      0.9,
+      0.75
+     ],
+     "intensity": 1500.0,
+     "cone_angle": 120.0,
+     "has_symmetry": false,
+     "flash_frequency": 0.0,
+     "flash_duration": 0.2,
+     "flash_phase": 0.0,
+     "rotation_phase": 0.0,
+     "rotation_speed": 0.0,
+     "random_phase": false,
+     "day_night_cycle": true,
+     "flare_enabled": true,
+     "flare_only": false
+    }
+   }
+  }
+ ],
+ "meshes": [
+  {
+   "name": "br_b276_lds_church_lod1",
+   "primitives": [
+    {
+     "attributes": {
+      "POSITION": 0,
+      "NORMAL": 1,
+      "TEXCOORD_0": 2
+     },
+     "indices": 3,
+     "mode": 4,
+     "material": 0
+    },
+    {
+     "attributes": {
+      "POSITION": 0,
+      "NORMAL": 1,
+      "TEXCOORD_0": 2
+     },
+     "indices": 4,
+     "mode": 4,
+     "material": 1
+    },
+    {
+     "attributes": {
+      "POSITION": 0,
+      "NORMAL": 1,
+      "TEXCOORD_0": 2
+     },
+     "indices": 5,
+     "mode": 4,
+     "material": 2
+    },
+    {
+     "attributes": {
+      "POSITION": 0,
+      "NORMAL": 1,
+      "TEXCOORD_0": 2
+     },
+     "indices": 6,
+     "mode": 4,
+     "material": 3
+    }
+   ]
+  }
+ ],
+ "materials": [
+  {
+   "name": "bridge_palette",
+   "pbrMetallicRoughness": {
+    "baseColorTexture": {
+     "index": 0
+    },
+    "metallicFactor": 0.0,
+    "roughnessFactor": 0.9
+   },
+   "extensions": {
+    "ASOBO_tags": {
+     "tags": [
+      "Collision",
+      "Road"
+     ]
+    }
+   }
+  },
+  {
+   "name": "bridge_glow",
+   "pbrMetallicRoughness": {
+    "baseColorTexture": {
+     "index": 0
+    },
+    "metallicFactor": 0.0,
+    "roughnessFactor": 0.9
+   },
+   "extensions": {
+    "ASOBO_tags": {
+     "tags": [
+      "Collision",
+      "Road"
+     ]
+    },
+    "ASOBO_material_day_night_switch": {
+     "enabled": true
+    }
+   },
+   "emissiveFactor": [
+    180.0,
+    140.0,
+    85.0
+   ]
+  },
+  {
+   "name": "bridge_glow_flood",
+   "pbrMetallicRoughness": {
+    "baseColorTexture": {
+     "index": 0
+    },
+    "metallicFactor": 0.0,
+    "roughnessFactor": 0.9
+   },
+   "extensions": {
+    "ASOBO_tags": {
+     "tags": [
+      "Collision",
+      "Road"
+     ]
+    },
+    "ASOBO_material_day_night_switch": {
+     "enabled": true
+    }
+   },
+   "emissiveFactor": [
+    34.0,
+    24.0,
+    14.0
+   ]
+  },
+  {
+   "name": "bridge_glow_wash",
+   "pbrMetallicRoughness": {
+    "baseColorTexture": {
+     "index": 0
+    },
+    "metallicFactor": 0.0,
+    "roughnessFactor": 0.9
+   },
+   "extensions": {
+    "ASOBO_tags": {
+     "tags": [
+      "Collision",
+      "Road"
+     ]
+    },
+    "ASOBO_material_day_night_switch": {
+     "enabled": true
+    }
+   },
+   "emissiveFactor": [
+    20.0,
+    20.0,
+    18.0
+   ]
+  }
+ ],
+ "textures": [
+  {
+   "sampler": 0,
+   "source": 0
+  }
+ ],
+ "samplers": [
+  {
+   "magFilter": 9728,
+   "minFilter": 9728
+  }
+ ],
+ "images": [
+  {
+   "uri": "bridge_palette.png"
+  }
+ ],
+ "accessors": [
+  {
+   "bufferView": 0,
+   "componentType": 5126,
+   "count": 950,
+   "type": "VEC3",
+   "min": [
+    -38.8995827229796,
+    -2.0,
+    -32.0023542822411
+   ],
+   "max": [
+    38.83994207870092,
+    15.34,
+    31.997630403553913
+   ]
+  },
+  {
+   "bufferView": 1,
+   "componentType": 5126,
+   "count": 950,
+   "type": "VEC3"
+  },
+  {
+   "bufferView": 2,
+   "componentType": 5126,
+   "count": 950,
+   "type": "VEC2"
+  },
+  {
+   "bufferView": 3,
+   "componentType": 5123,
+   "count": 1056,
+   "type": "SCALAR"
+  },
+  {
+   "bufferView": 4,
+   "componentType": 5123,
+   "count": 210,
+   "type": "SCALAR"
+  },
+  {
+   "bufferView": 5,
+   "componentType": 5123,
+   "count": 96,
+   "type": "SCALAR"
+  },
+  {
+   "bufferView": 6,
+   "componentType": 5123,
+   "count": 6,
+   "type": "SCALAR"
+  }
+ ],
+ "bufferViews": [
+  {
+   "buffer": 0,
+   "byteOffset": 0,
+   "byteLength": 11400
+  },
+  {
+   "buffer": 0,
+   "byteOffset": 11400,
+   "byteLength": 11400
+  },
+  {
+   "buffer": 0,
+   "byteOffset": 22800,
+   "byteLength": 7600
+  },
+  {
+   "buffer": 0,
+   "byteOffset": 30400,
+   "byteLength": 2112
+  },
+  {
+   "buffer": 0,
+   "byteOffset": 32512,
+   "byteLength": 420
+  },
+  {
+   "buffer": 0,
+   "byteOffset": 32932,
+   "byteLength": 192
+  },
+  {
+   "buffer": 0,
+   "byteOffset": 33124,
+   "byteLength": 12
+  }
+ ],
+ "buffers": [
+  {
+   "uri": "br_b276_lds_church_lod1.bin",
+   "byteLength": 33136
+  }
+ ]
+}

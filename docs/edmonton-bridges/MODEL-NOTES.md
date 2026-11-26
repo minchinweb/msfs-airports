@@ -64,7 +64,7 @@ Written 2026-10-14. These are the first models in `scenery-edmonton-bridges` (ve
 
 ## Left for William, and what is still missing
 
-- In the sim: whether the terrain clips piers and abutments; the datum offset (compare a model's datum with the sim's ground at the site); the High Level ridge; whether the models need LODs for far views (each has one LOD at minSize 0).
+- In the sim: whether the terrain clips piers and abutments; the datum offset (compare a model's datum with the sim's ground at the site); the High Level ridge. LODs for far views: yes, see "Standard practice: LODs and draw distance" below (B262 popped in at about 0.5 nm on one LOD).
 - No night lighting, no transparency, no textures on any of these. Glass is opaque. Lamps are plain poles.
 - The two unbuilt-in-data structures (R14 verticals, the Muttart ramp grade) and every "assumed" item above are marked for replacement when drawings or photos with a scale turn up (`BLOCKERS.md` section 5).
 - N258 to N260 and G116 and the other ravine decks that share a road with these are not part of Tier 1.
@@ -74,3 +74,31 @@ Written 2026-10-14. These are the first models in `scenery-edmonton-bridges` (ve
 - The palette strip is padded to 64 swatches (1024 x 16) so it is a power of two like CYXD's; it was 864 wide, the suspected cause of pink models. Real swatch indices did not change.
 - B254 support greenhouses were turned 90 degrees: ten rectangles read off the 2019 orthophoto (long bays, ridge along the ring's NW-SE axis). The four pyramids already matched the aerial.
 - Thumbnail cropped to 412 x 170 (the package validator rejected 412 x 250).
+
+## Standard practice: LODs and draw distance (2026-11-25)
+
+Found on B262, which popped in about 0.5 nm out while the sim's own downtown towers stay in view for 5 nm and more. Apply this to every new model (bridge, station or building), and to an older one when it is next touched.
+
+**Why a model pops in.** MSFS 2024 does not pick LODs by distance. It uses the share of the screen height that the model's bounding sphere covers (SDK: Models and Textures > Modeling > LODs > "LOD Selection System"; offline copy in `C:\MSFS 2024 SDK\Documentation\public\flighting\models-and-textures\modeling\lods\lod-selection-system\index.md`). Each LOD also has a floor set by its vertex count. The effective `minSize` is the larger of the XML value and that floor, so a dense LOD is held back until it is big on screen, whatever the XML says. A model with only one dense LOD is not drawn at all below that floor. Below 0.1 % of the screen nothing is drawn.
+
+| Vertices in the LOD | Ultra | High | Medium | Low |
+| --- | --- | --- | --- | --- |
+| 1,000 | 0 % | 0 % | 0 % | 0 % |
+| 2,500 | 0.7 % | 1.0 % | 1.4 % | 2.0 % |
+| 5,000 | 1.4 % | 2.0 % | 2.8 % | 4.0 % |
+| 30,000 | 8.5 % | 12 % | 17 % | 24 % |
+| 60,000 | 17 % | 24 % | 34 % | 48 % |
+
+**Rule of thumb.** Screen share ≈ sphere diameter / (1.15 × distance) for a 60° vertical field of view. B262's sphere is about 105 m across, so at 5 nm (9.3 km) it covers about 1 % of the screen. Its full model has 11,000 vertices, which needs about 4 % (about 1 nm), and it popped in at about 0.5 nm on the user's settings.
+
+**What to do.**
+- Every model gets LODs **automatically** (2026-11-25). Unless a site supplies its own, `bridgelib.save_chunks` gives each chunk lower LODs built from its own largest polygons. Down-facing faces go first, then the rest smallest first, down to vertex budgets of 10,000, 2,500 and 950 (`LOD_BUDGETS`). A budget is used only when it is under 60 % of the chunk's count. Each LOD's `minSize` is written as the SDK's vertex floor on High (`VERTEX_FLOOR`, `min_size_for`), and the last LOD gets 0. Chunks under 1,000 vertices get none: they have no floor already. This works on big chunked models too (each chunk is its own model with its own LODs). Nothing to do for a new site; check the counts in the XML after a run.
+- The last LOD (under 1,000 vertices) has no vertex floor, so the model stays drawn until it falls under 0.1 % of the screen.
+- What the automatic LODs keep. The 10,000 and 2,500 LODs kept the High Level's trusses and trestle towers, and Walterdale's arches and hangers. The 950 LOD keeps decks, piers and abutments, but drops thin members built from many small pieces (the High Level trusses, Walterdale's arch ribs). That LOD only shows where the structure is a few pixels (past about 11 nm for Walterdale, 35 nm for the High Level), so it is acceptable. For a landmark whose far silhouette matters, build the LODs by hand instead.
+- Hand-built LODs (as B262): a site's part is `(model name, BMesh, [(minSize, BMesh), ...], LOD 0 minSize)`. Build every LOD from one function with an `lod` argument (see `site_b262.model`) so they stay in step. The last should be the silhouette in about 40 boxes (24 vertices each): masses, towers, arches and trusses as solid shapes, deck slabs; no rails, window bands, balconies, lamps or trim. A middle LOD drops the many small parts (rails, mullions, balcony glass) and keeps their slabs. Write `minSize` falling to 0 on the last; B262 uses 4 / 2 / 0 for 11,072 / 6,104 / 696 vertices. Hand-built LODs need a one-chunk model (under 60,000 vertices).
+- LOD files are `<name>_lod1.gltf` and up, beside the main file, listed in its ModelInfo XML. Each run deletes the old ones first.
+- Library objects (stock trees) are Asobo's models and have their own LODs.
+
+**Stock tree sizes.** Stock MSFS 2024 trees are placed at scale 1 at their own size. That is 18 to 42 m for the birch, poplar and pine GUIDs in use, and 62.5 m for the cypress. At scale 1 they stood 2 to 5 times too tall at B276. The size is a float after tag `0x21` in each GUID's record in `fs24-asobo-modellib-vegetation`'s `bglindex.bout`. That file is stored uncompressed inside `StreamedPackages\fs24-asobo-modellib-vegetation\content\minimal.fsarchive`. Take that size as the tree's height and scale each placed tree to its LiDAR crown height (`SIZE` in `site_b276.py`). Objects take an optional sixth field, the scale (`gen_bridges.py`). The CYXD Hangar 19 trees (`airport-cyxd/tools/hangars.py`) use the same GUIDs at scale 1 and will be too tall as well.
+
+**Coplanar faces.** Never put two faces in the same plane where they overlap: the sim z-fights them (B262's parapet caps were solid boxes whose tops lay in the roof plane). Raise a parapet above the roof, end a stripe below it, and set an added face a few cm proud of the wall it sits on.

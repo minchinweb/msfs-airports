@@ -41,7 +41,7 @@ def pieces(res):
     from shapely.geometry import Polygon
     from shapely.ops import unary_union
     tris = []
-    for _name, m in res["parts"]:
+    for _name, m, *_lods in res["parts"]:
         P, I = m.pos, m.idx
         for k in range(0, len(I), 3):
             a, b, c = P[I[k]], P[I[k + 1]], P[I[k + 2]]

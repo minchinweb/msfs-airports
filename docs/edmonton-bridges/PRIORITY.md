@@ -354,7 +354,6 @@ Added 2026-10-15. These are buildings, not bridges, so they carry no Look or Whe
 - [ ] **B272 Edmonton Convention Centre**, 9797 Jasper Avenue, Edmonton AB T5J 1N9. OSM way 1288944252 (amenity=conference_centre). Centre 53.541150, -113.485814. Replaces the Wikipedia centre, which was about 40 m away.
 - [ ] **B273 Canada Place** (the pink building), 9700 Jasper Avenue NW. OSM way 324786133 ("Canada Place Service Canada Centre", office=government, 9700 Jasper Avenue NW). Centre 53.542815, -113.486600. Replaces the Wikipedia centre, which was about 40 m away.
 - [ ] **B274 Chinatown Gates**. On 97 Street between Jasper Avenue and 101A Avenue (City of Edmonton). No OSM feature found for the gates (searched gate and Chinatown names over the 97 Street block). Gate centre to survey; none added.
-- [ ] **B275 Sir William Place**, 8830 85 Street NW, Edmonton AB T6C 3C3, Bonnie Doon. OSM way 558920013 (landuse residential, operator Boardwalk Rental Communities, addr 8808-8838 85 Street NW; 8830 is in that range). Centre 53.524421, -113.459017. Centre to survey.
 - [x] **B276 The Church of Jesus Christ of Latter-day Saints**, 9010 85 Street NW. Inside Strathearn. Centre 53.525858, -113.458448 (OSM way 322965284). Modelled 2026-11-24 by `tools/site_b276.py`: the OSM outline, mass heights from the 2018 LiDAR, form from the owner's photos; night lighting, car parks and 27 stock trees. Built (exit 0), not seen in the sim. Brief: `reference/B276-lds-church-85-street/`.
 - [ ] **B277 Assumption Catholic Parish**, 9034 95 Avenue NW. Inside Strathearn. Centre 53.532097, -113.465998 (OSM way 322971757).
 - [ ] **B278 Strathearn United Church**, 8510 95 Avenue NW. Inside Strathearn. Centre 53.532090, -113.458713 (OSM way 322971998).
@@ -368,6 +367,7 @@ These were scored and rejected. They are not boxes. A later session should not p
 - **P147 NAIT / Blatchford Market** (53.56695, -113.50909) and **P148 Blatchford Gate** (53.57695, -113.51041). Both centres fall inside the `CYXD Airport Area` polygon. Placing them would sit on the airport package. The airport package owns that ground, including a canopy.
 - **T136 Walker Bridge**. Estimated 53.586, -113.515. Design only, unfunded in 2026. The centre is north of the airport polygon, so the footprint rule is not what keeps it off. If it is funded it jumps to section 2: it would sit about 0.2 km off the runway 16 centerline, 1 km north, over the Yellowhead and the CN Walker Yard. Until then there is no span, pier count, or clearance to build.
 - **G118**, the old Stony Plain Road bridge. Demolished 2023. T133 replaces it.
+- **B275 Sir William Place**, 8830 85 Street NW, Bonnie Doon (OSM way 558920013, centre 53.524421, -113.459017; was in section 8). The sim already draws it well enough (William, 2026-11-25), so it is not modelled. Code B275 stays retired.
 - The **1913 Walterdale truss**. Demolished 2017. R11 replaces it.
 - **23 Avenue** on Capital Line South. An underpass, not a viaduct.
 - **Kâhasinîskâk Bridge**. Pedestrian bridge over Connors Road, built with Valley Line Southeast. Not an LRT deck. No centre in the inventory; do not invent one.

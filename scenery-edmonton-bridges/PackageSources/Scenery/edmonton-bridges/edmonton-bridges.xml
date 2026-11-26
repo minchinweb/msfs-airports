@@ -144,111 +144,111 @@
 	</SceneryObject>
 	<!-- B276 tree (stock MSFS tree; 2018 crown 13 m) -->
 	<SceneryObject lat="53.52664620" lon="-113.45837000" alt="0.000000" pitch="0.000000" bank="0.000000" heading="0.000000" imageComplexity="VERY_SPARSE" altitudeIsAgl="TRUE" snapToGround="TRUE" snapToNormal="FALSE">
-		<LibraryObject name="{191FAD7E-E94C-40A3-ADC0-902A5A1F3CB7}" scale="1.000000"/>
+		<LibraryObject name="{191FAD7E-E94C-40A3-ADC0-902A5A1F3CB7}" scale="0.463000"/>
 	</SceneryObject>
 	<!-- B276 tree (stock MSFS tree; 2018 crown 10 m) -->
 	<SceneryObject lat="53.52667570" lon="-113.45809720" alt="0.000000" pitch="0.000000" bank="0.000000" heading="137.000000" imageComplexity="VERY_SPARSE" altitudeIsAgl="TRUE" snapToGround="TRUE" snapToNormal="FALSE">
-		<LibraryObject name="{F05B3BD0-1C1E-4865-A904-45F9DF37EBDF}" scale="1.000000"/>
+		<LibraryObject name="{F05B3BD0-1C1E-4865-A904-45F9DF37EBDF}" scale="0.239000"/>
 	</SceneryObject>
 	<!-- B276 tree (stock MSFS tree; 2018 crown 10 m) -->
 	<SceneryObject lat="53.52667910" lon="-113.45797110" alt="0.000000" pitch="0.000000" bank="0.000000" heading="274.000000" imageComplexity="VERY_SPARSE" altitudeIsAgl="TRUE" snapToGround="TRUE" snapToNormal="FALSE">
-		<LibraryObject name="{60E021B9-9D85-4C59-B106-EC430025816A}" scale="1.000000"/>
+		<LibraryObject name="{60E021B9-9D85-4C59-B106-EC430025816A}" scale="0.477000"/>
 	</SceneryObject>
 	<!-- B276 tree (stock MSFS tree; 2018 crown 11 m) -->
 	<SceneryObject lat="53.52671040" lon="-113.45779500" alt="0.000000" pitch="0.000000" bank="0.000000" heading="51.000000" imageComplexity="VERY_SPARSE" altitudeIsAgl="TRUE" snapToGround="TRUE" snapToNormal="FALSE">
-		<LibraryObject name="{8F8A023D-380F-4CB3-8ED8-25D1595AF998}" scale="1.000000"/>
+		<LibraryObject name="{8F8A023D-380F-4CB3-8ED8-25D1595AF998}" scale="0.315000"/>
 	</SceneryObject>
 	<!-- B276 tree (stock MSFS tree; 2018 crown 16 m) -->
 	<SceneryObject lat="53.52646180" lon="-113.45838950" alt="0.000000" pitch="0.000000" bank="0.000000" heading="188.000000" imageComplexity="VERY_SPARSE" altitudeIsAgl="TRUE" snapToGround="TRUE" snapToNormal="FALSE">
-		<LibraryObject name="{5269E5F0-4CB5-4E81-828A-61169D850DF4}" scale="1.000000"/>
+		<LibraryObject name="{5269E5F0-4CB5-4E81-828A-61169D850DF4}" scale="0.622000"/>
 	</SceneryObject>
 	<!-- B276 tree (stock MSFS tree; 2018 crown 9 m) -->
 	<SceneryObject lat="53.52620340" lon="-113.45877130" alt="0.000000" pitch="0.000000" bank="0.000000" heading="325.000000" imageComplexity="VERY_SPARSE" altitudeIsAgl="TRUE" snapToGround="TRUE" snapToNormal="FALSE">
-		<LibraryObject name="{48EF1351-F046-406D-BF0E-94524662991D}" scale="1.000000"/>
+		<LibraryObject name="{48EF1351-F046-406D-BF0E-94524662991D}" scale="0.297000"/>
 	</SceneryObject>
 	<!-- B276 tree (stock MSFS tree; 2018 crown 9 m) -->
 	<SceneryObject lat="53.52625110" lon="-113.45823590" alt="0.000000" pitch="0.000000" bank="0.000000" heading="102.000000" imageComplexity="VERY_SPARSE" altitudeIsAgl="TRUE" snapToGround="TRUE" snapToNormal="FALSE">
-		<LibraryObject name="{81D19B30-F45D-47CB-9787-2BEF376C64CA}" scale="1.000000"/>
+		<LibraryObject name="{81D19B30-F45D-47CB-9787-2BEF376C64CA}" scale="0.325000"/>
 	</SceneryObject>
 	<!-- B276 tree (stock MSFS tree; 2018 crown 11 m) -->
 	<SceneryObject lat="53.52600910" lon="-113.45948880" alt="0.000000" pitch="0.000000" bank="0.000000" heading="239.000000" imageComplexity="VERY_SPARSE" altitudeIsAgl="TRUE" snapToGround="TRUE" snapToNormal="FALSE">
-		<LibraryObject name="{4A576EEF-CFA0-47DB-91F9-526718AE5950}" scale="1.000000"/>
+		<LibraryObject name="{4A576EEF-CFA0-47DB-91F9-526718AE5950}" scale="0.582000"/>
 	</SceneryObject>
 	<!-- B276 tree (stock MSFS tree; 2018 crown 10 m) -->
 	<SceneryObject lat="53.52628140" lon="-113.45785170" alt="0.000000" pitch="0.000000" bank="0.000000" heading="16.000000" imageComplexity="VERY_SPARSE" altitudeIsAgl="TRUE" snapToGround="TRUE" snapToNormal="FALSE">
-		<LibraryObject name="{2C5B485B-06A8-4E8E-B86D-23711DB64A8D}" scale="1.000000"/>
+		<LibraryObject name="{2C5B485B-06A8-4E8E-B86D-23711DB64A8D}" scale="0.312000"/>
 	</SceneryObject>
 	<!-- B276 tree (stock MSFS tree; 2018 crown 10 m) -->
 	<SceneryObject lat="53.52614200" lon="-113.45842090" alt="0.000000" pitch="0.000000" bank="0.000000" heading="153.000000" imageComplexity="VERY_SPARSE" altitudeIsAgl="TRUE" snapToGround="TRUE" snapToNormal="FALSE">
-		<LibraryObject name="{191FAD7E-E94C-40A3-ADC0-902A5A1F3CB7}" scale="1.000000"/>
+		<LibraryObject name="{191FAD7E-E94C-40A3-ADC0-902A5A1F3CB7}" scale="0.354000"/>
 	</SceneryObject>
 	<!-- B276 tree (stock MSFS tree; 2018 crown 10 m) -->
 	<SceneryObject lat="53.52622990" lon="-113.45787380" alt="0.000000" pitch="0.000000" bank="0.000000" heading="290.000000" imageComplexity="VERY_SPARSE" altitudeIsAgl="TRUE" snapToGround="TRUE" snapToNormal="FALSE">
-		<LibraryObject name="{81D19B30-F45D-47CB-9787-2BEF376C64CA}" scale="1.000000"/>
+		<LibraryObject name="{81D19B30-F45D-47CB-9787-2BEF376C64CA}" scale="0.339000"/>
 	</SceneryObject>
 	<!-- B276 tree (stock MSFS tree; 2018 crown 9 m) -->
 	<SceneryObject lat="53.52588690" lon="-113.45958730" alt="0.000000" pitch="0.000000" bank="0.000000" heading="67.000000" imageComplexity="VERY_SPARSE" altitudeIsAgl="TRUE" snapToGround="TRUE" snapToNormal="FALSE">
-		<LibraryObject name="{4A576EEF-CFA0-47DB-91F9-526718AE5950}" scale="1.000000"/>
+		<LibraryObject name="{4A576EEF-CFA0-47DB-91F9-526718AE5950}" scale="0.484000"/>
 	</SceneryObject>
 	<!-- B276 tree (stock MSFS tree; 2018 crown 12 m) -->
 	<SceneryObject lat="53.52616270" lon="-113.45798390" alt="0.000000" pitch="0.000000" bank="0.000000" heading="204.000000" imageComplexity="VERY_SPARSE" altitudeIsAgl="TRUE" snapToGround="TRUE" snapToNormal="FALSE">
-		<LibraryObject name="{70080A01-E271-45DC-9F70-3488BA9DDA6C}" scale="1.000000"/>
+		<LibraryObject name="{70080A01-E271-45DC-9F70-3488BA9DDA6C}" scale="0.488000"/>
 	</SceneryObject>
 	<!-- B276 tree (stock MSFS tree; 2018 crown 19 m) -->
 	<SceneryObject lat="53.52616510" lon="-113.45780940" alt="0.000000" pitch="0.000000" bank="0.000000" heading="341.000000" imageComplexity="VERY_SPARSE" altitudeIsAgl="TRUE" snapToGround="TRUE" snapToNormal="FALSE">
-		<LibraryObject name="{F05B3BD0-1C1E-4865-A904-45F9DF37EBDF}" scale="1.000000"/>
+		<LibraryObject name="{F05B3BD0-1C1E-4865-A904-45F9DF37EBDF}" scale="0.460000"/>
 	</SceneryObject>
 	<!-- B276 tree (stock MSFS tree; 2018 crown 8 m) -->
 	<SceneryObject lat="53.52582650" lon="-113.45944520" alt="0.000000" pitch="0.000000" bank="0.000000" heading="118.000000" imageComplexity="VERY_SPARSE" altitudeIsAgl="TRUE" snapToGround="TRUE" snapToNormal="FALSE">
-		<LibraryObject name="{2C5B485B-06A8-4E8E-B86D-23711DB64A8D}" scale="1.000000"/>
+		<LibraryObject name="{2C5B485B-06A8-4E8E-B86D-23711DB64A8D}" scale="0.266000"/>
 	</SceneryObject>
 	<!-- B276 tree (stock MSFS tree; 2018 crown 18 m) -->
 	<SceneryObject lat="53.52610140" lon="-113.45779340" alt="0.000000" pitch="0.000000" bank="0.000000" heading="255.000000" imageComplexity="VERY_SPARSE" altitudeIsAgl="TRUE" snapToGround="TRUE" snapToNormal="FALSE">
-		<LibraryObject name="{60E021B9-9D85-4C59-B106-EC430025816A}" scale="1.000000"/>
+		<LibraryObject name="{60E021B9-9D85-4C59-B106-EC430025816A}" scale="0.915000"/>
 	</SceneryObject>
 	<!-- B276 tree (stock MSFS tree; 2018 crown 10 m) -->
 	<SceneryObject lat="53.52577660" lon="-113.45940420" alt="0.000000" pitch="0.000000" bank="0.000000" heading="32.000000" imageComplexity="VERY_SPARSE" altitudeIsAgl="TRUE" snapToGround="TRUE" snapToNormal="FALSE">
-		<LibraryObject name="{8F8A023D-380F-4CB3-8ED8-25D1595AF998}" scale="1.000000"/>
+		<LibraryObject name="{8F8A023D-380F-4CB3-8ED8-25D1595AF998}" scale="0.294000"/>
 	</SceneryObject>
 	<!-- B276 tree (stock MSFS tree; 2018 crown 9 m) -->
 	<SceneryObject lat="53.52578090" lon="-113.45932650" alt="0.000000" pitch="0.000000" bank="0.000000" heading="169.000000" imageComplexity="VERY_SPARSE" altitudeIsAgl="TRUE" snapToGround="TRUE" snapToNormal="FALSE">
-		<LibraryObject name="{191FAD7E-E94C-40A3-ADC0-902A5A1F3CB7}" scale="1.000000"/>
+		<LibraryObject name="{191FAD7E-E94C-40A3-ADC0-902A5A1F3CB7}" scale="0.319000"/>
 	</SceneryObject>
 	<!-- B276 tree (stock MSFS tree; 2018 crown 18 m) -->
 	<SceneryObject lat="53.52580700" lon="-113.45917980" alt="0.000000" pitch="0.000000" bank="0.000000" heading="306.000000" imageComplexity="VERY_SPARSE" altitudeIsAgl="TRUE" snapToGround="TRUE" snapToNormal="FALSE">
-		<LibraryObject name="{48EF1351-F046-406D-BF0E-94524662991D}" scale="1.000000"/>
+		<LibraryObject name="{48EF1351-F046-406D-BF0E-94524662991D}" scale="0.595000"/>
 	</SceneryObject>
 	<!-- B276 tree (stock MSFS tree; 2018 crown 10 m) -->
 	<SceneryObject lat="53.52575040" lon="-113.45939110" alt="0.000000" pitch="0.000000" bank="0.000000" heading="83.000000" imageComplexity="VERY_SPARSE" altitudeIsAgl="TRUE" snapToGround="TRUE" snapToNormal="FALSE">
-		<LibraryObject name="{81D19B30-F45D-47CB-9787-2BEF376C64CA}" scale="1.000000"/>
+		<LibraryObject name="{81D19B30-F45D-47CB-9787-2BEF376C64CA}" scale="0.349000"/>
 	</SceneryObject>
 	<!-- B276 tree (stock MSFS tree; 2018 crown 18 m) -->
 	<SceneryObject lat="53.52603230" lon="-113.45780680" alt="0.000000" pitch="0.000000" bank="0.000000" heading="220.000000" imageComplexity="VERY_SPARSE" altitudeIsAgl="TRUE" snapToGround="TRUE" snapToNormal="FALSE">
-		<LibraryObject name="{F05B3BD0-1C1E-4865-A904-45F9DF37EBDF}" scale="1.000000"/>
+		<LibraryObject name="{F05B3BD0-1C1E-4865-A904-45F9DF37EBDF}" scale="0.424000"/>
 	</SceneryObject>
 	<!-- B276 tree (stock MSFS tree; 2018 crown 17 m) -->
 	<SceneryObject lat="53.52579130" lon="-113.45910800" alt="0.000000" pitch="0.000000" bank="0.000000" heading="357.000000" imageComplexity="VERY_SPARSE" altitudeIsAgl="TRUE" snapToGround="TRUE" snapToNormal="FALSE">
-		<LibraryObject name="{60E021B9-9D85-4C59-B106-EC430025816A}" scale="1.000000"/>
+		<LibraryObject name="{60E021B9-9D85-4C59-B106-EC430025816A}" scale="0.859000"/>
 	</SceneryObject>
 	<!-- B276 tree (stock MSFS tree; 2018 crown 10 m) -->
 	<SceneryObject lat="53.52568720" lon="-113.45894390" alt="0.000000" pitch="0.000000" bank="0.000000" heading="134.000000" imageComplexity="VERY_SPARSE" altitudeIsAgl="TRUE" snapToGround="TRUE" snapToNormal="FALSE">
-		<LibraryObject name="{8F8A023D-380F-4CB3-8ED8-25D1595AF998}" scale="1.000000"/>
+		<LibraryObject name="{8F8A023D-380F-4CB3-8ED8-25D1595AF998}" scale="0.309000"/>
 	</SceneryObject>
 	<!-- B276 tree (stock MSFS tree; 2018 crown 14 m) -->
 	<SceneryObject lat="53.52562290" lon="-113.45828860" alt="0.000000" pitch="0.000000" bank="0.000000" heading="271.000000" imageComplexity="VERY_SPARSE" altitudeIsAgl="TRUE" snapToGround="TRUE" snapToNormal="FALSE">
-		<LibraryObject name="{D49B152B-463B-4654-A7B0-9AEA48A27215}" scale="1.000000"/>
+		<LibraryObject name="{D49B152B-463B-4654-A7B0-9AEA48A27215}" scale="0.218000"/>
 	</SceneryObject>
 	<!-- B276 tree (stock MSFS tree; 2018 crown 13 m) -->
 	<SceneryObject lat="53.52556270" lon="-113.45846620" alt="0.000000" pitch="0.000000" bank="0.000000" heading="48.000000" imageComplexity="VERY_SPARSE" altitudeIsAgl="TRUE" snapToGround="TRUE" snapToNormal="FALSE">
-		<LibraryObject name="{48EF1351-F046-406D-BF0E-94524662991D}" scale="1.000000"/>
+		<LibraryObject name="{48EF1351-F046-406D-BF0E-94524662991D}" scale="0.412000"/>
 	</SceneryObject>
 	<!-- B276 tree (stock MSFS tree; 2018 crown 6 m) -->
 	<SceneryObject lat="53.52542940" lon="-113.45889460" alt="0.000000" pitch="0.000000" bank="0.000000" heading="185.000000" imageComplexity="VERY_SPARSE" altitudeIsAgl="TRUE" snapToGround="TRUE" snapToNormal="FALSE">
-		<LibraryObject name="{4A576EEF-CFA0-47DB-91F9-526718AE5950}" scale="1.000000"/>
+		<LibraryObject name="{4A576EEF-CFA0-47DB-91F9-526718AE5950}" scale="0.326000"/>
 	</SceneryObject>
 	<!-- B276 tree (stock MSFS tree; 2018 crown 7 m) -->
 	<SceneryObject lat="53.52538640" lon="-113.45876130" alt="0.000000" pitch="0.000000" bank="0.000000" heading="322.000000" imageComplexity="VERY_SPARSE" altitudeIsAgl="TRUE" snapToGround="TRUE" snapToNormal="FALSE">
-		<LibraryObject name="{2C5B485B-06A8-4E8E-B86D-23711DB64A8D}" scale="1.000000"/>
+		<LibraryObject name="{2C5B485B-06A8-4E8E-B86D-23711DB64A8D}" scale="0.220000"/>
 	</SceneryObject>
 	<!-- END bridges -->
 	<!-- BEGIN exclusions (generated by scenery-edmonton-bridges/tools/gen_bridges.py) -->
@@ -3949,9 +3949,8 @@
 		<Vertex lat="53.52556121" lon="-113.45645432"/>
 		<Vertex lat="53.52558291" lon="-113.45640011"/>
 		<Vertex lat="53.52564011" lon="-113.45639493"/>
-		<Vertex lat="53.52564471" lon="-113.45617913"/>
-		<Vertex lat="53.52589034" lon="-113.45615529"/>
-		<Vertex lat="53.52590929" lon="-113.45620778"/>
+		<Vertex lat="53.52564491" lon="-113.45617856"/>
+		<Vertex lat="53.52589072" lon="-113.45615563"/>
 		<Vertex lat="53.52590273" lon="-113.45695382"/>
 		<Vertex lat="53.52561980" lon="-113.45698497"/>
 	</Polygon>
@@ -3966,10 +3965,10 @@
 		<Attribute name="ExclusionFlags" guid="{4CACC252-E6DC-419A-B20C-16EC601DF70E}" type="UINT32" value="7"/>
 		<Attribute name="ExcludeRocks" guid="{F104723A-D6D1-4B2E-9B44-ACCD8AB372DC}" type="UINT8" value="1"/>
 		<Vertex lat="53.52553500" lon="-113.45871537"/>
-		<Vertex lat="53.52559070" lon="-113.45853091"/>
-		<Vertex lat="53.52555890" lon="-113.45844077"/>
-		<Vertex lat="53.52561749" lon="-113.45827014"/>
-		<Vertex lat="53.52569077" lon="-113.45817836"/>
+		<Vertex lat="53.52559052" lon="-113.45853146"/>
+		<Vertex lat="53.52555896" lon="-113.45843960"/>
+		<Vertex lat="53.52561677" lon="-113.45827202"/>
+		<Vertex lat="53.52569131" lon="-113.45817796"/>
 		<Vertex lat="53.52575449" lon="-113.45817151"/>
 		<Vertex lat="53.52582479" lon="-113.45790493"/>
 		<Vertex lat="53.52588489" lon="-113.45780193"/>

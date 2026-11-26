@@ -84,7 +84,7 @@
   {
    "bufferView": 0,
    "componentType": 5126,
-   "count": 10904,
+   "count": 11072,
    "type": "VEC3",
    "min": [
     -20.632310560848673,
@@ -100,19 +100,19 @@
   {
    "bufferView": 1,
    "componentType": 5126,
-   "count": 10904,
+   "count": 11072,
    "type": "VEC3"
   },
   {
    "bufferView": 2,
    "componentType": 5126,
-   "count": 10904,
+   "count": 11072,
    "type": "VEC2"
   },
   {
    "bufferView": 3,
    "componentType": 5123,
-   "count": 16356,
+   "count": 16608,
    "type": "SCALAR"
   }
  ],
@@ -120,28 +120,28 @@
   {
    "buffer": 0,
    "byteOffset": 0,
-   "byteLength": 130848
+   "byteLength": 132864
   },
   {
    "buffer": 0,
-   "byteOffset": 130848,
-   "byteLength": 130848
+   "byteOffset": 132864,
+   "byteLength": 132864
   },
   {
    "buffer": 0,
-   "byteOffset": 261696,
-   "byteLength": 87232
+   "byteOffset": 265728,
+   "byteLength": 88576
   },
   {
    "buffer": 0,
-   "byteOffset": 348928,
-   "byteLength": 32712
+   "byteOffset": 354304,
+   "byteLength": 33216
   }
  ],
  "buffers": [
   {
    "uri": "br_b262_holyrood_gardens.bin",
-   "byteLength": 381640
+   "byteLength": 387520
   }
  ]
 }

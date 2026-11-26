@@ -844,7 +844,7 @@
   {
    "bufferView": 0,
    "componentType": 5126,
-   "count": 2168,
+   "count": 2160,
    "type": "VEC3",
    "min": [
     -38.8995827229796,
@@ -860,19 +860,19 @@
   {
    "bufferView": 1,
    "componentType": 5126,
-   "count": 2168,
+   "count": 2160,
    "type": "VEC3"
   },
   {
    "bufferView": 2,
    "componentType": 5126,
-   "count": 2168,
+   "count": 2160,
    "type": "VEC2"
   },
   {
    "bufferView": 3,
    "componentType": 5123,
-   "count": 2586,
+   "count": 2574,
    "type": "SCALAR"
   },
   {
@@ -904,48 +904,48 @@
   {
    "buffer": 0,
    "byteOffset": 0,
-   "byteLength": 26016
+   "byteLength": 25920
   },
   {
    "buffer": 0,
-   "byteOffset": 26016,
-   "byteLength": 26016
+   "byteOffset": 25920,
+   "byteLength": 25920
   },
   {
    "buffer": 0,
-   "byteOffset": 52032,
-   "byteLength": 17344
+   "byteOffset": 51840,
+   "byteLength": 17280
   },
   {
    "buffer": 0,
-   "byteOffset": 69376,
-   "byteLength": 5172
+   "byteOffset": 69120,
+   "byteLength": 5148
   },
   {
    "buffer": 0,
-   "byteOffset": 74548,
+   "byteOffset": 74268,
    "byteLength": 432
   },
   {
    "buffer": 0,
-   "byteOffset": 74980,
+   "byteOffset": 74700,
    "byteLength": 240
   },
   {
    "buffer": 0,
-   "byteOffset": 75220,
+   "byteOffset": 74940,
    "byteLength": 84
   },
   {
    "buffer": 0,
-   "byteOffset": 75304,
+   "byteOffset": 75024,
    "byteLength": 144
   }
  ],
  "buffers": [
   {
    "uri": "br_b276_lds_church.bin",
-   "byteLength": 75448
+   "byteLength": 75168
   }
  ]
 }

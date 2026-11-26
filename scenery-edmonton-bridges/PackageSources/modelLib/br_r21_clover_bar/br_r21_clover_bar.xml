@@ -1,6 +1,8 @@
 <?xml version="1.0" encoding="utf-8"?>
 <ModelInfo guid="{85F5D8C8-A7EE-525F-A23D-053D7BBEA530}" version="1.1">
 	<LODS>
-		<LOD minSize="0" ModelFile="br_r21_clover_bar.gltf"/>
+		<LOD minSize="5.9" ModelFile="br_r21_clover_bar.gltf"/>
+		<LOD minSize="1" ModelFile="br_r21_clover_bar_lod1.gltf"/>
+		<LOD minSize="0" ModelFile="br_r21_clover_bar_lod2.gltf"/>
 	</LODS>
 </ModelInfo>

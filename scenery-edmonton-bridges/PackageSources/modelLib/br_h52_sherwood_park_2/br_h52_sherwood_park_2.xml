@@ -1,6 +1,8 @@
 <?xml version="1.0" encoding="utf-8"?>
 <ModelInfo guid="{C534018D-3D0C-5E9D-A8D8-ECF012892093}" version="1.1">
 	<LODS>
-		<LOD minSize="0" ModelFile="br_h52_sherwood_park_2.gltf"/>
+		<LOD minSize="2.3" ModelFile="br_h52_sherwood_park_2.gltf"/>
+		<LOD minSize="1" ModelFile="br_h52_sherwood_park_2_lod1.gltf"/>
+		<LOD minSize="0" ModelFile="br_h52_sherwood_park_2_lod2.gltf"/>
 	</LODS>
 </ModelInfo>

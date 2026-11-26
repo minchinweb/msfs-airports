@@ -33,7 +33,7 @@ def main(site, folder, out, crop=None):
         x, y = t.transform(lo, la)
         return ((x - j["xmin"]) / px, (j["ymax"] - y) / px)
     tris = []
-    for _name, m in res["parts"]:
+    for _name, m, *_lods in res["parts"]:
         P, N, U, I = m.pos, m.nrm, m.uv, m.idx
         for k in range(0, len(I), 3):
             a, b, c = I[k], I[k + 1], I[k + 2]

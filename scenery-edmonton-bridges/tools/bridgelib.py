@@ -429,9 +429,10 @@ class BMesh(Mesh):
         marks = self.pstart + [(len(self.pos), len(self.tri_mat))]
         for (v0, t0), (v1, t1) in zip(marks[:-1], marks[1:]):
             if cur is None or len(cur["pos"]) + (v1 - v0) > limit:
-                cur = {"pos": [], "nrm": [], "uv": [], "idx": [], "mat": []}
+                cur = {"pos": [], "nrm": [], "uv": [], "idx": [], "mat": [], "polys": []}
                 out.append(cur)
             base = len(cur["pos"])
+            cur["polys"].append((base, base + v1 - v0, len(cur["mat"]), len(cur["mat"]) + t1 - t0))
             cur["pos"] += self.pos[v0:v1]
             cur["nrm"] += self.nrm[v0:v1]
             cur["uv"] += self.uv[v0:v1]
@@ -444,68 +445,152 @@ def write_palette():
     gb.write_palette(MODELLIB / "texture" / "bridge_palette.png")
 
 
-def save_chunks(m, name, prune=True):
-    """Mirror once, write the chunks as <name>_1, <name>_2 ... and return [(model name, guid)]."""
+def save_chunks(m, name, prune=True, lods=(), min0=0):
+    """Mirror once, write the chunks as <name>_1, <name>_2 ... and return [(model name, guid)].
+
+    lods: lower LODs as [(minSize, BMesh)], in order after the full mesh (LOD 0, minSize min0), written as <name>_lod1.gltf ... in the
+    model's folder.  MSFS 2024 hides an LOD until its on-screen size passes a floor set by its vertex count (SDK, "LOD Selection
+    System": 1 % of the screen at 2,500 vertices on High, 4 % at about 11,000, no floor under 1,000), so a detailed model with one LOD
+    pops in late.  A last LOD under 1,000 vertices keeps it in view far out.  Only for a model that fits in one chunk.
+
+    Without `lods`, each chunk gets automatic LODs (auto_lods): its largest polygons, up to LOD_BUDGETS vertices."""
     m.mirror_x()
     lights = [(-x, *rest) for x, *rest in m.lights]
     folder_names = []
     parts = m.chunks()
+    assert not lods or len(parts) == 1, "LODs need a one-chunk model"
     for k, ch in enumerate(parts, 1):
         nm = name if len(parts) == 1 else "%s_%d" % (name, k)
         folder = MODELLIB / nm
         folder.mkdir(parents=True, exist_ok=True)
-        n = len(ch["pos"])
-        assert n < 65535, n
-        pos = b"".join(struct.pack("<3f", *p) for p in ch["pos"])
-        nrm = b"".join(struct.pack("<3f", *p) for p in ch["nrm"])
-        uv = b"".join(struct.pack("<2f", *p) for p in ch["uv"])
-        mn = [min(p[i] for p in ch["pos"]) for i in range(3)]
-        mx = [max(p[i] for p in ch["pos"]) for i in range(3)]
-        keys = ["flat"] + [g_ for g_ in gb.GLOW if g_ in ch["mat"]]
+        for old in folder.glob(f"{nm}_lod*.*"):              # LOD files of an earlier run (their number can change)
+            old.unlink()
         lit = lights if k == 1 else []
-        if len(keys) > 1 or lit:
-            _save_lit(folder, nm, ch, pos, nrm, uv, mn, mx, keys, lit)
-            guid = "{" + str(uuid.uuid5(NS, nm)).upper() + "}"
-            (folder / f"{nm}.xml").write_text(
-                f'<?xml version="1.0" encoding="utf-8"?>\n<ModelInfo guid="{guid}" version="1.1">\n'
-                f'\t<LODS>\n\t\t<LOD minSize="0" ModelFile="{nm}.gltf"/>\n\t</LODS>\n</ModelInfo>\n')
-            folder_names.append((nm, guid))
-            continue
-        ib = b"".join(struct.pack("<H", i) for i in ch["idx"])
-        pad = (-len(ib)) % 4
-        blob = pos + nrm + uv + ib + b"\x00" * pad
-        views = [{"buffer": 0, "byteOffset": 0, "byteLength": len(pos)},
-                 {"buffer": 0, "byteOffset": len(pos), "byteLength": len(nrm)},
-                 {"buffer": 0, "byteOffset": len(pos) + len(nrm), "byteLength": len(uv)},
-                 {"buffer": 0, "byteOffset": len(pos) + len(nrm) + len(uv), "byteLength": len(ib)}]
-        accs = [{"bufferView": 0, "componentType": 5126, "count": n, "type": "VEC3", "min": mn, "max": mx},
-                {"bufferView": 1, "componentType": 5126, "count": n, "type": "VEC3"},
-                {"bufferView": 2, "componentType": 5126, "count": n, "type": "VEC2"},
-                {"bufferView": 3, "componentType": 5123, "count": len(ch["idx"]), "type": "SCALAR"}]
-        g = {
-            "asset": {"version": "2.0", "generator": "scenery-edmonton-bridges/tools/bridgelib.py",
-                      "extensions": {"ASOBO_normal_map_convention": {"tangent_space_convention": "DirectX"}}},
-            "extensionsUsed": ["ASOBO_normal_map_convention", "ASOBO_tags"],
-            "scene": 0, "scenes": [{"nodes": [0]}],
-            "nodes": [{"mesh": 0, "name": nm}],
-            "meshes": [{"name": nm, "primitives": [{"attributes": {"POSITION": 0, "NORMAL": 1, "TEXCOORD_0": 2}, "indices": 3, "mode": 4, "material": 0}]}],
-            # ASOBO_tags Collision + Road: the whole model is solid, so a plane can land on a deck and a vehicle can drive on it
-            "materials": [{"name": "bridge_palette", "pbrMetallicRoughness": {
-                "baseColorTexture": {"index": 0}, "metallicFactor": 0.0, "roughnessFactor": 0.9},
-                "extensions": {"ASOBO_tags": {"tags": ["Collision", "Road"]}}}],
-            "textures": [{"sampler": 0, "source": 0}],
-            "samplers": [{"magFilter": 9728, "minFilter": 9728}],
-            "images": [{"uri": "bridge_palette.png"}],
-            "accessors": accs, "bufferViews": views, "buffers": [{"uri": f"{nm}.bin", "byteLength": len(blob)}],
-        }
-        (folder / f"{nm}.bin").write_bytes(blob)
-        (folder / f"{nm}.gltf").write_text(json.dumps(g, indent=1))
+        _write_model(folder, nm, ch, lit)
+        if lods:
+            entries = [("%g" % min0, nm)]
+            for j, (min_size, lm) in enumerate(lods, 1):
+                lm.mirror_x()
+                (lch,) = lm.chunks()
+                _write_model(folder, f"{nm}_lod{j}", lch, [(-x, *rest) for x, *rest in lm.lights])
+                entries.append(("%g" % min_size, f"{nm}_lod{j}"))
+        else:
+            auto = auto_lods(ch)
+            entries = [("%g" % (min_size_for(len(ch["pos"])) if auto else 0), nm)]
+            for j, lch in enumerate(auto, 1):
+                _write_model(folder, f"{nm}_lod{j}", lch, lit)
+                entries.append(("%g" % (0 if j == len(auto) else min_size_for(len(lch["pos"]))), f"{nm}_lod{j}"))
         guid = "{" + str(uuid.uuid5(NS, nm)).upper() + "}"
         (folder / f"{nm}.xml").write_text(
-            f'<?xml version="1.0" encoding="utf-8"?>\n<ModelInfo guid="{guid}" version="1.1">\n'
-            f'\t<LODS>\n\t\t<LOD minSize="0" ModelFile="{nm}.gltf"/>\n\t</LODS>\n</ModelInfo>\n')
+            f'<?xml version="1.0" encoding="utf-8"?>\n<ModelInfo guid="{guid}" version="1.1">\n\t<LODS>\n'
+            + "".join(f'\t\t<LOD minSize="{ms}" ModelFile="{f}.gltf"/>\n' for ms, f in entries)
+            + '\t</LODS>\n</ModelInfo>\n')
         folder_names.append((nm, guid))
     return folder_names
+
+
+# Automatic LODs.  The SDK's vertex-count floor on High settings (LOD Selection System): (vertices, % of screen height).  An LOD's
+# minSize is written as this floor (the sim applies it anyway), rounded down to 0.1; the last LOD gets 0.
+VERTEX_FLOOR = [(1000, 0.0), (2500, 1.0), (5000, 2.0), (30000, 12.0), (60000, 24.0), (150000, 60.0)]
+LOD_BUDGETS = (10000, 2500, 950)           # vertex budgets of the automatic LODs; the last is under 1,000, which has no floor
+
+
+def min_size_for(n):
+    """The High-settings vertex floor for an LOD of n vertices, % of screen height."""
+    if n <= VERTEX_FLOOR[0][0]:
+        return 0.0
+    for (n0, f0), (n1, f1) in zip(VERTEX_FLOOR, VERTEX_FLOOR[1:]):
+        if n <= n1:
+            return math.floor((f0 + (f1 - f0) * (n - n0) / (n1 - n0)) * 10) / 10
+    return VERTEX_FLOOR[-1][1]
+
+
+def thin(ch, budget):
+    """A copy of chunk `ch` with only its largest polygons (by area), up to `budget` vertices, in their original order.  At a distance
+    the big faces (decks, piers, walls, roofs, arch ribs and chords) carry the silhouette; rails, lamps, trim and bolts go first."""
+    def area(p):
+        v0, v1, t0, t1 = p
+        a = 0.0
+        for t in range(t0, t1):
+            i, j, k = ch["idx"][3 * t:3 * t + 3]
+            P, Q, R = ch["pos"][i], ch["pos"][j], ch["pos"][k]
+            u = (Q[0] - P[0], Q[1] - P[1], Q[2] - P[2])
+            w = (R[0] - P[0], R[1] - P[1], R[2] - P[2])
+            c = (u[1] * w[2] - u[2] * w[1], u[2] * w[0] - u[0] * w[2], u[0] * w[1] - u[1] * w[0])
+            a += 0.5 * math.sqrt(c[0] ** 2 + c[1] ** 2 + c[2] ** 2)
+        return a
+    def down(p):
+        return ch["nrm"][p[0]][1] < -0.5                    # undersides: not seen from the air at a distance, so they go first
+    order = sorted(range(len(ch["polys"])), key=lambda q: (down(ch["polys"][q]), -area(ch["polys"][q])))
+    keep, n = set(), 0
+    for q in order:
+        v0, v1, _t0, _t1 = ch["polys"][q]
+        if n + (v1 - v0) > budget:
+            continue
+        keep.add(q)
+        n += v1 - v0
+    out = {"pos": [], "nrm": [], "uv": [], "idx": [], "mat": [], "polys": []}
+    for q in sorted(keep):
+        v0, v1, t0, t1 = ch["polys"][q]
+        base = len(out["pos"])
+        out["polys"].append((base, base + v1 - v0, len(out["mat"]), len(out["mat"]) + t1 - t0))
+        out["pos"] += ch["pos"][v0:v1]
+        out["nrm"] += ch["nrm"][v0:v1]
+        out["uv"] += ch["uv"][v0:v1]
+        out["idx"] += [i - v0 + base for i in ch["idx"][3 * t0:3 * t1]]
+        out["mat"] += ch["mat"][t0:t1]
+    return out
+
+
+def auto_lods(ch):
+    """Automatic lower LODs for a chunk: one per LOD_BUDGETS entry that is well under the chunk's vertex count (none for a chunk
+    already under 1,000 vertices)."""
+    n = len(ch["pos"])
+    return [thin(ch, b) for b in LOD_BUDGETS if b < 0.6 * n]
+
+
+def _write_model(folder, nm, ch, lit):
+    """Write one chunk as <nm>.gltf and <nm>.bin in `folder`: palette only, or with night-lit materials and lights."""
+    n = len(ch["pos"])
+    assert n < 65535, n
+    pos = b"".join(struct.pack("<3f", *p) for p in ch["pos"])
+    nrm = b"".join(struct.pack("<3f", *p) for p in ch["nrm"])
+    uv = b"".join(struct.pack("<2f", *p) for p in ch["uv"])
+    mn = [min(p[i] for p in ch["pos"]) for i in range(3)]
+    mx = [max(p[i] for p in ch["pos"]) for i in range(3)]
+    keys = ["flat"] + [g_ for g_ in gb.GLOW if g_ in ch["mat"]]
+    if len(keys) > 1 or lit:
+        _save_lit(folder, nm, ch, pos, nrm, uv, mn, mx, keys, lit)
+        return
+    ib = b"".join(struct.pack("<H", i) for i in ch["idx"])
+    pad = (-len(ib)) % 4
+    blob = pos + nrm + uv + ib + b"\x00" * pad
+    views = [{"buffer": 0, "byteOffset": 0, "byteLength": len(pos)},
+             {"buffer": 0, "byteOffset": len(pos), "byteLength": len(nrm)},
+             {"buffer": 0, "byteOffset": len(pos) + len(nrm), "byteLength": len(uv)},
+             {"buffer": 0, "byteOffset": len(pos) + len(nrm) + len(uv), "byteLength": len(ib)}]
+    accs = [{"bufferView": 0, "componentType": 5126, "count": n, "type": "VEC3", "min": mn, "max": mx},
+            {"bufferView": 1, "componentType": 5126, "count": n, "type": "VEC3"},
+            {"bufferView": 2, "componentType": 5126, "count": n, "type": "VEC2"},
+            {"bufferView": 3, "componentType": 5123, "count": len(ch["idx"]), "type": "SCALAR"}]
+    g = {
+        "asset": {"version": "2.0", "generator": "scenery-edmonton-bridges/tools/bridgelib.py",
+                  "extensions": {"ASOBO_normal_map_convention": {"tangent_space_convention": "DirectX"}}},
+        "extensionsUsed": ["ASOBO_normal_map_convention", "ASOBO_tags"],
+        "scene": 0, "scenes": [{"nodes": [0]}],
+        "nodes": [{"mesh": 0, "name": nm}],
+        "meshes": [{"name": nm, "primitives": [{"attributes": {"POSITION": 0, "NORMAL": 1, "TEXCOORD_0": 2}, "indices": 3, "mode": 4, "material": 0}]}],
+        # ASOBO_tags Collision + Road: the whole model is solid, so a plane can land on a deck and a vehicle can drive on it
+        "materials": [{"name": "bridge_palette", "pbrMetallicRoughness": {
+            "baseColorTexture": {"index": 0}, "metallicFactor": 0.0, "roughnessFactor": 0.9},
+            "extensions": {"ASOBO_tags": {"tags": ["Collision", "Road"]}}}],
+        "textures": [{"sampler": 0, "source": 0}],
+        "samplers": [{"magFilter": 9728, "minFilter": 9728}],
+        "images": [{"uri": "bridge_palette.png"}],
+        "accessors": accs, "bufferViews": views, "buffers": [{"uri": f"{nm}.bin", "byteLength": len(blob)}],
+    }
+    (folder / f"{nm}.bin").write_bytes(blob)
+    (folder / f"{nm}.gltf").write_text(json.dumps(g, indent=1))
 
 
 def _save_lit(folder, nm, ch, pos, nrm, uv, mn, mx, keys, lights):

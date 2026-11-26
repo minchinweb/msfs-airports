@@ -1,6 +1,8 @@
 <?xml version="1.0" encoding="utf-8"?>
 <ModelInfo guid="{614478D3-91C8-58AC-895D-FD37A7C0AE65}" version="1.1">
 	<LODS>
-		<LOD minSize="0" ModelFile="br_r20_beverly.gltf"/>
+		<LOD minSize="6.1" ModelFile="br_r20_beverly.gltf"/>
+		<LOD minSize="1" ModelFile="br_r20_beverly_lod1.gltf"/>
+		<LOD minSize="0" ModelFile="br_r20_beverly_lod2.gltf"/>
 	</LODS>
 </ModelInfo>

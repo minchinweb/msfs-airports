@@ -1,6 +1,9 @@
 <?xml version="1.0" encoding="utf-8"?>
 <ModelInfo guid="{1CC036BF-C4C3-5E01-A8A9-453844BC84DF}" version="1.1">
 	<LODS>
-		<LOD minSize="0" ModelFile="br_r15_dawson.gltf"/>
+		<LOD minSize="9.6" ModelFile="br_r15_dawson.gltf"/>
+		<LOD minSize="4" ModelFile="br_r15_dawson_lod1.gltf"/>
+		<LOD minSize="1" ModelFile="br_r15_dawson_lod2.gltf"/>
+		<LOD minSize="0" ModelFile="br_r15_dawson_lod3.gltf"/>
 	</LODS>
 </ModelInfo>

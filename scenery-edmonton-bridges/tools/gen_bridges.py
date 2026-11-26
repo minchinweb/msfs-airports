@@ -4,9 +4,9 @@ Run (from the repo root):   python -I scenery-edmonton-bridges/tools/gen_bridges
 Sites are the module names without the `site_` prefix (r10, r9 ...); none given = all.  Needs only the standard library, plus
 numpy and Pillow for --preview.
 
-Each site module's build() returns {code, title, lat0, lon0, alt, parts: [(model name, BMesh)]}.  Models are placed at (lat0,
+Each site module's build() returns {code, title, lat0, lon0, alt, parts: [(model name, BMesh)]} (a part may add its lower LODs as [(minSize, BMesh)] and LOD 0's minSize; see bridgelib.save_chunks).  Models are placed at (lat0,
 lon0) with heading 0 and an absolute altitude (alt = the site datum, the 2018 LiDAR river surface).  A site may also return objects: [(title, lat, lon, heading,
-guid)], library objects such as stock trees, placed on the ground (AGL 0).  Placements are cached per
+guid[, scale])], library objects such as stock trees, placed on the ground (AGL 0).  Placements are cached per
 site in tools/placements.json, so a run of one site keeps the others, and are written between the BEGIN/END markers of
 PackageSources/Scenery/edmonton-bridges/edmonton-bridges.xml.
 """
@@ -62,12 +62,12 @@ def main(argv):
         terr[name] = terrain.site_polygons(name, res) + [tuple(x) for x in res.get("terrain_extra", [])]
         cars[name] = res.get("car_parks", [])
         objs[name] = res.get("objects", [])
-        for model_name, mesh in res["parts"]:
+        for model_name, mesh, *lods in res["parts"]:
             n_poly = len(mesh.pstart)
             if pv:
                 for tag, az, el in res.get("views", VIEWS):
                     preview(mesh, pv / f"{model_name}_{tag}.png", az=az, el=el, **res.get("preview", {}))
-            made = save_chunks(mesh, model_name)
+            made = save_chunks(mesh, model_name, lods=lods[0] if lods else (), min0=lods[1] if len(lods) > 1 else 0)
             print("%-24s %6d polys, %2d chunk(s)" % (model_name, n_poly, len(made)))
             cache[name][model_name] = [(f"{res['code']} {res['title']} ({nm})", res["lat0"], res["lon0"], res["alt"], guid)
                                        for nm, guid in made]
@@ -91,11 +91,11 @@ def main(argv):
                 lines.append('\t\t<LibraryObject name="%s" scale="1.000000"/>' % guid)
                 lines.append("\t</SceneryObject>")
                 n += 1
-        for title, lat, lon, hdg, guid in objs.get(name, []):
+        for title, lat, lon, hdg, guid, *scale in objs.get(name, []):
             lines.append("\t<!-- %s -->" % title)
             lines.append('\t<SceneryObject lat="%.8f" lon="%.8f" alt="0.000000" pitch="0.000000" bank="0.000000" heading="%.6f" '
                          'imageComplexity="VERY_SPARSE" altitudeIsAgl="TRUE" snapToGround="TRUE" snapToNormal="FALSE">' % (lat, lon, hdg))
-            lines.append('\t\t<LibraryObject name="%s" scale="1.000000"/>' % guid)
+            lines.append('\t\t<LibraryObject name="%s" scale="%.6f"/>' % (guid, scale[0] if scale else 1.0))
             lines.append("\t</SceneryObject>")
             n += 1
     lines.append("\t" + END)

@@ -1,6 +1,9 @@
 <?xml version="1.0" encoding="utf-8"?>
 <ModelInfo guid="{1969EE5F-F7FA-5676-8146-E8EB76665243}" version="1.1">
 	<LODS>
-		<LOD minSize="0" ModelFile="br_h27_calgary_trail_1.gltf"/>
+		<LOD minSize="24" ModelFile="br_h27_calgary_trail_1.gltf"/>
+		<LOD minSize="4" ModelFile="br_h27_calgary_trail_1_lod1.gltf"/>
+		<LOD minSize="1" ModelFile="br_h27_calgary_trail_1_lod2.gltf"/>
+		<LOD minSize="0" ModelFile="br_h27_calgary_trail_1_lod3.gltf"/>
 	</LODS>
 </ModelInfo>

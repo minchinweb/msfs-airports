@@ -1,6 +1,7 @@
 <?xml version="1.0" encoding="utf-8"?>
 <ModelInfo guid="{3DBF634F-D3F2-5F27-97AD-7E5540614EB0}" version="1.1">
 	<LODS>
-		<LOD minSize="0" ModelFile="br_b276_lds_church.gltf"/>
+		<LOD minSize="0.7" ModelFile="br_b276_lds_church.gltf"/>
+		<LOD minSize="0" ModelFile="br_b276_lds_church_lod1.gltf"/>
 	</LODS>
 </ModelInfo>

@@ -6,6 +6,10 @@ MSFS 2024 add-on projects: airports and FSE aircraft variants. The sim is the **
 
 Prefix commit messages with 🤖.
 
+## 3D models: LODs, draw distance, stock objects
+
+Every scenery model we generate needs a last LOD under 1,000 vertices, or MSFS 2024 holds it back until it is large on screen (B262 popped in at 0.5 nm). In `scenery-edmonton-bridges`, `bridgelib.save_chunks` adds these automatically; the airport packages' own model writers do not yet. Never let two overlapping faces share a plane (they z-fight). Scale stock trees to their real height: their own sizes are 18 to 62 m. The details, the vertex-count table and how to read a stock object's size are in `docs/edmonton-bridges/MODEL-NOTES.md`, "Standard practice: LODs and draw distance". These apply to the airport packages too.
+
 ## MSFS SDK docs MCP server
 
 The `msfs-sdk` MCP server searches the MSFS SDK documentation (our fork https://github.com/minchinweb/MSFS-SDK-MCP, branch `retail-docs-site`; it reads the docs site's new layout, which the original `msfs2024` branch can't). It is registered in local scope (`~/.claude.json`, not committed), so install it on every new computer. It needs Node 18+. If `msfs-sdk` is missing from `/mcp`, offer to run these steps:
