@@ -7,6 +7,9 @@ Era: deliberately a-historical, 1940-1985, with the surviving 2010-2014 hangars.
 ## 2026-11-25 LODs on the buildings, hangars and fences
 `gen_buildings.py`'s `Mesh.save` (also used by `hangars.py`) now calls `tools/model_lods.py`. Every model over 1,000 vertices, 38 of them, gets lower LODs: its largest polygons, down to 10,000, 2,500 and 950 vertices, with `minSize` set to the SDK vertex floor. Before this, MSFS 2024 held each one back until it was large on screen. Hangar 11 (35,766 vertices) needed about 14 % of the screen height, and the perimeter fences (34,000 to 58,000) up to 23 %. The full models, textures and `CYXD.xml` are unchanged. Builds (exit 0); not seen in the sim. Check that the hangars stay in view on approach and that the LOD switches are not distracting. The Hangar 19 stock trees (scale 1) look fine in the sim (William, 2026-11-25), so they are left as they are. Why and how: that file, "Standard practice: LODs and draw distance".
 
+## 2026-11-26 Obstruction lighting (research and script; no models yet)
+Rules, sources, the pre-1995 question and open items are in `obstruction-lighting.md`. `tools/obstacle_surfaces.py` lays out the obstacle limitation surfaces for all three runways and gives each building's margin above its cutoff (`ObstacleModel().clearance(...)`). Its surface dimensions are placeholders, not the pre-1995 rules. Nothing is built for the lights yet; open-questions item 13 is still open.
+
 ## Where things stand
 
 - **Last in-sim checks:** approaches and ATIS (2026-10-09, after a full sim restart: ILS 34 Y, NDB 34 Z, NDB 16, LOC(BC) 16 Z, RNAV 12 Y, RNAV 30 Y all show); the NDB site models and textures (2026-10-10); Hangar 16 front offset (2026-10-17); a first in-sim look at the buildings, which produced the user-correction rounds of 2026-10-21.
