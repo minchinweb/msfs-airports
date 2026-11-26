@@ -1,0 +1,219 @@
+{
+ "asset": {
+  "version": "2.0",
+  "generator": "airport-h28/tools/gen_port.py",
+  "extensions": {
+   "ASOBO_normal_map_convention": {
+    "tangent_space_convention": "DirectX"
+   }
+  }
+ },
+ "extensionsUsed": [
+  "ASOBO_normal_map_convention",
+  "ASOBO_street_light",
+  "ASOBO_material_day_night_switch"
+ ],
+ "scene": 0,
+ "scenes": [
+  {
+   "nodes": [
+    0
+   ]
+  }
+ ],
+ "nodes": [
+  {
+   "mesh": 0,
+   "name": "h28_port_cbsa_main",
+   "children": [
+    1
+   ]
+  },
+  {
+   "name": "h28_port_cbsa_main_light0",
+   "translation": [
+    -13.5,
+    46.45,
+    -1.5
+   ],
+   "rotation": [
+    0.70710678,
+    0.0,
+    0.0,
+    0.70710678
+   ],
+   "extensions": {
+    "ASOBO_street_light": {
+     "color": [
+      1.0,
+      0.05,
+      0.02
+     ],
+     "intensity": 60000.0,
+     "cone_angle": 360.0,
+     "has_symmetry": false,
+     "flash_frequency": 30.0,
+     "flash_duration": 0.5,
+     "flash_phase": 0.0,
+     "rotation_phase": 0.0,
+     "rotation_speed": 0.0,
+     "random_phase": false,
+     "day_night_cycle": true,
+     "flare_enabled": true,
+     "flare_only": true
+    }
+   }
+  }
+ ],
+ "meshes": [
+  {
+   "name": "h28_port_cbsa_main",
+   "primitives": [
+    {
+     "attributes": {
+      "POSITION": 0,
+      "NORMAL": 1,
+      "TEXCOORD_0": 2
+     },
+     "indices": 3,
+     "mode": 4,
+     "material": 0
+    },
+    {
+     "attributes": {
+      "POSITION": 0,
+      "NORMAL": 1,
+      "TEXCOORD_0": 2
+     },
+     "indices": 4,
+     "mode": 4,
+     "material": 1
+    }
+   ]
+  }
+ ],
+ "materials": [
+  {
+   "name": "h28_flat",
+   "pbrMetallicRoughness": {
+    "baseColorTexture": {
+     "index": 0
+    },
+    "metallicFactor": 0.0,
+    "roughnessFactor": 0.9
+   }
+  },
+  {
+   "name": "h28_glow",
+   "pbrMetallicRoughness": {
+    "baseColorTexture": {
+     "index": 0
+    },
+    "metallicFactor": 0.0,
+    "roughnessFactor": 0.9
+   },
+   "emissiveFactor": [
+    180.0,
+    140.0,
+    85.0
+   ],
+   "extensions": {
+    "ASOBO_material_day_night_switch": {
+     "enabled": true
+    }
+   }
+  }
+ ],
+ "textures": [
+  {
+   "sampler": 0,
+   "source": 0
+  }
+ ],
+ "samplers": [
+  {
+   "magFilter": 9728,
+   "minFilter": 9728
+  }
+ ],
+ "images": [
+  {
+   "uri": "h28_port_palette.png"
+  }
+ ],
+ "accessors": [
+  {
+   "bufferView": 0,
+   "componentType": 5126,
+   "count": 2498,
+   "type": "VEC3",
+   "min": [
+    -15.220000267028809,
+    -0.00946931354701519,
+    -4.900000095367432
+   ],
+   "max": [
+    8.5,
+    46.349998474121094,
+    5.0
+   ]
+  },
+  {
+   "bufferView": 1,
+   "componentType": 5126,
+   "count": 2498,
+   "type": "VEC3"
+  },
+  {
+   "bufferView": 2,
+   "componentType": 5126,
+   "count": 2498,
+   "type": "VEC2"
+  },
+  {
+   "bufferView": 3,
+   "componentType": 5123,
+   "count": 3630,
+   "type": "SCALAR"
+  },
+  {
+   "bufferView": 4,
+   "componentType": 5123,
+   "count": 120,
+   "type": "SCALAR"
+  }
+ ],
+ "bufferViews": [
+  {
+   "buffer": 0,
+   "byteOffset": 0,
+   "byteLength": 29976
+  },
+  {
+   "buffer": 0,
+   "byteOffset": 29976,
+   "byteLength": 29976
+  },
+  {
+   "buffer": 0,
+   "byteOffset": 59952,
+   "byteLength": 19984
+  },
+  {
+   "buffer": 0,
+   "byteOffset": 79936,
+   "byteLength": 7260
+  },
+  {
+   "buffer": 0,
+   "byteOffset": 87196,
+   "byteLength": 240
+  }
+ ],
+ "buffers": [
+  {
+   "uri": "h28_port_cbsa_main_lod1.bin",
+   "byteLength": 87436
+  }
+ ]
+}

@@ -2,6 +2,9 @@
 
 Project: `airport-h28/airport-H28-del-bonita-whetstone-intl.xml` (package `cardboardgt-airport-h28-whetstone`, v0.0.1). Spec and decisions: `SPEC.md`. Build: `.\build.bat h28` (sim closed; see CLAUDE.md build notes).
 
+## 2026-11-25 LODs on the port buildings
+`gen_port.py` now calls `tools/model_lods.py` after each save, so a model over 1,000 vertices gets lower LODs (largest polygons, down to 2,500 and 950 vertices) and stays drawn far out. MSFS 2024 holds a dense single LOD back until it is large on screen. Gained LODs: the CBSA office (5,648 / 2,500 / 948 vertices) and the CBP port (2,728 / 950). The sheds and stables are under the threshold. The full models are unchanged. Builds (exit 0); not seen in the sim. The other H28 writers (`gen_border`, `gen_details`, `gen_powerline`, ...) do not call it yet; `h28_wire_us1` and `us2` are the only other models over 1,000 vertices. Why and how: `docs/edmonton-bridges/MODEL-NOTES.md`, "Standard practice: LODs and draw distance".
+
 ## Built (2026-10-27, builds OK, not yet seen in the sim)
 - `Airport` H28, name "Whetstone Intl (CEQ4)", marker moved to the runway midpoint (48.99868, -112.77713), magvar 12.5, test radius 2,000 m.
 - One runway numbered 07 (the sim would call it 08/26), true heading 89.97, 1,353 m x 20 m, centred on the sim default runway's midpoint (so 120 m trimmed from each end of the default 1,594 m). Surface `{322DE917-E25D-4AD8-BFBB-4D5F4D259413}`, which the user found in the Project Editor and thinks is striped grass.
